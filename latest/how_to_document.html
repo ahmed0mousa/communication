@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How To Document &#8212; Eclipse S-CORE 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/css/default_custom.css?v=a1691139" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=7f76b32a3354e82990f2"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2" />
+
+    <script src="_static/documentation_options.js?v=a12e3537"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'how_to_document';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.17.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://ahmed0mousa.github.io/communication/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://ahmed0mousa.github.io/communication/latest/how_to_document.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Public API Reference" href="generated/api_index.html" />
+    <link rel="prev" title="Message Passing" href="message_passing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search documentation..."
+         aria-label="Search documentation..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Eclipse S-CORE</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+    Communication Middleware (mw::com)
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="message_passing.html">
+    Message Passing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    How To Document
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="generated/api_index.html">
+    Public API Reference
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="safety_reports.html">
+    Safety Reports
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="quality_reports.html">
+    Quality Reports
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="S-CORE GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">S-CORE GitHub</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="introduction.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="README.html">
+    Communication Middleware (mw::com)
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="message_passing.html">
+    Message Passing
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    How To Document
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="generated/api_index.html">
+    Public API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="safety_reports.html">
+    Safety Reports
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="quality_reports.html">
+    Quality Reports
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="S-CORE GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">S-CORE GitHub</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar"><svg class="pst-icon svg-inline--fa" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">How To Document</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="how-to-document">
+<h1>How To Document<a class="headerlink" href="#how-to-document" title="Link to this heading">#</a></h1>
+<p>This section provides brief overview on how to document using Breathe directive and includes API documentation automatically generated from C++ source code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>API documentation is generated using Doxygen and integrated via Breathe.
+Due to Sphinx version &lt; 9.x limitations with complex C++ templates, use specific class
+and function directives rather than namespace-level documentation.</p>
+</div>
+<section id="automatic-api-documentation-with-api-tag">
+<h2>Automatic API Documentation with &#64;api Tag<a class="headerlink" href="#automatic-api-documentation-with-api-tag" title="Link to this heading">#</a></h2>
+<p>The project includes an automated RST generation utility that extracts API items
+tagged with <code class="docutils literal notranslate"><span class="pre">&#64;api</span></code> in Doxygen comments and generates categorized documentation.</p>
+<p><strong>How to use &#64;api tag:</strong></p>
+<p>Add the <code class="docutils literal notranslate"><span class="pre">&#64;api</span></code> tag to any Doxygen comment block to include it in the generated
+API documentation:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Connection handler for client communication</span>
+<span class="cm"> * @api</span>
+<span class="cm"> */</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ClientConnection</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">};</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * @brief Initialize the communication system</span>
+<span class="cm"> * @return true if successful</span>
+<span class="cm"> * @api</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">initialize</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><strong>Generated documentation structure:</strong></p>
+<p>The utility automatically creates:</p>
+<ul class="simple">
+<li><p><strong>API Index</strong> - Overview of all tagged items</p></li>
+<li><p><strong>Namespace Reference</strong> - Namespaces containing &#64;api items</p></li>
+<li><p><strong>Class Reference</strong> - Classes and structs with &#64;api tag</p></li>
+<li><p><strong>Member Reference</strong> - Functions and methods with &#64;api tag</p></li>
+</ul>
+<p><strong>Build integration:</strong></p>
+<div class="highlight-starlark notranslate"><div class="highlight"><pre><span></span><span class="n">generate_api_rst</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;generate_api_rst&quot;</span><span class="p">,</span>
+    <span class="n">doxygen_xml</span> <span class="o">=</span> <span class="s2">&quot;//path/to:doxygen_target&quot;</span><span class="p">,</span>
+    <span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;generated&quot;</span><span class="p">,</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="s2">&quot;mw::com&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The generated RST files are automatically included in the Sphinx documentation
+under the “Generated API Documentation” section.</p>
+</section>
+<section id="using-breathe-directives">
+<h2>Using Breathe Directives<a class="headerlink" href="#using-breathe-directives" title="Link to this heading">#</a></h2>
+<p>To document specific classes or functions, use these Breathe directives:</p>
+<p><strong>Document a specific class:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenclass</span><span class="p">::</span> score::message_passing::detail::ClientConnection
+    <span class="nc">:members:</span>
+    <span class="nc">:protected-members:</span>
+    <span class="nc">:undoc-members:</span>
+</pre></div>
+</div>
+<p><strong>Document a specific function:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenfunction</span><span class="p">::</span> score::mw::com::functionName
+</pre></div>
+</div>
+<p><strong>Document a struct:</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenstruct</span><span class="p">::</span> score::mw::com::ConfigStruct
+    <span class="nc">:members:</span>
+</pre></div>
+</div>
+</section>
+<section id="example-clientconnection">
+<h2>Example: ClientConnection<a class="headerlink" href="#example-clientconnection" title="Link to this heading">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnectionE">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnectionE"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnectionE"></span><span id="score::message_passing::detail::ClientConnection"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ClientConnection</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">message_passing</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">IClientConnection</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnectionE" title="Link to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionENSt10shared_ptrI21ISharedResourceEngineEERK21ServiceProtocolConfigRKN14IClientFactory12ClientConfigE">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection16ClientConnectionENSt10shared_ptrI21ISharedResourceEngineEERK21ServiceProtocolConfigRKN14IClientFactory12ClientConfigE"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection16ClientConnectionENSt10shared_ptrI21ISharedResourceEngineEERK21ServiceProtocolConfigRKN14IClientFactory12ClientConfigE"></span><span id="score::message_passing::detail::ClientConnection::ClientConnection__std::shared_ptr:ISharedResourceEngine:.ServiceProtocolConfigCR.IClientFactory::ClientConfigCR"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1a5d88fcec1586dc3e19d2758973a67e82"></span><span class="sig-name descname"><span class="n"><span class="pre">ClientConnection</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ISharedResourceEngine</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">engine</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">ServiceProtocolConfig</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">protocol_config</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">IClientFactory</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ClientConfig</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">client_config</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionENSt10shared_ptrI21ISharedResourceEngineEERK21ServiceProtocolConfigRKN14IClientFactory12ClientConfigE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnectionD0Ev">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnectionD0Ev"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnectionD0Ev"></span><span id="score::message_passing::detail::ClientConnection::~ClientConnection"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1ae9b54e6e81bc8d7e7bc39854049274e1"></span><span class="sig-name descname"><span class="n"><span class="pre">~ClientConnection</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnectionD0Ev" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERK16ClientConnection">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection16ClientConnectionERK16ClientConnection"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection16ClientConnectionERK16ClientConnection"></span><span id="score::message_passing::detail::ClientConnection::ClientConnection__ClientConnectionCR"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1ad991a411d13577ccdc6fdd65e64e94a6"></span><span class="sig-name descname"><span class="n"><span class="pre">ClientConnection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERK16ClientConnection" title="score::message_passing::detail::ClientConnection::ClientConnection"><span class="n"><span class="pre">ClientConnection</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERK16ClientConnection" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERR16ClientConnection">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection16ClientConnectionERR16ClientConnection"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection16ClientConnectionERR16ClientConnection"></span><span id="score::message_passing::detail::ClientConnection::ClientConnection__ClientConnectionRR"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1aa054d579d09582bdcf703f0d80567527"></span><span class="sig-name descname"><span class="n"><span class="pre">ClientConnection</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERR16ClientConnection" title="score::message_passing::detail::ClientConnection::ClientConnection"><span class="n"><span class="pre">ClientConnection</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERR16ClientConnection" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnectionaSERK16ClientConnection">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnectionaSERK16ClientConnection"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnectionaSERK16ClientConnection"></span><span id="score::message_passing::detail::ClientConnection::assign-operator__ClientConnectionCR"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1af186368f155f78e417cf7f72d37e4f60"></span><a class="reference internal" href="#_CPPv4N5score15message_passing6detail16ClientConnectionE" title="score::message_passing::detail::ClientConnection"><span class="n"><span class="pre">ClientConnection</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score15message_passing6detail16ClientConnectionE" title="score::message_passing::detail::ClientConnection"><span class="n"><span class="pre">ClientConnection</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnectionaSERK16ClientConnection" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnectionaSERR16ClientConnection">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnectionaSERR16ClientConnection"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnectionaSERR16ClientConnection"></span><span id="score::message_passing::detail::ClientConnection::assign-operator__ClientConnectionRR"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1aa61564b575be6d28878857ef1fde7732"></span><a class="reference internal" href="#_CPPv4N5score15message_passing6detail16ClientConnectionE" title="score::message_passing::detail::ClientConnection"><span class="n"><span class="pre">ClientConnection</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5score15message_passing6detail16ClientConnectionE" title="score::message_passing::detail::ClientConnection"><span class="n"><span class="pre">ClientConnection</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnectionaSERR16ClientConnection" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection4SendEN5score3cpp4spanIKNSt7uint8_tEEE">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection4SendEN5score3cpp4spanIKNSt7uint8_tEEE"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection4SendEN5score3cpp4spanIKNSt7uint8_tEEE"></span><span id="score::message_passing::detail::ClientConnection::Send__score::cpp::span:std::uint8_tC:"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1aa73d379e074f1b43e1883c3926a18ea9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">expected_blank</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">os</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Error</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Send</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection4SendEN5score3cpp4spanIKNSt7uint8_tEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Send a binary message to the respective server, don’t expect a reply. </p>
+<p>The call is non-blocking and will fail if it would otherwise block due to implementation details. The call will likely fail with score::os::Error in State::Init and definitely fail in State::Stopped. The call is unlikely (but still possible) to fail in State::Ready, unless the message is too big to transport, in which case the call will definitely fail. Even if the call doesn’t fail, there is still a possibility that the message will be lost by the receiving side, however, that only happens if the receiving side dies or disconnects before receiving the message. The implementation is allowed to use different transport mechanisms depending on the message size; the server is still guaranteed to receive the messages from the same client connection sequentially in the same order as they were sent. However, if multiple connections are created from the same client process, to the same or to the different servers, the order of messages across connections is not guaranteed. Note: the non-blocking guarantee for an ASIL B client to a QM server is only given if the messages to send are queued on the client side (ClientConfig::maxQueuedSends is not 0). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – The memory span containing the message to send </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>error if fails </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection13SendWaitReplyEN5score3cpp4spanIKNSt7uint8_tEEEN5score3cpp4spanINSt7uint8_tEEE">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection13SendWaitReplyEN5score3cpp4spanIKNSt7uint8_tEEEN5score3cpp4spanINSt7uint8_tEEE"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection13SendWaitReplyEN5score3cpp4spanIKNSt7uint8_tEEEN5score3cpp4spanINSt7uint8_tEEE"></span><span id="score::message_passing::detail::ClientConnection::SendWaitReply__score::cpp::span:std::uint8_tC:.score::cpp::span:std::uint8_t:"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1a8ef98587516b196c9d37612625e3451c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">expected</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">os</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Error</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SendWaitReply</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">message</span></span>, <span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reply</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection13SendWaitReplyEN5score3cpp4spanIKNSt7uint8_tEEEN5score3cpp4spanINSt7uint8_tEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Send a binary message to the respective server, wait for reply. </p>
+<p>The call is blocking. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – The memory span containing the message to send </p></li>
+<li><p><strong>reply</strong> – The memory span designating the buffer for the reply message </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the reply span trimmed to the actual size of the reply message if succeeds, error if fails </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection16SendWithCallbackEN5score3cpp4spanIKNSt7uint8_tEEE13ReplyCallback">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection16SendWithCallbackEN5score3cpp4spanIKNSt7uint8_tEEE13ReplyCallback"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection16SendWithCallbackEN5score3cpp4spanIKNSt7uint8_tEEE13ReplyCallback"></span><span id="score::message_passing::detail::ClientConnection::SendWithCallback__score::cpp::span:std::uint8_tC:.ReplyCallback"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1aa4aee6d193abc823c839f525236b6b43"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">expected_blank</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">os</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Error</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SendWithCallback</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">message</span></span>, <span class="n"><span class="pre">ReplyCallback</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">callback</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection16SendWithCallbackEN5score3cpp4spanIKNSt7uint8_tEEE13ReplyCallback" title="Link to this definition">#</a><br /></dt>
+<dd><p>Send a binary message to the respective server, register callback for reply. </p>
+<p>The call is non-blocking. Note: the non-blocking guarantee for an ASIL B client to a QM server is only given if the messages to send are queued on the client side (ClientConfig::maxQueuedSends is not 0). Note: if the server receives the message but dies or disconnects before the reply arrives to the client, the error will be passed to the callback; the method itself will not return an error. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – The memory span containing the message to send </p></li>
+<li><p><strong>callback</strong> – The callback to call on reply </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>error if fails </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5score15message_passing6detail16ClientConnection8GetStateEv">
+<span id="_CPPv3NK5score15message_passing6detail16ClientConnection8GetStateEv"></span><span id="_CPPv2NK5score15message_passing6detail16ClientConnection8GetStateEv"></span><span id="score::message_passing::detail::ClientConnection::GetStateC"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1a359668440ea7dff4eaeb7ce84326b9be"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">State</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK5score15message_passing6detail16ClientConnection8GetStateEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Return the current state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5score15message_passing6detail16ClientConnection13GetStopReasonEv">
+<span id="_CPPv3NK5score15message_passing6detail16ClientConnection13GetStopReasonEv"></span><span id="_CPPv2NK5score15message_passing6detail16ClientConnection13GetStopReasonEv"></span><span id="score::message_passing::detail::ClientConnection::GetStopReasonC"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1a386d1335db8dc3ad0b6063f035cd43f5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">StopReason</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetStopReason</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK5score15message_passing6detail16ClientConnection13GetStopReasonEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Return the last stopping reason for the State::Stopping/State::Stopped. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection5StartE13StateCallback14NotifyCallback">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection5StartE13StateCallback14NotifyCallback"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection5StartE13StateCallback14NotifyCallback"></span><span id="score::message_passing::detail::ClientConnection::Start__StateCallback.NotifyCallback"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1ad44d1ba0be9731589cce228402c5595f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Start</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">StateCallback</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state_callback</span></span>, <span class="n"><span class="pre">NotifyCallback</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_callback</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection5StartE13StateCallback14NotifyCallback" title="Link to this definition">#</a><br /></dt>
+<dd><p>Start the connection. </p>
+<p>The callbacks lifetime (or rather the lifetime of the system state captured in the callbacks by reference) needs to end not earlier than after the connection has returned into the Stop state </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection4StopEv">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection4StopEv"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection4StopEv"></span><span id="score::message_passing::detail::ClientConnection::Stop"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1a6dcc663f605323e41bd6bafc8e1f6c0a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection4StopEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Stop the existing connection. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score15message_passing6detail16ClientConnection7RestartEv">
+<span id="_CPPv3N5score15message_passing6detail16ClientConnection7RestartEv"></span><span id="_CPPv2N5score15message_passing6detail16ClientConnection7RestartEv"></span><span id="score::message_passing::detail::ClientConnection::Restart"></span><span class="target" id="classscore_1_1message__passing_1_1detail_1_1ClientConnection_1af611c35d47cb6ef49f8b0aa9e3860c32"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Restart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N5score15message_passing6detail16ClientConnection7RestartEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Try to restart a stopped connection. </p>
+<p>For some stop reasons (such as kPermission) it is highly unlikely to have a successful restart. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
+<p>For complete API documentation:</p>
+<ul class="simple">
+<li><p>Browse the Doxygen-generated HTML in <code class="docutils literal notranslate"><span class="pre">bazel-bin/score/mw/com/design/doxygen_build/html/index.html</span></code></p></li>
+<li><p>Review header files in <code class="docutils literal notranslate"><span class="pre">score/mw/com/</span></code> for inline documentation</p></li>
+<li><p>Check the design documentation at <code class="docutils literal notranslate"><span class="pre">score/mw/com/design/</span></code></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="message_passing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Message Passing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="generated/api_index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Public API Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatic-api-documentation-with-api-tag">Automatic API Documentation with @api Tag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-breathe-directives">Using Breathe Directives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-clientconnection">Example: ClientConnection</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnectionE"><code class="docutils literal notranslate"><span class="pre">score::message_passing::detail::ClientConnection</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionENSt10shared_ptrI21ISharedResourceEngineEERK21ServiceProtocolConfigRKN14IClientFactory12ClientConfigE"><code class="docutils literal notranslate"><span class="pre">ClientConnection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnectionD0Ev"><code class="docutils literal notranslate"><span class="pre">~ClientConnection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERK16ClientConnection"><code class="docutils literal notranslate"><span class="pre">ClientConnection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection16ClientConnectionERR16ClientConnection"><code class="docutils literal notranslate"><span class="pre">ClientConnection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnectionaSERK16ClientConnection"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnectionaSERR16ClientConnection"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection4SendEN5score3cpp4spanIKNSt7uint8_tEEE"><code class="docutils literal notranslate"><span class="pre">Send()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection13SendWaitReplyEN5score3cpp4spanIKNSt7uint8_tEEEN5score3cpp4spanINSt7uint8_tEEE"><code class="docutils literal notranslate"><span class="pre">SendWaitReply()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection16SendWithCallbackEN5score3cpp4spanIKNSt7uint8_tEEE13ReplyCallback"><code class="docutils literal notranslate"><span class="pre">SendWithCallback()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK5score15message_passing6detail16ClientConnection8GetStateEv"><code class="docutils literal notranslate"><span class="pre">GetState()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK5score15message_passing6detail16ClientConnection13GetStopReasonEv"><code class="docutils literal notranslate"><span class="pre">GetStopReason()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection5StartE13StateCallback14NotifyCallback"><code class="docutils literal notranslate"><span class="pre">Start()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection4StopEv"><code class="docutils literal notranslate"><span class="pre">Stop()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score15message_passing6detail16ClientConnection7RestartEv"><code class="docutils literal notranslate"><span class="pre">Restart()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Eclipse S-CORE Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

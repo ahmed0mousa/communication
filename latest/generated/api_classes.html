@@ -1,0 +1,1434 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Classe Reference &#8212; Eclipse S-CORE 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=7f76b32a3354e82990f2" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/default_custom.css?v=a1691139" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=7f76b32a3354e82990f2"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2" />
+
+    <script src="../_static/documentation_options.js?v=a12e3537"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generated/api_classes';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.17.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://ahmed0mousa.github.io/communication/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://ahmed0mousa.github.io/communication/latest/generated/api_classes.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Member Reference" href="api_members.html" />
+    <link rel="prev" title="Namespace Reference" href="api_namespaces.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search documentation..."
+         aria-label="Search documentation..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Eclipse S-CORE</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+    Communication Middleware (mw::com)
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../message_passing.html">
+    Message Passing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../how_to_document.html">
+    How To Document
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="api_index.html">
+    Public API Reference
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../safety_reports.html">
+    Safety Reports
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../quality_reports.html">
+    Quality Reports
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="S-CORE GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">S-CORE GitHub</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../introduction.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../README.html">
+    Communication Middleware (mw::com)
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../message_passing.html">
+    Message Passing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../how_to_document.html">
+    How To Document
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="api_index.html">
+    Public API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../safety_reports.html">
+    Safety Reports
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../quality_reports.html">
+    Quality Reports
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="S-CORE GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">S-CORE GitHub</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar"><svg class="pst-icon svg-inline--fa" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">API Categories:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="api_namespaces.html">Namespace Reference</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Classe Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_members.html">Member Reference</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="api_index.html" class="nav-link">Public API Reference</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Classe Reference</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="classe-reference">
+<h1>Classe Reference<a class="headerlink" href="#classe-reference" title="Link to this heading">#</a></h1>
+<p>This section contains all classes tagged with &#64;api.</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl14ComErrorDomainE">
+<span id="_CPPv3N5score2mw3com4impl14ComErrorDomainE"></span><span id="_CPPv2N5score2mw3com4impl14ComErrorDomainE"></span><span id="score::mw::com::impl::ComErrorDomain"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ComErrorDomain"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComErrorDomain</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ErrorDomain</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl14ComErrorDomainE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Error domain for mw::com (CommunicationManagement). </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>This class implements the ErrorDomain interface for the mw::com API. \requirement SWS_CM_11329 \threadsafe </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5score2mw3com4impl14ComErrorDomain10MessageForERKN5score6result9ErrorCodeE">
+<span id="_CPPv3NK5score2mw3com4impl14ComErrorDomain10MessageForERKN5score6result9ErrorCodeE"></span><span id="_CPPv2NK5score2mw3com4impl14ComErrorDomain10MessageForERKN5score6result9ErrorCodeE"></span><span id="score::mw::com::impl::ComErrorDomain::MessageFor__score::result::ErrorCodeCRC"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ComErrorDomain_1ab6549c833dfd6c26743f438cf88db422"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MessageFor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ErrorCode</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">code</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK5score2mw3com4impl14ComErrorDomain10MessageForERKN5score6result9ErrorCodeE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Translates an error code into a human readable message. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Todo:</span></em></dt>
+<dd><p>Gcc compiler bug leads to a compiler warning if override is not added, even if final keyword is there (<a class="reference external" href="https://gcc.gnu.org/bugzilla/show_bug.cgi?id=78010">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=78010</a>). When bug is fixed, remove the override keyword from the MessageFor function signature and the AUTOSAR.MEMB.VIRTUAL.SPEC klocwork suppression. </p>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>This function is required by the std::error_domain interface </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>code</strong> – The error code to translates </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>returns a string view to the human readable message \threadsafe </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandleE">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandleE"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandleE"></span><span id="score::mw::com::impl::FindServiceHandle"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FindServiceHandle</span></span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="Link to this definition">#</a><br /></dt>
+<dd><p>A <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> is returned by any StartFindService() method and is used to identify different searches. It needs to be passed to StopFindService() in order to cancel a respective search. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>\requirement SWS_CM_00303 </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleEv">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandle17FindServiceHandleEv"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandle17FindServiceHandleEv"></span><span id="score::mw::com::impl::FindServiceHandle::FindServiceHandle"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1aa4715e89cab7460efbe41cfbf45b5c7c"></span><span class="sig-name descname"><span class="n"><span class="pre">FindServiceHandle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleEv" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandleD0Ev">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandleD0Ev"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandleD0Ev"></span><span id="score::mw::com::impl::FindServiceHandle::~FindServiceHandle"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a272b7f9d26461acfc5a57502a6c1f3e9"></span><span class="sig-name descname"><span class="n"><span class="pre">~FindServiceHandle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleD0Ev" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandleaSERK17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandleaSERK17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandleaSERK17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::assign-operator__FindServiceHandleCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a1e129711abe50c88a83c5ee46e816ca7"></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleaSERK17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>CopyAssignment for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> *this shall be constructed from </p>
+</dd>
+<dt class="field-even">Post<span class="colon">:</span></dt>
+<dd class="field-even"><p>*this == other </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERK17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERK17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERK17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::FindServiceHandle__FindServiceHandleCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a50c61b924c403ad9351753c1557c1901"></span><span class="sig-name descname"><span class="n"><span class="pre">FindServiceHandle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERK17FindServiceHandle" title="score::mw::com::impl::FindServiceHandle::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERK17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>CopyConstructor for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> to copy from </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERR17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERR17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERR17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::FindServiceHandle__FindServiceHandleRR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a07969c3a1ac5a49d48a9d41a2d600c80"></span><span class="sig-name descname"><span class="n"><span class="pre">FindServiceHandle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERR17FindServiceHandle" title="score::mw::com::impl::FindServiceHandle::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERR17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>MoveAssignment for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> *this shall be constructed from </p>
+</dd>
+<dt class="field-even">Post<span class="colon">:</span></dt>
+<dd class="field-even"><p>*this == other </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandleaSERR17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandleaSERR17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandleaSERR17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::assign-operator__FindServiceHandleRR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a081cdbfcb72a372315d82db002017b9e"></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleaSERR17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>MoveAssignment for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> *this shall be constructed from </p>
+</dd>
+<dt class="field-even">Post<span class="colon">:</span></dt>
+<dd class="field-even"><p>*this == other </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandleeqERK17FindServiceHandleRK17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandleeqERK17FindServiceHandleRK17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandleeqERK17FindServiceHandleRK17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::eq-operator__FindServiceHandleCR.FindServiceHandleCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a4a61adbea1b415fa5443630d9a1a2ea6"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleeqERK17FindServiceHandleRK17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compares two instances for equality. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lhs</strong> – The first instance to check for equality </p></li>
+<li><p><strong>rhs</strong> – The second instance to check for equality </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if lhs and rhs equal, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandleltERK17FindServiceHandleRK17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandleltERK17FindServiceHandleRK17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandleltERK17FindServiceHandleRK17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::lt-operator__FindServiceHandleCR.FindServiceHandleCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a41bf14c7b750373e590393e5f0a0479f"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleltERK17FindServiceHandleRK17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>LessThanComparable operator. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lhs</strong> – The first <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> instance to compare </p></li>
+<li><p><strong>rhs</strong> – The second <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> instance to compare </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if lhs is less then rhs, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandlelsERN2mw3log9LogStreamERK17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandlelsERN2mw3log9LogStreamERK17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandlelsERN2mw3log9LogStreamERK17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::lshift-operator__mw::log::LogStreamR.FindServiceHandleCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1ac804c514fa88bc84d4ec41607c7d1e14"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="n"><span class="pre">mw</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">LogStream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">mw</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">LogStream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">log_stream</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">find_service_handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandlelsERN2mw3log9LogStreamERK17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>Stream operator which enables logging of <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> via mw::log::LogStream. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log_stream</strong> – The log stream to write to </p></li>
+<li><p><strong>find_service_handle</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> to log </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The log stream passed in as parameter </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17FindServiceHandlelsERNSt7ostreamERK17FindServiceHandle">
+<span id="_CPPv3N5score2mw3com4impl17FindServiceHandlelsERNSt7ostreamERK17FindServiceHandle"></span><span id="_CPPv2N5score2mw3com4impl17FindServiceHandlelsERNSt7ostreamERK17FindServiceHandle"></span><span id="score::mw::com::impl::FindServiceHandle::lshift-operator__osR.FindServiceHandleCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle_1a8d824a4601a7635499a50b75a171c165"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ostream_out</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE" title="score::mw::com::impl::FindServiceHandle"><span class="n"><span class="pre">FindServiceHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">find_service_handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17FindServiceHandlelsERNSt7ostreamERK17FindServiceHandle" title="Link to this definition">#</a><br /></dt>
+<dd><p>Stream operator which enables logging of <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> via std::ostream. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ostream_out</strong> – The output stream to write to </p></li>
+<li><p><strong>find_service_handle</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1FindServiceHandle"><span class="std std-ref">FindServiceHandle</span></a> to log </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The output stream passed in as parameter </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl12GenericProxyE">
+<span id="_CPPv3N5score2mw3com4impl12GenericProxyE"></span><span id="_CPPv2N5score2mw3com4impl12GenericProxyE"></span><span id="score::mw::com::impl::GenericProxy"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericProxy</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mw</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">com</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">impl</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ProxyBase</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl12GenericProxyE" title="Link to this definition">#</a><br /></dt>
+<dd><p><a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy"><span class="std std-ref">GenericProxy</span></a> is a non-binding specific Proxy class which doesn’t require any type information for its events. This means that it can connect to a service providing instance (skeleton) just based on deployment information specified at runtime. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Todo:</span></em></dt>
+<dd><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy_1ab3d54a640911a36f0f10f87023e54b68"><span class="std std-ref">EventMap</span></a>, events, needs to be populated with actual GenericProxyEvents. </p>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>It contains a map of events which can access strongly-typed events in a type-erased way i.e. by accessing a raw memory buffer. It is the generic analogue of a Proxy, which contains strongly-typed events. While the Proxy is usually generated from the IDL, a <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy"><span class="std std-ref">GenericProxy</span></a> can be manually instantiated at runtime based on deployment information. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl12GenericProxy8EventMapE">
+<span id="_CPPv3N5score2mw3com4impl12GenericProxy8EventMapE"></span><span id="_CPPv2N5score2mw3com4impl12GenericProxy8EventMapE"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy_1ab3d54a640911a36f0f10f87023e54b68"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EventMap</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">ServiceElementMap</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="api_namespaces.html#_CPPv4N5score2mw3com17GenericProxyEventE" title="score::mw::com::GenericProxyEvent"><span class="n"><span class="pre">GenericProxyEvent</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl12GenericProxy8EventMapE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl12GenericProxy9GetEventsEv">
+<span id="_CPPv3N5score2mw3com4impl12GenericProxy9GetEventsEv"></span><span id="_CPPv2N5score2mw3com4impl12GenericProxy9GetEventsEv"></span><span id="score::mw::com::impl::GenericProxy::GetEvents"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy_1a4f3758e5b2df836cf9b95b8b7d22dbc3"></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl12GenericProxy8EventMapE" title="score::mw::com::impl::GenericProxy::EventMap"><span class="n"><span class="pre">EventMap</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetEvents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl12GenericProxy9GetEventsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Returns a reference to the event map. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Reference to the event map. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl12GenericProxy6CreateE10HandleType">
+<span id="_CPPv3N5score2mw3com4impl12GenericProxy6CreateE10HandleType"></span><span id="_CPPv2N5score2mw3com4impl12GenericProxy6CreateE10HandleType"></span><span id="score::mw::com::impl::GenericProxy::Create__HandleType"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy_1ac72c6146f696612d40cd38cd2cd3348f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">Result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl12GenericProxyE" title="score::mw::com::impl::GenericProxy"><span class="n"><span class="pre">GenericProxy</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Create</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="api_members.html#_CPPv4N5score2mw3com10HandleTypeE" title="score::mw::com::HandleType"><span class="n"><span class="pre">HandleType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">instance_handle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl12GenericProxy6CreateE10HandleType" title="Link to this definition">#</a><br /></dt>
+<dd><p>Exception-less <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy"><span class="std std-ref">GenericProxy</span></a> constructor. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>instance_handle</strong> – Handle to the instance </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result containing the created <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1GenericProxy"><span class="std std-ref">GenericProxy</span></a> instance or an error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<span class="property"><span class="pre">friend</span> <span class="pre">class</span></span> <span class="pre">test::GenericProxyAttorney</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifierE">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifierE"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifierE"></span><span id="score::mw::com::impl::InstanceIdentifier"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InstanceIdentifier</span></span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Represents a specific instance of a given service \requirement SWS_CM_00302. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierEv">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierEv"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierEv"></span><span id="score::mw::com::impl::InstanceIdentifier::InstanceIdentifier"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a7bf03ab3635e298edf8f241ca4354e98"></span><span class="sig-name descname"><span class="n"><span class="pre">InstanceIdentifier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierEv" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifierD0Ev">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifierD0Ev"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifierD0Ev"></span><span id="score::mw::com::impl::InstanceIdentifier::~InstanceIdentifier"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a06d66dda88db884f4d5077a189621651"></span><span class="sig-name descname"><span class="n"><span class="pre">~InstanceIdentifier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierD0Ev" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifieraSERK18InstanceIdentifier">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifieraSERK18InstanceIdentifier"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifieraSERK18InstanceIdentifier"></span><span id="score::mw::com::impl::InstanceIdentifier::assign-operator__InstanceIdentifierCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a3f5592206433401b993e2e2fb81d1c99"></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifieraSERK18InstanceIdentifier" title="Link to this definition">#</a><br /></dt>
+<dd><p>CopyAssignment for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a>. </p>
+<p>ctor from serialized representation.</p>
+<p>Constructor is required by adaptive AUTOSAR Standard. But it uses exceptions, thus we will not implement it.</p>
+<p>explicit <a class="reference internal" href="api_namespaces.html#namespacescore_1_1mw_1_1com_1a21415b33df89ff3d8660d5a5e7cc509d"><span class="std std-ref">InstanceIdentifier(std::string_view value)</span></a>; <dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> *this shall be constructed from </p>
+</dd>
+<dt class="field-even">Post<span class="colon">:</span></dt>
+<dd class="field-even"><p>*this == other </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERK18InstanceIdentifier">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERK18InstanceIdentifier"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERK18InstanceIdentifier"></span><span id="score::mw::com::impl::InstanceIdentifier::InstanceIdentifier__InstanceIdentifierCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a59838944574c7fc4e9bfde518f502096"></span><span class="sig-name descname"><span class="n"><span class="pre">InstanceIdentifier</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERK18InstanceIdentifier" title="score::mw::com::impl::InstanceIdentifier::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERK18InstanceIdentifier" title="Link to this definition">#</a><br /></dt>
+<dd><p>Copy constructor for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> to copy from </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERR18InstanceIdentifier">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERR18InstanceIdentifier"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERR18InstanceIdentifier"></span><span id="score::mw::com::impl::InstanceIdentifier::InstanceIdentifier__InstanceIdentifierRR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a2c704b09c573edcef68cf85346d169a0"></span><span class="sig-name descname"><span class="n"><span class="pre">InstanceIdentifier</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERR18InstanceIdentifier" title="score::mw::com::impl::InstanceIdentifier::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERR18InstanceIdentifier" title="Link to this definition">#</a><br /></dt>
+<dd><p>Move constructor for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> to move from </p>
+</dd>
+<dt class="field-even">Post<span class="colon">:</span></dt>
+<dd class="field-even"><p>*this == other </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The moved <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifieraSERR18InstanceIdentifier">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifieraSERR18InstanceIdentifier"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifieraSERR18InstanceIdentifier"></span><span id="score::mw::com::impl::InstanceIdentifier::assign-operator__InstanceIdentifierRR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a93ecdd0b107e4de440e736c7b34f149f"></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifieraSERR18InstanceIdentifier" title="Link to this definition">#</a><br /></dt>
+<dd><p>MoveAssignment for <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> *this shall be constructed from </p>
+</dd>
+<dt class="field-even">Post<span class="colon">:</span></dt>
+<dd class="field-even"><p>*this == other </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> that was constructed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5score2mw3com4impl18InstanceIdentifier8ToStringEv">
+<span id="_CPPv3NK5score2mw3com4impl18InstanceIdentifier8ToStringEv"></span><span id="_CPPv2NK5score2mw3com4impl18InstanceIdentifier8ToStringEv"></span><span id="score::mw::com::impl::InstanceIdentifier::ToStringC"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1af7d02c68328f37a6780c9c071cacadfa"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ToString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK5score2mw3com4impl18InstanceIdentifier8ToStringEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Returns the serialized form of the unknown internals of this class as a meaningful string. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A non-owning string representation of the internals of this class </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifier6CreateERRNSt6stringE">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifier6CreateERRNSt6stringE"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifier6CreateERRNSt6stringE"></span><span id="score::mw::com::impl::InstanceIdentifier::Create__ssRR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1aff2cdbe28dfeb72e83ec34323cc2e94f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Create</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">serialized_format</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier6CreateERRNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Exception-less constructor to create <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> from a serialized <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> created with <a class="reference internal" href="api_members.html#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1af7d02c68328f37a6780c9c071cacadfa"><span class="std std-ref">InstanceIdentifier::ToString()</span></a>. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>serialized_format</strong> – The serialized format to create the <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> from </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The created <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> or an error </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifiereqERK18InstanceIdentifierRK18InstanceIdentifier">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifiereqERK18InstanceIdentifierRK18InstanceIdentifier"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifiereqERK18InstanceIdentifierRK18InstanceIdentifier"></span><span id="score::mw::com::impl::InstanceIdentifier::eq-operator__InstanceIdentifierCR.InstanceIdentifierCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1aca53dc1bbe6d17b97a52b3cca5cc52bc"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifiereqERK18InstanceIdentifierRK18InstanceIdentifier" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compares two instances for equality. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lhs</strong> – The first instance to check for equality </p></li>
+<li><p><strong>rhs</strong> – The second instance to check for equality </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if other and *this equal, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl18InstanceIdentifierltERK18InstanceIdentifierRK18InstanceIdentifier">
+<span id="_CPPv3N5score2mw3com4impl18InstanceIdentifierltERK18InstanceIdentifierRK18InstanceIdentifier"></span><span id="_CPPv2N5score2mw3com4impl18InstanceIdentifierltERK18InstanceIdentifierRK18InstanceIdentifier"></span><span id="score::mw::com::impl::InstanceIdentifier::lt-operator__InstanceIdentifierCR.InstanceIdentifierCR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier_1a1f16993f085d9d4d581f3105b719f42c"></span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE" title="score::mw::com::impl::InstanceIdentifier"><span class="n"><span class="pre">InstanceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierltERK18InstanceIdentifierRK18InstanceIdentifier" title="Link to this definition">#</a><br /></dt>
+<dd><p>LessThanComparable operator. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lhs</strong> – The first <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> instance to compare </p></li>
+<li><p><strong>rhs</strong> – The second <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceIdentifier"><span class="std std-ref">InstanceIdentifier</span></a> instance to compare </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if *this is less then other, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17InstanceSpecifierE">
+<span id="_CPPv3N5score2mw3com4impl17InstanceSpecifierE"></span><span id="_CPPv2N5score2mw3com4impl17InstanceSpecifierE"></span><span id="score::mw::com::impl::InstanceSpecifier"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InstanceSpecifier</span></span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17InstanceSpecifierE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Identifier for an application port. Maps design to deployment. \requirement SWS_CM_00350. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5score2mw3com4impl17InstanceSpecifier8ToStringEv">
+<span id="_CPPv3NK5score2mw3com4impl17InstanceSpecifier8ToStringEv"></span><span id="_CPPv2NK5score2mw3com4impl17InstanceSpecifier8ToStringEv"></span><span id="score::mw::com::impl::InstanceSpecifier::ToStringC"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1a1c61801bad9dc71eaeeead735899ea0b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ToString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK5score2mw3com4impl17InstanceSpecifier8ToStringEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Convert the <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> to a string representation. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A string representation of the <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl17InstanceSpecifier6CreateERRNSt6stringE">
+<span id="_CPPv3N5score2mw3com4impl17InstanceSpecifier6CreateERRNSt6stringE"></span><span id="_CPPv2N5score2mw3com4impl17InstanceSpecifier6CreateERRNSt6stringE"></span><span id="score::mw::com::impl::InstanceSpecifier::Create__ssRR"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1ac2dd0a2e121d41a059397372135d8d95"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17InstanceSpecifierE" title="score::mw::com::impl::InstanceSpecifier"><span class="n"><span class="pre">InstanceSpecifier</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Create</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">shortname_path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl17InstanceSpecifier6CreateERRNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create an <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> from a shortname path. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shortname_path</strong> – The shortname path to create the <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> from. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Result containing the created <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> or an error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5score2mw3com4impl17InstanceSpecifier6CreateEN5score6ResultI17InstanceSpecifierEERR1T">
+<span id="_CPPv3I0EN5score2mw3com4impl17InstanceSpecifier6CreateERR1T"></span><span id="_CPPv2I0EN5score2mw3com4impl17InstanceSpecifier6CreateERR1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1aaf4ebc75b18c780a753d91e79c8eef22"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Result</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N5score2mw3com4impl17InstanceSpecifierE" title="score::mw::com::impl::InstanceSpecifier"><span class="n"><span class="pre">InstanceSpecifier</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Create</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN5score2mw3com4impl17InstanceSpecifier6CreateEN5score6ResultI17InstanceSpecifierEERR1T" title="score::mw::com::impl::InstanceSpecifier::Create::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">shortname_path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4I0EN5score2mw3com4impl17InstanceSpecifier6CreateEN5score6ResultI17InstanceSpecifierEERR1T" title="Link to this definition">#</a><br /></dt>
+<dd><p>Create an <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> from various string-like types (deprecated template version). </p>
+<p>Converting former static score::Result&lt;InstanceSpecifier&gt; Create(const std::string_view shortname_path) to this method template fixes the potential “ambiguity”, when calling <a class="reference internal" href="api_members.html#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1ac2dd0a2e121d41a059397372135d8d95"><span class="std std-ref">Create()</span></a> with a string literal. With the former (non-template) signature, there would be an ambiguity between both <a class="reference internal" href="api_members.html#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1ac2dd0a2e121d41a059397372135d8d95"><span class="std std-ref">Create()</span></a> overloads, one with std::string&amp;&amp; and one with std::string_view. But replacing the std::string_view overload with the method-template solves the ambiguity, because Template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1aaf4ebc75b18c780a753d91e79c8eef22"><span class="std std-ref">Create(T&amp;&amp;)</span></a> Matches, as T = const char(&amp;)[] <dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Deprecated:</span></em></dt>
+<dd><p>Use <a class="reference internal" href="api_members.html#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier_1ac2dd0a2e121d41a059397372135d8d95"><span class="std std-ref">Create(std::string&amp;&amp;)</span></a> instead for better performance. </p>
+</dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shortname_path</strong> – The shortname path to create the <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> from (convertible to std::string_view). </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A Result containing the created <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1InstanceSpecifier"><span class="std std-ref">InstanceSpecifier</span></a> or an error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl10ProxyTraitE">
+<span id="_CPPv3N5score2mw3com4impl10ProxyTraitE"></span><span id="_CPPv2N5score2mw3com4impl10ProxyTraitE"></span><span id="score::mw::com::impl::ProxyTrait"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProxyTrait</span></span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl10ProxyTraitE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Encapsulates all necessary attributes for a proxy. </p>
+<p>The main idea of these traits are to ease the interface creation for a user. It reduces the necessary generated code to a bare minimum.</p>
+<p>Thanks to these traits a user can construct an interface as follows:</p>
+<p>template &lt;typename Trait&gt; class TheInterface : public Trait::Base { public: using Trait::Base::Base;</p>
+<p>typename Trait::template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1a5c0077f35ac172bdc5454fbac64c7930"><span class="std std-ref">Event&lt;DataType1&gt;</span></a> struct_event_1_{*this, event_name_0}; typename Trait::template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1a5c0077f35ac172bdc5454fbac64c7930"><span class="std std-ref">Event&lt;DataType2&gt;</span></a> struct_event_2_{*this, event_name_1};</p>
+<p>typename Trait::template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1ade94e3b8255347f2fb3b1ee9afa524f6"><span class="std std-ref">Field&lt;DataType1, true, false, true&gt;</span></a> struct_field_1_{*this, field_name_0}; typename Trait::template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1ade94e3b8255347f2fb3b1ee9afa524f6"><span class="std std-ref">Field&lt;DataType2, enable_getter, enable_setter, enable_notifier&gt;</span></a> struct_field_2_{*this, field_name_1};</p>
+<p>typename Trait::template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1ae5c3a880c13c87ab75238b7555a7638e"><span class="std std-ref">Method&lt;void(InArgType1)&gt;</span></a> struct_method_1_{*this, method_name_0}; typename Trait::template <a class="reference internal" href="#classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1ae5c3a880c13c87ab75238b7555a7638e"><span class="std std-ref">Method&lt;ReturnType()&gt;</span></a> struct_method_2_{*this, method_name_1};</p>
+<p>}; Notes regarding template args: A field has (besides its data type arg) three bool template args (enable_getter, enable_setter and enable_notifier). The enable_notifier template parameter is only relevant for certain bindings, e.g. the LoLa binding does not distinguish between true/false of this template parameter. A method has a template arg describing the method signature in the form ReturnType(InArgType1, InArgType2, …). InArgs and ReturnType are optional. Therefore, these are valid signatures:<ul class="simple">
+<li><p>void()</p></li>
+<li><p>ReturnType1()</p></li>
+<li><p>void(InArgType1, InArgType2)</p></li>
+<li><p>ReturnType1(InArgType1)</p></li>
+</ul>
+</p>
+<p>Having a defined interface, it is then possible to interpret this interface as proxy via <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">TheProxy</span> <span class="pre">=</span> <a class="reference internal" href="api_members.html#namespacescore_1_1mw_1_1com_1_1impl_1afdb7da53d4c12150e5e8e9f4b99a7eac"><span class="std std-ref"><span class="pre">AsProxy</span></span></a><span class="pre">&lt;TheInterface&gt;</span></code>, respectively as skeleton via <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">TheSkeleton</span> <span class="pre">=</span> <a class="reference internal" href="api_members.html#namespacescore_1_1mw_1_1com_1_1impl_1a63c33914c7a5927ba11bf9735130f89d"><span class="std std-ref"><span class="pre">AsSkeleton</span></span></a><span class="pre">&lt;TheInterface&gt;</span></code>. <dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>Defines the trait types used by proxy interfaces following the trait pattern. This trait provides ProxyBase as the base class, ProxyEvent for events, and ProxyField for fields. Used as a template parameter when defining service interfaces that will be instantiated as proxies (client-side). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl10ProxyTrait4BaseE">
+<span id="_CPPv3N5score2mw3com4impl10ProxyTrait4BaseE"></span><span id="_CPPv2N5score2mw3com4impl10ProxyTrait4BaseE"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1aef54fafc4544bea83ed93af4b57061d1"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Base</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">ProxyBase</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl10ProxyTrait4BaseE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5score2mw3com4impl10ProxyTrait5EventE">
+<span id="_CPPv3I0EN5score2mw3com4impl10ProxyTrait5EventE"></span><span id="_CPPv2I0EN5score2mw3com4impl10ProxyTrait5EventE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SampleType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1a5c0077f35ac172bdc5454fbac64c7930"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Event</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">ProxyEvent</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5score2mw3com4impl10ProxyTrait5EventE" title="score::mw::com::impl::ProxyTrait::Event::SampleType"><span class="n"><span class="pre">SampleType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN5score2mw3com4impl10ProxyTrait5EventE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0_b_b_bEN5score2mw3com4impl10ProxyTrait5FieldE">
+<span id="_CPPv3I0_b_b_bEN5score2mw3com4impl10ProxyTrait5FieldE"></span><span id="_CPPv2I0_b_b_bEN5score2mw3com4impl10ProxyTrait5FieldE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SampleType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnableSet</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnableGet</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnableNotifier</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1ade94e3b8255347f2fb3b1ee9afa524f6"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Field</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">ProxyField</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_b_b_bEN5score2mw3com4impl10ProxyTrait5FieldE" title="score::mw::com::impl::ProxyTrait::Field::SampleType"><span class="n"><span class="pre">SampleType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_b_b_bEN5score2mw3com4impl10ProxyTrait5FieldE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5score2mw3com4impl10ProxyTrait6MethodE">
+<span id="_CPPv3I0EN5score2mw3com4impl10ProxyTrait6MethodE"></span><span id="_CPPv2I0EN5score2mw3com4impl10ProxyTrait6MethodE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MethodSignature</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1ProxyTrait_1ae5c3a880c13c87ab75238b7555a7638e"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Method</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">ProxyMethod</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5score2mw3com4impl10ProxyTrait6MethodE" title="score::mw::com::impl::ProxyTrait::Method::MethodSignature"><span class="n"><span class="pre">MethodSignature</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN5score2mw3com4impl10ProxyTrait6MethodE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl13SkeletonTraitE">
+<span id="_CPPv3N5score2mw3com4impl13SkeletonTraitE"></span><span id="_CPPv2N5score2mw3com4impl13SkeletonTraitE"></span><span id="score::mw::com::impl::SkeletonTrait"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1SkeletonTrait"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SkeletonTrait</span></span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl13SkeletonTraitE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Encapsulates all necessary attributes for a skeleton. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>Defines the trait types used by skeleton interfaces following the trait pattern. This trait provides SkeletonBase as the base class, SkeletonEvent for events, and SkeletonField for fields. Used as a template parameter when defining service interfaces that will be instantiated as skeletons (server-side). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com4impl13SkeletonTrait4BaseE">
+<span id="_CPPv3N5score2mw3com4impl13SkeletonTrait4BaseE"></span><span id="_CPPv2N5score2mw3com4impl13SkeletonTrait4BaseE"></span><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1SkeletonTrait_1abf82af0167050f498b4aaf4211bb76bf"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Base</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SkeletonBase</span></span><a class="headerlink" href="#_CPPv4N5score2mw3com4impl13SkeletonTrait4BaseE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5score2mw3com4impl13SkeletonTrait5EventE">
+<span id="_CPPv3I0EN5score2mw3com4impl13SkeletonTrait5EventE"></span><span id="_CPPv2I0EN5score2mw3com4impl13SkeletonTrait5EventE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SampleType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1SkeletonTrait_1a15ae913ded275a80d0ed3787173be9e6"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Event</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SkeletonEvent</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5score2mw3com4impl13SkeletonTrait5EventE" title="score::mw::com::impl::SkeletonTrait::Event::SampleType"><span class="n"><span class="pre">SampleType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN5score2mw3com4impl13SkeletonTrait5EventE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE">
+<span id="_CPPv3I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE"></span><span id="_CPPv2I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SampleType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnableSet</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnableNotifier</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1SkeletonTrait_1aa72c66d607a77b1dcbc5774bb06590b8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Field</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SkeletonField</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE" title="score::mw::com::impl::SkeletonTrait::Field::SampleType"><span class="n"><span class="pre">SampleType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE" title="score::mw::com::impl::SkeletonTrait::Field::EnableSet"><span class="n"><span class="pre">EnableSet</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE" title="score::mw::com::impl::SkeletonTrait::Field::EnableNotifier"><span class="n"><span class="pre">EnableNotifier</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5score2mw3com4impl13SkeletonTrait6MethodE">
+<span id="_CPPv3I0EN5score2mw3com4impl13SkeletonTrait6MethodE"></span><span id="_CPPv2I0EN5score2mw3com4impl13SkeletonTrait6MethodE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MethodSignature</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classscore_1_1mw_1_1com_1_1impl_1_1SkeletonTrait_1a08e3e34e672926bc6de531c5ad962520"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Method</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">SkeletonMethod</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5score2mw3com4impl13SkeletonTrait6MethodE" title="score::mw::com::impl::SkeletonTrait::Method::MethodSignature"><span class="n"><span class="pre">MethodSignature</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN5score2mw3com4impl13SkeletonTrait6MethodE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com7runtime20RuntimeConfigurationE">
+<span id="_CPPv3N5score2mw3com7runtime20RuntimeConfigurationE"></span><span id="_CPPv2N5score2mw3com7runtime20RuntimeConfigurationE"></span><span id="score::mw::com::runtime::RuntimeConfiguration"></span><span class="target" id="classscore_1_1mw_1_1com_1_1runtime_1_1RuntimeConfiguration"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RuntimeConfiguration</span></span></span><a class="headerlink" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfigurationE" title="Link to this definition">#</a><br /></dt>
+<dd><p><a class="reference internal" href="#classscore_1_1mw_1_1com_1_1runtime_1_1RuntimeConfiguration"><span class="std std-ref">RuntimeConfiguration</span></a> object which a user can construct and pass to the public InitializeRuntime call. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEv">
+<span id="_CPPv3N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEv"></span><span id="_CPPv2N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEv"></span><span id="score::mw::com::runtime::RuntimeConfiguration::RuntimeConfiguration"></span><span class="target" id="classscore_1_1mw_1_1com_1_1runtime_1_1RuntimeConfiguration_1a3b838205047afe9593b629dd25bb3a82"></span><span class="sig-name descname"><span class="n"><span class="pre">RuntimeConfiguration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Default constructor which initialiases the stored configuration path with a default value. </p>
+<p>It can be useful for debugging purposes for an application to want to explicitly initialize the runtime using defaults to check configuration parsing. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEKNSt7int32_tEA_N5score13StringLiteralE">
+<span id="_CPPv3N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEKNSt7int32_tEA_N5score13StringLiteralE"></span><span id="_CPPv2N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEKNSt7int32_tEA_N5score13StringLiteralE"></span><span id="score::mw::com::runtime::RuntimeConfiguration::RuntimeConfiguration__std::int32_tC.score::StringLiteralA"></span><span class="target" id="classscore_1_1mw_1_1com_1_1runtime_1_1RuntimeConfiguration_1a5805df86a21bda351c75dcaa9726f6a2"></span><span class="sig-name descname"><span class="n"><span class="pre">RuntimeConfiguration</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <span class="n"><span class="pre">score</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">StringLiteral</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argv</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEKNSt7int32_tEA_N5score13StringLiteralE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor which initialiases the stored configuration path from command line arguments. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<p>The constructor parses the command line arguments for a specific key to extract the configuration path. If the key is not found, a default path is used. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>argc</strong> – The number of command line arguments. </p></li>
+<li><p><strong>argv</strong> – The array of command line arguments. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEN10filesystem4PathE">
+<span id="_CPPv3N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEN10filesystem4PathE"></span><span id="_CPPv2N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEN10filesystem4PathE"></span><span id="score::mw::com::runtime::RuntimeConfiguration::RuntimeConfiguration__filesystem::Path"></span><span class="target" id="classscore_1_1mw_1_1com_1_1runtime_1_1RuntimeConfiguration_1a45b917a82f4269284ec14443cbb9e183"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RuntimeConfiguration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Path</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">configuration_path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEN10filesystem4PathE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor which initialiases the stored configuration path with the provided path. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>configuration_path</strong> – The configuration path to be stored. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK5score2mw3com7runtime20RuntimeConfiguration20GetConfigurationPathEv">
+<span id="_CPPv3NK5score2mw3com7runtime20RuntimeConfiguration20GetConfigurationPathEv"></span><span id="_CPPv2NK5score2mw3com7runtime20RuntimeConfiguration20GetConfigurationPathEv"></span><span id="score::mw::com::runtime::RuntimeConfiguration::GetConfigurationPathC"></span><span class="target" id="classscore_1_1mw_1_1com_1_1runtime_1_1RuntimeConfiguration_1a0ecacb42beb6fa9a6c49745f85e7af17"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">GetConfigurationPath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5score2mw3com7runtime20RuntimeConfiguration20GetConfigurationPathEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Returns the stored configuration path. </p>
+<p><dl>
+<dt class="sig sig-object cpp">
+<em><span class="pre">Feature</span> <span class="pre">API:</span></em></dt>
+<dd></dd></dl>
+
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The stored configuration path. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="api_namespaces.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Namespace Reference</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="api_members.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Member Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl14ComErrorDomainE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::ComErrorDomain</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK5score2mw3com4impl14ComErrorDomain10MessageForERKN5score6result9ErrorCodeE"><code class="docutils literal notranslate"><span class="pre">MessageFor()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::FindServiceHandle</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleEv"><code class="docutils literal notranslate"><span class="pre">FindServiceHandle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleD0Ev"><code class="docutils literal notranslate"><span class="pre">~FindServiceHandle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleaSERK17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERK17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">FindServiceHandle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandle17FindServiceHandleERR17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">FindServiceHandle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleaSERR17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleeqERK17FindServiceHandleRK17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">operator==</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandleltERK17FindServiceHandleRK17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">operator&lt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandlelsERN2mw3log9LogStreamERK17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">operator&lt;&lt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17FindServiceHandlelsERNSt7ostreamERK17FindServiceHandle"><code class="docutils literal notranslate"><span class="pre">operator&lt;&lt;</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl12GenericProxyE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::GenericProxy</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl12GenericProxy8EventMapE"><code class="docutils literal notranslate"><span class="pre">EventMap</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl12GenericProxy9GetEventsEv"><code class="docutils literal notranslate"><span class="pre">GetEvents()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl12GenericProxy6CreateE10HandleType"><code class="docutils literal notranslate"><span class="pre">Create()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::InstanceIdentifier</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierEv"><code class="docutils literal notranslate"><span class="pre">InstanceIdentifier()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierD0Ev"><code class="docutils literal notranslate"><span class="pre">~InstanceIdentifier()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifieraSERK18InstanceIdentifier"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERK18InstanceIdentifier"><code class="docutils literal notranslate"><span class="pre">InstanceIdentifier()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier18InstanceIdentifierERR18InstanceIdentifier"><code class="docutils literal notranslate"><span class="pre">InstanceIdentifier()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifieraSERR18InstanceIdentifier"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK5score2mw3com4impl18InstanceIdentifier8ToStringEv"><code class="docutils literal notranslate"><span class="pre">ToString()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifier6CreateERRNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Create()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifiereqERK18InstanceIdentifierRK18InstanceIdentifier"><code class="docutils literal notranslate"><span class="pre">operator==</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl18InstanceIdentifierltERK18InstanceIdentifierRK18InstanceIdentifier"><code class="docutils literal notranslate"><span class="pre">operator&lt;</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17InstanceSpecifierE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::InstanceSpecifier</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK5score2mw3com4impl17InstanceSpecifier8ToStringEv"><code class="docutils literal notranslate"><span class="pre">ToString()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl17InstanceSpecifier6CreateERRNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Create()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN5score2mw3com4impl17InstanceSpecifier6CreateEN5score6ResultI17InstanceSpecifierEERR1T"><code class="docutils literal notranslate"><span class="pre">Create()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl10ProxyTraitE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::ProxyTrait</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl10ProxyTrait4BaseE"><code class="docutils literal notranslate"><span class="pre">Base</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN5score2mw3com4impl10ProxyTrait5EventE"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0_b_b_bEN5score2mw3com4impl10ProxyTrait5FieldE"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN5score2mw3com4impl10ProxyTrait6MethodE"><code class="docutils literal notranslate"><span class="pre">Method</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl13SkeletonTraitE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::impl::SkeletonTrait</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com4impl13SkeletonTrait4BaseE"><code class="docutils literal notranslate"><span class="pre">Base</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN5score2mw3com4impl13SkeletonTrait5EventE"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0_b_bEN5score2mw3com4impl13SkeletonTrait5FieldE"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN5score2mw3com4impl13SkeletonTrait6MethodE"><code class="docutils literal notranslate"><span class="pre">Method</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfigurationE"><code class="docutils literal notranslate"><span class="pre">score::mw::com::runtime::RuntimeConfiguration</span></code></a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEv"><code class="docutils literal notranslate"><span class="pre">RuntimeConfiguration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEKNSt7int32_tEA_N5score13StringLiteralE"><code class="docutils literal notranslate"><span class="pre">RuntimeConfiguration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5score2mw3com7runtime20RuntimeConfiguration20RuntimeConfigurationEN10filesystem4PathE"><code class="docutils literal notranslate"><span class="pre">RuntimeConfiguration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK5score2mw3com7runtime20RuntimeConfiguration20GetConfigurationPathEv"><code class="docutils literal notranslate"><span class="pre">GetConfigurationPath()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=7f76b32a3354e82990f2"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=7f76b32a3354e82990f2"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Eclipse S-CORE Contributors.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
