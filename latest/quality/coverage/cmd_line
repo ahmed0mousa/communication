@@ -1,0 +1,1 @@
+genhtml /home/runner/.bazel/execroot/_main/bazel-out/_coverage/_coverage_report.dat -o=cpp_coverage --show-details --legend --function-coverage --branch-coverage --ignore-errors category,inconsistent
