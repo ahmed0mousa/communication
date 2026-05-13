@@ -99,13 +99,27 @@ jobs:
       # ------------------------------------------------------------------
       - name: Generate documentation artifacts via Bazel
         run: |
-          bazel build //docs/sphinx:generate_api_rst
+          # Build both the API RST generator and the Doxygen XML target explicitly
+          bazel build //docs/sphinx:generate_api_rst //score/mw/com/design/doxygen_build:generate_doxygen
+
+          # Copy README.md to where Sphinx expects it
           cp -f score/mw/com/README.md docs/sphinx/README.md
+
+          # Copy generated RST files
           mkdir -p docs/sphinx/generated
           cp -f bazel-bin/docs/sphinx/generated/*.rst docs/sphinx/generated/
+
+          # Locate the Doxygen XML directory in bazel-bin (it is a TreeArtifact so the
+          # exact path can vary; use find to avoid hardcoding it)
+          DOXYGEN_XML_SRC=$(find bazel-bin/score/mw/com/design/doxygen_build -type d -name xml | head -1)
+          if [[ -z "${DOXYGEN_XML_SRC}" ]]; then
+            echo "ERROR: Doxygen XML output directory not found under bazel-bin" >&2
+            find bazel-bin/score -maxdepth 6 -type d | head -40
+            exit 1
+          fi
+          echo "Found Doxygen XML at: ${DOXYGEN_XML_SRC}"
           mkdir -p score/mw/com/design/doxygen_build/xml
-          cp -rf bazel-bin/score/mw/com/design/doxygen_build/xml/* \
-                 score/mw/com/design/doxygen_build/xml/
+          cp -rf "${DOXYGEN_XML_SRC}/." score/mw/com/design/doxygen_build/xml/
 
       - name: Install Python dependencies
         run: pip install -r requirements_lock.txt
