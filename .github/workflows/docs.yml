@@ -28,7 +28,9 @@ name: Build and Deploy Documentation
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - ahmo_move_to_github_pages  # TODO: remove before merging to main
   release:
     types: [published]
   workflow_dispatch:
