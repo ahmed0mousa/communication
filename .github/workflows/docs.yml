@@ -14,15 +14,17 @@
 # Workflow: Build and deploy Sphinx documentation to GitHub Pages.
 #
 # Triggers:
-#   - Push to main  → deploys to  <pages-url>/latest/
-#   - Release published → deploys to  <pages-url>/<tag>/  and  <pages-url>/stable/
-#   - workflow_dispatch → manual re-run (deploys as "latest")
+#   - Push to main        → deploys to  <pages-url>/latest/
+#   - Release published   → deploys to  <pages-url>/<tag>/  and  <pages-url>/stable/
+#   - Push to any branch  → deploys to  <pages-url>/preview/<branch>/
+#   - workflow_dispatch   → manual re-run
 #
 # URL structure on GitHub Pages:
-#   https://<owner>.github.io/<repo>/              ← root redirect to latest/
-#   https://<owner>.github.io/<repo>/latest/       ← built from main
-#   https://<owner>.github.io/<repo>/stable/       ← copy of newest release
-#   https://<owner>.github.io/<repo>/v1.2.3/       ← per-release snapshot
+#   https://<owner>.github.io/<repo>/                    ← root redirect to latest/
+#   https://<owner>.github.io/<repo>/latest/             ← built from main
+#   https://<owner>.github.io/<repo>/stable/             ← copy of newest release
+#   https://<owner>.github.io/<repo>/v1.2.3/             ← per-release snapshot
+#   https://<owner>.github.io/<repo>/preview/<branch>/  ← feature branch previews
 
 name: Build and Deploy Documentation
 
@@ -38,20 +40,29 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: deploy-docs-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   ANDROID_HOME: ""
   ANDROID_SDK_ROOT: ""
 
 jobs:
-  build-and-deploy-docs:
+  # --------------------------------------------------------------------
+  # Job 1: Build Sphinx via Bazel and deploy the versioned HTML
+  # --------------------------------------------------------------------
+  build-docs:
     runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
 
       # ------------------------------------------------------------------
-      # Determine deployment target (latest vs release tag)
+      # Determine deployment target
       # ------------------------------------------------------------------
       - name: Set deployment variables
         id: vars
@@ -64,19 +75,26 @@ jobs:
             VERSION="${{ github.ref_name }}"
             DEST_DIR="${{ github.ref_name }}"
             IS_RELEASE="true"
-          else
+          elif [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             VERSION="latest"
             DEST_DIR="latest"
             IS_RELEASE="false"
+          else
+            # Feature branch → preview/<branch-name>
+            BRANCH="${{ github.ref_name }}"
+            BRANCH="${BRANCH//\//-}"  # replace / with - for URL safety
+            VERSION="preview/${BRANCH}"
+            DEST_DIR="preview/${BRANCH}"
+            IS_RELEASE="false"
           fi
 
-          echo "version=${VERSION}"   >> $GITHUB_OUTPUT
-          echo "dest_dir=${DEST_DIR}" >> $GITHUB_OUTPUT
-          echo "base_url=${BASE_URL}" >> $GITHUB_OUTPUT
+          echo "version=${VERSION}"     >> $GITHUB_OUTPUT
+          echo "dest_dir=${DEST_DIR}"   >> $GITHUB_OUTPUT
+          echo "base_url=${BASE_URL}"   >> $GITHUB_OUTPUT
           echo "is_release=${IS_RELEASE}" >> $GITHUB_OUTPUT
 
       # ------------------------------------------------------------------
-      # Build environment setup
+      # Build environment
       # ------------------------------------------------------------------
       - name: Free Disk Space (Ubuntu)
         uses: eclipse-score/more-disk-space@v1
@@ -95,101 +113,107 @@ jobs:
         uses: ./actions/unblock_user_namespace_for_linux_sandbox
 
       # ------------------------------------------------------------------
-      # Generate Sphinx artifacts via Bazel (mirrors .readthedocs.yaml)
+      # Build — Bazel drives the full Sphinx pipeline including Doxygen
       # ------------------------------------------------------------------
-      - name: Generate documentation artifacts via Bazel
-        run: |
-          # Build both the API RST generator and the Doxygen XML target explicitly
-          bazel build //docs/sphinx:generate_api_rst //score/mw/com/design/doxygen_build:generate_doxygen
-
-          # Copy README.md to where Sphinx expects it
-          cp -f score/mw/com/README.md docs/sphinx/README.md
-
-          # Copy generated RST files
-          mkdir -p docs/sphinx/generated
-          cp -f bazel-bin/docs/sphinx/generated/*.rst docs/sphinx/generated/
-
-          # Locate the Doxygen XML directory in bazel-bin (it is a TreeArtifact so the
-          # exact path can vary; use find to avoid hardcoding it)
-          DOXYGEN_XML_SRC=$(find bazel-bin/score/mw/com/design/doxygen_build -type d -name xml | head -1)
-          if [[ -z "${DOXYGEN_XML_SRC}" ]]; then
-            echo "ERROR: Doxygen XML output directory not found under bazel-bin" >&2
-            find bazel-bin/score -maxdepth 6 -type d | head -40
-            exit 1
-          fi
-          echo "Found Doxygen XML at: ${DOXYGEN_XML_SRC}"
-          mkdir -p score/mw/com/design/doxygen_build/xml
-          cp -rf "${DOXYGEN_XML_SRC}/." score/mw/com/design/doxygen_build/xml/
-
-      - name: Install Python dependencies
-        run: pip install -r requirements_lock.txt
-
-      # ------------------------------------------------------------------
-      # Build Sphinx HTML
-      # ------------------------------------------------------------------
-      - name: Build Sphinx documentation
+      - name: Build Sphinx documentation via Bazel
         env:
           DOCS_VERSION: ${{ steps.vars.outputs.version }}
           DOCS_BASE_URL: ${{ steps.vars.outputs.base_url }}
-        run: sphinx-build docs/sphinx _sphinx_output
+        run: bazel build //docs/sphinx:sphinx_doc
 
       # ------------------------------------------------------------------
-      # Assemble the deploy directory
-      #   _deploy/
-      #     <dest_dir>/        ← sphinx HTML output
-      #     stable/            ← copy of sphinx output (releases only)
-      #     versions.json      ← version list for the navbar switcher
-      #     index.html         ← root redirect to latest/
-      #     .nojekyll          ← disable GitHub Pages Jekyll processing
+      # Locate HTML output (path varies by Bazel config/platform)
       # ------------------------------------------------------------------
-      - name: Assemble deploy directory
-        env:
-          DEST_DIR: ${{ steps.vars.outputs.dest_dir }}
-          IS_RELEASE: ${{ steps.vars.outputs.is_release }}
-          BASE_URL: ${{ steps.vars.outputs.base_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Locate and copy Sphinx HTML output
         run: |
-          mkdir -p _deploy
-
-          # Sphinx output into the version subfolder
-          cp -r _sphinx_output _deploy/${DEST_DIR}
-
-          # For releases: also publish as stable/
-          if [[ "${IS_RELEASE}" == "true" ]]; then
-            cp -r _sphinx_output _deploy/stable
+          HTML_SRC=$(find bazel-bin/docs/sphinx/sphinx_doc -type d -name html | head -1)
+          if [[ -z "${HTML_SRC}" ]]; then
+            echo "ERROR: HTML output not found under bazel-bin/docs/sphinx/sphinx_doc" >&2
+            find bazel-bin/docs/sphinx -maxdepth 4 -type d | head -30
+            exit 1
           fi
-
-          # Root index.html: redirect to latest/
-          cat > _deploy/index.html << 'REDIRECT'
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta http-equiv="refresh" content="0; url=latest/">
-            <title>Redirecting to latest documentation...</title>
-          </head>
-          <body>
-            <p>Redirecting to <a href="latest/">latest documentation</a>...</p>
-          </body>
-          </html>
-          REDIRECT
-
-          # Prevent Jekyll from processing the site
-          touch _deploy/.nojekyll
-
-          # Generate versions.json for the pydata-sphinx-theme version switcher
-          python3 docs/sphinx/utils/update_versions_json.py \
-            --owner "${{ github.repository_owner }}" \
-            --repo  "${{ github.event.repository.name }}" \
-            --base-url "${BASE_URL}" \
-            --output _deploy/versions.json
+          echo "Found HTML at: ${HTML_SRC}"
+          mkdir -p _sphinx_output
+          cp -r "${HTML_SRC}/." _sphinx_output/
 
       # ------------------------------------------------------------------
-      # Deploy to gh-pages branch (keep_files preserves other versions)
+      # Deploy versioned HTML to gh-pages branch
       # ------------------------------------------------------------------
-      - name: Deploy to GitHub Pages
+      - name: Deploy versioned docs to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_deploy
+          publish_dir: ./_sphinx_output
+          destination_dir: ${{ steps.vars.outputs.dest_dir }}
+          keep_files: true
+
+      # For releases: also deploy as stable/
+      - name: Deploy as stable (releases only)
+        if: steps.vars.outputs.is_release == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_sphinx_output
+          destination_dir: stable
+          keep_files: true
+
+      - name: Print deployed URL
+        run: |
+          echo "::notice::Docs deployed → ${{ steps.vars.outputs.base_url }}/${{ steps.vars.outputs.dest_dir }}/"
+
+  # --------------------------------------------------------------------
+  # Job 2: Refresh root index.html + switcher.json on gh-pages branch
+  # Runs after build-docs so the new version directory already exists.
+  # --------------------------------------------------------------------
+  update-root:
+    needs: build-docs
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v6.0.2
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Rebuild switcher.json from deployed version directories
+        run: |
+          OWNER="${{ github.repository_owner }}"
+          REPO="${{ github.event.repository.name }}"
+          BASE_URL="https://${OWNER}.github.io/${REPO}"
+
+          echo "[" > gh-pages/switcher.json
+
+          # Always include latest
+          echo "  {\"name\": \"latest\", \"version\": \"latest\", \"url\": \"${BASE_URL}/latest/\", \"preferred\": true}," >> gh-pages/switcher.json
+
+          # Include stable if the directory exists
+          if [[ -d "gh-pages/stable" ]]; then
+            echo "  {\"name\": \"stable\", \"version\": \"stable\", \"url\": \"${BASE_URL}/stable/\"}," >> gh-pages/switcher.json
+          fi
+
+          # Include tagged releases (v*), sorted newest first
+          for dir in $(find gh-pages -maxdepth 1 -type d -name 'v*' | sort -rV); do
+            ver=$(basename "$dir")
+            echo "  {\"name\": \"${ver}\", \"version\": \"${ver}\", \"url\": \"${BASE_URL}/${ver}/\"}," >> gh-pages/switcher.json
+          done
+
+          # Remove trailing comma on last entry and close the array
+          sed -i '$ s/,$//' gh-pages/switcher.json
+          echo "]" >> gh-pages/switcher.json
+
+          echo "Generated switcher.json:"
+          cat gh-pages/switcher.json
+
+      - name: Copy root index.html from repo
+        run: cp docs/sphinx/_gh_pages/index.html gh-pages/index.html
+
+      - name: Deploy updated root files
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./gh-pages
           keep_files: true

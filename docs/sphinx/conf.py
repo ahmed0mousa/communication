@@ -31,7 +31,7 @@ release = '1.0.0'
 # Version and base URL injected by the docs.yml GitHub Actions workflow.
 # Falls back to sensible defaults for local builds.
 docs_version = os.environ.get('DOCS_VERSION', 'latest')
-docs_base_url = os.environ.get('DOCS_BASE_URL', '').rstrip('/')
+docs_base_url = os.environ.get('DOCS_BASE_URL', 'https://eclipse-score.github.io/communication').rstrip('/')
 
 # -- General configuration ---
 extensions = [
@@ -92,9 +92,9 @@ html_theme_options = {
     'navbar_center': ['navbar-nav'],
     'navbar_end': ['version-switcher', 'navbar-icon-links', 'theme-switcher'],
 
-    # Version switcher — reads versions.json from the GitHub Pages root
+    # Version switcher — reads switcher.json from the GitHub Pages root
     'switcher': {
-        'json_url': f"{docs_base_url}/versions.json" if docs_base_url else '/versions.json',
+        'json_url': f"{docs_base_url}/switcher.json",
         'version_match': docs_version,
     },
 
