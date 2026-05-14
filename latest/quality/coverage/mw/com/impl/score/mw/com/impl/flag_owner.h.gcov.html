@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -100,22 +100,22 @@
 <span id="L22"><span class="lineNum">      22</span>                 :             : class FlagOwner</span>
 <span id="L23"><span class="lineNum">      23</span>                 :             : {</span>
 <span id="L24"><span class="lineNum">      24</span>                 :             :   public:</span>
-<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC tlaBgGNC">         400 :     explicit FlagOwner() noexcept : FlagOwner{false} {}</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">         433 :     explicit FlagOwner(bool initial_value) noexcept : flag_{initial_value} {}</span></span>
+<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC tlaBgGNC">         402 :     explicit FlagOwner() noexcept : FlagOwner{false} {}</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">         435 :     explicit FlagOwner(bool initial_value) noexcept : flag_{initial_value} {}</span></span>
 <span id="L27"><span class="lineNum">      27</span>                 :             : </span>
 <span id="L28"><span class="lineNum">      28</span>                 :             :     ~FlagOwner() noexcept = default;</span>
 <span id="L29"><span class="lineNum">      29</span>                 :             : </span>
 <span id="L30"><span class="lineNum">      30</span>                 :             :     FlagOwner(const FlagOwner&amp;) = delete;</span>
 <span id="L31"><span class="lineNum">      31</span>                 :             :     FlagOwner&amp; operator=(const FlagOwner&amp;) &amp; = delete;</span>
 <span id="L32"><span class="lineNum">      32</span>                 :             : </span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         160 :     FlagOwner(FlagOwner&amp;&amp; other) noexcept : flag_{other.flag_}</span></span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">         160 :     {</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         161 :     FlagOwner(FlagOwner&amp;&amp; other) noexcept : flag_{other.flag_}</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">         161 :     {</span></span>
 <span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaUNC tlaBgUNC">           0 :         // Suppress &quot;AUTOSAR C++14 A18-9-2&quot; rule findings. This rule stated: &quot;Forwarding values to other functions shall</span></span>
 <span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaUNC">           0 :         // be done via: (1) std::move if the value is an rvalue reference, (2) std::forward if the value is forwarding</span></span>
 <span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaUNC">           0 :         // reference&quot;. We are not forwarding any value here, we clear the container.</span></span>
 <span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaUNC">           0 :         // coverity[autosar_cpp14_a18_9_2_violation]</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC tlaBgGNC">         160 :         other.Clear();</span></span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">         160 :     }</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC tlaBgGNC">         161 :         other.Clear();</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">         161 :     }</span></span>
 <span id="L41"><span class="lineNum">      41</span>                 :             : </span>
 <span id="L42"><span class="lineNum">      42</span>                 :             :     FlagOwner&amp; operator=(FlagOwner&amp;&amp; other) &amp; noexcept</span>
 <span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          19 :     {</span></span>
@@ -133,9 +133,9 @@
 <span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">         116 :         flag_ = true;</span></span>
 <span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">         116 :     }</span></span>
 <span id="L57"><span class="lineNum">      57</span>                 :             :     void Clear() noexcept</span>
-<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">         235 :     {</span></span>
-<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaGNC">         235 :         flag_ = false;</span></span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         235 :     }</span></span>
+<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">         236 :     {</span></span>
+<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaGNC">         236 :         flag_ = false;</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         236 :     }</span></span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
 <span id="L62"><span class="lineNum">      62</span>                 :             :     bool IsSet() const noexcept</span>
 <span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         223 :     {</span></span>

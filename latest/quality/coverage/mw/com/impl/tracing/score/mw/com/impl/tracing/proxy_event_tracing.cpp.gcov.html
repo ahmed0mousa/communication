@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -245,8 +245,8 @@
 <span id="L167"><span class="lineNum">     167</span>                 :             : void TraceSubscribe(ProxyEventTracingData&amp; proxy_event_tracing_data,</span>
 <span id="L168"><span class="lineNum">     168</span>                 :             :                     const ProxyEventBindingBase&amp; proxy_event_binding_base,</span>
 <span id="L169"><span class="lineNum">     169</span>                 :             :                     const std::size_t max_sample_count) noexcept</span>
-<span id="L170"><span class="lineNum">     170</span>                 :<span class="tlaGNC">          95 : {</span></span>
-<span id="L171"><span class="lineNum">     171</span>         [<span class="tlaGBC" title="Branch 0 was taken 33 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 62 times"> + </span>]:<span class="tlaGNC">          95 :     if (proxy_event_tracing_data.enable_subscribe)</span></span>
+<span id="L170"><span class="lineNum">     170</span>                 :<span class="tlaGNC">          97 : {</span></span>
+<span id="L171"><span class="lineNum">     171</span>         [<span class="tlaGBC" title="Branch 0 was taken 33 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 64 times"> + </span>]:<span class="tlaGNC">          97 :     if (proxy_event_tracing_data.enable_subscribe)</span></span>
 <span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">          33 :     {</span></span>
 <span id="L173"><span class="lineNum">     173</span>                 :<span class="tlaGNC">          33 :         const auto service_element_instance_identifier =</span></span>
 <span id="L174"><span class="lineNum">     174</span>                 :<span class="tlaGNC">          33 :             proxy_event_tracing_data.service_element_instance_identifier_view;</span></span>
@@ -276,7 +276,7 @@
 <span id="L198"><span class="lineNum">     198</span>                 :<span class="tlaGNC">          33 :         UpdateTracingDataFromTraceResult(</span></span>
 <span id="L199"><span class="lineNum">     199</span>                 :<span class="tlaGNC">          33 :             trace_result, proxy_event_tracing_data, proxy_event_tracing_data.enable_subscribe);</span></span>
 <span id="L200"><span class="lineNum">     200</span>                 :<span class="tlaGNC">          33 :     }</span></span>
-<span id="L201"><span class="lineNum">     201</span>                 :<span class="tlaGNC">          95 : }</span></span>
+<span id="L201"><span class="lineNum">     201</span>                 :<span class="tlaGNC">          97 : }</span></span>
 <span id="L202"><span class="lineNum">     202</span>                 :             : </span>
 <span id="L203"><span class="lineNum">     203</span>                 :             : void TraceUnsubscribe(ProxyEventTracingData&amp; proxy_event_tracing_data,</span>
 <span id="L204"><span class="lineNum">     204</span>                 :             :                       const ProxyEventBindingBase&amp; proxy_event_binding_base) noexcept</span>

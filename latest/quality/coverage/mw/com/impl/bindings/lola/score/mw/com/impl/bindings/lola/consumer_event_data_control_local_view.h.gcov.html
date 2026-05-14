@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
@@ -218,17 +218,17 @@
 <span id="L140"><span class="lineNum">     140</span>                 :             :     ///</span>
 <span id="L141"><span class="lineNum">     141</span>                 :             :     /// This will be called in the constructor of TransactionLogRegistrationGuard.</span>
 <span id="L142"><span class="lineNum">     142</span>                 :             :     void SetTransactionLogLocalView(TransactionLogLocalView transaction_log_local_view) noexcept</span>
-<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">         455 :     {</span></span>
-<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">         455 :         transaction_log_local_view_.emplace(transaction_log_local_view);</span></span>
-<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">         455 :     }</span></span>
+<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">         460 :     {</span></span>
+<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">         460 :         transaction_log_local_view_.emplace(transaction_log_local_view);</span></span>
+<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">         460 :     }</span></span>
 <span id="L146"><span class="lineNum">     146</span>                 :             : </span>
 <span id="L147"><span class="lineNum">     147</span>                 :             :     /// \brief Clears the cached TransactionLogLocalView.</span>
 <span id="L148"><span class="lineNum">     148</span>                 :             :     ///</span>
 <span id="L149"><span class="lineNum">     149</span>                 :             :     /// This will be called in the destructor of TransactionLogRegistrationGuard.</span>
 <span id="L150"><span class="lineNum">     150</span>                 :             :     void ClearTransactionLogLocalView() noexcept</span>
-<span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">         325 :     {</span></span>
-<span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">         325 :         transaction_log_local_view_.reset();</span></span>
-<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">         325 :     }</span></span>
+<span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">         330 :     {</span></span>
+<span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">         330 :         transaction_log_local_view_.reset();</span></span>
+<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">         330 :     }</span></span>
 <span id="L154"><span class="lineNum">     154</span>                 :             : </span>
 <span id="L155"><span class="lineNum">     155</span>                 :             :     LocalEventControlSlots state_slots_;</span>
 <span id="L156"><span class="lineNum">     156</span>                 :             : </span>

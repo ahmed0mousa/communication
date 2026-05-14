@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -101,23 +101,23 @@
 <span id="L23"><span class="lineNum">      23</span>                 :             :                                               SkeletonBinding* parent_binding,</span>
 <span id="L24"><span class="lineNum">      24</span>                 :             :                                               const std::string_view method_name,</span>
 <span id="L25"><span class="lineNum">      25</span>                 :             :                                               MethodType method_type) -&gt; std::unique_ptr&lt;SkeletonMethodBinding&gt;</span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC tlaBgGNC">          48 : {</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC tlaBgGNC">           4 : {</span></span>
 <span id="L27"><span class="lineNum">      27</span>                 :             : </span>
-<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">          48 :     const InstanceIdentifierView instance_identifier_view{instance_identifier};</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">           4 :     const InstanceIdentifierView instance_identifier_view{instance_identifier};</span></span>
 <span id="L29"><span class="lineNum">      29</span>                 :             : </span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          48 :     using LambdaReturnType = std::unique_ptr&lt;SkeletonMethodBinding&gt;;</span></span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">          48 :     auto lola_deployment_handler = [&amp;instance_identifier_view, parent_binding, &amp;method_name, method_type](</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">          48 :                                        const LolaServiceTypeDeployment&amp; lola_type_deployment) -&gt; LambdaReturnType {</span></span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">          22 :         auto* const lola_parent = dynamic_cast&lt;lola::Skeleton*&gt;(parent_binding);</span></span>
-<span id="L34"><span class="lineNum">      34</span>         [<span class="tlaGBC" title="Branch 0 was taken 21 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          22 :         if (lola_parent == nullptr)</span></span>
-<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">          21 :         {</span></span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">          21 :             constexpr std::string_view error_msg =</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          21 :                 &quot;Skeleton Method could not be created because parent skeleton binding is a not a lola binding.&quot;;</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">           4 :     using LambdaReturnType = std::unique_ptr&lt;SkeletonMethodBinding&gt;;</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">           4 :     auto lola_deployment_handler = [&amp;instance_identifier_view, parent_binding, &amp;method_name, method_type](</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">           4 :                                        const LolaServiceTypeDeployment&amp; lola_type_deployment) -&gt; LambdaReturnType {</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">           2 :         auto* const lola_parent = dynamic_cast&lt;lola::Skeleton*&gt;(parent_binding);</span></span>
+<span id="L34"><span class="lineNum">      34</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">           2 :         if (lola_parent == nullptr)</span></span>
+<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">           1 :         {</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">           1 :             constexpr std::string_view error_msg =</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">           1 :                 &quot;Skeleton Method could not be created because parent skeleton binding is a not a lola binding.&quot;;</span></span>
 <span id="L38"><span class="lineNum">      38</span>                 :             : </span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          21 :             score::mw::log::LogError(&quot;lola&quot;) &lt;&lt; error_msg;</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">           1 :             score::mw::log::LogError(&quot;lola&quot;) &lt;&lt; error_msg;</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : </span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          21 :             return nullptr;</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          21 :         }</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">           1 :             return nullptr;</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">           1 :         }</span></span>
 <span id="L43"><span class="lineNum">      43</span>                 :             : </span>
 <span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">           1 :         const auto instance_id_maybe = instance_identifier_view.GetServiceInstanceId();</span></span>
 <span id="L45"><span class="lineNum">      45</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">           1 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(instance_id_maybe.has_value(),</span></span>
@@ -141,28 +141,28 @@
 <span id="L63"><span class="lineNum">      63</span>                 :             : </span>
 <span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">           1 :         lola::UniqueMethodIdentifier unique_method_identifier{lola_element_id, method_type};</span></span>
 <span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">           1 :         return std::make_unique&lt;lola::SkeletonMethod&gt;(*lola_parent, unique_method_identifier);</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          22 :     };</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">           2 :     };</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :             : </span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">          48 :     auto deployment_info_visitor = score::cpp::overload(</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">          48 :         lola_deployment_handler,</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          48 :         [](const score::cpp::blank&amp;) noexcept -&gt; LambdaReturnType {</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">           4 :     auto deployment_info_visitor = score::cpp::overload(</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">           4 :         lola_deployment_handler,</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">           4 :         [](const score::cpp::blank&amp;) noexcept -&gt; LambdaReturnType {</span></span>
 <span id="L71"><span class="lineNum">      71</span>                 :             :             // coverage false positive. Covered by the test:</span>
 <span id="L72"><span class="lineNum">      72</span>                 :             :             // SkeletonMethodFactoryFixture.CannotConstructEventFromSomeIpBinding</span>
 <span id="L73"><span class="lineNum">      73</span>                 :             :             // inside score/mw/com/impl/plumbing/skeleton_method_binding_factory_test.cpp</span>
 <span id="L74"><span class="lineNum">      74</span>                 :             :             // LCOV_EXCL_BR_LINE (false positive. See justification above).</span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">          26 :             return nullptr;</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">          26 :         },</span></span>
-<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">          48 :         [](const SomeIpServiceInstanceDeployment&amp;) noexcept -&gt; LambdaReturnType {</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">           2 :             return nullptr;</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">           2 :         },</span></span>
+<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">           4 :         [](const SomeIpServiceInstanceDeployment&amp;) noexcept -&gt; LambdaReturnType {</span></span>
 <span id="L78"><span class="lineNum">      78</span>                 :             :             // coverage false positive. Covered by the test:</span>
 <span id="L79"><span class="lineNum">      79</span>                 :             :             // SkeletonMethodFactoryFixture.CannotConstructEventFromBlankBinding</span>
 <span id="L80"><span class="lineNum">      80</span>                 :             :             // inside score/mw/com/impl/plumbing/skeleton_method_binding_factory_test.cpp</span>
 <span id="L81"><span class="lineNum">      81</span>                 :             :             // LCOV_EXCL_BR_LINE(false positive. See justification above).</span>
-<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">          48 :             return nullptr;</span></span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">          48 :         });</span></span>
+<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">           4 :             return nullptr;</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">           4 :         });</span></span>
 <span id="L84"><span class="lineNum">      84</span>                 :             : </span>
-<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaGNC">          48 :     const auto&amp; type_deployment = instance_identifier_view.GetServiceTypeDeployment();</span></span>
-<span id="L86"><span class="lineNum">      86</span>                 :<span class="tlaGNC">          48 :     return std::visit(deployment_info_visitor, type_deployment.binding_info_);</span></span>
-<span id="L87"><span class="lineNum">      87</span>                 :<span class="tlaGNC">          48 : }</span></span>
+<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaGNC">           4 :     const auto&amp; type_deployment = instance_identifier_view.GetServiceTypeDeployment();</span></span>
+<span id="L86"><span class="lineNum">      86</span>                 :<span class="tlaGNC">           4 :     return std::visit(deployment_info_visitor, type_deployment.binding_info_);</span></span>
+<span id="L87"><span class="lineNum">      87</span>                 :<span class="tlaGNC">           4 : }</span></span>
 <span id="L88"><span class="lineNum">      88</span>                 :             : }  // namespace score::mw::com::impl</span>
         </pre>
               </td>

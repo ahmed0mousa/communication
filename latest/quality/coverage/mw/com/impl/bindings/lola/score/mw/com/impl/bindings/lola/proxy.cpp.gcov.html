@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -274,19 +274,19 @@
 <span id="L196"><span class="lineNum">     196</span>                 :<span class="tlaGNC">          26 : }</span></span>
 <span id="L197"><span class="lineNum">     197</span>                 :             : </span>
 <span id="L198"><span class="lineNum">     198</span>                 :             : ServiceDataControl&amp; GetServiceDataControl(const memory::shared::ManagedMemoryResource&amp; control_memory_resource) noexcept</span>
-<span id="L199"><span class="lineNum">     199</span>                 :<span class="tlaGNC">         386 : {</span></span>
-<span id="L200"><span class="lineNum">     200</span>                 :<span class="tlaGNC">         386 :     auto* const usable_base_address = control_memory_resource.getUsableBaseAddress();</span></span>
-<span id="L201"><span class="lineNum">     201</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 386 times"> + </span>]:<span class="tlaGNC">         386 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(</span></span>
-<span id="L202"><span class="lineNum">     202</span>                 :<span class="tlaGNC">         386 :         usable_base_address != nullptr,</span></span>
-<span id="L203"><span class="lineNum">     203</span>                 :<span class="tlaGNC">         386 :         &quot;invalid memory resource for service_data_control -&gt; has no usable base adress!&quot;);</span></span>
+<span id="L199"><span class="lineNum">     199</span>                 :<span class="tlaGNC">         407 : {</span></span>
+<span id="L200"><span class="lineNum">     200</span>                 :<span class="tlaGNC">         407 :     auto* const usable_base_address = control_memory_resource.getUsableBaseAddress();</span></span>
+<span id="L201"><span class="lineNum">     201</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 407 times"> + </span>]:<span class="tlaGNC">         407 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(</span></span>
+<span id="L202"><span class="lineNum">     202</span>                 :<span class="tlaGNC">         407 :         usable_base_address != nullptr,</span></span>
+<span id="L203"><span class="lineNum">     203</span>                 :<span class="tlaGNC">         407 :         &quot;invalid memory resource for service_data_control -&gt; has no usable base adress!&quot;);</span></span>
 <span id="L204"><span class="lineNum">     204</span>                 :             : </span>
 <span id="L205"><span class="lineNum">     205</span>                 :             :     // Suppress &quot;AUTOSAR C++14 M5-2-8&quot; rule. The rule declares:</span>
 <span id="L206"><span class="lineNum">     206</span>                 :             :     // An object with integer type or pointer to void type shall not be converted to an object with pointer type.</span>
 <span id="L207"><span class="lineNum">     207</span>                 :             :     // The &quot;ServiceDataStorage&quot; type is strongly defined as shared IPC data between Proxy and Skeleton.</span>
 <span id="L208"><span class="lineNum">     208</span>                 :             :     // coverity[autosar_cpp14_m5_2_8_violation]</span>
-<span id="L209"><span class="lineNum">     209</span>                 :<span class="tlaGNC">         386 :     auto* const service_data_control = static_cast&lt;ServiceDataControl*&gt;(usable_base_address);</span></span>
-<span id="L210"><span class="lineNum">     210</span>                 :<span class="tlaGNC">         386 :     return *service_data_control;</span></span>
-<span id="L211"><span class="lineNum">     211</span>                 :<span class="tlaGNC">         386 : }</span></span>
+<span id="L209"><span class="lineNum">     209</span>                 :<span class="tlaGNC">         407 :     auto* const service_data_control = static_cast&lt;ServiceDataControl*&gt;(usable_base_address);</span></span>
+<span id="L210"><span class="lineNum">     210</span>                 :<span class="tlaGNC">         407 :     return *service_data_control;</span></span>
+<span id="L211"><span class="lineNum">     211</span>                 :<span class="tlaGNC">         407 : }</span></span>
 <span id="L212"><span class="lineNum">     212</span>                 :             : </span>
 <span id="L213"><span class="lineNum">     213</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule findings. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L214"><span class="lineNum">     214</span>                 :             : // implicitly&quot;. This is a false positive, all results which are accessed with '.value()' that could implicitly call</span>
@@ -351,30 +351,30 @@
 <span id="L273"><span class="lineNum">     273</span>                 :             :     // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L274"><span class="lineNum">     274</span>                 :             :     FindServiceGuard(FindServiceHandler&lt;HandleType&gt; find_service_handler,</span>
 <span id="L275"><span class="lineNum">     275</span>                 :             :                      EnrichedInstanceIdentifier enriched_instance_identifier)</span>
-<span id="L276"><span class="lineNum">     276</span>                 :<span class="tlaGNC">         194 :         : service_availability_change_handle_{nullptr}</span></span>
-<span id="L277"><span class="lineNum">     277</span>                 :<span class="tlaGNC">         194 :     {</span></span>
-<span id="L278"><span class="lineNum">     278</span>                 :<span class="tlaGNC">         194 :         auto&amp; service_discovery = impl::Runtime::getInstance().GetServiceDiscovery();</span></span>
-<span id="L279"><span class="lineNum">     279</span>                 :<span class="tlaGNC">         194 :         const auto find_service_handle_result = service_discovery.StartFindService(</span></span>
-<span id="L280"><span class="lineNum">     280</span>                 :<span class="tlaGNC">         194 :             std::move(find_service_handler), std::move(enriched_instance_identifier));</span></span>
-<span id="L281"><span class="lineNum">     281</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 193 times"> + </span>]:<span class="tlaGNC">         194 :         if (!find_service_handle_result.has_value())</span></span>
+<span id="L276"><span class="lineNum">     276</span>                 :<span class="tlaGNC">         201 :         : service_availability_change_handle_{nullptr}</span></span>
+<span id="L277"><span class="lineNum">     277</span>                 :<span class="tlaGNC">         201 :     {</span></span>
+<span id="L278"><span class="lineNum">     278</span>                 :<span class="tlaGNC">         201 :         auto&amp; service_discovery = impl::Runtime::getInstance().GetServiceDiscovery();</span></span>
+<span id="L279"><span class="lineNum">     279</span>                 :<span class="tlaGNC">         201 :         const auto find_service_handle_result = service_discovery.StartFindService(</span></span>
+<span id="L280"><span class="lineNum">     280</span>                 :<span class="tlaGNC">         201 :             std::move(find_service_handler), std::move(enriched_instance_identifier));</span></span>
+<span id="L281"><span class="lineNum">     281</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 200 times"> + </span>]:<span class="tlaGNC">         201 :         if (!find_service_handle_result.has_value())</span></span>
 <span id="L282"><span class="lineNum">     282</span>                 :<span class="tlaGNC">           1 :         {</span></span>
 <span id="L283"><span class="lineNum">     283</span>                 :<span class="tlaGNC">           1 :             score::mw::log::LogFatal(&quot;lola&quot;)</span></span>
 <span id="L284"><span class="lineNum">     284</span>                 :<span class="tlaGNC">           1 :                 &lt;&lt; &quot;StartFindService failed with error&quot; &lt;&lt; find_service_handle_result.error() &lt;&lt; &quot;. Terminating.&quot;;</span></span>
 <span id="L285"><span class="lineNum">     285</span>                 :<span class="tlaGNC">           1 :             std::terminate();</span></span>
 <span id="L286"><span class="lineNum">     286</span>                 :<span class="tlaGNC">           1 :         }</span></span>
-<span id="L287"><span class="lineNum">     287</span>                 :<span class="tlaGNC">         194 :         service_availability_change_handle_ = std::make_unique&lt;FindServiceHandle&gt;(find_service_handle_result.value());</span></span>
-<span id="L288"><span class="lineNum">     288</span>                 :<span class="tlaGNC">         194 :     }</span></span>
+<span id="L287"><span class="lineNum">     287</span>                 :<span class="tlaGNC">         201 :         service_availability_change_handle_ = std::make_unique&lt;FindServiceHandle&gt;(find_service_handle_result.value());</span></span>
+<span id="L288"><span class="lineNum">     288</span>                 :<span class="tlaGNC">         201 :     }</span></span>
 <span id="L289"><span class="lineNum">     289</span>                 :             : </span>
 <span id="L290"><span class="lineNum">     290</span>                 :             :     ~FindServiceGuard() noexcept</span>
-<span id="L291"><span class="lineNum">     291</span>                 :<span class="tlaGNC">         193 :     {</span></span>
-<span id="L292"><span class="lineNum">     292</span>                 :<span class="tlaGNC">         193 :         auto&amp; service_discovery = impl::Runtime::getInstance().GetServiceDiscovery();</span></span>
-<span id="L293"><span class="lineNum">     293</span>                 :<span class="tlaGNC">         193 :         const auto stop_find_service_result = service_discovery.StopFindService(*service_availability_change_handle_);</span></span>
-<span id="L294"><span class="lineNum">     294</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 192 times"> + </span>]:<span class="tlaGNC">         193 :         if (!stop_find_service_result.has_value())</span></span>
+<span id="L291"><span class="lineNum">     291</span>                 :<span class="tlaGNC">         200 :     {</span></span>
+<span id="L292"><span class="lineNum">     292</span>                 :<span class="tlaGNC">         200 :         auto&amp; service_discovery = impl::Runtime::getInstance().GetServiceDiscovery();</span></span>
+<span id="L293"><span class="lineNum">     293</span>                 :<span class="tlaGNC">         200 :         const auto stop_find_service_result = service_discovery.StopFindService(*service_availability_change_handle_);</span></span>
+<span id="L294"><span class="lineNum">     294</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 199 times"> + </span>]:<span class="tlaGNC">         200 :         if (!stop_find_service_result.has_value())</span></span>
 <span id="L295"><span class="lineNum">     295</span>                 :<span class="tlaGNC">           1 :         {</span></span>
 <span id="L296"><span class="lineNum">     296</span>                 :<span class="tlaGNC">           1 :             score::mw::log::LogError(&quot;lola&quot;)</span></span>
 <span id="L297"><span class="lineNum">     297</span>                 :<span class="tlaGNC">           1 :                 &lt;&lt; &quot;StopFindService failed with error&quot; &lt;&lt; stop_find_service_result.error() &lt;&lt; &quot;. Ignoring error.&quot;;</span></span>
 <span id="L298"><span class="lineNum">     298</span>                 :<span class="tlaGNC">           1 :         }</span></span>
-<span id="L299"><span class="lineNum">     299</span>                 :<span class="tlaGNC">         193 :     }</span></span>
+<span id="L299"><span class="lineNum">     299</span>                 :<span class="tlaGNC">         200 :     }</span></span>
 <span id="L300"><span class="lineNum">     300</span>                 :             : </span>
 <span id="L301"><span class="lineNum">     301</span>                 :             :     FindServiceGuard(const FindServiceGuard&amp;) = delete;</span>
 <span id="L302"><span class="lineNum">     302</span>                 :             :     FindServiceGuard&amp; operator=(const FindServiceGuard&amp;) = delete;</span>
@@ -489,27 +489,27 @@
 <span id="L411"><span class="lineNum">     411</span>                 :             :                  service_instance_usage_flock_mutex_and_lock,</span>
 <span id="L412"><span class="lineNum">     412</span>                 :             :              score::filesystem::Filesystem filesystem,</span>
 <span id="L413"><span class="lineNum">     413</span>                 :             :              ProxyInstanceIdentifier::ProxyInstanceCounter proxy_instance_counter) noexcept</span>
-<span id="L414"><span class="lineNum">     414</span>                 :<span class="tlaGNC">         194 :     : ProxyBinding{},</span></span>
-<span id="L415"><span class="lineNum">     415</span>                 :<span class="tlaGNC">         194 :       control_{std::move(control)},</span></span>
-<span id="L416"><span class="lineNum">     416</span>                 :<span class="tlaGNC">         194 :       data_{std::move(data)},</span></span>
-<span id="L417"><span class="lineNum">     417</span>                 :<span class="tlaGNC">         194 :       method_shm_resource_{nullptr},</span></span>
-<span id="L418"><span class="lineNum">     418</span>                 :<span class="tlaGNC">         194 :       quality_type_{quality_type},</span></span>
-<span id="L419"><span class="lineNum">     419</span>                 :<span class="tlaGNC">         194 :       event_name_to_element_fq_id_converter_{std::move(event_name_to_element_fq_id_converter)},</span></span>
-<span id="L420"><span class="lineNum">     420</span>                 :<span class="tlaGNC">         194 :       handle_{std::move(handle)},</span></span>
-<span id="L421"><span class="lineNum">     421</span>                 :<span class="tlaGNC">         194 :       event_bindings_{},</span></span>
-<span id="L422"><span class="lineNum">     422</span>                 :<span class="tlaGNC">         194 :       proxy_event_registration_mutex_{},</span></span>
-<span id="L423"><span class="lineNum">     423</span>                 :<span class="tlaGNC">         194 :       is_service_instance_available_{false},</span></span>
-<span id="L424"><span class="lineNum">     424</span>                 :<span class="tlaGNC">         194 :       service_instance_usage_marker_file_{std::move(service_instance_usage_marker_file)},</span></span>
-<span id="L425"><span class="lineNum">     425</span>                 :<span class="tlaGNC">         194 :       service_instance_usage_flock_mutex_and_lock_{std::move(service_instance_usage_flock_mutex_and_lock)},</span></span>
-<span id="L426"><span class="lineNum">     426</span>                 :<span class="tlaGNC">         194 :       proxy_methods_{},</span></span>
-<span id="L427"><span class="lineNum">     427</span>                 :<span class="tlaGNC">         194 :       method_data_{nullptr},</span></span>
-<span id="L428"><span class="lineNum">     428</span>                 :<span class="tlaGNC">         194 :       proxy_instance_identifier_{GetBindingRuntime&lt;lola::IRuntime&gt;(BindingType::kLoLa).GetApplicationId(),</span></span>
-<span id="L429"><span class="lineNum">     429</span>                 :<span class="tlaGNC">         194 :                                  proxy_instance_counter},</span></span>
-<span id="L430"><span class="lineNum">     430</span>                 :<span class="tlaGNC">         194 :       offered_state_machine_{},</span></span>
-<span id="L431"><span class="lineNum">     431</span>                 :<span class="tlaGNC">         194 :       are_proxy_methods_setup_{false},</span></span>
-<span id="L432"><span class="lineNum">     432</span>                 :<span class="tlaGNC">         194 :       filesystem_{filesystem},</span></span>
-<span id="L433"><span class="lineNum">     433</span>                 :<span class="tlaGNC">         194 :       find_service_guard_{std::make_unique&lt;FindServiceGuard&gt;(</span></span>
-<span id="L434"><span class="lineNum">     434</span>                 :<span class="tlaGNC">         194 :           [this](ServiceHandleContainer&lt;HandleType&gt; service_handle_container, FindServiceHandle) {</span></span>
+<span id="L414"><span class="lineNum">     414</span>                 :<span class="tlaGNC">         201 :     : ProxyBinding{},</span></span>
+<span id="L415"><span class="lineNum">     415</span>                 :<span class="tlaGNC">         201 :       control_{std::move(control)},</span></span>
+<span id="L416"><span class="lineNum">     416</span>                 :<span class="tlaGNC">         201 :       data_{std::move(data)},</span></span>
+<span id="L417"><span class="lineNum">     417</span>                 :<span class="tlaGNC">         201 :       method_shm_resource_{nullptr},</span></span>
+<span id="L418"><span class="lineNum">     418</span>                 :<span class="tlaGNC">         201 :       quality_type_{quality_type},</span></span>
+<span id="L419"><span class="lineNum">     419</span>                 :<span class="tlaGNC">         201 :       event_name_to_element_fq_id_converter_{std::move(event_name_to_element_fq_id_converter)},</span></span>
+<span id="L420"><span class="lineNum">     420</span>                 :<span class="tlaGNC">         201 :       handle_{std::move(handle)},</span></span>
+<span id="L421"><span class="lineNum">     421</span>                 :<span class="tlaGNC">         201 :       event_bindings_{},</span></span>
+<span id="L422"><span class="lineNum">     422</span>                 :<span class="tlaGNC">         201 :       proxy_event_registration_mutex_{},</span></span>
+<span id="L423"><span class="lineNum">     423</span>                 :<span class="tlaGNC">         201 :       is_service_instance_available_{false},</span></span>
+<span id="L424"><span class="lineNum">     424</span>                 :<span class="tlaGNC">         201 :       service_instance_usage_marker_file_{std::move(service_instance_usage_marker_file)},</span></span>
+<span id="L425"><span class="lineNum">     425</span>                 :<span class="tlaGNC">         201 :       service_instance_usage_flock_mutex_and_lock_{std::move(service_instance_usage_flock_mutex_and_lock)},</span></span>
+<span id="L426"><span class="lineNum">     426</span>                 :<span class="tlaGNC">         201 :       proxy_methods_{},</span></span>
+<span id="L427"><span class="lineNum">     427</span>                 :<span class="tlaGNC">         201 :       method_data_{nullptr},</span></span>
+<span id="L428"><span class="lineNum">     428</span>                 :<span class="tlaGNC">         201 :       proxy_instance_identifier_{GetBindingRuntime&lt;lola::IRuntime&gt;(BindingType::kLoLa).GetApplicationId(),</span></span>
+<span id="L429"><span class="lineNum">     429</span>                 :<span class="tlaGNC">         201 :                                  proxy_instance_counter},</span></span>
+<span id="L430"><span class="lineNum">     430</span>                 :<span class="tlaGNC">         201 :       offered_state_machine_{},</span></span>
+<span id="L431"><span class="lineNum">     431</span>                 :<span class="tlaGNC">         201 :       are_proxy_methods_setup_{false},</span></span>
+<span id="L432"><span class="lineNum">     432</span>                 :<span class="tlaGNC">         201 :       filesystem_{filesystem},</span></span>
+<span id="L433"><span class="lineNum">     433</span>                 :<span class="tlaGNC">         201 :       find_service_guard_{std::make_unique&lt;FindServiceGuard&gt;(</span></span>
+<span id="L434"><span class="lineNum">     434</span>                 :<span class="tlaGNC">         201 :           [this](ServiceHandleContainer&lt;HandleType&gt; service_handle_container, FindServiceHandle) {</span></span>
 <span id="L435"><span class="lineNum">     435</span>                 :             :               // Suppress Autosar C++14 A8-5-3 states that auto variables shall not be initialized using braced</span>
 <span id="L436"><span class="lineNum">     436</span>                 :             :               // initialization. This is a false positive, we don't use auto here</span>
 <span id="L437"><span class="lineNum">     437</span>                 :             :               // coverity[autosar_cpp14_a8_5_3_violation : FALSE]</span>
@@ -517,11 +517,11 @@
 <span id="L439"><span class="lineNum">     439</span>                 :<span class="tlaGNC">          25 :               is_service_instance_available_ = !service_handle_container.empty();</span></span>
 <span id="L440"><span class="lineNum">     440</span>                 :<span class="tlaGNC">          25 :               ServiceAvailabilityChangeHandler(is_service_instance_available_);</span></span>
 <span id="L441"><span class="lineNum">     441</span>                 :<span class="tlaGNC">          25 :           },</span></span>
-<span id="L442"><span class="lineNum">     442</span>                 :<span class="tlaGNC">         194 :           EnrichedInstanceIdentifier{handle_})}</span></span>
-<span id="L443"><span class="lineNum">     443</span>                 :<span class="tlaGNC">         194 : {</span></span>
-<span id="L444"><span class="lineNum">     444</span>                 :<span class="tlaGNC">         194 : }</span></span>
+<span id="L442"><span class="lineNum">     442</span>                 :<span class="tlaGNC">         201 :           EnrichedInstanceIdentifier{handle_})}</span></span>
+<span id="L443"><span class="lineNum">     443</span>                 :<span class="tlaGNC">         201 : {</span></span>
+<span id="L444"><span class="lineNum">     444</span>                 :<span class="tlaGNC">         201 : }</span></span>
 <span id="L445"><span class="lineNum">     445</span>                 :             : </span>
-<span id="L446"><span class="lineNum">     446</span>                 :<span class="tlaGNC">         193 : Proxy::~Proxy() = default;</span></span>
+<span id="L446"><span class="lineNum">     446</span>                 :<span class="tlaGNC">         200 : Proxy::~Proxy() = default;</span></span>
 <span id="L447"><span class="lineNum">     447</span>                 :             : </span>
 <span id="L448"><span class="lineNum">     448</span>                 :             : void Proxy::ServiceAvailabilityChangeHandler(const bool is_service_available)</span>
 <span id="L449"><span class="lineNum">     449</span>                 :<span class="tlaGNC">          25 : {</span></span>
@@ -609,12 +609,12 @@
 <span id="L531"><span class="lineNum">     531</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L532"><span class="lineNum">     532</span>                 :             : ConsumerEventDataControlLocalView&lt;&gt; Proxy::GetConsumerEventDataControlLocalView(</span>
 <span id="L533"><span class="lineNum">     533</span>                 :             :     const ElementFqId element_fq_id) noexcept</span>
-<span id="L534"><span class="lineNum">     534</span>                 :<span class="tlaGNC">         111 : {</span></span>
-<span id="L535"><span class="lineNum">     535</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 111 times"> + </span>]:<span class="tlaGNC">         111 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(control_ != nullptr,</span></span>
-<span id="L536"><span class="lineNum">     536</span>                 :<span class="tlaGNC">         111 :                                                       &quot;Proxy::GetEventControl: Managed memory control pointer is Null&quot;);</span></span>
-<span id="L537"><span class="lineNum">     537</span>                 :<span class="tlaGNC">         111 :     auto&amp; service_data_control = GetServiceDataControl(*control_);</span></span>
-<span id="L538"><span class="lineNum">     538</span>                 :<span class="tlaGNC">         111 :     const auto event_entry = service_data_control.event_controls_.find(element_fq_id);</span></span>
-<span id="L539"><span class="lineNum">     539</span>         [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 107 times"> + </span>]:<span class="tlaGNC">         111 :     if (event_entry == service_data_control.event_controls_.end())</span></span>
+<span id="L534"><span class="lineNum">     534</span>                 :<span class="tlaGNC">         118 : {</span></span>
+<span id="L535"><span class="lineNum">     535</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 118 times"> + </span>]:<span class="tlaGNC">         118 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(control_ != nullptr,</span></span>
+<span id="L536"><span class="lineNum">     536</span>                 :<span class="tlaGNC">         118 :                                                       &quot;Proxy::GetEventControl: Managed memory control pointer is Null&quot;);</span></span>
+<span id="L537"><span class="lineNum">     537</span>                 :<span class="tlaGNC">         118 :     auto&amp; service_data_control = GetServiceDataControl(*control_);</span></span>
+<span id="L538"><span class="lineNum">     538</span>                 :<span class="tlaGNC">         118 :     const auto event_entry = service_data_control.event_controls_.find(element_fq_id);</span></span>
+<span id="L539"><span class="lineNum">     539</span>         [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 114 times"> + </span>]:<span class="tlaGNC">         118 :     if (event_entry == service_data_control.event_controls_.end())</span></span>
 <span id="L540"><span class="lineNum">     540</span>                 :<span class="tlaGNC">           4 :     {</span></span>
 <span id="L541"><span class="lineNum">     541</span>                 :<span class="tlaGNC">           4 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; __func__ &lt;&lt; __LINE__</span></span>
 <span id="L542"><span class="lineNum">     542</span>                 :<span class="tlaGNC">           4 :                                          &lt;&lt; &quot;Unable to find control channel for given event instance. Terminating.&quot;;</span></span>
@@ -630,8 +630,8 @@
 <span id="L552"><span class="lineNum">     552</span>                 :             :     // coverity[autosar_cpp14_m7_5_1_violation]</span>
 <span id="L553"><span class="lineNum">     553</span>                 :             :     // coverity[autosar_cpp14_m7_5_2_violation]</span>
 <span id="L554"><span class="lineNum">     554</span>                 :             :     // coverity[autosar_cpp14_a3_8_1_violation]</span>
-<span id="L555"><span class="lineNum">     555</span>                 :<span class="tlaGNC">         111 :     return ConsumerEventDataControlLocalView&lt;&gt;{event_entry-&gt;second.data_control};</span></span>
-<span id="L556"><span class="lineNum">     556</span>                 :<span class="tlaGNC">         111 : }</span></span>
+<span id="L555"><span class="lineNum">     555</span>                 :<span class="tlaGNC">         118 :     return ConsumerEventDataControlLocalView&lt;&gt;{event_entry-&gt;second.data_control};</span></span>
+<span id="L556"><span class="lineNum">     556</span>                 :<span class="tlaGNC">         118 : }</span></span>
 <span id="L557"><span class="lineNum">     557</span>                 :             : </span>
 <span id="L558"><span class="lineNum">     558</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule findings. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L559"><span class="lineNum">     559</span>                 :             : // implicitly&quot;. This is a false positive, std::less which is used by std::map::find could throw an exception if the key</span>
@@ -639,19 +639,19 @@
 <span id="L561"><span class="lineNum">     561</span>                 :             : // exception.</span>
 <span id="L562"><span class="lineNum">     562</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L563"><span class="lineNum">     563</span>                 :             : EventSubscriptionControl&lt;&gt;&amp; Proxy::GetEventSubscriptionControl(const ElementFqId element_fq_id) noexcept</span>
-<span id="L564"><span class="lineNum">     564</span>                 :<span class="tlaGNC">         107 : {</span></span>
-<span id="L565"><span class="lineNum">     565</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 107 times"> + </span>]:<span class="tlaGNC">         107 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(control_ != nullptr,</span></span>
-<span id="L566"><span class="lineNum">     566</span>                 :<span class="tlaGNC">         107 :                                                       &quot;Proxy::GetEventControl: Managed memory control pointer is Null&quot;);</span></span>
-<span id="L567"><span class="lineNum">     567</span>                 :<span class="tlaGNC">         107 :     auto&amp; service_data_control = GetServiceDataControl(*control_);</span></span>
-<span id="L568"><span class="lineNum">     568</span>                 :<span class="tlaGNC">         107 :     const auto event_entry = service_data_control.event_controls_.find(element_fq_id);</span></span>
-<span id="L569"><span class="lineNum">     569</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 107 times"> + </span>]:<span class="tlaGNC">         107 :     if (event_entry == service_data_control.event_controls_.end())</span></span>
+<span id="L564"><span class="lineNum">     564</span>                 :<span class="tlaGNC">         114 : {</span></span>
+<span id="L565"><span class="lineNum">     565</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 114 times"> + </span>]:<span class="tlaGNC">         114 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(control_ != nullptr,</span></span>
+<span id="L566"><span class="lineNum">     566</span>                 :<span class="tlaGNC">         114 :                                                       &quot;Proxy::GetEventControl: Managed memory control pointer is Null&quot;);</span></span>
+<span id="L567"><span class="lineNum">     567</span>                 :<span class="tlaGNC">         114 :     auto&amp; service_data_control = GetServiceDataControl(*control_);</span></span>
+<span id="L568"><span class="lineNum">     568</span>                 :<span class="tlaGNC">         114 :     const auto event_entry = service_data_control.event_controls_.find(element_fq_id);</span></span>
+<span id="L569"><span class="lineNum">     569</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 114 times"> + </span>]:<span class="tlaGNC">         114 :     if (event_entry == service_data_control.event_controls_.end())</span></span>
 <span id="L570"><span class="lineNum">     570</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
 <span id="L571"><span class="lineNum">     571</span>                 :<span class="tlaUNC">           0 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; __func__ &lt;&lt; __LINE__</span></span>
 <span id="L572"><span class="lineNum">     572</span>                 :<span class="tlaUNC">           0 :                                          &lt;&lt; &quot;Unable to find control channel for given event instance. Terminating.&quot;;</span></span>
 <span id="L573"><span class="lineNum">     573</span>                 :<span class="tlaUNC">           0 :         std::terminate();</span></span>
 <span id="L574"><span class="lineNum">     574</span>                 :<span class="tlaUNC">           0 :     }</span></span>
-<span id="L575"><span class="lineNum">     575</span>                 :<span class="tlaGNC tlaBgGNC">         107 :     return event_entry-&gt;second.subscription_control;</span></span>
-<span id="L576"><span class="lineNum">     576</span>                 :<span class="tlaGNC">         107 : }</span></span>
+<span id="L575"><span class="lineNum">     575</span>                 :<span class="tlaGNC tlaBgGNC">         114 :     return event_entry-&gt;second.subscription_control;</span></span>
+<span id="L576"><span class="lineNum">     576</span>                 :<span class="tlaGNC">         114 : }</span></span>
 <span id="L577"><span class="lineNum">     577</span>                 :             : </span>
 <span id="L578"><span class="lineNum">     578</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule findings. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L579"><span class="lineNum">     579</span>                 :             : // implicitly&quot;. This is a false positive, std::less which is used by std::map::find could throw an exception if the key</span>
@@ -659,19 +659,19 @@
 <span id="L581"><span class="lineNum">     581</span>                 :             : // exception.</span>
 <span id="L582"><span class="lineNum">     582</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L583"><span class="lineNum">     583</span>                 :             : TransactionLogSet&amp; Proxy::GetTransactionLogSet(const ElementFqId element_fq_id) noexcept</span>
-<span id="L584"><span class="lineNum">     584</span>                 :<span class="tlaGNC">         143 : {</span></span>
-<span id="L585"><span class="lineNum">     585</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 143 times"> + </span>]:<span class="tlaGNC">         143 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(control_ != nullptr,</span></span>
-<span id="L586"><span class="lineNum">     586</span>                 :<span class="tlaGNC">         143 :                                                       &quot;Proxy::GetEventControl: Managed memory control pointer is Null&quot;);</span></span>
-<span id="L587"><span class="lineNum">     587</span>                 :<span class="tlaGNC">         143 :     auto&amp; service_data_control = GetServiceDataControl(*control_);</span></span>
-<span id="L588"><span class="lineNum">     588</span>                 :<span class="tlaGNC">         143 :     const auto event_entry = service_data_control.event_controls_.find(element_fq_id);</span></span>
-<span id="L589"><span class="lineNum">     589</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 143 times"> + </span>]:<span class="tlaGNC">         143 :     if (event_entry == service_data_control.event_controls_.end())</span></span>
+<span id="L584"><span class="lineNum">     584</span>                 :<span class="tlaGNC">         150 : {</span></span>
+<span id="L585"><span class="lineNum">     585</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 150 times"> + </span>]:<span class="tlaGNC">         150 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(control_ != nullptr,</span></span>
+<span id="L586"><span class="lineNum">     586</span>                 :<span class="tlaGNC">         150 :                                                       &quot;Proxy::GetEventControl: Managed memory control pointer is Null&quot;);</span></span>
+<span id="L587"><span class="lineNum">     587</span>                 :<span class="tlaGNC">         150 :     auto&amp; service_data_control = GetServiceDataControl(*control_);</span></span>
+<span id="L588"><span class="lineNum">     588</span>                 :<span class="tlaGNC">         150 :     const auto event_entry = service_data_control.event_controls_.find(element_fq_id);</span></span>
+<span id="L589"><span class="lineNum">     589</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 150 times"> + </span>]:<span class="tlaGNC">         150 :     if (event_entry == service_data_control.event_controls_.end())</span></span>
 <span id="L590"><span class="lineNum">     590</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
 <span id="L591"><span class="lineNum">     591</span>                 :<span class="tlaUNC">           0 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; __func__ &lt;&lt; __LINE__</span></span>
 <span id="L592"><span class="lineNum">     592</span>                 :<span class="tlaUNC">           0 :                                          &lt;&lt; &quot;Unable to find control channel for given event instance. Terminating.&quot;;</span></span>
 <span id="L593"><span class="lineNum">     593</span>                 :<span class="tlaUNC">           0 :         std::terminate();</span></span>
 <span id="L594"><span class="lineNum">     594</span>                 :<span class="tlaUNC">           0 :     }</span></span>
-<span id="L595"><span class="lineNum">     595</span>                 :<span class="tlaGNC tlaBgGNC">         143 :     return event_entry-&gt;second.transaction_log_set_;</span></span>
-<span id="L596"><span class="lineNum">     596</span>                 :<span class="tlaGNC">         143 : }</span></span>
+<span id="L595"><span class="lineNum">     595</span>                 :<span class="tlaGNC tlaBgGNC">         150 :     return event_entry-&gt;second.transaction_log_set_;</span></span>
+<span id="L596"><span class="lineNum">     596</span>                 :<span class="tlaGNC">         150 : }</span></span>
 <span id="L597"><span class="lineNum">     597</span>                 :             : </span>
 <span id="L598"><span class="lineNum">     598</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule findings. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L599"><span class="lineNum">     599</span>                 :             : // implicitly&quot;. This is a false positive, std::less which is used by std::map::find could throw an exception if the key</span>
@@ -987,9 +987,9 @@
 <span id="L909"><span class="lineNum">     909</span>                 :<span class="tlaGNC">          26 : }</span></span>
 <span id="L910"><span class="lineNum">     910</span>                 :             : </span>
 <span id="L911"><span class="lineNum">     911</span>                 :             : QualityType Proxy::GetQualityType() const noexcept</span>
-<span id="L912"><span class="lineNum">     912</span>                 :<span class="tlaGNC">         176 : {</span></span>
-<span id="L913"><span class="lineNum">     913</span>                 :<span class="tlaGNC">         176 :     return quality_type_;</span></span>
-<span id="L914"><span class="lineNum">     914</span>                 :<span class="tlaGNC">         176 : }</span></span>
+<span id="L912"><span class="lineNum">     912</span>                 :<span class="tlaGNC">         183 : {</span></span>
+<span id="L913"><span class="lineNum">     913</span>                 :<span class="tlaGNC">         183 :     return quality_type_;</span></span>
+<span id="L914"><span class="lineNum">     914</span>                 :<span class="tlaGNC">         183 : }</span></span>
 <span id="L915"><span class="lineNum">     915</span>                 :             : </span>
 <span id="L916"><span class="lineNum">     916</span>                 :             : pid_t Proxy::GetSourcePid() const noexcept</span>
 <span id="L917"><span class="lineNum">     917</span>                 :<span class="tlaGNC">         123 : {</span></span>

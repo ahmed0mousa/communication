@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -137,7 +137,7 @@
 <span id="L59"><span class="lineNum">      59</span>                 :             :     /// \param instance_id The instance identifier which uniquely identifies this Skeleton instance.</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             :     SkeletonBase(std::unique_ptr&lt;SkeletonBinding&gt; skeleton_binding, InstanceIdentifier instance_id);</span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC tlaBgGNC">         247 :     virtual ~SkeletonBase() = default;</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC tlaBgGNC">         249 :     virtual ~SkeletonBase() = default;</span></span>
 <span id="L63"><span class="lineNum">      63</span>                 :             : </span>
 <span id="L64"><span class="lineNum">      64</span>                 :             :     /// \brief A Skeleton shall not be copyable</span>
 <span id="L65"><span class="lineNum">      65</span>                 :             :     /// \requirement SWS_CM_00134</span>
@@ -195,17 +195,17 @@
 <span id="L117"><span class="lineNum">     117</span>                 :             : class SkeletonBaseView</span>
 <span id="L118"><span class="lineNum">     118</span>                 :             : {</span>
 <span id="L119"><span class="lineNum">     119</span>                 :             :   public:</span>
-<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">         994 :     explicit SkeletonBaseView(SkeletonBase&amp; skeleton_base) : skeleton_base_{skeleton_base} {}</span></span>
+<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">         961 :     explicit SkeletonBaseView(SkeletonBase&amp; skeleton_base) : skeleton_base_{skeleton_base} {}</span></span>
 <span id="L121"><span class="lineNum">     121</span>                 :             : </span>
 <span id="L122"><span class="lineNum">     122</span>                 :             :     InstanceIdentifier GetAssociatedInstanceIdentifier() const</span>
-<span id="L123"><span class="lineNum">     123</span>                 :<span class="tlaGNC">         406 :     {</span></span>
-<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">         406 :         return skeleton_base_.instance_id_;</span></span>
-<span id="L125"><span class="lineNum">     125</span>                 :<span class="tlaGNC">         406 :     }</span></span>
+<span id="L123"><span class="lineNum">     123</span>                 :<span class="tlaGNC">         389 :     {</span></span>
+<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">         389 :         return skeleton_base_.instance_id_;</span></span>
+<span id="L125"><span class="lineNum">     125</span>                 :<span class="tlaGNC">         389 :     }</span></span>
 <span id="L126"><span class="lineNum">     126</span>                 :             : </span>
 <span id="L127"><span class="lineNum">     127</span>                 :             :     SkeletonBinding* GetBinding() const</span>
-<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">         164 :     {</span></span>
-<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">         164 :         return skeleton_base_.binding_.get();</span></span>
-<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">         164 :     }</span></span>
+<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">         146 :     {</span></span>
+<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">         146 :         return skeleton_base_.binding_.get();</span></span>
+<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">         146 :     }</span></span>
 <span id="L131"><span class="lineNum">     131</span>                 :             : </span>
 <span id="L132"><span class="lineNum">     132</span>                 :             :     void RegisterEvent(const std::string_view event_name, SkeletonEventBase&amp; event)</span>
 <span id="L133"><span class="lineNum">     133</span>                 :<span class="tlaGNC">          88 :     {</span></span>
@@ -215,11 +215,11 @@
 <span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">          88 :     }</span></span>
 <span id="L138"><span class="lineNum">     138</span>                 :             : </span>
 <span id="L139"><span class="lineNum">     139</span>                 :             :     void RegisterField(const std::string_view field_name, SkeletonFieldBase&amp; field)</span>
-<span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">          84 :     {</span></span>
-<span id="L141"><span class="lineNum">     141</span>                 :<span class="tlaGNC">          84 :         const auto result = skeleton_base_.fields_.emplace(field_name, field);</span></span>
-<span id="L142"><span class="lineNum">     142</span>                 :<span class="tlaGNC">          84 :         const bool was_field_inserted = result.second;</span></span>
-<span id="L143"><span class="lineNum">     143</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 84 times"> + </span>]:<span class="tlaGNC">          84 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(was_field_inserted, &quot;Field cannot be registered as it already exists.&quot;);</span></span>
-<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">          84 :     }</span></span>
+<span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">          85 :     {</span></span>
+<span id="L141"><span class="lineNum">     141</span>                 :<span class="tlaGNC">          85 :         const auto result = skeleton_base_.fields_.emplace(field_name, field);</span></span>
+<span id="L142"><span class="lineNum">     142</span>                 :<span class="tlaGNC">          85 :         const bool was_field_inserted = result.second;</span></span>
+<span id="L143"><span class="lineNum">     143</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 85 times"> + </span>]:<span class="tlaGNC">          85 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(was_field_inserted, &quot;Field cannot be registered as it already exists.&quot;);</span></span>
+<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">          85 :     }</span></span>
 <span id="L145"><span class="lineNum">     145</span>                 :             : </span>
 <span id="L146"><span class="lineNum">     146</span>                 :             :     void RegisterMethod(const std::string_view method_name, SkeletonMethodBase&amp; method)</span>
 <span id="L147"><span class="lineNum">     147</span>                 :<span class="tlaGNC">          57 :     {</span></span>
@@ -247,17 +247,17 @@
 <span id="L169"><span class="lineNum">     169</span>                 :<span class="tlaGNC">          54 :     }</span></span>
 <span id="L170"><span class="lineNum">     170</span>                 :             : </span>
 <span id="L171"><span class="lineNum">     171</span>                 :             :     void UpdateField(const std::string_view field_name, SkeletonFieldBase&amp; field) noexcept</span>
-<span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">          56 :     {</span></span>
-<span id="L173"><span class="lineNum">     173</span>                 :<span class="tlaGNC">          56 :         auto field_name_it = skeleton_base_.fields_.find(field_name);</span></span>
-<span id="L174"><span class="lineNum">     174</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 55 times"> + </span>]:<span class="tlaGNC">          56 :         if (field_name_it == skeleton_base_.fields_.cend())</span></span>
+<span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">          57 :     {</span></span>
+<span id="L173"><span class="lineNum">     173</span>                 :<span class="tlaGNC">          57 :         auto field_name_it = skeleton_base_.fields_.find(field_name);</span></span>
+<span id="L174"><span class="lineNum">     174</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 56 times"> + </span>]:<span class="tlaGNC">          57 :         if (field_name_it == skeleton_base_.fields_.cend())</span></span>
 <span id="L175"><span class="lineNum">     175</span>                 :<span class="tlaGNC">           1 :         {</span></span>
 <span id="L176"><span class="lineNum">     176</span>                 :<span class="tlaGNC">           1 :             score::mw::log::LogError(&quot;lola&quot;)</span></span>
 <span id="L177"><span class="lineNum">     177</span>                 :<span class="tlaGNC">           1 :                 &lt;&lt; &quot;SkeletonBaseView::UpdateField failed to update field because the requested field doesn't exist&quot;;</span></span>
 <span id="L178"><span class="lineNum">     178</span>                 :<span class="tlaGNC">           1 :             std::terminate();</span></span>
 <span id="L179"><span class="lineNum">     179</span>                 :<span class="tlaGNC">           1 :         }</span></span>
 <span id="L180"><span class="lineNum">     180</span>                 :<span class="tlaUNC tlaBgUNC">           0 : </span></span>
-<span id="L181"><span class="lineNum">     181</span>                 :<span class="tlaGNC tlaBgGNC">          56 :         field_name_it-&gt;second = field;</span></span>
-<span id="L182"><span class="lineNum">     182</span>                 :<span class="tlaGNC">          56 :     }</span></span>
+<span id="L181"><span class="lineNum">     181</span>                 :<span class="tlaGNC tlaBgGNC">          57 :         field_name_it-&gt;second = field;</span></span>
+<span id="L182"><span class="lineNum">     182</span>                 :<span class="tlaGNC">          57 :     }</span></span>
 <span id="L183"><span class="lineNum">     183</span>                 :             : </span>
 <span id="L184"><span class="lineNum">     184</span>                 :             :     void UpdateMethod(const std::string_view method_name, SkeletonMethodBase&amp; method) noexcept</span>
 <span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">          50 :     {</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -195,22 +195,22 @@
 <span id="L117"><span class="lineNum">     117</span>                 :             : // coverity[autosar_cpp14_a12_1_5_violation : FALSE]</span>
 <span id="L118"><span class="lineNum">     118</span>                 :             : InstanceIdentifier::InstanceIdentifier(const ServiceInstanceDeployment&amp; deployment,</span>
 <span id="L119"><span class="lineNum">     119</span>                 :             :                                        const ServiceTypeDeployment&amp; type_deployment) noexcept</span>
-<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">        1684 :     : instance_deployment_{&amp;deployment},</span></span>
-<span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">        1684 :       type_deployment_{&amp;type_deployment},</span></span>
-<span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">        1684 :       serialized_string_{ToStringImpl(Serialize())}</span></span>
-<span id="L123"><span class="lineNum">     123</span>                 :<span class="tlaGNC">        1684 : {</span></span>
-<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1684 : }</span></span>
+<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">        1693 :     : instance_deployment_{&amp;deployment},</span></span>
+<span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">        1693 :       type_deployment_{&amp;type_deployment},</span></span>
+<span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">        1693 :       serialized_string_{ToStringImpl(Serialize())}</span></span>
+<span id="L123"><span class="lineNum">     123</span>                 :<span class="tlaGNC">        1693 : {</span></span>
+<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1693 : }</span></span>
 <span id="L125"><span class="lineNum">     125</span>                 :             : </span>
 <span id="L126"><span class="lineNum">     126</span>                 :             : auto InstanceIdentifier::Serialize() const noexcept -&gt; json::Object</span>
-<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">        1688 : {</span></span>
-<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">        1688 :     json::Object json_object{};</span></span>
-<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1688 :     json_object[kSerializationVersionKey] = score::json::Any{serializationVersion};</span></span>
+<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">        1697 : {</span></span>
+<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">        1697 :     json::Object json_object{};</span></span>
+<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1697 :     json_object[kSerializationVersionKey] = score::json::Any{serializationVersion};</span></span>
 <span id="L130"><span class="lineNum">     130</span>                 :             : </span>
-<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1688 :     json_object[kServiceInstanceDeploymentKey] = instance_deployment_-&gt;Serialize();</span></span>
-<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        1688 :     json_object[kServiceTypeDeploymentKey] = type_deployment_-&gt;Serialize();</span></span>
+<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1697 :     json_object[kServiceInstanceDeploymentKey] = instance_deployment_-&gt;Serialize();</span></span>
+<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        1697 :     json_object[kServiceTypeDeploymentKey] = type_deployment_-&gt;Serialize();</span></span>
 <span id="L133"><span class="lineNum">     133</span>                 :             : </span>
-<span id="L134"><span class="lineNum">     134</span>                 :<span class="tlaGNC">        1688 :     return json_object;</span></span>
-<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">        1688 : }</span></span>
+<span id="L134"><span class="lineNum">     134</span>                 :<span class="tlaGNC">        1697 :     return json_object;</span></span>
+<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">        1697 : }</span></span>
 <span id="L136"><span class="lineNum">     136</span>                 :             : </span>
 <span id="L137"><span class="lineNum">     137</span>                 :             : auto InstanceIdentifier::ToString() const noexcept -&gt; std::string_view</span>
 <span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">         181 : {</span></span>
@@ -218,10 +218,10 @@
 <span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">         181 : }</span></span>
 <span id="L141"><span class="lineNum">     141</span>                 :             : </span>
 <span id="L142"><span class="lineNum">     142</span>                 :             : auto operator==(const InstanceIdentifier&amp; lhs, const InstanceIdentifier&amp; rhs) noexcept -&gt; bool</span>
-<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">         685 : {</span></span>
-<span id="L144"><span class="lineNum">     144</span>         [<span class="tlaGBC" title="Branch 0 was taken 684 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967297 times"> + </span>]:<span class="tlaGNC">         685 :     return (((lhs.instance_deployment_-&gt;service_ == rhs.instance_deployment_-&gt;service_) &amp;&amp;</span></span>
-<span id="L145"><span class="lineNum">     145</span>         [<span class="tlaGBC" title="Branch 0 was taken 663 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 21 times"> + </span>]:<span class="tlaGNC">         686 :              (*lhs.instance_deployment_ == *rhs.instance_deployment_)));</span></span>
-<span id="L146"><span class="lineNum">     146</span>                 :<span class="tlaGNC">         685 : }</span></span>
+<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">         759 : {</span></span>
+<span id="L144"><span class="lineNum">     144</span>         [<span class="tlaGBC" title="Branch 0 was taken 757 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2 times"> + </span>]:<span class="tlaGNC">         759 :     return (((lhs.instance_deployment_-&gt;service_ == rhs.instance_deployment_-&gt;service_) &amp;&amp;</span></span>
+<span id="L145"><span class="lineNum">     145</span>         [<span class="tlaGBC" title="Branch 0 was taken 736 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 21 times"> + </span>]:<span class="tlaGNC">         759 :              (*lhs.instance_deployment_ == *rhs.instance_deployment_)));</span></span>
+<span id="L146"><span class="lineNum">     146</span>                 :<span class="tlaGNC">         759 : }</span></span>
 <span id="L147"><span class="lineNum">     147</span>                 :             : </span>
 <span id="L148"><span class="lineNum">     148</span>                 :             : auto operator&lt;(const InstanceIdentifier&amp; lhs, const InstanceIdentifier&amp; rhs) noexcept -&gt; bool</span>
 <span id="L149"><span class="lineNum">     149</span>                 :<span class="tlaGNC">           7 : {</span></span>
@@ -229,7 +229,7 @@
 <span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">           7 :            std::tie(rhs.instance_deployment_-&gt;service_, *rhs.instance_deployment_);</span></span>
 <span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">           7 : }</span></span>
 <span id="L153"><span class="lineNum">     153</span>                 :             : </span>
-<span id="L154"><span class="lineNum">     154</span>                 :<span class="tlaGNC">        5290 : InstanceIdentifierView::InstanceIdentifierView(const InstanceIdentifier&amp; identifier) : identifier_{identifier} {}</span></span>
+<span id="L154"><span class="lineNum">     154</span>                 :<span class="tlaGNC">        5271 : InstanceIdentifierView::InstanceIdentifierView(const InstanceIdentifier&amp; identifier) : identifier_{identifier} {}</span></span>
 <span id="L155"><span class="lineNum">     155</span>                 :             : </span>
 <span id="L156"><span class="lineNum">     156</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule finding. This rule states: &quot;The std::terminate() function shall</span>
 <span id="L157"><span class="lineNum">     157</span>                 :             : // not be called implicitly.&quot;. std::visit Throws std::bad_variant_access if</span>
@@ -240,37 +240,37 @@
 <span id="L162"><span class="lineNum">     162</span>                 :             : // This suppression should be removed after fixing [Ticket-173043](broken_link_j/Ticket-173043)</span>
 <span id="L163"><span class="lineNum">     163</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L164"><span class="lineNum">     164</span>                 :             : auto InstanceIdentifierView::GetServiceInstanceId() const noexcept -&gt; score::cpp::optional&lt;ServiceInstanceId&gt;</span>
-<span id="L165"><span class="lineNum">     165</span>                 :<span class="tlaGNC">        1174 : {</span></span>
-<span id="L166"><span class="lineNum">     166</span>                 :<span class="tlaGNC">        1174 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L167"><span class="lineNum">     167</span>                 :<span class="tlaGNC">        1174 :         [](const LolaServiceInstanceDeployment&amp; deployment) -&gt; score::cpp::optional&lt;ServiceInstanceId&gt; {</span></span>
-<span id="L168"><span class="lineNum">     168</span>         [<span class="tlaGBC" title="Branch 0 was taken 78 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1088 times"> + </span>]:<span class="tlaGNC">        1166 :             if (!deployment.instance_id_.has_value())</span></span>
+<span id="L165"><span class="lineNum">     165</span>                 :<span class="tlaGNC">        1190 : {</span></span>
+<span id="L166"><span class="lineNum">     166</span>                 :<span class="tlaGNC">        1190 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L167"><span class="lineNum">     167</span>                 :<span class="tlaGNC">        1190 :         [](const LolaServiceInstanceDeployment&amp; deployment) -&gt; score::cpp::optional&lt;ServiceInstanceId&gt; {</span></span>
+<span id="L168"><span class="lineNum">     168</span>         [<span class="tlaGBC" title="Branch 0 was taken 78 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1104 times"> + </span>]:<span class="tlaGNC">        1182 :             if (!deployment.instance_id_.has_value())</span></span>
 <span id="L169"><span class="lineNum">     169</span>                 :<span class="tlaGNC">          78 :             {</span></span>
 <span id="L170"><span class="lineNum">     170</span>                 :<span class="tlaGNC">          78 :                 return {};</span></span>
 <span id="L171"><span class="lineNum">     171</span>                 :<span class="tlaGNC">          78 :             }</span></span>
-<span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">        1088 :             return ServiceInstanceId{*deployment.instance_id_};</span></span>
-<span id="L173"><span class="lineNum">     173</span>                 :<span class="tlaGNC">        1166 :         },</span></span>
-<span id="L174"><span class="lineNum">     174</span>                 :<span class="tlaGNC">        1174 :         [](const SomeIpServiceInstanceDeployment&amp; deployment) -&gt; score::cpp::optional&lt;ServiceInstanceId&gt; {</span></span>
+<span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">        1104 :             return ServiceInstanceId{*deployment.instance_id_};</span></span>
+<span id="L173"><span class="lineNum">     173</span>                 :<span class="tlaGNC">        1182 :         },</span></span>
+<span id="L174"><span class="lineNum">     174</span>                 :<span class="tlaGNC">        1190 :         [](const SomeIpServiceInstanceDeployment&amp; deployment) -&gt; score::cpp::optional&lt;ServiceInstanceId&gt; {</span></span>
 <span id="L175"><span class="lineNum">     175</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">           6 :             if (!deployment.instance_id_.has_value())</span></span>
 <span id="L176"><span class="lineNum">     176</span>                 :<span class="tlaGNC">           1 :             {</span></span>
 <span id="L177"><span class="lineNum">     177</span>                 :<span class="tlaGNC">           1 :                 return {};</span></span>
 <span id="L178"><span class="lineNum">     178</span>                 :<span class="tlaGNC">           1 :             }</span></span>
 <span id="L179"><span class="lineNum">     179</span>                 :<span class="tlaGNC">           5 :             return ServiceInstanceId{*deployment.instance_id_};</span></span>
 <span id="L180"><span class="lineNum">     180</span>                 :<span class="tlaGNC">           6 :         },</span></span>
-<span id="L181"><span class="lineNum">     181</span>                 :<span class="tlaGNC">        1174 :         [](const score::cpp::blank&amp;) noexcept -&gt; score::cpp::optional&lt;ServiceInstanceId&gt; {</span></span>
+<span id="L181"><span class="lineNum">     181</span>                 :<span class="tlaGNC">        1190 :         [](const score::cpp::blank&amp;) noexcept -&gt; score::cpp::optional&lt;ServiceInstanceId&gt; {</span></span>
 <span id="L182"><span class="lineNum">     182</span>                 :<span class="tlaGNC">           2 :             return score::cpp::optional&lt;ServiceInstanceId&gt;{};</span></span>
 <span id="L183"><span class="lineNum">     183</span>                 :<span class="tlaGNC">           2 :         });</span></span>
-<span id="L184"><span class="lineNum">     184</span>                 :<span class="tlaGNC">        1174 :     return std::visit(visitor, GetServiceInstanceDeployment().bindingInfo_);</span></span>
-<span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">        1174 : }</span></span>
+<span id="L184"><span class="lineNum">     184</span>                 :<span class="tlaGNC">        1190 :     return std::visit(visitor, GetServiceInstanceDeployment().bindingInfo_);</span></span>
+<span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">        1190 : }</span></span>
 <span id="L186"><span class="lineNum">     186</span>                 :             : </span>
 <span id="L187"><span class="lineNum">     187</span>                 :             : auto InstanceIdentifierView::GetServiceInstanceDeployment() const noexcept -&gt; const ServiceInstanceDeployment&amp;</span>
-<span id="L188"><span class="lineNum">     188</span>                 :<span class="tlaGNC">        3377 : {</span></span>
-<span id="L189"><span class="lineNum">     189</span>                 :<span class="tlaGNC">        3377 :     return *identifier_.instance_deployment_;</span></span>
-<span id="L190"><span class="lineNum">     190</span>                 :<span class="tlaGNC">        3377 : }</span></span>
+<span id="L188"><span class="lineNum">     188</span>                 :<span class="tlaGNC">        3407 : {</span></span>
+<span id="L189"><span class="lineNum">     189</span>                 :<span class="tlaGNC">        3407 :     return *identifier_.instance_deployment_;</span></span>
+<span id="L190"><span class="lineNum">     190</span>                 :<span class="tlaGNC">        3407 : }</span></span>
 <span id="L191"><span class="lineNum">     191</span>                 :             : </span>
 <span id="L192"><span class="lineNum">     192</span>                 :             : auto InstanceIdentifierView::GetServiceTypeDeployment() const -&gt; const ServiceTypeDeployment&amp;</span>
-<span id="L193"><span class="lineNum">     193</span>                 :<span class="tlaGNC">        1924 : {</span></span>
-<span id="L194"><span class="lineNum">     194</span>                 :<span class="tlaGNC">        1924 :     return *identifier_.type_deployment_;</span></span>
-<span id="L195"><span class="lineNum">     195</span>                 :<span class="tlaGNC">        1924 : }</span></span>
+<span id="L193"><span class="lineNum">     193</span>                 :<span class="tlaGNC">        1875 : {</span></span>
+<span id="L194"><span class="lineNum">     194</span>                 :<span class="tlaGNC">        1875 :     return *identifier_.type_deployment_;</span></span>
+<span id="L195"><span class="lineNum">     195</span>                 :<span class="tlaGNC">        1875 : }</span></span>
 <span id="L196"><span class="lineNum">     196</span>                 :             : </span>
 <span id="L197"><span class="lineNum">     197</span>                 :             : auto InstanceIdentifierView::isCompatibleWith(const InstanceIdentifier&amp; rhs) const -&gt; bool</span>
 <span id="L198"><span class="lineNum">     198</span>                 :<span class="tlaGNC">           1 : {</span></span>

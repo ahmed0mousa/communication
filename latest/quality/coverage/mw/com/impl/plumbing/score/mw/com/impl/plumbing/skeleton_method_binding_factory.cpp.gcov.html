@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -99,22 +99,22 @@
 <span id="L21"><span class="lineNum">      21</span>                 :             :     SkeletonBinding* parent_binding,</span>
 <span id="L22"><span class="lineNum">      22</span>                 :             :     const std::string_view method_name,</span>
 <span id="L23"><span class="lineNum">      23</span>                 :             :     MethodType method_type)</span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC tlaBgGNC">         128 : {</span></span>
-<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">         128 :     return instance().Create(instance_identifier, parent_binding, method_name, method_type);</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">         128 : }</span></span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC tlaBgGNC">         110 : {</span></span>
+<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">         110 :     return instance().Create(instance_identifier, parent_binding, method_name, method_type);</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">         110 : }</span></span>
 <span id="L27"><span class="lineNum">      27</span>                 :             : </span>
 <span id="L28"><span class="lineNum">      28</span>                 :             : auto SkeletonMethodBindingFactory::instance() -&gt; ISkeletonMethodBindingFactory&amp;</span>
-<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">         128 : {</span></span>
-<span id="L30"><span class="lineNum">      30</span>         [<span class="tlaGBC" title="Branch 0 was taken 80 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 48 times"> + </span>]:<span class="tlaGNC">         128 :     if (mock_ != nullptr)</span></span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">          80 :     {</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">          80 :         return *mock_;</span></span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">          80 :     }</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">         110 : {</span></span>
+<span id="L30"><span class="lineNum">      30</span>         [<span class="tlaGBC" title="Branch 0 was taken 106 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]:<span class="tlaGNC">         110 :     if (mock_ != nullptr)</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">         106 :     {</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         106 :         return *mock_;</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         106 :     }</span></span>
 <span id="L34"><span class="lineNum">      34</span>                 :             :     // Suppress &quot;AUTOSAR C++14 A3-3-2&quot;, The rule states: &quot;Static and thread-local objects shall be</span>
 <span id="L35"><span class="lineNum">      35</span>                 :             :     // constant-initialized&quot; It cannot be made const since we will need to call non-const methods from a static</span>
 <span id="L36"><span class="lineNum">      36</span>                 :             :     // instance. coverity[autosar_cpp14_a3_3_2_violation]</span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          48 :     static SkeletonMethodBindingFactoryImpl instance{};</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">          48 :     return instance;</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         128 : }</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">           4 :     static SkeletonMethodBindingFactoryImpl instance{};</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">           4 :     return instance;</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         110 : }</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : </span>
 <span id="L41"><span class="lineNum">      41</span>                 :             : // Suppress &quot;AUTOSAR_C++14_A3-1-1&quot; rule finding. This rule states:&quot; It shall be possible to include any header file</span>
 <span id="L42"><span class="lineNum">      42</span>                 :             : // in multiple translation units without violating the One Definition Rule&quot;.</span>

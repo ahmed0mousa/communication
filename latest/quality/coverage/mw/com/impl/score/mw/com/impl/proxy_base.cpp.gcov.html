@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -106,14 +106,14 @@
 <span id="L28"><span class="lineNum">      28</span>                 :             : {</span>
 <span id="L29"><span class="lineNum">      29</span>                 :             : </span>
 <span id="L30"><span class="lineNum">      30</span>                 :             : ProxyBase::ProxyBase(std::unique_ptr&lt;ProxyBinding&gt; proxy_binding, HandleType handle)</span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC tlaBgGNC">         703 :     : proxy_binding_{std::move(proxy_binding)},</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         703 :       handle_{std::move(handle)},</span></span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         703 :       are_service_element_bindings_valid_{true},</span></span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">         703 :       events_{},</span></span>
-<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">         703 :       fields_{},</span></span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">         703 :       methods_{}</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">         703 : {</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">         703 : }</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC tlaBgGNC">         705 :     : proxy_binding_{std::move(proxy_binding)},</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         705 :       handle_{std::move(handle)},</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         705 :       are_service_element_bindings_valid_{true},</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">         705 :       events_{},</span></span>
+<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">         705 :       fields_{},</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">         705 :       methods_{}</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">         705 : {</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">         705 : }</span></span>
 <span id="L39"><span class="lineNum">      39</span>                 :             : </span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : ProxyBase::ProxyBase(ProxyBase&amp;&amp; other) noexcept</span>
 <span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          12 :     : proxy_binding_(std::move(other.proxy_binding_)),</span></span>
@@ -252,12 +252,12 @@
 <span id="L174"><span class="lineNum">     174</span>                 :<span class="tlaGNC">           2 :     return {};</span></span>
 <span id="L175"><span class="lineNum">     175</span>                 :<span class="tlaGNC">           3 : }</span></span>
 <span id="L176"><span class="lineNum">     176</span>                 :             : </span>
-<span id="L177"><span class="lineNum">     177</span>                 :<span class="tlaGNC">        1977 : ProxyBaseView::ProxyBaseView(ProxyBase&amp; proxy_base) noexcept : proxy_base_(proxy_base) {}</span></span>
+<span id="L177"><span class="lineNum">     177</span>                 :<span class="tlaGNC">        1991 : ProxyBaseView::ProxyBaseView(ProxyBase&amp; proxy_base) noexcept : proxy_base_(proxy_base) {}</span></span>
 <span id="L178"><span class="lineNum">     178</span>                 :             : </span>
 <span id="L179"><span class="lineNum">     179</span>                 :             : ProxyBinding* ProxyBaseView::GetBinding() noexcept</span>
-<span id="L180"><span class="lineNum">     180</span>                 :<span class="tlaGNC">         639 : {</span></span>
-<span id="L181"><span class="lineNum">     181</span>                 :<span class="tlaGNC">         639 :     return proxy_base_.proxy_binding_.get();</span></span>
-<span id="L182"><span class="lineNum">     182</span>                 :<span class="tlaGNC">         639 : }</span></span>
+<span id="L180"><span class="lineNum">     180</span>                 :<span class="tlaGNC">         643 : {</span></span>
+<span id="L181"><span class="lineNum">     181</span>                 :<span class="tlaGNC">         643 :     return proxy_base_.proxy_binding_.get();</span></span>
+<span id="L182"><span class="lineNum">     182</span>                 :<span class="tlaGNC">         643 : }</span></span>
 <span id="L183"><span class="lineNum">     183</span>                 :             : </span>
 <span id="L184"><span class="lineNum">     184</span>                 :             : const HandleType&amp; ProxyBaseView::GetAssociatedHandleType() const noexcept</span>
 <span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">         356 : {</span></span>
@@ -270,11 +270,11 @@
 <span id="L192"><span class="lineNum">     192</span>                 :<span class="tlaGNC">          60 : }</span></span>
 <span id="L193"><span class="lineNum">     193</span>                 :             : </span>
 <span id="L194"><span class="lineNum">     194</span>                 :             : void ProxyBaseView::RegisterEvent(const std::string_view event_name, ProxyEventBase&amp; event)</span>
-<span id="L195"><span class="lineNum">     195</span>                 :<span class="tlaGNC">         187 : {</span></span>
-<span id="L196"><span class="lineNum">     196</span>                 :<span class="tlaGNC">         187 :     const auto result = proxy_base_.events_.emplace(event_name, event);</span></span>
-<span id="L197"><span class="lineNum">     197</span>                 :<span class="tlaGNC">         187 :     const bool was_event_inserted = result.second;</span></span>
-<span id="L198"><span class="lineNum">     198</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 187 times"> + </span>]:<span class="tlaGNC">         187 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(was_event_inserted, &quot;Event cannot be registered as it already exists.&quot;);</span></span>
-<span id="L199"><span class="lineNum">     199</span>                 :<span class="tlaGNC">         187 : }</span></span>
+<span id="L195"><span class="lineNum">     195</span>                 :<span class="tlaGNC">         191 : {</span></span>
+<span id="L196"><span class="lineNum">     196</span>                 :<span class="tlaGNC">         191 :     const auto result = proxy_base_.events_.emplace(event_name, event);</span></span>
+<span id="L197"><span class="lineNum">     197</span>                 :<span class="tlaGNC">         191 :     const bool was_event_inserted = result.second;</span></span>
+<span id="L198"><span class="lineNum">     198</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 191 times"> + </span>]:<span class="tlaGNC">         191 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(was_event_inserted, &quot;Event cannot be registered as it already exists.&quot;);</span></span>
+<span id="L199"><span class="lineNum">     199</span>                 :<span class="tlaGNC">         191 : }</span></span>
 <span id="L200"><span class="lineNum">     200</span>                 :             : </span>
 <span id="L201"><span class="lineNum">     201</span>                 :             : void ProxyBaseView::RegisterField(const std::string_view field_name, ProxyFieldBase&amp; field)</span>
 <span id="L202"><span class="lineNum">     202</span>                 :<span class="tlaGNC">         258 : {</span></span>
@@ -291,9 +291,9 @@
 <span id="L213"><span class="lineNum">     213</span>                 :<span class="tlaGNC">          97 : }</span></span>
 <span id="L214"><span class="lineNum">     214</span>                 :             : </span>
 <span id="L215"><span class="lineNum">     215</span>                 :             : void ProxyBaseView::UpdateEvent(const std::string_view event_name, ProxyEventBase&amp; event)</span>
-<span id="L216"><span class="lineNum">     216</span>                 :<span class="tlaGNC">           4 : {</span></span>
-<span id="L217"><span class="lineNum">     217</span>                 :<span class="tlaGNC">           4 :     auto event_it = proxy_base_.events_.find(event_name);</span></span>
-<span id="L218"><span class="lineNum">     218</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span>]:<span class="tlaGNC">           4 :     if (event_it == proxy_base_.events_.cend())</span></span>
+<span id="L216"><span class="lineNum">     216</span>                 :<span class="tlaGNC">           6 : {</span></span>
+<span id="L217"><span class="lineNum">     217</span>                 :<span class="tlaGNC">           6 :     auto event_it = proxy_base_.events_.find(event_name);</span></span>
+<span id="L218"><span class="lineNum">     218</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">           6 :     if (event_it == proxy_base_.events_.cend())</span></span>
 <span id="L219"><span class="lineNum">     219</span>                 :<span class="tlaGNC">           1 :     {</span></span>
 <span id="L220"><span class="lineNum">     220</span>                 :<span class="tlaGNC">           1 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; &quot;ProxyBaseView::UpdateEvent failed to update, because the requested event &quot;</span></span>
 <span id="L221"><span class="lineNum">     221</span>                 :<span class="tlaGNC">           1 :                                          &lt;&lt; event_name &lt;&lt; &quot; doesn't exist!&quot;;</span></span>
@@ -301,8 +301,8 @@
 <span id="L223"><span class="lineNum">     223</span>                 :<span class="tlaGNC">           1 :         SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD(false);</span></span>
 <span id="L224"><span class="lineNum">     224</span>                 :<span class="tlaGNC">           1 :     }</span></span>
 <span id="L225"><span class="lineNum">     225</span>                 :             : </span>
-<span id="L226"><span class="lineNum">     226</span>                 :<span class="tlaGNC">           4 :     event_it-&gt;second = event;</span></span>
-<span id="L227"><span class="lineNum">     227</span>                 :<span class="tlaGNC">           4 : }</span></span>
+<span id="L226"><span class="lineNum">     226</span>                 :<span class="tlaGNC">           6 :     event_it-&gt;second = event;</span></span>
+<span id="L227"><span class="lineNum">     227</span>                 :<span class="tlaGNC">           6 : }</span></span>
 <span id="L228"><span class="lineNum">     228</span>                 :             : </span>
 <span id="L229"><span class="lineNum">     229</span>                 :             : void ProxyBaseView::UpdateField(const std::string_view field_name, ProxyFieldBase&amp; field)</span>
 <span id="L230"><span class="lineNum">     230</span>                 :<span class="tlaGNC">           4 : {</span></span>

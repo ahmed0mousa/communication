@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -129,37 +129,37 @@
 <span id="L51"><span class="lineNum">      51</span>                 :             : // coverity[autosar_cpp14_a2_10_1_violation] See above</span>
 <span id="L52"><span class="lineNum">      52</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation]</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             : std::string ToHashStringImpl(const ServiceTypeDeployment::BindingInformation&amp; binding_info) noexcept</span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">        1185 : {</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">        1192 : {</span></span>
 <span id="L55"><span class="lineNum">      55</span>                 :             :     // The conversion to hex string below does not work with a std::uint8_t, so we cast it to an int. However, we</span>
 <span id="L56"><span class="lineNum">      56</span>                 :             :     // ensure that the value is less than 16 to ensure it will fit with a single char in the string representation.</span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">        1185 :     static_assert(std::variant_size&lt;ServiceTypeDeployment::BindingInformation&gt;::value &lt;= 0xFU,</span></span>
-<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">        1185 :                   &quot;BindingInformation variant size should be less than 16&quot;);</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">        1192 :     static_assert(std::variant_size&lt;ServiceTypeDeployment::BindingInformation&gt;::value &lt;= 0xFU,</span></span>
+<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">        1192 :                   &quot;BindingInformation variant size should be less than 16&quot;);</span></span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     // coverity[autosar_cpp14_a4_7_1_violation] Static assert ensures that only uint8_t values are used</span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">        1185 :     auto binding_info_index = static_cast&lt;int&gt;(binding_info.index());</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">        1192 :     auto binding_info_index = static_cast&lt;int&gt;(binding_info.index());</span></span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
 <span id="L62"><span class="lineNum">      62</span>                 :             :     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string</span>
 <span id="L63"><span class="lineNum">      63</span>                 :             :     /// with no dynamic allocations.</span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">        1185 :     std::stringstream binding_index_string_stream;</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">        1192 :     std::stringstream binding_index_string_stream;</span></span>
 <span id="L65"><span class="lineNum">      65</span>                 :             :     // Passing std::hex to std::stringstream object with the stream operator follows the idiomatic way that both</span>
 <span id="L66"><span class="lineNum">      66</span>                 :             :     // features in conjunction were designed in the C++ standard.</span>
 <span id="L67"><span class="lineNum">      67</span>                 :             :     // coverity[autosar_cpp14_m8_4_4_violation] See above</span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">        1185 :     binding_index_string_stream &lt;&lt; std::hex &lt;&lt; binding_info_index;</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">        1192 :     binding_index_string_stream &lt;&lt; std::hex &lt;&lt; binding_info_index;</span></span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : </span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">        1185 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">        1185 :         [](const LolaServiceTypeDeployment&amp; service_type_deployment) noexcept -&gt; std::string_view {</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         850 :             return service_type_deployment.ToHashString();</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         850 :         },</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">        1192 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">        1192 :         [](const LolaServiceTypeDeployment&amp; service_type_deployment) noexcept -&gt; std::string_view {</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         857 :             return service_type_deployment.ToHashString();</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         857 :         },</span></span>
 <span id="L74"><span class="lineNum">      74</span>                 :             :         // FP: only one statement in this line</span>
 <span id="L75"><span class="lineNum">      75</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">        1185 :         [](const score::cpp::blank&amp;) noexcept -&gt; std::string_view {</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">        1192 :         [](const score::cpp::blank&amp;) noexcept -&gt; std::string_view {</span></span>
 <span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">         335 :             return &quot;&quot;;</span></span>
 <span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">         335 :         });</span></span>
-<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">        1185 :     const auto binding_service_type_deployment_hash_string_view = std::visit(visitor, binding_info);</span></span>
-<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">        1185 :     std::string binding_service_type_deployment_hash_string{binding_service_type_deployment_hash_string_view};</span></span>
+<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">        1192 :     const auto binding_service_type_deployment_hash_string_view = std::visit(visitor, binding_info);</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">        1192 :     std::string binding_service_type_deployment_hash_string{binding_service_type_deployment_hash_string_view};</span></span>
 <span id="L81"><span class="lineNum">      81</span>                 :             : </span>
-<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">        1185 :     std::string combined_hash_string = binding_index_string_stream.str() + binding_service_type_deployment_hash_string;</span></span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">        1185 :     return combined_hash_string;</span></span>
-<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">        1185 : }</span></span>
+<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">        1192 :     std::string combined_hash_string = binding_index_string_stream.str() + binding_service_type_deployment_hash_string;</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">        1192 :     return combined_hash_string;</span></span>
+<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">        1192 : }</span></span>
 <span id="L85"><span class="lineNum">      85</span>                 :             : </span>
 <span id="L86"><span class="lineNum">      86</span>                 :             : }  // namespace</span>
 <span id="L87"><span class="lineNum">      87</span>                 :             : </span>
@@ -168,9 +168,9 @@
 <span id="L90"><span class="lineNum">      90</span>                 :             : // Justification: This constructor is used by other constructors for delegation.</span>
 <span id="L91"><span class="lineNum">      91</span>                 :             : // coverity[autosar_cpp14_a12_1_5_violation]</span>
 <span id="L92"><span class="lineNum">      92</span>                 :             : ServiceTypeDeployment::ServiceTypeDeployment(const BindingInformation binding) noexcept</span>
-<span id="L93"><span class="lineNum">      93</span>                 :<span class="tlaGNC">        1185 :     : binding_info_{binding}, hash_string_{ToHashStringImpl(binding_info_)}</span></span>
-<span id="L94"><span class="lineNum">      94</span>                 :<span class="tlaGNC">        1185 : {</span></span>
-<span id="L95"><span class="lineNum">      95</span>                 :<span class="tlaGNC">        1185 : }</span></span>
+<span id="L93"><span class="lineNum">      93</span>                 :<span class="tlaGNC">        1192 :     : binding_info_{binding}, hash_string_{ToHashStringImpl(binding_info_)}</span></span>
+<span id="L94"><span class="lineNum">      94</span>                 :<span class="tlaGNC">        1192 : {</span></span>
+<span id="L95"><span class="lineNum">      95</span>                 :<span class="tlaGNC">        1192 : }</span></span>
 <span id="L96"><span class="lineNum">      96</span>                 :             : </span>
 <span id="L97"><span class="lineNum">      97</span>                 :             : // Suppress &quot;AUTOSAR C++14 A12-1-5&quot; rule finding.</span>
 <span id="L98"><span class="lineNum">      98</span>                 :             : // This rule states: Common class initialization for non-constant members shall be done by a delegating constructor.</span>
@@ -194,25 +194,25 @@
 <span id="L116"><span class="lineNum">     116</span>                 :             : // exceptions, a variant can never be in this state, i.e. std::visit can never throw std::bad_variant_access.</span>
 <span id="L117"><span class="lineNum">     117</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation]</span>
 <span id="L118"><span class="lineNum">     118</span>                 :             : score::json::Object ServiceTypeDeployment::Serialize() const noexcept</span>
-<span id="L119"><span class="lineNum">     119</span>                 :<span class="tlaGNC">        1689 : {</span></span>
-<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">        1689 :     score::json::Object json_object{};</span></span>
-<span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">        1689 :     json_object[kBindingInfoIndexKey] = score::json::Any{binding_info_.index()};</span></span>
-<span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">        1689 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
+<span id="L119"><span class="lineNum">     119</span>                 :<span class="tlaGNC">        1698 : {</span></span>
+<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">        1698 :     score::json::Object json_object{};</span></span>
+<span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">        1698 :     json_object[kBindingInfoIndexKey] = score::json::Any{binding_info_.index()};</span></span>
+<span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">        1698 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
 <span id="L123"><span class="lineNum">     123</span>                 :             : </span>
-<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1689 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L125"><span class="lineNum">     125</span>                 :<span class="tlaGNC">        1689 :         [&amp;json_object](const LolaServiceTypeDeployment&amp; deployment) {</span></span>
-<span id="L126"><span class="lineNum">     126</span>                 :<span class="tlaGNC">        1263 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
-<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">        1263 :         },</span></span>
-<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">        1689 :         [](const score::cpp::blank&amp;) noexcept {});</span></span>
-<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1689 :     std::visit(visitor, binding_info_);</span></span>
+<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1698 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L125"><span class="lineNum">     125</span>                 :<span class="tlaGNC">        1698 :         [&amp;json_object](const LolaServiceTypeDeployment&amp; deployment) {</span></span>
+<span id="L126"><span class="lineNum">     126</span>                 :<span class="tlaGNC">        1270 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
+<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">        1270 :         },</span></span>
+<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">        1698 :         [](const score::cpp::blank&amp;) noexcept {});</span></span>
+<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1698 :     std::visit(visitor, binding_info_);</span></span>
 <span id="L130"><span class="lineNum">     130</span>                 :             : </span>
-<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1689 :     return json_object;</span></span>
-<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        1689 : }</span></span>
+<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1698 :     return json_object;</span></span>
+<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        1698 : }</span></span>
 <span id="L133"><span class="lineNum">     133</span>                 :             : </span>
 <span id="L134"><span class="lineNum">     134</span>                 :             : std::string_view ServiceTypeDeployment::ToHashString() const noexcept</span>
-<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">         212 : {</span></span>
-<span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">         212 :     return hash_string_;</span></span>
-<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">         212 : }</span></span>
+<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">         207 : {</span></span>
+<span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">         207 :     return hash_string_;</span></span>
+<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">         207 : }</span></span>
 <span id="L138"><span class="lineNum">     138</span>                 :             : </span>
 <span id="L139"><span class="lineNum">     139</span>                 :             : bool operator==(const ServiceTypeDeployment&amp; lhs, const ServiceTypeDeployment&amp; rhs) noexcept</span>
 <span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">           2 : {</span></span>

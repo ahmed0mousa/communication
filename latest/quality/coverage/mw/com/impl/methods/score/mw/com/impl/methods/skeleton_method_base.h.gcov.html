@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -118,14 +118,14 @@
 <span id="L40"><span class="lineNum">      40</span>                 :             :                        const std::string_view method_name,</span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :                        std::unique_ptr&lt;SkeletonMethodBinding&gt; skeleton_method_binding,</span>
 <span id="L42"><span class="lineNum">      42</span>                 :             :                        MethodType method_type = MethodType::kMethod)</span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC tlaBgGNC">         146 :         : method_name_{method_name},</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">         146 :           method_type_{method_type},</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">         146 :           binding_{std::move(skeleton_method_binding)},</span></span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">         146 :           skeleton_base_{skeleton_base}</span></span>
-<span id="L47"><span class="lineNum">      47</span>                 :<span class="tlaGNC">         146 :     {</span></span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">         146 :     }</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC tlaBgGNC">         128 :         : method_name_{method_name},</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">         128 :           method_type_{method_type},</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">         128 :           binding_{std::move(skeleton_method_binding)},</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">         128 :           skeleton_base_{skeleton_base}</span></span>
+<span id="L47"><span class="lineNum">      47</span>                 :<span class="tlaGNC">         128 :     {</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">         128 :     }</span></span>
 <span id="L49"><span class="lineNum">      49</span>                 :             : </span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">         191 :     ~SkeletonMethodBase() = default;</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">         174 :     ~SkeletonMethodBase() = default;</span></span>
 <span id="L51"><span class="lineNum">      51</span>                 :             : </span>
 <span id="L52"><span class="lineNum">      52</span>                 :             :     SkeletonMethodBase(const SkeletonMethodBase&amp;) = delete;</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             :     SkeletonMethodBase&amp; operator=(const SkeletonMethodBase&amp;) &amp; = delete;</span>

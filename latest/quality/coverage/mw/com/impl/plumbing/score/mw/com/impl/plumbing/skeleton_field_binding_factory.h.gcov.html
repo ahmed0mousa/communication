@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -118,16 +118,16 @@
 <span id="L40"><span class="lineNum">      40</span>                 :             :     static std::unique_ptr&lt;SkeletonEventBinding&lt;SampleType&gt;&gt; CreateEventBinding(const InstanceIdentifier&amp; identifier,</span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :                                                                                 SkeletonBase&amp; parent,</span>
 <span id="L42"><span class="lineNum">      42</span>                 :             :                                                                                 const std::string_view field_name)</span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC tlaBgGNC">          79 :     {</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          79 :         return instance().CreateEventBinding(identifier, parent, field_name);</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          79 :     }</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC tlaBgGNC">          80 :     {</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          80 :         return instance().CreateEventBinding(identifier, parent, field_name);</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          80 :     }</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :             : </span>
 <span id="L47"><span class="lineNum">      47</span>                 :             :     /// \brief Inject a mock ISkeletonFieldBindingFactory. If a mock is injected, then all calls on</span>
 <span id="L48"><span class="lineNum">      48</span>                 :             :     /// SkeletonFieldBindingFactory will be dispatched to the mock.</span>
 <span id="L49"><span class="lineNum">      49</span>                 :             :     static void InjectMockBinding(ISkeletonFieldBindingFactory&lt;SampleType&gt;* mock) noexcept</span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">         132 :     {</span></span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">         132 :         mock_ = mock;</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">         132 :     }</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">         134 :     {</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">         134 :         mock_ = mock;</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">         134 :     }</span></span>
 <span id="L53"><span class="lineNum">      53</span>                 :             : </span>
 <span id="L54"><span class="lineNum">      54</span>                 :             :   private:</span>
 <span id="L55"><span class="lineNum">      55</span>                 :             :     static ISkeletonFieldBindingFactory&lt;SampleType&gt;&amp; instance() noexcept;</span>
@@ -136,18 +136,18 @@
 <span id="L58"><span class="lineNum">      58</span>                 :             : </span>
 <span id="L59"><span class="lineNum">      59</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             : auto SkeletonFieldBindingFactory&lt;SampleType&gt;::instance() noexcept -&gt; ISkeletonFieldBindingFactory&lt;SampleType&gt;&amp;</span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">          79 : {</span></span>
-<span id="L62"><span class="lineNum">      62</span>         [<span class="tlaGBC" title="Branch 0 was taken 71 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">          79 :     if (mock_ != nullptr)</span></span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">          71 :     {</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          71 :         return *mock_;</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          71 :     }</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">          80 : {</span></span>
+<span id="L62"><span class="lineNum">      62</span>         [<span class="tlaGBC" title="Branch 0 was taken 72 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">          80 :     if (mock_ != nullptr)</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">          72 :     {</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          72 :         return *mock_;</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          72 :     }</span></span>
 <span id="L66"><span class="lineNum">      66</span>                 :             : </span>
 <span id="L67"><span class="lineNum">      67</span>                 :             :     // Suppress &quot;AUTOSAR C++14 A3-2-2&quot;, The rule states: &quot;Static and thread-local objects shall be constant-initialized&quot;</span>
 <span id="L68"><span class="lineNum">      68</span>                 :             :     // It cannot be made const since we will need to call non-const methods from a static instance.</span>
 <span id="L69"><span class="lineNum">      69</span>                 :             :     // coverity[autosar_cpp14_a3_3_2_violation]</span>
 <span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">           8 :     static SkeletonFieldBindingFactoryImpl&lt;SampleType&gt; instance{};</span></span>
 <span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">           8 :     return instance;</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          79 : }</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          80 : }</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :             : </span>
 <span id="L74"><span class="lineNum">      74</span>                 :             : // Suppress &quot;AUTOSAR C++14 A3-1-1&quot;, The rule states: &quot;It shall be possible to include any header file in multiple</span>
 <span id="L75"><span class="lineNum">      75</span>                 :             : // translation units without violating the One Definition Rule.&quot;</span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -146,9 +146,9 @@
 <span id="L68"><span class="lineNum">      68</span>                 :             : }  // namespace</span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : </span>
 <span id="L70"><span class="lineNum">      70</span>                 :             : auto operator==(const ServiceInstanceDeployment&amp; lhs, const ServiceInstanceDeployment&amp; rhs) noexcept -&gt; bool</span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         686 : {</span></span>
-<span id="L72"><span class="lineNum">      72</span> [<span class="tlaGBC" title="Branch 0 was taken 686 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 665 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 21 times"> + </span>]:<span class="tlaGNC">         686 :     return (((lhs.asilLevel_ == rhs.asilLevel_) &amp;&amp; (lhs.bindingInfo_ == rhs.bindingInfo_)));</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         686 : }</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         760 : {</span></span>
+<span id="L72"><span class="lineNum">      72</span> [<span class="tlaGBC" title="Branch 0 was taken 760 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 739 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 21 times"> + </span>]:<span class="tlaGNC">         760 :     return (((lhs.asilLevel_ == rhs.asilLevel_) &amp;&amp; (lhs.bindingInfo_ == rhs.bindingInfo_)));</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         760 : }</span></span>
 <span id="L74"><span class="lineNum">      74</span>                 :             : </span>
 <span id="L75"><span class="lineNum">      75</span>                 :             : auto operator&lt;(const ServiceInstanceDeployment&amp; lhs, const ServiceInstanceDeployment&amp; rhs) noexcept -&gt; bool</span>
 <span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">          20 : {</span></span>
@@ -208,30 +208,30 @@
 <span id="L130"><span class="lineNum">     130</span>                 :             : //</span>
 <span id="L131"><span class="lineNum">     131</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation] Note 1</span>
 <span id="L132"><span class="lineNum">     132</span>                 :             : score::json::Object ServiceInstanceDeployment::Serialize() const noexcept</span>
-<span id="L133"><span class="lineNum">     133</span>                 :<span class="tlaGNC">        1700 : {</span></span>
-<span id="L134"><span class="lineNum">     134</span>                 :<span class="tlaGNC">        1700 :     score::json::Object json_object{};</span></span>
-<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">        1700 :     json_object[kBindingInfoIndexKey] = score::json::Any{bindingInfo_.index()};</span></span>
+<span id="L133"><span class="lineNum">     133</span>                 :<span class="tlaGNC">        1709 : {</span></span>
+<span id="L134"><span class="lineNum">     134</span>                 :<span class="tlaGNC">        1709 :     score::json::Object json_object{};</span></span>
+<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">        1709 :     json_object[kBindingInfoIndexKey] = score::json::Any{bindingInfo_.index()};</span></span>
 <span id="L136"><span class="lineNum">     136</span>                 :             : </span>
-<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">        1700 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">        1700 :         [&amp;json_object](const LolaServiceInstanceDeployment&amp; deployment) {</span></span>
-<span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">        1653 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
-<span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">        1653 :         },</span></span>
-<span id="L141"><span class="lineNum">     141</span>                 :<span class="tlaGNC">        1700 :         [&amp;json_object](const SomeIpServiceInstanceDeployment&amp; deployment) {</span></span>
+<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">        1709 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">        1709 :         [&amp;json_object](const LolaServiceInstanceDeployment&amp; deployment) {</span></span>
+<span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">        1662 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
+<span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">        1662 :         },</span></span>
+<span id="L141"><span class="lineNum">     141</span>                 :<span class="tlaGNC">        1709 :         [&amp;json_object](const SomeIpServiceInstanceDeployment&amp; deployment) {</span></span>
 <span id="L142"><span class="lineNum">     142</span>                 :<span class="tlaGNC">          20 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
 <span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">          20 :         },</span></span>
-<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">        1700 :         [](const score::cpp::blank&amp;) noexcept {});</span></span>
-<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">        1700 :     std::visit(visitor, bindingInfo_);</span></span>
+<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">        1709 :         [](const score::cpp::blank&amp;) noexcept {});</span></span>
+<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">        1709 :     std::visit(visitor, bindingInfo_);</span></span>
 <span id="L146"><span class="lineNum">     146</span>                 :             : </span>
-<span id="L147"><span class="lineNum">     147</span>                 :<span class="tlaGNC">        1700 :     json_object[kAsilLevelKey] = json::Any{ToString(asilLevel_)};</span></span>
-<span id="L148"><span class="lineNum">     148</span>                 :<span class="tlaGNC">        1700 :     json_object[kServiceKey] = service_.Serialize();</span></span>
+<span id="L147"><span class="lineNum">     147</span>                 :<span class="tlaGNC">        1709 :     json_object[kAsilLevelKey] = json::Any{ToString(asilLevel_)};</span></span>
+<span id="L148"><span class="lineNum">     148</span>                 :<span class="tlaGNC">        1709 :     json_object[kServiceKey] = service_.Serialize();</span></span>
 <span id="L149"><span class="lineNum">     149</span>                 :             : </span>
-<span id="L150"><span class="lineNum">     150</span>                 :<span class="tlaGNC">        1700 :     const auto instance_specifier_view = instance_specifier_.ToString();</span></span>
-<span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">        1700 :     json_object[kInstanceSpecifierKey] =</span></span>
-<span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">        1700 :         json::Any{std::string{instance_specifier_view.data(), instance_specifier_view.size()}};</span></span>
-<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">        1700 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
+<span id="L150"><span class="lineNum">     150</span>                 :<span class="tlaGNC">        1709 :     const auto instance_specifier_view = instance_specifier_.ToString();</span></span>
+<span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">        1709 :     json_object[kInstanceSpecifierKey] =</span></span>
+<span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">        1709 :         json::Any{std::string{instance_specifier_view.data(), instance_specifier_view.size()}};</span></span>
+<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">        1709 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
 <span id="L154"><span class="lineNum">     154</span>                 :             : </span>
-<span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">        1700 :     return json_object;</span></span>
-<span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">        1700 : }</span></span>
+<span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">        1709 :     return json_object;</span></span>
+<span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">        1709 : }</span></span>
 <span id="L157"><span class="lineNum">     157</span>                 :             : </span>
 <span id="L158"><span class="lineNum">     158</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation] see Note 1</span>
 <span id="L159"><span class="lineNum">     159</span>                 :             : BindingType ServiceInstanceDeployment::GetBindingType() const noexcept</span>

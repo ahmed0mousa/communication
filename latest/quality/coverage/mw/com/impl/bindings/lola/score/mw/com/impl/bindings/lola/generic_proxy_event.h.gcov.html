@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -146,26 +146,29 @@
 <span id="L68"><span class="lineNum">      68</span>                 :             : </span>
 <span id="L69"><span class="lineNum">      69</span>                 :             :     Result&lt;void&gt; SetReceiveHandler(std::weak_ptr&lt;ScopedEventReceiveHandler&gt; handler) noexcept override;</span>
 <span id="L70"><span class="lineNum">      70</span>                 :             :     Result&lt;void&gt; UnsetReceiveHandler() noexcept override;</span>
-<span id="L71"><span class="lineNum">      71</span>                 :             :     pid_t GetEventSourcePid() const noexcept;</span>
-<span id="L72"><span class="lineNum">      72</span>                 :             :     ElementFqId GetElementFQId() const noexcept;</span>
-<span id="L73"><span class="lineNum">      73</span>                 :             :     std::optional&lt;std::uint16_t&gt; GetMaxSampleCount() const noexcept override;</span>
-<span id="L74"><span class="lineNum">      74</span>                 :             :     BindingType GetBindingType() const noexcept override</span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">           1 :     {</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">           1 :         return BindingType::kLoLa;</span></span>
-<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">           1 :     }</span></span>
-<span id="L78"><span class="lineNum">      78</span>                 :             :     void NotifyServiceInstanceChangedAvailability(bool is_available, pid_t new_event_source_pid) noexcept override;</span>
-<span id="L79"><span class="lineNum">      79</span>                 :             : </span>
-<span id="L80"><span class="lineNum">      80</span>                 :             :   private:</span>
-<span id="L81"><span class="lineNum">      81</span>                 :             :     Result&lt;std::size_t&gt; GetNewSamplesImpl(Callback&amp;&amp; receiver, TrackerGuardFactory&amp; tracker) noexcept;</span>
-<span id="L82"><span class="lineNum">      82</span>                 :             :     Result&lt;std::size_t&gt; GetNumNewSamplesAvailableImpl() const noexcept;</span>
-<span id="L83"><span class="lineNum">      83</span>                 :             : </span>
-<span id="L84"><span class="lineNum">      84</span>                 :             :     ProxyEventCommon proxy_event_common_;</span>
-<span id="L85"><span class="lineNum">      85</span>                 :             :     const EventMetaInfo&amp; meta_info_;</span>
-<span id="L86"><span class="lineNum">      86</span>                 :             : };</span>
-<span id="L87"><span class="lineNum">      87</span>                 :             : </span>
-<span id="L88"><span class="lineNum">      88</span>                 :             : }  // namespace score::mw::com::impl::lola</span>
-<span id="L89"><span class="lineNum">      89</span>                 :             : </span>
-<span id="L90"><span class="lineNum">      90</span>                 :             : #endif  // SCORE_MW_COM_IMPL_BINDINGS_LOLA_GENERIC_PROXY_EVENT_H</span>
+<span id="L71"><span class="lineNum">      71</span>                 :             :     Result&lt;void&gt; SetSubscriptionStateChangeHandler(SubscriptionStateChangeHandler handler) noexcept override;</span>
+<span id="L72"><span class="lineNum">      72</span>                 :             :     Result&lt;void&gt; UnsetSubscriptionStateChangeHandler() noexcept override;</span>
+<span id="L73"><span class="lineNum">      73</span>                 :             : </span>
+<span id="L74"><span class="lineNum">      74</span>                 :             :     pid_t GetEventSourcePid() const noexcept;</span>
+<span id="L75"><span class="lineNum">      75</span>                 :             :     ElementFqId GetElementFQId() const noexcept;</span>
+<span id="L76"><span class="lineNum">      76</span>                 :             :     std::optional&lt;std::uint16_t&gt; GetMaxSampleCount() const noexcept override;</span>
+<span id="L77"><span class="lineNum">      77</span>                 :             :     BindingType GetBindingType() const noexcept override</span>
+<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">           1 :     {</span></span>
+<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">           1 :         return BindingType::kLoLa;</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">           1 :     }</span></span>
+<span id="L81"><span class="lineNum">      81</span>                 :             :     void NotifyServiceInstanceChangedAvailability(bool is_available, pid_t new_event_source_pid) noexcept override;</span>
+<span id="L82"><span class="lineNum">      82</span>                 :             : </span>
+<span id="L83"><span class="lineNum">      83</span>                 :             :   private:</span>
+<span id="L84"><span class="lineNum">      84</span>                 :             :     Result&lt;std::size_t&gt; GetNewSamplesImpl(Callback&amp;&amp; receiver, TrackerGuardFactory&amp; tracker) noexcept;</span>
+<span id="L85"><span class="lineNum">      85</span>                 :             :     Result&lt;std::size_t&gt; GetNumNewSamplesAvailableImpl() const noexcept;</span>
+<span id="L86"><span class="lineNum">      86</span>                 :             : </span>
+<span id="L87"><span class="lineNum">      87</span>                 :             :     ProxyEventCommon proxy_event_common_;</span>
+<span id="L88"><span class="lineNum">      88</span>                 :             :     const EventMetaInfo&amp; meta_info_;</span>
+<span id="L89"><span class="lineNum">      89</span>                 :             : };</span>
+<span id="L90"><span class="lineNum">      90</span>                 :             : </span>
+<span id="L91"><span class="lineNum">      91</span>                 :             : }  // namespace score::mw::com::impl::lola</span>
+<span id="L92"><span class="lineNum">      92</span>                 :             : </span>
+<span id="L93"><span class="lineNum">      93</span>                 :             : #endif  // SCORE_MW_COM_IMPL_BINDINGS_LOLA_GENERIC_PROXY_EVENT_H</span>
         </pre>
               </td>
             </tr>

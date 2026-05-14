@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
@@ -132,12 +132,12 @@
 <span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">           2 : }</span></span>
 <span id="L55"><span class="lineNum">      55</span>                 :             : </span>
 <span id="L56"><span class="lineNum">      56</span>                 :             : void SubscriptionPendingState::UnsubscribeEvent() noexcept</span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">         115 : {</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">         118 : {</span></span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :     // Unsubscribe functionality will be done in NotSubscribedState::OnEntry() which will be called synchronously by</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     // TransitionToState. We do this to avoid code duplication between SubscriptionPendingState::UnsubscribeEvent() and</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             :     // SubscribedState::UnsubscribeEvent()</span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         115 :     state_machine_.TransitionToState(SubscriptionStateMachineState::NOT_SUBSCRIBED_STATE);</span></span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         115 : }</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         118 :     state_machine_.TransitionToState(SubscriptionStateMachineState::NOT_SUBSCRIBED_STATE);</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         118 : }</span></span>
 <span id="L63"><span class="lineNum">      63</span>                 :             : </span>
 <span id="L64"><span class="lineNum">      64</span>                 :             : void SubscriptionPendingState::StopOfferEvent() noexcept</span>
 <span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">           1 : {</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-13 12:44:18</td>
+            <td class="headerValue">2026-05-14 02:47:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryMed">87.5&nbsp;%</td>
             <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">7</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -110,17 +110,17 @@
 <span id="L32"><span class="lineNum">      32</span>                 :             : // False positive: Other constructors are delegated to this one, so this one can not be further delegated</span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : // coverity[autosar_cpp14_a12_1_5_violation] See above</span>
 <span id="L34"><span class="lineNum">      34</span>                 :             : ServiceIdentifierType::ServiceIdentifierType(std::string serviceTypeName, ServiceVersionType version)</span>
-<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC tlaBgGNC">        1268 :     : serviceTypeName_{std::move(serviceTypeName)}, version_{version}, serialized_string_{ToStringImpl(Serialize())}</span></span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">        1268 : {</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">        1268 : }</span></span>
+<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC tlaBgGNC">        1275 :     : serviceTypeName_{std::move(serviceTypeName)}, version_{version}, serialized_string_{ToStringImpl(Serialize())}</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">        1275 : {</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">        1275 : }</span></span>
 <span id="L38"><span class="lineNum">      38</span>                 :             : </span>
 <span id="L39"><span class="lineNum">      39</span>                 :             : ServiceIdentifierType::ServiceIdentifierType(std::string serviceTypeName,</span>
 <span id="L40"><span class="lineNum">      40</span>                 :             :                                              const std::uint32_t major_version_number,</span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :                                              const std::uint32_t minor_version_number)</span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">        1252 :     : ServiceIdentifierType(std::move(serviceTypeName),</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">        1252 :                             make_ServiceVersionType(major_version_number, minor_version_number))</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">        1252 : {</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">        1252 : }</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">        1259 :     : ServiceIdentifierType(std::move(serviceTypeName),</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">        1259 :                             make_ServiceVersionType(major_version_number, minor_version_number))</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">        1259 : {</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">        1259 : }</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :             : </span>
 <span id="L47"><span class="lineNum">      47</span>                 :             : ServiceIdentifierType::ServiceIdentifierType(const score::json::Object&amp; json_object) noexcept</span>
 <span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">          16 :     : ServiceIdentifierType(</span></span>
@@ -141,18 +141,18 @@
 <span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         476 : }</span></span>
 <span id="L64"><span class="lineNum">      64</span>                 :             : </span>
 <span id="L65"><span class="lineNum">      65</span>                 :             : auto ServiceIdentifierType::Serialize() const noexcept -&gt; score::json::Object</span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">        2969 : {</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">        2969 :     json::Object json_object{};</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">        2969 :     json_object[kServiceTypeKeyServIdentType] = score::json::Any{std::string{serviceTypeName_}};</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">        2969 :     json_object[kVersionKeyServIdentType] = score::json::Any{version_.Serialize()};</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">        2969 :     json_object[kSerializationVersionKeyServIdentType] = json::Any{serializationVersion};</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">        2969 :     return json_object;</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">        2969 : }</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">        2985 : {</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">        2985 :     json::Object json_object{};</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">        2985 :     json_object[kServiceTypeKeyServIdentType] = score::json::Any{std::string{serviceTypeName_}};</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">        2985 :     json_object[kVersionKeyServIdentType] = score::json::Any{version_.Serialize()};</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">        2985 :     json_object[kSerializationVersionKeyServIdentType] = json::Any{serializationVersion};</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">        2985 :     return json_object;</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">        2985 : }</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :             : </span>
 <span id="L74"><span class="lineNum">      74</span>                 :             : auto operator==(const ServiceIdentifierType&amp; lhs, const ServiceIdentifierType&amp; rhs) noexcept -&gt; bool</span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         888 : {</span></span>
-<span id="L76"><span class="lineNum">      76</span> [<span class="tlaGBC" title="Branch 0 was taken 883 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 885 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967294 times"> + </span>]:<span class="tlaGNC">         888 :     return (((lhs.serviceTypeName_ == rhs.serviceTypeName_) &amp;&amp; (lhs.version_ == rhs.version_)));</span></span>
-<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">         888 : }</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         962 : {</span></span>
+<span id="L76"><span class="lineNum">      76</span> [<span class="tlaGBC" title="Branch 0 was taken 960 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 960 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">         962 :     return (((lhs.serviceTypeName_ == rhs.serviceTypeName_) &amp;&amp; (lhs.version_ == rhs.version_)));</span></span>
+<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">         962 : }</span></span>
 <span id="L78"><span class="lineNum">      78</span>                 :             : </span>
 <span id="L79"><span class="lineNum">      79</span>                 :             : auto operator&lt;(const ServiceIdentifierType&amp; lhs, const ServiceIdentifierType&amp; rhs) noexcept -&gt; bool</span>
 <span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">          12 : {</span></span>
