@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-14 02:47:12</td>
+            <td class="headerValue">2026-05-15 02:47:15</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">92.9&nbsp;%</td>
+            <td class="headerCovTableEntryHi">96.4&nbsp;%</td>
             <td class="headerCovTableEntry">28</td>
-            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">27</td>
           </tr>
                   <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -145,11 +145,11 @@
 <span id="L67"><span class="lineNum">      67</span>                 :             : ///            So this callback will be executed in our static Runtime context and we have to make sure, that</span>
 <span id="L68"><span class="lineNum">      68</span>                 :             : ///            MemoryResourceRegistry is available.</span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : void TouchStaticDependencies()</span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         118 : {</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         118 :     score::cpp::ignore = score::mw::log::detail::Runtime::GetRecorder();</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         118 :     score::cpp::ignore = score::mw::log::detail::Runtime::GetFallbackRecorder();</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         118 :     score::cpp::ignore = score::memory::shared::MemoryResourceRegistry::getInstance();</span></span>
-<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">         118 : }</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         116 : {</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         116 :     score::cpp::ignore = score::mw::log::detail::Runtime::GetRecorder();</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         116 :     score::cpp::ignore = score::mw::log::detail::Runtime::GetFallbackRecorder();</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         116 :     score::cpp::ignore = score::memory::shared::MemoryResourceRegistry::getInstance();</span></span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">         116 : }</span></span>
 <span id="L75"><span class="lineNum">      75</span>                 :             : </span>
 <span id="L76"><span class="lineNum">      76</span>                 :             : }  // namespace</span>
 <span id="L77"><span class="lineNum">      77</span>                 :             : </span>
@@ -205,16 +205,16 @@
 <span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">           5 : }</span></span>
 <span id="L128"><span class="lineNum">     128</span>                 :             : </span>
 <span id="L129"><span class="lineNum">     129</span>                 :             : auto Runtime::getInstance() noexcept -&gt; IRuntime&amp;</span>
-<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">        2809 : {</span></span>
-<span id="L131"><span class="lineNum">     131</span>         [<span class="tlaGBC" title="Branch 0 was taken 2691 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 118 times"> + </span>]:<span class="tlaGNC">        2809 :     if (mock_ != nullptr)</span></span>
+<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">        2808 : {</span></span>
+<span id="L131"><span class="lineNum">     131</span>         [<span class="tlaGBC" title="Branch 0 was taken 2691 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 117 times"> + </span>]:<span class="tlaGNC">        2808 :     if (mock_ != nullptr)</span></span>
 <span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        2691 :     {</span></span>
 <span id="L133"><span class="lineNum">     133</span>                 :<span class="tlaGNC">        2691 :         return *mock_;</span></span>
 <span id="L134"><span class="lineNum">     134</span>                 :<span class="tlaGNC">        2691 :     }</span></span>
-<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">         118 :     else</span></span>
-<span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">         118 :     {</span></span>
-<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">         118 :         return getInstanceInternal();</span></span>
-<span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">         118 :     }</span></span>
-<span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">        2809 : }</span></span>
+<span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">         117 :     else</span></span>
+<span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">         117 :     {</span></span>
+<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">         117 :         return getInstanceInternal();</span></span>
+<span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">         117 :     }</span></span>
+<span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">        2808 : }</span></span>
 <span id="L140"><span class="lineNum">     140</span>                 :             : </span>
 <span id="L141"><span class="lineNum">     141</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule findings. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L142"><span class="lineNum">     142</span>                 :             : // implicitly&quot;. This is a false positive, std::terminate() is implicitly called from 'initialization_config_.value()'</span>
@@ -223,12 +223,12 @@
 <span id="L145"><span class="lineNum">     145</span>                 :             : // [Ticket-173043](broken_link_j/Ticket-173043)</span>
 <span id="L146"><span class="lineNum">     146</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L147"><span class="lineNum">     147</span>                 :             : Runtime&amp; Runtime::getInstanceInternal() noexcept</span>
-<span id="L148"><span class="lineNum">     148</span>                 :<span class="tlaGNC">         118 : {</span></span>
-<span id="L149"><span class="lineNum">     149</span>                 :<span class="tlaGNC">         118 :     TouchStaticDependencies();</span></span>
+<span id="L148"><span class="lineNum">     148</span>                 :<span class="tlaGNC">         113 : {</span></span>
+<span id="L149"><span class="lineNum">     149</span>                 :<span class="tlaGNC">         113 :     TouchStaticDependencies();</span></span>
 <span id="L150"><span class="lineNum">     150</span>                 :             :     // Suppress &quot;AUTOSAR C++14 A3-3-2&quot; rule finding. This rule states: &quot;Static and thread-local objects shall be</span>
 <span id="L151"><span class="lineNum">     151</span>                 :             :     // constant-initialized.&quot;. This cannot be constexpr as the lambda function executes at runtime.</span>
 <span id="L152"><span class="lineNum">     152</span>                 :             :     // coverity[autosar_cpp14_a3_3_2_violation]</span>
-<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">         118 :     return singleton::MeyerSingleton&lt;Runtime&gt;::GetInstanceInitializedWithCallable([]() -&gt; Runtime {</span></span>
+<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">         113 :     return singleton::MeyerSingleton&lt;Runtime&gt;::GetInstanceInitializedWithCallable([]() -&gt; Runtime {</span></span>
 <span id="L154"><span class="lineNum">     154</span>                 :<span class="tlaGNC">          12 :         std::lock_guard&lt;std::mutex&gt; lock{mutex_};</span></span>
 <span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">          12 :         runtime_initialization_locked_ = true;</span></span>
 <span id="L156"><span class="lineNum">     156</span>         [<span class="tlaGBC" title="Branch 0 was taken 8 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]:<span class="tlaGNC">          12 :         if (!initialization_config_.has_value())</span></span>
@@ -247,7 +247,7 @@
 <span id="L169"><span class="lineNum">     169</span>                 :<span class="tlaGNC">           4 :             return Runtime{std::move(configuration_pair)};</span></span>
 <span id="L170"><span class="lineNum">     170</span>                 :<span class="tlaGNC">           4 :         }</span></span>
 <span id="L171"><span class="lineNum">     171</span>                 :<span class="tlaGNC">          12 :     });</span></span>
-<span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">         118 : }</span></span>
+<span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">         113 : }</span></span>
 <span id="L173"><span class="lineNum">     173</span>                 :             : </span>
 <span id="L174"><span class="lineNum">     174</span>                 :             : Runtime::Runtime(std::pair&lt;Configuration&amp;&amp;, score::cpp::optional&lt;TracingFilterConfig&gt;&amp;&amp;&gt; configs)</span>
 <span id="L175"><span class="lineNum">     175</span>                 :<span class="tlaGNC">          27 :     : IRuntime{},</span></span>
@@ -290,18 +290,18 @@
 <span id="L212"><span class="lineNum">     212</span>                 :<span class="tlaGNC">         110 : {</span></span>
 <span id="L213"><span class="lineNum">     213</span>                 :<span class="tlaGNC">         110 :     std::vector&lt;InstanceIdentifier&gt; result;</span></span>
 <span id="L214"><span class="lineNum">     214</span>                 :<span class="tlaGNC">         110 :     const auto instanceSearch = configuration_.GetServiceInstances().find(specifier);</span></span>
-<span id="L215"><span class="lineNum">     215</span>         [<span class="tlaGBC" title="Branch 0 was taken 107 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span>]:<span class="tlaGNC">         110 :     if (instanceSearch != configuration_.GetServiceInstances().end())</span></span>
-<span id="L216"><span class="lineNum">     216</span>                 :<span class="tlaGNC">         107 :     {</span></span>
+<span id="L215"><span class="lineNum">     215</span>         [<span class="tlaGBC" title="Branch 0 was taken 104 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>]:<span class="tlaGNC">         110 :     if (instanceSearch != configuration_.GetServiceInstances().end())</span></span>
+<span id="L216"><span class="lineNum">     216</span>                 :<span class="tlaGNC">         104 :     {</span></span>
 <span id="L217"><span class="lineNum">     217</span>                 :             :         // @todo: Right now we don't support multi-binding, if we do, we need to have some kind of loop</span>
-<span id="L218"><span class="lineNum">     218</span>                 :<span class="tlaGNC">         107 :         const auto type_deployment = configuration_.GetServiceTypes().find(instanceSearch-&gt;second.service_);</span></span>
+<span id="L218"><span class="lineNum">     218</span>                 :<span class="tlaGNC">         104 :         const auto type_deployment = configuration_.GetServiceTypes().find(instanceSearch-&gt;second.service_);</span></span>
 <span id="L219"><span class="lineNum">     219</span>                 :             :         // LCOV_EXCL_BR_START defensive programming: The configuration parser ensures that if a matching service</span>
 <span id="L220"><span class="lineNum">     220</span>                 :             :         // instance is available, there is also a matching service type available. Because parsing of the configuration</span>
 <span id="L221"><span class="lineNum">     221</span>                 :             :         // is automatically done before instantiating the runtime, this condition is always positive. To increase the</span>
 <span id="L222"><span class="lineNum">     222</span>                 :             :         // robustness of the code, we still check for this condition.</span>
-<span id="L223"><span class="lineNum">     223</span>         [<span class="tlaGBC" title="Branch 0 was taken 107 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">         107 :         if (type_deployment != configuration_.GetServiceTypes().cend())</span></span>
-<span id="L224"><span class="lineNum">     224</span>                 :<span class="tlaGNC">         107 :         {</span></span>
-<span id="L225"><span class="lineNum">     225</span>                 :<span class="tlaGNC">         107 :             result.push_back(make_InstanceIdentifier(instanceSearch-&gt;second, type_deployment-&gt;second));</span></span>
-<span id="L226"><span class="lineNum">     226</span>                 :<span class="tlaGNC">         107 :         }</span></span>
+<span id="L223"><span class="lineNum">     223</span>         [<span class="tlaGBC" title="Branch 0 was taken 106 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967294 times"> + </span>]:<span class="tlaGNC">         104 :         if (type_deployment != configuration_.GetServiceTypes().cend())</span></span>
+<span id="L224"><span class="lineNum">     224</span>                 :<span class="tlaGNC">         106 :         {</span></span>
+<span id="L225"><span class="lineNum">     225</span>                 :<span class="tlaGNC">         106 :             result.push_back(make_InstanceIdentifier(instanceSearch-&gt;second, type_deployment-&gt;second));</span></span>
+<span id="L226"><span class="lineNum">     226</span>                 :<span class="tlaGNC">         106 :         }</span></span>
 <span id="L227"><span class="lineNum">     227</span>                 :<span class="tlaUNC tlaBgUNC">           0 :         else</span></span>
 <span id="L228"><span class="lineNum">     228</span>                 :<span class="tlaUNC">           0 :         {</span></span>
 <span id="L229"><span class="lineNum">     229</span>                 :             :             // LCOV_EXCL_START see comment before if-statement</span>
@@ -309,7 +309,7 @@
 <span id="L231"><span class="lineNum">     231</span>                 :             :             // LCOV_EXCL_STOP</span>
 <span id="L232"><span class="lineNum">     232</span>                 :<span class="tlaUNC">           0 :         }</span></span>
 <span id="L233"><span class="lineNum">     233</span>                 :             :         // LCOV_EXCL_BR_STOP</span>
-<span id="L234"><span class="lineNum">     234</span>                 :<span class="tlaGNC tlaBgGNC">         107 :     }</span></span>
+<span id="L234"><span class="lineNum">     234</span>                 :<span class="tlaGNC tlaBgGNC">         104 :     }</span></span>
 <span id="L235"><span class="lineNum">     235</span>                 :             : </span>
 <span id="L236"><span class="lineNum">     236</span>                 :<span class="tlaGNC">         110 :     return result;</span></span>
 <span id="L237"><span class="lineNum">     237</span>                 :<span class="tlaGNC">         110 : }</span></span>

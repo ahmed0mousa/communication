@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-14 02:47:12</td>
+            <td class="headerValue">2026-05-15 02:47:15</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">81.1&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">96.2&nbsp;%</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
             <td class="headerCovTableEntry">26</td>
-            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry">24</td>
           </tr>
                   <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -350,7 +350,7 @@
 <span id="L272"><span class="lineNum">     272</span>                 :             : template &lt;typename SampleDataType&gt;</span>
 <span id="L273"><span class="lineNum">     273</span>                 :             : Result&lt;SampleAllocateePtr&lt;SampleDataType&gt;&gt; SkeletonEvent&lt;SampleDataType&gt;::Allocate() noexcept</span>
 <span id="L274"><span class="lineNum">     274</span>                 :<span class="tlaGNC">          16 : {</span></span>
-<span id="L275"><span class="lineNum">     275</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          16 :     if (skeleton_event_mock_ != nullptr)</span></span>
+<span id="L275"><span class="lineNum">     275</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          16 :     if (skeleton_event_mock_ != nullptr)</span></span>
 <span id="L276"><span class="lineNum">     276</span>                 :<span class="tlaGNC">           5 :     {</span></span>
 <span id="L277"><span class="lineNum">     277</span>                 :<span class="tlaGNC">           5 :         return skeleton_event_mock_-&gt;Allocate();</span></span>
 <span id="L278"><span class="lineNum">     278</span>                 :<span class="tlaGNC">           5 :     }</span></span>

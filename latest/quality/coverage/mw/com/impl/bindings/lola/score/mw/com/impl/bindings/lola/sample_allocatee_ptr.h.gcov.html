@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-14 02:47:12</td>
+            <td class="headerValue">2026-05-15 02:47:15</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">49.6&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntryLo">60.0&nbsp;%</td>
+            <td class="headerCovTableEntry">10</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">4</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -260,9 +260,9 @@
 <span id="L182"><span class="lineNum">     182</span>                 :             :     void internal_delete()</span>
 <span id="L183"><span class="lineNum">     183</span>                 :<span class="tlaGNC">         391 :     {</span></span>
 <span id="L184"><span class="lineNum">     184</span>                 :<span class="tlaGNC">         391 :         managed_object_ = nullptr;</span></span>
-<span id="L185"><span class="lineNum">     185</span>         [<span class="tlaGBC" title="Branch 0 was taken 34 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 224 times"> + </span>]:<span class="tlaGNC">         391 :         if (event_slot_index_ &lt; kUninitialisedEventSlotIndex)</span></span>
+<span id="L185"><span class="lineNum">     185</span> [<span class="tlaGBC" title="Branch 0 was taken 7 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">         391 :         if (event_slot_index_ &lt; kUninitialisedEventSlotIndex)</span></span>
 <span id="L186"><span class="lineNum">     186</span>                 :<span class="tlaGNC">          45 :         {</span></span>
-<span id="L187"><span class="lineNum">     187</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 34 times"> + </span>]:<span class="tlaGNC">          45 :             SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
+<span id="L187"><span class="lineNum">     187</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 7 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]:<span class="tlaGNC">          45 :             SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
 <span id="L188"><span class="lineNum">     188</span>                 :<span class="tlaGNC">          45 :                 event_data_control_.has_value(),</span></span>
 <span id="L189"><span class="lineNum">     189</span>                 :<span class="tlaGNC">          45 :                 &quot;The only time that event_data_control_ does not have a value is if the SampleAllocateePtr is default &quot;</span></span>
 <span id="L190"><span class="lineNum">     190</span>                 :<span class="tlaGNC">          45 :                 &quot;initialised or initialised with a nullptr. In both these, cases event_slot_index_ == &quot;</span></span>

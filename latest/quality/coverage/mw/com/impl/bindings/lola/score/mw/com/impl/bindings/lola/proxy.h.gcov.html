@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-14 02:47:12</td>
+            <td class="headerValue">2026-05-15 02:47:15</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">62.5&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">3</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -353,11 +353,11 @@
 <span id="L275"><span class="lineNum">     275</span>                 :             : auto Proxy::GetEventDataStorage(const ElementFqId element_fq_id) const noexcept</span>
 <span id="L276"><span class="lineNum">     276</span>                 :             :     -&gt; const EventDataStorage&lt;EventSampleType&gt;&amp;</span>
 <span id="L277"><span class="lineNum">     277</span>                 :<span class="tlaGNC">          39 : {</span></span>
-<span id="L278"><span class="lineNum">     278</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 39 times"> + </span>]:<span class="tlaGNC">          39 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
+<span id="L278"><span class="lineNum">     278</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 36 times"> + </span>]:<span class="tlaGNC">          39 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
 <span id="L279"><span class="lineNum">     279</span>                 :<span class="tlaGNC">          39 :         data_ != nullptr, &quot;Proxy::GetEventDataStorage: Managed memory data pointer is Null&quot;);</span></span>
 <span id="L280"><span class="lineNum">     280</span>                 :<span class="tlaGNC">          39 :     auto&amp; service_data_storage = detail_proxy::GetServiceDataStorage(*data_);</span></span>
 <span id="L281"><span class="lineNum">     281</span>                 :<span class="tlaGNC">          39 :     const auto event_entry = service_data_storage.events_.find(element_fq_id);</span></span>
-<span id="L282"><span class="lineNum">     282</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 38 times"> + </span>]:<span class="tlaGNC">          39 :     if (event_entry == service_data_storage.events_.end())</span></span>
+<span id="L282"><span class="lineNum">     282</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 36 times"> + </span>]:<span class="tlaGNC">          39 :     if (event_entry == service_data_storage.events_.end())</span></span>
 <span id="L283"><span class="lineNum">     283</span>                 :<span class="tlaGNC">           1 :     {</span></span>
 <span id="L284"><span class="lineNum">     284</span>                 :<span class="tlaGNC">           1 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; __func__ &lt;&lt; __LINE__</span></span>
 <span id="L285"><span class="lineNum">     285</span>                 :<span class="tlaGNC">           1 :                                          &lt;&lt; &quot;Unable to find data storage for given event instance. Terminating.&quot;;</span></span>
@@ -369,7 +369,7 @@
 <span id="L291"><span class="lineNum">     291</span>                 :             :     // does not return nullptr.</span>
 <span id="L292"><span class="lineNum">     292</span>                 :             :     // coverity[autosar_cpp14_a5_3_2_violation]</span>
 <span id="L293"><span class="lineNum">     293</span>                 :<span class="tlaGNC">          39 :     const auto* event_data_storage_ptr = event_entry-&gt;second.template get&lt;EventDataStorage&lt;EventSampleType&gt;&gt;();</span></span>
-<span id="L294"><span class="lineNum">     294</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 39 times"> + </span>]:<span class="tlaUNK">           0 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(event_data_storage_ptr != nullptr,</span></span>
+<span id="L294"><span class="lineNum">     294</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 36 times"> + </span>]:<span class="tlaUNK">           0 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(event_data_storage_ptr != nullptr,</span></span>
 <span id="L295"><span class="lineNum">     295</span>                 :<span class="tlaGNC tlaBgGNC">          39 :                                                 &quot;Could not get EventDataStorage from OffsetPtr&quot;);</span></span>
 <span id="L296"><span class="lineNum">     296</span>                 :<span class="tlaGNC">          39 :     return *event_data_storage_ptr;</span></span>
 <span id="L297"><span class="lineNum">     297</span>                 :<span class="tlaGNC">          39 : }</span></span>

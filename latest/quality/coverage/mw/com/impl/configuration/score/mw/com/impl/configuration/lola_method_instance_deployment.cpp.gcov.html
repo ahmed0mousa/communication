@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-14 02:47:12</td>
+            <td class="headerValue">2026-05-15 02:47:15</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -134,14 +134,14 @@
 <span id="L56"><span class="lineNum">      56</span>                 :             : score::json::Object LolaMethodInstanceDeployment::Serialize() const</span>
 <span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">         386 : {</span></span>
 <span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">         386 :     score::json::Object result;</span></span>
-<span id="L59"><span class="lineNum">      59</span>         [<span class="tlaGBC" title="Branch 0 was taken 377 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 9 times"> + </span>]:<span class="tlaGNC">         386 :     if (queue_size_.has_value())</span></span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         377 :     {</span></span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         377 :         result[kQueueSizeKey.data()] = score::json::Any{queue_size_.value()};</span></span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         377 :     }</span></span>
-<span id="L63"><span class="lineNum">      63</span>         [<span class="tlaGBC" title="Branch 0 was taken 240 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 146 times"> + </span>]:<span class="tlaGNC">         386 :     if (enabled_.has_value())</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         240 :     {</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">         240 :         result[kMethodEnabledKey.data()] = score::json::Any{enabled_.value()};</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         240 :     }</span></span>
+<span id="L59"><span class="lineNum">      59</span>         [<span class="tlaGBC" title="Branch 0 was taken 376 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 10 times"> + </span>]:<span class="tlaGNC">         386 :     if (queue_size_.has_value())</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         376 :     {</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         376 :         result[kQueueSizeKey.data()] = score::json::Any{queue_size_.value()};</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         376 :     }</span></span>
+<span id="L63"><span class="lineNum">      63</span>         [<span class="tlaGBC" title="Branch 0 was taken 236 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 150 times"> + </span>]:<span class="tlaGNC">         386 :     if (enabled_.has_value())</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         236 :     {</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">         236 :         result[kMethodEnabledKey.data()] = score::json::Any{enabled_.value()};</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         236 :     }</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">         386 :     return result;</span></span>
 <span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">         386 : }</span></span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : </span>
