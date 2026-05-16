@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-15 02:47:15</td>
+            <td class="headerValue">2026-05-16 02:35:58</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">20.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -150,7 +150,7 @@
 <span id="L72"><span class="lineNum">      72</span>                 :             :     const std::string_view event_name) noexcept</span>
 <span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC tlaBgGNC">           4 : {</span></span>
 <span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">           4 :     const auto lookup = LookupLolaProxyElement(parent, event_name, ServiceElementType::EVENT);</span></span>
-<span id="L75"><span class="lineNum">      75</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaGNC">           4 :     if (!lookup.has_value())</span></span>
+<span id="L75"><span class="lineNum">      75</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">           4 :     if (!lookup.has_value())</span></span>
 <span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">           3 :     {</span></span>
 <span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">           3 :         score::mw::log::LogError(&quot;lola&quot;)</span></span>
 <span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">           3 :             &lt;&lt; &quot;ProxyEvent binding could not be created for event&quot; &lt;&lt; event_name</span></span>

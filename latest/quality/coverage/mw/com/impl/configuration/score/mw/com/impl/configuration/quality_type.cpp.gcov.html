@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-15 02:47:15</td>
+            <td class="headerValue">2026-05-16 02:35:58</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -105,28 +105,28 @@
 <span id="L27"><span class="lineNum">      27</span>                 :             : }  // namespace</span>
 <span id="L28"><span class="lineNum">      28</span>                 :             : </span>
 <span id="L29"><span class="lineNum">      29</span>                 :             : std::string ToString(QualityType quality_type) noexcept</span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC tlaBgGNC">        2310 : {</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC tlaBgGNC">        2311 : {</span></span>
 <span id="L31"><span class="lineNum">      31</span>                 :             :     // Suppress &quot;AUTOSAR C++14 M6-4-5&quot; and &quot;AUTOSAR C++14 M6-4-3&quot;, The rule states: An unconditional throw or break</span>
 <span id="L32"><span class="lineNum">      32</span>                 :             :     // statement shall terminate every nonempty switch-clause.&quot; and &quot;A switch statement shall be a well-formed switch</span>
 <span id="L33"><span class="lineNum">      33</span>                 :             :     // statement.&quot;, respectively.The `return` and std::terminate() statements in this case clause unconditionally exits</span>
 <span id="L34"><span class="lineNum">      34</span>                 :             :     // the function, making an additional `break` statement redundant.</span>
 <span id="L35"><span class="lineNum">      35</span>                 :             :     // coverity[autosar_cpp14_m6_4_3_violation] See above</span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">        2310 :     switch (quality_type)</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">        2310 :     {</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">        2311 :     switch (quality_type)</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">        2311 :     {</span></span>
 <span id="L38"><span class="lineNum">      38</span>                 :             :         // coverity[autosar_cpp14_m6_4_5_violation] Return will terminate this switch clause</span>
-<span id="L39"><span class="lineNum">      39</span>         [<span class="tlaGBC" title="Branch 0 was taken 39 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2271 times"> + </span>]:<span class="tlaGNC">          39 :         case QualityType::kInvalid:</span></span>
+<span id="L39"><span class="lineNum">      39</span>         [<span class="tlaGBC" title="Branch 0 was taken 39 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2272 times"> + </span>]:<span class="tlaGNC">          39 :         case QualityType::kInvalid:</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">          39 :             return kInvalidString;</span></span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :         // coverity[autosar_cpp14_m6_4_5_violation] Return will terminate this switch clause</span>
-<span id="L42"><span class="lineNum">      42</span>         [<span class="tlaGBC" title="Branch 0 was taken 1529 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 781 times"> + </span>]:<span class="tlaGNC">        1529 :         case QualityType::kASIL_QM:</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">        1529 :             return kAsilQmString;</span></span>
+<span id="L42"><span class="lineNum">      42</span>         [<span class="tlaGBC" title="Branch 0 was taken 1535 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 776 times"> + </span>]:<span class="tlaGNC">        1535 :         case QualityType::kASIL_QM:</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">        1535 :             return kAsilQmString;</span></span>
 <span id="L44"><span class="lineNum">      44</span>                 :             :         // coverity[autosar_cpp14_m6_4_5_violation] Return will terminate this switch clause</span>
-<span id="L45"><span class="lineNum">      45</span>         [<span class="tlaGBC" title="Branch 0 was taken 732 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1578 times"> + </span>]:<span class="tlaGNC">         732 :         case QualityType::kASIL_B:</span></span>
+<span id="L45"><span class="lineNum">      45</span>         [<span class="tlaGBC" title="Branch 0 was taken 732 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1579 times"> + </span>]:<span class="tlaGNC">         732 :         case QualityType::kASIL_B:</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">         732 :             return kAsilBString;</span></span>
 <span id="L47"><span class="lineNum">      47</span>                 :             :         // coverity[autosar_cpp14_m6_4_5_violation] Return will terminate this switch clause</span>
-<span id="L48"><span class="lineNum">      48</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2307 times"> + </span>]:<span class="tlaGNC">           3 :         default:</span></span>
+<span id="L48"><span class="lineNum">      48</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2308 times"> + </span>]:<span class="tlaGNC">           3 :         default:</span></span>
 <span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">           3 :             std::terminate();</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">        2310 :     }</span></span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">        2310 : }</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">        2311 :     }</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">        2311 : }</span></span>
 <span id="L52"><span class="lineNum">      52</span>                 :             : </span>
 <span id="L53"><span class="lineNum">      53</span>                 :             : QualityType FromString(std::string quality_type) noexcept</span>
 <span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          74 : {</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-15 02:47:15</td>
+            <td class="headerValue">2026-05-16 02:35:58</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -117,22 +117,22 @@
 <span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         233 :     score::cpp::ignore = queue_.insert(std::find_if(queue_.begin(),</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">         233 :                                                     queue_.end(),</span></span>
 <span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">         238 :                                                     [until](const Entry&amp; queue_entry) {</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          49 :                                                         return until &lt; queue_entry.until_;</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          49 :                                                     }),</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          42 :                                                         return until &lt; queue_entry.until_;</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          42 :                                                     }),</span></span>
 <span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">         233 :                                        entry);</span></span>
 <span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">         233 : }</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :             : </span>
 <span id="L47"><span class="lineNum">      47</span>                 :             : TimedCommandQueue::TimePoint TimedCommandQueue::ProcessQueue(const TimePoint now) noexcept</span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">         397 : {</span></span>
-<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">         397 :     std::unique_lock&lt;std::mutex&gt; lock(mutex_);</span></span>
-<span id="L50"><span class="lineNum">      50</span>         [<span class="tlaGBC" title="Branch 0 was taken 274 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 354 times"> + </span>]:<span class="tlaGNC">         628 :     while (!queue_.empty())</span></span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">         274 :     {</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">         274 :         Entry&amp; queue_entry = queue_.front();</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">         274 :         const TimePoint until = queue_entry.until_;</span></span>
-<span id="L54"><span class="lineNum">      54</span>         [<span class="tlaGBC" title="Branch 0 was taken 43 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 231 times"> + </span>]:<span class="tlaGNC">         274 :         if (until &gt; now)</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          43 :         {</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          43 :             return until;</span></span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">          43 :         }</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">         398 : {</span></span>
+<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">         398 :     std::unique_lock&lt;std::mutex&gt; lock(mutex_);</span></span>
+<span id="L50"><span class="lineNum">      50</span>         [<span class="tlaGBC" title="Branch 0 was taken 272 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 357 times"> + </span>]:<span class="tlaGNC">         629 :     while (!queue_.empty())</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">         272 :     {</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">         272 :         Entry&amp; queue_entry = queue_.front();</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">         272 :         const TimePoint until = queue_entry.until_;</span></span>
+<span id="L54"><span class="lineNum">      54</span>         [<span class="tlaGBC" title="Branch 0 was taken 41 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 231 times"> + </span>]:<span class="tlaGNC">         272 :         if (until &gt; now)</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          41 :         {</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          41 :             return until;</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">          41 :         }</span></span>
 <span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">         231 :         queue_.pop_front();</span></span>
 <span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaGNC">         231 :         {</span></span>
 <span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         231 :             QueuedCallback callback = std::move(queue_entry.callback_);</span></span>
@@ -141,8 +141,8 @@
 <span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         231 :         }</span></span>
 <span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         231 :         lock.lock();</span></span>
 <span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">         231 :     }</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         354 :     return TimePoint{};</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">         397 : }</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         357 :     return TimePoint{};</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">         398 : }</span></span>
 <span id="L68"><span class="lineNum">      68</span>                 :             : </span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : void TimedCommandQueue::CleanUpOwner(const void* const owner) noexcept</span>
 <span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         110 : {</span></span>

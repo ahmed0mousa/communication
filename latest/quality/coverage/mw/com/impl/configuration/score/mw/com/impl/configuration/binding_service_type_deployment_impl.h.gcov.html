@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-15 02:47:15</td>
+            <td class="headerValue">2026-05-16 02:35:58</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryMed">80.8&nbsp;%</td>
-            <td class="headerCovTableEntry">26</td>
-            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">16</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -211,17 +211,17 @@
 <span id="L133"><span class="lineNum">     133</span>                 :             : template &lt;typename EventIdType, typename FieldIdType, typename MethodIdType, typename ServiceIdType&gt;</span>
 <span id="L134"><span class="lineNum">     134</span>                 :             : json::Object BindingServiceTypeDeployment&lt;EventIdType, FieldIdType, MethodIdType, ServiceIdType&gt;::Serialize()</span>
 <span id="L135"><span class="lineNum">     135</span>                 :             :     const noexcept</span>
-<span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">        1270 : {</span></span>
-<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">        1270 :     score::json::Object json_object{};</span></span>
-<span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">        1270 :     json_object[detail::kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
-<span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">        1270 :     json_object[detail::kServiceIdKey] = score::json::Any{service_id_};</span></span>
+<span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">        1272 : {</span></span>
+<span id="L137"><span class="lineNum">     137</span>                 :<span class="tlaGNC">        1272 :     score::json::Object json_object{};</span></span>
+<span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">        1272 :     json_object[detail::kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
+<span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">        1272 :     json_object[detail::kServiceIdKey] = score::json::Any{service_id_};</span></span>
 <span id="L140"><span class="lineNum">     140</span>                 :             : </span>
-<span id="L141"><span class="lineNum">     141</span>                 :<span class="tlaGNC">        1270 :     json_object[detail::kEventsKey] = detail::ConvertServiceElementIdMapToJson(events_);</span></span>
-<span id="L142"><span class="lineNum">     142</span>                 :<span class="tlaGNC">        1270 :     json_object[detail::kFieldsKey] = detail::ConvertServiceElementIdMapToJson(fields_);</span></span>
-<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">        1270 :     json_object[detail::kMethodsKey] = detail::ConvertServiceElementIdMapToJson(methods_);</span></span>
+<span id="L141"><span class="lineNum">     141</span>                 :<span class="tlaGNC">        1272 :     json_object[detail::kEventsKey] = detail::ConvertServiceElementIdMapToJson(events_);</span></span>
+<span id="L142"><span class="lineNum">     142</span>                 :<span class="tlaGNC">        1272 :     json_object[detail::kFieldsKey] = detail::ConvertServiceElementIdMapToJson(fields_);</span></span>
+<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">        1272 :     json_object[detail::kMethodsKey] = detail::ConvertServiceElementIdMapToJson(methods_);</span></span>
 <span id="L144"><span class="lineNum">     144</span>                 :             : </span>
-<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">        1270 :     return json_object;</span></span>
-<span id="L146"><span class="lineNum">     146</span>                 :<span class="tlaGNC">        1270 : }</span></span>
+<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">        1272 :     return json_object;</span></span>
+<span id="L146"><span class="lineNum">     146</span>                 :<span class="tlaGNC">        1272 : }</span></span>
 <span id="L147"><span class="lineNum">     147</span>                 :             : </span>
 <span id="L148"><span class="lineNum">     148</span>                 :             : template &lt;typename EventIdType, typename FieldIdType, typename MethodIdType, typename ServiceIdType&gt;</span>
 <span id="L149"><span class="lineNum">     149</span>                 :             : std::string_view BindingServiceTypeDeployment&lt;EventIdType, FieldIdType, MethodIdType, ServiceIdType&gt;::ToHashString()</span>
@@ -277,8 +277,7 @@
 <span id="L198"><span class="lineNum">     198</span>                 :             :     // lola_service_instance_deployment_test.cpp (GettingEventIdThatDoesNotExistInDeploymentTerminates and</span>
 <span id="L199"><span class="lineNum">     199</span>                 :             :     // GettingFieldIdThatDoesNotExistInDeploymentTerminates) which test the true branch of this condition. This is a bug</span>
 <span id="L200"><span class="lineNum">     200</span>                 :             :     // with the tool to be fixed in (Ticket-219132). This suppression should be removed when the tool is fixed.</span>
-<span id="L201"><span class="lineNum">     201</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 7 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 2 times"> + </span>]:<span class="tlaGNC">          62 :     if (service_element_id_it == service_element_type_deployments.cend())</span></span>
-<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span>]
+<span id="L201"><span class="lineNum">     201</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaGNC">          62 :     if (service_element_id_it == service_element_type_deployments.cend())</span></span>
 <span id="L202"><span class="lineNum">     202</span>                 :             :     // LCOV_EXCL_BR_STOP</span>
 <span id="L203"><span class="lineNum">     203</span>                 :<span class="tlaGNC">           5 :     {</span></span>
 <span id="L204"><span class="lineNum">     204</span>                 :<span class="tlaGNC">           5 :         score::mw::log::LogFatal() &lt;&lt; service_element_type &lt;&lt; &quot;name \&quot;&quot; &lt;&lt; service_element_name</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-15 02:47:15</td>
+            <td class="headerValue">2026-05-16 02:35:58</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">69.5&nbsp;%</td>
+            <td class="headerCovTableEntryLo">70.7&nbsp;%</td>
             <td class="headerCovTableEntry">82</td>
-            <td class="headerCovTableEntry">57</td>
+            <td class="headerCovTableEntry">58</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -143,11 +143,11 @@
 <span id="L65"><span class="lineNum">      65</span>                 :             : auto GetValueFromJson(const score::json::Object&amp; json_object, std::string_view key) -&gt; T</span>
 <span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         325 : {</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">         325 :     const auto it = json_object.find(key);</span></span>
-<span id="L68"><span class="lineNum">      68</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 13 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 39 times"> + </span>]:<span class="tlaGNC">         325 :     SCORE_LANGUAGE_FUTURECPP_ASSERT(it != json_object.end());</span></span>
-<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 17 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 69 times"> + </span>]
+<span id="L68"><span class="lineNum">      68</span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 57 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 135 times"> + </span>]:<span class="tlaGNC">         325 :     SCORE_LANGUAGE_FUTURECPP_ASSERT(it != json_object.end());</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 34 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 96 times"> + </span>]
 <span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">         325 :     const auto json_result = it-&gt;second.As&lt;T&gt;();</span></span>
-<span id="L70"><span class="lineNum">      70</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 75 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">         325 :     if (!json_result.has_value())</span></span>
-<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 17 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 38 times"> + </span>]
+<span id="L70"><span class="lineNum">      70</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 124 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 22 times"> + </span>]:<span class="tlaGNC">         325 :     if (!json_result.has_value())</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 116 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 61 times"> + </span>]
 <span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">           1 :     {</span></span>
 <span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">           1 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; &quot;Failed to parse JSON configuration key '&quot; &lt;&lt; key</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">           1 :                                          &lt;&lt; &quot;'. Configuration parsing failed. Terminating.&quot;;</span></span>
@@ -179,8 +179,8 @@
 <span id="L99"><span class="lineNum">      99</span>                 :<span class="tlaGNC">         757 : {</span></span>
 <span id="L100"><span class="lineNum">     100</span>                 :             : </span>
 <span id="L101"><span class="lineNum">     101</span>                 :<span class="tlaGNC">         757 :     const auto val_candidate = json_object.find(key);</span></span>
-<span id="L102"><span class="lineNum">     102</span> [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 65 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 11 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 10 times"> + </span>]:<span class="tlaGNC">         757 :     if (val_candidate == json_object.end())</span></span>
-<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 8 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 37 times"> + </span>]
+<span id="L102"><span class="lineNum">     102</span> [<span class="tlaGBC" title="Branch 0 was taken 39 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 184 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 123 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 116 times"> + </span>]:<span class="tlaGNC">         757 :     if (val_candidate == json_object.end())</span></span>
+<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 55 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 237 times"> + </span>]
 <span id="L103"><span class="lineNum">     103</span>                 :<span class="tlaGNC">         218 :     {</span></span>
 <span id="L104"><span class="lineNum">     104</span>                 :<span class="tlaGNC">         218 :         return {};</span></span>
 <span id="L105"><span class="lineNum">     105</span>                 :<span class="tlaGNC">         218 :     }</span></span>
@@ -265,18 +265,18 @@
 <span id="L181"><span class="lineNum">     181</span>                 :             : </span>
 <span id="L182"><span class="lineNum">     182</span>                 :             : template &lt;typename ServiceElementInstanceMapping&gt;</span>
 <span id="L183"><span class="lineNum">     183</span>                 :             : json::Object ConvertServiceElementMapToJson(const ServiceElementInstanceMapping&amp; input_map)</span>
-<span id="L184"><span class="lineNum">     184</span>                 :<span class="tlaGNC">        5051 : {</span></span>
-<span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">        5051 :     json::Object service_element_instance_mapping_object{};</span></span>
-<span id="L186"><span class="lineNum">     186</span> [<span class="tlaGBC" title="Branch 0 was taken 42 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 350 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 40 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 238 times"> + </span>]:<span class="tlaGNC">        5051 :     for (auto it : input_map)</span></span>
-<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 414 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2682 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 383 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1781 times"> + </span>]
-<span id="L187"><span class="lineNum">     187</span>                 :<span class="tlaGNC">         879 :     {</span></span>
-<span id="L188"><span class="lineNum">     188</span>                 :<span class="tlaGNC">         879 :         const auto insert_result =</span></span>
-<span id="L189"><span class="lineNum">     189</span>                 :<span class="tlaGNC">         879 :             service_element_instance_mapping_object.insert(std::make_pair(it.first, it.second.Serialize()));</span></span>
-<span id="L190"><span class="lineNum">     190</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">         879 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(insert_result.second, &quot;Could not insert element in map&quot;);</span></span>
-<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 381 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 482 times"> + </span>]
-<span id="L191"><span class="lineNum">     191</span>                 :<span class="tlaGNC">         879 :     }</span></span>
-<span id="L192"><span class="lineNum">     192</span>                 :<span class="tlaGNC">        5051 :     return service_element_instance_mapping_object;</span></span>
-<span id="L193"><span class="lineNum">     193</span>                 :<span class="tlaGNC">        5051 : }</span></span>
+<span id="L184"><span class="lineNum">     184</span>                 :<span class="tlaGNC">        5053 : {</span></span>
+<span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">        5053 :     json::Object service_element_instance_mapping_object{};</span></span>
+<span id="L186"><span class="lineNum">     186</span> [<span class="tlaGBC" title="Branch 0 was taken 42 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 350 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 40 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 238 times"> + </span>]:<span class="tlaGNC">        5053 :     for (auto it : input_map)</span></span>
+<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 416 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2684 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 383 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1781 times"> + </span>]
+<span id="L187"><span class="lineNum">     187</span>                 :<span class="tlaGNC">         881 :     {</span></span>
+<span id="L188"><span class="lineNum">     188</span>                 :<span class="tlaGNC">         881 :         const auto insert_result =</span></span>
+<span id="L189"><span class="lineNum">     189</span>                 :<span class="tlaGNC">         881 :             service_element_instance_mapping_object.insert(std::make_pair(it.first, it.second.Serialize()));</span></span>
+<span id="L190"><span class="lineNum">     190</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">         881 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(insert_result.second, &quot;Could not insert element in map&quot;);</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 381 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 484 times"> + </span>]
+<span id="L191"><span class="lineNum">     191</span>                 :<span class="tlaGNC">         881 :     }</span></span>
+<span id="L192"><span class="lineNum">     192</span>                 :<span class="tlaGNC">        5053 :     return service_element_instance_mapping_object;</span></span>
+<span id="L193"><span class="lineNum">     193</span>                 :<span class="tlaGNC">        5053 : }</span></span>
 <span id="L194"><span class="lineNum">     194</span>                 :             : </span>
 <span id="L195"><span class="lineNum">     195</span>                 :             : template &lt;typename ServiceElementInstanceMapping&gt;</span>
 <span id="L196"><span class="lineNum">     196</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation] false positive, we check before accessing the variant.</span>

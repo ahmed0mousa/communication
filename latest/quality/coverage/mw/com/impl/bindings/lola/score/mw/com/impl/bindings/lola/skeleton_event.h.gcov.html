@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-15 02:47:15</td>
+            <td class="headerValue">2026-05-16 02:35:58</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">33.3&nbsp;%</td>
@@ -224,12 +224,12 @@
 <span id="L146"><span class="lineNum">     146</span>                 :             :     std::optional&lt;typename SkeletonEventBinding&lt;SampleType&gt;::SendTraceCallback&gt; send_trace_callback) noexcept</span>
 <span id="L147"><span class="lineNum">     147</span>                 :<span class="tlaGNC">          14 : {</span></span>
 <span id="L148"><span class="lineNum">     148</span>                 :<span class="tlaGNC">          14 :     const auto send_result = skeleton_event_common_.Send(sample);</span></span>
-<span id="L149"><span class="lineNum">     149</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 12 times"> + </span>]:<span class="tlaGNC">          14 :     if (!send_result.has_value())</span></span>
+<span id="L149"><span class="lineNum">     149</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 14 times"> + </span>]:<span class="tlaGNC">          14 :     if (!send_result.has_value())</span></span>
 <span id="L150"><span class="lineNum">     150</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
 <span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaUNC">           0 :         return MakeUnexpected&lt;void&gt;(send_result.error());</span></span>
 <span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L153"><span class="lineNum">     153</span>                 :             : </span>
-<span id="L154"><span class="lineNum">     154</span>         [<span class="tlaGBC" title="Branch 0 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>]:<span class="tlaGNC tlaBgGNC">          14 :     if (send_trace_callback.has_value())</span></span>
+<span id="L154"><span class="lineNum">     154</span>         [<span class="tlaGBC" title="Branch 0 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC tlaBgGNC">          14 :     if (send_trace_callback.has_value())</span></span>
 <span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">           6 :     {</span></span>
 <span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">           6 :         (*send_trace_callback)(sample);</span></span>
 <span id="L157"><span class="lineNum">     157</span>                 :<span class="tlaGNC">           6 :     }</span></span>
@@ -244,7 +244,7 @@
 <span id="L166"><span class="lineNum">     166</span>                 :             : Result&lt;impl::SampleAllocateePtr&lt;SampleType&gt;&gt; SkeletonEvent&lt;SampleType&gt;::Allocate() noexcept</span>
 <span id="L167"><span class="lineNum">     167</span>                 :<span class="tlaGNC">          39 : {</span></span>
 <span id="L168"><span class="lineNum">     168</span>                 :<span class="tlaGNC">          39 :     const auto allocated_slot_result = skeleton_event_common_.AllocateSlot();</span></span>
-<span id="L169"><span class="lineNum">     169</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaGNC">          39 :     if (!allocated_slot_result.has_value())</span></span>
+<span id="L169"><span class="lineNum">     169</span>         [<span class="tlaGBC" title="Branch 0 was taken 5 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 34 times"> + </span>]:<span class="tlaGNC">          39 :     if (!allocated_slot_result.has_value())</span></span>
 <span id="L170"><span class="lineNum">     170</span>                 :<span class="tlaGNC">           5 :     {</span></span>
 <span id="L171"><span class="lineNum">     171</span>                 :<span class="tlaGNC">           5 :         return MakeUnexpected&lt;impl::SampleAllocateePtr&lt;SampleType&gt;&gt;(allocated_slot_result.error());</span></span>
 <span id="L172"><span class="lineNum">     172</span>                 :<span class="tlaGNC">           5 :     }</span></span>
