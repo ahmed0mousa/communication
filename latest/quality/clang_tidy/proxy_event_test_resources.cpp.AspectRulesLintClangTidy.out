@@ -1,0 +1,32 @@
+11193 warnings generated.
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:55:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   55 |     EventSubscriptionControlAttorney(EventSubscriptionControl& event_subscription_control) noexcept
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:78:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   78 |     GenericProxyEventAttorney(GenericProxyEvent& generic_proxy_event) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:95:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   95 |     ProxyEventAttorney(ProxyEvent<T>& proxy_event) noexcept : proxy_event_{proxy_event} {}
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:109:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  109 |     ProxyEventCommonAttorney(ProxyEventCommon& proxy_event_common) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:147:7: warning: class 'SharedMemoryFactoryGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  147 | class SharedMemoryFactoryGuard
+      |       ^
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: warning: class 'LolaProxyEventResources' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  218 | class LolaProxyEventResources : public ProxyMockedMemoryFixture
+      |       ^
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: warning: destructor of 'LolaProxyEventResources' is protected and virtual [cppcoreguidelines-virtual-class-destructor]
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: note: make it protected and non-virtual
+  218 | class LolaProxyEventResources : public ProxyMockedMemoryFixture
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/5029/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:32:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+   32 | using namespace ::score::memory::shared;
+      | ^
+Suppressed 11385 warnings (11177 in non-user code, 200 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

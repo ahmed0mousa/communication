@@ -1,0 +1,6 @@
+9055 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5232/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:25:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+   25 | using namespace score::mw::com::test;
+      | ^
+Suppressed 9240 warnings (9046 in non-user code, 186 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

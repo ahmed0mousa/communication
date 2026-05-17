@@ -1,0 +1,21 @@
+5094 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:113:10: warning: function 'score::mw::com::impl::lola::ConsumerEventDataControlLocalView::DereferenceEvent' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+  113 |     void DereferenceEvent(const SlotIndexType slot_index) noexcept;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4874/execroot/_main/score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.cpp:220:63: note: the definition seen here
+  220 | auto ConsumerEventDataControlLocalView<AtomicIndirectorType>::DereferenceEvent(
+      |                                                               ^
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:113:10: note: differing parameters are named here: ('slot_index'), in definition: ('event_slot_index')
+  113 |     void DereferenceEvent(const SlotIndexType slot_index) noexcept;
+      |          ^                                    ~~~~~~~~~~
+      |                                               event_slot_index
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+Suppressed 5149 warnings (5088 in non-user code, 58 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

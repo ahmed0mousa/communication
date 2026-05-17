@@ -1,0 +1,11 @@
+11201 warnings generated.
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:358:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  358 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:396:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  396 |     SkeletonAttorney(Skeleton& skeleton) noexcept : skeleton_{skeleton} {}
+      |     ^
+      |     explicit 
+Suppressed 11408 warnings (11191 in non-user code, 209 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

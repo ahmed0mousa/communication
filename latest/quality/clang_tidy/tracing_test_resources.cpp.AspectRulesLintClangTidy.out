@@ -1,0 +1,7 @@
+5495 warnings generated.
+./score/mw/com/impl/tracing/tracing_test_resources.h:28:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   28 |     TracingRuntimeAttorney(TracingRuntime& tracing_runtime) noexcept : tracing_runtime_{tracing_runtime} {};
+      |     ^
+      |     explicit 
+Suppressed 5573 warnings (5488 in non-user code, 79 NOLINT, 6 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

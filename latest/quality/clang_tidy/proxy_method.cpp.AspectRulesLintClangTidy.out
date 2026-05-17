@@ -1,0 +1,7 @@
+5914 warnings generated.
+./score/mw/com/impl/bindings/mock_binding/proxy_method.h:38:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   38 |     ProxyMethodFacade(ProxyMethod& proxy_method) : ProxyMethodBinding{}, proxy_method_{proxy_method} {}
+      |     ^
+      |     explicit 
+Suppressed 6011 warnings (5910 in non-user code, 98 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

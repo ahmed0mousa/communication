@@ -1,0 +1,11 @@
+8777 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
+  151 | struct MapApiLaneData
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
+  245 | struct MapApiLanesStamped
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+Suppressed 8936 warnings (8765 in non-user code, 163 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

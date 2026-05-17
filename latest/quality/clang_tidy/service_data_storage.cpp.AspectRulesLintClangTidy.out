@@ -1,0 +1,10 @@
+8371 warnings generated.
+./score/mw/com/impl/bindings/lola/methods/proxy_method_instance_identifier.h:30:8: warning: constructor does not initialize these fields: proxy_instance_identifier [cppcoreguidelines-pro-type-member-init]
+   30 | struct ProxyMethodInstanceIdentifier
+      |        ^
+   31 | {
+   32 |     ProxyInstanceIdentifier proxy_instance_identifier;
+      |                                                      
+      |                                                      {}
+Suppressed 8493 warnings (8362 in non-user code, 123 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

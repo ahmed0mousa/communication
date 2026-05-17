@@ -1,0 +1,15 @@
+6747 warnings generated.
+./score/mw/com/impl/configuration/test/configuration_test_resources.h:46:29: warning: function 'score::mw::com::impl::MakeLolaEventInstanceDeployment' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   46 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:35:29: note: the definition seen here
+   35 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
+      |                             ^
+./score/mw/com/impl/configuration/test/configuration_test_resources.h:46:29: note: differing parameters are named here: ('number_of_sample_slots'), in definition: ('max_samples')
+   46 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
+      |                             ^
+   47 |     const std::optional<std::uint16_t> number_of_sample_slots = 12U,
+      |                                        ~~~~~~~~~~~~~~~~~~~~~~
+      |                                        max_samples
+Suppressed 6885 warnings (6740 in non-user code, 139 NOLINT, 6 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

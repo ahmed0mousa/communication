@@ -1,0 +1,20 @@
+4887 warnings generated.
+./score/message_passing/unix_domain/unix_domain_client_factory.h:25:7: warning: class 'UnixDomainClientFactory' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   25 | class UnixDomainClientFactory final : public IClientFactory
+      |       ^
+./score/message_passing/unix_domain/unix_domain_engine.h:47:7: warning: class 'UnixDomainEngine' defines a destructor, a copy constructor and a copy assignment operator but does not define a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   47 | class UnixDomainEngine final : public ISharedResourceEngine
+      |       ^
+./score/message_passing/unix_domain/unix_domain_engine.h:58:5: warning: constructors that are callable with a single argument must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   58 |     UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource,
+      |     ^
+      |     explicit 
+./score/message_passing/unix_domain/unix_domain_engine.h:96:10: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   96 |     void EnqueueCommand(CommandQueueEntry& entry,
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/5039/execroot/_main/score/message_passing/unix_domain/unix_domain_client_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   33 | UnixDomainClientFactory::~UnixDomainClientFactory() noexcept {}
+      |                          ^                                   ~~
+      |                                                              = default;
+Suppressed 4913 warnings (4879 in non-user code, 31 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

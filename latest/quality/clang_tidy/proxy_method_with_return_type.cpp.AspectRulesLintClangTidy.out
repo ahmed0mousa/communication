@@ -1,0 +1,6 @@
+8518 warnings generated.
+./score/mw/com/impl/methods/proxy_method_with_return_type.h:191:11: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  191 |         *(reinterpret_cast<ReturnType*>(allocated_return_type_storage.value().data())),
+      |           ^
+Suppressed 8648 warnings (8509 in non-user code, 131 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

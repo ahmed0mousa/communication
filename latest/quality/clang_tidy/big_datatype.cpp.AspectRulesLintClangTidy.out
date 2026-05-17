@@ -1,0 +1,34 @@
+8763 warnings generated.
+./score/mw/com/test/common_test_resources/big_datatype.h:212:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
+  212 | struct MapApiLaneData
+      |        ^
+./score/mw/com/test/common_test_resources/big_datatype.h:212:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+./score/mw/com/test/common_test_resources/big_datatype.h:343:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
+  343 | struct MapApiLanesStamped
+      |        ^
+./score/mw/com/test/common_test_resources/big_datatype.h:343:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+./score/mw/com/test/common_test_resources/big_datatype.h:405:8: warning: constructor does not initialize these fields: x, hash_value [cppcoreguidelines-pro-type-member-init]
+  405 | struct DummyDataStamped
+      |        ^
+  406 | {
+  407 |     explicit DummyDataStamped() = default;
+  408 | 
+  409 |     DummyDataStamped(DummyDataStamped&&) = default;
+  410 | 
+  411 |     DummyDataStamped(const DummyDataStamped&) = default;
+  412 | 
+  413 |     DummyDataStamped& operator=(DummyDataStamped&&) = default;
+  414 | 
+  415 |     DummyDataStamped& operator=(const DummyDataStamped&) = default;
+  416 | 
+  417 |     StdTimestamp time_stamp{0, 0, StdTimestampSyncState::kStdTimestampSyncState_Invalid};
+  418 | 
+  419 |     char x;
+      |           
+      |           {}
+  420 |     std::size_t hash_value;
+      |                           
+      |                           {}
+./score/mw/com/test/common_test_resources/big_datatype.h:405:8: warning: class 'DummyDataStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+Suppressed 8920 warnings (8749 in non-user code, 163 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

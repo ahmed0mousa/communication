@@ -1,0 +1,7 @@
+8941 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5188/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:147:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  147 |     RunDurationHandler(const ClientConfig& cc) : run_time_limit_(cc.run_time_limit)
+      |     ^
+      |     explicit 
+Suppressed 9132 warnings (8932 in non-user code, 192 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

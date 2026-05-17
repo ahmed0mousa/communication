@@ -1,0 +1,7 @@
+8513 warnings generated.
+./score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.h:93:10: warning: variable 'inserted' is not initialized [cppcoreguidelines-init-variables]
+   93 |     bool inserted;
+      |          ^       
+      |                   = false
+Suppressed 8643 warnings (8504 in non-user code, 131 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,0 +1,27 @@
+9202 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5214/execroot/_main/score/mw/com/test/bigdata/bigdata_gen.cpp:24:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+   24 | EXPORT_MW_COM_TYPE(mw_com_test_MapApiLanesStamped, ::score::mw::com::test::MapApiLanesStamped)
+      | ^
+./score/mw/com/impl/rust/bridge_macros.h:146:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
+  146 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample));          \
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/5214/execroot/_main/score/mw/com/test/bigdata/bigdata_gen.cpp:24:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   24 | EXPORT_MW_COM_TYPE(mw_com_test_MapApiLanesStamped, ::score::mw::com::test::MapApiLanesStamped)
+      | ^
+./score/mw/com/impl/rust/bridge_macros.h:144:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'
+  144 |             alignas(::score::mw::com::impl::SamplePtr<type>) char                                                      \
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5214/execroot/_main/score/mw/com/test/bigdata/bigdata_gen.cpp:25:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+   25 | EXPORT_MW_COM_TYPE(mw_com_test_DummyDataStamped, ::score::mw::com::test::DummyDataStamped)
+      | ^
+./score/mw/com/impl/rust/bridge_macros.h:146:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
+  146 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample));          \
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/5214/execroot/_main/score/mw/com/test/bigdata/bigdata_gen.cpp:25:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   25 | EXPORT_MW_COM_TYPE(mw_com_test_DummyDataStamped, ::score::mw::com::test::DummyDataStamped)
+      | ^
+./score/mw/com/impl/rust/bridge_macros.h:144:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'
+  144 |             alignas(::score::mw::com::impl::SamplePtr<type>) char                                                      \
+      |                                                              ^
+Suppressed 9387 warnings (9188 in non-user code, 191 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

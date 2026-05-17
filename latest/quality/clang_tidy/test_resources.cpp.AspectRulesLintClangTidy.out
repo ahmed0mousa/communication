@@ -1,0 +1,14 @@
+8796 warnings generated.
+./score/mw/com/test/shared_memory_storage/test_resources.h:69:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   69 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
+      |     ^
+      |     explicit 
+./score/mw/com/test/shared_memory_storage/test_resources.h:120:7: warning: class 'NotifierGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  120 | class NotifierGuard
+      |       ^
+./score/mw/com/test/shared_memory_storage/test_resources.h:123:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  123 |     NotifierGuard(score::os::InterprocessNotification& notifier) noexcept : notifier_{notifier} {}
+      |     ^
+      |     explicit 
+Suppressed 8956 warnings (8785 in non-user code, 163 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

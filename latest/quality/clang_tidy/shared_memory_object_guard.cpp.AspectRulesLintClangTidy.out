@@ -1,0 +1,11 @@
+4590 warnings generated.
+./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:124:44: warning: use nullptr [hicpp-use-nullptr]
+  124 |         ::score::os::Mman::instance().mmap(NULL,
+      |                                            ^~~~
+      |                                            nullptr
+./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:169:44: warning: use nullptr [hicpp-use-nullptr]
+  169 |         ::score::os::Mman::instance().mmap(NULL,
+      |                                            ^~~~
+      |                                            nullptr
+Suppressed 4615 warnings (4585 in non-user code, 27 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

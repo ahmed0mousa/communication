@@ -1,0 +1,6 @@
+6760 warnings generated.
+./score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.h:33:7: warning: class 'FileSystemGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   33 | class FileSystemGuard
+      |       ^
+Suppressed 6908 warnings (6753 in non-user code, 149 NOLINT, 6 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

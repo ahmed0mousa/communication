@@ -1,0 +1,82 @@
+9835 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:48:12: warning: constructor does not initialize these fields: qm_misbehaved [cppcoreguidelines-pro-type-member-init]
+   48 |     struct AllocationResult
+      |            ^
+   49 |     {
+   50 |         // \brief the index of the slot reserved for writing (potentially in QM and ASIL-B control section) if a slot
+   51 |         // could be found. Otherwise, an empty optional.
+   52 |         std::optional<SlotIndexType> allocated_slot_index;
+   53 | 
+   54 |         // \brief A flag indicating whether QM consumers should be ignored due to misbehaviour. In this case, QM
+   55 |         // consumers have been disconnected and therefore the QM related slots are ignored.
+   56 |         bool qm_misbehaved;
+      |                           
+      |                           {}
+./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/methods/proxy_method_with_in_args_and_return.h:244:11: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  244 |         *(reinterpret_cast<ReturnType*>(allocated_return_type_storage.value().data())),
+      |           ^
+./score/mw/com/impl/methods/proxy_method_with_return_type.h:191:11: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  191 |         *(reinterpret_cast<ReturnType*>(allocated_return_type_storage.value().data())),
+      |           ^
+./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:125:44: warning: use nullptr [hicpp-use-nullptr]
+  125 |         ::score::os::Mman::instance().mmap(NULL,
+      |                                            ^~~~
+      |                                            nullptr
+./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:176:44: warning: use nullptr [hicpp-use-nullptr]
+  176 |         ::score::os::Mman::instance().mmap(NULL,
+      |                                            ^~~~
+      |                                            nullptr
+/home/runner/.bazel/sandbox/linux-sandbox/5235/execroot/_main/score/mw/com/test/partial_restart/provider_restart/consumer.cpp:131:10: error: Value stored to 'subscription_state' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
+  131 |     auto subscription_state = lola_proxy.simple_event_.GetSubscriptionState();
+      |          ^~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/5235/execroot/_main/score/mw/com/test/partial_restart/provider_restart/consumer.cpp:131:10: note: Value stored to 'subscription_state' during its initialization is never read
+  131 |     auto subscription_state = lola_proxy.simple_event_.GetSubscriptionState();
+      |          ^~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
+      |                                                          ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:86: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
+      |                                                                                      ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:52: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+  114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
+      |                                                    ^
+external/score_baselibs+/score/analysis/tracing/common/canary_wrapper/canary_wrapper.h:35:7: warning: class 'CanaryWrapper' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+   35 | class CanaryWrapper
+      |       ^
+external/score_baselibs+/score/analysis/tracing/generic_trace_library/interface_types/service_instance_element.h:32:7: warning: constructor does not initialize these fields: service_id, major_version, minor_version, instance_id [cppcoreguidelines-pro-type-member-init]
+   32 | class ServiceInstanceElement
+      |       ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:36:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   36 |     virtual auto fetch_add(T, std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:37:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   37 |     virtual auto fetch_sub(T, std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:38:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   38 |     virtual bool compare_exchange_strong(T&, T, std::memory_order = std::memory_order_seq_cst) noexcept = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:40:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   40 |     virtual bool compare_exchange_weak(T&, T, std::memory_order = std::memory_order_seq_cst) noexcept = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:42:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   42 |     virtual void store(T, std::memory_order = std::memory_order_seq_cst) noexcept = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:43:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   43 |     virtual auto load(std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
+      |                  ^
+Suppressed 10046 warnings (9805 in non-user code, 231 NOLINT, 10 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+1 warning treated as error

@@ -1,0 +1,23 @@
+9329 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5086/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:82:41: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   82 |     const bool failing_test_success = (!skeleton_return_value && proxy_return_value);
+      |                                        ~^
+      |                                        (                      == 0)
+/home/runner/.bazel/sandbox/linux-sandbox/5086/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:82:66: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   82 |     const bool failing_test_success = (!skeleton_return_value && proxy_return_value);
+      |                                                                  ^                 
+      |                                                                  (                  != 0)
+/home/runner/.bazel/sandbox/linux-sandbox/5086/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:143:43: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  143 |         std::cout << "passing test: " << (passing_test_return_code ? "Failed" : "Passed") << std::endl;
+      |                                           ^
+      |                                           (                        != 0)
+/home/runner/.bazel/sandbox/linux-sandbox/5086/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:161:16: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+  161 |         return failing_test_return_code;
+      |                ^                       
+      |                static_cast<int>(       )
+/home/runner/.bazel/sandbox/linux-sandbox/5086/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:177:16: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+  177 |         return failing_test_return_code;
+      |                ^                       
+      |                static_cast<int>(       )
+Suppressed 9488 warnings (9314 in non-user code, 164 NOLINT, 10 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

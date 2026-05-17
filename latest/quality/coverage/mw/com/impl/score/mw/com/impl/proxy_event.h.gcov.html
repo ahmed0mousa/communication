@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 13:11:26</td>
+            <td class="headerValue">2026-05-17 15:33:16</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">64.9&nbsp;%</td>
@@ -227,7 +227,7 @@
 <span id="L149"><span class="lineNum">     149</span>                 :<span class="tlaGNC">         514 :       proxy_event_mock_{nullptr}</span></span>
 <span id="L150"><span class="lineNum">     150</span>                 :<span class="tlaGNC">         514 : {</span></span>
 <span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">         514 :     ProxyBaseView proxy_base_view{base};</span></span>
-<span id="L152"><span class="lineNum">     152</span>         [<span class="tlaGBC" title="Branch 0 was taken 28 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 356 times"> + </span>]:<span class="tlaGNC">         514 :     if (!binding_base_)</span></span>
+<span id="L152"><span class="lineNum">     152</span>         [<span class="tlaGBC" title="Branch 0 was taken 26 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 86 times"> + </span>]:<span class="tlaGNC">         514 :     if (!binding_base_)</span></span>
 <span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">          48 :     {</span></span>
 <span id="L154"><span class="lineNum">     154</span>                 :<span class="tlaGNC">          48 :         proxy_base_view.MarkServiceElementBindingInvalid();</span></span>
 <span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">          48 :         return;</span></span>
@@ -298,11 +298,11 @@
 <span id="L220"><span class="lineNum">     220</span>                 :             : template &lt;typename F&gt;</span>
 <span id="L221"><span class="lineNum">     221</span>                 :             : Result&lt;std::size_t&gt; ProxyEvent&lt;SampleType&gt;::GetNewSamples(F&amp;&amp; receiver, std::size_t max_num_samples) noexcept</span>
 <span id="L222"><span class="lineNum">     222</span>                 :<span class="tlaGNC">         112 : {</span></span>
-<span id="L223"><span class="lineNum">     223</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]:<span class="tlaGNC">         112 :     if (proxy_event_mock_ != nullptr)</span></span>
-<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 32 times"> + </span>]
-<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]
-<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]
-<span class="lineNum">        </span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]
+<span id="L223"><span class="lineNum">     223</span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">         112 :     if (proxy_event_mock_ != nullptr)</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
+<span class="lineNum">        </span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
 <span id="L224"><span class="lineNum">     224</span>                 :<span class="tlaGNC">           4 :     {</span></span>
 <span id="L225"><span class="lineNum">     225</span>                 :<span class="tlaGNC">           4 :         typename IProxyEvent&lt;SampleType&gt;::Callback mock_callback =</span></span>
 <span id="L226"><span class="lineNum">     226</span>                 :<span class="tlaGNC">           4 :             [receiver = std::forward&lt;F&gt;(receiver)](SamplePtr&lt;SampleType&gt; sample_ptr) noexcept {</span></span>
@@ -315,11 +315,11 @@
 <span id="L233"><span class="lineNum">     233</span>                 :             : </span>
 <span id="L234"><span class="lineNum">     234</span>                 :<span class="tlaGNC">         108 :     auto guard_factory = tracker_-&gt;Allocate(max_num_samples);</span></span>
 <span id="L235"><span class="lineNum">     235</span>                 :             : </span>
-<span id="L236"><span class="lineNum">     236</span> [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">         108 :     if (guard_factory.GetNumAvailableGuards() == 0U)</span></span>
-<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
-<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
-<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 32 times"> + </span>]
-<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
+<span id="L236"><span class="lineNum">     236</span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">         108 :     if (guard_factory.GetNumAvailableGuards() == 0U)</span></span>
+<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
+<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
+<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]
+<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
 <span id="L237"><span class="lineNum">     237</span>                 :<span class="tlaGNC">          40 :     {</span></span>
 <span id="L238"><span class="lineNum">     238</span>                 :<span class="tlaGNC">          40 :         score::mw::log::LogWarn(&quot;lola&quot;)</span></span>
 <span id="L239"><span class="lineNum">     239</span>                 :<span class="tlaGNC">          40 :             &lt;&lt; &quot;Unable to emit new samples, no free sample slots for this subscription available.&quot;;</span></span>
@@ -335,7 +335,7 @@
 <span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
 <span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
 <span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
-<span class="lineNum">        </span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 32 times"> + </span>]
+<span class="lineNum">        </span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]
 <span id="L249"><span class="lineNum">     249</span>                 :<span class="tlaGNC">           8 :     {</span></span>
 <span id="L250"><span class="lineNum">     250</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaGNC">           8 :         if (get_new_samples_result.error() == ComErrc::kNotSubscribed)</span></span>
 <span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]

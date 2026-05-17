@@ -1,0 +1,9 @@
+4042 warnings generated.
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:57:16: warning: do not manage memory manually; consider a container or a smart pointer [cppcoreguidelines-no-malloc]
+   57 |         return std::malloc(bytes);
+      |                ^~~~~~~~~~~~~~~~~~
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:62:9: warning: do not manage memory manually; use RAII [cppcoreguidelines-no-malloc]
+   62 |         std::free(memory);
+      |         ^~~~~~~~~~~~~~~~~
+Suppressed 4058 warnings (4037 in non-user code, 18 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

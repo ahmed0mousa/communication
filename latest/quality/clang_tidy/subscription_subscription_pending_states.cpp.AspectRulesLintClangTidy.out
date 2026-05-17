@@ -1,0 +1,15 @@
+5314 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+Suppressed 5380 warnings (5305 in non-user code, 69 NOLINT, 6 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

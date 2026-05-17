@@ -1,0 +1,38 @@
+5105 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:48:12: warning: constructor does not initialize these fields: qm_misbehaved [cppcoreguidelines-pro-type-member-init]
+   48 |     struct AllocationResult
+      |            ^
+   49 |     {
+   50 |         // \brief the index of the slot reserved for writing (potentially in QM and ASIL-B control section) if a slot
+   51 |         // could be found. Otherwise, an empty optional.
+   52 |         std::optional<SlotIndexType> allocated_slot_index;
+   53 | 
+   54 |         // \brief A flag indicating whether QM consumers should be ignored due to misbehaviour. In this case, QM
+   55 |         // consumers have been disconnected and therefore the QM related slots are ignored.
+   56 |         bool qm_misbehaved;
+      |                           
+      |                           {}
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:105:37: warning: function 'score::mw::com::impl::lola::EventDataControlComposite::GetEventSlotTimestamp' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+  105 |     EventSlotStatus::EventTimeStamp GetEventSlotTimestamp(const SlotIndexType slot_index) const noexcept;
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/5073/execroot/_main/score/mw/com/impl/bindings/lola/event_data_control_composite.cpp:214:82: note: the definition seen here
+  214 | EventSlotStatus::EventTimeStamp EventDataControlComposite<AtomicIndirectorType>::GetEventSlotTimestamp(
+      |                                                                                  ^
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:105:37: note: differing parameters are named here: ('slot_index'), in definition: ('slot')
+  105 |     EventSlotStatus::EventTimeStamp GetEventSlotTimestamp(const SlotIndexType slot_index) const noexcept;
+      |                                     ^                                         ~~~~~~~~~~
+      |                                                                               slot
+./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+Suppressed 5156 warnings (5097 in non-user code, 56 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

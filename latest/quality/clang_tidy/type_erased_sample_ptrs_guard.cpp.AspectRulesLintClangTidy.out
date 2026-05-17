@@ -1,0 +1,36 @@
+6495 warnings generated.
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
+      |                                                          ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:86: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
+      |                                                                                      ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:52: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+  114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
+      |                                                    ^
+external/score_baselibs+/score/analysis/tracing/common/canary_wrapper/canary_wrapper.h:35:7: warning: class 'CanaryWrapper' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+   35 | class CanaryWrapper
+      |       ^
+external/score_baselibs+/score/analysis/tracing/generic_trace_library/interface_types/service_instance_element.h:32:7: warning: constructor does not initialize these fields: service_id, major_version, minor_version, instance_id [cppcoreguidelines-pro-type-member-init]
+   32 | class ServiceInstanceElement
+      |       ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:36:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   36 |     virtual auto fetch_add(T, std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:37:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   37 |     virtual auto fetch_sub(T, std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:38:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   38 |     virtual bool compare_exchange_strong(T&, T, std::memory_order = std::memory_order_seq_cst) noexcept = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:40:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   40 |     virtual bool compare_exchange_weak(T&, T, std::memory_order = std::memory_order_seq_cst) noexcept = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:42:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   42 |     virtual void store(T, std::memory_order = std::memory_order_seq_cst) noexcept = 0;
+      |                  ^
+external/score_baselibs+/score/memory/shared/i_atomic.h:43:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   43 |     virtual auto load(std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
+      |                  ^
+Suppressed 6596 warnings (6476 in non-user code, 112 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,0 +1,26 @@
+9220 warnings generated.
+./score/mw/com/test/shared_memory_storage/test_resources.h:69:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   69 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
+      |     ^
+      |     explicit 
+./score/mw/com/test/shared_memory_storage/test_resources.h:120:7: warning: class 'NotifierGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  120 | class NotifierGuard
+      |       ^
+./score/mw/com/test/shared_memory_storage/test_resources.h:123:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  123 |     NotifierGuard(score::os::InterprocessNotification& notifier) noexcept : notifier_{notifier} {}
+      |     ^
+      |     explicit 
+./score/mw/com/test/shared_memory_storage/test_resources.h:140:8: warning: constructor does not initialize these fields: service_element_type_meta_information_addresses [cppcoreguidelines-pro-type-member-init]
+  140 | struct BigDataServiceElementData
+      |        ^
+  141 | {
+  142 |     std::array<score::mw::com::impl::lola::ElementFqId, 2> service_element_element_fq_ids;
+  143 |     std::array<uintptr_t, 2> service_element_type_meta_information_addresses;
+      |                                                                             
+      |                                                                             {}
+/home/runner/.bazel/sandbox/linux-sandbox/5046/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:32:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
+   32 | #include <stdint.h>
+      |          ^~~~~~~~~~
+      |          <cstdint>
+Suppressed 9403 warnings (9207 in non-user code, 188 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

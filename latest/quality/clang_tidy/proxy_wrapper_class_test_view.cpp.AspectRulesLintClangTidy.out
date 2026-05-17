@@ -1,0 +1,11 @@
+9795 warnings generated.
+./score/mw/com/impl/mocking/proxy_wrapper_class_test_view.h:44:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   44 |     NamedProxyEventMock(std::string_view event_name_in) : event_name{event_name_in}, mock{} {}
+      |     ^
+      |     explicit 
+./score/mw/com/impl/mocking/proxy_wrapper_class_test_view.h:53:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   53 |     NamedProxyFieldMock(std::string_view field_name_in) : field_name{field_name_in}, mock{} {}
+      |     ^
+      |     explicit 
+Suppressed 10015 warnings (9785 in non-user code, 222 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

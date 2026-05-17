@@ -1,0 +1,11 @@
+5983 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5081/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:69:8: warning: constructor does not initialize these fields: queue_position [cppcoreguidelines-pro-type-member-init]
+   69 | struct MethodCallUnserializedPayload
+      |        ^
+   70 | {
+   71 |     ProxyMethodInstanceIdentifier proxy_method_instance_identifier;
+   72 |     std::size_t queue_position;
+      |                               
+      |                               {}
+Suppressed 6142 warnings (5976 in non-user code, 160 NOLINT, 6 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

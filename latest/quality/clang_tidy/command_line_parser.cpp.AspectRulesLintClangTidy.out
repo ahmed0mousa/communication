@@ -1,0 +1,6 @@
+9258 warnings generated.
+./score/mw/com/test/common_test_resources/command_line_parser.h:80:76: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   80 |             std::from_chars<ReturnType>(value_str.data(), value_str.data() + value_str.size(), parsed_value);
+      |                                                                            ^
+Suppressed 9278 warnings (9254 in non-user code, 21 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

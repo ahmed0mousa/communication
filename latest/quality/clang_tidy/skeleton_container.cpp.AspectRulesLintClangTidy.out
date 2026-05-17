@@ -1,0 +1,7 @@
+8764 warnings generated.
+./score/mw/com/test/methods/methods_test_resources/skeleton_container.h:28:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   28 |     SkeletonContainer(std::string instance_specifier_string);
+      |     ^
+      |     explicit 
+Suppressed 8926 warnings (8755 in non-user code, 163 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

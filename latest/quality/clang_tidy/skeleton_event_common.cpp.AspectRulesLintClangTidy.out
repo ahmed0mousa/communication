@@ -1,0 +1,28 @@
+8568 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:48:12: warning: constructor does not initialize these fields: qm_misbehaved [cppcoreguidelines-pro-type-member-init]
+   48 |     struct AllocationResult
+      |            ^
+   49 |     {
+   50 |         // \brief the index of the slot reserved for writing (potentially in QM and ASIL-B control section) if a slot
+   51 |         // could be found. Otherwise, an empty optional.
+   52 |         std::optional<SlotIndexType> allocated_slot_index;
+   53 | 
+   54 |         // \brief A flag indicating whether QM consumers should be ignored due to misbehaviour. In this case, QM
+   55 |         // consumers have been disconnected and therefore the QM related slots are ignored.
+   56 |         bool qm_misbehaved;
+      |                           
+      |                           {}
+./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+Suppressed 8702 warnings (8556 in non-user code, 138 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

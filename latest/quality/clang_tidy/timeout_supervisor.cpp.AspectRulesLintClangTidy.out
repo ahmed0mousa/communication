@@ -1,0 +1,13 @@
+5325 warnings generated.
+./score/mw/com/test/common_test_resources/timeout_supervisor.h:44:10: warning: function 'score::mw::com::test::TimeoutSupervisor::StartSupervision' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   44 |     void StartSupervision(std::chrono::milliseconds timeout, score::cpp::callback<void(void)> timeout_callback);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/5019/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:41:25: note: the definition seen here
+   41 | void TimeoutSupervisor::StartSupervision(std::chrono::milliseconds timeout_milliseconds,
+      |                         ^
+./score/mw/com/test/common_test_resources/timeout_supervisor.h:44:10: note: differing parameters are named here: ('timeout'), in definition: ('timeout_milliseconds')
+   44 |     void StartSupervision(std::chrono::milliseconds timeout, score::cpp::callback<void(void)> timeout_callback);
+      |          ^                                          ~~~~~~~
+      |                                                     timeout_milliseconds
+Suppressed 5382 warnings (5321 in non-user code, 58 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,0 +1,13 @@
+6197 warnings generated.
+./score/message_passing/mock/client_connection_mock.h:25:7: warning: class 'ClientConnectionMock' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   25 | class ClientConnectionMock : public IClientConnection
+      |       ^
+./score/message_passing/mock/client_connection_mock.h:64:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   64 |     ClientConnectionMockFacade(ClientConnectionMock& client_connection_mock)
+      |     ^
+      |     explicit 
+./score/message_passing/mock/server_mock.h:25:7: warning: class 'ServerMock' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   25 | class ServerMock : public IServer
+      |       ^
+Suppressed 6278 warnings (6191 in non-user code, 84 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

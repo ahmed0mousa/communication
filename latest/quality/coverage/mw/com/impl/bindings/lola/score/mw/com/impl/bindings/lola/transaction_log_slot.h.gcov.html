@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 13:11:26</td>
+            <td class="headerValue">2026-05-17 15:33:16</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -99,25 +99,25 @@
 <span id="L21"><span class="lineNum">      21</span>                 :             : class TransactionLogSlot</span>
 <span id="L22"><span class="lineNum">      22</span>                 :             : {</span>
 <span id="L23"><span class="lineNum">      23</span>                 :             :   public:</span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC tlaBgGNC">        6806 :     TransactionLogSlot() noexcept : transaction_begin_{0U}, transaction_end_{0U} {}</span></span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC tlaBgGNC">        6807 :     TransactionLogSlot() noexcept : transaction_begin_{0U}, transaction_end_{0U} {}</span></span>
 <span id="L25"><span class="lineNum">      25</span>                 :             : </span>
 <span id="L26"><span class="lineNum">      26</span>                 :             :     void SetTransactionBegin(bool new_value) noexcept</span>
-<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">        1036 :     {</span></span>
-<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">        1036 :         transaction_begin_ = static_cast&lt;std::uint8_t&gt;(new_value);</span></span>
-<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">        1036 :     }</span></span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">        1039 :     {</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">        1039 :         transaction_begin_ = static_cast&lt;std::uint8_t&gt;(new_value);</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">        1039 :     }</span></span>
 <span id="L30"><span class="lineNum">      30</span>                 :             :     void SetTransactionEnd(bool new_value) noexcept</span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">         789 :     {</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         789 :         transaction_end_ = static_cast&lt;std::uint8_t&gt;(new_value);</span></span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         789 :     }</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">         792 :     {</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         792 :         transaction_end_ = static_cast&lt;std::uint8_t&gt;(new_value);</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         792 :     }</span></span>
 <span id="L34"><span class="lineNum">      34</span>                 :             : </span>
 <span id="L35"><span class="lineNum">      35</span>                 :             :     bool GetTransactionBegin() const noexcept</span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">        9722 :     {</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">        9722 :         return static_cast&lt;bool&gt;(transaction_begin_);</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">        9722 :     }</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">        9728 :     {</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">        9728 :         return static_cast&lt;bool&gt;(transaction_begin_);</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">        9728 :     }</span></span>
 <span id="L39"><span class="lineNum">      39</span>                 :             :     bool GetTransactionEnd() const noexcept</span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">        8303 :     {</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">        8303 :         return static_cast&lt;bool&gt;(transaction_end_);</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">        8303 :     }</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">        8309 :     {</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">        8309 :         return static_cast&lt;bool&gt;(transaction_end_);</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">        8309 :     }</span></span>
 <span id="L43"><span class="lineNum">      43</span>                 :             : </span>
 <span id="L44"><span class="lineNum">      44</span>                 :             :   private:</span>
 <span id="L45"><span class="lineNum">      45</span>                 :             :     std::uint8_t transaction_begin_ : 1;</span>

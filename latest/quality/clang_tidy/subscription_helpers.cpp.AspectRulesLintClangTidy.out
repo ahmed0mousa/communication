@@ -1,0 +1,18 @@
+6570 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/methods/proxy_method_instance_identifier.h:30:8: warning: constructor does not initialize these fields: proxy_instance_identifier [cppcoreguidelines-pro-type-member-init]
+   30 | struct ProxyMethodInstanceIdentifier
+      |        ^
+   31 | {
+   32 |     ProxyInstanceIdentifier proxy_instance_identifier;
+      |                                                      
+      |                                                      {}
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+Suppressed 6687 warnings (6559 in non-user code, 120 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

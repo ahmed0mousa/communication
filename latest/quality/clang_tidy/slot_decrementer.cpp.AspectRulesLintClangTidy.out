@@ -1,0 +1,21 @@
+5087 warnings generated.
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/slot_decrementer.h:25:5: warning: function 'score::mw::com::impl::lola::SlotDecrementer::SlotDecrementer' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   25 |     SlotDecrementer(ConsumerEventDataControlLocalView<>& event_data_control,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:21:18: note: the definition seen here
+   21 | SlotDecrementer::SlotDecrementer(ConsumerEventDataControlLocalView<>& event_data_control_local,
+      |                  ^
+./score/mw/com/impl/bindings/lola/slot_decrementer.h:25:5: note: differing parameters are named here: ('event_data_control'), in definition: ('event_data_control_local')
+   25 |     SlotDecrementer(ConsumerEventDataControlLocalView<>& event_data_control,
+      |     ^                                                    ~~~~~~~~~~~~~~~~~~
+      |                                                          event_data_control_local
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
+      |     ^
+      |     explicit 
+Suppressed 5140 warnings (5081 in non-user code, 56 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

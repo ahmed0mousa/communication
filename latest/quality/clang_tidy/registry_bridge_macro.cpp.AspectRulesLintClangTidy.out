@@ -1,0 +1,27 @@
+8836 warnings generated.
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:228:35: warning: statement should be inside braces [readability-braces-around-statements]
+  228 |         if (sample_ptr == nullptr)
+      |                                   ^
+      |                                    {
+  229 |             return nullptr;
+      |                            
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:237:35: warning: statement should be inside braces [readability-braces-around-statements]
+  237 |         if (sample_ptr == nullptr)
+      |                                   ^
+      |                                    {
+  238 |             return;
+      |                    
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:422:13: warning: use auto when initializing with new to avoid duplicating the type name [modernize-use-auto]
+  422 |             AsProxy* proxy = new AsProxy{std::move(result).value()};
+      |             ^~~~~~~
+      |             auto
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:492:13: warning: implicit conversion 'InterfaceOperations *' -> 'bool' [readability-implicit-bool-conversion]
+  492 |         if (registries)
+      |             ^         
+      |                        != nullptr
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:542:13: warning: implicit conversion 'InterfaceOperations *' -> 'bool' [readability-implicit-bool-conversion]
+  542 |         if (ops)
+      |             ^  
+      |                 != nullptr
+Suppressed 8995 warnings (8823 in non-user code, 164 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

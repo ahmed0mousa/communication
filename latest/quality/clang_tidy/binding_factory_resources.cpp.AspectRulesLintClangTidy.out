@@ -1,0 +1,30 @@
+9748 warnings generated.
+./score/mw/com/impl/test/binding_factory_resources.h:46:7: warning: class 'GenericProxyEventBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   46 | class GenericProxyEventBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:61:7: warning: class 'ProxyBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   61 | class ProxyBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:77:7: warning: class 'ProxyEventBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   77 | class ProxyEventBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:93:7: warning: class 'ProxyFieldBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   93 | class ProxyFieldBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:109:7: warning: class 'ProxyMethodBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  109 | class ProxyMethodBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:124:7: warning: class 'SkeletonBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  124 | class SkeletonBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:140:7: warning: class 'SkeletonEventBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  140 | class SkeletonEventBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:156:7: warning: class 'SkeletonFieldBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  156 | class SkeletonFieldBindingFactoryMockGuard
+      |       ^
+./score/mw/com/impl/test/binding_factory_resources.h:171:7: warning: class 'SkeletonMethodBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  171 | class SkeletonMethodBindingFactoryMockGuard
+      |       ^
+Suppressed 9948 warnings (9731 in non-user code, 209 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

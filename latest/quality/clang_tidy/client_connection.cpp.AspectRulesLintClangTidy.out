@@ -1,0 +1,12 @@
+4995 warnings generated.
+./score/message_passing/log/log.h:28:63: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   28 | template <class T, typename std::enable_if<std::is_unsigned_v<T>, bool>::type = true>
+      |                                                               ^
+./score/message_passing/log/log.h:34:61: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+   34 | template <class T, typename std::enable_if<std::is_signed_v<T>, bool>::type = true>
+      |                                                             ^
+./score/message_passing/log/log.h:60:60: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+   60 |     return std::array<LogItem, sizeof...(Args)>{LogConvert(std::forward<Args>(args))...};
+      |                                                            ^
+Suppressed 4960 warnings (4928 in non-user code, 29 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

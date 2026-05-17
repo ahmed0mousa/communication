@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 13:11:26</td>
+            <td class="headerValue">2026-05-17 15:33:16</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -116,9 +116,9 @@
 <span id="L38"><span class="lineNum">      38</span>                 :             : constexpr std::uint8_t kMaxNumberOfCrawlAndWatchRetries{3U};</span>
 <span id="L39"><span class="lineNum">      39</span>                 :             : </span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : auto ReadMaskSet(const os::InotifyEvent&amp; event, const os::InotifyEvent::ReadMask mask) noexcept -&gt; bool</span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC tlaBgGNC">         295 : {</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">         295 :     return static_cast&lt;underlying_type_readmask&gt;(event.GetMask() &amp; mask) != 0U;</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">         295 : }</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC tlaBgGNC">         307 : {</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">         307 :     return static_cast&lt;underlying_type_readmask&gt;(event.GetMask() &amp; mask) != 0U;</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">         307 : }</span></span>
 <span id="L44"><span class="lineNum">      44</span>                 :             : </span>
 <span id="L45"><span class="lineNum">      45</span>                 :             : std::vector&lt;HandleType&gt; GetKnownHandles(EnrichedInstanceIdentifier enriched_instance_identifier,</span>
 <span id="L46"><span class="lineNum">      46</span>                 :             :                                         QualityAwareContainer&lt;KnownInstancesContainer&gt; known_instances) noexcept</span>
@@ -195,19 +195,19 @@
 <span id="L117"><span class="lineNum">     117</span>                 :             :         // and deregisters it on destruction. Therefore, it is used again when it goes out of scope.</span>
 <span id="L118"><span class="lineNum">     118</span>                 :             :         // coverity[autosar_cpp14_m0_1_9_violation : FALSE]</span>
 <span id="L119"><span class="lineNum">     119</span>                 :             :         // coverity[autosar_cpp14_m0_1_3_violation : FALSE]</span>
-<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">         136 :         score::cpp::stop_callback i_notify_close_guard{stop_token, [this]() noexcept {</span></span>
+<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">         137 :         score::cpp::stop_callback i_notify_close_guard{stop_token, [this]() noexcept {</span></span>
 <span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">         131 :                                                            i_notify_-&gt;Close();</span></span>
 <span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">         131 :                                                        }};</span></span>
-<span id="L123"><span class="lineNum">     123</span>         [<span class="tlaGBC" title="Branch 0 was taken 202 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 136 times"> + </span>]:<span class="tlaGNC">         338 :         while (!stop_token.stop_requested())</span></span>
-<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">         202 :         {</span></span>
+<span id="L123"><span class="lineNum">     123</span>         [<span class="tlaGBC" title="Branch 0 was taken 1008 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 137 times"> + </span>]:<span class="tlaGNC">        1145 :         while (!stop_token.stop_requested())</span></span>
+<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1008 :         {</span></span>
 <span id="L125"><span class="lineNum">     125</span>                 :             :             // Suppress &quot;AUTOSAR C++14 A18-5-8&quot; rule finding. This rule states: &quot;Objects that do not outlive a function</span>
 <span id="L126"><span class="lineNum">     126</span>                 :             :             // shall have automatic storage duration&quot;.</span>
 <span id="L127"><span class="lineNum">     127</span>                 :             :             // This is a false positive, the returned vector here is a static compile time vector.</span>
 <span id="L128"><span class="lineNum">     128</span>                 :             :             // coverity[autosar_cpp14_a18_5_8_violation : FALSE]</span>
-<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">         202 :             const auto expected_events = i_notify_-&gt;Read();</span></span>
-<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">         202 :             HandleEvents(expected_events);</span></span>
-<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">         202 :         }</span></span>
-<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">         136 :     });</span></span>
+<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1008 :             const auto expected_events = i_notify_-&gt;Read();</span></span>
+<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">        1008 :             HandleEvents(expected_events);</span></span>
+<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1008 :         }</span></span>
+<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">         137 :     });</span></span>
 <span id="L133"><span class="lineNum">     133</span>                 :<span class="tlaGNC">         137 : }</span></span>
 <span id="L134"><span class="lineNum">     134</span>                 :             : </span>
 <span id="L135"><span class="lineNum">     135</span>                 :             : ServiceDiscoveryClient::~ServiceDiscoveryClient() noexcept</span>
@@ -359,9 +359,9 @@
 <span id="L281"><span class="lineNum">     281</span>                 :<span class="tlaGNC">          21 : }</span></span>
 <span id="L282"><span class="lineNum">     282</span>                 :             : </span>
 <span id="L283"><span class="lineNum">     283</span>                 :             : auto ServiceDiscoveryClient::TransferSearchRequests() noexcept -&gt; void</span>
-<span id="L284"><span class="lineNum">     284</span>                 :<span class="tlaGNC">         199 : {</span></span>
-<span id="L285"><span class="lineNum">     285</span>                 :<span class="tlaGNC">         199 :     TransferObsoleteSearchRequests();</span></span>
-<span id="L286"><span class="lineNum">     286</span>                 :<span class="tlaGNC">         199 : }</span></span>
+<span id="L284"><span class="lineNum">     284</span>                 :<span class="tlaGNC">        1004 : {</span></span>
+<span id="L285"><span class="lineNum">     285</span>                 :<span class="tlaGNC">        1004 :     TransferObsoleteSearchRequests();</span></span>
+<span id="L286"><span class="lineNum">     286</span>                 :<span class="tlaGNC">        1004 : }</span></span>
 <span id="L287"><span class="lineNum">     287</span>                 :             : </span>
 <span id="L288"><span class="lineNum">     288</span>                 :             : auto ServiceDiscoveryClient::TransferNewSearchRequest(NewSearchRequest search_request) noexcept</span>
 <span id="L289"><span class="lineNum">     289</span>                 :             :     -&gt; SearchRequestsContainer::value_type&amp;</span>
@@ -397,24 +397,24 @@
 <span id="L319"><span class="lineNum">     319</span>                 :<span class="tlaGNC">          72 : }</span></span>
 <span id="L320"><span class="lineNum">     320</span>                 :             : </span>
 <span id="L321"><span class="lineNum">     321</span>                 :             : auto ServiceDiscoveryClient::TransferObsoleteSearchRequests() noexcept -&gt; void</span>
-<span id="L322"><span class="lineNum">     322</span>                 :<span class="tlaGNC">         199 : {</span></span>
-<span id="L323"><span class="lineNum">     323</span>         [<span class="tlaGBC" title="Branch 0 was taken 20 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 199 times"> + </span>]:<span class="tlaGNC">         199 :     for (const auto&amp; obsolete_search_request : obsolete_search_requests_)</span></span>
-<span id="L324"><span class="lineNum">     324</span>                 :<span class="tlaGNC">          20 :     {</span></span>
-<span id="L325"><span class="lineNum">     325</span>                 :<span class="tlaGNC">          20 :         TransferObsoleteSearchRequest(obsolete_search_request);</span></span>
-<span id="L326"><span class="lineNum">     326</span>                 :<span class="tlaGNC">          20 :     }</span></span>
-<span id="L327"><span class="lineNum">     327</span>                 :<span class="tlaGNC">         199 :     obsolete_search_requests_.clear();</span></span>
-<span id="L328"><span class="lineNum">     328</span>                 :<span class="tlaGNC">         199 : }</span></span>
+<span id="L322"><span class="lineNum">     322</span>                 :<span class="tlaGNC">        1004 : {</span></span>
+<span id="L323"><span class="lineNum">     323</span>         [<span class="tlaGBC" title="Branch 0 was taken 21 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1004 times"> + </span>]:<span class="tlaGNC">        1004 :     for (const auto&amp; obsolete_search_request : obsolete_search_requests_)</span></span>
+<span id="L324"><span class="lineNum">     324</span>                 :<span class="tlaGNC">          21 :     {</span></span>
+<span id="L325"><span class="lineNum">     325</span>                 :<span class="tlaGNC">          21 :         TransferObsoleteSearchRequest(obsolete_search_request);</span></span>
+<span id="L326"><span class="lineNum">     326</span>                 :<span class="tlaGNC">          21 :     }</span></span>
+<span id="L327"><span class="lineNum">     327</span>                 :<span class="tlaGNC">        1004 :     obsolete_search_requests_.clear();</span></span>
+<span id="L328"><span class="lineNum">     328</span>                 :<span class="tlaGNC">        1004 : }</span></span>
 <span id="L329"><span class="lineNum">     329</span>                 :             : </span>
 <span id="L330"><span class="lineNum">     330</span>                 :             : auto ServiceDiscoveryClient::TransferObsoleteSearchRequest(const FindServiceHandle&amp; find_service_handle) noexcept</span>
 <span id="L331"><span class="lineNum">     331</span>                 :             :     -&gt; void</span>
-<span id="L332"><span class="lineNum">     332</span>                 :<span class="tlaGNC">          20 : {</span></span>
-<span id="L333"><span class="lineNum">     333</span>                 :<span class="tlaGNC">          20 :     const auto search_iterator = search_requests_.find(find_service_handle);</span></span>
-<span id="L334"><span class="lineNum">     334</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaGNC">          20 :     if (search_iterator == search_requests_.end())</span></span>
-<span id="L335"><span class="lineNum">     335</span>                 :<span class="tlaGNC">           1 :     {</span></span>
-<span id="L336"><span class="lineNum">     336</span>                 :<span class="tlaGNC">           1 :         mw::log::LogWarn(&quot;lola&quot;) &lt;&lt; &quot;Could not find search request for:&quot;</span></span>
-<span id="L337"><span class="lineNum">     337</span>                 :<span class="tlaGNC">           1 :                                  &lt;&lt; FindServiceHandleView{find_service_handle}.getUid();</span></span>
-<span id="L338"><span class="lineNum">     338</span>                 :<span class="tlaGNC">           1 :         return;</span></span>
-<span id="L339"><span class="lineNum">     339</span>                 :<span class="tlaGNC">           1 :     }</span></span>
+<span id="L332"><span class="lineNum">     332</span>                 :<span class="tlaGNC">          21 : {</span></span>
+<span id="L333"><span class="lineNum">     333</span>                 :<span class="tlaGNC">          21 :     const auto search_iterator = search_requests_.find(find_service_handle);</span></span>
+<span id="L334"><span class="lineNum">     334</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaGNC">          21 :     if (search_iterator == search_requests_.end())</span></span>
+<span id="L335"><span class="lineNum">     335</span>                 :<span class="tlaGNC">           2 :     {</span></span>
+<span id="L336"><span class="lineNum">     336</span>                 :<span class="tlaGNC">           2 :         mw::log::LogWarn(&quot;lola&quot;) &lt;&lt; &quot;Could not find search request for:&quot;</span></span>
+<span id="L337"><span class="lineNum">     337</span>                 :<span class="tlaGNC">           2 :                                  &lt;&lt; FindServiceHandleView{find_service_handle}.getUid();</span></span>
+<span id="L338"><span class="lineNum">     338</span>                 :<span class="tlaGNC">           2 :         return;</span></span>
+<span id="L339"><span class="lineNum">     339</span>                 :<span class="tlaGNC">           2 :     }</span></span>
 <span id="L340"><span class="lineNum">     340</span>                 :             : </span>
 <span id="L341"><span class="lineNum">     341</span>                 :             :     // Intentional copy since it allows us to iterate over the watches while we modify the original set in</span>
 <span id="L342"><span class="lineNum">     342</span>                 :             :     // UnlinkWatchWithSearchRequest(). This could be optimised, but would make the algorithm even more complex.</span>
@@ -451,36 +451,36 @@
 <span id="L373"><span class="lineNum">     373</span>                 :             : auto ServiceDiscoveryClient::HandleEvents(</span>
 <span id="L374"><span class="lineNum">     374</span>                 :             :     const score::cpp::expected&lt;score::cpp::static_vector&lt;os::InotifyEvent, os::InotifyInstance::max_events&gt;, os::Error&gt;&amp;</span>
 <span id="L375"><span class="lineNum">     375</span>                 :             :         expected_events) noexcept -&gt; void</span>
-<span id="L376"><span class="lineNum">     376</span>                 :<span class="tlaGNC">         199 : {</span></span>
+<span id="L376"><span class="lineNum">     376</span>                 :<span class="tlaGNC">        1004 : {</span></span>
 <span id="L377"><span class="lineNum">     377</span>                 :             :     // Suppress Autosar C++14 A8-5-3 states that auto variables shall not be initialized using braced initialization.</span>
 <span id="L378"><span class="lineNum">     378</span>                 :             :     // This is a false positive, we don't use auto here.</span>
 <span id="L379"><span class="lineNum">     379</span>                 :             :     // coverity[autosar_cpp14_a8_5_3_violation : FALSE]</span>
-<span id="L380"><span class="lineNum">     380</span>                 :<span class="tlaGNC">         199 :     std::lock_guard lock{worker_mutex_};</span></span>
-<span id="L381"><span class="lineNum">     381</span>                 :<span class="tlaGNC">         199 :     TransferSearchRequests();</span></span>
+<span id="L380"><span class="lineNum">     380</span>                 :<span class="tlaGNC">        1004 :     std::lock_guard lock{worker_mutex_};</span></span>
+<span id="L381"><span class="lineNum">     381</span>                 :<span class="tlaGNC">        1004 :     TransferSearchRequests();</span></span>
 <span id="L382"><span class="lineNum">     382</span>                 :             : </span>
-<span id="L383"><span class="lineNum">     383</span>         [<span class="tlaGBC" title="Branch 0 was taken 81 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 118 times"> + </span>]:<span class="tlaGNC">         199 :     if (!(expected_events.has_value()))</span></span>
-<span id="L384"><span class="lineNum">     384</span>                 :<span class="tlaGNC">          81 :     {</span></span>
-<span id="L385"><span class="lineNum">     385</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 79 times"> + </span>]:<span class="tlaGNC">          81 :         if (expected_events.error() != os::Error::Code::kOperationWasInterruptedBySignal)</span></span>
-<span id="L386"><span class="lineNum">     386</span>                 :<span class="tlaGNC">           2 :         {</span></span>
-<span id="L387"><span class="lineNum">     387</span>                 :<span class="tlaGNC">           2 :             mw::log::LogError(&quot;lola&quot;) &lt;&lt; &quot;Inotify Read() failed with:&quot; &lt;&lt; expected_events.error().ToString();</span></span>
-<span id="L388"><span class="lineNum">     388</span>                 :<span class="tlaGNC">           2 :         }</span></span>
-<span id="L389"><span class="lineNum">     389</span>                 :<span class="tlaGNC">          81 :         return;</span></span>
-<span id="L390"><span class="lineNum">     390</span>                 :<span class="tlaGNC">          81 :     }</span></span>
+<span id="L383"><span class="lineNum">     383</span>         [<span class="tlaGBC" title="Branch 0 was taken 90 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 914 times"> + </span>]:<span class="tlaGNC">        1004 :     if (!(expected_events.has_value()))</span></span>
+<span id="L384"><span class="lineNum">     384</span>                 :<span class="tlaGNC">          90 :     {</span></span>
+<span id="L385"><span class="lineNum">     385</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 87 times"> + </span>]:<span class="tlaGNC">          90 :         if (expected_events.error() != os::Error::Code::kOperationWasInterruptedBySignal)</span></span>
+<span id="L386"><span class="lineNum">     386</span>                 :<span class="tlaGNC">           3 :         {</span></span>
+<span id="L387"><span class="lineNum">     387</span>                 :<span class="tlaGNC">           3 :             mw::log::LogError(&quot;lola&quot;) &lt;&lt; &quot;Inotify Read() failed with:&quot; &lt;&lt; expected_events.error().ToString();</span></span>
+<span id="L388"><span class="lineNum">     388</span>                 :<span class="tlaGNC">           3 :         }</span></span>
+<span id="L389"><span class="lineNum">     389</span>                 :<span class="tlaGNC">          90 :         return;</span></span>
+<span id="L390"><span class="lineNum">     390</span>                 :<span class="tlaGNC">          90 :     }</span></span>
 <span id="L391"><span class="lineNum">     391</span>                 :             : </span>
-<span id="L392"><span class="lineNum">     392</span>                 :<span class="tlaGNC">         118 :     const auto&amp; events = expected_events.value();</span></span>
+<span id="L392"><span class="lineNum">     392</span>                 :<span class="tlaGNC">         914 :     const auto&amp; events = expected_events.value();</span></span>
 <span id="L393"><span class="lineNum">     393</span>                 :             : </span>
-<span id="L394"><span class="lineNum">     394</span>                 :<span class="tlaGNC">         118 :     std::vector&lt;os::InotifyEvent&gt; deletion_events{};</span></span>
-<span id="L395"><span class="lineNum">     395</span>                 :<span class="tlaGNC">         118 :     std::vector&lt;os::InotifyEvent&gt; creation_events{};</span></span>
-<span id="L396"><span class="lineNum">     396</span>         [<span class="tlaGBC" title="Branch 0 was taken 71 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 118 times"> + </span>]:<span class="tlaGNC">         118 :     for (const auto&amp; event : events)</span></span>
-<span id="L397"><span class="lineNum">     397</span>                 :<span class="tlaGNC">          71 :     {</span></span>
+<span id="L394"><span class="lineNum">     394</span>                 :<span class="tlaGNC">         914 :     std::vector&lt;os::InotifyEvent&gt; deletion_events{};</span></span>
+<span id="L395"><span class="lineNum">     395</span>                 :<span class="tlaGNC">         914 :     std::vector&lt;os::InotifyEvent&gt; creation_events{};</span></span>
+<span id="L396"><span class="lineNum">     396</span>         [<span class="tlaGBC" title="Branch 0 was taken 74 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 914 times"> + </span>]:<span class="tlaGNC">         914 :     for (const auto&amp; event : events)</span></span>
+<span id="L397"><span class="lineNum">     397</span>                 :<span class="tlaGNC">          74 :     {</span></span>
 <span id="L398"><span class="lineNum">     398</span>                 :             : </span>
-<span id="L399"><span class="lineNum">     399</span>                 :<span class="tlaGNC">          71 :         const bool inotify_queue_overflowed = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInQOverflow);</span></span>
-<span id="L400"><span class="lineNum">     400</span>                 :<span class="tlaGNC">          71 :         const bool search_directory_was_removed = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInIgnored);</span></span>
-<span id="L401"><span class="lineNum">     401</span>                 :<span class="tlaGNC">          71 :         const bool flag_file_was_removed = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInDelete);</span></span>
-<span id="L402"><span class="lineNum">     402</span> [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 67 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 11 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 56 times"> + </span>]:<span class="tlaGNC">          71 :         const bool inode_was_removed = search_directory_was_removed || flag_file_was_removed;</span></span>
-<span id="L403"><span class="lineNum">     403</span>                 :<span class="tlaGNC">          71 :         const bool inode_was_created = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInCreate);</span></span>
+<span id="L399"><span class="lineNum">     399</span>                 :<span class="tlaGNC">          74 :         const bool inotify_queue_overflowed = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInQOverflow);</span></span>
+<span id="L400"><span class="lineNum">     400</span>                 :<span class="tlaGNC">          74 :         const bool search_directory_was_removed = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInIgnored);</span></span>
+<span id="L401"><span class="lineNum">     401</span>                 :<span class="tlaGNC">          74 :         const bool flag_file_was_removed = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInDelete);</span></span>
+<span id="L402"><span class="lineNum">     402</span> [<span class="tlaGBC" title="Branch 0 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 68 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 11 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 57 times"> + </span>]:<span class="tlaGNC">          74 :         const bool inode_was_removed = search_directory_was_removed || flag_file_was_removed;</span></span>
+<span id="L403"><span class="lineNum">     403</span>                 :<span class="tlaGNC">          74 :         const bool inode_was_created = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInCreate);</span></span>
 <span id="L404"><span class="lineNum">     404</span>                 :             : </span>
-<span id="L405"><span class="lineNum">     405</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 70 times"> + </span>]:<span class="tlaGNC">          71 :         if (inotify_queue_overflowed)</span></span>
+<span id="L405"><span class="lineNum">     405</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 73 times"> + </span>]:<span class="tlaGNC">          74 :         if (inotify_queue_overflowed)</span></span>
 <span id="L406"><span class="lineNum">     406</span>                 :<span class="tlaGNC">           1 :         {</span></span>
 <span id="L407"><span class="lineNum">     407</span>                 :<span class="tlaGNC">           1 :             mw::log::LogError(&quot;lola&quot;)</span></span>
 <span id="L408"><span class="lineNum">     408</span>                 :<span class="tlaGNC">           1 :                 &lt;&lt; &quot;Service discovery lost at least one event and is compromised now. Bailing out!&quot;;</span></span>
@@ -489,14 +489,14 @@
 <span id="L411"><span class="lineNum">     411</span>                 :<span class="tlaGNC">           1 :             std::terminate();</span></span>
 <span id="L412"><span class="lineNum">     412</span>                 :<span class="tlaGNC">           1 :         }</span></span>
 <span id="L413"><span class="lineNum">     413</span>                 :             : </span>
-<span id="L414"><span class="lineNum">     414</span>         [<span class="tlaGBC" title="Branch 0 was taken 15 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 56 times"> + </span>]:<span class="tlaGNC">          71 :         if (inode_was_removed)</span></span>
-<span id="L415"><span class="lineNum">     415</span>                 :<span class="tlaGNC">          15 :         {</span></span>
-<span id="L416"><span class="lineNum">     416</span>                 :<span class="tlaGNC">          15 :             deletion_events.push_back(event);</span></span>
-<span id="L417"><span class="lineNum">     417</span>                 :<span class="tlaGNC">          15 :         }</span></span>
-<span id="L418"><span class="lineNum">     418</span>         [<span class="tlaGBC" title="Branch 0 was taken 47 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 9 times"> + </span>]:<span class="tlaGNC">          56 :         else if (inode_was_created)</span></span>
-<span id="L419"><span class="lineNum">     419</span>                 :<span class="tlaGNC">          47 :         {</span></span>
-<span id="L420"><span class="lineNum">     420</span>                 :<span class="tlaGNC">          47 :             creation_events.push_back(event);</span></span>
-<span id="L421"><span class="lineNum">     421</span>                 :<span class="tlaGNC">          47 :         }</span></span>
+<span id="L414"><span class="lineNum">     414</span>         [<span class="tlaGBC" title="Branch 0 was taken 17 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 57 times"> + </span>]:<span class="tlaGNC">          74 :         if (inode_was_removed)</span></span>
+<span id="L415"><span class="lineNum">     415</span>                 :<span class="tlaGNC">          17 :         {</span></span>
+<span id="L416"><span class="lineNum">     416</span>                 :<span class="tlaGNC">          17 :             deletion_events.push_back(event);</span></span>
+<span id="L417"><span class="lineNum">     417</span>                 :<span class="tlaGNC">          17 :         }</span></span>
+<span id="L418"><span class="lineNum">     418</span>         [<span class="tlaGBC" title="Branch 0 was taken 48 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 9 times"> + </span>]:<span class="tlaGNC">          57 :         else if (inode_was_created)</span></span>
+<span id="L419"><span class="lineNum">     419</span>                 :<span class="tlaGNC">          48 :         {</span></span>
+<span id="L420"><span class="lineNum">     420</span>                 :<span class="tlaGNC">          48 :             creation_events.push_back(event);</span></span>
+<span id="L421"><span class="lineNum">     421</span>                 :<span class="tlaGNC">          48 :         }</span></span>
 <span id="L422"><span class="lineNum">     422</span>                 :<span class="tlaGNC">           9 :         else</span></span>
 <span id="L423"><span class="lineNum">     423</span>                 :<span class="tlaGNC">           9 :         {</span></span>
 <span id="L424"><span class="lineNum">     424</span>                 :<span class="tlaGNC">           9 :             const auto watch_iterator = watches_.find(event.GetWatchDescriptor());</span></span>
@@ -517,24 +517,24 @@
 <span id="L439"><span class="lineNum">     439</span>                 :<span class="tlaGNC">           5 :                                          &lt;&lt; static_cast&lt;underlying_type_readmask&gt;(event.GetMask());</span></span>
 <span id="L440"><span class="lineNum">     440</span>                 :<span class="tlaGNC">           5 :             }</span></span>
 <span id="L441"><span class="lineNum">     441</span>                 :<span class="tlaGNC">           9 :         }</span></span>
-<span id="L442"><span class="lineNum">     442</span>                 :<span class="tlaGNC">          71 :     }</span></span>
+<span id="L442"><span class="lineNum">     442</span>                 :<span class="tlaGNC">          74 :     }</span></span>
 <span id="L443"><span class="lineNum">     443</span>                 :             : </span>
-<span id="L444"><span class="lineNum">     444</span>                 :<span class="tlaGNC">         118 :     HandleDeletionEvents(deletion_events);</span></span>
+<span id="L444"><span class="lineNum">     444</span>                 :<span class="tlaGNC">         914 :     HandleDeletionEvents(deletion_events);</span></span>
 <span id="L445"><span class="lineNum">     445</span>                 :             : </span>
-<span id="L446"><span class="lineNum">     446</span>                 :<span class="tlaGNC">         118 :     HandleCreationEvents(creation_events);</span></span>
-<span id="L447"><span class="lineNum">     447</span>                 :<span class="tlaGNC">         118 : }</span></span>
+<span id="L446"><span class="lineNum">     446</span>                 :<span class="tlaGNC">         914 :     HandleCreationEvents(creation_events);</span></span>
+<span id="L447"><span class="lineNum">     447</span>                 :<span class="tlaGNC">         914 : }</span></span>
 <span id="L448"><span class="lineNum">     448</span>                 :             : </span>
 <span id="L449"><span class="lineNum">     449</span>                 :             : auto ServiceDiscoveryClient::HandleDeletionEvents(const std::vector&lt;os::InotifyEvent&gt;&amp; events) noexcept -&gt; void</span>
-<span id="L450"><span class="lineNum">     450</span>                 :<span class="tlaGNC">         117 : {</span></span>
-<span id="L451"><span class="lineNum">     451</span>                 :<span class="tlaGNC">         117 :     std::unordered_set&lt;FindServiceHandle&gt; impacted_searches{};</span></span>
-<span id="L452"><span class="lineNum">     452</span>         [<span class="tlaGBC" title="Branch 0 was taken 15 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 117 times"> + </span>]:<span class="tlaGNC">         117 :     for (const auto&amp; event : events)</span></span>
-<span id="L453"><span class="lineNum">     453</span>                 :<span class="tlaGNC">          15 :     {</span></span>
-<span id="L454"><span class="lineNum">     454</span>                 :<span class="tlaGNC">          15 :         const auto watch_descriptor = event.GetWatchDescriptor();</span></span>
-<span id="L455"><span class="lineNum">     455</span>                 :<span class="tlaGNC">          15 :         const auto watch_iterator = watches_.find(watch_descriptor);</span></span>
-<span id="L456"><span class="lineNum">     456</span>         [<span class="tlaGBC" title="Branch 0 was taken 4 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          15 :         if (watch_iterator == watches_.end())</span></span>
-<span id="L457"><span class="lineNum">     457</span>                 :<span class="tlaGNC">           4 :         {</span></span>
-<span id="L458"><span class="lineNum">     458</span>                 :<span class="tlaGNC">           4 :             continue;</span></span>
-<span id="L459"><span class="lineNum">     459</span>                 :<span class="tlaGNC">           4 :         }</span></span>
+<span id="L450"><span class="lineNum">     450</span>                 :<span class="tlaGNC">         913 : {</span></span>
+<span id="L451"><span class="lineNum">     451</span>                 :<span class="tlaGNC">         913 :     std::unordered_set&lt;FindServiceHandle&gt; impacted_searches{};</span></span>
+<span id="L452"><span class="lineNum">     452</span>         [<span class="tlaGBC" title="Branch 0 was taken 17 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 913 times"> + </span>]:<span class="tlaGNC">         913 :     for (const auto&amp; event : events)</span></span>
+<span id="L453"><span class="lineNum">     453</span>                 :<span class="tlaGNC">          17 :     {</span></span>
+<span id="L454"><span class="lineNum">     454</span>                 :<span class="tlaGNC">          17 :         const auto watch_descriptor = event.GetWatchDescriptor();</span></span>
+<span id="L455"><span class="lineNum">     455</span>                 :<span class="tlaGNC">          17 :         const auto watch_iterator = watches_.find(watch_descriptor);</span></span>
+<span id="L456"><span class="lineNum">     456</span>         [<span class="tlaGBC" title="Branch 0 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          17 :         if (watch_iterator == watches_.end())</span></span>
+<span id="L457"><span class="lineNum">     457</span>                 :<span class="tlaGNC">           6 :         {</span></span>
+<span id="L458"><span class="lineNum">     458</span>                 :<span class="tlaGNC">           6 :             continue;</span></span>
+<span id="L459"><span class="lineNum">     459</span>                 :<span class="tlaGNC">           6 :         }</span></span>
 <span id="L460"><span class="lineNum">     460</span>                 :             : </span>
 <span id="L461"><span class="lineNum">     461</span>                 :<span class="tlaGNC">          11 :         const bool file_was_deleted = ReadMaskSet(event, os::InotifyEvent::ReadMask::kInDelete);</span></span>
 <span id="L462"><span class="lineNum">     462</span>                 :             : </span>
@@ -557,20 +557,20 @@
 <span id="L479"><span class="lineNum">     479</span>                 :<span class="tlaGNC">          10 :         }</span></span>
 <span id="L480"><span class="lineNum">     480</span>                 :<span class="tlaGNC">          11 :     }</span></span>
 <span id="L481"><span class="lineNum">     481</span>                 :             : </span>
-<span id="L482"><span class="lineNum">     482</span>                 :<span class="tlaGNC">         117 :     CallHandlers(impacted_searches);</span></span>
-<span id="L483"><span class="lineNum">     483</span>                 :<span class="tlaGNC">         117 : }</span></span>
+<span id="L482"><span class="lineNum">     482</span>                 :<span class="tlaGNC">         913 :     CallHandlers(impacted_searches);</span></span>
+<span id="L483"><span class="lineNum">     483</span>                 :<span class="tlaGNC">         913 : }</span></span>
 <span id="L484"><span class="lineNum">     484</span>                 :             : </span>
 <span id="L485"><span class="lineNum">     485</span>                 :             : auto ServiceDiscoveryClient::HandleCreationEvents(const std::vector&lt;os::InotifyEvent&gt;&amp; events) noexcept -&gt; void</span>
-<span id="L486"><span class="lineNum">     486</span>                 :<span class="tlaGNC">         116 : {</span></span>
-<span id="L487"><span class="lineNum">     487</span>                 :<span class="tlaGNC">         116 :     std::unordered_set&lt;FindServiceHandle&gt; impacted_searches{};</span></span>
-<span id="L488"><span class="lineNum">     488</span>         [<span class="tlaGBC" title="Branch 0 was taken 47 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 116 times"> + </span>]:<span class="tlaGNC">         116 :     for (const auto&amp; event : events)</span></span>
-<span id="L489"><span class="lineNum">     489</span>                 :<span class="tlaGNC">          47 :     {</span></span>
-<span id="L490"><span class="lineNum">     490</span>                 :<span class="tlaGNC">          47 :         const auto watch_descriptor = event.GetWatchDescriptor();</span></span>
-<span id="L491"><span class="lineNum">     491</span>                 :<span class="tlaGNC">          47 :         const auto watch_iterator = watches_.find(watch_descriptor);</span></span>
-<span id="L492"><span class="lineNum">     492</span>         [<span class="tlaGBC" title="Branch 0 was taken 5 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 42 times"> + </span>]:<span class="tlaGNC">          47 :         if (watch_iterator == watches_.end())</span></span>
-<span id="L493"><span class="lineNum">     493</span>                 :<span class="tlaGNC">           5 :         {</span></span>
-<span id="L494"><span class="lineNum">     494</span>                 :<span class="tlaGNC">           5 :             continue;</span></span>
-<span id="L495"><span class="lineNum">     495</span>                 :<span class="tlaGNC">           5 :         }</span></span>
+<span id="L486"><span class="lineNum">     486</span>                 :<span class="tlaGNC">         912 : {</span></span>
+<span id="L487"><span class="lineNum">     487</span>                 :<span class="tlaGNC">         912 :     std::unordered_set&lt;FindServiceHandle&gt; impacted_searches{};</span></span>
+<span id="L488"><span class="lineNum">     488</span>         [<span class="tlaGBC" title="Branch 0 was taken 48 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 912 times"> + </span>]:<span class="tlaGNC">         912 :     for (const auto&amp; event : events)</span></span>
+<span id="L489"><span class="lineNum">     489</span>                 :<span class="tlaGNC">          48 :     {</span></span>
+<span id="L490"><span class="lineNum">     490</span>                 :<span class="tlaGNC">          48 :         const auto watch_descriptor = event.GetWatchDescriptor();</span></span>
+<span id="L491"><span class="lineNum">     491</span>                 :<span class="tlaGNC">          48 :         const auto watch_iterator = watches_.find(watch_descriptor);</span></span>
+<span id="L492"><span class="lineNum">     492</span>         [<span class="tlaGBC" title="Branch 0 was taken 6 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 42 times"> + </span>]:<span class="tlaGNC">          48 :         if (watch_iterator == watches_.end())</span></span>
+<span id="L493"><span class="lineNum">     493</span>                 :<span class="tlaGNC">           6 :         {</span></span>
+<span id="L494"><span class="lineNum">     494</span>                 :<span class="tlaGNC">           6 :             continue;</span></span>
+<span id="L495"><span class="lineNum">     495</span>                 :<span class="tlaGNC">           6 :         }</span></span>
 <span id="L496"><span class="lineNum">     496</span>                 :             : </span>
 <span id="L497"><span class="lineNum">     497</span>                 :<span class="tlaGNC">          42 :         const auto&amp; [enriched_instance_identifier, search_keys] = watch_iterator-&gt;second;</span></span>
 <span id="L498"><span class="lineNum">     498</span>                 :<span class="tlaGNC">          42 :         const auto event_name = event.GetName();</span></span>
@@ -586,12 +586,12 @@
 <span id="L508"><span class="lineNum">     508</span>                 :<span class="tlaGNC">          42 :         impacted_searches.insert(search_keys.cbegin(), search_keys.cend());</span></span>
 <span id="L509"><span class="lineNum">     509</span>                 :<span class="tlaGNC">          42 :     }</span></span>
 <span id="L510"><span class="lineNum">     510</span>                 :             : </span>
-<span id="L511"><span class="lineNum">     511</span>                 :<span class="tlaGNC">         116 :     CallHandlers(impacted_searches);</span></span>
-<span id="L512"><span class="lineNum">     512</span>                 :<span class="tlaGNC">         116 : }</span></span>
+<span id="L511"><span class="lineNum">     511</span>                 :<span class="tlaGNC">         912 :     CallHandlers(impacted_searches);</span></span>
+<span id="L512"><span class="lineNum">     512</span>                 :<span class="tlaGNC">         912 : }</span></span>
 <span id="L513"><span class="lineNum">     513</span>                 :             : </span>
 <span id="L514"><span class="lineNum">     514</span>                 :             : auto ServiceDiscoveryClient::CallHandlers(const std::unordered_set&lt;FindServiceHandle&gt;&amp; search_keys) noexcept -&gt; void</span>
-<span id="L515"><span class="lineNum">     515</span>                 :<span class="tlaGNC">         232 : {</span></span>
-<span id="L516"><span class="lineNum">     516</span>         [<span class="tlaGBC" title="Branch 0 was taken 55 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 232 times"> + </span>]:<span class="tlaGNC">         232 :     for (const auto&amp; search_key : search_keys)</span></span>
+<span id="L515"><span class="lineNum">     515</span>                 :<span class="tlaGNC">        1824 : {</span></span>
+<span id="L516"><span class="lineNum">     516</span>         [<span class="tlaGBC" title="Branch 0 was taken 55 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1824 times"> + </span>]:<span class="tlaGNC">        1824 :     for (const auto&amp; search_key : search_keys)</span></span>
 <span id="L517"><span class="lineNum">     517</span>                 :<span class="tlaGNC">          55 :     {</span></span>
 <span id="L518"><span class="lineNum">     518</span>                 :<span class="tlaGNC">          55 :         const auto search_iterator = search_requests_.find(search_key);</span></span>
 <span id="L519"><span class="lineNum">     519</span>                 :             : </span>
@@ -669,7 +669,7 @@
 <span id="L591"><span class="lineNum">     591</span>                 :<span class="tlaGNC">          45 :         mw::log::LogDebug(&quot;lola&quot;) &lt;&lt; &quot;LoLa SD: Asynchronous call to handler for FindServiceHandle&quot;</span></span>
 <span id="L592"><span class="lineNum">     592</span>                 :<span class="tlaGNC">          45 :                                   &lt;&lt; FindServiceHandleView{search_key}.getUid() &lt;&lt; &quot;finished&quot;;</span></span>
 <span id="L593"><span class="lineNum">     593</span>                 :<span class="tlaGNC">          45 :     }</span></span>
-<span id="L594"><span class="lineNum">     594</span>                 :<span class="tlaGNC">         232 : }</span></span>
+<span id="L594"><span class="lineNum">     594</span>                 :<span class="tlaGNC">        1824 : }</span></span>
 <span id="L595"><span class="lineNum">     595</span>                 :             : </span>
 <span id="L596"><span class="lineNum">     596</span>                 :             : auto ServiceDiscoveryClient::StoreWatch(const os::InotifyWatchDescriptor&amp; watch_descriptor,</span>
 <span id="L597"><span class="lineNum">     597</span>                 :             :                                         const EnrichedInstanceIdentifier&amp; enriched_instance_identifier) noexcept</span>

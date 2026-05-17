@@ -1,0 +1,36 @@
+11483 warnings generated.
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:61:31: warning: function 'score::mw::com::impl::lola::CreateLolaServiceInstanceDeployment' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
+   61 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/5043/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:47:31: note: the definition seen here
+   47 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
+      |                               ^
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:61:31: note: differing parameters are named here: ('size'), in definition: ('shm_size')
+   61 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
+      |                               ^
+   62 |     LolaServiceInstanceId::InstanceId instance_id,
+   63 |     std::vector<std::pair<std::string, LolaEventInstanceDeployment>> lola_event_inst_depls,
+   64 |     std::vector<std::pair<std::string, LolaFieldInstanceDeployment>> lola_field_inst_depls,
+   65 |     std::vector<std::pair<std::string, LolaMethodInstanceDeployment>> lola_method_inst_depls,
+   66 |     std::vector<uid_t> allowed_consumers_qm,
+   67 |     std::vector<uid_t> allowed_consumers_asil_b,
+   68 |     score::cpp::optional<std::size_t> size = score::cpp::nullopt,
+      |                                       ~~~~
+      |                                       shm_size
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:358:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  358 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:396:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+  396 |     SkeletonAttorney(Skeleton& skeleton) noexcept : skeleton_{skeleton} {}
+      |     ^
+      |     explicit 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:412:7: warning: class 'SkeletonMockedMemoryFixture' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+  412 | class SkeletonMockedMemoryFixture : public ::testing::Test
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/5043/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:28:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
+   28 | #include <stdint.h>
+      |          ^~~~~~~~~~
+      |          <cstdint>
+Suppressed 11672 warnings (11470 in non-user code, 194 NOLINT, 8 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

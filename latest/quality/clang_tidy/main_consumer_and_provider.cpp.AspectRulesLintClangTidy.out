@@ -1,0 +1,11 @@
+8770 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5074/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+   45 |     return (provider_return_value && consumer_return_value);
+      |            ^
+      |            static_cast<int>
+/home/runner/.bazel/sandbox/linux-sandbox/5074/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:38: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   45 |     return (provider_return_value && consumer_return_value);
+      |                                      ^                    
+      |                                      (                     != 0)
+Suppressed 8932 warnings (8758 in non-user code, 164 NOLINT, 10 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

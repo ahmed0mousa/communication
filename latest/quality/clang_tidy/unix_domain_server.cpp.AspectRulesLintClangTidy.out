@@ -1,0 +1,57 @@
+4919 warnings generated.
+./score/message_passing/unix_domain/unix_domain_engine.h:47:7: warning: class 'UnixDomainEngine' defines a destructor, a copy constructor and a copy assignment operator but does not define a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   47 | class UnixDomainEngine final : public ISharedResourceEngine
+      |       ^
+./score/message_passing/unix_domain/unix_domain_engine.h:58:5: warning: constructors that are callable with a single argument must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   58 |     UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource,
+      |     ^
+      |     explicit 
+./score/message_passing/unix_domain/unix_domain_engine.h:96:10: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   96 |     void EnqueueCommand(CommandQueueEntry& entry,
+      |          ^
+./score/message_passing/unix_domain/unix_domain_server.h:33:7: warning: class 'UnixDomainServer' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   33 | class UnixDomainServer final : public IServer
+      |       ^
+./score/message_passing/unix_domain/unix_domain_server.h:36:11: warning: class 'ServerConnection' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   36 |     class ServerConnection final : public IServerConnection
+      |           ^
+./score/message_passing/unix_domain/unix_domain_server.h:71:50: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   71 |     score::cpp::expected_blank<score::os::Error> StartListening(
+      |                                                  ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:30:18: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   30 |         return &(addr_.sun_path[IsAbstract() ? 1 : 0]);
+      |                  ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:35:17: warning: implicit conversion 'char' -> 'bool' [readability-implicit-bool-conversion]
+   35 |         return !addr_.sun_path[0];
+      |                ~^                
+      |                                   == 0
+./score/message_passing/unix_domain/unix_domain_socket_address.h:40:16: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   40 |         return reinterpret_cast<const sockaddr*>(&addr_);
+      |                ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:51:1: warning: constructor does not initialize these fields: addr_ [cppcoreguidelines-pro-type-member-init]
+   48 |     struct sockaddr_un addr_;
+      |                             
+      |                             {}
+   49 | };
+   50 | 
+   51 | inline UnixDomainSocketAddress::UnixDomainSocketAddress(const std::string_view path, const bool isAbstract) noexcept
+      | ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:56:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+   56 |     std::memcpy(addr_.sun_path + (isAbstract ? 1 : 0), path.data(), len);
+      |                 ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:56:32: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   56 |     std::memcpy(addr_.sun_path + (isAbstract ? 1 : 0), path.data(), len);
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5036/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:106:18: warning: variable 'code' is not initialized [cppcoreguidelines-init-variables]
+  106 |     std::uint8_t code;
+      |                  ^   
+      |                       = 0
+/home/runner/.bazel/sandbox/linux-sandbox/5036/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:171:64: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  171 | score::cpp::expected_blank<score::os::Error> UnixDomainServer::StartListening(
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5036/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:247:5: warning: uninitialized record type: 'cr' [cppcoreguidelines-pro-type-member-init]
+  247 |     ucred cr;
+      |     ^       
+      |             {}
+Suppressed 4934 warnings (4900 in non-user code, 31 NOLINT, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
