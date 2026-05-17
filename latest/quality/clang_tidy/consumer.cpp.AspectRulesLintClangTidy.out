@@ -38,10 +38,10 @@
   176 |         ::score::os::Mman::instance().mmap(NULL,
       |                                            ^~~~
       |                                            nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/5235/execroot/_main/score/mw/com/test/partial_restart/provider_restart/consumer.cpp:131:10: error: Value stored to 'subscription_state' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
+/home/runner/.bazel/sandbox/linux-sandbox/4275/execroot/_main/score/mw/com/test/partial_restart/provider_restart/consumer.cpp:131:10: error: Value stored to 'subscription_state' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
   131 |     auto subscription_state = lola_proxy.simple_event_.GetSubscriptionState();
       |          ^~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/.bazel/sandbox/linux-sandbox/5235/execroot/_main/score/mw/com/test/partial_restart/provider_restart/consumer.cpp:131:10: note: Value stored to 'subscription_state' during its initialization is never read
+/home/runner/.bazel/sandbox/linux-sandbox/4275/execroot/_main/score/mw/com/test/partial_restart/provider_restart/consumer.cpp:131:10: note: Value stored to 'subscription_state' during its initialization is never read
   131 |     auto subscription_state = lola_proxy.simple_event_.GetSubscriptionState();
       |          ^~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]

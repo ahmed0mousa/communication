@@ -44,13 +44,13 @@
 ./score/mw/com/impl/methods/proxy_method_with_return_type.h:191:11: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
   191 |         *(reinterpret_cast<ReturnType*>(allocated_return_type_storage.value().data())),
       |           ^
-/home/runner/.bazel/sandbox/linux-sandbox/5150/execroot/_main/score/mw/com/example/ipc_bridge/ipc_bridge_gen.cpp:20:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4246/execroot/_main/score/mw/com/example/ipc_bridge/ipc_bridge_gen.cpp:20:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    20 | EXPORT_MW_COM_TYPE(mw_com_MapApiLanesStamped, ::score::mw::com::MapApiLanesStamped)
       | ^
 ./score/mw/com/impl/rust/bridge_macros.h:146:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   146 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample));          \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/5150/execroot/_main/score/mw/com/example/ipc_bridge/ipc_bridge_gen.cpp:20:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4246/execroot/_main/score/mw/com/example/ipc_bridge/ipc_bridge_gen.cpp:20:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    20 | EXPORT_MW_COM_TYPE(mw_com_MapApiLanesStamped, ::score::mw::com::MapApiLanesStamped)
       | ^
 ./score/mw/com/impl/rust/bridge_macros.h:144:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'

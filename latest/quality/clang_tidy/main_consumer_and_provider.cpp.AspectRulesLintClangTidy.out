@@ -1,9 +1,9 @@
 8770 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/5074/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/4712/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
    45 |     return (provider_return_value && consumer_return_value);
       |            ^
       |            static_cast<int>
-/home/runner/.bazel/sandbox/linux-sandbox/5074/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:38: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/4712/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:38: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
    45 |     return (provider_return_value && consumer_return_value);
       |                                      ^                    
       |                                      (                     != 0)

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 15:33:16</td>
+            <td class="headerValue">2026-05-17 21:39:44</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">82.9&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">59.4&nbsp;%</td>
-            <td class="headerCovTableEntry">32</td>
-            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntryMed">85.7&nbsp;%</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">24</td>
           </tr>
                   <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -140,16 +140,14 @@
 <span id="L62"><span class="lineNum">      62</span>                 :             : auto ExtractCreationResultFrom(const Key&amp; key, MapOfQueues&amp; map_of_queues)</span>
 <span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">          20 : {</span></span>
 <span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          20 :     auto queue_it = map_of_queues.find(key);</span></span>
-<span id="L65"><span class="lineNum">      65</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaGNC">          20 :     if (queue_it == map_of_queues.cend())</span></span>
-<span class="lineNum">        </span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
+<span id="L65"><span class="lineNum">      65</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">          20 :     if (queue_it == map_of_queues.cend())</span></span>
 <span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">           3 :     {</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">           3 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; &quot;Could not find key in injected creation results!&quot;;</span></span>
 <span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">           3 :         std::terminate();</span></span>
 <span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">           3 :     }</span></span>
 <span id="L70"><span class="lineNum">      70</span>                 :             : </span>
 <span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          20 :     auto&amp; creation_results_queue = queue_it-&gt;second;</span></span>
-<span id="L72"><span class="lineNum">      72</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaGNC">          20 :     if (creation_results_queue.empty())</span></span>
-<span class="lineNum">        </span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
+<span id="L72"><span class="lineNum">      72</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">          20 :     if (creation_results_queue.empty())</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">           3 :     {</span></span>
 <span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">           3 :         score::mw::log::LogFatal(&quot;lola&quot;) &lt;&lt; &quot;No inject result exists in the provided vector!&quot;;</span></span>
 <span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">           3 :         std::terminate();</span></span>
@@ -321,7 +319,8 @@
 <span id="L241"><span class="lineNum">     241</span>                 :             : </span>
 <span id="L242"><span class="lineNum">     242</span>                 :             :     ~SkeletonWrapperClass()</span>
 <span id="L243"><span class="lineNum">     243</span>                 :<span class="tlaGNC">          76 :     {</span></span>
-<span id="L244"><span class="lineNum">     244</span>         [<span class="tlaGBC" title="Branch 0 was taken 21 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 49 times"> + </span>]:<span class="tlaGNC">          76 :         if (is_service_owner_.IsSet())</span></span>
+<span id="L244"><span class="lineNum">     244</span> [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          76 :         if (is_service_owner_.IsSet())</span></span>
+<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]
 <span id="L245"><span class="lineNum">     245</span>                 :<span class="tlaGNC">          27 :         {</span></span>
 <span id="L246"><span class="lineNum">     246</span>                 :<span class="tlaGNC">          27 :             this-&gt;StopOfferService();</span></span>
 <span id="L247"><span class="lineNum">     247</span>                 :<span class="tlaGNC">          27 :         }</span></span>

@@ -54,25 +54,25 @@
   542 |         if (ops)
       |             ^  
       |                 != nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/4855/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:27:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4195/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:27:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    27 | EXPORT_MW_COM_TYPE(Tire, ::score::mw::com::Tire)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:711:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   711 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample)); \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/4855/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:27:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4195/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:27:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    27 | EXPORT_MW_COM_TYPE(Tire, ::score::mw::com::Tire)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:709:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   709 |             alignas(::score::mw::com::impl::SamplePtr<type>) char                                             \
       |                                                              ^
-/home/runner/.bazel/sandbox/linux-sandbox/4855/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:28:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4195/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:28:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    28 | EXPORT_MW_COM_TYPE(Exhaust, ::score::mw::com::Exhaust)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:711:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   711 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample)); \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/4855/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:28:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4195/execroot/_main/score/mw/com/example/com-api-example/com-api-gen/vehicle_gen.cpp:28:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    28 | EXPORT_MW_COM_TYPE(Exhaust, ::score::mw::com::Exhaust)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:709:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'

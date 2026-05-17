@@ -1,31 +1,31 @@
 14317 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:128:8: warning: class 'SharedState' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:128:8: warning: class 'SharedState' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   128 | struct SharedState
       |        ^
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:388:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:388:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   388 |     using namespace score;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:390:17: warning: variable 'num_clients' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:390:17: warning: variable 'num_clients' is not initialized [cppcoreguidelines-init-variables]
   390 |     std::size_t num_clients;
       |                 ^          
       |                             = 0
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:391:17: warning: variable 'turns' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:391:17: warning: variable 'turns' is not initialized [cppcoreguidelines-init-variables]
   391 |     std::size_t turns;
       |                 ^    
       |                       = 0
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:392:17: warning: variable 'batch_size' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:392:17: warning: variable 'batch_size' is not initialized [cppcoreguidelines-init-variables]
   392 |     std::size_t batch_size;
       |                 ^         
       |                            = 0
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:393:10: warning: variable 'no_wait' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:393:10: warning: variable 'no_wait' is not initialized [cppcoreguidelines-init-variables]
   393 |     bool no_wait;
       |          ^      
       |                  = false
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:394:17: warning: variable 'num_slots' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:394:17: warning: variable 'num_slots' is not initialized [cppcoreguidelines-init-variables]
   394 |     std::size_t num_slots;
       |                 ^        
       |                           = 0
-/home/runner/.bazel/sandbox/linux-sandbox/5165/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:490:17: warning: variable 'wstatus' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4202/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:490:17: warning: variable 'wstatus' is not initialized [cppcoreguidelines-init-variables]
   490 |             int wstatus;
       |                 ^      
       |                         = 0

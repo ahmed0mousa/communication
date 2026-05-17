@@ -24,31 +24,31 @@
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:35:35: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:35:35: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
    35 |         auto* const binding_ptr = static_cast<GenericSkeletonEventBinding*>(binding_.get());
       |                                   ^~~~~~~~~~~
       |                                   dynamic_cast
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:36:13: warning: implicit conversion 'GenericSkeletonEventBinding *' -> 'bool' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:36:13: warning: implicit conversion 'GenericSkeletonEventBinding *' -> 'bool' [readability-implicit-bool-conversion]
    36 |         if (binding_ptr)
       |             ^          
       |                         != nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:56:27: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:56:27: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
    56 |     auto* const binding = static_cast<GenericSkeletonEventBinding*>(binding_.get());
       |                           ^~~~~~~~~~~
       |                           dynamic_cast
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:77:27: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:77:27: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
    77 |     auto* const binding = static_cast<GenericSkeletonEventBinding*>(binding_.get());
       |                           ^~~~~~~~~~~
       |                           dynamic_cast
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:93:33: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:93:33: warning: do not use static_cast to downcast from a base to a derived class; use dynamic_cast instead [cppcoreguidelines-pro-type-static-cast-downcast]
    93 |     const auto* const binding = static_cast<const GenericSkeletonEventBinding*>(binding_.get());
       |                                 ^~~~~~~~~~~
       |                                 dynamic_cast
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:94:10: warning: implicit conversion 'const GenericSkeletonEventBinding *' -> 'bool' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:94:10: warning: implicit conversion 'const GenericSkeletonEventBinding *' -> 'bool' [readability-implicit-bool-conversion]
    94 |     if (!binding)
       |         ~^      
       |                  == nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/4970/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:94:18: warning: statement should be inside braces [readability-braces-around-statements]
+/home/runner/.bazel/sandbox/linux-sandbox/4167/execroot/_main/score/mw/com/impl/generic_skeleton_event.cpp:94:18: warning: statement should be inside braces [readability-braces-around-statements]
    94 |     if (!binding)
       |                  ^
       |                   {

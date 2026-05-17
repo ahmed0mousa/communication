@@ -19,7 +19,7 @@
 ./score/mw/com/impl/bindings/lola/event_data_control_composite.h:105:37: warning: function 'score::mw::com::impl::lola::EventDataControlComposite::GetEventSlotTimestamp' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
   105 |     EventSlotStatus::EventTimeStamp GetEventSlotTimestamp(const SlotIndexType slot_index) const noexcept;
       |                                     ^
-/home/runner/.bazel/sandbox/linux-sandbox/5073/execroot/_main/score/mw/com/impl/bindings/lola/event_data_control_composite.cpp:214:82: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/4251/execroot/_main/score/mw/com/impl/bindings/lola/event_data_control_composite.cpp:214:82: note: the definition seen here
   214 | EventSlotStatus::EventTimeStamp EventDataControlComposite<AtomicIndirectorType>::GetEventSlotTimestamp(
       |                                                                                  ^
 ./score/mw/com/impl/bindings/lola/event_data_control_composite.h:105:37: note: differing parameters are named here: ('slot_index'), in definition: ('slot')

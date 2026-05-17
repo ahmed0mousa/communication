@@ -1,45 +1,45 @@
 5343 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:21:10: warning: inclusion of deprecated C++ header 'signal.h'; consider using 'csignal' instead [modernize-deprecated-headers]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:21:10: warning: inclusion of deprecated C++ header 'signal.h'; consider using 'csignal' instead [modernize-deprecated-headers]
    21 | #include <signal.h>
       |          ^~~~~~~~~~
       |          <csignal>
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:51:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:51:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
    51 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:53:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:53:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
    53 |     FILE* stream;
       |           ^     
       |                  = nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:121:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:121:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   121 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:158:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:158:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   158 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:194:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:194:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   194 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:25: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:25: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
   235 |     auto fcntl_result = fcntl(fd_to_read_from, F_SETFL, fcntl(fd_to_read_from, F_GETFL) | O_NONBLOCK);
       |                         ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
   235 |     auto fcntl_result = fcntl(fd_to_read_from, F_SETFL, fcntl(fd_to_read_from, F_GETFL) | O_NONBLOCK);
       |                                                         ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
   235 |     auto fcntl_result = fcntl(fd_to_read_from, F_SETFL, fcntl(fd_to_read_from, F_GETFL) | O_NONBLOCK);
       |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:243:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:243:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
   243 |     FILE* stream;
       |           ^     
       |                  = nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:244:9: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:244:9: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
   244 |     int c;
       |         ^
       |           = 0
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:292:5: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:292:5: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
   292 |     int client_pipe_fds[2];
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4872/execroot/_main/score/mw/com/test/flock/flock_test.cpp:293:14: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/3935/execroot/_main/score/mw/com/test/flock/flock_test.cpp:293:14: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
   293 |     if (pipe(client_pipe_fds) != 0)
       |              ^
 Suppressed 5378 warnings (5326 in non-user code, 49 NOLINT, 3 with check filters).

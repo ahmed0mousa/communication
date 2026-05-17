@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 15:33:16</td>
+            <td class="headerValue">2026-05-17 21:39:44</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -174,11 +174,11 @@
 <span id="L96"><span class="lineNum">      96</span>                 :             :     ///         for the pid, the new pid is returned. If the registration/mapping couldn't be done (no space left) an</span>
 <span id="L97"><span class="lineNum">      97</span>                 :             :     ///         empty optional will be returned.</span>
 <span id="L98"><span class="lineNum">      98</span>                 :             :     std::optional&lt;pid_t&gt; RegisterPid(const std::uint32_t application_id, const pid_t pid)</span>
-<span id="L99"><span class="lineNum">      99</span>                 :<span class="tlaGNC">         315 :     {</span></span>
-<span id="L100"><span class="lineNum">     100</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 315 times"> + </span>]:<span class="tlaGNC">         315 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(nullptr != mapping_entries_.begin());</span></span>
-<span id="L101"><span class="lineNum">     101</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 315 times"> + </span>]:<span class="tlaGNC">         315 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(nullptr != mapping_entries_.end());</span></span>
+<span id="L99"><span class="lineNum">      99</span>                 :<span class="tlaGNC">         316 :     {</span></span>
+<span id="L100"><span class="lineNum">     100</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 316 times"> + </span>]:<span class="tlaGNC">         316 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(nullptr != mapping_entries_.begin());</span></span>
+<span id="L101"><span class="lineNum">     101</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 316 times"> + </span>]:<span class="tlaGNC">         316 :         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(nullptr != mapping_entries_.end());</span></span>
 <span id="L102"><span class="lineNum">     102</span>                 :             : </span>
-<span id="L103"><span class="lineNum">     103</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 314 times"> + </span>]:<span class="tlaGNC">         315 :         if (register_pid_fake_ != nullptr)</span></span>
+<span id="L103"><span class="lineNum">     103</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 315 times"> + </span>]:<span class="tlaGNC">         316 :         if (register_pid_fake_ != nullptr)</span></span>
 <span id="L104"><span class="lineNum">     104</span>                 :<span class="tlaGNC">           1 :         {</span></span>
 <span id="L105"><span class="lineNum">     105</span>                 :<span class="tlaGNC">           1 :             return register_pid_fake_-&gt;RegisterPid(</span></span>
 <span id="L106"><span class="lineNum">     106</span>                 :<span class="tlaGNC">           1 :                 mapping_entries_.begin(), mapping_entries_.end(), application_id, pid);</span></span>
@@ -189,9 +189,9 @@
 <span id="L111"><span class="lineNum">     111</span>                 :             :         // element. Therefore, the provided assertions check this rule requirement, whether the iterators return a</span>
 <span id="L112"><span class="lineNum">     112</span>                 :             :         // result other than nullptr.</span>
 <span id="L113"><span class="lineNum">     113</span>                 :             :         // coverity[autosar_cpp14_a5_3_2_violation]</span>
-<span id="L114"><span class="lineNum">     114</span>                 :<span class="tlaGNC">         314 :         return detail::RegisterPid&lt;memory::shared::AtomicIndirectorReal&gt;(</span></span>
-<span id="L115"><span class="lineNum">     115</span>                 :<span class="tlaGNC">         314 :             mapping_entries_.begin(), mapping_entries_.end(), application_id, pid);</span></span>
-<span id="L116"><span class="lineNum">     116</span>                 :<span class="tlaGNC">         315 :     };</span></span>
+<span id="L114"><span class="lineNum">     114</span>                 :<span class="tlaGNC">         315 :         return detail::RegisterPid&lt;memory::shared::AtomicIndirectorReal&gt;(</span></span>
+<span id="L115"><span class="lineNum">     115</span>                 :<span class="tlaGNC">         315 :             mapping_entries_.begin(), mapping_entries_.end(), application_id, pid);</span></span>
+<span id="L116"><span class="lineNum">     116</span>                 :<span class="tlaGNC">         316 :     };</span></span>
 <span id="L117"><span class="lineNum">     117</span>                 :             : </span>
 <span id="L118"><span class="lineNum">     118</span>                 :             :     static void InjectRegisterPidFake(RegisterPidFake&amp; register_pid_fake)</span>
 <span id="L119"><span class="lineNum">     119</span>                 :<span class="tlaGNC">           1 :     {</span></span>

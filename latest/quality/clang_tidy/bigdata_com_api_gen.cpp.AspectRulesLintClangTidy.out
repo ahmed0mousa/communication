@@ -97,49 +97,49 @@
 ./score/mw/com/test/common_test_resources/big_datatype.h:407:5: warning: constructor does not initialize these fields: x, hash_value [cppcoreguidelines-pro-type-member-init]
   407 |     explicit DummyDataStamped() = default;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:26:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:26:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    26 | EXPORT_MW_COM_TYPE(MapApiLanesStamped, ::score::mw::com::test::MapApiLanesStamped)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:711:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   711 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample)); \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:26:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:26:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    26 | EXPORT_MW_COM_TYPE(MapApiLanesStamped, ::score::mw::com::test::MapApiLanesStamped)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:709:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   709 |             alignas(::score::mw::com::impl::SamplePtr<type>) char                                             \
       |                                                              ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:27:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:27:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    27 | EXPORT_MW_COM_TYPE(DummyDataStamped, ::score::mw::com::test::DummyDataStamped)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:711:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   711 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample)); \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:27:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:27:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    27 | EXPORT_MW_COM_TYPE(DummyDataStamped, ::score::mw::com::test::DummyDataStamped)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:709:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   709 |             alignas(::score::mw::com::impl::SamplePtr<type>) char                                             \
       |                                                              ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:43:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:43:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    43 | EXPORT_MW_COM_TYPE(MixedPrimitivesPayload, ::score::mw::com::test::MixedPrimitivesPayload)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:711:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   711 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample)); \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:43:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:43:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    43 | EXPORT_MW_COM_TYPE(MixedPrimitivesPayload, ::score::mw::com::test::MixedPrimitivesPayload)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:709:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   709 |             alignas(::score::mw::com::impl::SamplePtr<type>) char                                             \
       |                                                              ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:44:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:44:1: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    44 | EXPORT_MW_COM_TYPE(ComplexStruct, ::score::mw::com::test::ComplexStruct)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:711:43: note: expanded from macro 'EXPORT_MW_COM_TYPE'
   711 |             auto* placement_sample = new (storage)::score::mw::com::impl::SamplePtr<type>(std::move(sample)); \
       |                                           ^
-/home/runner/.bazel/sandbox/linux-sandbox/4843/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:44:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4516/execroot/_main/score/mw/com/test/basic_rust_api/bigdata_com_api_gen.cpp:44:1: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    44 | EXPORT_MW_COM_TYPE(ComplexStruct, ::score::mw::com::test::ComplexStruct)
       | ^
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:709:62: note: expanded from macro 'EXPORT_MW_COM_TYPE'

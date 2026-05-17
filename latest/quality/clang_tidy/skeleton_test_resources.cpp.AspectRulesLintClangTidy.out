@@ -2,7 +2,7 @@
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:61:31: warning: function 'score::mw::com::impl::lola::CreateLolaServiceInstanceDeployment' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    61 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
       |                               ^
-/home/runner/.bazel/sandbox/linux-sandbox/5043/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:47:31: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/3798/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:47:31: note: the definition seen here
    47 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
       |                               ^
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:61:31: note: differing parameters are named here: ('size'), in definition: ('shm_size')
@@ -28,7 +28,7 @@
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:412:7: warning: class 'SkeletonMockedMemoryFixture' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   412 | class SkeletonMockedMemoryFixture : public ::testing::Test
       |       ^
-/home/runner/.bazel/sandbox/linux-sandbox/5043/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:28:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
+/home/runner/.bazel/sandbox/linux-sandbox/3798/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:28:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
    28 | #include <stdint.h>
       |          ^~~~~~~~~~
       |          <cstdint>

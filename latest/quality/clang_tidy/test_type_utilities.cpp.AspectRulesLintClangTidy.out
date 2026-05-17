@@ -24,7 +24,7 @@
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-/home/runner/.bazel/sandbox/linux-sandbox/5120/execroot/_main/score/mw/com/impl/mocking/test_type_utilities.cpp:53:65: warning: std::move of the const variable 'unique_identifier' of the trivially-copyable type 'const std::uint16_t' (aka 'const unsigned short') has no effect; remove std::move() [hicpp-move-const-arg]
+/home/runner/.bazel/sandbox/linux-sandbox/3901/execroot/_main/score/mw/com/impl/mocking/test_type_utilities.cpp:53:65: warning: std::move of the const variable 'unique_identifier' of the trivially-copyable type 'const std::uint16_t' (aka 'const unsigned short') has no effect; remove std::move() [hicpp-move-const-arg]
    53 |     auto dummy_instance_identifier = MakeFakeInstanceIdentifier(std::move(unique_identifier));
       |                                                                 ^~~~~~~~~~                 ~
 Suppressed 6261 warnings (6153 in non-user code, 102 NOLINT, 6 with check filters).

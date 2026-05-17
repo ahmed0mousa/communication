@@ -6,7 +6,7 @@
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:113:10: warning: function 'score::mw::com::impl::lola::ConsumerEventDataControlLocalView::DereferenceEvent' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
   113 |     void DereferenceEvent(const SlotIndexType slot_index) noexcept;
       |          ^
-/home/runner/.bazel/sandbox/linux-sandbox/4874/execroot/_main/score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.cpp:220:63: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/4117/execroot/_main/score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.cpp:220:63: note: the definition seen here
   220 | auto ConsumerEventDataControlLocalView<AtomicIndirectorType>::DereferenceEvent(
       |                                                               ^
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:113:10: note: differing parameters are named here: ('slot_index'), in definition: ('event_slot_index')

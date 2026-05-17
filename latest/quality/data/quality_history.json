@@ -1,0 +1,10 @@
+[
+  {
+    "date": "2026-05-17 22:50 UTC",
+    "codeql": 0,
+    "clang_tidy": 230,
+    "line_cov": 92.4,
+    "func_cov": 68.3,
+    "branch_cov": 79.4
+  }
+]

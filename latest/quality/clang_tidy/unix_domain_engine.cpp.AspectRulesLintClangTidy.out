@@ -33,47 +33,47 @@
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:56:32: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
    56 |     std::memcpy(addr_.sun_path + (isAbstract ? 1 : 0), path.data(), len);
       |                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:24:1: warning: constructor does not initialize these fields: pipe_fds_ [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:24:1: warning: constructor does not initialize these fields: pipe_fds_ [cppcoreguidelines-pro-type-member-init]
    24 | UnixDomainEngine::UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource, LoggingCallback logger) noexcept
       | ^
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:107:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:107:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
   107 |         events |= POLLIN;
       |         ^~~~~~ ~~
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:112:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:112:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
   112 |         events |= POLLOUT;
       |         ^~~~~~ ~~
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:120:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:120:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
   120 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_fds_.begin(), found));
       |         ^~~~~~~~~~~
       |         auto
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:138:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:138:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
   138 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_endpoints_.begin(), found));
       |         ^~~~~~~~~~~
       |         auto
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:156:24: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:156:24: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
   156 | void UnixDomainEngine::EnqueueCommand(CommandQueueEntry& entry,
       |                        ^
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:196:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:196:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
   196 |     struct msghdr msg;
       |     ^                
       |                      {}
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:199:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:199:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
   199 |     std::uint16_t size = static_cast<std::uint16_t>(message.size());
       |     ^~~~~~~~~~~~~
       |     auto
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:200:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:200:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
   200 |     std::array<iovec, kVectorCount> io;
       |     ^                                 
       |                                       {}
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:222:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:222:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
   222 |     struct msghdr msg;
       |     ^                
       |                      {}
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:226:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:226:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
   226 |     std::array<iovec, kVectorCount> io;
       |     ^                                 
       |                                       {}
-/home/runner/.bazel/sandbox/linux-sandbox/5038/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:276:15: warning: variable 'pipe_event' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/3925/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:276:15: warning: variable 'pipe_event' is not initialized [cppcoreguidelines-init-variables]
   276 |     PipeEvent pipe_event;
       |               ^
 Suppressed 5032 warnings (4996 in non-user code, 33 NOLINT, 3 with check filters).
