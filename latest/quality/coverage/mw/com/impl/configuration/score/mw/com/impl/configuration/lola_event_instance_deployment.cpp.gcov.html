@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 02:41:32</td>
+            <td class="headerValue">2026-05-17 13:11:26</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -162,30 +162,30 @@
 <span id="L84"><span class="lineNum">      84</span>                 :             : // false positive std::bad_optional_access. We check and early exit in case the optional is empty.</span>
 <span id="L85"><span class="lineNum">      85</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation]</span>
 <span id="L86"><span class="lineNum">      86</span>                 :             : score::json::Object LolaEventInstanceDeployment::Serialize() const noexcept</span>
-<span id="L87"><span class="lineNum">      87</span>                 :<span class="tlaGNC">         499 : {</span></span>
-<span id="L88"><span class="lineNum">      88</span>                 :<span class="tlaGNC">         499 :     score::json::Object json_object{};</span></span>
-<span id="L89"><span class="lineNum">      89</span>         [<span class="tlaGBC" title="Branch 0 was taken 490 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 9 times"> + </span>]:<span class="tlaGNC">         499 :     if (number_of_sample_slots_.has_value())</span></span>
-<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">         490 :     {</span></span>
-<span id="L91"><span class="lineNum">      91</span>                 :<span class="tlaGNC">         490 :         json_object[kNumberOfSampleSlotsKey] = score::json::Any{number_of_sample_slots_.value()};</span></span>
-<span id="L92"><span class="lineNum">      92</span>                 :<span class="tlaGNC">         490 :     }</span></span>
-<span id="L93"><span class="lineNum">      93</span>         [<span class="tlaGBC" title="Branch 0 was taken 489 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 10 times"> + </span>]:<span class="tlaGNC">         499 :     if (max_subscribers_.has_value())</span></span>
-<span id="L94"><span class="lineNum">      94</span>                 :<span class="tlaGNC">         489 :     {</span></span>
-<span id="L95"><span class="lineNum">      95</span>                 :<span class="tlaGNC">         489 :         json_object[kSubscribersKey] = score::json::Any{max_subscribers_.value()};</span></span>
-<span id="L96"><span class="lineNum">      96</span>                 :<span class="tlaGNC">         489 :     }</span></span>
-<span id="L97"><span class="lineNum">      97</span>                 :<span class="tlaGNC">         499 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
+<span id="L87"><span class="lineNum">      87</span>                 :<span class="tlaGNC">         494 : {</span></span>
+<span id="L88"><span class="lineNum">      88</span>                 :<span class="tlaGNC">         494 :     score::json::Object json_object{};</span></span>
+<span id="L89"><span class="lineNum">      89</span>         [<span class="tlaGBC" title="Branch 0 was taken 487 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 7 times"> + </span>]:<span class="tlaGNC">         494 :     if (number_of_sample_slots_.has_value())</span></span>
+<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">         487 :     {</span></span>
+<span id="L91"><span class="lineNum">      91</span>                 :<span class="tlaGNC">         487 :         json_object[kNumberOfSampleSlotsKey] = score::json::Any{number_of_sample_slots_.value()};</span></span>
+<span id="L92"><span class="lineNum">      92</span>                 :<span class="tlaGNC">         487 :     }</span></span>
+<span id="L93"><span class="lineNum">      93</span>         [<span class="tlaGBC" title="Branch 0 was taken 491 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967299 times"> + </span>]:<span class="tlaGNC">         494 :     if (max_subscribers_.has_value())</span></span>
+<span id="L94"><span class="lineNum">      94</span>                 :<span class="tlaGNC">         491 :     {</span></span>
+<span id="L95"><span class="lineNum">      95</span>                 :<span class="tlaGNC">         491 :         json_object[kSubscribersKey] = score::json::Any{max_subscribers_.value()};</span></span>
+<span id="L96"><span class="lineNum">      96</span>                 :<span class="tlaGNC">         491 :     }</span></span>
+<span id="L97"><span class="lineNum">      97</span>                 :<span class="tlaGNC">         494 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
 <span id="L98"><span class="lineNum">      98</span>                 :             : </span>
-<span id="L99"><span class="lineNum">      99</span>         [<span class="tlaGBC" title="Branch 0 was taken 496 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 3 times"> + </span>]:<span class="tlaGNC">         499 :     if (max_concurrent_allocations_.has_value())</span></span>
-<span id="L100"><span class="lineNum">     100</span>                 :<span class="tlaGNC">         496 :     {</span></span>
-<span id="L101"><span class="lineNum">     101</span>                 :<span class="tlaGNC">         496 :         json_object[kMaxConcurrentAllocationsKey] = score::json::Any{max_concurrent_allocations_.value()};</span></span>
-<span id="L102"><span class="lineNum">     102</span>                 :<span class="tlaGNC">         496 :     }</span></span>
+<span id="L99"><span class="lineNum">      99</span>         [<span class="tlaGBC" title="Branch 0 was taken 494 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967296 times"> + </span>]:<span class="tlaGNC">         494 :     if (max_concurrent_allocations_.has_value())</span></span>
+<span id="L100"><span class="lineNum">     100</span>                 :<span class="tlaGNC">         494 :     {</span></span>
+<span id="L101"><span class="lineNum">     101</span>                 :<span class="tlaGNC">         494 :         json_object[kMaxConcurrentAllocationsKey] = score::json::Any{max_concurrent_allocations_.value()};</span></span>
+<span id="L102"><span class="lineNum">     102</span>                 :<span class="tlaGNC">         494 :     }</span></span>
 <span id="L103"><span class="lineNum">     103</span>                 :             : </span>
-<span id="L104"><span class="lineNum">     104</span>                 :<span class="tlaGNC">         499 :     json_object[kEnforceMaxSamplesKey] = score::json::Any{enforce_max_samples_};</span></span>
+<span id="L104"><span class="lineNum">     104</span>                 :<span class="tlaGNC">         494 :     json_object[kEnforceMaxSamplesKey] = score::json::Any{enforce_max_samples_};</span></span>
 <span id="L105"><span class="lineNum">     105</span>                 :             : </span>
 <span id="L106"><span class="lineNum">     106</span>                 :             :     // We always turn of ipc tracing. I.e., serialize  kNumberOfIpcTracingSlotsKey as false</span>
-<span id="L107"><span class="lineNum">     107</span>                 :<span class="tlaGNC">         499 :     json_object[kNumberOfIpcTracingSlotsKey] = static_cast&lt;std::uint8_t&gt;(0U);</span></span>
+<span id="L107"><span class="lineNum">     107</span>                 :<span class="tlaGNC">         494 :     json_object[kNumberOfIpcTracingSlotsKey] = static_cast&lt;std::uint8_t&gt;(0U);</span></span>
 <span id="L108"><span class="lineNum">     108</span>                 :             : </span>
-<span id="L109"><span class="lineNum">     109</span>                 :<span class="tlaGNC">         499 :     return json_object;</span></span>
-<span id="L110"><span class="lineNum">     110</span>                 :<span class="tlaGNC">         499 : }</span></span>
+<span id="L109"><span class="lineNum">     109</span>                 :<span class="tlaGNC">         494 :     return json_object;</span></span>
+<span id="L110"><span class="lineNum">     110</span>                 :<span class="tlaGNC">         494 : }</span></span>
 <span id="L111"><span class="lineNum">     111</span>                 :             : </span>
 <span id="L112"><span class="lineNum">     112</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule finding. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L113"><span class="lineNum">     113</span>                 :             : //                                                                   implicitly&quot;</span>
@@ -231,19 +231,19 @@
 <span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">           2 : }</span></span>
 <span id="L154"><span class="lineNum">     154</span>                 :             : </span>
 <span id="L155"><span class="lineNum">     155</span>                 :             : bool operator==(const LolaEventInstanceDeployment&amp; lhs, const LolaEventInstanceDeployment&amp; rhs) noexcept</span>
-<span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">         232 : {</span></span>
-<span id="L157"><span class="lineNum">     157</span>                 :<span class="tlaGNC">         232 :     const bool number_of_sample_slots_equal = (lhs.number_of_sample_slots_ == rhs.number_of_sample_slots_);</span></span>
-<span id="L158"><span class="lineNum">     158</span>                 :<span class="tlaGNC">         232 :     const bool number_of_tracing_slots_equal = (lhs.number_of_tracing_slots_ == rhs.number_of_tracing_slots_);</span></span>
-<span id="L159"><span class="lineNum">     159</span>                 :<span class="tlaGNC">         232 :     const bool max_subscribers_equal = (lhs.max_subscribers_ == rhs.max_subscribers_);</span></span>
-<span id="L160"><span class="lineNum">     160</span>                 :<span class="tlaGNC">         232 :     const bool max_concurrent_allocations_equal = (lhs.max_concurrent_allocations_ == rhs.max_concurrent_allocations_);</span></span>
-<span id="L161"><span class="lineNum">     161</span>                 :<span class="tlaGNC">         232 :     const bool enforce_max_samples_equal = (lhs.enforce_max_samples_ == rhs.enforce_max_samples_);</span></span>
+<span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">         228 : {</span></span>
+<span id="L157"><span class="lineNum">     157</span>                 :<span class="tlaGNC">         228 :     const bool number_of_sample_slots_equal = (lhs.number_of_sample_slots_ == rhs.number_of_sample_slots_);</span></span>
+<span id="L158"><span class="lineNum">     158</span>                 :<span class="tlaGNC">         228 :     const bool number_of_tracing_slots_equal = (lhs.number_of_tracing_slots_ == rhs.number_of_tracing_slots_);</span></span>
+<span id="L159"><span class="lineNum">     159</span>                 :<span class="tlaGNC">         228 :     const bool max_subscribers_equal = (lhs.max_subscribers_ == rhs.max_subscribers_);</span></span>
+<span id="L160"><span class="lineNum">     160</span>                 :<span class="tlaGNC">         228 :     const bool max_concurrent_allocations_equal = (lhs.max_concurrent_allocations_ == rhs.max_concurrent_allocations_);</span></span>
+<span id="L161"><span class="lineNum">     161</span>                 :<span class="tlaGNC">         228 :     const bool enforce_max_samples_equal = (lhs.enforce_max_samples_ == rhs.enforce_max_samples_);</span></span>
 <span id="L162"><span class="lineNum">     162</span>                 :             :     // Adding Brackets to the expression does not give additional value since only one logical operator is used which</span>
 <span id="L163"><span class="lineNum">     163</span>                 :             :     // is independent of the execution order</span>
 <span id="L164"><span class="lineNum">     164</span>                 :             :     // coverity[autosar_cpp14_a5_2_6_violation]</span>
-<span id="L165"><span class="lineNum">     165</span> [<span class="tlaGBC" title="Branch 0 was taken 226 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 225 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">         232 :     return (number_of_sample_slots_equal &amp;&amp; number_of_tracing_slots_equal &amp;&amp; max_subscribers_equal &amp;&amp;</span></span>
-<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 225 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
-<span id="L166"><span class="lineNum">     166</span> [<span class="tlaGBC" title="Branch 0 was taken 225 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967296 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 220 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">         232 :             max_concurrent_allocations_equal &amp;&amp; enforce_max_samples_equal);</span></span>
-<span id="L167"><span class="lineNum">     167</span>                 :<span class="tlaGNC">         232 : }</span></span>
+<span id="L165"><span class="lineNum">     165</span> [<span class="tlaGBC" title="Branch 0 was taken 227 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967297 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 228 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4294967295 times"> + </span>]:<span class="tlaGNC">         232 :     return (number_of_sample_slots_equal &amp;&amp; number_of_tracing_slots_equal &amp;&amp; max_subscribers_equal &amp;&amp;</span></span>
+<span class="lineNum">        </span>         [<span class="tlaGBC" title="Branch 0 was taken 227 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
+<span id="L166"><span class="lineNum">     166</span> [<span class="tlaGBC" title="Branch 0 was taken 226 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 225 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">         232 :             max_concurrent_allocations_equal &amp;&amp; enforce_max_samples_equal);</span></span>
+<span id="L167"><span class="lineNum">     167</span>                 :<span class="tlaGNC">         228 : }</span></span>
 <span id="L168"><span class="lineNum">     168</span>                 :             : </span>
 <span id="L169"><span class="lineNum">     169</span>                 :             : }  // namespace score::mw::com::impl</span>
         </pre>

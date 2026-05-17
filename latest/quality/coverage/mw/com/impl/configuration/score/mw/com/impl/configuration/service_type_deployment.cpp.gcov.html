@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 02:41:32</td>
+            <td class="headerValue">2026-05-17 13:11:26</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -194,20 +194,20 @@
 <span id="L116"><span class="lineNum">     116</span>                 :             : // exceptions, a variant can never be in this state, i.e. std::visit can never throw std::bad_variant_access.</span>
 <span id="L117"><span class="lineNum">     117</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation]</span>
 <span id="L118"><span class="lineNum">     118</span>                 :             : score::json::Object ServiceTypeDeployment::Serialize() const noexcept</span>
-<span id="L119"><span class="lineNum">     119</span>                 :<span class="tlaGNC">        1698 : {</span></span>
-<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">        1698 :     score::json::Object json_object{};</span></span>
-<span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">        1698 :     json_object[kBindingInfoIndexKey] = score::json::Any{binding_info_.index()};</span></span>
-<span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">        1698 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
+<span id="L119"><span class="lineNum">     119</span>                 :<span class="tlaGNC">        1695 : {</span></span>
+<span id="L120"><span class="lineNum">     120</span>                 :<span class="tlaGNC">        1695 :     score::json::Object json_object{};</span></span>
+<span id="L121"><span class="lineNum">     121</span>                 :<span class="tlaGNC">        1695 :     json_object[kBindingInfoIndexKey] = score::json::Any{binding_info_.index()};</span></span>
+<span id="L122"><span class="lineNum">     122</span>                 :<span class="tlaGNC">        1695 :     json_object[kSerializationVersionKey] = json::Any{serializationVersion};</span></span>
 <span id="L123"><span class="lineNum">     123</span>                 :             : </span>
-<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1698 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L125"><span class="lineNum">     125</span>                 :<span class="tlaGNC">        1698 :         [&amp;json_object](const LolaServiceTypeDeployment&amp; deployment) {</span></span>
-<span id="L126"><span class="lineNum">     126</span>                 :<span class="tlaGNC">        1270 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
-<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">        1270 :         },</span></span>
-<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">        1698 :         [](const score::cpp::blank&amp;) noexcept {});</span></span>
-<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1698 :     std::visit(visitor, binding_info_);</span></span>
+<span id="L124"><span class="lineNum">     124</span>                 :<span class="tlaGNC">        1695 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L125"><span class="lineNum">     125</span>                 :<span class="tlaGNC">        1695 :         [&amp;json_object](const LolaServiceTypeDeployment&amp; deployment) {</span></span>
+<span id="L126"><span class="lineNum">     126</span>                 :<span class="tlaGNC">        1265 :             json_object[kBindingInfoKey] = deployment.Serialize();</span></span>
+<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">        1265 :         },</span></span>
+<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">        1695 :         [](const score::cpp::blank&amp;) noexcept {});</span></span>
+<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC">        1695 :     std::visit(visitor, binding_info_);</span></span>
 <span id="L130"><span class="lineNum">     130</span>                 :             : </span>
-<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1698 :     return json_object;</span></span>
-<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        1698 : }</span></span>
+<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">        1695 :     return json_object;</span></span>
+<span id="L132"><span class="lineNum">     132</span>                 :<span class="tlaGNC">        1695 : }</span></span>
 <span id="L133"><span class="lineNum">     133</span>                 :             : </span>
 <span id="L134"><span class="lineNum">     134</span>                 :             : std::string_view ServiceTypeDeployment::ToHashString() const noexcept</span>
 <span id="L135"><span class="lineNum">     135</span>                 :<span class="tlaGNC">         211 : {</span></span>

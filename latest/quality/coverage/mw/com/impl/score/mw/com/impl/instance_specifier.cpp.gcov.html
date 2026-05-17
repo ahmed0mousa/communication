@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 02:41:32</td>
+            <td class="headerValue">2026-05-17 13:11:26</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -178,9 +178,9 @@
 <span id="L99"><span class="lineNum">      99</span>                 :<span class="tlaGNC">        1384 : }</span></span>
 <span id="L100"><span class="lineNum">     100</span>                 :             : </span>
 <span id="L101"><span class="lineNum">     101</span>                 :             : std::string_view InstanceSpecifier::ToString() const noexcept</span>
-<span id="L102"><span class="lineNum">     102</span>                 :<span class="tlaGNC">        3165 : {</span></span>
-<span id="L103"><span class="lineNum">     103</span>                 :<span class="tlaGNC">        3165 :     return instance_specifier_string_;</span></span>
-<span id="L104"><span class="lineNum">     104</span>                 :<span class="tlaGNC">        3165 : }</span></span>
+<span id="L102"><span class="lineNum">     102</span>                 :<span class="tlaGNC">        3164 : {</span></span>
+<span id="L103"><span class="lineNum">     103</span>                 :<span class="tlaGNC">        3164 :     return instance_specifier_string_;</span></span>
+<span id="L104"><span class="lineNum">     104</span>                 :<span class="tlaGNC">        3164 : }</span></span>
 <span id="L105"><span class="lineNum">     105</span>                 :             : </span>
 <span id="L106"><span class="lineNum">     106</span>                 :             : InstanceSpecifier::InstanceSpecifier(std::string&amp;&amp; shortname_path) noexcept</span>
 <span id="L107"><span class="lineNum">     107</span>                 :<span class="tlaGNC">        1374 :     : instance_specifier_string_{std::move(shortname_path)}</span></span>
@@ -188,9 +188,9 @@
 <span id="L109"><span class="lineNum">     109</span>                 :<span class="tlaGNC">        1374 : }</span></span>
 <span id="L110"><span class="lineNum">     110</span>                 :             : </span>
 <span id="L111"><span class="lineNum">     111</span>                 :             : auto operator==(const InstanceSpecifier&amp; lhs, const InstanceSpecifier&amp; rhs) noexcept -&gt; bool</span>
-<span id="L112"><span class="lineNum">     112</span>                 :<span class="tlaGNC">         523 : {</span></span>
-<span id="L113"><span class="lineNum">     113</span>                 :<span class="tlaGNC">         523 :     return lhs.ToString() == rhs.ToString();</span></span>
-<span id="L114"><span class="lineNum">     114</span>                 :<span class="tlaGNC">         523 : }</span></span>
+<span id="L112"><span class="lineNum">     112</span>                 :<span class="tlaGNC">         518 : {</span></span>
+<span id="L113"><span class="lineNum">     113</span>                 :<span class="tlaGNC">         518 :     return lhs.ToString() == rhs.ToString();</span></span>
+<span id="L114"><span class="lineNum">     114</span>                 :<span class="tlaGNC">         518 : }</span></span>
 <span id="L115"><span class="lineNum">     115</span>                 :             : </span>
 <span id="L116"><span class="lineNum">     116</span>                 :             : // Suppress &quot;AUTOSAR C++14 A13-5-5&quot;, The rule states: &quot;Comparison operators shall be non-member functions with</span>
 <span id="L117"><span class="lineNum">     117</span>                 :             : // identical parameter types and noexcept.&quot;. There is no functional reason behind, we require comparing</span>

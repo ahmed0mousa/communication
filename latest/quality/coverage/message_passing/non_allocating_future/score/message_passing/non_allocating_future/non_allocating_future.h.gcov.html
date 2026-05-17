@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 02:41:32</td>
+            <td class="headerValue">2026-05-17 13:11:26</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -144,9 +144,9 @@
 <span id="L66"><span class="lineNum">      66</span>                 :             :     void Wait() noexcept</span>
 <span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">          24 :     {</span></span>
 <span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">          24 :         std::unique_lock lock{mutex_};</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">          42 :         cv_.wait(lock, [this]() {</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          42 :             return ready_;</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          42 :         });</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">          41 :         cv_.wait(lock, [this]() {</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          41 :             return ready_;</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          41 :         });</span></span>
 <span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          24 :     }</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :             : </span>
 <span id="L74"><span class="lineNum">      74</span>                 :             :   private:</span>

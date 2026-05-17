@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 02:41:32</td>
+            <td class="headerValue">2026-05-17 13:11:26</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -124,14 +124,14 @@
 <span id="L46"><span class="lineNum">      46</span>                 :             :     // Rationale: Tolerated due to containers providing pointer-like iterators.</span>
 <span id="L47"><span class="lineNum">      47</span>                 :             :     // The Coverity tool considers these iterators as raw pointers.</span>
 <span id="L48"><span class="lineNum">      48</span>                 :             :     // coverity[autosar_cpp14_m5_0_15_violation]</span>
-<span id="L49"><span class="lineNum">      49</span>         [<span class="tlaGBC" title="Branch 0 was taken 3835 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 53 times"> + </span>]:<span class="tlaGNC">        3888 :     for (auto it = entries_begin; it != entries_end; it++)</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">        3835 :     {</span></span>
+<span id="L49"><span class="lineNum">      49</span>         [<span class="tlaGBC" title="Branch 0 was taken 3837 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 53 times"> + </span>]:<span class="tlaGNC">        3890 :     for (auto it = entries_begin; it != entries_end; it++)</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">        3837 :     {</span></span>
 <span id="L51"><span class="lineNum">      51</span>                 :             :         // extract out into a separate function</span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">        3835 :         const auto status_applicationid = it-&gt;GetStatusAndApplicationIdAtomic();</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">        3835 :         const auto entry_status = status_applicationid.first;</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">        3835 :         const auto entry_applicationid = status_applicationid.second;</span></span>
-<span id="L55"><span class="lineNum">      55</span>         [<span class="tlaGBC" title="Branch 0 was taken 1404 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2431 times"> + </span>]:<span class="tlaGNC">        3835 :         if ((entry_status == ApplicationIdPidMappingEntry::MappingEntryStatus::kUsed) &amp;&amp;</span></span>
-<span id="L56"><span class="lineNum">      56</span>         [<span class="tlaGBC" title="Branch 0 was taken 264 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1140 times"> + </span>]:<span class="tlaGNC">        3835 :             (entry_applicationid == application_id))</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">        3837 :         const auto status_applicationid = it-&gt;GetStatusAndApplicationIdAtomic();</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">        3837 :         const auto entry_status = status_applicationid.first;</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">        3837 :         const auto entry_applicationid = status_applicationid.second;</span></span>
+<span id="L55"><span class="lineNum">      55</span>         [<span class="tlaGBC" title="Branch 0 was taken 1407 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 2430 times"> + </span>]:<span class="tlaGNC">        3837 :         if ((entry_status == ApplicationIdPidMappingEntry::MappingEntryStatus::kUsed) &amp;&amp;</span></span>
+<span id="L56"><span class="lineNum">      56</span>         [<span class="tlaGBC" title="Branch 0 was taken 264 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1143 times"> + </span>]:<span class="tlaGNC">        3837 :             (entry_applicationid == application_id))</span></span>
 <span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">         264 :         {</span></span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :             // application ID already exists. It is &quot;owned&quot; by us, so we can directly update pid, without atomic state</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :             // changes ...</span>
@@ -139,8 +139,8 @@
 <span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         264 :             it-&gt;pid_ = pid;</span></span>
 <span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         264 :             return old_pid;</span></span>
 <span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         264 :         }</span></span>
-<span id="L64"><span class="lineNum">      64</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 3570 times"> + </span>]:<span class="tlaGNC">        3571 :         else if ((entry_status == ApplicationIdPidMappingEntry::MappingEntryStatus::kUpdating) &amp;&amp;</span></span>
-<span id="L65"><span class="lineNum">      65</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">        3571 :                  (entry_applicationid == application_id))</span></span>
+<span id="L64"><span class="lineNum">      64</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 3572 times"> + </span>]:<span class="tlaGNC">        3573 :         else if ((entry_status == ApplicationIdPidMappingEntry::MappingEntryStatus::kUpdating) &amp;&amp;</span></span>
+<span id="L65"><span class="lineNum">      65</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">        3573 :                  (entry_applicationid == application_id))</span></span>
 <span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">           1 :         {</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :             :             // This is a very odd situation! I.e. someone is currently updating the pid for OUR application ID!</span>
 <span id="L68"><span class="lineNum">      68</span>                 :             :             // this could only be possible, when our application has crashed before, while updating the pid</span>
@@ -153,7 +153,7 @@
 <span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">           1 :                                                 application_id);</span></span>
 <span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">           1 :             return pid;</span></span>
 <span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">           1 :         }</span></span>
-<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">        3835 :     }</span></span>
+<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">        3837 :     }</span></span>
 <span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">          53 :     return {};</span></span>
 <span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">         318 : }</span></span>
 <span id="L81"><span class="lineNum">      81</span>                 :             : </span>
