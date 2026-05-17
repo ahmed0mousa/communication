@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-16 02:35:58</td>
+            <td class="headerValue">2026-05-17 02:41:32</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -120,52 +120,52 @@
 <span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          84 : }</span></span>
 <span id="L43"><span class="lineNum">      43</span>                 :             : </span>
 <span id="L44"><span class="lineNum">      44</span>                 :             : auto KnownInstancesContainer::Remove(const EnrichedInstanceIdentifier&amp; enriched_instance_identifier) noexcept -&gt; void</span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          42 : {</span></span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">          42 :     const auto instance_id = enriched_instance_identifier.GetBindingSpecificInstanceId&lt;LolaServiceInstanceId&gt;();</span></span>
-<span id="L47"><span class="lineNum">      47</span>         [<span class="tlaGBC" title="Branch 0 was taken 34 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">          42 :     if (instance_id.has_value())</span></span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">          34 :     {</span></span>
-<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">          34 :         const auto it = known_instances_.find(</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">          34 :             enriched_instance_identifier.GetBindingSpecificServiceId&lt;LolaServiceTypeDeployment&gt;().value());</span></span>
-<span id="L51"><span class="lineNum">      51</span>         [<span class="tlaGBC" title="Branch 0 was taken 18 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 16 times"> + </span>]:<span class="tlaGNC">          34 :         if (it != known_instances_.end())</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">          18 :         {</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">          18 :             score::cpp::ignore = it-&gt;second.erase(instance_id.value());</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          18 :         }</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          34 :     }</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          42 : }</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          40 : {</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">          40 :     const auto instance_id = enriched_instance_identifier.GetBindingSpecificInstanceId&lt;LolaServiceInstanceId&gt;();</span></span>
+<span id="L47"><span class="lineNum">      47</span>         [<span class="tlaGBC" title="Branch 0 was taken 32 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 8 times"> + </span>]:<span class="tlaGNC">          40 :     if (instance_id.has_value())</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">          32 :     {</span></span>
+<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">          32 :         const auto it = known_instances_.find(</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">          32 :             enriched_instance_identifier.GetBindingSpecificServiceId&lt;LolaServiceTypeDeployment&gt;().value());</span></span>
+<span id="L51"><span class="lineNum">      51</span>         [<span class="tlaGBC" title="Branch 0 was taken 17 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 15 times"> + </span>]:<span class="tlaGNC">          32 :         if (it != known_instances_.end())</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">          17 :         {</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">          17 :             score::cpp::ignore = it-&gt;second.erase(instance_id.value());</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          17 :         }</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          32 :     }</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          40 : }</span></span>
 <span id="L57"><span class="lineNum">      57</span>                 :             : </span>
 <span id="L58"><span class="lineNum">      58</span>                 :             : auto KnownInstancesContainer::GetKnownHandles(</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     const EnrichedInstanceIdentifier&amp; enriched_instance_identifier) const noexcept -&gt; std::vector&lt;HandleType&gt;</span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         147 : {</span></span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         147 :     std::vector&lt;HandleType&gt; handles{};</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">         149 : {</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">         149 :     std::vector&lt;HandleType&gt; handles{};</span></span>
 <span id="L62"><span class="lineNum">      62</span>                 :             : </span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         147 :     const auto it = known_instances_.find(</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         147 :         enriched_instance_identifier.GetBindingSpecificServiceId&lt;LolaServiceTypeDeployment&gt;().value());</span></span>
-<span id="L65"><span class="lineNum">      65</span>         [<span class="tlaGBC" title="Branch 0 was taken 59 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 88 times"> + </span>]:<span class="tlaGNC">         147 :     if (it == known_instances_.end())</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         149 :     const auto it = known_instances_.find(</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         149 :         enriched_instance_identifier.GetBindingSpecificServiceId&lt;LolaServiceTypeDeployment&gt;().value());</span></span>
+<span id="L65"><span class="lineNum">      65</span>         [<span class="tlaGBC" title="Branch 0 was taken 59 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 90 times"> + </span>]:<span class="tlaGNC">         149 :     if (it == known_instances_.end())</span></span>
 <span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          59 :     {</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">          59 :         return handles;</span></span>
 <span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">          59 :     }</span></span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : </span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          88 :     const auto&amp; known_service_instances = it-&gt;second;</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          88 :     const auto handle_instance_id = enriched_instance_identifier.GetBindingSpecificInstanceId&lt;LolaServiceInstanceId&gt;();</span></span>
-<span id="L72"><span class="lineNum">      72</span>         [<span class="tlaGBC" title="Branch 0 was taken 57 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 31 times"> + </span>]:<span class="tlaGNC">          88 :     if (handle_instance_id.has_value())</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">          57 :     {</span></span>
-<span id="L74"><span class="lineNum">      74</span>         [<span class="tlaGBC" title="Branch 0 was taken 52 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">          57 :         if (known_service_instances.find(handle_instance_id.value()) != known_service_instances.cend())</span></span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">          52 :         {</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">          52 :             handles.push_back(make_HandleType(enriched_instance_identifier.GetInstanceIdentifier(),</span></span>
-<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">          52 :                                               LolaServiceInstanceId{handle_instance_id.value()}));</span></span>
-<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">          52 :         }</span></span>
-<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">          57 :     }</span></span>
-<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">          31 :     else</span></span>
-<span id="L81"><span class="lineNum">      81</span>                 :<span class="tlaGNC">          31 :     {</span></span>
-<span id="L82"><span class="lineNum">      82</span>         [<span class="tlaGBC" title="Branch 0 was taken 44 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 31 times"> + </span>]:<span class="tlaGNC">          31 :         for (const auto&amp; instance_id : known_service_instances)</span></span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">          44 :         {</span></span>
-<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">          44 :             handles.push_back(make_HandleType(enriched_instance_identifier.GetInstanceIdentifier(),</span></span>
-<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaGNC">          44 :                                               LolaServiceInstanceId{instance_id}));</span></span>
-<span id="L86"><span class="lineNum">      86</span>                 :<span class="tlaGNC">          44 :         }</span></span>
-<span id="L87"><span class="lineNum">      87</span>                 :<span class="tlaGNC">          31 :     }</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          90 :     const auto&amp; known_service_instances = it-&gt;second;</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          90 :     const auto handle_instance_id = enriched_instance_identifier.GetBindingSpecificInstanceId&lt;LolaServiceInstanceId&gt;();</span></span>
+<span id="L72"><span class="lineNum">      72</span>         [<span class="tlaGBC" title="Branch 0 was taken 58 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 32 times"> + </span>]:<span class="tlaGNC">          90 :     if (handle_instance_id.has_value())</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">          58 :     {</span></span>
+<span id="L74"><span class="lineNum">      74</span>         [<span class="tlaGBC" title="Branch 0 was taken 53 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 5 times"> + </span>]:<span class="tlaGNC">          58 :         if (known_service_instances.find(handle_instance_id.value()) != known_service_instances.cend())</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">          53 :         {</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">          53 :             handles.push_back(make_HandleType(enriched_instance_identifier.GetInstanceIdentifier(),</span></span>
+<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">          53 :                                               LolaServiceInstanceId{handle_instance_id.value()}));</span></span>
+<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">          53 :         }</span></span>
+<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">          58 :     }</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">          32 :     else</span></span>
+<span id="L81"><span class="lineNum">      81</span>                 :<span class="tlaGNC">          32 :     {</span></span>
+<span id="L82"><span class="lineNum">      82</span>         [<span class="tlaGBC" title="Branch 0 was taken 45 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 32 times"> + </span>]:<span class="tlaGNC">          32 :         for (const auto&amp; instance_id : known_service_instances)</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">          45 :         {</span></span>
+<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">          45 :             handles.push_back(make_HandleType(enriched_instance_identifier.GetInstanceIdentifier(),</span></span>
+<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaGNC">          45 :                                               LolaServiceInstanceId{instance_id}));</span></span>
+<span id="L86"><span class="lineNum">      86</span>                 :<span class="tlaGNC">          45 :         }</span></span>
+<span id="L87"><span class="lineNum">      87</span>                 :<span class="tlaGNC">          32 :     }</span></span>
 <span id="L88"><span class="lineNum">      88</span>                 :             : </span>
-<span id="L89"><span class="lineNum">      89</span>                 :<span class="tlaGNC">          88 :     return handles;</span></span>
-<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">         147 : }</span></span>
+<span id="L89"><span class="lineNum">      89</span>                 :<span class="tlaGNC">          90 :     return handles;</span></span>
+<span id="L90"><span class="lineNum">      90</span>                 :<span class="tlaGNC">         149 : }</span></span>
 <span id="L91"><span class="lineNum">      91</span>                 :             : </span>
 <span id="L92"><span class="lineNum">      92</span>                 :             : auto KnownInstancesContainer::Merge(KnownInstancesContainer&amp;&amp; container_to_be_merged) noexcept -&gt; void</span>
 <span id="L93"><span class="lineNum">      93</span>                 :<span class="tlaGNC">         169 : {</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-16 02:35:58</td>
+            <td class="headerValue">2026-05-17 02:41:32</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">75.6&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">69.2&nbsp;%</td>
-            <td class="headerCovTableEntry">26</td>
-            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntryLo">45.2&nbsp;%</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">19</td>
           </tr>
                   <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -212,7 +212,11 @@
 <span id="L134"><span class="lineNum">     134</span>                 :             : </span>
 <span id="L135"><span class="lineNum">     135</span>                 :             :             // Store the (possibly modified) value as the latest field value</span>
 <span id="L136"><span class="lineNum">     136</span>                 :<span class="tlaGNC">           4 :             auto update_result = this-&gt;Update(new_value);</span></span>
-<span id="L137"><span class="lineNum">     137</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaGNC">           4 :             if (!update_result.has_value())</span></span>
+<span id="L137"><span class="lineNum">     137</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">           4 :             if (!update_result.has_value())</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
+<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
 <span id="L138"><span class="lineNum">     138</span>                 :<span class="tlaGNC">           1 :             {</span></span>
 <span id="L139"><span class="lineNum">     139</span>                 :<span class="tlaGNC">           1 :                 score::mw::log::LogError(&quot;lola&quot;) &lt;&lt; &quot;Set handler: failed to update field value.&quot;;</span></span>
 <span id="L140"><span class="lineNum">     140</span>                 :<span class="tlaGNC">           1 :             }</span></span>
@@ -236,11 +240,11 @@
 <span id="L158"><span class="lineNum">     158</span>                 :<span class="tlaGNC">          56 :     {</span></span>
 <span id="L159"><span class="lineNum">     159</span>                 :<span class="tlaGNC">          56 :         skeleton_base_ = skeleton_base;</span></span>
 <span id="L160"><span class="lineNum">     160</span>                 :             : </span>
-<span id="L161"><span class="lineNum">     161</span>         [<span class="tlaGBC" title="Branch 0 was taken 50 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          56 :         if (set_method_ != nullptr)</span></span>
+<span id="L161"><span class="lineNum">     161</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          56 :         if (set_method_ != nullptr)</span></span>
 <span id="L162"><span class="lineNum">     162</span>                 :<span class="tlaGNC">          51 :         {</span></span>
 <span id="L163"><span class="lineNum">     163</span>                 :<span class="tlaGNC">          51 :             set_method_-&gt;UpdateSkeletonReference(skeleton_base);</span></span>
 <span id="L164"><span class="lineNum">     164</span>                 :<span class="tlaGNC">          51 :         }</span></span>
-<span id="L165"><span class="lineNum">     165</span>         [<span class="tlaGBC" title="Branch 0 was taken 50 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          56 :         if (get_method_ != nullptr)</span></span>
+<span id="L165"><span class="lineNum">     165</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          56 :         if (get_method_ != nullptr)</span></span>
 <span id="L166"><span class="lineNum">     166</span>                 :<span class="tlaGNC">          51 :         {</span></span>
 <span id="L167"><span class="lineNum">     167</span>                 :<span class="tlaGNC">          51 :             get_method_-&gt;UpdateSkeletonReference(skeleton_base);</span></span>
 <span id="L168"><span class="lineNum">     168</span>                 :<span class="tlaGNC">          51 :         }</span></span>
@@ -419,12 +423,12 @@
 <span id="L341"><span class="lineNum">     341</span>                 :             : template &lt;typename SampleDataType, bool EnableSet, bool EnableNotifier&gt;</span>
 <span id="L342"><span class="lineNum">     342</span>                 :             : Result&lt;void&gt; SkeletonField&lt;SampleDataType, EnableSet, EnableNotifier&gt;::Update(const FieldType&amp; sample_value) noexcept</span>
 <span id="L343"><span class="lineNum">     343</span>                 :<span class="tlaGNC">          49 : {</span></span>
-<span id="L344"><span class="lineNum">     344</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 20 times"> + </span>]:<span class="tlaGNC">          49 :     if (skeleton_field_mock_ != nullptr)</span></span>
+<span id="L344"><span class="lineNum">     344</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 7 times"> + </span>]:<span class="tlaGNC">          49 :     if (skeleton_field_mock_ != nullptr)</span></span>
 <span id="L345"><span class="lineNum">     345</span>                 :<span class="tlaGNC">           2 :     {</span></span>
 <span id="L346"><span class="lineNum">     346</span>                 :<span class="tlaGNC">           2 :         return skeleton_field_mock_-&gt;Update(sample_value);</span></span>
 <span id="L347"><span class="lineNum">     347</span>                 :<span class="tlaGNC">           2 :     }</span></span>
 <span id="L348"><span class="lineNum">     348</span>                 :             : </span>
-<span id="L349"><span class="lineNum">     349</span>         [<span class="tlaGBC" title="Branch 0 was taken 20 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          47 :     if (!was_prepare_offer_called_)</span></span>
+<span id="L349"><span class="lineNum">     349</span>         [<span class="tlaGBC" title="Branch 0 was taken 7 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          47 :     if (!was_prepare_offer_called_)</span></span>
 <span id="L350"><span class="lineNum">     350</span>                 :<span class="tlaGNC">          41 :     {</span></span>
 <span id="L351"><span class="lineNum">     351</span>                 :<span class="tlaGNC">          41 :         initial_field_value_ = std::make_unique&lt;FieldType&gt;(sample_value);</span></span>
 <span id="L352"><span class="lineNum">     352</span>                 :<span class="tlaGNC">          41 :         return Result&lt;void&gt;{};</span></span>
@@ -477,11 +481,11 @@
 <span id="L399"><span class="lineNum">     399</span>                 :             : // coverity[autosar_cpp14_a0_1_3_violation : FALSE]</span>
 <span id="L400"><span class="lineNum">     400</span>                 :             : Result&lt;void&gt; SkeletonField&lt;SampleDataType, EnableSet, EnableNotifier&gt;::DoDeferredUpdate() noexcept</span>
 <span id="L401"><span class="lineNum">     401</span>                 :<span class="tlaGNC">          37 : {</span></span>
-<span id="L402"><span class="lineNum">     402</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaGNC">          37 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(</span></span>
+<span id="L402"><span class="lineNum">     402</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>]:<span class="tlaGNC">          37 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(</span></span>
 <span id="L403"><span class="lineNum">     403</span>                 :<span class="tlaGNC">          37 :         initial_field_value_ != nullptr,</span></span>
 <span id="L404"><span class="lineNum">     404</span>                 :<span class="tlaGNC">          37 :         &quot;Initial field value containing a value is a precondition for DoDeferredUpdate.&quot;);</span></span>
 <span id="L405"><span class="lineNum">     405</span>                 :<span class="tlaGNC">          37 :     const auto update_result = UpdateImpl(*initial_field_value_);</span></span>
-<span id="L406"><span class="lineNum">     406</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaGNC">          37 :     if (!update_result.has_value())</span></span>
+<span id="L406"><span class="lineNum">     406</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>]:<span class="tlaGNC">          37 :     if (!update_result.has_value())</span></span>
 <span id="L407"><span class="lineNum">     407</span>                 :<span class="tlaGNC">           1 :     {</span></span>
 <span id="L408"><span class="lineNum">     408</span>                 :<span class="tlaGNC">           1 :         return update_result;</span></span>
 <span id="L409"><span class="lineNum">     409</span>                 :<span class="tlaGNC">           1 :     }</span></span>
@@ -503,7 +507,7 @@
 <span id="L425"><span class="lineNum">     425</span>                 :             :     -&gt; SkeletonEvent&lt;SampleDataType&gt;*</span>
 <span id="L426"><span class="lineNum">     426</span>                 :<span class="tlaGNC">          49 : {</span></span>
 <span id="L427"><span class="lineNum">     427</span>                 :<span class="tlaGNC">          49 :     auto* const typed_event = dynamic_cast&lt;SkeletonEvent&lt;FieldType&gt;*&gt;(skeleton_event_dispatch_.get());</span></span>
-<span id="L428"><span class="lineNum">     428</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 19 times"> + </span>]:<span class="tlaUNK">           0 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(typed_event != nullptr, &quot;Downcast to SkeletonEvent&lt;FieldType&gt; failed!&quot;);</span></span>
+<span id="L428"><span class="lineNum">     428</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 6 times"> + </span>]:<span class="tlaUNK">           0 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(typed_event != nullptr, &quot;Downcast to SkeletonEvent&lt;FieldType&gt; failed!&quot;);</span></span>
 <span id="L429"><span class="lineNum">     429</span>                 :<span class="tlaGNC tlaBgGNC">          49 :     return typed_event;</span></span>
 <span id="L430"><span class="lineNum">     430</span>                 :<span class="tlaGNC">          49 : }</span></span>
 <span id="L431"><span class="lineNum">     431</span>                 :             : </span>

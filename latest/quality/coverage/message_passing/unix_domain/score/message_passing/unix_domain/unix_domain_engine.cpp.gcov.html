@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-16 02:35:58</td>
+            <td class="headerValue">2026-05-17 02:41:32</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -390,41 +390,41 @@
 <span id="L312"><span class="lineNum">     312</span>                 :<span class="tlaGNC">         100 :     command_endpoint_.disconnect = {};</span></span>
 <span id="L313"><span class="lineNum">     313</span>                 :<span class="tlaGNC">         100 :     RegisterPosixEndpoint(command_endpoint_);</span></span>
 <span id="L314"><span class="lineNum">     314</span>                 :             : </span>
-<span id="L315"><span class="lineNum">     315</span>         [<span class="tlaGBC" title="Branch 0 was taken 388 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 100 times"> + </span>]:<span class="tlaGNC">         488 :     while (!quit_flag_)</span></span>
-<span id="L316"><span class="lineNum">     316</span>                 :<span class="tlaGNC">         388 :     {</span></span>
-<span id="L317"><span class="lineNum">     317</span>                 :<span class="tlaGNC">         388 :         std::int32_t timeout = ProcessTimerQueue();</span></span>
-<span id="L318"><span class="lineNum">     318</span>                 :<span class="tlaGNC">         388 :         const auto num_expected = os_resources_.poll-&gt;poll(poll_fds_.data(), poll_fds_.size(), timeout);</span></span>
-<span id="L319"><span class="lineNum">     319</span> [<span class="tlaGBC" title="Branch 0 was taken 388 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 376 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 12 times"> + </span>]:<span class="tlaGNC">         388 :         if (num_expected.has_value() &amp;&amp; num_expected.value() &gt; 0)</span></span>
-<span id="L320"><span class="lineNum">     320</span>                 :<span class="tlaGNC">         376 :         {</span></span>
-<span id="L321"><span class="lineNum">     321</span>         [<span class="tlaGBC" title="Branch 0 was taken 826 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 376 times"> + </span>]:<span class="tlaGNC">        1202 :             for (std::size_t i = 0; i &lt; poll_fds_.size(); ++i)</span></span>
-<span id="L322"><span class="lineNum">     322</span>                 :<span class="tlaGNC">         826 :             {</span></span>
-<span id="L323"><span class="lineNum">     323</span>         [<span class="tlaGBC" title="Branch 0 was taken 386 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 440 times"> + </span>]:<span class="tlaGNC">         826 :                 if (poll_fds_[i].revents != 0)</span></span>
+<span id="L315"><span class="lineNum">     315</span>         [<span class="tlaGBC" title="Branch 0 was taken 383 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 100 times"> + </span>]:<span class="tlaGNC">         483 :     while (!quit_flag_)</span></span>
+<span id="L316"><span class="lineNum">     316</span>                 :<span class="tlaGNC">         383 :     {</span></span>
+<span id="L317"><span class="lineNum">     317</span>                 :<span class="tlaGNC">         383 :         std::int32_t timeout = ProcessTimerQueue();</span></span>
+<span id="L318"><span class="lineNum">     318</span>                 :<span class="tlaGNC">         383 :         const auto num_expected = os_resources_.poll-&gt;poll(poll_fds_.data(), poll_fds_.size(), timeout);</span></span>
+<span id="L319"><span class="lineNum">     319</span> [<span class="tlaGBC" title="Branch 0 was taken 383 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 371 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 12 times"> + </span>]:<span class="tlaGNC">         383 :         if (num_expected.has_value() &amp;&amp; num_expected.value() &gt; 0)</span></span>
+<span id="L320"><span class="lineNum">     320</span>                 :<span class="tlaGNC">         371 :         {</span></span>
+<span id="L321"><span class="lineNum">     321</span>         [<span class="tlaGBC" title="Branch 0 was taken 850 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 371 times"> + </span>]:<span class="tlaGNC">        1221 :             for (std::size_t i = 0; i &lt; poll_fds_.size(); ++i)</span></span>
+<span id="L322"><span class="lineNum">     322</span>                 :<span class="tlaGNC">         850 :             {</span></span>
+<span id="L323"><span class="lineNum">     323</span>         [<span class="tlaGBC" title="Branch 0 was taken 386 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 464 times"> + </span>]:<span class="tlaGNC">         850 :                 if (poll_fds_[i].revents != 0)</span></span>
 <span id="L324"><span class="lineNum">     324</span>                 :<span class="tlaGNC">         386 :                 {</span></span>
 <span id="L325"><span class="lineNum">     325</span>                 :<span class="tlaGNC">         386 :                     PosixEndpointEntry&amp; endpoint = *poll_endpoints_[i];</span></span>
 <span id="L326"><span class="lineNum">     326</span>                 :<span class="tlaGNC">         386 :                     endpoint.input();</span></span>
 <span id="L327"><span class="lineNum">     327</span>                 :<span class="tlaGNC">         386 :                 }</span></span>
-<span id="L328"><span class="lineNum">     328</span>                 :<span class="tlaGNC">         826 :             }</span></span>
-<span id="L329"><span class="lineNum">     329</span>                 :<span class="tlaGNC">         376 :         }</span></span>
-<span id="L330"><span class="lineNum">     330</span>                 :<span class="tlaGNC">         388 :     }</span></span>
+<span id="L328"><span class="lineNum">     328</span>                 :<span class="tlaGNC">         850 :             }</span></span>
+<span id="L329"><span class="lineNum">     329</span>                 :<span class="tlaGNC">         371 :         }</span></span>
+<span id="L330"><span class="lineNum">     330</span>                 :<span class="tlaGNC">         383 :     }</span></span>
 <span id="L331"><span class="lineNum">     331</span>                 :             : </span>
 <span id="L332"><span class="lineNum">     332</span>                 :<span class="tlaGNC">         100 :     UnregisterPosixEndpoint(command_endpoint_);</span></span>
 <span id="L333"><span class="lineNum">     333</span>                 :<span class="tlaGNC">         100 : }</span></span>
 <span id="L334"><span class="lineNum">     334</span>                 :             : </span>
 <span id="L335"><span class="lineNum">     335</span>                 :             : std::int32_t UnixDomainEngine::ProcessTimerQueue() noexcept</span>
-<span id="L336"><span class="lineNum">     336</span>                 :<span class="tlaGNC">         388 : {</span></span>
-<span id="L337"><span class="lineNum">     337</span>                 :<span class="tlaGNC">         388 :     const auto now = Clock::now();</span></span>
-<span id="L338"><span class="lineNum">     338</span>                 :<span class="tlaGNC">         388 :     const auto then = timer_queue_.ProcessQueue(now);</span></span>
-<span id="L339"><span class="lineNum">     339</span>         [<span class="tlaGBC" title="Branch 0 was taken 351 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 37 times"> + </span>]:<span class="tlaGNC">         388 :     if (then == TimePoint{})</span></span>
-<span id="L340"><span class="lineNum">     340</span>                 :<span class="tlaGNC">         351 :     {</span></span>
-<span id="L341"><span class="lineNum">     341</span>                 :<span class="tlaGNC">         351 :         return -1;</span></span>
-<span id="L342"><span class="lineNum">     342</span>                 :<span class="tlaGNC">         351 :     }</span></span>
-<span id="L343"><span class="lineNum">     343</span>                 :<span class="tlaGNC">          37 :     const auto distance = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(then - Clock::now()).count() + 1;</span></span>
-<span id="L344"><span class="lineNum">     344</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 37 times"> + </span>]:<span class="tlaGNC">          37 :     if (distance &gt; INT32_MAX)</span></span>
+<span id="L336"><span class="lineNum">     336</span>                 :<span class="tlaGNC">         383 : {</span></span>
+<span id="L337"><span class="lineNum">     337</span>                 :<span class="tlaGNC">         383 :     const auto now = Clock::now();</span></span>
+<span id="L338"><span class="lineNum">     338</span>                 :<span class="tlaGNC">         383 :     const auto then = timer_queue_.ProcessQueue(now);</span></span>
+<span id="L339"><span class="lineNum">     339</span>         [<span class="tlaGBC" title="Branch 0 was taken 345 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 38 times"> + </span>]:<span class="tlaGNC">         383 :     if (then == TimePoint{})</span></span>
+<span id="L340"><span class="lineNum">     340</span>                 :<span class="tlaGNC">         345 :     {</span></span>
+<span id="L341"><span class="lineNum">     341</span>                 :<span class="tlaGNC">         345 :         return -1;</span></span>
+<span id="L342"><span class="lineNum">     342</span>                 :<span class="tlaGNC">         345 :     }</span></span>
+<span id="L343"><span class="lineNum">     343</span>                 :<span class="tlaGNC">          38 :     const auto distance = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(then - Clock::now()).count() + 1;</span></span>
+<span id="L344"><span class="lineNum">     344</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 38 times"> + </span>]:<span class="tlaGNC">          38 :     if (distance &gt; INT32_MAX)</span></span>
 <span id="L345"><span class="lineNum">     345</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
 <span id="L346"><span class="lineNum">     346</span>                 :<span class="tlaUNC">           0 :         return INT32_MAX;</span></span>
 <span id="L347"><span class="lineNum">     347</span>                 :<span class="tlaUNC">           0 :     }</span></span>
-<span id="L348"><span class="lineNum">     348</span>                 :<span class="tlaGNC tlaBgGNC">          37 :     return static_cast&lt;std::int32_t&gt;(distance);</span></span>
-<span id="L349"><span class="lineNum">     349</span>                 :<span class="tlaGNC">          37 : }</span></span>
+<span id="L348"><span class="lineNum">     348</span>                 :<span class="tlaGNC tlaBgGNC">          38 :     return static_cast&lt;std::int32_t&gt;(distance);</span></span>
+<span id="L349"><span class="lineNum">     349</span>                 :<span class="tlaGNC">          38 : }</span></span>
 <span id="L350"><span class="lineNum">     350</span>                 :             : </span>
 <span id="L351"><span class="lineNum">     351</span>                 :             : }  // namespace message_passing</span>
 <span id="L352"><span class="lineNum">     352</span>                 :             : }  // namespace score</span>
