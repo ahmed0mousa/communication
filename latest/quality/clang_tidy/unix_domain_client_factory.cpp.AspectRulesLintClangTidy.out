@@ -12,7 +12,7 @@
 ./score/message_passing/unix_domain/unix_domain_engine.h:96:10: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    96 |     void EnqueueCommand(CommandQueueEntry& entry,
       |          ^
-/home/runner/.bazel/sandbox/linux-sandbox/3934/execroot/_main/score/message_passing/unix_domain/unix_domain_client_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/home/runner/.bazel/sandbox/linux-sandbox/1884/execroot/_main/score/message_passing/unix_domain/unix_domain_client_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
    33 | UnixDomainClientFactory::~UnixDomainClientFactory() noexcept {}
       |                          ^                                   ~~
       |                                                              = default;

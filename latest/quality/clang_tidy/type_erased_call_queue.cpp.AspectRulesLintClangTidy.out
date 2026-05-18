@@ -2,7 +2,7 @@
 ./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:42:5: warning: function 'score::mw::com::impl::lola::TypeErasedCallQueue::TypeErasedCallQueue' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    42 |     TypeErasedCallQueue(memory::shared::ManagedMemoryResource& resource,
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/3881/execroot/_main/score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.cpp:77:22: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/1556/execroot/_main/score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.cpp:77:22: note: the definition seen here
    77 | TypeErasedCallQueue::TypeErasedCallQueue(memory::shared::ManagedMemoryResource& memory_resource,
       |                      ^
 ./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:42:5: note: differing parameters are named here: ('resource'), in definition: ('memory_resource')

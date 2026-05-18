@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">30</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">30</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">5</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">1</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -112,15 +112,15 @@
 <span id="L34"><span class="lineNum">      34</span>                 :             : </span>
 <span id="L35"><span class="lineNum">      35</span>                 :             : const LolaServiceTypeDeployment&amp; GetLolaServiceTypeDeploymentFromInstanceIdentifier(</span>
 <span id="L36"><span class="lineNum">      36</span>                 :             :     const InstanceIdentifier&amp; identifier) noexcept</span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaUNC tlaBgUNC">           0 : {</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaUNC">           0 :     const auto&amp; service_type_depl_info = InstanceIdentifierView{identifier}.GetServiceTypeDeployment();</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaUNC">           0 :     const auto* lola_service_type_deployment =</span></span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaUNC">           0 :         std::get_if&lt;LolaServiceTypeDeployment&gt;(&amp;service_type_depl_info.binding_info_);</span></span>
-<span id="L41"><span class="lineNum">      41</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(lola_service_type_deployment != nullptr,</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaUNC">           0 :                                                 &quot;GetLolaServiceTypeDeploymentFromInstanceIdentifier: failed to get &quot;</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaUNC">           0 :                                                 &quot;LolaServiceTypeDeployment from binding_info_ variant.&quot;);</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaUNC">           0 :     return *lola_service_type_deployment;</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaUNC">           0 : }</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC tlaBgGNC">          22 : {</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">          22 :     const auto&amp; service_type_depl_info = InstanceIdentifierView{identifier}.GetServiceTypeDeployment();</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          22 :     const auto* lola_service_type_deployment =</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">          22 :         std::get_if&lt;LolaServiceTypeDeployment&gt;(&amp;service_type_depl_info.binding_info_);</span></span>
+<span id="L41"><span class="lineNum">      41</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 22 times"> + </span>]:<span class="tlaGNC">          22 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(lola_service_type_deployment != nullptr,</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          22 :                                                 &quot;GetLolaServiceTypeDeploymentFromInstanceIdentifier: failed to get &quot;</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          22 :                                                 &quot;LolaServiceTypeDeployment from binding_info_ variant.&quot;);</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          22 :     return *lola_service_type_deployment;</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          22 : }</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :             : </span>
 <span id="L47"><span class="lineNum">      47</span>                 :             : }  // namespace</span>
 <span id="L48"><span class="lineNum">      48</span>                 :             : </span>
@@ -134,33 +134,33 @@
 <span id="L56"><span class="lineNum">      56</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation : FALSE]</span>
 <span id="L57"><span class="lineNum">      57</span>                 :             : auto SkeletonBindingFactoryImpl::Create(const InstanceIdentifier&amp; identifier) noexcept</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :     -&gt; std::unique_ptr&lt;SkeletonBinding&gt;</span>
-<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaUNC">           0 : {</span></span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaUNC">           0 :     const InstanceIdentifierView identifier_view{identifier};</span></span>
+<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaGNC">          16 : {</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">          16 :     const InstanceIdentifierView identifier_view{identifier};</span></span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaUNC">           0 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaUNC">           0 :         [&amp;identifier](const LolaServiceInstanceDeployment&amp;) -&gt; std::unique_ptr&lt;SkeletonBinding&gt; {</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaUNC">           0 :             score::filesystem::Filesystem filesystem = filesystem::FilesystemFactory{}.CreateInstance();</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaUNC">           0 :             auto shm_path_builder = std::make_unique&lt;lola::ShmPathBuilder&gt;(</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaUNC">           0 :                 GetLolaServiceTypeDeploymentFromInstanceIdentifier(identifier).service_id_);</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaUNC">           0 :             auto partial_restart_path_builder = std::make_unique&lt;lola::PartialRestartPathBuilder&gt;(</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaUNC">           0 :                 GetLolaServiceTypeDeploymentFromInstanceIdentifier(identifier).service_id_);</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaUNC">           0 :             return lola::Skeleton::Create(</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaUNC">           0 :                 identifier, filesystem, std::move(shm_path_builder), std::move(partial_restart_path_builder));</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaUNC">           0 :         },</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaUNC">           0 :         [](const SomeIpServiceInstanceDeployment&amp;) noexcept -&gt; std::unique_ptr&lt;SkeletonBinding&gt; {</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaUNC">           0 :             return nullptr; /* not yet implemented */</span></span>
-<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaUNC">           0 :         },</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">          16 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">          16 :         [&amp;identifier](const LolaServiceInstanceDeployment&amp;) -&gt; std::unique_ptr&lt;SkeletonBinding&gt; {</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          11 :             score::filesystem::Filesystem filesystem = filesystem::FilesystemFactory{}.CreateInstance();</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          11 :             auto shm_path_builder = std::make_unique&lt;lola::ShmPathBuilder&gt;(</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          11 :                 GetLolaServiceTypeDeploymentFromInstanceIdentifier(identifier).service_id_);</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">          11 :             auto partial_restart_path_builder = std::make_unique&lt;lola::PartialRestartPathBuilder&gt;(</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">          11 :                 GetLolaServiceTypeDeploymentFromInstanceIdentifier(identifier).service_id_);</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">          11 :             return lola::Skeleton::Create(</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          11 :                 identifier, filesystem, std::move(shm_path_builder), std::move(partial_restart_path_builder));</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          11 :         },</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          16 :         [](const SomeIpServiceInstanceDeployment&amp;) noexcept -&gt; std::unique_ptr&lt;SkeletonBinding&gt; {</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">           3 :             return nullptr; /* not yet implemented */</span></span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">           3 :         },</span></span>
 <span id="L75"><span class="lineNum">      75</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L76"><span class="lineNum">      76</span>                 :             :         // expression statement and identifier declaration shall be placed on a</span>
 <span id="L77"><span class="lineNum">      77</span>                 :             :         // separate line.&quot;. Following line statement is fine, this happens due to</span>
 <span id="L78"><span class="lineNum">      78</span>                 :             :         // clang formatting.</span>
 <span id="L79"><span class="lineNum">      79</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaUNC">           0 :         [](const score::cpp::blank&amp;) noexcept -&gt; std::unique_ptr&lt;SkeletonBinding&gt; {</span></span>
-<span id="L81"><span class="lineNum">      81</span>                 :<span class="tlaUNC">           0 :             return nullptr;</span></span>
-<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaUNC">           0 :         });</span></span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaUNC">           0 :     const auto&amp; service_instance_deployment = identifier_view.GetServiceInstanceDeployment();</span></span>
-<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaUNC">           0 :     return std::visit(visitor, service_instance_deployment.bindingInfo_);</span></span>
-<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaUNC">           0 : }</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">          16 :         [](const score::cpp::blank&amp;) noexcept -&gt; std::unique_ptr&lt;SkeletonBinding&gt; {</span></span>
+<span id="L81"><span class="lineNum">      81</span>                 :<span class="tlaGNC">           2 :             return nullptr;</span></span>
+<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">           2 :         });</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">          16 :     const auto&amp; service_instance_deployment = identifier_view.GetServiceInstanceDeployment();</span></span>
+<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">          16 :     return std::visit(visitor, service_instance_deployment.bindingInfo_);</span></span>
+<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaGNC">          16 : }</span></span>
 <span id="L86"><span class="lineNum">      86</span>                 :             : </span>
 <span id="L87"><span class="lineNum">      87</span>                 :             : }  // namespace score::mw::com::impl</span>
         </pre>

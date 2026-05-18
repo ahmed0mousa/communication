@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">32</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">32</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">3</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">3</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">90.0&nbsp;%</td>
             <td class="headerCovTableEntry">10</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">9</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -106,52 +106,52 @@
 <span id="L28"><span class="lineNum">      28</span>                 :             :     Configuration&amp; configuration,</span>
 <span id="L29"><span class="lineNum">      29</span>                 :             :     concurrency::Executor&amp; long_running_threads,</span>
 <span id="L30"><span class="lineNum">      30</span>                 :             :     const score::cpp::optional&lt;tracing::TracingFilterConfig&gt;&amp; tracing_filter_config)</span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaUNC tlaBgUNC">           0 : {</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaUNC">           0 :     std::unordered_map&lt;BindingType, std::unique_ptr&lt;IBindingRuntime&gt;&gt; result{};</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC tlaBgGNC">          30 : {</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">          30 :     std::unordered_map&lt;BindingType, std::unique_ptr&lt;IBindingRuntime&gt;&gt; result{};</span></span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : </span>
 <span id="L34"><span class="lineNum">      34</span>                 :             :     // Iterate through all the service types we have to find out, which technical bindings are used.</span>
-<span id="L35"><span class="lineNum">      35</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     for (auto it = configuration.GetServiceTypes().cbegin(); it != configuration.GetServiceTypes().cend(); ++it)</span></span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaUNC">           0 :     {</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaUNC">           0 :         auto service_type = *it;</span></span>
+<span id="L35"><span class="lineNum">      35</span>         [<span class="tlaGBC" title="Branch 0 was taken 27 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 4 times"> + </span>]:<span class="tlaGNC">          31 :     for (auto it = configuration.GetServiceTypes().cbegin(); it != configuration.GetServiceTypes().cend(); ++it)</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">          27 :     {</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          27 :         auto service_type = *it;</span></span>
 <span id="L38"><span class="lineNum">      38</span>                 :             : </span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaUNC">           0 :         auto deployment_info_visitor = score::cpp::overload(</span></span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaUNC">           0 :             [&amp;result, &amp;configuration, &amp;long_running_threads, &amp;tracing_filter_config](const LolaServiceTypeDeployment&amp;) {</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaUNC">           0 :                 std::unique_ptr&lt;lola::tracing::TracingRuntime&gt; lola_tracing_runtime{nullptr};</span></span>
-<span id="L42"><span class="lineNum">      42</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :                 if (configuration.GetTracingConfiguration().IsTracingEnabled() &amp;&amp; tracing_filter_config.has_value())</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaUNC">           0 :                 {</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaUNC">           0 :                     const auto number_of_needed_tracing_slots =</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaUNC">           0 :                         tracing_filter_config-&gt;GetNumberOfTracingSlots(configuration);</span></span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaUNC">           0 :                     lola_tracing_runtime =</span></span>
-<span id="L47"><span class="lineNum">      47</span>                 :<span class="tlaUNC">           0 :                         std::make_unique&lt;lola::tracing::TracingRuntime&gt;(number_of_needed_tracing_slots, configuration);</span></span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaUNC">           0 :                 }</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          27 :         auto deployment_info_visitor = score::cpp::overload(</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">          27 :             [&amp;result, &amp;configuration, &amp;long_running_threads, &amp;tracing_filter_config](const LolaServiceTypeDeployment&amp;) {</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          26 :                 std::unique_ptr&lt;lola::tracing::TracingRuntime&gt; lola_tracing_runtime{nullptr};</span></span>
+<span id="L42"><span class="lineNum">      42</span> [<span class="tlaGBC" title="Branch 0 was taken 19 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 7 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 8 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 11 times"> + </span>]:<span class="tlaGNC">          26 :                 if (configuration.GetTracingConfiguration().IsTracingEnabled() &amp;&amp; tracing_filter_config.has_value())</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">           8 :                 {</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">           8 :                     const auto number_of_needed_tracing_slots =</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">           8 :                         tracing_filter_config-&gt;GetNumberOfTracingSlots(configuration);</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">           8 :                     lola_tracing_runtime =</span></span>
+<span id="L47"><span class="lineNum">      47</span>                 :<span class="tlaGNC">           8 :                         std::make_unique&lt;lola::tracing::TracingRuntime&gt;(number_of_needed_tracing_slots, configuration);</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">           8 :                 }</span></span>
 <span id="L49"><span class="lineNum">      49</span>                 :             : </span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaUNC">           0 :                 auto lola_runtime = std::make_unique&lt;score::mw::com::impl::lola::Runtime&gt;(</span></span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaUNC">           0 :                     configuration, long_running_threads, std::move(lola_tracing_runtime));</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaUNC">           0 :                 const auto pair = result.emplace(std::make_pair(BindingType::kLoLa, std::move(lola_runtime)));</span></span>
-<span id="L53"><span class="lineNum">      53</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :                 SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(pair.second, &quot;Failed to emplace lola runtime binding&quot;);</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaUNC">           0 :                 return true;</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaUNC">           0 :             },</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">          26 :                 auto lola_runtime = std::make_unique&lt;score::mw::com::impl::lola::Runtime&gt;(</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">          26 :                     configuration, long_running_threads, std::move(lola_tracing_runtime));</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">          26 :                 const auto pair = result.emplace(std::make_pair(BindingType::kLoLa, std::move(lola_runtime)));</span></span>
+<span id="L53"><span class="lineNum">      53</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 26 times"> + </span>]:<span class="tlaGNC">          26 :                 SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(pair.second, &quot;Failed to emplace lola runtime binding&quot;);</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          26 :                 return true;</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          26 :             },</span></span>
 <span id="L56"><span class="lineNum">      56</span>                 :             :             // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L57"><span class="lineNum">      57</span>                 :             :             // expression statement and identifier declaration shall be placed on a</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :             // separate line.&quot;. Following line statement is fine, this happens due to</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :             // clang formatting.</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             :             // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaUNC">           0 :             [](const score::cpp::blank&amp;) noexcept {</span></span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaUNC">           0 :                 return false;</span></span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaUNC">           0 :             });</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaUNC">           0 :         const bool runtime_created = std::visit(deployment_info_visitor, service_type.second.binding_info_);</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC">          27 :             [](const score::cpp::blank&amp;) noexcept {</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">           1 :                 return false;</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">           1 :             });</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          27 :         const bool runtime_created = std::visit(deployment_info_visitor, service_type.second.binding_info_);</span></span>
 <span id="L65"><span class="lineNum">      65</span>                 :             : </span>
 <span id="L66"><span class="lineNum">      66</span>                 :             :         // LCOV_EXCL_BR_START: Since we currently only support a single binding, we immediately stop further runtime</span>
 <span id="L67"><span class="lineNum">      67</span>                 :             :         // creation after the first is created. score::cpp::blank{} is not used in production code and the overload for</span>
 <span id="L68"><span class="lineNum">      68</span>                 :             :         // LolaServiceTypeDeployment cannot return false.</span>
-<span id="L69"><span class="lineNum">      69</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :         if (runtime_created)</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaUNC">           0 :         {</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaUNC">           0 :             break;</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaUNC">           0 :         }</span></span>
+<span id="L69"><span class="lineNum">      69</span>         [<span class="tlaGBC" title="Branch 0 was taken 26 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          27 :         if (runtime_created)</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          26 :         {</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          26 :             break;</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          26 :         }</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :             :         // LCOV_EXCL_BR_STOP</span>
-<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaUNC">           0 :     }</span></span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaUNC">           0 :     return result;</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaUNC">           0 : }</span></span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">          27 :     }</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">          30 :     return result;</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">          30 : }</span></span>
         </pre>
               </td>
             </tr>

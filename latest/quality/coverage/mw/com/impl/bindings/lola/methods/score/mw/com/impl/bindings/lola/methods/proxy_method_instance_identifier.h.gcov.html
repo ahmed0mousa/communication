@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">68.8&nbsp;%</td>
+            <td class="headerCovTableEntry">16</td>
             <td class="headerCovTableEntry">11</td>
-            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">1</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -126,22 +126,22 @@
 <span id="L48"><span class="lineNum">      48</span>                 :             :   public:</span>
 <span id="L49"><span class="lineNum">      49</span>                 :             :     std::size_t operator()(const score::mw::com::impl::lola::ProxyMethodInstanceIdentifier&amp;</span>
 <span id="L50"><span class="lineNum">      50</span>                 :             :                                proxy_method_instance_identifier) const noexcept</span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaUNC">           0 :         using UniqueMethodIdentifier = score::mw::com::impl::lola::UniqueMethodIdentifier;</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaUNC">           0 :         using ProxyInstanceIdentifier = score::mw::com::impl::lola::ProxyInstanceIdentifier;</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :             : </span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaUNC">           0 :         static constexpr std::size_t kGoldenRatioConstant = 0x9e3779b9U;</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaUNC">           0 :         static constexpr unsigned int kLeftShiftBits = 6U;</span></span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaUNC">           0 :         static constexpr unsigned int kRightShiftBits = 2U;</span></span>
-<span id="L58"><span class="lineNum">      58</span>                 :             : </span>
-<span id="L59"><span class="lineNum">      59</span>                 :             :         // The previous implementation packed all fields into a single uint64_t, but with the addition of</span>
-<span id="L60"><span class="lineNum">      60</span>                 :             :         // MethodType to UniqueMethodIdentifier, the total bit width (72 bits) exceeds 64 bits.</span>
-<span id="L61"><span class="lineNum">      61</span>                 :             :         // We now combine the hashes of the sub-structs instead using the boost hash_combine pattern.</span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaUNC">           0 :         auto seed = std::hash&lt;ProxyInstanceIdentifier&gt;{}(proxy_method_instance_identifier.proxy_instance_identifier);</span></span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaUNC">           0 :         seed ^= std::hash&lt;UniqueMethodIdentifier&gt;{}(proxy_method_instance_identifier.unique_method_identifier) +</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaUNC">           0 :                 kGoldenRatioConstant + (seed &lt;&lt; kLeftShiftBits) + (seed &gt;&gt; kRightShiftBits);</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaUNC">           0 :         return seed;</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC tlaBgGNC">          47 :     {</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">          47 :         using UniqueMethodIdentifier = score::mw::com::impl::lola::UniqueMethodIdentifier;</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">          47 :         using ProxyInstanceIdentifier = score::mw::com::impl::lola::ProxyInstanceIdentifier;</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaUNC tlaBgUNC">           0 : </span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC tlaBgGNC">          47 :         static constexpr std::size_t kGoldenRatioConstant = 0x9e3779b9U;</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          47 :         static constexpr unsigned int kLeftShiftBits = 6U;</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">          47 :         static constexpr unsigned int kRightShiftBits = 2U;</span></span>
+<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaUNC tlaBgUNC">           0 : </span></span>
+<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaUNC">           0 :         // The previous implementation packed all fields into a single uint64_t, but with the addition of</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaUNC">           0 :         // MethodType to UniqueMethodIdentifier, the total bit width (72 bits) exceeds 64 bits.</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaUNC">           0 :         // We now combine the hashes of the sub-structs instead using the boost hash_combine pattern.</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC tlaBgGNC">          47 :         auto seed = std::hash&lt;ProxyInstanceIdentifier&gt;{}(proxy_method_instance_identifier.proxy_instance_identifier);</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">          47 :         seed ^= std::hash&lt;UniqueMethodIdentifier&gt;{}(proxy_method_instance_identifier.unique_method_identifier) +</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          47 :                 kGoldenRatioConstant + (seed &lt;&lt; kLeftShiftBits) + (seed &gt;&gt; kRightShiftBits);</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          47 :         return seed;</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          47 :     }</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :             : };</span>
 <span id="L68"><span class="lineNum">      68</span>                 :             : </span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : }  // namespace std</span>

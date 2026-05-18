@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -126,12 +126,12 @@
 <span id="L48"><span class="lineNum">      48</span>                 :             :     /// \param max_slots Maximum number of samples that will be received in one call to GetNewSamples.</span>
 <span id="L49"><span class="lineNum">      49</span>                 :             :     SlotCollector(ConsumerEventDataControlLocalView&lt;&gt;&amp; event_data_control_local, const std::size_t max_slots) noexcept;</span>
 <span id="L50"><span class="lineNum">      50</span>                 :             : </span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     SlotCollector(SlotCollector&amp;&amp; other) noexcept = default;</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC tlaBgGNC">         279 :     SlotCollector(SlotCollector&amp;&amp; other) noexcept = default;</span></span>
 <span id="L52"><span class="lineNum">      52</span>                 :             :     SlotCollector&amp; operator=(SlotCollector&amp;&amp; other) &amp; noexcept = delete;</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             :     SlotCollector&amp; operator=(const SlotCollector&amp;) &amp; = delete;</span>
 <span id="L54"><span class="lineNum">      54</span>                 :             :     SlotCollector(const SlotCollector&amp;) = delete;</span>
 <span id="L55"><span class="lineNum">      55</span>                 :             : </span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaUNC">           0 :     ~SlotCollector() = default;</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">         560 :     ~SlotCollector() = default;</span></span>
 <span id="L57"><span class="lineNum">      57</span>                 :             : </span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :     /// \brief Returns the number of new samples a call to GetNewSamples() (given that parameter max_count</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     ///        doesn't restrict it) would currently provide.</span>

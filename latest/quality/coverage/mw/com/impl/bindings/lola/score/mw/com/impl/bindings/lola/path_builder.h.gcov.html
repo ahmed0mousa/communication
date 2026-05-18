@@ -37,12 +37,12 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryMed">80.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">5</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -136,12 +136,12 @@
 <span id="L58"><span class="lineNum">      58</span>                 :             : /// \return String that contains the path</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             : template &lt;typename Emitter, typename Prefix&gt;</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             : std::string EmitWithPrefix(Prefix prefix, Emitter emitter) noexcept</span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC tlaBgGNC">         172 : {</span></span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         172 :     std::stringstream out{};</span></span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         172 :     out &lt;&lt; prefix;</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         172 :     emitter(out);</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">         172 :     return out.str();</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         172 : }</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC tlaBgGNC">         528 : {</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">         528 :     std::stringstream out{};</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         528 :     out &lt;&lt; prefix;</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">         528 :     emitter(out);</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">         528 :     return out.str();</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         528 : }</span></span>
 <span id="L67"><span class="lineNum">      67</span>                 :             : </span>
 <span id="L68"><span class="lineNum">      68</span>                 :             : /// Append a string of the form XXXXXXXXXXXXXXXX-YYYY where X is the</span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : /// service id and Y is the instance id.</span>

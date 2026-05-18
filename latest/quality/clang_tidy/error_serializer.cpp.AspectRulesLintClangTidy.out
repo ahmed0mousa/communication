@@ -2,7 +2,7 @@
 ./score/mw/com/impl/error_serializer.h:59:32: warning: function 'score::mw::com::impl::ErrorSerializer::Deserialize' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    59 |     static score::Result<void> Deserialize(const SerializedErrorType serialized_error);
       |                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/3878/execroot/_main/score/mw/com/impl/error_serializer.cpp:45:34: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/1882/execroot/_main/score/mw/com/impl/error_serializer.cpp:45:34: note: the definition seen here
    45 | auto ErrorSerializer<ErrorCode>::Deserialize(const SerializedErrorType serialized_error_code) -> score::Result<void>
       |                                  ^
 ./score/mw/com/impl/error_serializer.h:59:32: note: differing parameters are named here: ('serialized_error'), in definition: ('serialized_error_code')

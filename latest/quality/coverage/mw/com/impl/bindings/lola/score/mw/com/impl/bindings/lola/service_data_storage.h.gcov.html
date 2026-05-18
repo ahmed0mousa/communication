@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -109,12 +109,12 @@
 <span id="L31"><span class="lineNum">      31</span>                 :             : {</span>
 <span id="L32"><span class="lineNum">      32</span>                 :             :   public:</span>
 <span id="L33"><span class="lineNum">      33</span>                 :             :     explicit ServiceDataStorage(score::memory::shared::ManagedMemoryResource&amp; resource)</span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC tlaBgGNC">          36 :         : events_(resource),</span></span>
-<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">          36 :           events_metainfo_(resource),</span></span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">          36 :           skeleton_pid_{impl::GetBindingRuntime&lt;lola::IRuntime&gt;(BindingType::kLoLa).GetPid()},</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          36 :           skeleton_uid_{os::Unistd::instance().getuid()}</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">          36 :     {</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          36 :     }</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC tlaBgGNC">         464 :         : events_(resource),</span></span>
+<span id="L35"><span class="lineNum">      35</span>                 :<span class="tlaGNC">         464 :           events_metainfo_(resource),</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">         464 :           skeleton_pid_{impl::GetBindingRuntime&lt;lola::IRuntime&gt;(BindingType::kLoLa).GetPid()},</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">         464 :           skeleton_uid_{os::Unistd::instance().getuid()}</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">         464 :     {</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         464 :     }</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : </span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :     // Suppress &quot;AUTOSAR C++14 M11-0-1&quot; rule findings. This rule states: &quot;Member data in non-POD class types shall</span>
 <span id="L42"><span class="lineNum">      42</span>                 :             :     // be private.&quot;. There are no class invariants to maintain which could be violated by directly accessing member</span>

@@ -1,5 +1,5 @@
 6521 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4002/execroot/_main/score/mw/com/test/common_test_resources/generic_trace_api_test_resources.cpp:35:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/1337/execroot/_main/score/mw/com/test/common_test_resources/generic_trace_api_test_resources.cpp:35:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
    35 | using namespace score::analysis::tracing;
       | ^
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]

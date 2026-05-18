@@ -25,7 +25,7 @@
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: note: make it protected and non-virtual
   218 | class LolaProxyEventResources : public ProxyMockedMemoryFixture
       |       ^
-/home/runner/.bazel/sandbox/linux-sandbox/3784/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:32:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/4112/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:32:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
    32 | using namespace ::score::memory::shared;
       | ^
 Suppressed 11385 warnings (11177 in non-user code, 200 NOLINT, 8 with check filters).

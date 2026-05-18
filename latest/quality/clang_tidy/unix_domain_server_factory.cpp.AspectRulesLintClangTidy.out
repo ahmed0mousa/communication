@@ -15,7 +15,7 @@
 ./score/message_passing/unix_domain/unix_domain_server_factory.h:25:7: warning: class 'UnixDomainServerFactory' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    25 | class UnixDomainServerFactory final : public IServerFactory
       |       ^
-/home/runner/.bazel/sandbox/linux-sandbox/3921/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+/home/runner/.bazel/sandbox/linux-sandbox/1853/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
    33 | UnixDomainServerFactory::~UnixDomainServerFactory() noexcept {}
       |                          ^                                   ~~
       |                                                              = default;

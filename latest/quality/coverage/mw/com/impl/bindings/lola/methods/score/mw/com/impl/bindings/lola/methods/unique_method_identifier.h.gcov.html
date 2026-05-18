@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">6</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">1</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -126,12 +126,12 @@
 <span id="L48"><span class="lineNum">      48</span>                 :             : {</span>
 <span id="L49"><span class="lineNum">      49</span>                 :             :     std::size_t operator()(</span>
 <span id="L50"><span class="lineNum">      50</span>                 :             :         const score::mw::com::impl::lola::UniqueMethodIdentifier&amp; unique_method_identifier) const noexcept</span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaUNC">           0 :         static constexpr std::uint32_t method_or_field_id_shift = 16U;</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaUNC">           0 :         return std::hash&lt;std::uint32_t&gt;{}(</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaUNC">           0 :             (static_cast&lt;std::uint32_t&gt;(unique_method_identifier.method_or_field_id) &lt;&lt; method_or_field_id_shift) |</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaUNC">           0 :             static_cast&lt;std::uint32_t&gt;(unique_method_identifier.method_type));</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC tlaBgGNC">         433 :     {</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">         433 :         static constexpr std::uint32_t method_or_field_id_shift = 16U;</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">         433 :         return std::hash&lt;std::uint32_t&gt;{}(</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">         433 :             (static_cast&lt;std::uint32_t&gt;(unique_method_identifier.method_or_field_id) &lt;&lt; method_or_field_id_shift) |</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">         433 :             static_cast&lt;std::uint32_t&gt;(unique_method_identifier.method_type));</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">         433 :     }</span></span>
 <span id="L57"><span class="lineNum">      57</span>                 :             : };</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             : </span>
 <span id="L59"><span class="lineNum">      59</span>                 :             : }  // namespace std</span>

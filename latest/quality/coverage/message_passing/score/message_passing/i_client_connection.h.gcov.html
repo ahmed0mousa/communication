@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -111,7 +111,7 @@
 <span id="L33"><span class="lineNum">      33</span>                 :             :     /// \details The destructor is supposed to be non-blocking in the sense of IPC communication. It is unsafe to</span>
 <span id="L34"><span class="lineNum">      34</span>                 :             :     ///          destruct the connection that is not in the Stopped state. It is unsafe to destruct the connection from</span>
 <span id="L35"><span class="lineNum">      35</span>                 :             :     ///          any of the connection's callbacks except for the StateCallback with the Stopped state as an argument.</span>
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     virtual ~IClientConnection() = default;</span></span>
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC tlaBgGNC">         381 :     virtual ~IClientConnection() = default;</span></span>
 <span id="L37"><span class="lineNum">      37</span>                 :             : </span>
 <span id="L38"><span class="lineNum">      38</span>                 :             :     /// \brief Send a binary message to the respective server, don't expect a reply</span>
 <span id="L39"><span class="lineNum">      39</span>                 :             :     /// \details The call is non-blocking and will fail if it would otherwise block due to implementation details.</span>
@@ -234,7 +234,7 @@
 <span id="L156"><span class="lineNum">     156</span>                 :             :     virtual void Restart() noexcept = 0;</span>
 <span id="L157"><span class="lineNum">     157</span>                 :             : </span>
 <span id="L158"><span class="lineNum">     158</span>                 :             :   protected:</span>
-<span id="L159"><span class="lineNum">     159</span>                 :<span class="tlaUNC">           0 :     IClientConnection() noexcept = default;</span></span>
+<span id="L159"><span class="lineNum">     159</span>                 :<span class="tlaGNC">         381 :     IClientConnection() noexcept = default;</span></span>
 <span id="L160"><span class="lineNum">     160</span>                 :             :     IClientConnection(const IClientConnection&amp;) = delete;</span>
 <span id="L161"><span class="lineNum">     161</span>                 :             :     IClientConnection(IClientConnection&amp;&amp;) = delete;</span>
 <span id="L162"><span class="lineNum">     162</span>                 :             :     IClientConnection&amp; operator=(const IClientConnection&amp;) = delete;</span>

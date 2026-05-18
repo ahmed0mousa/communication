@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">14</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">14</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">6</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -129,13 +129,13 @@
 <span id="L51"><span class="lineNum">      51</span>                 :             :                   ServiceInstanceDeployments service_instances,</span>
 <span id="L52"><span class="lineNum">      52</span>                 :             :                   GlobalConfiguration global_configuration,</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             :                   TracingConfiguration tracing_configuration) noexcept;</span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     ~Configuration() noexcept = default;</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC tlaBgGNC">         242 :     ~Configuration() noexcept = default;</span></span>
 <span id="L55"><span class="lineNum">      55</span>                 :             : </span>
 <span id="L56"><span class="lineNum">      56</span>                 :             :     /**</span>
 <span id="L57"><span class="lineNum">      57</span>                 :             :      * \brief Class is moveable but not copyable</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :      */</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     Configuration(const Configuration&amp; other) = delete;</span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaUNC">           0 :     Configuration(Configuration&amp;&amp; other) = default;</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">          80 :     Configuration(Configuration&amp;&amp; other) = default;</span></span>
 <span id="L61"><span class="lineNum">      61</span>                 :             :     Configuration&amp; operator=(const Configuration&amp; other) &amp; = delete;</span>
 <span id="L62"><span class="lineNum">      62</span>                 :             :     Configuration&amp; operator=(Configuration&amp;&amp; other) &amp; = delete;</span>
 <span id="L63"><span class="lineNum">      63</span>                 :             : </span>
@@ -146,21 +146,21 @@
 <span id="L68"><span class="lineNum">      68</span>                 :             :         ServiceInstanceDeployment service_instance_deployment) noexcept;</span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : </span>
 <span id="L70"><span class="lineNum">      70</span>                 :             :     const ServiceTypeDeployments&amp; GetServiceTypes() const noexcept</span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaUNC">           0 :     {</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaUNC">           0 :         return service_types_;</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         487 :     {</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         487 :         return service_types_;</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         487 :     }</span></span>
 <span id="L74"><span class="lineNum">      74</span>                 :             :     const ServiceInstanceDeployments&amp; GetServiceInstances() const noexcept</span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaUNC">           0 :     {</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaUNC">           0 :         return service_instances_;</span></span>
-<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         780 :     {</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">         780 :         return service_instances_;</span></span>
+<span id="L77"><span class="lineNum">      77</span>                 :<span class="tlaGNC">         780 :     }</span></span>
 <span id="L78"><span class="lineNum">      78</span>                 :             :     const GlobalConfiguration&amp; GetGlobalConfiguration() const noexcept</span>
-<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaUNC">           0 :     {</span></span>
-<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaUNC">           0 :         return global_configuration_;</span></span>
-<span id="L81"><span class="lineNum">      81</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">         349 :     {</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">         349 :         return global_configuration_;</span></span>
+<span id="L81"><span class="lineNum">      81</span>                 :<span class="tlaGNC">         349 :     }</span></span>
 <span id="L82"><span class="lineNum">      82</span>                 :             :     const TracingConfiguration&amp; GetTracingConfiguration() const noexcept</span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaUNC">           0 :     {</span></span>
-<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaUNC">           0 :         return tracing_configuration_;</span></span>
-<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">         117 :     {</span></span>
+<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">         117 :         return tracing_configuration_;</span></span>
+<span id="L85"><span class="lineNum">      85</span>                 :<span class="tlaGNC">         117 :     }</span></span>
 <span id="L86"><span class="lineNum">      86</span>                 :             : </span>
 <span id="L87"><span class="lineNum">      87</span>                 :             :   private:</span>
 <span id="L88"><span class="lineNum">      88</span>                 :             :     /**</span>

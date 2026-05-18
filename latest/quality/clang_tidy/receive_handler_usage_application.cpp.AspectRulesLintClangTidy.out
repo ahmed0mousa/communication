@@ -1,5 +1,5 @@
 9220 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4945/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:79:9: warning: std::move of the const variable 'instance_specifier' has no effect; remove std::move() or make the variable non-const [hicpp-move-const-arg]
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:79:9: warning: std::move of the const variable 'instance_specifier' has no effect; remove std::move() or make the variable non-const [hicpp-move-const-arg]
    79 |         std::move(instance_specifier));
       |         ^~~~~~~~~~                  ~
 Suppressed 9414 warnings (9208 in non-user code, 196 NOLINT, 10 with check filters).

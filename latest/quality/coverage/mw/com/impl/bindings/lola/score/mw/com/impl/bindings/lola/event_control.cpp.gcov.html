@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -97,11 +97,11 @@
 <span id="L19"><span class="lineNum">      19</span>                 :             :                            const SubscriberCountType max_subscribers,</span>
 <span id="L20"><span class="lineNum">      20</span>                 :             :                            const bool enforce_max_samples,</span>
 <span id="L21"><span class="lineNum">      21</span>                 :             :                            score::memory::shared::ManagedMemoryResource&amp; resource) noexcept</span>
-<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC tlaBgGNC">          49 :     : data_control{number_of_slots, resource},</span></span>
-<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">          49 :       subscription_control{number_of_slots, max_subscribers, enforce_max_samples},</span></span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          49 :       transaction_log_set_{max_subscribers, number_of_slots, resource}</span></span>
-<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">          49 : {</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">          49 : }</span></span>
+<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC tlaBgGNC">         344 :     : data_control{number_of_slots, resource},</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">         344 :       subscription_control{number_of_slots, max_subscribers, enforce_max_samples},</span></span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">         344 :       transaction_log_set_{max_subscribers, number_of_slots, resource}</span></span>
+<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">         344 : {</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">         344 : }</span></span>
 <span id="L27"><span class="lineNum">      27</span>                 :             : </span>
 <span id="L28"><span class="lineNum">      28</span>                 :             : }  // namespace score::mw::com::impl::lola</span>
         </pre>

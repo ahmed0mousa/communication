@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryLo">62.5&nbsp;%</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
             <td class="headerCovTableEntry">8</td>
-            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">8</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -95,9 +95,9 @@
 <span id="L17"><span class="lineNum">      17</span>                 :             : {</span>
 <span id="L18"><span class="lineNum">      18</span>                 :             : </span>
 <span id="L19"><span class="lineNum">      19</span>                 :             : LolaServiceInstanceIdentifier::LolaServiceInstanceIdentifier(LolaServiceId service_id) noexcept</span>
-<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC tlaBgGNC">          32 :     : service_id_{service_id}, instance_id_{std::nullopt}</span></span>
-<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC">          32 : {</span></span>
-<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC">          32 : }</span></span>
+<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC tlaBgGNC">         281 :     : service_id_{service_id}, instance_id_{std::nullopt}</span></span>
+<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC">         281 : {</span></span>
+<span id="L22"><span class="lineNum">      22</span>                 :<span class="tlaGNC">         281 : }</span></span>
 <span id="L23"><span class="lineNum">      23</span>                 :             : </span>
 <span id="L24"><span class="lineNum">      24</span>                 :             : // Suppress &quot;AUTOSAR C++14 A12-6-1&quot; rule finding. This rule declares: &quot;All class data members that are</span>
 <span id="L25"><span class="lineNum">      25</span>                 :             : // initialized by the constructor shall be initialized using member initializers&quot;.</span>
@@ -105,32 +105,32 @@
 <span id="L27"><span class="lineNum">      27</span>                 :             : // coverity[autosar_cpp14_a12_6_1_violation]</span>
 <span id="L28"><span class="lineNum">      28</span>                 :             : LolaServiceInstanceIdentifier::LolaServiceInstanceIdentifier(</span>
 <span id="L29"><span class="lineNum">      29</span>                 :             :     const EnrichedInstanceIdentifier&amp; enriched_instance_identifier) noexcept</span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          20 :     : LolaServiceInstanceIdentifier{</span></span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">          20 :           enriched_instance_identifier.GetBindingSpecificServiceId&lt;LolaServiceTypeDeployment&gt;().value()}</span></span>
-<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">          20 : {</span></span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">          20 :     const auto&amp; expected_instance_id =</span></span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">          20 :         enriched_instance_identifier.GetBindingSpecificInstanceId&lt;LolaServiceInstanceId&gt;();</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">         186 :     : LolaServiceInstanceIdentifier{</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">         186 :           enriched_instance_identifier.GetBindingSpecificServiceId&lt;LolaServiceTypeDeployment&gt;().value()}</span></span>
+<span id="L32"><span class="lineNum">      32</span>                 :<span class="tlaGNC">         186 : {</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         186 :     const auto&amp; expected_instance_id =</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">         186 :         enriched_instance_identifier.GetBindingSpecificInstanceId&lt;LolaServiceInstanceId&gt;();</span></span>
 <span id="L35"><span class="lineNum">      35</span>                 :             : </span>
-<span id="L36"><span class="lineNum">      36</span>         [<span class="tlaGBC" title="Branch 0 was taken 20 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          20 :     if (expected_instance_id.has_value())</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          20 :     {</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">          20 :         instance_id_ = expected_instance_id.value();</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          20 :     }</span></span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">          20 : }</span></span>
+<span id="L36"><span class="lineNum">      36</span>         [<span class="tlaGBC" title="Branch 0 was taken 149 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 37 times"> + </span>]:<span class="tlaGNC">         186 :     if (expected_instance_id.has_value())</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">         149 :     {</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">         149 :         instance_id_ = expected_instance_id.value();</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         149 :     }</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">         186 : }</span></span>
 <span id="L41"><span class="lineNum">      41</span>                 :             : </span>
 <span id="L42"><span class="lineNum">      42</span>                 :             : LolaServiceId LolaServiceInstanceIdentifier::GetServiceId() const noexcept</span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          84 : {</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          84 :     return service_id_;</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          84 : }</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">         564 : {</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">         564 :     return service_id_;</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">         564 : }</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :             : </span>
 <span id="L47"><span class="lineNum">      47</span>                 :             : std::optional&lt;LolaServiceInstanceId::InstanceId&gt; LolaServiceInstanceIdentifier::GetInstanceId() const noexcept</span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">         104 : {</span></span>
-<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">         104 :     return instance_id_;</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">         104 : }</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">         729 : {</span></span>
+<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">         729 :     return instance_id_;</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">         729 : }</span></span>
 <span id="L51"><span class="lineNum">      51</span>                 :             : </span>
 <span id="L52"><span class="lineNum">      52</span>                 :             : bool operator==(const LolaServiceInstanceIdentifier&amp; lhs, const LolaServiceInstanceIdentifier&amp; rhs) noexcept</span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">          20 : {</span></span>
-<span id="L54"><span class="lineNum">      54</span> [<span class="tlaGBC" title="Branch 0 was taken 20 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 20 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          20 :     return (lhs.GetServiceId() == rhs.GetServiceId()) &amp;&amp; (lhs.GetInstanceId() == rhs.GetInstanceId());</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">          20 : }</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">         102 : {</span></span>
+<span id="L54"><span class="lineNum">      54</span> [<span class="tlaGBC" title="Branch 0 was taken 101 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 100 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">         102 :     return (lhs.GetServiceId() == rhs.GetServiceId()) &amp;&amp; (lhs.GetInstanceId() == rhs.GetInstanceId());</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">         102 : }</span></span>
 <span id="L56"><span class="lineNum">      56</span>                 :             : </span>
 <span id="L57"><span class="lineNum">      57</span>                 :             : }  // namespace score::mw::com::impl::lola</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             : </span>
@@ -140,17 +140,17 @@
 <span id="L62"><span class="lineNum">      62</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation]</span>
 <span id="L63"><span class="lineNum">      63</span>                 :             : std::size_t std::hash&lt;score::mw::com::impl::lola::LolaServiceInstanceIdentifier&gt;::operator()(</span>
 <span id="L64"><span class="lineNum">      64</span>                 :             :     const score::mw::com::impl::lola::LolaServiceInstanceIdentifier&amp; identifier) const noexcept</span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          32 : {</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          32 :     static_assert(sizeof(score::mw::com::impl::LolaServiceId) &lt;= 4U);</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">          32 :     static_assert(sizeof(score::mw::com::impl::LolaServiceInstanceId::InstanceId) &lt;= 2U);</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">          32 :     std::size_t result{static_cast&lt;std::size_t&gt;(identifier.GetServiceId()) &lt;&lt; 32U};</span></span>
-<span id="L69"><span class="lineNum">      69</span>         [<span class="tlaGBC" title="Branch 0 was taken 20 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 12 times"> + </span>]:<span class="tlaGNC">          32 :     if (identifier.GetInstanceId().has_value())</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          20 :     {</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          20 :         result += static_cast&lt;std::size_t&gt;(identifier.GetInstanceId().value()) &lt;&lt; 16U;</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          20 :         result += 1U;</span></span>
-<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">          20 :     }</span></span>
-<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">          32 :     return result;</span></span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">          32 : }</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">         273 : {</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">         273 :     static_assert(sizeof(score::mw::com::impl::LolaServiceId) &lt;= 4U);</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">         273 :     static_assert(sizeof(score::mw::com::impl::LolaServiceInstanceId::InstanceId) &lt;= 2U);</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">         273 :     std::size_t result{static_cast&lt;std::size_t&gt;(identifier.GetServiceId()) &lt;&lt; 32U};</span></span>
+<span id="L69"><span class="lineNum">      69</span>         [<span class="tlaGBC" title="Branch 0 was taken 146 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 127 times"> + </span>]:<span class="tlaGNC">         273 :     if (identifier.GetInstanceId().has_value())</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         146 :     {</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         146 :         result += static_cast&lt;std::size_t&gt;(identifier.GetInstanceId().value()) &lt;&lt; 16U;</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">         146 :         result += 1U;</span></span>
+<span id="L73"><span class="lineNum">      73</span>                 :<span class="tlaGNC">         146 :     }</span></span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">         273 :     return result;</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         273 : }</span></span>
         </pre>
               </td>
             </tr>

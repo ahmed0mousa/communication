@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 03:00:54</td>
+            <td class="headerValue">2026-05-18 06:46:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -96,17 +96,17 @@
 <span id="L18"><span class="lineNum">      18</span>                 :             : // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use</span>
 <span id="L19"><span class="lineNum">      19</span>                 :             : // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above</span>
 <span id="L20"><span class="lineNum">      20</span>                 :             : std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept</span>
-<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC tlaBgGNC">          76 : {</span></span>
+<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC tlaBgGNC">        1608 : {</span></span>
 <span id="L22"><span class="lineNum">      22</span>                 :             :     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string</span>
 <span id="L23"><span class="lineNum">      23</span>                 :             :     /// with no dynamic allocations.</span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          76 :     std::stringstream stream;</span></span>
-<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 76 times"> + </span>]:<span class="tlaGNC">          76 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(hash_string_size &lt;= static_cast&lt;std::size_t&gt;(std::numeric_limits&lt;int&gt;::max()));</span></span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">        1608 :     std::stringstream stream;</span></span>
+<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 1608 times"> + </span>]:<span class="tlaGNC">        1608 :     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(hash_string_size &lt;= static_cast&lt;std::size_t&gt;(std::numeric_limits&lt;int&gt;::max()));</span></span>
 <span id="L26"><span class="lineNum">      26</span>                 :             :     // Passing std::hex to std::stringstream object with the stream operator follows the idiomatic way that both</span>
 <span id="L27"><span class="lineNum">      27</span>                 :             :     // features in conjunction were designed in the C++ standard.</span>
 <span id="L28"><span class="lineNum">      28</span>                 :             :     // coverity[autosar_cpp14_m8_4_4_violation] See above</span>
-<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">          76 :     stream &lt;&lt; std::setfill('0') &lt;&lt; std::setw(static_cast&lt;int&gt;(hash_string_size)) &lt;&lt; std::hex &lt;&lt; instance_id;</span></span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          76 :     return stream.str();</span></span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">          76 : }</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">        1608 :     stream &lt;&lt; std::setfill('0') &lt;&lt; std::setw(static_cast&lt;int&gt;(hash_string_size)) &lt;&lt; std::hex &lt;&lt; instance_id;</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">        1608 :     return stream.str();</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">        1608 : }</span></span>
 <span id="L32"><span class="lineNum">      32</span>                 :             : </span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : // Suppress &quot;AUTOSAR C++14 A15-5-3&quot; rule finding. This rule states: &quot;The std::terminate() function shall not be called</span>
 <span id="L34"><span class="lineNum">      34</span>                 :             : //                                                                   implicitly&quot;</span>
@@ -116,11 +116,11 @@
 <span id="L38"><span class="lineNum">      38</span>                 :             : // a terminate callfunction didn't succeed in parsing the json. In this case termination is the intended behaviour.</span>
 <span id="L39"><span class="lineNum">      39</span>                 :             : // coverity[autosar_cpp14_a15_5_3_violation]</span>
 <span id="L40"><span class="lineNum">      40</span>                 :             : std::string ToStringImpl(const json::Object&amp; serialized_json_object) noexcept</span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          65 : {</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          65 :     score::json::JsonWriter writer{};</span></span>
-<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">          65 :     const std::string serialized_form = writer.ToBuffer(serialized_json_object).value();</span></span>
-<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">          65 :     return serialized_form;</span></span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">          65 : }</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">        4355 : {</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">        4355 :     score::json::JsonWriter writer{};</span></span>
+<span id="L43"><span class="lineNum">      43</span>                 :<span class="tlaGNC">        4355 :     const std::string serialized_form = writer.ToBuffer(serialized_json_object).value();</span></span>
+<span id="L44"><span class="lineNum">      44</span>                 :<span class="tlaGNC">        4355 :     return serialized_form;</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">        4355 : }</span></span>
 <span id="L46"><span class="lineNum">      46</span>                 :             : </span>
 <span id="L47"><span class="lineNum">      47</span>                 :             : }  // namespace score::mw::com::impl</span>
         </pre>

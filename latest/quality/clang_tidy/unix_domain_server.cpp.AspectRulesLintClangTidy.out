@@ -42,14 +42,14 @@
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:56:32: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
    56 |     std::memcpy(addr_.sun_path + (isAbstract ? 1 : 0), path.data(), len);
       |                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/3923/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:106:18: warning: variable 'code' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/1856/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:106:18: warning: variable 'code' is not initialized [cppcoreguidelines-init-variables]
   106 |     std::uint8_t code;
       |                  ^   
       |                       = 0
-/home/runner/.bazel/sandbox/linux-sandbox/3923/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:171:64: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+/home/runner/.bazel/sandbox/linux-sandbox/1856/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:171:64: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
   171 | score::cpp::expected_blank<score::os::Error> UnixDomainServer::StartListening(
       |                                                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/3923/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:247:5: warning: uninitialized record type: 'cr' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1856/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:247:5: warning: uninitialized record type: 'cr' [cppcoreguidelines-pro-type-member-init]
   247 |     ucred cr;
       |     ^       
       |             {}

@@ -2,7 +2,7 @@
 ./score/mw/com/impl/configuration/test/configuration_test_resources.h:46:29: warning: function 'score::mw::com::impl::MakeLolaEventInstanceDeployment' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    46 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
       |                             ^
-/home/runner/.bazel/sandbox/linux-sandbox/3760/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:35:29: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/1983/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:35:29: note: the definition seen here
    35 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
       |                             ^
 ./score/mw/com/impl/configuration/test/configuration_test_resources.h:46:29: note: differing parameters are named here: ('number_of_sample_slots'), in definition: ('max_samples')

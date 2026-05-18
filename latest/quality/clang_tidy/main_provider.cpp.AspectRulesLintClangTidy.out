@@ -1,5 +1,5 @@
 8751 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/5166/execroot/_main/score/mw/com/test/methods/signature_variations/main_provider.cpp:32:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/4864/execroot/_main/score/mw/com/test/methods/signature_variations/main_provider.cpp:32:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
    32 |     return score::mw::com::test::run_provider(stop_source.get_token());
       |            ^                                                          
       |            static_cast<int>(                                          )
