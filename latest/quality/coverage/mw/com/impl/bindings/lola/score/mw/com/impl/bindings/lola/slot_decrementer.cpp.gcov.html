@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">27</td>
-            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 21:39:44</td>
+            <td class="headerValue">2026-05-18 03:00:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">4</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -98,26 +98,26 @@
 <span id="L20"><span class="lineNum">      20</span>                 :             : </span>
 <span id="L21"><span class="lineNum">      21</span>                 :             : SlotDecrementer::SlotDecrementer(ConsumerEventDataControlLocalView&lt;&gt;&amp; event_data_control_local,</span>
 <span id="L22"><span class="lineNum">      22</span>                 :             :                                  const SlotIndexType event_slot_index) noexcept</span>
-<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC tlaBgGNC">          50 :     : event_data_control_local_{&amp;event_data_control_local}, event_slot_index_{event_slot_index}</span></span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          50 : {</span></span>
-<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC">          50 : }</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     : event_data_control_local_{&amp;event_data_control_local}, event_slot_index_{event_slot_index}</span></span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L26"><span class="lineNum">      26</span>                 :             : </span>
 <span id="L27"><span class="lineNum">      27</span>                 :             : SlotDecrementer::~SlotDecrementer() noexcept</span>
-<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">         302 : {</span></span>
-<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">         302 :     internal_delete();</span></span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">         302 : }</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaUNC">           0 :     internal_delete();</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L31"><span class="lineNum">      31</span>                 :             : </span>
 <span id="L32"><span class="lineNum">      32</span>                 :             : SlotDecrementer::SlotDecrementer(SlotDecrementer&amp;&amp; other) noexcept</span>
-<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaGNC">         252 :     : event_data_control_local_{other.event_data_control_local_},</span></span>
+<span id="L33"><span class="lineNum">      33</span>                 :<span class="tlaUNC">           0 :     : event_data_control_local_{other.event_data_control_local_},</span></span>
 <span id="L34"><span class="lineNum">      34</span>                 :             :       // Suppress &quot;AUTOSAR C++14 A12-8-4&quot; rule finding. This rule states: &quot;Move constructor shall not initialize its</span>
 <span id="L35"><span class="lineNum">      35</span>                 :             :       // class members and base classes using copy semantics.&quot;</span>
 <span id="L36"><span class="lineNum">      36</span>                 :             :       // Rationale: False positive - std::move is used which will result in the move constructor of</span>
 <span id="L37"><span class="lineNum">      37</span>                 :             :       // event_slot_index_ being called.</span>
 <span id="L38"><span class="lineNum">      38</span>                 :             :       // coverity[autosar_cpp14_a12_8_4_violation : FALSE]</span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         252 :       event_slot_index_{std::move(other.event_slot_index_)}</span></span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">         252 : {</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">         252 :     other.event_data_control_local_ = nullptr;</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">         252 : }</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaUNC">           0 :       event_slot_index_{std::move(other.event_slot_index_)}</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaUNC">           0 :     other.event_data_control_local_ = nullptr;</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L43"><span class="lineNum">      43</span>                 :             : </span>
 <span id="L44"><span class="lineNum">      44</span>                 :             : // Suppress &quot;AUTOSAR C++14 A6-2-1&quot; rule violation. The rule states &quot;Move and copy assignment operators shall either move</span>
 <span id="L45"><span class="lineNum">      45</span>                 :             : // or respectively copy base classes and data members of a class, without any side effects.&quot; Due to architectural</span>
@@ -125,25 +125,25 @@
 <span id="L47"><span class="lineNum">      47</span>                 :             : // Therefore, side effects are required.</span>
 <span id="L48"><span class="lineNum">      48</span>                 :             : // coverity[autosar_cpp14_a6_2_1_violation]</span>
 <span id="L49"><span class="lineNum">      49</span>                 :             : SlotDecrementer&amp; SlotDecrementer::operator=(SlotDecrementer&amp;&amp; other) noexcept</span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">           4 : {</span></span>
-<span id="L51"><span class="lineNum">      51</span>         [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">           4 :     if (this != &amp;other)</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">           3 :     {</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">           3 :         internal_delete();</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">           3 :         event_data_control_local_ = other.event_data_control_local_;</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">           3 :         event_slot_index_ = other.event_slot_index_;</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L51"><span class="lineNum">      51</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     if (this != &amp;other)</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaUNC">           0 :         internal_delete();</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaUNC">           0 :         event_data_control_local_ = other.event_data_control_local_;</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaUNC">           0 :         event_slot_index_ = other.event_slot_index_;</span></span>
 <span id="L56"><span class="lineNum">      56</span>                 :             : </span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">           3 :         other.event_data_control_local_ = nullptr;</span></span>
-<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">           3 :     }</span></span>
-<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaGNC">           4 :     return *this;</span></span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">           4 : }</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaUNC">           0 :         other.event_data_control_local_ = nullptr;</span></span>
+<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaUNC">           0 :     return *this;</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
 <span id="L62"><span class="lineNum">      62</span>                 :             : void SlotDecrementer::internal_delete() noexcept</span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">         305 : {</span></span>
-<span id="L64"><span class="lineNum">      64</span>         [<span class="tlaGBC" title="Branch 0 was taken 50 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 255 times"> + </span>]:<span class="tlaGNC">         305 :     if (event_data_control_local_ != nullptr)</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          50 :     {</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">          50 :         event_data_control_local_-&gt;DereferenceEvent(event_slot_index_);</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">          50 :     }</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">         305 : }</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L64"><span class="lineNum">      64</span>         [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     if (event_data_control_local_ != nullptr)</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaUNC">           0 :         event_data_control_local_-&gt;DereferenceEvent(event_slot_index_);</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L69"><span class="lineNum">      69</span>                 :             : </span>
 <span id="L70"><span class="lineNum">      70</span>                 :             : }  // namespace score::mw::com::impl::lola</span>
         </pre>

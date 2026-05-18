@@ -32,17 +32,17 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">19</td>
-            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 21:39:44</td>
+            <td class="headerValue">2026-05-18 03:00:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">10</td>
-            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">8</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryHi">-</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -112,9 +112,9 @@
 <span id="L34"><span class="lineNum">      34</span>                 :             :     // NOLINTBEGIN(google-explicit-constructor): Explanation provided below.</span>
 <span id="L35"><span class="lineNum">      35</span>                 :             :     // We want to have implicit conversions exactly as std::atomic allows as this is just a wrapper around std::atomic.</span>
 <span id="L36"><span class="lineNum">      36</span>                 :             :     // coverity[autosar_cpp14_a12_1_4_violation]</span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC tlaBgGNC">        1489 :     explicit CopyableAtomic(T desired) noexcept : atomic_{desired} {}</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC tlaBgGNC">         196 :     explicit CopyableAtomic(T desired) noexcept : atomic_{desired} {}</span></span>
 <span id="L38"><span class="lineNum">      38</span>                 :             :     // NOLINTEND(google-explicit-constructor): see above for detailed explanation</span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">        5883 :     CopyableAtomic(const CopyableAtomic&amp; other) noexcept : atomic_{other.atomic_.load()} {}</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">         342 :     CopyableAtomic(const CopyableAtomic&amp; other) noexcept : atomic_{other.atomic_.load()} {}</span></span>
 <span id="L40"><span class="lineNum">      40</span>                 :             :     // We have to provide a move-ctor because of clan-tidy &lt;cppcoreguidelines-special-member-functions&gt;, since we</span>
 <span id="L41"><span class="lineNum">      41</span>                 :             :     // did explicitly define copy-ctor/copy-assign. Factually we don't want to provide a move-ctor as it shall fall back</span>
 <span id="L42"><span class="lineNum">      42</span>                 :             :     // to copy-ctor. But deleting it would NOT hinder it from being chosen in overload resolution and then lead to an</span>
@@ -123,14 +123,14 @@
 <span id="L45"><span class="lineNum">      45</span>                 :             :     // \see https://en.cppreference.com/w/cpp/language/move_constructor -&gt; Deleted move constructor</span>
 <span id="L46"><span class="lineNum">      46</span>                 :             :     CopyableAtomic(CopyableAtomic&amp;&amp; other) noexcept = default;</span>
 <span id="L47"><span class="lineNum">      47</span>                 :             :     CopyableAtomic&amp; operator=(const CopyableAtomic&amp; rhs) noexcept</span>
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">           2 :     {</span></span>
-<span id="L49"><span class="lineNum">      49</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">           2 :         if (this == &amp;rhs)</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">           1 :         {</span></span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">           1 :             return *this;</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">           1 :         }</span></span>
-<span id="L53"><span class="lineNum">      53</span>                 :<span class="tlaGNC">           1 :         this-&gt;atomic_.store(rhs.atomic_.load());</span></span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">           1 :         return *this;</span></span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC">           2 :     }</span></span>
+<span id="L48"><span class="lineNum">      48</span>                 :             :     {</span>
+<span id="L49"><span class="lineNum">      49</span>                 :             :         if (this == &amp;rhs)</span>
+<span id="L50"><span class="lineNum">      50</span>                 :             :         {</span>
+<span id="L51"><span class="lineNum">      51</span>                 :             :             return *this;</span>
+<span id="L52"><span class="lineNum">      52</span>                 :             :         }</span>
+<span id="L53"><span class="lineNum">      53</span>                 :             :         this-&gt;atomic_.store(rhs.atomic_.load());</span>
+<span id="L54"><span class="lineNum">      54</span>                 :             :         return *this;</span>
+<span id="L55"><span class="lineNum">      55</span>                 :             :     }</span>
 <span id="L56"><span class="lineNum">      56</span>                 :             : </span>
 <span id="L57"><span class="lineNum">      57</span>                 :             :     // Same as move-ctor above!</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :     CopyableAtomic&amp; operator=(CopyableAtomic&amp;&amp; rhs) noexcept = default;</span>
@@ -141,25 +141,25 @@
 <span id="L63"><span class="lineNum">      63</span>                 :             :     // We want to have implicit conversions exactly as std::atomic allows as this is just a wrapper around std::atomic.</span>
 <span id="L64"><span class="lineNum">      64</span>                 :             :     // coverity[autosar_cpp14_a13_5_2_violation]</span>
 <span id="L65"><span class="lineNum">      65</span>                 :             :     operator T() const noexcept</span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">        1298 :     {</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">        1298 :         return atomic_.operator T();</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">        1298 :     }</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">           6 :     {</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">           6 :         return atomic_.operator T();</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">           6 :     }</span></span>
 <span id="L69"><span class="lineNum">      69</span>                 :             :     // NOLINTEND(google-explicit-constructor): see above for detailed explanation</span>
 <span id="L70"><span class="lineNum">      70</span>                 :             :     std::atomic&lt;T&gt;&amp; GetUnderlying()</span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">        2243 :     {</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          10 :     {</span></span>
 <span id="L72"><span class="lineNum">      72</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A9-3-1&quot; rule finding: &quot;Member functions shall not return non-const “raw” pointers or</span>
 <span id="L73"><span class="lineNum">      73</span>                 :             :         // references to private or protected data owned by the class.&quot;.</span>
 <span id="L74"><span class="lineNum">      74</span>                 :             :         // CopyableAtomic is just a small wrapper of std::atomic, to make it copyable. So exposing the full</span>
 <span id="L75"><span class="lineNum">      75</span>                 :             :         // functionality of the wrapped member efficiently is intended! API callers get the reference and use it in</span>
 <span id="L76"><span class="lineNum">      76</span>                 :             :         // place without leaving the scope, so the reference remains valid.</span>
 <span id="L77"><span class="lineNum">      77</span>                 :             :         // coverity[autosar_cpp14_a9_3_1_violation]</span>
-<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">        2243 :         return atomic_;</span></span>
-<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">        2243 :     }</span></span>
+<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">          10 :         return atomic_;</span></span>
+<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">          10 :     }</span></span>
 <span id="L80"><span class="lineNum">      80</span>                 :             : </span>
 <span id="L81"><span class="lineNum">      81</span>                 :             :     const std::atomic&lt;T&gt;&amp; GetUnderlying() const</span>
-<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">        1548 :     {</span></span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">        1548 :         return atomic_;</span></span>
-<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">        1548 :     }</span></span>
+<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">           5 :     {</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">           5 :         return atomic_;</span></span>
+<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">           5 :     }</span></span>
 <span id="L85"><span class="lineNum">      85</span>                 :             : </span>
 <span id="L86"><span class="lineNum">      86</span>                 :             :   private:</span>
 <span id="L87"><span class="lineNum">      87</span>                 :             :     std::atomic&lt;T&gt; atomic_;</span>

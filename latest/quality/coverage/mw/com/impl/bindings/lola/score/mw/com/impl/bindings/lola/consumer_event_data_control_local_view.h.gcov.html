@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
             <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">6</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 21:39:44</td>
+            <td class="headerValue">2026-05-18 03:00:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
+            <td class="headerCovTableEntryLo">33.3&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -204,9 +204,9 @@
 <span id="L126"><span class="lineNum">     126</span>                 :             : </span>
 <span id="L127"><span class="lineNum">     127</span>                 :             :     /// \brief Returns the max sample slots set on creation of EventDataControl</span>
 <span id="L128"><span class="lineNum">     128</span>                 :             :     std::size_t GetMaxSampleSlots() const noexcept</span>
-<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaGNC tlaBgGNC">          12 :     {</span></span>
-<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaGNC">          12 :         return state_slots_.size();</span></span>
-<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaGNC">          12 :     }</span></span>
+<span id="L129"><span class="lineNum">     129</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
+<span id="L130"><span class="lineNum">     130</span>                 :<span class="tlaUNC">           0 :         return state_slots_.size();</span></span>
+<span id="L131"><span class="lineNum">     131</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L132"><span class="lineNum">     132</span>                 :             : </span>
 <span id="L133"><span class="lineNum">     133</span>                 :             :     // helper for performance indication (no production usage)</span>
 <span id="L134"><span class="lineNum">     134</span>                 :             :     static void DumpPerformanceCounters();</span>
@@ -218,17 +218,17 @@
 <span id="L140"><span class="lineNum">     140</span>                 :             :     ///</span>
 <span id="L141"><span class="lineNum">     141</span>                 :             :     /// This will be called in the constructor of TransactionLogRegistrationGuard.</span>
 <span id="L142"><span class="lineNum">     142</span>                 :             :     void SetTransactionLogLocalView(TransactionLogLocalView transaction_log_local_view) noexcept</span>
-<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC">         460 :     {</span></span>
-<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">         460 :         transaction_log_local_view_.emplace(transaction_log_local_view);</span></span>
-<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">         460 :     }</span></span>
+<span id="L143"><span class="lineNum">     143</span>                 :<span class="tlaGNC tlaBgGNC">           2 :     {</span></span>
+<span id="L144"><span class="lineNum">     144</span>                 :<span class="tlaGNC">           2 :         transaction_log_local_view_.emplace(transaction_log_local_view);</span></span>
+<span id="L145"><span class="lineNum">     145</span>                 :<span class="tlaGNC">           2 :     }</span></span>
 <span id="L146"><span class="lineNum">     146</span>                 :             : </span>
 <span id="L147"><span class="lineNum">     147</span>                 :             :     /// \brief Clears the cached TransactionLogLocalView.</span>
 <span id="L148"><span class="lineNum">     148</span>                 :             :     ///</span>
 <span id="L149"><span class="lineNum">     149</span>                 :             :     /// This will be called in the destructor of TransactionLogRegistrationGuard.</span>
 <span id="L150"><span class="lineNum">     150</span>                 :             :     void ClearTransactionLogLocalView() noexcept</span>
-<span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">         330 :     {</span></span>
-<span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">         330 :         transaction_log_local_view_.reset();</span></span>
-<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">         330 :     }</span></span>
+<span id="L151"><span class="lineNum">     151</span>                 :<span class="tlaGNC">           2 :     {</span></span>
+<span id="L152"><span class="lineNum">     152</span>                 :<span class="tlaGNC">           2 :         transaction_log_local_view_.reset();</span></span>
+<span id="L153"><span class="lineNum">     153</span>                 :<span class="tlaGNC">           2 :     }</span></span>
 <span id="L154"><span class="lineNum">     154</span>                 :             : </span>
 <span id="L155"><span class="lineNum">     155</span>                 :             :     LocalEventControlSlots state_slots_;</span>
 <span id="L156"><span class="lineNum">     156</span>                 :             : </span>

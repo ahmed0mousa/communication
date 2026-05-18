@@ -31,13 +31,13 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryMed">75.0&nbsp;%</td>
             <td class="headerCovTableEntry">12</td>
-            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">9</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 21:39:44</td>
+            <td class="headerValue">2026-05-18 03:00:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
             <td class="headerCovTableEntry">4</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">2</td>
           </tr>
                   <tr><td><img src="../../../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -94,19 +94,19 @@
 <span id="L16"><span class="lineNum">      16</span>                 :             : {</span>
 <span id="L17"><span class="lineNum">      17</span>                 :             : </span>
 <span id="L18"><span class="lineNum">      18</span>                 :             : std::ostream&amp; operator&lt;&lt;(std::ostream&amp; ostream_out, const ShmSizeCalculationMode&amp; mode)</span>
-<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC tlaBgGNC">          16 : {</span></span>
-<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC">          16 :     switch (mode)</span></span>
-<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC">          16 :     {</span></span>
-<span id="L22"><span class="lineNum">      22</span>         [<span class="tlaGBC" title="Branch 0 was taken 15 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          15 :         case ShmSizeCalculationMode::kSimulation:</span></span>
-<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">          15 :             ostream_out &lt;&lt; &quot;SIMULATION&quot;;</span></span>
-<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          15 :             break;</span></span>
-<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 15 times"> + </span>]:<span class="tlaGNC">           1 :         default:</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">           1 :             ostream_out &lt;&lt; &quot;(unknown)&quot;;</span></span>
-<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">           1 :             break;</span></span>
-<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">          16 :     }</span></span>
+<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC tlaBgGNC">          12 : {</span></span>
+<span id="L20"><span class="lineNum">      20</span>                 :<span class="tlaGNC">          12 :     switch (mode)</span></span>
+<span id="L21"><span class="lineNum">      21</span>                 :<span class="tlaGNC">          12 :     {</span></span>
+<span id="L22"><span class="lineNum">      22</span>         [<span class="tlaGBC" title="Branch 0 was taken 12 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">          12 :         case ShmSizeCalculationMode::kSimulation:</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">          12 :             ostream_out &lt;&lt; &quot;SIMULATION&quot;;</span></span>
+<span id="L24"><span class="lineNum">      24</span>                 :<span class="tlaGNC">          12 :             break;</span></span>
+<span id="L25"><span class="lineNum">      25</span>         [<span class="tlaUNC" title="Branch 0 was not taken"> - </span><span class="tlaGBC" title="Branch 1 was taken 12 times"> + </span>]:<span class="tlaUNC tlaBgUNC">           0 :         default:</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaUNC">           0 :             ostream_out &lt;&lt; &quot;(unknown)&quot;;</span></span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaUNC">           0 :             break;</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC tlaBgGNC">          12 :     }</span></span>
 <span id="L29"><span class="lineNum">      29</span>                 :             : </span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          16 :     return ostream_out;</span></span>
-<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">          16 : }</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          12 :     return ostream_out;</span></span>
+<span id="L31"><span class="lineNum">      31</span>                 :<span class="tlaGNC">          12 : }</span></span>
 <span id="L32"><span class="lineNum">      32</span>                 :             : </span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : }  // namespace score::mw::com::impl</span>
         </pre>

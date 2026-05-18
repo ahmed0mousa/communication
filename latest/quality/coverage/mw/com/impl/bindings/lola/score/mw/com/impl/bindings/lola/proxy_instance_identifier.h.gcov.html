@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">91.7&nbsp;%</td>
-            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 21:39:44</td>
+            <td class="headerValue">2026-05-18 03:00:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -136,18 +136,18 @@
 <span id="L58"><span class="lineNum">      58</span>                 :             :   public:</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     std::size_t operator()(</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             :         const score::mw::com::impl::lola::ProxyInstanceIdentifier&amp; proxy_instance_identifier) const noexcept</span>
-<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaGNC tlaBgGNC">          57 :     {</span></span>
-<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaGNC">          57 :         using ProxyInstanceIdentifier = score::mw::com::impl::lola::ProxyInstanceIdentifier;</span></span>
-<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaGNC">          57 :         static_assert(sizeof(ProxyInstanceIdentifier::application_id) +</span></span>
-<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaGNC">          57 :                           sizeof(ProxyInstanceIdentifier::proxy_instance_counter) &lt;</span></span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC">          57 :                       sizeof(std::uint64_t));</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaUNC tlaBgUNC">           0 : </span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC tlaBgGNC">          57 :         constexpr auto proxy_instance_counter_bit_width =</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">          57 :             std::numeric_limits&lt;decltype(proxy_instance_identifier.proxy_instance_counter)&gt;::digits;</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">          57 :         return std::hash&lt;std::uint64_t&gt;{}((static_cast&lt;std::uint64_t&gt;(proxy_instance_identifier.application_id)</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">          57 :                                            &lt;&lt; static_cast&lt;std::uint64_t&gt;(proxy_instance_counter_bit_width)) |</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">          57 :                                           static_cast&lt;std::uint64_t&gt;(proxy_instance_identifier.proxy_instance_counter));</span></span>
-<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaGNC">          57 :     }</span></span>
+<span id="L61"><span class="lineNum">      61</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
+<span id="L62"><span class="lineNum">      62</span>                 :<span class="tlaUNC">           0 :         using ProxyInstanceIdentifier = score::mw::com::impl::lola::ProxyInstanceIdentifier;</span></span>
+<span id="L63"><span class="lineNum">      63</span>                 :<span class="tlaUNC">           0 :         static_assert(sizeof(ProxyInstanceIdentifier::application_id) +</span></span>
+<span id="L64"><span class="lineNum">      64</span>                 :<span class="tlaUNC">           0 :                           sizeof(ProxyInstanceIdentifier::proxy_instance_counter) &lt;</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaUNC">           0 :                       sizeof(std::uint64_t));</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :             : </span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaUNC">           0 :         constexpr auto proxy_instance_counter_bit_width =</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaUNC">           0 :             std::numeric_limits&lt;decltype(proxy_instance_identifier.proxy_instance_counter)&gt;::digits;</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaUNC">           0 :         return std::hash&lt;std::uint64_t&gt;{}((static_cast&lt;std::uint64_t&gt;(proxy_instance_identifier.application_id)</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaUNC">           0 :                                            &lt;&lt; static_cast&lt;std::uint64_t&gt;(proxy_instance_counter_bit_width)) |</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaUNC">           0 :                                           static_cast&lt;std::uint64_t&gt;(proxy_instance_identifier.proxy_instance_counter));</span></span>
+<span id="L72"><span class="lineNum">      72</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L73"><span class="lineNum">      73</span>                 :             : };</span>
 <span id="L74"><span class="lineNum">      74</span>                 :             : </span>
 <span id="L75"><span class="lineNum">      75</span>                 :             : }  // namespace std</span>

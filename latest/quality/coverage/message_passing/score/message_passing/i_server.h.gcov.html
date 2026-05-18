@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-17 21:39:44</td>
+            <td class="headerValue">2026-05-18 03:00:54</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -109,7 +109,7 @@
 <span id="L31"><span class="lineNum">      31</span>                 :             : class IServer</span>
 <span id="L32"><span class="lineNum">      32</span>                 :             : {</span>
 <span id="L33"><span class="lineNum">      33</span>                 :             :   public:</span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC tlaBgGNC">         202 :     virtual ~IServer() = default;</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     virtual ~IServer() = default;</span></span>
 <span id="L35"><span class="lineNum">      35</span>                 :             : </span>
 <span id="L36"><span class="lineNum">      36</span>                 :             :     /// \brief Sets up the callbacks for connection, disconnection and message reception notifications.</span>
 <span id="L37"><span class="lineNum">      37</span>                 :             :     /// \details The callbacks lifetime (or rather the lifetime of the system state captured in the callbacks by</span>
@@ -131,7 +131,7 @@
 <span id="L53"><span class="lineNum">      53</span>                 :             :     virtual void StopListening() noexcept = 0;</span>
 <span id="L54"><span class="lineNum">      54</span>                 :             : </span>
 <span id="L55"><span class="lineNum">      55</span>                 :             :   protected:</span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">         202 :     IServer() noexcept = default;</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaUNC">           0 :     IServer() noexcept = default;</span></span>
 <span id="L57"><span class="lineNum">      57</span>                 :             :     IServer(const IServer&amp;) = delete;</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :     IServer(IServer&amp;&amp;) = delete;</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     IServer&amp; operator=(const IServer&amp;) = delete;</span>
