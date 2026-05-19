@@ -14,5 +14,13 @@
     "line_cov": 92.4,
     "func_cov": 68.3,
     "branch_cov": 79.9
+  },
+  {
+    "date": "2026-05-19 04:16 UTC",
+    "codeql": 0,
+    "clang_tidy": 3607,
+    "line_cov": 21.9,
+    "func_cov": 23.2,
+    "branch_cov": 14.5
   }
 ]

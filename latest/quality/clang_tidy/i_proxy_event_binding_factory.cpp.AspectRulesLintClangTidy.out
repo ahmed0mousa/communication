@@ -1,3 +1,23 @@
-6278 warnings generated.
-Suppressed 6393 warnings (6272 in non-user code, 115 NOLINT, 6 with check filters).
+13868 warnings generated.
+./score/mw/com/impl/plumbing/sample_ptr.h:96:5: warning: function 'get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   96 |     pointer get() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:124:5: warning: function 'Get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  124 |     pointer Get() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:133:46: warning: use c++14 style type templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/plumbing/sample_ptr.h:133:62: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+./score/mw/com/impl/plumbing/sample_ptr.h:148:82: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  148 |         return std::holds_alternative<score::cpp::blank>(binding_sample_ptr_) == false;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                !static_cast<bool>(std::holds_alternative<score::cpp::blank>(binding_sample_ptr_))
+Suppressed 13978 warnings (13856 in non-user code, 116 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

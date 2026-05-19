@@ -1,3 +1,41 @@
-9064 warnings generated.
-Suppressed 9251 warnings (9054 in non-user code, 187 NOLINT, 10 with check filters).
+21213 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:21:1: warning: included header stop_token.hpp is not used directly [misc-include-cleaner]
+   21 | #include <score/stop_token.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   22 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:25:1: warning: included header thread is not used directly [misc-include-cleaner]
+   25 | #include <thread>
+      | ^~~~~~~~~~~~~~~~~
+   26 | #include <vector>
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:26:1: warning: included header vector is not used directly [misc-include-cleaner]
+   26 | #include <vector>
+      | ^~~~~~~~~~~~~~~~~
+   27 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:28:6: warning: function 'CreateAndOfferSkeleton' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   28 | void CreateAndOfferSkeleton(const score::mw::com::InstanceSpecifier& instance_specifier, std::atomic_bool& success_flag)
+      |      ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:30:15: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   20 | #include <score/jthread.hpp>
+   21 | #include <score/stop_token.hpp>
+   22 | 
+   23 | #include <atomic>
+   24 | #include <iostream>
+   25 | #include <thread>
+   26 | #include <vector>
+   27 | 
+   28 | void CreateAndOfferSkeleton(const score::mw::com::InstanceSpecifier& instance_specifier, std::atomic_bool& success_flag)
+   29 | {
+   30 |     for (std::size_t j = 0; j < 10; ++j)
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:30:33: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   30 |     for (std::size_t j = 0; j < 10; ++j)
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:64:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   20 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4646/execroot/_main/score/mw/com/test/concurrent_skeleton_creation/concurrent_skeleton_creation_application.cpp:105:27: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+  105 |     return success_flag ? EXIT_SUCCESS : EXIT_FAILURE;
+      |                           ^
+Suppressed 21393 warnings (21195 in non-user code, 188 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

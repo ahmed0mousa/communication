@@ -1,3 +1,52 @@
-4979 warnings generated.
-Suppressed 5018 warnings (4973 in non-user code, 39 NOLINT, 6 with check filters).
+9689 warnings generated.
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:32:5: warning: function 'GetServiceInstanceExistenceMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     virtual std::string GetServiceInstanceExistenceMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:36:5: warning: function 'GetServiceInstanceUsageMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     virtual std::string GetServiceInstanceUsageMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:40:5: warning: function 'GetLolaPartialRestartDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual std::string GetLolaPartialRestartDirectoryPath() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/partial_restart_path_builder.h:34:5: warning: function 'GetServiceInstanceExistenceMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     std::string GetServiceInstanceExistenceMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/partial_restart_path_builder.h:38:5: warning: function 'GetServiceInstanceUsageMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string GetServiceInstanceUsageMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/partial_restart_path_builder.h:42:5: warning: function 'GetLolaPartialRestartDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     std::string GetLolaPartialRestartDirectoryPath() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/path_builder.h:44:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   44 |     else
+      |     ^~~~
+   45 |     {
+      |     ~
+   46 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+   47 |     }
+      |     ~
+./score/mw/com/impl/bindings/lola/path_builder.h:60:35: warning: the parameter 'prefix' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   60 | std::string EmitWithPrefix(Prefix prefix, Emitter emitter) noexcept
+      |                                   ^
+      |                            const &
+/home/runner/.bazel/sandbox/linux-sandbox/3868/execroot/_main/score/mw/com/impl/bindings/lola/partial_restart_path_builder.cpp:42:54: warning: no header providing "std::ostream" is directly included [misc-include-cleaner]
+   16 | void EmitServiceInstanceExistenceMarkerFileName(std::ostream& out,
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3868/execroot/_main/score/mw/com/impl/bindings/lola/partial_restart_path_builder.cpp:43:60: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   16 |                                                 const std::uint16_t service_id,
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3868/execroot/_main/score/mw/com/impl/bindings/lola/partial_restart_path_builder.cpp:44:55: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   16 |                                                 const LolaServiceInstanceId::InstanceId instance_id) noexcept
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3868/execroot/_main/score/mw/com/impl/bindings/lola/partial_restart_path_builder.cpp:63:6: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   16 | std::string PartialRestartPathBuilder::GetServiceInstanceExistenceMarkerFilePath(
+      |      ^
+Suppressed 9716 warnings (9670 in non-user code, 40 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

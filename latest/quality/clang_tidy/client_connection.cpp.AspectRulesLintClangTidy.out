@@ -1,12 +1,284 @@
-4995 warnings generated.
+9587 warnings generated.
+./score/message_passing/client_connection.h:28:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   28 | namespace score
+      | ^~~~~~~~~~~~~~~
+   29 | {
+      | ~
+   30 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 | {
+      | ~
+   32 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+./score/message_passing/client_server_communication.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+./score/message_passing/i_client_connection.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/i_client_connection.h:141:5: warning: function 'GetState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  141 |     virtual State GetState() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/i_client_connection.h:144:5: warning: function 'GetStopReason' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  144 |     virtual StopReason GetStopReason() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/i_client_connection.h:160:5: warning: deleted member function should be public [modernize-use-equals-delete]
+  160 |     IClientConnection(const IClientConnection&) = delete;
+      |     ^
+./score/message_passing/i_client_connection.h:161:5: warning: deleted member function should be public [modernize-use-equals-delete]
+  161 |     IClientConnection(IClientConnection&&) = delete;
+      |     ^
+./score/message_passing/i_client_connection.h:162:24: warning: deleted member function should be public [modernize-use-equals-delete]
+  162 |     IClientConnection& operator=(const IClientConnection&) = delete;
+      |                        ^
+./score/message_passing/i_client_connection.h:163:24: warning: deleted member function should be public [modernize-use-equals-delete]
+  163 |     IClientConnection& operator=(IClientConnection&&) = delete;
+      |                        ^
+./score/message_passing/i_client_factory.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/i_client_factory.h:77:5: warning: deleted member function should be public [modernize-use-equals-delete]
+   77 |     IClientFactory(const IClientFactory&) = delete;
+      |     ^
+./score/message_passing/i_client_factory.h:78:5: warning: deleted member function should be public [modernize-use-equals-delete]
+   78 |     IClientFactory(IClientFactory&&) = delete;
+      |     ^
+./score/message_passing/i_client_factory.h:79:21: warning: deleted member function should be public [modernize-use-equals-delete]
+   79 |     IClientFactory& operator=(const IClientFactory&) = delete;
+      |                     ^
+./score/message_passing/i_client_factory.h:80:21: warning: deleted member function should be public [modernize-use-equals-delete]
+   80 |     IClientFactory& operator=(IClientFactory&&) = delete;
+      |                     ^
+./score/message_passing/i_shared_resource_engine.h:26:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   26 | namespace score
+      | ^~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/i_shared_resource_engine.h:40:5: warning: function 'IsOnCallbackThread' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual bool IsOnCallbackThread() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/i_shared_resource_engine.h:92:5: warning: deleted member function should be public [modernize-use-equals-delete]
+   92 |     ISharedResourceEngine(const ISharedResourceEngine&) = delete;
+      |     ^
+./score/message_passing/i_shared_resource_engine.h:93:5: warning: deleted member function should be public [modernize-use-equals-delete]
+   93 |     ISharedResourceEngine(ISharedResourceEngine&&) = delete;
+      |     ^
+./score/message_passing/i_shared_resource_engine.h:94:28: warning: deleted member function should be public [modernize-use-equals-delete]
+   94 |     ISharedResourceEngine& operator=(const ISharedResourceEngine&) = delete;
+      |                            ^
+./score/message_passing/i_shared_resource_engine.h:95:28: warning: deleted member function should be public [modernize-use-equals-delete]
+   95 |     ISharedResourceEngine& operator=(ISharedResourceEngine&&) = delete;
+      |                            ^
+./score/message_passing/log/log.h:28:29: warning: use c++14 style type templates [modernize-type-traits]
+   28 | template <class T, typename std::enable_if<std::is_unsigned_v<T>, bool>::type = true>
+      |                    ~~~~~~~~ ^                                          ~~~~~~
+      |                                           _t
 ./score/message_passing/log/log.h:28:63: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    28 | template <class T, typename std::enable_if<std::is_unsigned_v<T>, bool>::type = true>
       |                                                               ^
+./score/message_passing/log/log.h:34:29: warning: use c++14 style type templates [modernize-type-traits]
+   34 | template <class T, typename std::enable_if<std::is_signed_v<T>, bool>::type = true>
+      |                    ~~~~~~~~ ^                                        ~~~~~~
+      |                                           _t
 ./score/message_passing/log/log.h:34:61: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    34 | template <class T, typename std::enable_if<std::is_signed_v<T>, bool>::type = true>
       |                                                             ^
+./score/message_passing/log/log.h:40:29: warning: use c++14 style type templates [modernize-type-traits]
+   40 | template <class T, typename std::enable_if<!std::is_same_v<T, const char>, bool>::type = true>
+      |                    ~~~~~~~~ ^                                                   ~~~~~~
+      |                                           _t
 ./score/message_passing/log/log.h:60:60: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
    60 |     return std::array<LogItem, sizeof...(Args)>{LogConvert(std::forward<Args>(args))...};
       |                                                            ^
-Suppressed 4960 warnings (4928 in non-user code, 29 NOLINT, 3 with check filters).
+./score/message_passing/non_allocating_future/non_allocating_future.h:50:5: warning: function 'GetValueForUpdate' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     Value& GetValueForUpdate() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/non_allocating_future/non_allocating_future.h:54:5: warning: function 'GetValue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     const Value& GetValue() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/service_protocol_config.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+   23 | {
+   24 | 
+   25 | /// \brief The common part of the library configuration of a server and a client
+   26 | // NOLINTNEXTLINE(cppcoreguidelines-pro-type-member-init) POD-like usage
+   27 | struct ServiceProtocolConfig
+   28 | {
+   29 |     std::string_view identifier;    ///< The server name in the service namespace
+   30 |     std::uint32_t max_send_size;    ///< Maximum size in bytes for the message from client to server
+   31 |     std::uint32_t max_reply_size;   ///< Maximum size in bytes for the reply from server to client
+   32 |     std::uint32_t max_notify_size;  ///< Maximum size in bytes for the notification message from server to client
+   33 | };
+   34 | 
+   35 | }  // namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | } // namespace score::message_passing
+./score/message_passing/timed_command_queue_entry.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:24:1: warning: included header iostream is not used directly [misc-include-cleaner]
+   24 | #include <iostream>
+      | ^~~~~~~~~~~~~~~~~~~
+   25 | #include <thread>
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:27:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   27 | namespace score
+      | ^~~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 | {
+      | ~
+   31 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:40:24: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+   20 | constexpr std::chrono::milliseconds kConnectIpcWarningDelay{20};
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:43:41: warning: no header providing "std::shared_ptr" is directly included [misc-include-cleaner]
+   20 | ClientConnection::ClientConnection(std::shared_ptr<ISharedResourceEngine> engine,
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:43:52: warning: no header providing "score::message_passing::ISharedResourceEngine" is directly included [misc-include-cleaner]
+   16 | ClientConnection::ClientConnection(std::shared_ptr<ISharedResourceEngine> engine,
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:44:42: warning: no header providing "score::message_passing::ServiceProtocolConfig" is directly included [misc-include-cleaner]
+   19 |                                    const ServiceProtocolConfig& protocol_config,
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:45:42: warning: no header providing "score::message_passing::IClientFactory" is directly included [misc-include-cleaner]
+   16 |                                    const IClientFactory::ClientConfig& client_config) noexcept
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:46:7: warning: no header providing "score::message_passing::IClientConnection" is directly included [misc-include-cleaner]
+   16 |     : IClientConnection{},
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:47:20: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   26 |       engine_{std::move(engine)},
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:50:30: warning: no header providing "std::max" is directly included [misc-include-cleaner]
+   20 |       max_receive_size_{std::max(protocol_config.max_reply_size, protocol_config.max_notify_size)},
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:55:42: warning: no header providing "score::cpp::pmr::make_shared" is directly included [misc-include-cleaner]
+   20 |       callback_context_{score::cpp::pmr::make_shared<CallbackContext>(engine_->GetMemoryResource())},
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:62:38: warning: no header providing "score::cpp::pmr::polymorphic_allocator" is directly included [misc-include-cleaner]
+   20 |                     score::cpp::pmr::polymorphic_allocator<>(engine_->GetMemoryResource())},
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:84:14: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   20 |         std::lock_guard<std::recursive_mutex> guard{callback_context_->finalize_mutex};
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:84:30: warning: no header providing "std::recursive_mutex" is directly included [misc-include-cleaner]
+   84 |         std::lock_guard<std::recursive_mutex> guard{callback_context_->finalize_mutex};
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:91:67: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   91 |             std::this_thread::sleep_for(std::chrono::milliseconds(10));
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:98:52: warning: no header providing "score::cpp::span" is directly included [misc-include-cleaner]
+   20 | bool ClientConnection::TryQueueMessage(score::cpp::span<const std::uint8_t> message, ReplyCallback callback) noexcept
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:107:34: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  107 |     send_command.callback = std::move(callback);
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:112:13: warning: no header providing "score::cpp::expected_blank" is directly included [misc-include-cleaner]
+   20 | score::cpp::expected_blank<score::os::Error> ClientConnection::Send(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:112:39: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   19 | score::cpp::expected_blank<score::os::Error> ClientConnection::Send(
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:117:28: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  117 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EMSGSIZE));
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:117:78: warning: no header providing "EMSGSIZE" is directly included [misc-include-cleaner]
+   20 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EMSGSIZE));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:121:78: warning: no header providing "EINVAL" is directly included [misc-include-cleaner]
+  121 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EINVAL));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:134:86: warning: no header providing "ENOBUFS" is directly included [misc-include-cleaner]
+  134 |                 return score::cpp::make_unexpected(score::os::Error::createFromErrno(ENOBUFS));
+      |                                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:153:13: warning: no header providing "score::cpp::expected" is directly included [misc-include-cleaner]
+  153 | score::cpp::expected<score::cpp::span<const std::uint8_t>, score::os::Error> ClientConnection::SendWaitReply(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:159:78: warning: no header providing "EAGAIN" is directly included [misc-include-cleaner]
+  159 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EAGAIN));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:177:53: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  177 |             future.UpdateValueMarkReady(score::cpp::make_unexpected(message_expected.error()));
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:188:35: warning: no header providing "std::memcpy" is directly included [misc-include-cleaner]
+   20 |         score::cpp::ignore = std::memcpy(reply.data(), reply_message.data(), reply_message.size());
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:193:10: warning: no header providing "std::unique_lock" is directly included [misc-include-cleaner]
+  193 |     std::unique_lock<std::mutex> lock(send_mutex_);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:204:44: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  204 |         if (!TryQueueMessage(message, std::move(callback)))
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:228:32: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  228 |             return score::cpp::make_unexpected(expected.error());
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:291:46: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  291 |     callback_context_->state_callback = std::move(state_callback);
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:292:29: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  292 |     notify_callback_ = std::move(notify_callback);
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:356:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_DBG" is directly included [misc-include-cleaner]
+   20 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_DBG(((stop_reason_ == StopReason::kNone) && (state_ == State::kStarting)) ||
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:370:49: warning: no header providing "ECONNREFUSED" is directly included [misc-include-cleaner]
+  370 |         if (((os_code != EAGAIN) && (os_code != ECONNREFUSED)) && (os_code != ENOENT))
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:370:79: warning: no header providing "ENOENT" is directly included [misc-include-cleaner]
+  370 |         if (((os_code != EAGAIN) && (os_code != ECONNREFUSED)) && (os_code != ENOENT))
+      |                                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:373:49: warning: no header providing "EACCES" is directly included [misc-include-cleaner]
+  373 |             StopReason stop_reason = os_code == EACCES ? StopReason::kPermission : StopReason::kIoError;
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/999/execroot/_main/score/message_passing/client_connection.cpp:455:27: warning: no header providing "EPIPE" is directly included [misc-include-cleaner]
+  455 |         return os_code == EPIPE ? StopReason::kClosedByPeer : StopReason::kIoError;
+      |                           ^
+Suppressed 9489 warnings (9456 in non-user code, 30 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

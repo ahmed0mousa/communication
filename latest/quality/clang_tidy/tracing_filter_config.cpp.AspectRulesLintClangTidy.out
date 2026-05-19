@@ -1,3 +1,167 @@
-6142 warnings generated.
-Suppressed 6248 warnings (6136 in non-user code, 106 NOLINT, 6 with check filters).
+12940 warnings generated.
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:42:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:46:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:50:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:54:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:31:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:35:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:39:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:43:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:31:31: warning: no header providing "score::mw::com::impl::tracing::ITracingFilterConfig" is directly included [misc-include-cleaner]
+   17 | #include "score/mw/com/impl/tracing/configuration/service_element_identifier_view.h"
+   18 | 
+   19 | #include "score/mw/log/logging.h"
+   20 | 
+   21 | #include <exception>
+   22 | #include <limits>
+   23 | #include <unordered_set>
+   24 | 
+   25 | namespace score::mw::com::impl::tracing
+   26 | {
+   27 | 
+   28 | namespace
+   29 | {
+   30 | 
+   31 | using InstanceSpecifierView = ITracingFilterConfig::InstanceSpecifierView;
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:33:12: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   23 | #include <unordered_set>
+   24 | 
+   25 | namespace score::mw::com::impl::tracing
+   26 | {
+   27 | 
+   28 | namespace
+   29 | {
+   30 | 
+   31 | using InstanceSpecifierView = ITracingFilterConfig::InstanceSpecifierView;
+   32 | 
+   33 | const std::string_view GetOrInsertStringInSet(const std::string_view key,
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:34:52: warning: no header providing "std::set" is directly included [misc-include-cleaner]
+   23 | #include <unordered_set>
+   24 | 
+   25 | namespace score::mw::com::impl::tracing
+   26 | {
+   27 | 
+   28 | namespace
+   29 | {
+   30 | 
+   31 | using InstanceSpecifierView = ITracingFilterConfig::InstanceSpecifierView;
+   32 | 
+   33 | const std::string_view GetOrInsertStringInSet(const std::string_view key,
+   34 |                                               std::set<std::string, std::less<>>& search_set) noexcept
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:34:61: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   23 | #include <unordered_set>
+   24 | 
+   25 | namespace score::mw::com::impl::tracing
+   26 | {
+   27 | 
+   28 | namespace
+   29 | {
+   30 | 
+   31 | using InstanceSpecifierView = ITracingFilterConfig::InstanceSpecifierView;
+   32 | 
+   33 | const std::string_view GetOrInsertStringInSet(const std::string_view key,
+   34 |                                               std::set<std::string, std::less<>>& search_set) noexcept
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:34:74: warning: no header providing "std::less" is directly included [misc-include-cleaner]
+   22 | #include <limits>
+   23 | #include <unordered_set>
+   24 | 
+   25 | namespace score::mw::com::impl::tracing
+   26 | {
+   27 | 
+   28 | namespace
+   29 | {
+   30 | 
+   31 | using InstanceSpecifierView = ITracingFilterConfig::InstanceSpecifierView;
+   32 | 
+   33 | const std::string_view GetOrInsertStringInSet(const std::string_view key,
+   34 |                                               std::set<std::string, std::less<>>& search_set) noexcept
+      |                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:47:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+   23 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(insert_result.second);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:52:11: warning: no header providing "score::mw::com::impl::tracing::TracePointKey" is directly included [misc-include-cleaner]
+   19 |     const TracePointKey& trace_point_key,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:54:10: warning: no header providing "std::unordered_map" is directly included [misc-include-cleaner]
+   23 |     std::unordered_map<TracePointKey, std::set<InstanceSpecifierView>>& trace_point_map) noexcept
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:60:86: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   24 |         const auto map_insert_result = trace_point_map.insert({trace_point_key, std::move(instance_specifiers)});
+      |                                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:68:21: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   23 |         score::cpp::ignore = map_it->second.insert(instance_specifier);
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:91:50: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   21 |     auto trace_point_type_int = static_cast<std::uint8_t>(trace_point_type);
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:132:37: warning: no header providing "score::mw::com::impl::tracing::SkeletonEventTracePointType" is directly included [misc-include-cleaner]
+   19 |     if constexpr (std::is_same_v<T, SkeletonEventTracePointType>)
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:139:42: warning: no header providing "score::mw::com::impl::tracing::SkeletonFieldTracePointType" is directly included [misc-include-cleaner]
+   19 |     else if constexpr (std::is_same_v<T, SkeletonFieldTracePointType>)
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:146:42: warning: no header providing "score::mw::com::impl::tracing::ProxyEventTracePointType" is directly included [misc-include-cleaner]
+   17 |     else if constexpr (std::is_same_v<T, ProxyEventTracePointType> || std::is_same_v<T, ProxyFieldTracePointType>)
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:146:89: warning: no header providing "score::mw::com::impl::tracing::ProxyFieldTracePointType" is directly included [misc-include-cleaner]
+   17 |     else if constexpr (std::is_same_v<T, ProxyEventTracePointType> || std::is_same_v<T, ProxyFieldTracePointType>)
+      |                                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:171:6: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   21 | std::size_t FindNumberOfTracingSlots(
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:174:33: warning: no header providing "score::mw::com::impl::Configuration" is directly included [misc-include-cleaner]
+   15 |     const score::mw::com::impl::Configuration& configuration,
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:203:52: warning: no header providing "score::mw::com::impl::InstanceSpecifier" is directly included [misc-include-cleaner]
+   15 |             const auto instance_specifier_result = InstanceSpecifier::Create(std::string{instance_specifier});
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:222:22: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+   24 |                 std::get_if<LolaServiceInstanceDeployment>(&service_instance_it->second.bindingInfo_);
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:222:29: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   15 |                 std::get_if<LolaServiceInstanceDeployment>(&service_instance_it->second.bindingInfo_);
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:378:6: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+  378 | std::uint16_t TracingFilterConfig::GetNumberOfTracingSlots(score::mw::com::impl::Configuration& config) const noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3173/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config.cpp:381:16: warning: no header providing "std::array" is directly included [misc-include-cleaner]
+   21 |     const std::array<std::size_t, 4U> number_trace_points_list{
+      |                ^
+Suppressed 13015 warnings (12902 in non-user code, 107 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

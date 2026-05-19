@@ -1,8 +1,40 @@
-5211 warnings generated.
+10886 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
@@ -11,15 +43,1212 @@
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/com_error.h:97:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:17:1: warning: included header logging.h is not used directly [misc-include-cleaner]
+   17 | #include "score/mw/log/logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | #include "score/result/result.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:22:1: warning: included header limits is not used directly [misc-include-cleaner]
+   22 | #include <limits>
+      | ^~~~~~~~~~~~~~~~~
+   23 | #include <mutex>
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:23:1: warning: included header mutex is not used directly [misc-include-cleaner]
+   23 | #include <mutex>
+      | ^~~~~~~~~~~~~~~~
+   24 | 
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:28:56: warning: no header providing "score::mw::com::impl::lola::TransactionLogId" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/transaction_log_registration_guard.h"
+   16 | #include "score/mw/com/impl/com_error.h"
+   17 | #include "score/mw/log/logging.h"
+   18 | #include "score/result/result.h"
+   19 | 
+   20 | #include <score/assert.hpp>
+   21 | 
+   22 | #include <limits>
+   23 | #include <mutex>
+   24 | 
+   25 | namespace score::mw::com::impl::lola
+   26 | {
+   27 | 
+   28 | bool TransactionLogSet::TransactionLogNode::TryAcquire(TransactionLogId transaction_log_id)
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:30:71: warning: no header providing "score::mw::com::impl::lola::kInvalidTransactionLogId" is directly included [misc-include-cleaner]
+   30 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(transaction_log_id != kInvalidTransactionLogId,
+      |                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:53:44: warning: no header providing "score::mw::com::impl::lola::TransactionLogIndex" is directly included [misc-include-cleaner]
+   15 | TransactionLogSet::TransactionLogSet(const TransactionLogIndex max_number_of_logs,
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:54:49: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   20 |                                      const std::size_t number_of_slots,
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:55:54: warning: no header providing "score::memory::shared::ManagedMemoryResource" is directly included [misc-include-cleaner]
+   15 |                                      memory::shared::ManagedMemoryResource& resource)
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:127:5: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   15 |     ConsumerEventDataControlLocalView<>& consumer_event_data_control_local_view)
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:173:1: warning: no header providing "score::mw::com::impl::lola::TransactionLog" is directly included [misc-include-cleaner]
+   15 | TransactionLog& TransactionLogSet::GetTransactionLog(const TransactionLogIndex transaction_log_index)
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:190:6: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   24 | std::vector<TransactionLogSet::TransactionLogCollection::iterator>
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:224:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   20 | std::optional<std::pair<TransactionLogSet::TransactionLogCollection::iterator, TransactionLogIndex>>
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:224:20: warning: no header providing "std::pair" is directly included [misc-include-cleaner]
+   24 | std::optional<std::pair<TransactionLogSet::TransactionLogCollection::iterator, TransactionLogIndex>>
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3354/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_set.cpp:263:29: warning: no header providing "std::make_pair" is directly included [misc-include-cleaner]
+  263 |                 return std::make_pair(it, index);
+      |                             ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | 
+   26 | namespace common
+      | ~~~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | 
+   29 | namespace visitor
+      | ~~~~~~~~~~~~~~~~~
+      | namespace score::common::visitor
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:11: warning: function 'strip_trailing_spaces' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
       |                                                          ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:11: warning: function 'visitor_extract_type_span' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:86: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
       |                                                                                      ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:11: warning: function 'visitor_extract_type' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:52: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
   114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
       |                                                    ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:121:11: warning: function 'pack_values' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  121 | constexpr inline auto pack_values(Args&&... args)
+      |           ^~~~~~
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:143:41: warning: use c++17 style variable templates [modernize-type-traits]
+  143 | using if_same_struct = std::enable_if_t<std::is_same<S, detail::no_cref_t<T>>::value, std::int32_t>;
+      |                                         ^                                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/containers/dynamic_array.h:77:55: warning: parameter 'alloc' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   24 |         : non_relocatable_vector_(number_of_elements, alloc)
+      |                                                       ^    
+      |                                                       std::move( )
+external/score_baselibs+/score/containers/dynamic_array.h:91:55: warning: parameter 'alloc' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   91 |         : non_relocatable_vector_(number_of_elements, alloc)
+      |                                                       ^    
+      |                                                       std::move( )
+external/score_baselibs+/score/containers/dynamic_array.h:104:5: warning: function 'at' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  104 |     const ElementType& at(const size_type index) const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/dynamic_array.h:119:5: warning: function 'size' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  119 |     size_type size() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/dynamic_array.h:129:5: warning: function 'data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  129 |     const value_type* data() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/dynamic_array.h:142:5: warning: function 'begin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  142 |     const_iterator begin() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/dynamic_array.h:146:5: warning: function 'cbegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  146 |     const_iterator cbegin() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/dynamic_array.h:156:5: warning: function 'end' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  156 |     const_iterator end() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/dynamic_array.h:160:5: warning: function 'cend' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  160 |     const_iterator cend() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:147:5: warning: function 'at' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  147 |     const ElementType& at(const size_type index) const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:153:5: warning: function 'size' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  153 |     size_type size() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:158:5: warning: function 'capacity' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  158 |     size_type capacity() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:165:5: warning: function 'data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  165 |     const value_type* data() const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:172:5: warning: function 'begin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  172 |     const_iterator begin() const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:173:5: warning: function 'cbegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  173 |     const_iterator cbegin() const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:177:5: warning: function 'end' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  177 |     const_iterator end() const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:178:5: warning: function 'cend' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  178 |     const_iterator cend() const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:185:5: warning: function 'GetPastTheEndIterator' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  185 |     iterator GetPastTheEndIterator() const;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/containers/non_relocatable_vector.h:191:47: warning: the const qualified parameter 'dynamic_array' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+  191 |     static auto GetFirstElement(const pointer dynamic_array, const std::size_t non_relocatable_vector_size) -> iterator;
+      |                                               ^
+      |                                              &
+external/score_baselibs+/score/containers/non_relocatable_vector.h:197:46: warning: the const qualified parameter 'dynamic_array' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+  197 |     static auto GetLastElement(const pointer dynamic_array, const std::size_t non_relocatable_vector_size) -> iterator;
+      |                                              ^
+      |                                             &
+external/score_baselibs+/score/containers/non_relocatable_vector.h:230:13: warning: std::move of the expression of the trivially-copyable type 'size_type' (aka 'unsigned long') has no effect; remove std::move() [performance-move-const-arg]
+  230 |       size_{std::move(other.size_)},
+      |             ^~~~~~~~~~           ~
+external/score_baselibs+/score/containers/non_relocatable_vector.h:231:17: warning: std::move of the expression of the trivially-copyable type 'size_type' (aka 'unsigned long') has no effect; remove std::move() [performance-move-const-arg]
+  231 |       capacity_{std::move(other.capacity_)}
+      |                 ^~~~~~~~~~               ~
+external/score_baselibs+/score/json/i_json_parser.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/i_json_parser.h:31:5: warning: function 'FromFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     virtual score::Result<Any> FromFile(const std::string_view file_path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/i_json_parser.h:32:5: warning: function 'FromBuffer' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     virtual score::Result<Any> FromBuffer(const std::string_view buffer) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/any.h:30:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   30 | namespace score
+      | ^~~~~~~~~~~~~~~
+   31 | {
+      | ~
+   32 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/any.h:59:42: warning: use c++17 style variable templates [modernize-type-traits]
+   59 |               typename std::enable_if_t<!std::is_same<T, Result<Any>>::value, bool> = true,
+      |                                          ^                           ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/json/internal/model/any.h:60:42: warning: use c++17 style variable templates [modernize-type-traits]
+   60 |               typename std::enable_if_t<(std::is_same<T, bool>::value) ||
+      |                                          ^                    ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/json/internal/model/any.h:61:47: warning: use c++17 style variable templates [modernize-type-traits]
+   61 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                               ^                    ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/json/internal/model/any.h:61:80: warning: use c++17 style variable templates [modernize-type-traits]
+   61 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                                                                ^                      ~~~~~~~
+      |                                                                                            _v
+external/score_baselibs+/score/json/internal/model/any.h:62:47: warning: use c++17 style variable templates [modernize-type-traits]
+   62 |                                              !std::is_same<T, List>::value),
+      |                                               ^                    ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/json/internal/model/any.h:74:44: warning: use c++17 style variable templates [modernize-type-traits]
+   74 |               typename = std::enable_if_t<!std::is_same<T, score::Result<Any>>::value, bool>,
+      |                                            ^                                  ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:75:44: warning: use c++17 style variable templates [modernize-type-traits]
+   75 |               typename = std::enable_if_t<!std::is_same<T, bool>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:76:43: warning: use c++17 style variable templates [modernize-type-traits]
+   76 |               typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                             _v
+external/score_baselibs+/score/json/internal/model/any.h:93:42: warning: use c++17 style variable templates [modernize-type-traits]
+   93 |               typename std::enable_if_t<(std::is_same<T, bool>::value) ||
+      |                                          ^                    ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/json/internal/model/any.h:94:47: warning: use c++17 style variable templates [modernize-type-traits]
+   94 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                               ^                    ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/json/internal/model/any.h:94:80: warning: use c++17 style variable templates [modernize-type-traits]
+   94 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                                                                ^                      ~~~~~~~
+      |                                                                                            _v
+external/score_baselibs+/score/json/internal/model/any.h:95:47: warning: use c++17 style variable templates [modernize-type-traits]
+   95 |                                              !std::is_same<T, List>::value && !std::is_same<T, Any>::value),
+      |                                               ^                    ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/json/internal/model/any.h:95:80: warning: use c++17 style variable templates [modernize-type-traits]
+   95 |                                              !std::is_same<T, List>::value && !std::is_same<T, Any>::value),
+      |                                                                                ^                   ~~~~~~~
+      |                                                                                            _v
+external/score_baselibs+/score/json/internal/model/any.h:118:44: warning: use c++17 style variable templates [modernize-type-traits]
+  118 |               typename = std::enable_if_t<!std::is_same<T, bool>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:119:43: warning: use c++17 style variable templates [modernize-type-traits]
+  119 |               typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                             _v
+external/score_baselibs+/score/json/internal/model/any.h:137:5: warning: function 'CloneByValue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  137 |     Any CloneByValue() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/any.h:144:44: warning: use c++17 style variable templates [modernize-type-traits]
+  144 |               typename = std::enable_if_t<!std::is_same<T, Object>::value, bool>,
+      |                                            ^                      ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:145:44: warning: use c++17 style variable templates [modernize-type-traits]
+  145 |               typename = std::enable_if_t<!std::is_same<T, List>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:146:44: warning: use c++17 style variable templates [modernize-type-traits]
+  146 |               typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>,
+      |                                            ^                                ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:147:44: warning: use c++17 style variable templates [modernize-type-traits]
+  147 |               typename = std::enable_if_t<!std::is_arithmetic<T>::value>>
+      |                                            ^                    ~~~~~~~
+      |                                                              _v
+external/score_baselibs+/score/json/internal/model/any.h:162:44: warning: use c++17 style variable templates [modernize-type-traits]
+  162 |               typename = std::enable_if_t<!std::is_same<T, Object>::value, bool>,
+      |                                            ^                      ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:163:44: warning: use c++17 style variable templates [modernize-type-traits]
+  163 |               typename = std::enable_if_t<!std::is_same<T, List>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:164:44: warning: use c++17 style variable templates [modernize-type-traits]
+  164 |               typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                            ^                    ~~~~~~~
+      |                                                              _v
+external/score_baselibs+/score/json/internal/model/any.h:165:44: warning: use c++17 style variable templates [modernize-type-traits]
+  165 |               typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                            ^                                ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:181:43: warning: use c++17 style variable templates [modernize-type-traits]
+  181 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:181:75: warning: use c++17 style variable templates [modernize-type-traits]
+  181 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                                                           ^                      ~~~~~~~
+      |                                                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:196:43: warning: use c++17 style variable templates [modernize-type-traits]
+  196 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:196:75: warning: use c++17 style variable templates [modernize-type-traits]
+  196 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                                                           ^                      ~~~~~~~
+      |                                                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:208:55: warning: use c++17 style variable templates [modernize-type-traits]
+  208 |     template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                       ^                    ~~~~~~~
+      |                                                                         _v
+external/score_baselibs+/score/json/internal/model/any.h:229:55: warning: use c++17 style variable templates [modernize-type-traits]
+  229 |     template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                       ^                                ~~~~~~~
+      |                                                                   _v
+external/score_baselibs+/score/json/internal/model/any.h:230:5: warning: function 'As' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  230 |     score::Result<std::string_view> As() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/error.h:19:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   19 | namespace score
+      | ^~~~~~~~~~~~~~~
+   20 | {
+      | ~
+   21 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/error.h:35:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/null.h:17:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   17 | namespace score
+      | ^~~~~~~~~~~~~~~
+   18 | {
+      | ~
+   19 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/number.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/number.h:55:55: warning: use c++17 style variable templates [modernize-type-traits]
+   55 |     template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                       ^                    ~~~~~~~
+      |                                                                         _v
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<bool, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<double, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<float, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<int, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<long, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<short, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<signed char, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned char, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned int, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned long, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned short, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/object.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/object.h:33:39: warning: use c++17 style variable templates [modernize-type-traits]
+   33 | using IsJsonObject = std::enable_if_t<std::is_same<T, std::reference_wrapper<const Object>>::value ||
+      |                                       ^                                                    ~~~~~~~
+      |                                                   _v
+external/score_baselibs+/score/json/internal/model/object.h:34:43: warning: use c++17 style variable templates [modernize-type-traits]
+   34 |                                           std::is_same<T, Result<std::reference_wrapper<const Object>>>::value,
+      |                                           ^                                                            ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/json/internal/model/object.h:38:1: warning: function 'GetAttribute' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   38 | inline const Result<RV> GetAttribute(const json::Object& object, const std::string_view& key) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/json/internal/model/object.h:49:1: warning: function 'GetAttribute' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   49 | inline const Result<RV> GetAttribute(const std::reference_wrapper<const json::Object>& object_result,
+      | ^~~~~~
+external/score_baselibs+/score/json/internal/model/object.h:56:1: warning: function 'GetAttribute' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   56 | inline const Result<RV> GetAttribute(const Result<std::reference_wrapper<const json::Object>>& object_result,
+      | ^~~~~~
+external/score_baselibs+/score/json/internal/model/object.h:71:30: warning: use c++17 style variable templates [modernize-type-traits]
+   71 |           std::enable_if_t<(!std::is_same<V, List>::value) && (!std::is_same<V, Object>::value), bool> = true,
+      |                              ^                    ~~~~~~~
+      |                                          _v
+external/score_baselibs+/score/json/internal/model/object.h:71:65: warning: use c++17 style variable templates [modernize-type-traits]
+   71 |           std::enable_if_t<(!std::is_same<V, List>::value) && (!std::is_same<V, Object>::value), bool> = true,
+      |                                                                 ^                      ~~~~~~~
+      |                                                                             _v
+external/score_baselibs+/score/json/internal/model/object.h:81:28: warning: use c++17 style variable templates [modernize-type-traits]
+   81 |           std::enable_if_t<std::is_same<V, List>::value || std::is_same<V, Object>::value, bool> = true,
+      |                            ^                    ~~~~~~~
+      |                                        _v
+external/score_baselibs+/score/json/internal/model/object.h:81:60: warning: use c++17 style variable templates [modernize-type-traits]
+   81 |           std::enable_if_t<std::is_same<V, List>::value || std::is_same<V, Object>::value, bool> = true,
+      |                                                            ^                      ~~~~~~~
+      |                                                                        _v
+external/score_baselibs+/score/json/json_parser.h:24:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   24 | namespace score
+      | ^~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/json_parser.h:35:5: warning: function 'FromFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     score::Result<Any> FromFile(const std::string_view file_path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/json_parser.h:40:5: warning: function 'FromBuffer' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     score::Result<Any> FromBuffer(const std::string_view buffer) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/language/safecpp/safe_math/details/absolute/absolute.h:50:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   50 |     else
+      |     ^~~~
+   51 |     {
+      |     ~
+   52 |         return static_cast<Unsigned>(value);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   53 |     }
+      |     ~
+external/score_baselibs+/score/language/safecpp/safe_math/details/absolute/absolute.h:56:47: warning: use c++17 style variable templates [modernize-type-traits]
+   56 | template <class FT, typename std::enable_if_t<std::is_floating_point<FT>::value, bool> = true>
+      |                                               ^                         ~~~~~~~
+      |                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:46:85: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |                                         is_unsigned_integral<UnsignedRHS>::value && std::is_integral<R>::value,
+      |                                                                                     ^                  ~~~~~~~
+      |                                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:58:37: warning: use c++17 style variable templates [modernize-type-traits]
+   58 |           typename std::enable_if_t<std::is_integral<LHS>::value && is_signed_integral<SignedRHS>::value &&
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:59:41: warning: use c++17 style variable templates [modernize-type-traits]
+   59 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:72:41: warning: use c++17 style variable templates [modernize-type-traits]
+   72 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:84:37: warning: use c++17 style variable templates [modernize-type-traits]
+   84 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:85:41: warning: use c++17 style variable templates [modernize-type-traits]
+   85 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:85:87: warning: use c++17 style variable templates [modernize-type-traits]
+   85 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:95:37: warning: use c++17 style variable templates [modernize-type-traits]
+   95 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:96:41: warning: use c++17 style variable templates [modernize-type-traits]
+   96 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                            ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:96:81: warning: use c++17 style variable templates [modernize-type-traits]
+   96 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                 ^                        ~~~~~~~
+      |                                                                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:106:37: warning: use c++17 style variable templates [modernize-type-traits]
+  106 |           typename std::enable_if_t<std::is_integral<IntegralLHS>::value &&
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:107:41: warning: use c++17 style variable templates [modernize-type-traits]
+  107 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:107:87: warning: use c++17 style variable templates [modernize-type-traits]
+  107 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:119:37: warning: use c++17 style variable templates [modernize-type-traits]
+  119 |           typename std::enable_if_t<std::is_integral<LHS>::value && is_signed_integral<SignedRHS>::value &&
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:120:41: warning: use c++17 style variable templates [modernize-type-traits]
+  120 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:133:41: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:146:85: warning: use c++17 style variable templates [modernize-type-traits]
+  146 |                                         is_unsigned_integral<UnsignedRHS>::value && std::is_integral<R>::value,
+      |                                                                                     ^                  ~~~~~~~
+      |                                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:158:37: warning: use c++17 style variable templates [modernize-type-traits]
+  158 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:159:41: warning: use c++17 style variable templates [modernize-type-traits]
+  159 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:159:87: warning: use c++17 style variable templates [modernize-type-traits]
+  159 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:169:37: warning: use c++17 style variable templates [modernize-type-traits]
+  169 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:170:41: warning: use c++17 style variable templates [modernize-type-traits]
+  170 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                            ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:170:81: warning: use c++17 style variable templates [modernize-type-traits]
+  170 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                 ^                        ~~~~~~~
+      |                                                                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:180:37: warning: use c++17 style variable templates [modernize-type-traits]
+  180 |           typename std::enable_if_t<std::is_integral<IntegralLHS>::value &&
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:181:41: warning: use c++17 style variable templates [modernize-type-traits]
+  181 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:181:87: warning: use c++17 style variable templates [modernize-type-traits]
+  181 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:192:85: warning: use c++17 style variable templates [modernize-type-traits]
+  192 |                                         is_unsigned_integral<UnsignedRHS>::value && std::is_integral<R>::value,
+      |                                                                                     ^                  ~~~~~~~
+      |                                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:244:37: warning: use c++17 style variable templates [modernize-type-traits]
+  244 |           typename std::enable_if_t<std::is_integral<LHS>::value && is_signed_integral<SignedRHS>::value &&
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:245:41: warning: use c++17 style variable templates [modernize-type-traits]
+  245 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:254:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  254 |     else
+      |     ^~~~
+  255 |     {
+      |     ~
+  256 |         using UnsignedRHS = std::make_unsigned_t<SignedRHS>;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  257 |         const auto rhs_unsigned = static_cast<UnsignedRHS>(rhs_signed);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  258 |         return Add<return_mode, R>(lhs, rhs_unsigned);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  259 |     }
+      |     ~
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:269:41: warning: use c++17 style variable templates [modernize-type-traits]
+  269 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:282:37: warning: use c++17 style variable templates [modernize-type-traits]
+  282 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:283:41: warning: use c++17 style variable templates [modernize-type-traits]
+  283 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:283:87: warning: use c++17 style variable templates [modernize-type-traits]
+  283 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:306:37: warning: use c++17 style variable templates [modernize-type-traits]
+  306 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:307:41: warning: use c++17 style variable templates [modernize-type-traits]
+  307 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                            ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:307:81: warning: use c++17 style variable templates [modernize-type-traits]
+  307 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                 ^                        ~~~~~~~
+      |                                                                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:334:37: warning: use c++17 style variable templates [modernize-type-traits]
+  334 |           typename std::enable_if_t<std::is_integral<IntegralLHS>::value &&
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:335:41: warning: use c++17 style variable templates [modernize-type-traits]
+  335 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:335:87: warning: use c++17 style variable templates [modernize-type-traits]
+  335 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:348:37: warning: use c++17 style variable templates [modernize-type-traits]
+  348 |           typename std::enable_if_t<std::is_integral<LHS>::value && is_signed_integral<SignedRHS>::value &&
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:349:41: warning: use c++17 style variable templates [modernize-type-traits]
+  349 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:358:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  358 |     else
+      |     ^~~~
+  359 |     {
+      |     ~
+  360 |         using UnsignedRHS = std::make_unsigned_t<SignedRHS>;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  361 |         const auto rhs_unsigned = static_cast<UnsignedRHS>(rhs_signed);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  362 |         return Subtract<return_mode, R>(lhs, rhs_unsigned);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  363 |     }
+      |     ~
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:373:41: warning: use c++17 style variable templates [modernize-type-traits]
+  373 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:425:85: warning: use c++17 style variable templates [modernize-type-traits]
+  425 |                                         is_unsigned_integral<UnsignedRHS>::value && std::is_integral<R>::value,
+      |                                                                                     ^                  ~~~~~~~
+      |                                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:446:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  446 |     else
+      |     ^~~~
+  447 |     {
+      |     ~
+  448 |         // Result will be positive
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  449 |         using intermediary_type = bigger_type_t<UnsignedLHS, UnsignedRHS>;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  450 |         const auto result = static_cast<intermediary_type>(lhs_unsigned - rhs_unsigned);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  451 |         return Cast<return_mode, R>(result);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  452 |     }
+      |     ~
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:461:37: warning: use c++17 style variable templates [modernize-type-traits]
+  461 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:462:41: warning: use c++17 style variable templates [modernize-type-traits]
+  462 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:462:87: warning: use c++17 style variable templates [modernize-type-traits]
+  462 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:482:37: warning: use c++17 style variable templates [modernize-type-traits]
+  482 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:483:41: warning: use c++17 style variable templates [modernize-type-traits]
+  483 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                            ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:483:81: warning: use c++17 style variable templates [modernize-type-traits]
+  483 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                 ^                        ~~~~~~~
+      |                                                                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:510:37: warning: use c++17 style variable templates [modernize-type-traits]
+  510 |           typename std::enable_if_t<std::is_integral<IntegralLHS>::value &&
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:511:41: warning: use c++17 style variable templates [modernize-type-traits]
+  511 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/addition_subtraction/addition_subtraction.h:511:87: warning: use c++17 style variable templates [modernize-type-traits]
+  511 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:36:38: warning: use c++17 style variable templates [modernize-type-traits]
+   36 |           typename std::enable_if_t<(std::is_integral<T>::value || std::is_floating_point<T>::value) &&
+      |                                      ^                  ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:36:68: warning: use c++17 style variable templates [modernize-type-traits]
+   36 |           typename std::enable_if_t<(std::is_integral<T>::value || std::is_floating_point<T>::value) &&
+      |                                                                    ^                        ~~~~~~~
+      |                                                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:37:42: warning: use c++17 style variable templates [modernize-type-traits]
+   37 |                                         (std::is_integral<R>::value || std::is_floating_point<R>::value),
+      |                                          ^                  ~~~~~~~
+      |                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:37:72: warning: use c++17 style variable templates [modernize-type-traits]
+   37 |                                         (std::is_integral<R>::value || std::is_floating_point<R>::value),
+      |                                                                        ^                        ~~~~~~~
+      |                                                                                              _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:49:38: warning: use c++17 style variable templates [modernize-type-traits]
+   49 |           typename std::enable_if_t<(std::is_integral<T>::value || std::is_floating_point<T>::value) &&
+      |                                      ^                  ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:49:68: warning: use c++17 style variable templates [modernize-type-traits]
+   49 |           typename std::enable_if_t<(std::is_integral<T>::value || std::is_floating_point<T>::value) &&
+      |                                                                    ^                        ~~~~~~~
+      |                                                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:50:42: warning: use c++17 style variable templates [modernize-type-traits]
+   50 |                                         (std::is_integral<R>::value || std::is_floating_point<R>::value),
+      |                                          ^                  ~~~~~~~
+      |                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:50:72: warning: use c++17 style variable templates [modernize-type-traits]
+   50 |                                         (std::is_integral<R>::value || std::is_floating_point<R>::value),
+      |                                                                        ^                        ~~~~~~~
+      |                                                                                              _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:69:38: warning: use c++17 style variable templates [modernize-type-traits]
+   69 |           typename std::enable_if_t<(std::is_integral<T>::value && std::is_integral<R>::value), bool> = true>
+      |                                      ^                  ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:69:68: warning: use c++17 style variable templates [modernize-type-traits]
+   69 |           typename std::enable_if_t<(std::is_integral<T>::value && std::is_integral<R>::value), bool> = true>
+      |                                                                    ^                  ~~~~~~~
+      |                                                                                    _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:79:32: warning: use c++17 style variable templates [modernize-type-traits]
+   79 |     typename std::enable_if_t<(std::is_floating_point<T>::value && std::is_floating_point<R>::value), bool> = true>
+      |                                ^                        ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:79:68: warning: use c++17 style variable templates [modernize-type-traits]
+   79 |     typename std::enable_if_t<(std::is_floating_point<T>::value && std::is_floating_point<R>::value), bool> = true>
+      |                                                                    ^                        ~~~~~~~
+      |                                                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:119:38: warning: use c++17 style variable templates [modernize-type-traits]
+  119 |           typename std::enable_if_t<(std::is_floating_point<T>::value && std::is_integral<R>::value), bool> = true>
+      |                                      ^                        ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:119:74: warning: use c++17 style variable templates [modernize-type-traits]
+  119 |           typename std::enable_if_t<(std::is_floating_point<T>::value && std::is_integral<R>::value), bool> = true>
+      |                                                                          ^                  ~~~~~~~
+      |                                                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:152:38: warning: use c++17 style variable templates [modernize-type-traits]
+  152 |           typename std::enable_if_t<(std::is_integral<T>::value && std::is_floating_point<R>::value), bool> = true>
+      |                                      ^                  ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/cast/cast.h:152:68: warning: use c++17 style variable templates [modernize-type-traits]
+  152 |           typename std::enable_if_t<(std::is_integral<T>::value && std::is_floating_point<R>::value), bool> = true>
+      |                                                                    ^                        ~~~~~~~
+      |                                                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:104:38: warning: use c++17 style variable templates [modernize-type-traits]
+  104 |           typename std::enable_if_t<(std::is_floating_point<FloatingLhs>::value &&
+      |                                      ^                                  ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:105:38: warning: use c++17 style variable templates [modernize-type-traits]
+  105 |                                      std::is_floating_point<FloatingRhs>::value),
+      |                                      ^                                  ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:125:48: warning: use c++17 style variable templates [modernize-type-traits]
+  125 | template <class T, typename = std::enable_if_t<std::is_integral<T>::value>>
+      |                                                ^                  ~~~~~~~
+      |                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:126:35: warning: use c++17 style variable templates [modernize-type-traits]
+  126 | using Type64 = std::conditional_t<std::is_signed<T>::value, std::int64_t, std::uint64_t>;
+      |                                   ^                ~~~~~~~
+      |                                                 _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:128:53: warning: use c++17 style variable templates [modernize-type-traits]
+  128 | template <class Floating, typename std::enable_if_t<std::is_floating_point<Floating>::value, bool> = true>
+      |                                                     ^                               ~~~~~~~
+      |                                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:131:61: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  131 |     static_assert(std::numeric_limits<double>::is_iec559 == true, "double doesn't conform to IEC559/IEEE754");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      |                   std::numeric_limits<double>::is_iec559
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:140:53: warning: use c++17 style variable templates [modernize-type-traits]
+  140 | template <class Floating, typename std::enable_if_t<std::is_floating_point<Floating>::value, bool> = true>
+      |                                                     ^                               ~~~~~~~
+      |                                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:143:61: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  143 |     static_assert(std::numeric_limits<double>::is_iec559 == true, "double doesn't conform to IEC559/IEEE754");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      |                   std::numeric_limits<double>::is_iec559
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:152:53: warning: use c++17 style variable templates [modernize-type-traits]
+  152 | template <class Floating, typename std::enable_if_t<std::is_floating_point<Floating>::value, bool> = true>
+      |                                                     ^                               ~~~~~~~
+      |                                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:155:61: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  155 |     static_assert(std::numeric_limits<double>::is_iec559 == true, "double doesn't conform to IEC559/IEEE754");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      |                   std::numeric_limits<double>::is_iec559
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:173:37: warning: use c++17 style variable templates [modernize-type-traits]
+  173 |           typename std::enable_if_t<std::is_integral<Integral>::value && std::is_floating_point<Floating>::value,
+      |                                     ^                         ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:173:74: warning: use c++17 style variable templates [modernize-type-traits]
+  173 |           typename std::enable_if_t<std::is_integral<Integral>::value && std::is_floating_point<Floating>::value,
+      |                                                                          ^                               ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:185:10: warning: use c++17 style variable templates [modernize-type-traits]
+  185 |     if ((std::is_unsigned<Integral>::value && details::IsAboveMaxUint64T(value)) ||
+      |          ^                         ~~~~~~~
+      |                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:186:10: warning: use c++17 style variable templates [modernize-type-traits]
+  186 |         (std::is_signed<Integral>::value && details::IsAboveMaxInt64T(value)))
+      |          ^                       ~~~~~~~
+      |                        _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:199:10: warning: use c++17 style variable templates [modernize-type-traits]
+  199 |     if ((std::is_unsigned<Integral>::value && CmpLess(value, 0.0)) ||
+      |          ^                         ~~~~~~~
+      |                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:200:10: warning: use c++17 style variable templates [modernize-type-traits]
+  200 |         (std::is_signed<Integral>::value && details::IsBelowMinInt64T(value)))
+      |          ^                       ~~~~~~~
+      |                        _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:212:37: warning: use c++17 style variable templates [modernize-type-traits]
+  212 |           typename std::enable_if_t<std::is_floating_point<FloatingLhs>::value && std::is_integral<IntegralRhs>::value,
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:212:83: warning: use c++17 style variable templates [modernize-type-traits]
+  212 |           typename std::enable_if_t<std::is_floating_point<FloatingLhs>::value && std::is_integral<IntegralRhs>::value,
+      |                                                                                   ^                            ~~~~~~~
+      |                                                                                                   _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:256:37: warning: use c++17 style variable templates [modernize-type-traits]
+  256 |           typename std::enable_if_t<std::is_integral<IntegralLhs>::value && std::is_floating_point<FloatingRhs>::value,
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:256:77: warning: use c++17 style variable templates [modernize-type-traits]
+  256 |           typename std::enable_if_t<std::is_integral<IntegralLhs>::value && std::is_floating_point<FloatingRhs>::value,
+      |                                                                             ^                                  ~~~~~~~
+      |                                                                                                   _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:384:38: warning: use c++17 style variable templates [modernize-type-traits]
+  384 |           typename std::enable_if_t<(std::is_floating_point<FloatingLhs>::value &&
+      |                                      ^                                  ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:385:38: warning: use c++17 style variable templates [modernize-type-traits]
+  385 |                                      std::is_floating_point<FloatingRhs>::value),
+      |                                      ^                                  ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:423:32: warning: use c++17 style variable templates [modernize-type-traits]
+  423 |     typename std::enable_if_t<(std::is_floating_point<FloatingLhs>::value && std::is_integral<IntegralRhs>::value),
+      |                                ^                                  ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:423:78: warning: use c++17 style variable templates [modernize-type-traits]
+  423 |     typename std::enable_if_t<(std::is_floating_point<FloatingLhs>::value && std::is_integral<IntegralRhs>::value),
+      |                                                                              ^                            ~~~~~~~
+      |                                                                                              _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:450:32: warning: use c++17 style variable templates [modernize-type-traits]
+  450 |     typename std::enable_if_t<(std::is_integral<IntegralLhs>::value && std::is_floating_point<FloatingRhs>::value),
+      |                                ^                            ~~~~~~~
+      |                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:450:72: warning: use c++17 style variable templates [modernize-type-traits]
+  450 |     typename std::enable_if_t<(std::is_integral<IntegralLhs>::value && std::is_floating_point<FloatingRhs>::value),
+      |                                                                        ^                                  ~~~~~~~
+      |                                                                                              _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:459:37: warning: use c++17 style variable templates [modernize-type-traits]
+  459 |           typename std::enable_if_t<std::is_integral<Lhs>::value && std::is_integral<Rhs>::value, bool> = true>
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:459:69: warning: use c++17 style variable templates [modernize-type-traits]
+  459 |           typename std::enable_if_t<std::is_integral<Lhs>::value && std::is_integral<Rhs>::value, bool> = true>
+      |                                                                     ^                    ~~~~~~~
+      |                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:467:38: warning: use c++17 style variable templates [modernize-type-traits]
+  467 |           typename std::enable_if_t<(std::is_floating_point<Lhs>::value && std::is_floating_point<Rhs>::value) ||
+      |                                      ^                          ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:467:76: warning: use c++17 style variable templates [modernize-type-traits]
+  467 |           typename std::enable_if_t<(std::is_floating_point<Lhs>::value && std::is_floating_point<Rhs>::value) ||
+      |                                                                            ^                          ~~~~~~~
+      |                                                                                                  _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:468:42: warning: use c++17 style variable templates [modernize-type-traits]
+  468 |                                         (std::is_floating_point<Lhs>::value && std::is_integral<Rhs>::value) ||
+      |                                          ^                          ~~~~~~~
+      |                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:468:80: warning: use c++17 style variable templates [modernize-type-traits]
+  468 |                                         (std::is_floating_point<Lhs>::value && std::is_integral<Rhs>::value) ||
+      |                                                                                ^                    ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:469:42: warning: use c++17 style variable templates [modernize-type-traits]
+  469 |                                         (std::is_integral<Lhs>::value && std::is_floating_point<Rhs>::value),
+      |                                          ^                    ~~~~~~~
+      |                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:469:74: warning: use c++17 style variable templates [modernize-type-traits]
+  469 |                                         (std::is_integral<Lhs>::value && std::is_floating_point<Rhs>::value),
+      |                                                                          ^                          ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:484:37: warning: use c++17 style variable templates [modernize-type-traits]
+  484 |           typename std::enable_if_t<std::is_integral<Lhs>::value && std::is_integral<Rhs>::value, bool> = true>
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:484:69: warning: use c++17 style variable templates [modernize-type-traits]
+  484 |           typename std::enable_if_t<std::is_integral<Lhs>::value && std::is_integral<Rhs>::value, bool> = true>
+      |                                                                     ^                    ~~~~~~~
+      |                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:492:38: warning: use c++17 style variable templates [modernize-type-traits]
+  492 |           typename std::enable_if_t<(std::is_floating_point<Lhs>::value && std::is_floating_point<Rhs>::value) ||
+      |                                      ^                          ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:492:76: warning: use c++17 style variable templates [modernize-type-traits]
+  492 |           typename std::enable_if_t<(std::is_floating_point<Lhs>::value && std::is_floating_point<Rhs>::value) ||
+      |                                                                            ^                          ~~~~~~~
+      |                                                                                                  _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:493:42: warning: use c++17 style variable templates [modernize-type-traits]
+  493 |                                         (std::is_floating_point<Lhs>::value && std::is_integral<Rhs>::value) ||
+      |                                          ^                          ~~~~~~~
+      |                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:493:80: warning: use c++17 style variable templates [modernize-type-traits]
+  493 |                                         (std::is_floating_point<Lhs>::value && std::is_integral<Rhs>::value) ||
+      |                                                                                ^                    ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:494:42: warning: use c++17 style variable templates [modernize-type-traits]
+  494 |                                         (std::is_integral<Lhs>::value && std::is_floating_point<Rhs>::value),
+      |                                          ^                    ~~~~~~~
+      |                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:494:74: warning: use c++17 style variable templates [modernize-type-traits]
+  494 |                                         (std::is_integral<Lhs>::value && std::is_floating_point<Rhs>::value),
+      |                                                                          ^                          ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:503:37: warning: use c++17 style variable templates [modernize-type-traits]
+  503 |           typename std::enable_if_t<std::is_integral<Lhs>::value && std::is_integral<Rhs>::value, bool> = true>
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:503:69: warning: use c++17 style variable templates [modernize-type-traits]
+  503 |           typename std::enable_if_t<std::is_integral<Lhs>::value && std::is_integral<Rhs>::value, bool> = true>
+      |                                                                     ^                    ~~~~~~~
+      |                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:511:38: warning: use c++17 style variable templates [modernize-type-traits]
+  511 |           typename std::enable_if_t<(std::is_floating_point<Lhs>::value && std::is_floating_point<Rhs>::value) ||
+      |                                      ^                          ~~~~~~~
+      |                                                            _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:511:76: warning: use c++17 style variable templates [modernize-type-traits]
+  511 |           typename std::enable_if_t<(std::is_floating_point<Lhs>::value && std::is_floating_point<Rhs>::value) ||
+      |                                                                            ^                          ~~~~~~~
+      |                                                                                                  _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:512:42: warning: use c++17 style variable templates [modernize-type-traits]
+  512 |                                         (std::is_floating_point<Lhs>::value && std::is_integral<Rhs>::value) ||
+      |                                          ^                          ~~~~~~~
+      |                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:512:80: warning: use c++17 style variable templates [modernize-type-traits]
+  512 |                                         (std::is_floating_point<Lhs>::value && std::is_integral<Rhs>::value) ||
+      |                                                                                ^                    ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:513:42: warning: use c++17 style variable templates [modernize-type-traits]
+  513 |                                         (std::is_integral<Lhs>::value && std::is_floating_point<Rhs>::value),
+      |                                          ^                    ~~~~~~~
+      |                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/comparison/comparison.h:513:74: warning: use c++17 style variable templates [modernize-type-traits]
+  513 |                                         (std::is_integral<Lhs>::value && std::is_floating_point<Rhs>::value),
+      |                                                                          ^                          ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:40:37: warning: use c++17 style variable templates [modernize-type-traits]
+   40 |           typename std::enable_if_t<std::is_integral<LHS>::value && std::is_integral<RHS>::value &&
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:40:69: warning: use c++17 style variable templates [modernize-type-traits]
+   40 |           typename std::enable_if_t<std::is_integral<LHS>::value && std::is_integral<RHS>::value &&
+      |                                                                     ^                    ~~~~~~~
+      |                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:41:41: warning: use c++17 style variable templates [modernize-type-traits]
+   41 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:67:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   67 |     else
+      |     ^~~~
+   68 |     {
+      |     ~
+   69 |         return Negate<return_mode, R>(result);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |     }
+      |     ~
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:78:37: warning: use c++17 style variable templates [modernize-type-traits]
+   78 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:79:41: warning: use c++17 style variable templates [modernize-type-traits]
+   79 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:79:87: warning: use c++17 style variable templates [modernize-type-traits]
+   79 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:107:37: warning: use c++17 style variable templates [modernize-type-traits]
+  107 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:108:41: warning: use c++17 style variable templates [modernize-type-traits]
+  108 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                            ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:108:81: warning: use c++17 style variable templates [modernize-type-traits]
+  108 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                 ^                        ~~~~~~~
+      |                                                                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:134:37: warning: use c++17 style variable templates [modernize-type-traits]
+  134 |           typename std::enable_if_t<std::is_integral<IntegralLHS>::value &&
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:135:41: warning: use c++17 style variable templates [modernize-type-traits]
+  135 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/division/division.h:135:87: warning: use c++17 style variable templates [modernize-type-traits]
+  135 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/floating_point_environment.h:59:5: warning: function 'Test' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   59 |     score::Result<void> Test() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:41:37: warning: use c++17 style variable templates [modernize-type-traits]
+   41 |           typename std::enable_if_t<std::is_integral<LHS>::value && std::is_integral<RHS>::value &&
+      |                                     ^                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:41:69: warning: use c++17 style variable templates [modernize-type-traits]
+   41 |           typename std::enable_if_t<std::is_integral<LHS>::value && std::is_integral<RHS>::value &&
+      |                                                                     ^                    ~~~~~~~
+      |                                                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:42:41: warning: use c++17 style variable templates [modernize-type-traits]
+   42 |                                         std::is_integral<R>::value,
+      |                                         ^                  ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:70:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   70 |     else
+      |     ^~~~
+   71 |     {
+      |     ~
+   72 |         // Inputs in {}: {-lhs} * {rhs} = -(lhs * rhs) and {lhs} * {-rhs} = -(lhs * rhs)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |         return Negate<return_mode, R>(result);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   74 |     }
+      |     ~
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:82:37: warning: use c++17 style variable templates [modernize-type-traits]
+   82 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:83:41: warning: use c++17 style variable templates [modernize-type-traits]
+   83 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:83:87: warning: use c++17 style variable templates [modernize-type-traits]
+   83 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:105:37: warning: use c++17 style variable templates [modernize-type-traits]
+  105 |           typename std::enable_if_t<std::is_floating_point<FloatingLHS>::value &&
+      |                                     ^                                  ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:106:41: warning: use c++17 style variable templates [modernize-type-traits]
+  106 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                            ~~~~~~~
+      |                                                         _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:106:81: warning: use c++17 style variable templates [modernize-type-traits]
+  106 |                                         std::is_integral<IntegralRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                 ^                        ~~~~~~~
+      |                                                                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:132:37: warning: use c++17 style variable templates [modernize-type-traits]
+  132 |           typename std::enable_if_t<std::is_integral<IntegralLHS>::value &&
+      |                                     ^                            ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:133:41: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                         ^                                  ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/multiplication/multiplication.h:133:87: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |                                         std::is_floating_point<FloatingRHS>::value && std::is_floating_point<R>::value,
+      |                                                                                       ^                        ~~~~~~~
+      |                                                                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/negate/negate.h:39:37: warning: use c++17 style variable templates [modernize-type-traits]
+   39 |           typename std::enable_if_t<std::is_integral<R>::value, bool> = true>
+      |                                     ^                  ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/negate/negate.h:52:9: warning: use c++17 style variable templates [modernize-type-traits]
+   52 |     if (std::is_signed<R>::value && CmpEqual(value, Abs(std::numeric_limits<R>::lowest())))
+      |         ^                ~~~~~~~
+      |                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/negate/negate.h:94:37: warning: use c++17 style variable templates [modernize-type-traits]
+   94 |           typename std::enable_if_t<std::is_integral<R>::value, bool> = true>
+      |                                     ^                  ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/negate/negate.h:122:31: warning: use c++17 style variable templates [modernize-type-traits]
+  122 |     typename std::enable_if_t<std::is_floating_point<Floating>::value && std::is_floating_point<R>::value, bool> = true>
+      |                               ^                               ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/negate/negate.h:122:74: warning: use c++17 style variable templates [modernize-type-traits]
+  122 |     typename std::enable_if_t<std::is_floating_point<Floating>::value && std::is_floating_point<R>::value, bool> = true>
+      |                                                                          ^                        ~~~~~~~
+      |                                                                                                _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:27:56: warning: use c++17 style variable templates [modernize-type-traits]
+   27 | struct is_signed_integral<T, typename std::enable_if_t<std::is_integral<T>::value && std::is_signed<T>::value>>
+      |                                                        ^                  ~~~~~~~
+      |                                                                        _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:27:86: warning: use c++17 style variable templates [modernize-type-traits]
+   27 | struct is_signed_integral<T, typename std::enable_if_t<std::is_integral<T>::value && std::is_signed<T>::value>>
+      |                                                                                      ^                ~~~~~~~
+      |                                                                                                    _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:38:58: warning: use c++17 style variable templates [modernize-type-traits]
+   38 | struct is_unsigned_integral<T, typename std::enable_if_t<std::is_integral<T>::value && std::is_unsigned<T>::value>>
+      |                                                          ^                  ~~~~~~~
+      |                                                                          _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:38:88: warning: use c++17 style variable templates [modernize-type-traits]
+   38 | struct is_unsigned_integral<T, typename std::enable_if_t<std::is_integral<T>::value && std::is_unsigned<T>::value>>
+      |                                                                                        ^                  ~~~~~~~
+      |                                                                                                        _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:45:39: warning: use c++17 style variable templates [modernize-type-traits]
+   45 |           typename std::enable_if_t<((std::is_integral<T1>::value && std::is_integral<T2>::value) ||
+      |                                       ^                   ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:45:70: warning: use c++17 style variable templates [modernize-type-traits]
+   45 |           typename std::enable_if_t<((std::is_integral<T1>::value && std::is_integral<T2>::value) ||
+      |                                                                      ^                   ~~~~~~~
+      |                                                                                      _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:46:39: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |                                      (std::is_floating_point<T1>::value && std::is_floating_point<T2>::value)) &&
+      |                                       ^                         ~~~~~~~
+      |                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:46:76: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |                                      (std::is_floating_point<T1>::value && std::is_floating_point<T2>::value)) &&
+      |                                                                            ^                         ~~~~~~~
+      |                                                                                                  _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:47:41: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |                                         std::is_signed<T1>::value == std::is_signed<T2>::value,
+      |                                         ^                 ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:47:70: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |                                         std::is_signed<T1>::value == std::is_signed<T2>::value,
+      |                                                                      ^                 ~~~~~~~
+      |                                                                                    _v
+external/score_baselibs+/score/language/safecpp/safe_math/details/type_traits/type_traits.h:52:49: warning: use c++17 style variable templates [modernize-type-traits]
+   52 | using prefer_first_type_t = std::conditional_t<!std::is_void<T1>::value, T1, T2>;
+      |                                                 ^               ~~~~~~~
+      |                                                             _v
+external/score_baselibs+/score/language/safecpp/safe_math/error.h:33:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/data_type_size_info.h:36:5: warning: function 'Size' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     constexpr std::size_t Size() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/data_type_size_info.h:41:5: warning: function 'Alignment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   41 |     constexpr std::size_t Alignment() const
+      |     ^
+      |     [[nodiscard]] 
 external/score_baselibs+/score/memory/shared/i_atomic.h:36:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    36 |     virtual auto fetch_add(T, std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
       |                  ^
@@ -38,5 +1267,906 @@ external/score_baselibs+/score/memory/shared/i_atomic.h:42:18: warning: default 
 external/score_baselibs+/score/memory/shared/i_atomic.h:43:18: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    43 |     virtual auto load(std::memory_order = std::memory_order_seq_cst) noexcept -> T = 0;
       |                  ^
-Suppressed 5270 warnings (5193 in non-user code, 71 NOLINT, 6 with check filters).
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:99:5: warning: function 'getBaseAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   99 |     virtual void* getBaseAddress() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:107:5: warning: function 'getUsableBaseAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     virtual void* getUsableBaseAddress() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:114:5: warning: function 'GetUserAllocatedBytes' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  114 |     virtual std::size_t GetUserAllocatedBytes() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:121:5: warning: function 'IsOffsetPtrBoundsCheckBypassingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  121 |     virtual bool IsOffsetPtrBoundsCheckBypassingEnabled() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:158:5: warning: function 'getEndAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  158 |     virtual const void* getEndAddress() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/memory_region_bounds.h:35:5: warning: function 'has_value' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool has_value() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/memory_region_bounds.h:36:5: warning: function 'GetStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     std::uintptr_t GetStartAddress() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/memory_region_bounds.h:37:5: warning: function 'GetEndAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     std::uintptr_t GetEndAddress() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/memory_region_map.h:122:9: warning: function 'GetIndex' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  122 |         std::uint8_t GetIndex() const noexcept
+      |         ^
+      |         [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/memory_region_map.h:143:26: warning: 255U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  143 |         VERSION_COUNT <= 255U,
+      |                          ^
+external/score_baselibs+/score/memory/shared/memory_resource_proxy.h:62:5: warning: function 'allocate' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     void* allocate(const std::size_t, const std::size_t = alignof(std::max_align_t)) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:68:36: warning: use c++14 style type templates [modernize-type-traits]
+   68 |     typename std::is_same<typename std::remove_cv<T1>::type, typename std::remove_cv<T2>::type>;
+      |                           ~~~~~~~~ ^                 ~~~~~~
+      |                                                  _t
+external/score_baselibs+/score/memory/shared/offset_ptr.h:68:71: warning: use c++14 style type templates [modernize-type-traits]
+   68 |     typename std::is_same<typename std::remove_cv<T1>::type, typename std::remove_cv<T2>::type>;
+      |                                                              ~~~~~~~~ ^                 ~~~~~~
+      |                                                                                     _t
+external/score_baselibs+/score/memory/shared/offset_ptr.h:211:5: warning: function 'get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  211 |     pointer get() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:211:5: warning: function 'get<score::mw::com::impl::lola::TransactionLogSet::TransactionLogNode, void>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  211 |     pointer get() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:211:5: warning: function 'get<score::mw::com::impl::lola::TransactionLogSlot, void>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  211 |     pointer get() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:211:5: warning: function 'get<std::atomic<unsigned long>, void>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  211 |     pointer get() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:235:5: warning: function 'get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  235 |     pointer get(const std::size_t explicit_pointed_type_size) const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:380:17: warning: swap functions should be marked noexcept [performance-noexcept-swap]
+  380 |     friend void swap(OffsetPtr<T>& left, OffsetPtr<T>& right);
+      |                 ^                                            
+      |                                                               noexcept 
+external/score_baselibs+/score/memory/shared/offset_ptr.h:675:25: warning: redundant explicit casting to the same type 'std::size_t' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  675 |         DecrementOffset(static_cast<std::size_t>(AbsoluteValue(offset)));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~                     ~
+external/score_baselibs+/score/memory/shared/pointer_arithmetic_util.h:154:37: note: source type originates from the invocation of this function
+  154 | std::make_unsigned_t<SignedInteger> AbsoluteValue(SignedInteger signed_value)
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+external/score_baselibs+/score/memory/shared/offset_ptr.h:689:25: warning: redundant explicit casting to the same type 'std::size_t' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  689 |         IncrementOffset(static_cast<std::size_t>(AbsoluteValue(offset)));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~                     ~
+external/score_baselibs+/score/memory/shared/pointer_arithmetic_util.h:154:37: note: source type originates from the invocation of this function
+  154 | std::make_unsigned_t<SignedInteger> AbsoluteValue(SignedInteger signed_value)
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+external/score_baselibs+/score/memory/shared/offset_ptr.h:740:1: warning: function 'operator==' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  740 | inline bool operator==(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:750:1: warning: function 'operator==' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  750 | inline bool operator==(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:761:1: warning: function 'operator==' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  761 | inline bool operator==(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:769:1: warning: function 'operator==' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  769 | inline bool operator==(const OffsetPtr<T>& offset_ptr1, const std::nullptr_t /*null_ptr2*/) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:778:1: warning: function 'operator==' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  778 | inline bool operator==(const std::nullptr_t /*null_ptr1*/, const OffsetPtr<T>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:789:1: warning: function 'operator!=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  789 | inline bool operator!=(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:800:1: warning: function 'operator!=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  800 | inline bool operator!=(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:811:1: warning: function 'operator!=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  811 | inline bool operator!=(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:819:1: warning: function 'operator!=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  819 | inline bool operator!=(const OffsetPtr<T>& offset_ptr1, const std::nullptr_t null_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:827:1: warning: function 'operator!=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  827 | inline bool operator!=(const std::nullptr_t null_ptr1, const OffsetPtr<T>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:838:1: warning: function 'operator<' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  838 | inline bool operator<(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:850:1: warning: function 'operator<' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  850 | inline bool operator<(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:863:1: warning: function 'operator<' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  863 | inline bool operator<(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:874:1: warning: function 'operator<=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  874 | inline bool operator<=(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:886:1: warning: function 'operator<=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  886 | inline bool operator<=(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:899:1: warning: function 'operator<=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  899 | inline bool operator<=(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2)
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:910:1: warning: function 'operator>' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  910 | inline bool operator>(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:921:1: warning: function 'operator>' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  921 | inline bool operator>(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:932:1: warning: function 'operator>' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  932 | inline bool operator>(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:943:1: warning: function 'operator>=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  943 | inline bool operator>=(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:954:1: warning: function 'operator>=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  954 | inline bool operator>=(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:965:1: warning: function 'operator>=' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  965 | inline bool operator>=(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:972:1: warning: function 'operator+' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  972 | inline auto operator+(typename OffsetPtr<T>::difference_type diff, OffsetPtr<T> right) noexcept -> OffsetPtr<T>
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:985:1: warning: function 'operator+' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  985 | inline auto operator+(OffsetPtr<T> left, typename OffsetPtr<T>::difference_type diff) -> OffsetPtr<T>
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:993:1: warning: function 'operator-' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  993 | inline auto operator-(OffsetPtr<T> left, typename OffsetPtr<T>::difference_type diff) -> OffsetPtr<T>
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:1001:1: warning: function 'operator-' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+ 1001 | inline auto operator-(typename OffsetPtr<T>::difference_type diff, OffsetPtr<T> right) -> OffsetPtr<T>
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:1012:1: warning: function 'operator-' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+ 1012 | inline auto operator-(const OffsetPtr<T1>& offset_ptr1, const OffsetPtr<T2>& offset_ptr2) ->
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:1037:1: warning: function 'operator-' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+ 1037 | inline auto operator-(const OffsetPtr<T1>& offset_ptr1, T2* const ptr2) -> typename OffsetPtr<T1>::difference_type
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:1060:1: warning: function 'operator-' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+ 1060 | inline auto operator-(T1* const ptr1, const OffsetPtr<T2>& offset_ptr2) -> typename OffsetPtr<T1>::difference_type
+      | ^~~~~~
+external/score_baselibs+/score/memory/shared/offset_ptr.h:1080:6: warning: swap functions should be marked noexcept [performance-noexcept-swap]
+ 1080 | void swap(OffsetPtr<T>& left, OffsetPtr<T>& right)
+      |      ^
+ 1081 | {
+      |  noexcept 
+external/score_baselibs+/score/memory/shared/pointer_arithmetic_util.h:108:12: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+  108 |     return reinterpret_cast<PointerType>(integer);
+      |            ^
+external/score_baselibs+/score/memory/shared/polymorphic_offset_ptr_allocator.h:67:29: warning: the parameter 'p' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   67 |     void deallocate(pointer p, size_type size);
+      |                             ^
+      |                     const  &
+external/score_baselibs+/score/memory/shared/polymorphic_offset_ptr_allocator.h:69:5: warning: function 'getMemoryResourceProxy' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   69 |     OffsetPtr<const MemoryResourceProxy> getMemoryResourceProxy() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/string_comparison_adaptor.h:68:5: warning: function 'GetAsStringView' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     score::cpp::string_view GetAsStringView() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/detail/logging_identifier.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace mw
+      | ~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace log
+      | ~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::mw::log::detail
+external/score_baselibs+/score/mw/log/detail/logging_identifier.h:40:5: warning: function 'GetStringView' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view GetStringView() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_common.h:21:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   21 | namespace score
+      | ^~~~~~~~~~~~~~~
+   22 | {
+      | ~
+   23 | namespace mw
+      | ~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_common.h:43:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   43 |     else
+      |     ^~~~
+   44 |     {
+      |     ~
+   45 |         // should never reach here
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   46 |         return std::string_view{"not support unit"};  // LCOV_EXCL_LINE : unreachable
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   47 |     }
+      |     ~
+external/score_baselibs+/score/mw/log/log_level.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_stream.h:33:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   33 | namespace mw
+      | ^~~~~~~~~~~~
+   34 | {
+      | ~
+   35 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace mw::log
+external/score_baselibs+/score/mw/log/log_stream.h:397:14: warning: use c++14 style type templates [modernize-type-traits]
+  397 |     typename std::enable_if<((!std::is_same<long long, int64_t>::value) && (sizeof(long long) == sizeof(int64_t))),
+      |     ~~~~~~~~ ^             
+      |                            _t
+  398 |                             T>::type* = nullptr>
+      |                               ~~~~~~
+external/score_baselibs+/score/mw/log/log_stream.h:397:32: warning: use c++17 style variable templates [modernize-type-traits]
+  397 |     typename std::enable_if<((!std::is_same<long long, int64_t>::value) && (sizeof(long long) == sizeof(int64_t))),
+      |                                ^                               ~~~~~~~
+      |                                            _v
+external/score_baselibs+/score/mw/log/log_stream.h:400:1: warning: function 'operator<<' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  400 | inline LogStream& operator<<(LogStream& out, long long value) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_stream.h:410:51: warning: use c++17 style variable templates [modernize-type-traits]
+  410 | template <typename EnumerationT, std::enable_if_t<std::is_enum<EnumerationT>::value, bool> = true>
+      |                                                   ^                         ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/mw/log/log_stream.h:426:30: warning: use c++14 style type templates [modernize-type-traits]
+  426 |     return (out << +typename std::underlying_type<EnumerationT>::type(enumvalue));
+      |                     ~~~~~~~~ ^                                 ~~~~~~
+      |                                                  _t
+external/score_baselibs+/score/mw/log/log_types.h:27:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   27 | namespace score
+      | ^~~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace mw
+      | ~~~~~~~~~~~~
+   30 | {
+      | ~
+   31 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_types.h:177:5: warning: function 'Data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  177 |     constexpr auto* Data() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:181:5: warning: function 'Size' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  181 |     constexpr auto Size() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:214:5: warning: function 'GetCode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  214 |     std::uint16_t GetCode() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:219:5: warning: function 'GetMessage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  219 |     std::string_view GetMessage() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:260:51: warning: use c++17 style variable templates [modernize-type-traits]
+  260 | template <typename T, typename = std::enable_if_t<std::is_scalar<T>::value>>
+      |                                                   ^                ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/mw/log/log_types.h:262:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  262 | inline LogRawBuffer MakeLogRawBuffer(const T& value) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:275:13: warning: redundant explicit casting to the same type 'LogRawBuffer::size_type' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  275 |             static_cast<LogRawBuffer::size_type>(sizeof(T))};
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~
+external/score_baselibs+/score/mw/log/log_types.h:284:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  284 | inline LogRawBuffer MakeLogRawBuffer(const score::cpp::span<T> values)
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:288:40: warning: use c++17 style variable templates [modernize-type-traits]
+  288 |     constexpr const bool kIsEligible = std::is_scalar<T>::value;
+      |                                        ^                ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/mw/log/log_types.h:302:46: warning: redundant explicit casting to the same type 'LogRawBuffer::size_type' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  302 |     const auto buffer_size = values.size() * static_cast<LogRawBuffer::size_type>(sizeof(T));
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~
+external/score_baselibs+/score/mw/log/log_types.h:316:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  316 | inline LogRawBuffer MakeLogRawBuffer(const std::vector<T>& values) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:328:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  328 | inline LogRawBuffer MakeLogRawBuffer(const std::array<T, n>& values) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/logging.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | 
+   27 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/recorder.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace mw
+      | ~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/recorder.h:113:5: warning: function 'IsLogEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  113 |     virtual bool IsLogEnabled(const LogLevel&, const std::string_view context) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/slot_handle.h:57:5: warning: function 'GetSlotOfSelectedRecorder' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     SlotIndex GetSlotOfSelectedRecorder() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:61:5: warning: function 'GetSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     SlotIndex GetSlot(const RecorderIdentifier) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:68:5: warning: function 'GetSelectedRecorder' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     RecorderIdentifier GetSelectedRecorder() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:75:5: warning: function 'IsRecorderActive' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   75 |     bool IsRecorderActive(const RecorderIdentifier) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/details/expected/expected.h:118:5: warning: function 'error' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  118 |     constexpr const E& error() const& noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/details/expected/expected.h:127:5: warning: function 'error' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  127 |     constexpr const E&& error() const&& noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/details/expected/expected.h:570:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  570 |         else
+      |         ^~~~
+  571 |         {
+      |         ~
+  572 |             return static_cast<T>(std::forward<U>(default_val));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  573 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:585:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  585 |         else
+      |         ^~~~
+  586 |         {
+      |         ~
+  587 |             return static_cast<T>(std::forward<U>(default_val));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  588 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:599:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  599 |         else
+      |         ^~~~
+  600 |         {
+      |         ~
+  601 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  602 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:614:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  614 |         else
+      |         ^~~~
+  615 |         {
+      |         ~
+  616 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  617 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:626:23: warning: use c++17 style variable templates [modernize-type-traits]
+  626 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:632:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  632 |         else
+      |         ^~~~
+  633 |         {
+      |         ~
+  634 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  635 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:645:23: warning: use c++17 style variable templates [modernize-type-traits]
+  645 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:651:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  651 |         else
+      |         ^~~~
+  652 |         {
+      |         ~
+  653 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  654 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:664:23: warning: use c++17 style variable templates [modernize-type-traits]
+  664 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:670:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  670 |         else
+      |         ^~~~
+  671 |         {
+      |         ~
+  672 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  673 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:683:23: warning: use c++17 style variable templates [modernize-type-traits]
+  683 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:691:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  691 |         else
+      |         ^~~~
+  692 |         {
+      |         ~
+  693 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  694 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  695 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  696 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:705:23: warning: use c++17 style variable templates [modernize-type-traits]
+  705 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:711:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  711 |         else
+      |         ^~~~
+  712 |         {
+      |         ~
+  713 |             return G{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  714 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:724:23: warning: use c++17 style variable templates [modernize-type-traits]
+  724 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:730:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  730 |         else
+      |         ^~~~
+  731 |         {
+      |         ~
+  732 |             return G{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  733 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:743:23: warning: use c++17 style variable templates [modernize-type-traits]
+  743 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:749:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  749 |         else
+      |         ^~~~
+  750 |         {
+      |         ~
+  751 |             return G{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  752 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:762:23: warning: use c++17 style variable templates [modernize-type-traits]
+  762 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:770:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  770 |         else
+      |         ^~~~
+  771 |         {
+      |         ~
+  772 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  773 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  774 |             return G{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  775 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:898:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  898 |         else
+      |         ^~~~
+  899 |         {
+      |         ~
+  900 |             return expected<T, G>{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  901 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:915:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  915 |         else
+      |         ^~~~
+  916 |         {
+      |         ~
+  917 |             return expected<T, G>{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  918 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:932:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  932 |         else
+      |         ^~~~
+  933 |         {
+      |         ~
+  934 |             return expected<T, G>{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  935 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:951:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  951 |         else
+      |         ^~~~
+  952 |         {
+      |         ~
+  953 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  954 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  955 |             return expected<T, G>{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  956 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:973:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  973 |         else
+      |         ^~~~
+  974 |         {
+      |         ~
+  975 |             return (!rhs.has_value()) && (lhs.error() == rhs.error());
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  976 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1259:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1259 |         else
+      |         ^~~~
+ 1260 |         {
+      |         ~
+ 1261 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1262 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1274:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1274 |         else
+      |         ^~~~
+ 1275 |         {
+      |         ~
+ 1276 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1277 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1286:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1286 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1292:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1292 |         else
+      |         ^~~~
+ 1293 |         {
+      |         ~
+ 1294 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1295 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1305:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1305 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1311:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1311 |         else
+      |         ^~~~
+ 1312 |         {
+      |         ~
+ 1313 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1314 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1324:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1324 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1330:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1330 |         else
+      |         ^~~~
+ 1331 |         {
+      |         ~
+ 1332 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1333 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1343:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1343 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1351:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1351 |         else
+      |         ^~~~
+ 1352 |         {
+      |         ~
+ 1353 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1354 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1355 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1356 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1365:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1365 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1371:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1371 |         else
+      |         ^~~~
+ 1372 |         {
+      |         ~
+ 1373 |             return G{};
+      |             ~~~~~~~~~~~
+ 1374 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1384:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1384 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1390:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1390 |         else
+      |         ^~~~
+ 1391 |         {
+      |         ~
+ 1392 |             return G{};
+      |             ~~~~~~~~~~~
+ 1393 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1403:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1403 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1409:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1409 |         else
+      |         ^~~~
+ 1410 |         {
+      |         ~
+ 1411 |             return G{};
+      |             ~~~~~~~~~~~
+ 1412 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1422:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1422 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1430:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1430 |         else
+      |         ^~~~
+ 1431 |         {
+      |         ~
+ 1432 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1433 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1434 |             return G{};
+      |             ~~~~~~~~~~~
+ 1435 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1558:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1558 |         else
+      |         ^~~~
+ 1559 |         {
+      |         ~
+ 1560 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1561 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1575:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1575 |         else
+      |         ^~~~
+ 1576 |         {
+      |         ~
+ 1577 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1578 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1592:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1592 |         else
+      |         ^~~~
+ 1593 |         {
+      |         ~
+ 1594 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1595 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1611:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1611 |         else
+      |         ^~~~
+ 1612 |         {
+      |         ~
+ 1613 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1614 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1615 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1616 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1680:16: warning: swap functions should be marked noexcept [performance-noexcept-swap]
+ 1680 | constexpr void swap(::score::details::expected<T, E>& lhs, ::score::details::expected<T, E>& rhs)
+      |                ^
+ 1681 | // NOLINTEND(cert-dcl58-cpp) See comment on the namespace above
+      |  noexcept 
+external/score_baselibs+/score/result/details/expected/extensions.h:34:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   34 |     else
+      |     ^~~~
+   35 |     {
+      |     ~
+   36 |         return score::cpp::unexpected{expected.error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:47:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   47 |     else
+      |     ^~~~
+   48 |     {
+      |     ~
+   49 |         return score::cpp::unexpected{std::move(expected).error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   50 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:60:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   60 |     else
+      |     ^~~~
+   61 |     {
+      |     ~
+   62 |         return unexpected{expected.error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:73:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   73 |     else
+      |     ^~~~
+   74 |     {
+      |     ~
+   75 |         return unexpected{std::move(expected).error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:86:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   86 |     else
+      |     ^~~~
+   87 |     {
+      |     ~
+   88 |         std::invoke(std::forward<F>(error_handling), expected.error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   89 |         return score::cpp::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   90 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:100:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  100 |     else
+      |     ^~~~
+  101 |     {
+      |     ~
+  102 |         std::invoke(std::forward<F>(error_handling), std::move(expected).error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  103 |         return score::cpp::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  104 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:114:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  114 |     else
+      |     ^~~~
+  115 |     {
+      |     ~
+  116 |         std::invoke(std::forward<F>(error_handling), expected.error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  117 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+  118 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:128:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  128 |     else
+      |     ^~~~
+  129 |     {
+      |     ~
+  130 |         std::invoke(std::forward<F>(error_handling), std::move(expected).error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  131 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+  132 |     }
+      |     ~
+external/score_baselibs+/score/result/error.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace result
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::result
+external/score_baselibs+/score/result/error.h:94:5: warning: function 'Message' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   94 |     std::string_view Message() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/error.h:101:5: warning: function 'UserMessage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  101 |     std::string_view UserMessage() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/error_code.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace result
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::result
+   21 | {
+   22 | 
+   23 | /// \brief Every user-defined error code shall inherit from here
+   24 | ///
+   25 | /// \details This way we can ensure that the user-defined error codes can be stored in our globally defined Error class.
+   26 | using ErrorCode = std::int32_t;
+   27 | 
+   28 | }  // namespace result
+      | ~~~~~~~~~~~~~~~~~~~~~~
+      | } // namespace score::result
+   29 | }  // namespace score
+      | ~~~~~~~~~~~~~~~~~~~~~
+external/score_baselibs+/score/result/error_domain.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace result
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::result
+external/score_baselibs+/score/result/error_domain.h:39:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     virtual std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/scope_exit/flag_owner.h:61:5: warning: function 'IsSet' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsSet() const
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 10449 warnings (10371 in non-user code, 72 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

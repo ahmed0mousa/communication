@@ -1,3 +1,11 @@
-6075 warnings generated.
-Suppressed 6164 warnings (6069 in non-user code, 89 NOLINT, 6 with check filters).
+12626 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3959/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory.cpp:20:1: warning: no header providing "score::mw::com::impl::IProxyBindingFactory" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/plumbing/proxy_binding_factory_impl.h"
+   16 | 
+   17 | namespace score::mw::com::impl
+   18 | {
+   19 | 
+   20 | IProxyBindingFactory* ProxyBindingFactory::mock_{nullptr};
+      | ^
+Suppressed 12715 warnings (12619 in non-user code, 90 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,11 +1,164 @@
-5562 warnings generated.
+11553 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_ptr.h:91:46: warning: use c++14 style type templates [modernize-type-traits]
+   91 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/bindings/lola/sample_ptr.h:91:62: warning: use c++17 style variable templates [modernize-type-traits]
+   91 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+./score/mw/com/impl/bindings/lola/sample_ptr.h:92:14: warning: use c++14 style type templates [modernize-type-traits]
+   92 |     typename std::add_lvalue_reference<const SampleType>::type operator*() const noexcept
+      |     ~~~~~~~~ ^                                          ~~~~~~
+      |                                       _t
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5648 warnings (5554 in non-user code, 88 NOLINT, 6 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:133:46: warning: use c++14 style type templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/plumbing/sample_ptr.h:133:62: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+./score/mw/com/impl/plumbing/sample_ptr.h:148:82: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  148 |         return std::holds_alternative<score::cpp::blank>(binding_sample_ptr_) == false;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                !static_cast<bool>(std::holds_alternative<score::cpp::blank>(binding_sample_ptr_))
+./score/mw/com/impl/proxy_event_binding.h:46:116: warning: 80U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   46 |     using Callback = score::cpp::callback<void(SamplePtr<SampleType>, tracing::ITracingRuntime::TracePointDataId), 80U>;
+      |                                                                                                                    ^
+./score/mw/com/impl/proxy_event_binding.h:79:1: warning: function 'MakeSamplePtr' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   79 | inline SamplePtr<SampleType> ProxyEventBinding<SampleType>::MakeSamplePtr(BindingSamplePtr&& binding_ptr,
+      | ^~~~~~
+./score/mw/com/impl/proxy_event_binding_base.h:60:5: warning: function 'GetSubscriptionState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   60 |     virtual SubscriptionState GetSubscriptionState() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:93:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   93 |     virtual Result<std::size_t> GetNumNewSamplesAvailable() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:100:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  100 |     virtual std::optional<std::uint16_t> GetMaxSampleCount() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:103:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     virtual BindingType GetBindingType() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/sample_reference_tracker.h:50:5: warning: function 'GetNumAvailableGuards' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     std::size_t GetNumAvailableGuards() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/sample_reference_tracker.h:156:20: warning: use c++17 style variable templates [modernize-type-traits]
+  156 |     static_assert((std::is_move_assignable<SampleReferenceTracker>::value == false) &&
+      |                    ^
+note: this fix will not be applied because it overlaps with another fix
+./score/mw/com/impl/sample_reference_tracker.h:156:78: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  156 |     static_assert((std::is_move_assignable<SampleReferenceTracker>::value == false) &&
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                    !std::is_move_assignable<SampleReferenceTracker>::value
+./score/mw/com/impl/sample_reference_tracker.h:157:24: warning: use c++17 style variable templates [modernize-type-traits]
+  157 |                       (std::is_move_constructible<SampleReferenceTracker>::value == false),
+      |                        ^
+note: this fix will not be applied because it overlaps with another fix
+./score/mw/com/impl/sample_reference_tracker.h:157:85: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  157 |                       (std::is_move_constructible<SampleReferenceTracker>::value == false),
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                        !std::is_move_constructible<SampleReferenceTracker>::value
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:65:5: warning: function 'GetTraceClientId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     virtual analysis::tracing::TraceClientId GetTraceClientId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:73:5: warning: function 'GetDataLossFlag' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   73 |     virtual bool GetDataLossFlag() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:87:5: warning: function 'GetShmObjectHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     virtual std::optional<analysis::tracing::ShmObjectHandle> GetShmObjectHandle(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:90:5: warning: function 'GetShmRegionStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     virtual std::optional<void*> GetShmRegionStartAddress(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:98:5: warning: function 'GetCachedFileDescriptorForReregisteringShmObject' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     virtual std::optional<std::pair<memory::shared::ISharedMemoryResource::FileDescriptor, void*>>
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:105:5: warning: function 'ConvertToTracingServiceInstanceElement' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     virtual analysis::tracing::ServiceInstanceElement ConvertToTracingServiceInstanceElement(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_tracing_runtime.h:80:5: warning: function 'GetBindingTracingRuntime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     virtual IBindingTracingRuntime& GetBindingTracingRuntime(const BindingType binding_type) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/type_erased_sample_ptr.h:33:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   33 |     score::cpp::callback<void(), 128U> type_erased_sample_ptr_;
+      |                                  ^
+Suppressed 11599 warnings (11504 in non-user code, 89 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

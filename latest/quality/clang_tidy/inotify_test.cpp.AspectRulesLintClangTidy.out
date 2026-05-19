@@ -1,3 +1,31 @@
-5664 warnings generated.
-Suppressed 5737 warnings (5661 in non-user code, 73 NOLINT, 3 with check filters).
+10727 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:14:1: warning: included header filesystem.h is not used directly [misc-include-cleaner]
+   14 | #include "score/filesystem/filesystem.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | #include "score/mw/com/test/common_test_resources/sctf_test_runner.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:15:1: warning: included header sctf_test_runner.h is not used directly [misc-include-cleaner]
+   15 | #include "score/mw/com/test/common_test_resources/sctf_test_runner.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/os/utils/inotify/inotify_instance_impl.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:18:1: warning: included header stop_token.hpp is not used directly [misc-include-cleaner]
+   18 | #include <score/stop_token.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   19 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:22:1: warning: included header future is not used directly [misc-include-cleaner]
+   22 | #include <future>
+      | ^~~~~~~~~~~~~~~~~
+   23 | #include <iostream>
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:43:24: warning: no header providing "score::filesystem::StandardFilesystem" is directly included [misc-include-cleaner]
+   14 |     score::filesystem::StandardFilesystem fs;
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:51:24: warning: no header providing "score::os::InotifyEvent" is directly included [misc-include-cleaner]
+   16 | std::string to_str(os::InotifyEvent::ReadMask mask)
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:89:44: warning: no header providing "score::os::Inotify" is directly included [misc-include-cleaner]
+   16 |         i_notify.AddWatch(kBaseFolder, os::Inotify::EventMask::kInCreate | os::Inotify::EventMask::kInDelete);
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4893/execroot/_main/score/mw/com/test/inotify/inotify_test.cpp:170:59: warning: 300 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  170 |     std::this_thread::sleep_for(std::chrono::milliseconds(300));  // On QNX it takes around 251ms to receive the event.
+      |                                                           ^
+Suppressed 10793 warnings (10716 in non-user code, 74 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

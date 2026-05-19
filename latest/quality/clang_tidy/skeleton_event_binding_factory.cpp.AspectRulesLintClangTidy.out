@@ -1,3 +1,47 @@
-8594 warnings generated.
-Suppressed 8738 warnings (8586 in non-user code, 144 NOLINT, 8 with check filters).
+18569 warnings generated.
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:109:49: warning: use c++14 style type templates [modernize-type-traits]
+  109 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                        ~~~~~~~~ ^                                           ~~~~~~
+      |                                                               _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:109:65: warning: use c++17 style variable templates [modernize-type-traits]
+  109 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                                                 ^              ~~~~~~~
+      |                                                                             _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:110:14: warning: use c++14 style type templates [modernize-type-traits]
+  110 |     typename std::add_lvalue_reference<SampleType>::type operator*() const noexcept;
+      |     ~~~~~~~~ ^                                    ~~~~~~
+      |                                       _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:117:49: warning: use c++14 style type templates [modernize-type-traits]
+  117 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                        ~~~~~~~~ ^                                           ~~~~~~
+      |                                                               _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:117:65: warning: use c++17 style variable templates [modernize-type-traits]
+  117 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                                                 ^              ~~~~~~~
+      |                                                                             _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:264:32: warning: use c++14 style type templates [modernize-type-traits]
+  264 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                       ~~~~~~~~ ^                                           ~~~~~~
+      |                                              _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:264:48: warning: use c++17 style variable templates [modernize-type-traits]
+  264 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                                                ^              ~~~~~~~
+      |                                                            _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:265:10: warning: use c++14 style type templates [modernize-type-traits]
+  265 | typename std::add_lvalue_reference<SampleType>::type SampleAllocateePtr<SampleType>::operator*() const noexcept
+      | ~~~~~~~~ ^                                    ~~~~~~
+      |                                   _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:267:33: warning: use c++14 style type templates [modernize-type-traits]
+  267 |     using ReturnType = typename std::add_lvalue_reference<SampleType>::type;
+      |                        ~~~~~~~~ ^                                    ~~~~~~
+      |                                                          _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:296:32: warning: use c++14 style type templates [modernize-type-traits]
+  296 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                       ~~~~~~~~ ^                                           ~~~~~~
+      |                                              _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:296:48: warning: use c++17 style variable templates [modernize-type-traits]
+  296 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                                                ^              ~~~~~~~
+      |                                                            _v
+Suppressed 18703 warnings (18550 in non-user code, 145 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

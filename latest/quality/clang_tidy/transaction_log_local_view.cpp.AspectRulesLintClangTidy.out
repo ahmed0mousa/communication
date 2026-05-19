@@ -1,7 +1,95 @@
-5207 warnings generated.
+10032 warnings generated.
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5270 warnings (5203 in non-user code, 64 NOLINT, 3 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/com_error.h:97:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:32:41: warning: no header providing "score::mw::com::impl::lola::TransactionLogSlot" is directly included [misc-include-cleaner]
+   19 | #include "score/mw/com/impl/com_error.h"
+   20 | 
+   21 | #include "score/mw/log/logging.h"
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | namespace
+   27 | {
+   28 | 
+   29 | // Handles race condition between concurrent SamplePtr destruction and creation for the same slot.
+   30 | // Thread A may be suspended between decrementing refcount and clearing the transaction-END bit.
+   31 | // This allows Thread A to complete its dereference transaction before proceeding.
+   32 | void WaitForTransactionEndToBecomeFalse(TransactionLogSlot& slot) noexcept
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:46:10: warning: no header providing "std::terminate" is directly included [misc-include-cleaner]
+   17 |     std::terminate();
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:52:5: warning: use range-based for loop instead [modernize-loop-convert]
+   52 |     for (std::size_t slot_idx = 0U; slot_idx < reference_count_slots.size(); ++slot_idx)
+      |     ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         (auto slot : reference_count_slots)
+   53 |     {
+   54 |         const auto& slot = reference_count_slots[slot_idx];
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   55 |         if (slot.GetTransactionBegin() || slot.GetTransactionEnd())
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:52:15: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   16 |     for (std::size_t slot_idx = 0U; slot_idx < reference_count_slots.size(); ++slot_idx)
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:65:50: warning: no header providing "score::mw::com::impl::lola::TransactionLog" is directly included [misc-include-cleaner]
+   19 | TransactionLogLocalView::TransactionLogLocalView(TransactionLog& transaction_log) noexcept
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:75:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_PRECONDITION" is directly included [misc-include-cleaner]
+   17 |     SCORE_LANGUAGE_FUTURECPP_PRECONDITION(!subscribe_transactions_.get().GetTransactionBegin());
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:115:57: warning: no header providing "score::mw::com::impl::lola::SlotIndexType" is directly included [misc-include-cleaner]
+   19 | void TransactionLogLocalView::ReferenceTransactionBegin(SlotIndexType slot_index) noexcept
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:175:1: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   22 | Result<void> TransactionLogLocalView::RollbackProxyElementLog(const DereferenceSlotCallback& dereference_slot_callback,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:182:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_PRECONDITION_MESSAGE" is directly included [misc-include-cleaner]
+  182 |         SCORE_LANGUAGE_FUTURECPP_PRECONDITION_MESSAGE(
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1340/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log_local_view.cpp:230:20: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+  230 |             return MakeUnexpected(ComErrc::kCouldNotRestartProxy);
+      |                    ^
+Suppressed 10076 warnings (10008 in non-user code, 65 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

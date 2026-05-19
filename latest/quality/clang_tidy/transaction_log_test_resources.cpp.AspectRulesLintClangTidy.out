@@ -1,4 +1,4 @@
-10655 warnings generated.
+26600 warnings generated.
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:55:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    55 |     EventSubscriptionControlAttorney(EventSubscriptionControl& event_subscription_control) noexcept
       |     ^
@@ -18,6 +18,12 @@
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:147:7: warning: class 'SharedMemoryFactoryGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   147 | class SharedMemoryFactoryGuard
       |       ^
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:180:53: warning: 0x10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  180 |     LolaServiceInstanceId lola_service_instance_id_{0x10};
+      |                                                     ^
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:181:36: warning: 0xcdef is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  181 |     LolaServiceId lola_service_id_{0xcdef};
+      |                                    ^
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: warning: destructor of 'LolaProxyEventResources' is protected and virtual [cppcoreguidelines-virtual-class-destructor]
   218 | class LolaProxyEventResources : public ProxyMockedMemoryFixture
       |       ^
@@ -29,9 +35,49 @@
   221 |     LolaProxyEventResources();
   222 |     ~LolaProxyEventResources() override;
       |     ~~~~~~~~~~~~~~~~~~~~~~~~
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:241:82: warning: 37U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  241 |     IMessagePassingService::HandlerRegistrationNoType current_subscription_no_ = 37U;
+      |                                                                                  ^
 ./score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.h:33:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    33 |     TransactionLogSetAttorney(TransactionLogSet& transaction_log_set) : transaction_log_set_{transaction_log_set} {}
       |     ^
       |     explicit 
-Suppressed 10843 warnings (10640 in non-user code, 195 NOLINT, 8 with check filters).
+./score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.h:40:5: warning: function 'GetProxyTransactionLogs' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     const TransactionLogSet::TransactionLogCollection& GetProxyTransactionLogs() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.h:65:9: warning: use range-based for loop instead [modernize-loop-convert]
+   65 |         for (std::size_t i = 0; i < transaction_logs.size(); ++i)
+      |         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             (const auto & transaction_log_element : transaction_logs)
+   66 |         {
+   67 |             const auto& transaction_log_element = transaction_logs[i];
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |             EXPECT_FALSE(transaction_log_element.IsActive());
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:21:6: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::mw::com::impl::lola
+   19 | {
+   20 | 
+   21 | std::uint32_t CreateEventSubscriptionControlState(EventSubscriptionControl<>::SubscriberCountType subscriber_count,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:25:24: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   25 |     result = result << 16U;
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:32:54: warning: no header providing "score::mw::com::impl::lola::TransactionLog" is directly included [misc-include-cleaner]
+   15 |                                                const TransactionLog::MaxSampleCountType max_sample_count) noexcept
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:41:5: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   14 |     ConsumerEventDataControlLocalView<>& consumer_event_data_control_local,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:45:11: warning: no header providing "score::mw::com::impl::lola::TransactionLogId" is directly included [misc-include-cleaner]
+   15 |     const TransactionLogId transaction_log_id) noexcept
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:67:20: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   17 |     constexpr std::size_t slot_index{0U};
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4300/execroot/_main/score/mw/com/impl/bindings/lola/test/transaction_log_test_resources.cpp:151:14: warning: no header providing "std::find_if" is directly included [misc-include-cleaner]
+   17 |         std::find_if(transaction_logs.begin(), transaction_logs.end(), [&transaction_log_id](const auto& element) {
+      |              ^
+Suppressed 26954 warnings (26572 in non-user code, 374 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

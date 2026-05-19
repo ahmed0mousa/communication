@@ -1,3 +1,40 @@
-4995 warnings generated.
-Suppressed 5044 warnings (4989 in non-user code, 49 NOLINT, 6 with check filters).
+10026 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:19:6: warning: no header providing "std::pair" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | std::pair<std::mutex&, bool> RollbackSynchronization::GetMutex(
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:19:16: warning: no header providing "std::mutex" is directly included [misc-include-cleaner]
+   15 | #include <score/assert.hpp>
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | std::pair<std::mutex&, bool> RollbackSynchronization::GetMutex(
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:20:11: warning: no header providing "score::mw::com::impl::lola::SkeletonInstanceIdentifier" is directly included [misc-include-cleaner]
+   14 | 
+   15 | #include <score/assert.hpp>
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | std::pair<std::mutex&, bool> RollbackSynchronization::GetMutex(
+   20 |     const SkeletonInstanceIdentifier skeleton_instance_identifier)
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:22:16: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   22 |     const std::lock_guard<std::mutex> lock{map_mutex_};
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:33:14: warning: no header providing "std::piecewise_construct" is directly included [misc-include-cleaner]
+   33 |         std::piecewise_construct, std::forward_as_tuple(skeleton_instance_identifier), std::forward_as_tuple());
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:33:40: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+   16 |         std::piecewise_construct, std::forward_as_tuple(skeleton_instance_identifier), std::forward_as_tuple());
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:33:93: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+   33 |         std::piecewise_construct, std::forward_as_tuple(skeleton_instance_identifier), std::forward_as_tuple());
+      |                                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3263/execroot/_main/score/mw/com/impl/bindings/lola/rollback_synchronization.cpp:39:6: warning: no header providing "std::ostream" is directly included [misc-include-cleaner]
+   15 | std::ostream& operator<<(std::ostream& ostream_out, const RollbackSynchronization&) noexcept
+      |      ^
+Suppressed 10068 warnings (10012 in non-user code, 50 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

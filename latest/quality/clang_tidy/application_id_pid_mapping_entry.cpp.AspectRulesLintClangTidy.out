@@ -1,3 +1,13 @@
-537 warnings generated.
-Suppressed 537 warnings (534 in non-user code, 3 with check filters).
+1241 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/1158/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping_entry.cpp:20:6: warning: no header providing "std::pair" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | 
+   20 | std::pair<ApplicationIdPidMappingEntry::MappingEntryStatus, std::uint32_t>
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1158/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping_entry.cpp:45:24: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   45 |     result = result << 32U;
+      |                        ^
+Suppressed 1239 warnings (1236 in non-user code, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

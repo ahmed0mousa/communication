@@ -1,3 +1,17 @@
-4717 warnings generated.
-Suppressed 4751 warnings (4714 in non-user code, 34 NOLINT, 3 with check filters).
+8729 warnings generated.
+./score/mw/com/impl/skeleton_binding.h:50:30: warning: 64U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   50 |                              64U>;
+      |                              ^
+./score/mw/com/impl/skeleton_binding.h:56:100: warning: 64U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   56 |         score::cpp::callback<void(std::string_view element_name, ServiceElementType element_type), 64U>;
+      |                                                                                                    ^
+./score/mw/com/impl/skeleton_binding.h:98:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     virtual BindingType GetBindingType() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/skeleton_binding.h:99:5: warning: function 'VerifyAllMethodsRegistered' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   99 |     virtual bool VerifyAllMethodsRegistered() const = 0;
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 8760 warnings (8722 in non-user code, 35 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

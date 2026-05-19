@@ -1,3 +1,117 @@
-9361 warnings generated.
-Suppressed 9526 warnings (9351 in non-user code, 165 NOLINT, 10 with check filters).
+21304 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:21:1: warning: included header lola_service_instance_id.h is not used directly [misc-include-cleaner]
+   21 | #include "score/mw/com/impl/configuration/lola_service_instance_id.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   22 | #include "score/mw/com/impl/configuration/lola_service_type_deployment.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:25:1: warning: included header proxy_event_binding_factory.h is not used directly [misc-include-cleaner]
+   25 | #include "score/mw/com/impl/plumbing/proxy_event_binding_factory.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   26 | #include "score/mw/com/impl/service_element_type.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:34:1: warning: included header logging.h is not used directly [misc-include-cleaner]
+   34 | #include "score/mw/log/logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   35 | #include "score/os/errno.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:37:1: warning: included header exception is not used directly [misc-include-cleaner]
+   37 | #include <exception>
+      | ^~~~~~~~~~~~~~~~~~~~
+   38 | #include <future>
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:38:1: warning: included header future is not used directly [misc-include-cleaner]
+   38 | #include <future>
+      | ^~~~~~~~~~~~~~~~~
+   39 | #include <iostream>
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:40:1: warning: included header memory is not used directly [misc-include-cleaner]
+   40 | #include <memory>
+      | ^~~~~~~~~~~~~~~~~
+   41 | #include <string>
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:42:1: warning: included header thread is not used directly [misc-include-cleaner]
+   42 | #include <thread>
+      | ^~~~~~~~~~~~~~~~~
+   43 | #include <variant>
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:52:34: warning: no header providing "std::operator""sv" is directly included [misc-include-cleaner]
+   42 | #include <thread>
+   43 | #include <variant>
+   44 | #include <vector>
+   45 | 
+   46 | namespace
+   47 | {
+   48 | 
+   49 | using InstanceSpecifier = score::mw::com::impl::InstanceSpecifier;
+   50 | using ElementFqId = score::mw::com::impl::lola::ElementFqId;
+   51 | 
+   52 | using std::string_view_literals::operator""sv;
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:63:93: warning: the const qualified parameter 'instance_specifier' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   63 |     ConfigParser(const std::string& service_instance_manifest_path, const InstanceSpecifier instance_specifier)
+      |                                                                                             ^
+      |                                                                                            &
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:77:5: warning: function 'GetElementFQId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     score::Result<ElementFqId> GetElementFQId(const score::mw::com::impl::LolaEventId event_id) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:80:53: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   37 |         const auto lola_event_id = static_cast<std::uint8_t>(event_id);
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:97:5: warning: function 'GetShmPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     score::cpp::optional<std::string> GetShmPath() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:97:17: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   41 |     score::cpp::optional<std::string> GetShmPath() const noexcept
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:105:16: warning: constness of 'shm_path' prevents automatic move [performance-no-automatic-move]
+  105 |         return shm_path;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:108:5: warning: function 'GetShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  108 |     score::cpp::optional<std::string> GetShmName() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:123:27: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+  123 |     static constexpr std::uint32_t major_version_number_{1};
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:127:78: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   41 |     score::mw::com::impl::ServiceTypeDeployment type_deployment_{score::cpp::blank{}};
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:164:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   31 |         score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped"});
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:169:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   37 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:207:18: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   41 |             std::stringstream ss;
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/5189/execroot/_main/score/mw/com/test/check_values_created_from_config/check_values_created_from_config_application.cpp:239:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  239 |     else if (mode == "recv" || mode == "proxy")
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  240 |     {
+      |     ~
+  241 |         auto interprocess_notification_proxy_to_skeleton_result =
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  242 |             score::mw::com::test::SharedMemoryObjectCreator<score::os::InterprocessNotification>::CreateOrOpenObject(
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  243 |                 kInterprocessNotificationFromProxyToSkeletonShmPath);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  244 |         if (!interprocess_notification_proxy_to_skeleton_result.has_value())
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  245 |         {
+      |         ~
+  246 |             std::stringstream ss;
+      |             ~~~~~~~~~~~~~~~~~~~~~
+  247 |             ss << "Creating interprocess notification object on proxy side failed:"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |                << interprocess_notification_proxy_to_skeleton_result.error().ToString();
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  249 |             std::cout << ss.str() << std::endl;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  250 |             return EXIT_FAILURE;
+      |             ~~~~~~~~~~~~~~~~~~~~
+  251 |         }
+      |         ~
+  252 |         const score::mw::com::test::SharedMemoryObjectGuard<score::os::InterprocessNotification>
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  253 |             interprocess_notification_proxy_to_skeleton_guard{
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  254 |                 interprocess_notification_proxy_to_skeleton_result.value()};
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Suppressed 21449 warnings (21273 in non-user code, 166 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,8 +1,30 @@
-8785 warnings generated.
+18695 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
 ./score/mw/com/impl/bindings/lola/event_data_control_composite.h:48:12: warning: constructor does not initialize these fields: qm_misbehaved [cppcoreguidelines-pro-type-member-init]
    48 |     struct AllocationResult
       |            ^
@@ -16,13 +38,275 @@
    56 |         bool qm_misbehaved;
       |                           
       |                           {}
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:95:5: warning: function 'IsQmControlDisconnected' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   95 |     bool IsQmControlDisconnected() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:98:5: warning: function 'GetQmEventDataControlLocal' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     ProviderEventDataControlLocalView<AtomicIndirectorType>& GetQmEventDataControlLocal() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:105:5: warning: function 'GetEventSlotTimestamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     EventSlotStatus::EventTimeStamp GetEventSlotTimestamp(const SlotIndexType slot_index) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:115:5: warning: function 'GetLatestTimestamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  115 |     EventSlotStatus::EventTimeStamp GetLatestTimestamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:128:5: warning: function 'GetNextFreeMultiSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::optional<typename ProviderEventDataControlLocalView<AtomicIndirectorType>::SlotInfo> GetNextFreeMultiSlot()
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_meta_info.h:30:57: warning: the const qualified parameter 'event_slots_raw_array' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   30 |                   const memory::shared::OffsetPtr<void> event_slots_raw_array)
+      |                                                         ^
+      |                                                        &
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:40:5: warning: function 'HasAsilBSupport' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual bool HasAsilBSupport() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:43:5: warning: function 'GetShmSizeCalculationMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     virtual ShmSizeCalculationMode GetShmSizeCalculationMode() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:48:5: warning: function 'GetPid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     virtual pid_t GetPid() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:51:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual GlobalConfiguration::ApplicationId GetApplicationId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:51:5: warning: function 'GetDataChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::string GetDataChannelShmName(const LolaServiceInstanceId::InstanceId instance_id) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:57:5: warning: function 'GetControlChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     virtual std::string GetControlChannelShmName(const LolaServiceInstanceId::InstanceId instance_id,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:67:5: warning: function 'GetMethodChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     virtual std::string GetMethodChannelShmName(
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:111:5: warning: function 'FindOldestUnusedSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  111 |     std::optional<ProviderEventDataControlLocalView::SlotInfo> FindOldestUnusedSlot() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:144:14: warning: use c++14 style type templates [modernize-type-traits]
+  144 |     typename std::add_lvalue_reference<SampleType>::type operator*() const noexcept
+      |     ~~~~~~~~ ^                                    ~~~~~~
+      |                                       _t
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:174:5: warning: function 'GetReferencedSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  174 |     SlotIndexType GetReferencedSlot() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:218:5: warning: function 'GetEventDataControlComposite' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  218 |     const std::optional<EventDataControlComposite<>>& GetEventDataControlComposite() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:239:5: warning: function 'GetEventDataControlComposite' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  239 |     const std::optional<EventDataControlComposite<>>& GetEventDataControlComposite() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:80:5: warning: function 'GetTraceClientId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     analysis::tracing::TraceClientId GetTraceClientId() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:90:5: warning: function 'GetDataLossFlag' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     bool GetDataLossFlag() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:103:5: warning: function 'GetShmObjectHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     std::optional<analysis::tracing::ShmObjectHandle> GetShmObjectHandle(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:107:5: warning: function 'GetShmRegionStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::optional<void*> GetShmRegionStartAddress(const impl::tracing::ServiceElementInstanceIdentifierView&
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:115:5: warning: function 'GetCachedFileDescriptorForReregisteringShmObject' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  115 |     std::optional<std::pair<memory::shared::ISharedMemoryResource::FileDescriptor, void*>>
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:124:5: warning: function 'ConvertToTracingServiceInstanceElement' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  124 |     analysis::tracing::ServiceInstanceElement ConvertToTracingServiceInstanceElement(
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 8955 warnings (8773 in non-user code, 174 NOLINT, 8 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:23:1: warning: included header skeleton_event_binding.h is not used directly [misc-include-cleaner]
+   23 | #include "score/mw/com/impl/skeleton_event_binding.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   24 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:33:1: warning: included header span.hpp is not used directly [misc-include-cleaner]
+   33 | #include <score/span.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~
+   34 | #include <sys/types.h>
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:34:1: warning: included header types.h is not used directly [misc-include-cleaner]
+   34 | #include <sys/types.h>
+      | ^~~~~~~~~~~~~~~~~~~~~~
+   35 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:84:33: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   32 | enum class ShmObjectType : std::uint8_t
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:91:6: warning: no header providing "std::uint64_t" is directly included [misc-include-cleaner]
+   91 | std::uint64_t CalculateMemoryResourceId(const LolaServiceTypeDeployment::ServiceId lola_service_id,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:92:47: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   20 |                                         const LolaServiceInstanceId::InstanceId lola_instance_id,
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:95:61: warning: 24U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   95 |     return ((static_cast<std::uint64_t>(lola_service_id) << 24U) +
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:96:62: warning: 8U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   96 |             (static_cast<std::uint64_t>(lola_instance_id) << 8U) + static_cast<std::uint8_t>(object_type));
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:126:5: warning: no header providing "score::mw::com::impl::SkeletonBinding" is directly included [misc-include-cleaner]
+   23 |     SkeletonBinding::SkeletonEventBindings& events,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:128:10: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   32 |     std::optional<SkeletonBinding::RegisterShmObjectTraceCallback> register_shm_object_trace_callback) -> Result<void>
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:149:41: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   39 |                                    std::move(register_shm_object_trace_callback)))
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:176:76: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   14 | auto SkeletonMemoryManager::CreateEventControlsInCreatedSharedMemory(const ElementFqId element_fq_id,
+      |                                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:177:76: warning: no header providing "score::mw::com::impl::lola::SkeletonEventProperties" is directly included [misc-include-cleaner]
+   17 |                                                                      const SkeletonEventProperties& element_properties)
+      |                                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:178:13: warning: no header providing "std::pair" is directly included [misc-include-cleaner]
+  178 |     -> std::pair<std::reference_wrapper<EventControl>, EventControl*>
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:178:23: warning: no header providing "std::reference_wrapper" is directly included [misc-include-cleaner]
+   32 |     -> std::pair<std::reference_wrapper<EventControl>, EventControl*>
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:178:41: warning: no header providing "score::mw::com::impl::lola::EventControl" is directly included [misc-include-cleaner]
+   14 |     -> std::pair<std::reference_wrapper<EventControl>, EventControl*>
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:210:54: warning: no header providing "score::memory::shared::CalculateAlignedSize" is directly included [misc-include-cleaner]
+   14 |     const auto aligned_sample_size = memory::shared::CalculateAlignedSize(sample_size, sample_alignment);
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:217:55: warning: no header providing "score::mw::com::impl::lola::EventDataStorage" is directly included [misc-include-cleaner]
+   14 |     auto* data_storage = storage_resource_->construct<EventDataStorage<std::max_align_t>>(
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:221:14: warning: no header providing "std::piecewise_construct" is directly included [misc-include-cleaner]
+  221 |         std::piecewise_construct, std::forward_as_tuple(element_fq_id), std::forward_as_tuple(data_storage));
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:221:40: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+   38 |         std::piecewise_construct, std::forward_as_tuple(element_fq_id), std::forward_as_tuple(data_storage));
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:221:78: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+  221 |         std::piecewise_construct, std::forward_as_tuple(element_fq_id), std::forward_as_tuple(data_storage));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:225:11: warning: no header providing "score::mw::com::impl::DataTypeMetaInfo" is directly included [misc-include-cleaner]
+   22 |     const DataTypeMetaInfo sample_meta_info{sample_size, static_cast<std::uint8_t>(sample_alignment)};
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:231:49: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+  231 |                                            std::forward_as_tuple(sample_meta_info, event_data_raw_array));
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:269:5: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   14 |     ConsumerEventDataControlLocalView<> consumer_event_data_control_local{event_control.data_control};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:271:52: warning: no header providing "score::mw::com::impl::lola::TransactionLog" is directly included [misc-include-cleaner]
+   18 |         [&consumer_event_data_control_local](const TransactionLog::SlotIndexType slot_index) {
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:285:64: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   33 |     constexpr auto RemoveMemoryIfExists = [](const score::cpp::optional<std::string>& path) -> void {
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:320:9: warning: no header providing "score::mw::com::impl::lola::ProviderEventDataControlLocalView" is directly included [misc-include-cleaner]
+   15 |         ProviderEventDataControlLocalView<> provider_event_data_control_local{event.second.data_control};
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:346:43: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   14 |         GetBindingRuntime<lola::IRuntime>(BindingType::kLoLa).GetShmSizeCalculationMode() ==
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:347:13: warning: no header providing "score::mw::com::impl::ShmSizeCalculationMode" is directly included [misc-include-cleaner]
+   22 |             ShmSizeCalculationMode::kSimulation,
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:433:33: warning: no header providing "std::make_shared" is directly included [misc-include-cleaner]
+   32 |     control_qm_resource_ = std::make_shared<NewDeleteDelegateMemoryResource>(
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:455:21: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   34 |         score::cpp::ignore = event.second.get().PrepareOffer();
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:506:91: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  506 |         (permissions.empty()) && (lola_service_instance_deployment.strict_permissions_ == false)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                                   !lola_service_instance_deployment.strict_permissions_
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:511:21: warning: no header providing "std::shared_ptr" is directly included [misc-include-cleaner]
+  511 |         [this](std::shared_ptr<score::memory::shared::ISharedMemoryResource> memory) {
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:511:55: warning: no header providing "score::memory::shared::ISharedMemoryResource" is directly included [misc-include-cleaner]
+   14 |         [this](std::shared_ptr<score::memory::shared::ISharedMemoryResource> memory) {
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:511:78: warning: the parameter 'memory' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  511 |         [this](std::shared_ptr<score::memory::shared::ISharedMemoryResource> memory) {
+      |                                                                              ^
+      |                const                                                        &
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:573:91: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  573 |         (permissions.empty()) && (lola_service_instance_deployment.strict_permissions_ == false)
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                                   !lola_service_instance_deployment.strict_permissions_
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:578:90: warning: the parameter 'memory' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  578 |         [this, asil_level](std::shared_ptr<score::memory::shared::ManagedMemoryResource> memory) {
+      |                                                                                          ^
+      |                            const                                                        &
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:710:60: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+  710 |                                                       std::forward_as_tuple(element_fq_id),
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:711:60: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+  711 |                                                       std::forward_as_tuple(element_properties.number_of_slots,
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:721:1: warning: no header providing "score::mw::com::impl::lola::EventMetaInfo" is directly included [misc-include-cleaner]
+   14 | EventMetaInfo& SkeletonMemoryManager::EmplaceEventMetaInfo(const ElementFqId element_fq_id,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4085/execroot/_main/score/mw/com/impl/bindings/lola/skeleton_memory_manager.cpp:728:49: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+  728 |                                            std::forward_as_tuple(sample_meta_info, type_erased_event_data_storage));
+      |                                                 ^
+Suppressed 18781 warnings (18598 in non-user code, 175 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,7 +1,59 @@
-4880 warnings generated.
+9158 warnings generated.
 ./score/mw/com/test/methods/methods_test_resources/process_synchronizer.h:35:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    35 |     ProcessSynchronizer(SharedMemoryObjectCreator<os::InterprocessNotification> interprocess_notifier_creator);
       |     ^
       |     explicit 
-Suppressed 4914 warnings (4876 in non-user code, 35 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:22:1: warning: included header unistd.h is not used directly [misc-include-cleaner]
+   22 | #include <unistd.h>
+      | ^~~~~~~~~~~~~~~~~~~
+   23 | #include <cstdlib>
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:29:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   20 | #include <score/stop_token.hpp>
+   21 | 
+   22 | #include <unistd.h>
+   23 | #include <cstdlib>
+   24 | #include <iostream>
+   25 | 
+   26 | namespace score::mw::com::test
+   27 | {
+   28 | 
+   29 | std::optional<ProcessSynchronizer> ProcessSynchronizer::Create(const std::string& interprocess_notification_shm_path)
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:29:75: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   22 | #include <unistd.h>
+   23 | #include <cstdlib>
+   24 | #include <iostream>
+   25 | 
+   26 | namespace score::mw::com::test
+   27 | {
+   28 | 
+   29 | std::optional<ProcessSynchronizer> ProcessSynchronizer::Create(const std::string& interprocess_notification_shm_path)
+      |                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:35:14: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   22 | #include <unistd.h>
+   23 | #include <cstdlib>
+   24 | #include <iostream>
+   25 | 
+   26 | namespace score::mw::com::test
+   27 | {
+   28 | 
+   29 | std::optional<ProcessSynchronizer> ProcessSynchronizer::Create(const std::string& interprocess_notification_shm_path)
+   30 | {
+   31 |     auto interprocess_notification_result =
+   32 |         SharedMemoryObjectCreator<os::InterprocessNotification>::CreateOrOpenObject(interprocess_notification_shm_path);
+   33 |     if (!interprocess_notification_result.has_value())
+   34 |     {
+   35 |         std::stringstream ss;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:42:71: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   25 |     return std::optional<ProcessSynchronizer>{std::in_place_t{}, std::move(interprocess_notification_result).value()};
+      |                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:47:43: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   47 |     : interprocess_notifier_creator_{std::move(interprocess_notifier_creator)},
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1428/execroot/_main/score/mw/com/test/methods/methods_test_resources/process_synchronizer.cpp:60:49: warning: parameter 'stop_token' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   25 |     return interprocess_notifier_.waitWithAbort(stop_token);
+      |                                                 ^         
+      |                                                 std::move()
+Suppressed 9186 warnings (9147 in non-user code, 36 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

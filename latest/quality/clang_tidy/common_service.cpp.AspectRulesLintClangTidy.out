@@ -1,4 +1,4 @@
-8749 warnings generated.
+19862 warnings generated.
 ./score/mw/com/test/common_test_resources/common_service.h:27:7: warning: class 'Service' defines a non-default destructor and a move constructor but does not define a copy constructor, a copy assignment operator or a move assignment operator [cppcoreguidelines-special-member-functions]
    27 | class Service
       |       ^
@@ -6,5 +6,9 @@
    76 |     Service(T lola_service) : lola_service_{std::move(lola_service)} {}
       |     ^
       |     explicit 
-Suppressed 8910 warnings (8739 in non-user code, 163 NOLINT, 8 with check filters).
+./score/mw/com/test/common_test_resources/test_error_domain.h:33:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 20023 warnings (19851 in non-user code, 164 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

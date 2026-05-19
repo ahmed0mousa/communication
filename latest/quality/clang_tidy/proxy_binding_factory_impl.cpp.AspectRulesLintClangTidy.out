@@ -1,3 +1,42 @@
-8504 warnings generated.
-Suppressed 8633 warnings (8496 in non-user code, 129 NOLINT, 8 with check filters).
+17911 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:16:1: warning: included header com_error.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/com_error.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/mw/com/impl/instance_identifier.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:17:1: warning: included header instance_identifier.h is not used directly [misc-include-cleaner]
+   17 | #include "score/mw/com/impl/instance_identifier.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:19:1: warning: included header logging.h is not used directly [misc-include-cleaner]
+   19 | #include "score/mw/log/logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:23:1: warning: included header exception is not used directly [misc-include-cleaner]
+   23 | #include <exception>
+      | ^~~~~~~~~~~~~~~~~~~~
+   24 | #include <memory>
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:25:1: warning: included header utility is not used directly [misc-include-cleaner]
+   25 | #include <utility>
+      | ^~~~~~~~~~~~~~~~~~
+   26 | #include <variant>
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:27:1: warning: included header vector is not used directly [misc-include-cleaner]
+   27 | #include <vector>
+      | ^~~~~~~~~~~~~~~~~
+   28 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:40:17: warning: no header providing "score::mw::com::impl::ProxyBinding" is directly included [misc-include-cleaner]
+   19 | std::unique_ptr<ProxyBinding> ProxyBindingFactoryImpl::Create(const HandleType& handle) noexcept
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:40:69: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   17 | std::unique_ptr<ProxyBinding> ProxyBindingFactoryImpl::Create(const HandleType& handle) noexcept
+      |                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:49:24: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   17 |         [handle](const LolaServiceInstanceDeployment&) -> ReturnType {
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:53:18: warning: no header providing "score::mw::com::impl::SomeIpServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   17 |         [](const SomeIpServiceInstanceDeployment&) noexcept -> ReturnType {
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4077/execroot/_main/score/mw/com/impl/plumbing/proxy_binding_factory_impl.cpp:57:30: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   21 |         [](const score::cpp::blank&) noexcept -> ReturnType {
+      |                              ^
+Suppressed 18030 warnings (17892 in non-user code, 130 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

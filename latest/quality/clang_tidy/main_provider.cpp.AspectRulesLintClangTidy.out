@@ -1,7 +1,21 @@
-8751 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4864/execroot/_main/score/mw/com/test/methods/signature_variations/main_provider.cpp:32:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+19869 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5093/execroot/_main/score/mw/com/test/methods/signature_variations/main_provider.cpp:29:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   18 | #include <score/stop_token.hpp>
+   19 | 
+   20 | int main(int argc, const char** argv)
+   21 | {
+   22 |     score::mw::com::test::SetupAssertHandler();
+   23 |     score::mw::com::runtime::InitializeRuntime(argc, argv);
+   24 | 
+   25 |     score::cpp::stop_source stop_source{};
+   26 |     const bool sig_term_handler_setup_success = score::mw::com::SetupStopTokenSigTermHandler(stop_source);
+   27 |     if (!sig_term_handler_setup_success)
+   28 |     {
+   29 |         std::cerr << "Unable to set signal handler for SIGINT and/or SIGTERM, cautiously continuing\n";
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5093/execroot/_main/score/mw/com/test/methods/signature_variations/main_provider.cpp:32:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
    32 |     return score::mw::com::test::run_provider(stop_source.get_token());
       |            ^                                                          
       |            static_cast<int>(                                          )
-Suppressed 8914 warnings (8740 in non-user code, 164 NOLINT, 10 with check filters).
+Suppressed 20032 warnings (19857 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

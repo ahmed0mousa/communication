@@ -1,7 +1,20 @@
-4286 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/1774/execroot/_main/score/mw/com/test/common_test_resources/child_process_guard.cpp:16:10: warning: inclusion of deprecated C++ header 'stdlib.h'; consider using 'cstdlib' instead [modernize-deprecated-headers]
+7510 warnings generated.
+./score/mw/com/test/common_test_resources/child_process_guard.h:35:5: warning: function 'GetPid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     pid_t GetPid() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/970/execroot/_main/score/mw/com/test/common_test_resources/child_process_guard.cpp:16:10: warning: inclusion of deprecated C++ header 'stdlib.h'; consider using 'cstdlib' instead [modernize-deprecated-headers]
    16 | #include <stdlib.h>
       |          ^~~~~~~~~~
       |          <cstdlib>
-Suppressed 4293 warnings (4282 in non-user code, 8 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/970/execroot/_main/score/mw/com/test/common_test_resources/child_process_guard.cpp:68:30: warning: no header providing "kill" is directly included [misc-include-cleaner]
+   15 |     const auto kill_result = kill(pid, SIGKILL);
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/970/execroot/_main/score/mw/com/test/common_test_resources/child_process_guard.cpp:68:40: warning: no header providing "SIGKILL" is directly included [misc-include-cleaner]
+   68 |     const auto kill_result = kill(pid, SIGKILL);
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/970/execroot/_main/score/mw/com/test/common_test_resources/child_process_guard.cpp:89:13: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   15 | score::cpp::optional<bool> ChildProcessGuard::IsProcessDead(bool should_block) noexcept
+      |             ^
+Suppressed 7514 warnings (7502 in non-user code, 9 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

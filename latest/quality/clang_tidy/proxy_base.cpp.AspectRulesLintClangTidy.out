@@ -1,11 +1,654 @@
-6626 warnings generated.
+15175 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_ptr.h:91:46: warning: use c++14 style type templates [modernize-type-traits]
+   91 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/bindings/lola/sample_ptr.h:91:62: warning: use c++17 style variable templates [modernize-type-traits]
+   91 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+./score/mw/com/impl/bindings/lola/sample_ptr.h:92:14: warning: use c++14 style type templates [modernize-type-traits]
+   92 |     typename std::add_lvalue_reference<const SampleType>::type operator*() const noexcept
+      |     ~~~~~~~~ ^                                          ~~~~~~
+      |                                       _t
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 6751 warnings (6616 in non-user code, 127 NOLINT, 8 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/com_error.h:97:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/binding_service_type_deployment.h:43:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/binding_service_type_deployment.h:44:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:70:5: warning: function 'GetServiceTypes' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   70 |     const ServiceTypeDeployments& GetServiceTypes() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:74:5: warning: function 'GetServiceInstances' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   74 |     const ServiceInstanceDeployments& GetServiceInstances() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:78:5: warning: function 'GetGlobalConfiguration' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   78 |     const GlobalConfiguration& GetGlobalConfiguration() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:82:5: warning: function 'GetTracingConfiguration' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   82 |     const TracingConfiguration& GetTracingConfiguration() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/global_configuration.h:69:5: warning: function 'GetReceiverMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   69 |     std::int32_t GetReceiverMessageQueueSize(const QualityType quality_type) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:71:5: warning: function 'GetSenderMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   71 |     std::int32_t GetSenderMessageQueueSize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:76:5: warning: function 'GetProcessAsilLevel' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     QualityType GetProcessAsilLevel() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:86:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     score::cpp::optional<ApplicationId> GetApplicationId() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:91:5: warning: function 'GetShmSizeCalcMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   91 |     ShmSizeCalculationMode GetShmSizeCalcMode() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_method_instance_deployment.h:57:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     score::json::Object Serialize() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:85:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   85 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:86:5: warning: function 'ContainsEvent' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     bool ContainsEvent(const std::string& event_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:87:5: warning: function 'ContainsField' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     bool ContainsField(const std::string& field_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:88:5: warning: function 'ContainsMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     bool ContainsMethod(const std::string& method_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:49:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   49 |     InstanceId GetId() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:84:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   84 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:90:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     std::string_view ToHashString() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:95:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   95 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:159:5: warning: function 'getInternalTypeName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  159 |     inline std::string_view getInternalTypeName() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:159:5: warning: function 'getInternalTypeName' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  159 |     inline std::string_view getInternalTypeName() const
+      |     ^~~~~~
+./score/mw/com/impl/configuration/service_identifier_type.h:164:5: warning: function 'GetVersion' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  164 |     inline ServiceVersionType GetVersion() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:164:5: warning: function 'GetVersion' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  164 |     inline ServiceVersionType GetVersion() const
+      |     ^~~~~~
+./score/mw/com/impl/configuration/service_identifier_type.h:169:22: warning: function 'GetSerializationVersion' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  169 |     constexpr static inline std::uint32_t GetSerializationVersion()
+      |                      ^~~~~~
+./score/mw/com/impl/configuration/service_instance_deployment.h:45:59: warning: the const qualified parameter 'service' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   45 |     ServiceInstanceDeployment(const ServiceIdentifierType service,
+      |                                                           ^
+      |                                                          &
+./score/mw/com/impl/configuration/service_instance_deployment.h:63:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   63 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_instance_deployment.h:65:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     BindingType GetBindingType() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_instance_id.h:39:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_instance_id.h:40:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_type_deployment.h:39:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_type_deployment.h:40:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:107:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:109:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  109 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:173:5: warning: function 'getMajor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  173 |     constexpr inline std::uint32_t getMajor() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:173:15: warning: function 'getMajor' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  173 |     constexpr inline std::uint32_t getMajor() const
+      |               ^~~~~~
+./score/mw/com/impl/configuration/service_version_type.h:178:5: warning: function 'getMinor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  178 |     constexpr inline std::uint32_t getMinor() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:178:15: warning: function 'getMinor' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  178 |     constexpr inline std::uint32_t getMinor() const
+      |               ^~~~~~
+./score/mw/com/impl/configuration/someip_event_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_field_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:39:46: warning: pass by value and use std::move [modernize-pass-by-value]
+   39 |     explicit SomeIpServiceInstanceDeployment(score::cpp::optional<SomeIpServiceInstanceId> instance_id = {},
+      |                                              ^
+   40 |                                              EventInstanceMapping events = {},
+   41 |                                              FieldInstanceMapping fields = {})
+   42 |         : instance_id_{instance_id}, events_{std::move(events)}, fields_{std::move(fields)}
+      |                                   
+      |                        std::move( )
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:42:24: warning: parameter 'instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   42 |         : instance_id_{instance_id}, events_{std::move(events)}, fields_{std::move(fields)}
+      |                        ^          
+      |                        std::move( )
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:58:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   58 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:40:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     InstanceId GetId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:64:5: warning: function 'IsTracingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   64 |     bool IsTracingEnabled() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:68:5: warning: function 'GetTracingFilterConfigPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     std::string_view GetTracingFilterConfigPath() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:72:5: warning: function 'GetApplicationInstanceID' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   72 |     std::string_view GetApplicationInstanceID() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:79:5: warning: function 'IsServiceElementTracingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   79 |     bool IsServiceElementTracingEnabled(tracing::ServiceElementIdentifierView service_element_identifier_view,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:41:60: warning: the parameter 'instance_identifier' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   41 |     explicit EnrichedInstanceIdentifier(InstanceIdentifier instance_identifier) noexcept
+      |                                                            ^
+      |                                         const             &
+./score/mw/com/impl/enriched_instance_identifier.h:53:51: warning: the parameter 'instance_identifier' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   53 |     EnrichedInstanceIdentifier(InstanceIdentifier instance_identifier, const ServiceInstanceId instance_id) noexcept
+      |                                                   ^
+      |                                const             &
+./score/mw/com/impl/enriched_instance_identifier.h:53:96: warning: the const qualified parameter 'instance_id' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   53 |     EnrichedInstanceIdentifier(InstanceIdentifier instance_identifier, const ServiceInstanceId instance_id) noexcept
+      |                                                                                                ^
+      |                                                                                               &
+./score/mw/com/impl/enriched_instance_identifier.h:74:58: warning: the const qualified parameter 'handle' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   74 |     explicit EnrichedInstanceIdentifier(const HandleType handle) noexcept
+      |                                                          ^
+      |                                                         &
+./score/mw/com/impl/enriched_instance_identifier.h:82:32: warning: pass by value and use std::move [modernize-pass-by-value]
+   82 |     EnrichedInstanceIdentifier(score::cpp::optional<ServiceInstanceId> instance_id,
+      |                                ^
+   83 |                                QualityType quality_type,
+   84 |                                InstanceIdentifier instance_identifier) noexcept
+   85 |         : instance_identifier_{std::move(instance_identifier)}, instance_id_{instance_id}, quality_type_{quality_type}
+      |                                                                                         
+      |                                                                              std::move( )
+./score/mw/com/impl/enriched_instance_identifier.h:85:78: warning: parameter 'instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   85 |         : instance_identifier_{std::move(instance_identifier)}, instance_id_{instance_id}, quality_type_{quality_type}
+      |                                                                              ^          
+      |                                                                              std::move( )
+./score/mw/com/impl/enriched_instance_identifier.h:89:5: warning: function 'GetInstanceIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   89 |     const InstanceIdentifier& GetInstanceIdentifier() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:112:5: warning: function 'GetInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  112 |     const score::cpp::optional<ServiceInstanceId>& GetInstanceId() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:137:5: warning: function 'GetQualityType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  137 |     QualityType GetQualityType() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/find_service_handle.h:159:5: warning: function 'getUid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  159 |     constexpr std::size_t getUid() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:83:5: warning: function 'GetInstanceIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     const InstanceIdentifier& GetInstanceIdentifier() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:88:5: warning: function 'GetServiceInstanceDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     const ServiceInstanceDeployment& GetServiceInstanceDeployment() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:93:5: warning: function 'GetServiceTypeDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   93 |     const ServiceTypeDeployment& GetServiceTypeDeployment() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:102:5: warning: function 'GetInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  102 |     ServiceInstanceId GetInstanceId() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/i_binding_runtime.h:35:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     virtual BindingType GetBindingType() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/i_runtime.h:39:5: warning: function 'resolve' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     virtual std::vector<InstanceIdentifier> resolve(const InstanceSpecifier&) const = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/i_runtime.h:45:5: warning: function 'GetBindingRuntime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   45 |     virtual IBindingRuntime* GetBindingRuntime(const BindingType binding) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/i_runtime.h:51:5: warning: function 'GetTracingRuntime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual tracing::ITracingRuntime* GetTracingRuntime() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/i_runtime.h:55:5: warning: function 'GetTracingFilterConfig' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   55 |     virtual const tracing::ITracingFilterConfig* GetTracingFilterConfig() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:103:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:151:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  151 |     json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:230:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  230 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:235:5: warning: function 'GetServiceInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  235 |     score::cpp::optional<ServiceInstanceId> GetServiceInstanceId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:236:5: warning: function 'GetServiceInstanceDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  236 |     const ServiceInstanceDeployment& GetServiceInstanceDeployment() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:237:5: warning: function 'GetServiceTypeDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  237 |     const ServiceTypeDeployment& GetServiceTypeDeployment() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:238:5: warning: function 'isCompatibleWith' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  238 |     bool isCompatibleWith(const InstanceIdentifier&) const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:239:5: warning: function 'isCompatibleWith' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  239 |     bool isCompatibleWith(const InstanceIdentifierView&) const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_specifier.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/mocking/i_proxy_event.h:38:5: warning: function 'GetSubscriptionState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     virtual SubscriptionState GetSubscriptionState() const = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/mocking/i_proxy_event.h:39:5: warning: function 'GetFreeSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     virtual std::size_t GetFreeSampleCount() const = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/mocking/i_proxy_event.h:60:72: warning: 80U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   60 |     using Callback = score::cpp::callback<void(SamplePtr<SampleType>), 80U>;
+      |                                                                        ^
+./score/mw/com/impl/plumbing/sample_ptr.h:133:46: warning: use c++14 style type templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/plumbing/sample_ptr.h:133:62: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+./score/mw/com/impl/proxy_base.h:117:5: warning: function 'GetHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  117 |     const HandleType& GetHandle() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_base.h:126:5: warning: deleted member function should be public [modernize-use-equals-delete]
+  126 |     ProxyBase(const ProxyBase&) = delete;
+      |     ^
+./score/mw/com/impl/proxy_base.h:127:16: warning: deleted member function should be public [modernize-use-equals-delete]
+  127 |     ProxyBase& operator=(const ProxyBase&) = delete;
+      |                ^
+./score/mw/com/impl/proxy_base.h:134:5: warning: function 'AreBindingsValid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  134 |     bool AreBindingsValid() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_base.h:171:5: warning: function 'GetAssociatedHandleType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  171 |     const HandleType& GetAssociatedHandleType() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_base.h:187:5: warning: function 'AreBindingsValid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  187 |     bool AreBindingsValid() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_binding.h:55:5: warning: function 'IsEventProvided' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   55 |     virtual bool IsEventProvided(const std::string_view event_name) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_base.h:110:5: warning: function 'GetSubscriptionState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  110 |     SubscriptionState GetSubscriptionState() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_base.h:147:5: warning: function 'GetFreeSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  147 |     std::size_t GetFreeSampleCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_base.h:162:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  162 |     Result<std::size_t> GetNumNewSamplesAvailable() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_base.h:189:5: warning: function 'IsBindingValid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  189 |     bool IsBindingValid() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:60:5: warning: function 'GetSubscriptionState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   60 |     virtual SubscriptionState GetSubscriptionState() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:93:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   93 |     virtual Result<std::size_t> GetNumNewSamplesAvailable() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:100:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  100 |     virtual std::optional<std::uint16_t> GetMaxSampleCount() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:103:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     virtual BindingType GetBindingType() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/sample_reference_tracker.h:50:5: warning: function 'GetNumAvailableGuards' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     std::size_t GetNumAvailableGuards() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/sample_reference_tracker.h:156:20: warning: use c++17 style variable templates [modernize-type-traits]
+  156 |     static_assert((std::is_move_assignable<SampleReferenceTracker>::value == false) &&
+      |                    ^
+note: this fix will not be applied because it overlaps with another fix
+./score/mw/com/impl/sample_reference_tracker.h:156:78: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  156 |     static_assert((std::is_move_assignable<SampleReferenceTracker>::value == false) &&
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                    !std::is_move_assignable<SampleReferenceTracker>::value
+./score/mw/com/impl/sample_reference_tracker.h:157:24: warning: use c++17 style variable templates [modernize-type-traits]
+  157 |                       (std::is_move_constructible<SampleReferenceTracker>::value == false),
+      |                        ^
+note: this fix will not be applied because it overlaps with another fix
+./score/mw/com/impl/sample_reference_tracker.h:157:85: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  157 |                       (std::is_move_constructible<SampleReferenceTracker>::value == false),
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                        !std::is_move_constructible<SampleReferenceTracker>::value
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:42:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:46:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:50:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:54:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:31:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:35:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:39:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:43:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:65:5: warning: function 'GetTraceClientId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     virtual analysis::tracing::TraceClientId GetTraceClientId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:73:5: warning: function 'GetDataLossFlag' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   73 |     virtual bool GetDataLossFlag() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:87:5: warning: function 'GetShmObjectHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     virtual std::optional<analysis::tracing::ShmObjectHandle> GetShmObjectHandle(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:90:5: warning: function 'GetShmRegionStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     virtual std::optional<void*> GetShmRegionStartAddress(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:98:5: warning: function 'GetCachedFileDescriptorForReregisteringShmObject' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     virtual std::optional<std::pair<memory::shared::ISharedMemoryResource::FileDescriptor, void*>>
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:105:5: warning: function 'ConvertToTracingServiceInstanceElement' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     virtual analysis::tracing::ServiceInstanceElement ConvertToTracingServiceInstanceElement(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_tracing_runtime.h:80:5: warning: function 'GetBindingTracingRuntime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     virtual IBindingTracingRuntime& GetBindingTracingRuntime(const BindingType binding_type) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/type_erased_sample_ptr.h:33:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   33 |     score::cpp::callback<void(), 128U> type_erased_sample_ptr_;
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:30:38: warning: no header providing "score::mw::com::impl::ProxyBinding" is directly included [misc-include-cleaner]
+   17 | #include "score/mw/com/impl/proxy_event_base.h"
+   18 | #include "score/mw/com/impl/proxy_field_base.h"
+   19 | #include "score/mw/com/impl/runtime.h"
+   20 | 
+   21 | #include <score/assert.hpp>
+   22 | 
+   23 | #include <cstdlib>
+   24 | #include <memory>
+   25 | #include <utility>
+   26 | 
+   27 | namespace score::mw::com::impl
+   28 | {
+   29 | 
+   30 | ProxyBase::ProxyBase(std::unique_ptr<ProxyBinding> proxy_binding, HandleType handle)
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:99:7: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   15 | const HandleType& ProxyBase::GetHandle() const noexcept
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:104:29: warning: no header providing "score::mw::com::impl::InstanceSpecifier" is directly included [misc-include-cleaner]
+   16 | auto ProxyBase::FindService(InstanceSpecifier specifier) noexcept -> Result<ServiceHandleContainer<HandleType>>
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:104:70: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   20 | auto ProxyBase::FindService(InstanceSpecifier specifier) noexcept -> Result<ServiceHandleContainer<HandleType>>
+      |                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:104:77: warning: no header providing "score::mw::com::impl::ServiceHandleContainer" is directly included [misc-include-cleaner]
+   15 | auto ProxyBase::FindService(InstanceSpecifier specifier) noexcept -> Result<ServiceHandleContainer<HandleType>>
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:109:16: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+  109 |         return MakeUnexpected(ComErrc::kBindingFailure);
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:109:31: warning: no header providing "score::mw::com::impl::ComErrc" is directly included [misc-include-cleaner]
+   15 |         return MakeUnexpected(ComErrc::kBindingFailure);
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:111:12: warning: constness of 'find_service_result' prevents automatic move [performance-no-automatic-move]
+  111 |     return find_service_result;
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:124:12: warning: constness of 'find_service_result' prevents automatic move [performance-no-automatic-move]
+  124 |     return find_service_result;
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:127:34: warning: no header providing "score::mw::com::impl::FindServiceHandler" is directly included [misc-include-cleaner]
+  127 | auto ProxyBase::StartFindService(FindServiceHandler<HandleType> handler,
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:128:93: warning: no header providing "score::mw::com::impl::FindServiceHandle" is directly included [misc-include-cleaner]
+   15 |                                  InstanceIdentifier instance_identifier) noexcept -> Result<FindServiceHandle>
+      |                                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:166:16: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+  166 |         return MakeUnexpected<void>(result.error());
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:194:46: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   25 | void ProxyBaseView::RegisterEvent(const std::string_view event_name, ProxyEventBase& event)
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4084/execroot/_main/score/mw/com/impl/proxy_base.cpp:220:25: warning: no header providing "score::mw::log::LogFatal" is directly included [misc-include-cleaner]
+   20 |         score::mw::log::LogFatal("lola") << "ProxyBaseView::UpdateEvent failed to update, because the requested event "
+      |                         ^
+Suppressed 15137 warnings (15001 in non-user code, 128 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

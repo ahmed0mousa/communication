@@ -1,3 +1,22 @@
-9259 warnings generated.
-Suppressed 9423 warnings (9249 in non-user code, 164 NOLINT, 10 with check filters).
+21064 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5095/execroot/_main/score/mw/com/test/receive_handler_unsubscribe/receive_handler_unsubscribe_application.cpp:16:1: warning: included header instance_specifier.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/instance_specifier.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/mw/com/test/common_test_resources/sample_sender_receiver.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5095/execroot/_main/score/mw/com/test/receive_handler_unsubscribe/receive_handler_unsubscribe_application.cpp:48:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   19 |         score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped"});
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5095/execroot/_main/score/mw/com/test/receive_handler_unsubscribe/receive_handler_unsubscribe_application.cpp:51:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   21 |         std::cerr << "Invalid instance specifier, terminating." << std::endl;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5095/execroot/_main/score/mw/com/test/receive_handler_unsubscribe/receive_handler_unsubscribe_application.cpp:51:73: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   21 |         std::cerr << "Invalid instance specifier, terminating." << std::endl;
+      |                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5095/execroot/_main/score/mw/com/test/receive_handler_unsubscribe/receive_handler_unsubscribe_application.cpp:53:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   20 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5095/execroot/_main/score/mw/com/test/receive_handler_unsubscribe/receive_handler_unsubscribe_application.cpp:64:50: warning: no header providing "std::cref" is directly included [misc-include-cleaner]
+   20 |                                             std::cref(stop_token));
+      |                                                  ^
+Suppressed 21223 warnings (21048 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

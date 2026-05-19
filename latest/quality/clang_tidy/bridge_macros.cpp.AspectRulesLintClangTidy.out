@@ -1,3 +1,41 @@
-8746 warnings generated.
-Suppressed 8909 warnings (8738 in non-user code, 163 NOLINT, 8 with check filters).
+19875 warnings generated.
+./score/mw/com/impl/rust/bridge_macros.h:29:1: warning: function 'GetSamplesFromEvent' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   29 | inline score::Result<std::uint32_t> GetSamplesFromEvent(::score::mw::com::impl::ProxyEvent<T>& proxy_event,
+      | ^~~~~~
+./score/mw/com/impl/rust/bridge_macros.h:39:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   39 |     else
+      |     ^~~~
+   40 |     {
+      |     ~
+   41 |         return score::MakeUnexpected<std::uint32_t>(samples.error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   42 |     }
+      |     ~
+./score/mw/com/impl/rust/bridge_macros.h:46:1: warning: function 'CreateProxyWrapper' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   46 | inline P* CreateProxyWrapper(const typename P::HandleType& handle)
+      | ^~~~~~
+./score/mw/com/impl/rust/bridge_macros.h:52:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   52 |     else
+      |     ^~~~
+   53 |     {
+      |     ~
+   54 |         return nullptr; /* TODO: Properly handle */
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   55 |     }
+      |     ~
+./score/mw/com/impl/rust/bridge_macros.h:59:1: warning: function 'CreateSkeletonWrapper' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   59 | inline S* CreateSkeletonWrapper(const ::score::mw::com::InstanceSpecifier& instance_specifier)
+      | ^~~~~~
+./score/mw/com/impl/rust/bridge_macros.h:65:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   65 |     else
+      |     ^~~~
+   66 |     {
+      |     ~
+   67 |         // Todo convert error and return that instead of a nullptr
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |         return nullptr;
+      |         ~~~~~~~~~~~~~~~
+   69 |     }
+      |     ~
+Suppressed 20033 warnings (19861 in non-user code, 164 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,5 +1,13 @@
-5983 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/3017/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:69:8: warning: constructor does not initialize these fields: queue_position [cppcoreguidelines-pro-type-member-init]
+13136 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:25:1: warning: included header safe_math.h is not used directly [misc-include-cleaner]
+   25 | #include "score/language/safecpp/safe_math/safe_math.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   26 | #include "score/language/safecpp/scoped_function/move_only_scoped_function.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:40:1: warning: included header types.h is not used directly [misc-include-cleaner]
+   40 | #include <sys/types.h>
+      | ^~~~~~~~~~~~~~~~~~~~~~
+   41 | #include <algorithm>
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:69:8: warning: constructor does not initialize these fields: queue_position [cppcoreguidelines-pro-type-member-init]
    69 | struct MethodCallUnserializedPayload
       |        ^
    70 | {
@@ -7,5 +15,187 @@
    72 |     std::size_t queue_position;
       |                               
       |                               {}
-Suppressed 6142 warnings (5976 in non-user code, 160 NOLINT, 6 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:98:17: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   40 |     score::cpp::ignore = std::memcpy(&t, payload.data(), payload.size());
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:173:44: warning: no header providing "score::result::ErrorCode" is directly included [misc-include-cleaner]
+   35 |     if ((error_code == static_cast<result::ErrorCode>(MethodErrc::kSkeletonAlreadyDestroyed)) ||
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:180:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  180 |     else if ((error_code == static_cast<result::ErrorCode>(MethodErrc::kUnexpectedMessage)) ||
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |              (error_code == static_cast<result::ErrorCode>(MethodErrc::kUnexpectedMessageSize)) ||
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  182 |              (error_code == static_cast<result::ErrorCode>(MethodErrc::kMessagePassingError)))
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |     {
+      |     ~
+  184 |         return false;
+      |         ~~~~~~~~~~~~~
+  185 |     }
+      |     ~
+  186 |     else
+      |     ~~~~
+  187 |     {
+      |     ~
+  188 |         SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(false,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  189 |                                                           "Provided error is not part of subset relating to methods.");
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  190 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:197:5: warning: no header providing "score::mw::com::impl::lola::AsilSpecificCfg" is directly included [misc-include-cleaner]
+   15 |     AsilSpecificCfg /*config*/,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:197:31: warning: the parameter #2 is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  197 |     AsilSpecificCfg /*config*/,
+      |                               ^
+      |     const          &
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:200:25: warning: no header providing "score::concurrency::Executor" is directly included [misc-include-cleaner]
+   15 |     score::concurrency::Executor& local_event_executor) noexcept
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:201:7: warning: no header providing "score::mw::com::impl::lola::IMessagePassingServiceInstance" is directly included [misc-include-cleaner]
+   17 |     : IMessagePassingServiceInstance(),
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:230:15: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   54 |         const pid_t client_pid = connection.GetClientIdentity().pid;
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:250:89: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   38 |             const score::cpp::span<const std::uint8_t> message) noexcept -> score::cpp::blank {
+      |                                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:258:51: warning: no header providing "score::safe_math::Cast" is directly included [misc-include-cleaner]
+   15 |         const auto client_pid = score::safe_math::Cast<pid_t>(UserDataUintPtr);
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:294:13: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+  294 |             uid_t, pid_t, score::cpp::span<const std::uint8_t>)>>(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:309:83: warning: no header providing "score::cpp::expected_blank" is directly included [misc-include-cleaner]
+   38 |             score::cpp::span<const std::uint8_t> message) noexcept -> score::cpp::expected_blank<score::os::Error> {
+      |                                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:309:109: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   32 |             score::cpp::span<const std::uint8_t> message) noexcept -> score::cpp::expected_blank<score::os::Error> {
+      |                                                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:329:36: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  329 |                 return score::cpp::make_unexpected(os::Error::createUnspecifiedError());
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:378:26: warning: no header providing "score::cpp::to_underlying" is directly included [misc-include-cleaner]
+  378 |         case score::cpp::to_underlying(MessageType::kRegisterEventNotifier):
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:410:26: warning: no header providing "score::cpp::to_underlying" is directly included [misc-include-cleaner]
+  410 |         case score::cpp::to_underlying(MessageWithReplyType::kSubscribeServiceMethod):
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:433:5: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   15 |     ElementFqId elementFqId{};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:474:50: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  474 |         already_registered = (inserted.second == false);
+      |                               ~~~~~~~~~~~~~~~~~~~^~~~~
+      |                               !inserted.second
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:792:27: warning: 255U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  792 |         if (loop_count == 255U)
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:799:9: warning: do not use 'else' after 'break' [readability-else-after-return]
+  799 |         else
+      |         ^~~~
+  800 |         {
+      |         ~
+  801 |             loop_count++;
+      |             ~~~~~~~~~~~~~
+  802 |         }
+      |         ~
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:829:38: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  829 |         if (num_ids_copied.second == true)
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      |             num_ids_copied.second
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:838:39: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  838 |     } while (num_ids_copied.second == true);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      |              num_ids_copied.second
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:861:30: warning: no header providing "score::mw::com::impl::ScopedEventReceiveHandler" is directly included [misc-include-cleaner]
+   31 |     std::array<std::weak_ptr<ScopedEventReceiveHandler>, kMaxReceiveHandlersPerEvent> handler_weak_ptrs{
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:919:80: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  919 |     if ((search != event_update_handlers_.end()) && (search->second.empty() == false))
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                                                      !search->second.empty()
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:928:38: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   40 |             [this](const score::cpp::stop_token& /*token*/, const ElementFqId element_id) noexcept {
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:1207:47: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+ 1207 |     if (registration_count_inserted.second == false)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |         !registration_count_inserted.second
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:1253:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1253 |     else
+      |     ^~~~
+ 1254 |     {
+      |     ~
+ 1255 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1256 |             registration_count->second.counter > 0U,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1257 |             "MessagePassingService: UnregisterEventNotification trying to decrement counter, which is already 0!");
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1258 |         if (registration_count->second.node_id != target_node_id)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1259 |         {
+      |         ~
+ 1260 |             remote_reg_write_lock.unlock();
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1261 |             score::mw::log::LogError("lola")
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1262 |                 << "MessagePassingService: UnregisterEventNotification called with register_no " << registration_no
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1263 |                 << " for a remote event " << event_id.ToString() << " for target_node_id" << target_node_id
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1264 |                 << ", which is not the node_id, by which this event is currently provided:"
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1265 |                 << registration_count->second.node_id;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1266 |             return;
+      |             ~~~~~~~
+ 1267 |         }
+      |         ~
+ 1268 | 
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:1407:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1407 |     else
+      |     ^~~~
+ 1408 |     {
+      |     ~
+ 1409 |         const auto result =
+      |         ~~~~~~~~~~~~~~~~~~~
+ 1410 |             CallSubscribeServiceMethodRemotely(skeleton_instance_identifier, proxy_instance_identifier, target_node_id);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1411 |         if (!(result.has_value()))
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1412 |         {
+      |         ~
+ 1413 |             return MakeUnexpected(ComErrc::kBindingFailure);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1414 |         }
+      |         ~
+ 1415 |         return {};
+      |         ~~~~~~~~~~
+ 1416 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/3933/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.cpp:1434:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1434 |     else
+      |     ^~~~
+ 1435 |     {
+      |     ~
+ 1436 |         const auto result = CallServiceMethodRemotely(proxy_method_instance_identifier, queue_position, target_node_id);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1437 |         if (!(result.has_value()))
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1438 |         {
+      |         ~
+ 1439 |             return MakeUnexpected(ComErrc::kBindingFailure);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1440 |         }
+      |         ~
+ 1441 |         return {};
+      |         ~~~~~~~~~~
+ 1442 |     }
+      |     ~
+Suppressed 13265 warnings (13098 in non-user code, 161 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,7 +1,31 @@
-5995 warnings generated.
+12824 warnings generated.
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:51:5: warning: function 'GetDataChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::string GetDataChannelShmName(const LolaServiceInstanceId::InstanceId instance_id) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:57:5: warning: function 'GetControlChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     virtual std::string GetControlChannelShmName(const LolaServiceInstanceId::InstanceId instance_id,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:67:5: warning: function 'GetMethodChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     virtual std::string GetMethodChannelShmName(
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/shm_path_builder_mock.h:45:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    45 |     ShmPathBuilderFacade(ShmPathBuilderMock& shm_path_builder_mock)
       |     ^
       |     explicit 
-Suppressed 6102 warnings (5988 in non-user code, 108 NOLINT, 6 with check filters).
+./score/mw/com/impl/bindings/lola/shm_path_builder_mock.h:50:5: warning: function 'GetDataChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     std::string GetDataChannelShmName(const LolaServiceInstanceId::InstanceId instance_id) const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/shm_path_builder_mock.h:55:5: warning: function 'GetControlChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   55 |     std::string GetControlChannelShmName(const LolaServiceInstanceId::InstanceId instance_id,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/shm_path_builder_mock.h:61:5: warning: function 'GetMethodChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     std::string GetMethodChannelShmName(
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 12940 warnings (12811 in non-user code, 123 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

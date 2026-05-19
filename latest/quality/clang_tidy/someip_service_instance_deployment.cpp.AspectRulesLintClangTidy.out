@@ -1,3 +1,106 @@
-5893 warnings generated.
-Suppressed 5967 warnings (5887 in non-user code, 74 NOLINT, 6 with check filters).
+11505 warnings generated.
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/configuration_common_resources.h:186:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  186 |     for (auto it : input_map)
+      |               ^
+      |          const  &
+./score/mw/com/impl/configuration/someip_event_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_field_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:39:46: warning: pass by value and use std::move [modernize-pass-by-value]
+   39 |     explicit SomeIpServiceInstanceDeployment(score::cpp::optional<SomeIpServiceInstanceId> instance_id = {},
+      |                                              ^
+   40 |                                              EventInstanceMapping events = {},
+   41 |                                              FieldInstanceMapping fields = {})
+   42 |         : instance_id_{instance_id}, events_{std::move(events)}, fields_{std::move(fields)}
+      |                                   
+      |                        std::move( )
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:42:24: warning: parameter 'instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   42 |         : instance_id_{instance_id}, events_{std::move(events)}, fields_{std::move(fields)}
+      |                        ^          
+      |                        std::move( )
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:58:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   58 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:40:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     InstanceId GetId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:17:1: warning: included header json_writer.h is not used directly [misc-include-cleaner]
+   17 | #include "score/json/json_writer.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:21:1: warning: included header limits is not used directly [misc-include-cleaner]
+   21 | #include <limits>
+      | ^~~~~~~~~~~~~~~~~
+   22 | #include <sstream>
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:22:1: warning: included header sstream is not used directly [misc-include-cleaner]
+   22 | #include <sstream>
+      | ^~~~~~~~~~~~~~~~~~
+   23 | #include <string>
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:23:1: warning: included header string is not used directly [misc-include-cleaner]
+   23 | #include <string>
+      | ^~~~~~~~~~~~~~~~~
+   24 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:40:42: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   40 |     if ((lhs.instance_id_.has_value() == false) || (rhs.instance_id_.has_value() == false))
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |          !lhs.instance_id_.has_value()
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:40:85: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   40 |     if ((lhs.instance_id_.has_value() == false) || (rhs.instance_id_.has_value() == false))
+      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                                                     !rhs.instance_id_.has_value()
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:70:85: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | SomeIpServiceInstanceDeployment::SomeIpServiceInstanceDeployment(const score::json::Object& json_object) noexcept
+      |                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1505/execroot/_main/score/mw/com/impl/configuration/someip_service_instance_deployment.cpp:83:31: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   19 |         GetValueFromJson<std::uint32_t>(json_object, kSerializationVersionKeySerInstDepl);
+      |                               ^
+Suppressed 11555 warnings (11474 in non-user code, 75 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

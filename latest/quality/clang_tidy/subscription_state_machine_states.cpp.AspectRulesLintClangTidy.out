@@ -1,3 +1,10 @@
-2087 warnings generated.
-Suppressed 2087 warnings (2084 in non-user code, 3 with check filters).
+4152 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4065/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine_states.cpp:18:6: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola
+   16 | {
+   17 | 
+   18 | std::string MessageForSubscriptionState(const SubscriptionStateMachineState& state) noexcept
+      |      ^
+Suppressed 4152 warnings (4148 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

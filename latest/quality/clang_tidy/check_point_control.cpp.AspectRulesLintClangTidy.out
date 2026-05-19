@@ -1,3 +1,28 @@
-5273 warnings generated.
-Suppressed 5318 warnings (5270 in non-user code, 45 NOLINT, 3 with check filters).
+10060 warnings generated.
+./score/mw/com/test/common_test_resources/check_point_control.h:156:80: warning: the parameter 'external_stop_token' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  156 |                                                         score::cpp::stop_token external_stop_token,
+      |                                                                                ^
+      |                                                         const                 &
+/home/runner/.bazel/sandbox/linux-sandbox/895/execroot/_main/score/mw/com/test/common_test_resources/check_point_control.cpp:27:49: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   23 | 
+   24 | namespace score::mw::com::test
+   25 | {
+   26 | 
+   27 | CheckPointControl::CheckPointControl(const std::string_view check_point_owner_name) noexcept
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/895/execroot/_main/score/mw/com/test/common_test_resources/check_point_control.cpp:75:44: warning: parameter 'stop_token' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   23 |     return proceed_notifier_.waitWithAbort(stop_token);
+      |                                            ^         
+      |                                            std::move()
+/home/runner/.bazel/sandbox/linux-sandbox/895/execroot/_main/score/mw/com/test/common_test_resources/check_point_control.cpp:78:34: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   23 | bool VerifyCheckpoint(const std::string& tag,
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/895/execroot/_main/score/mw/com/test/common_test_resources/check_point_control.cpp:112:42: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+   18 |                             std::chrono::milliseconds wait_duration)
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/895/execroot/_main/score/mw/com/test/common_test_resources/check_point_control.cpp:117:76: warning: parameter 'token' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+  117 |         check_point_control.WaitForCheckpointReachedOrError(wait_duration, token, timeout_supervisor);
+      |                                                                            ^    
+      |                                                                            std::move( )
+Suppressed 10100 warnings (10051 in non-user code, 46 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

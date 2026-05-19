@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">29</td>
-            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">90.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">20</td>
-            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
                   <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -100,44 +100,44 @@
 <span id="L22"><span class="lineNum">      22</span>                 :             : </span>
 <span id="L23"><span class="lineNum">      23</span>                 :             : template &lt;typename ErrorCode&gt;</span>
 <span id="L24"><span class="lineNum">      24</span>                 :             : auto ErrorSerializer&lt;ErrorCode&gt;::SerializeSuccess() -&gt; SerializedErrorType</span>
-<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaGNC tlaBgGNC">          64 : {</span></span>
-<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaGNC">          64 :     static_assert(ErrorCode::kInvalid == static_cast&lt;ErrorCode&gt;(0U),</span></span>
-<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaGNC">          64 :                   &quot;The serialization scheme uses 0 to represent 'No error'. Therefore, we cannot have a valid error &quot;</span></span>
-<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaGNC">          64 :                   &quot;code which corresponds to an integer value 0.&quot;);</span></span>
-<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaGNC">          64 :     return SerializedErrorType(0);</span></span>
-<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaGNC">          64 : }</span></span>
+<span id="L25"><span class="lineNum">      25</span>                 :<span class="tlaUNC tlaBgUNC">           0 : {</span></span>
+<span id="L26"><span class="lineNum">      26</span>                 :<span class="tlaUNC">           0 :     static_assert(ErrorCode::kInvalid == static_cast&lt;ErrorCode&gt;(0U),</span></span>
+<span id="L27"><span class="lineNum">      27</span>                 :<span class="tlaUNC">           0 :                   &quot;The serialization scheme uses 0 to represent 'No error'. Therefore, we cannot have a valid error &quot;</span></span>
+<span id="L28"><span class="lineNum">      28</span>                 :<span class="tlaUNC">           0 :                   &quot;code which corresponds to an integer value 0.&quot;);</span></span>
+<span id="L29"><span class="lineNum">      29</span>                 :<span class="tlaUNC">           0 :     return SerializedErrorType(0);</span></span>
+<span id="L30"><span class="lineNum">      30</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L31"><span class="lineNum">      31</span>                 :             : </span>
 <span id="L32"><span class="lineNum">      32</span>                 :             : template &lt;typename ErrorCode&gt;</span>
 <span id="L33"><span class="lineNum">      33</span>                 :             : auto ErrorSerializer&lt;ErrorCode&gt;::SerializeError(const ErrorCode error_code) -&gt; SerializedErrorType</span>
-<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaGNC">          30 : {</span></span>
-<span id="L35"><span class="lineNum">      35</span> [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          30 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
-<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 26 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 25 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
-<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaGNC">          30 :         ((ErrorCode::kInvalid &lt; error_code) &amp;&amp; (error_code &lt; ErrorCode::kNumEnumElements)),</span></span>
-<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaGNC">          30 :         &quot;The error code value must be within the non-inclusive range of kInvalid to &quot;</span></span>
-<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaGNC">          30 :         &quot;kNumEnumElements. kInvalid (i.e. 0) will be used to represent 'No error' in the serialized format and &quot;</span></span>
-<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaGNC">          30 :         &quot;kNumEnumElements is used to check that an invalid enum value is not provided. It must be manually ensured &quot;</span></span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC">          30 :         &quot;that kInvalid is the smallest enum value and kNumEnumElements is the largest&quot;);</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">          30 :     return static_cast&lt;SerializedErrorType&gt;(error_code);</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">          30 : }</span></span>
+<span id="L34"><span class="lineNum">      34</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L35"><span class="lineNum">      35</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
+<span id="L36"><span class="lineNum">      36</span>                 :<span class="tlaUNC">           0 :         ((ErrorCode::kInvalid &lt; error_code) &amp;&amp; (error_code &lt; ErrorCode::kNumEnumElements)),</span></span>
+<span id="L37"><span class="lineNum">      37</span>                 :<span class="tlaUNC">           0 :         &quot;The error code value must be within the non-inclusive range of kInvalid to &quot;</span></span>
+<span id="L38"><span class="lineNum">      38</span>                 :<span class="tlaUNC">           0 :         &quot;kNumEnumElements. kInvalid (i.e. 0) will be used to represent 'No error' in the serialized format and &quot;</span></span>
+<span id="L39"><span class="lineNum">      39</span>                 :<span class="tlaUNC">           0 :         &quot;kNumEnumElements is used to check that an invalid enum value is not provided. It must be manually ensured &quot;</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaUNC">           0 :         &quot;that kInvalid is the smallest enum value and kNumEnumElements is the largest&quot;);</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaUNC">           0 :     return static_cast&lt;SerializedErrorType&gt;(error_code);</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L43"><span class="lineNum">      43</span>                 :             : </span>
 <span id="L44"><span class="lineNum">      44</span>                 :             : template &lt;typename ErrorCode&gt;</span>
 <span id="L45"><span class="lineNum">      45</span>                 :             : auto ErrorSerializer&lt;ErrorCode&gt;::Deserialize(const SerializedErrorType serialized_error_code) -&gt; score::Result&lt;void&gt;</span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">          27 : {</span></span>
-<span id="L47"><span class="lineNum">      47</span> [<span class="tlaGBC" title="Branch 0 was taken 3 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">          27 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
-<span class="lineNum">        </span> [<span class="tlaGBC" title="Branch 0 was taken 24 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>][<span class="tlaGBC" title="Branch 0 was taken 23 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]
-<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaGNC">          27 :         ((static_cast&lt;SerializedErrorType&gt;(ErrorCode::kInvalid) &lt;= serialized_error_code) &amp;&amp;</span></span>
-<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaGNC">          27 :          (serialized_error_code &lt; static_cast&lt;SerializedErrorType&gt;(ErrorCode::kNumEnumElements))),</span></span>
-<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaGNC">          27 :         &quot;The error code value must be either kInvalid (i.e. 0) which is used to represent 'No error' or an error value &quot;</span></span>
-<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaGNC">          27 :         &quot;up to kNumEnumElements. It must be manually ensured that kInvalid is the smallest enum value and &quot;</span></span>
-<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaGNC">          27 :         &quot;kNumEnumElements is the largest&quot;);</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaUNC">           0 : {</span></span>
+<span id="L47"><span class="lineNum">      47</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(</span></span>
+<span class="lineNum">        </span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]
+<span id="L48"><span class="lineNum">      48</span>                 :<span class="tlaUNC">           0 :         ((static_cast&lt;SerializedErrorType&gt;(ErrorCode::kInvalid) &lt;= serialized_error_code) &amp;&amp;</span></span>
+<span id="L49"><span class="lineNum">      49</span>                 :<span class="tlaUNC">           0 :          (serialized_error_code &lt; static_cast&lt;SerializedErrorType&gt;(ErrorCode::kNumEnumElements))),</span></span>
+<span id="L50"><span class="lineNum">      50</span>                 :<span class="tlaUNC">           0 :         &quot;The error code value must be either kInvalid (i.e. 0) which is used to represent 'No error' or an error value &quot;</span></span>
+<span id="L51"><span class="lineNum">      51</span>                 :<span class="tlaUNC">           0 :         &quot;up to kNumEnumElements. It must be manually ensured that kInvalid is the smallest enum value and &quot;</span></span>
+<span id="L52"><span class="lineNum">      52</span>                 :<span class="tlaUNC">           0 :         &quot;kNumEnumElements is the largest&quot;);</span></span>
 <span id="L53"><span class="lineNum">      53</span>                 :             : </span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC">          27 :     const bool contains_error = serialized_error_code != 0;</span></span>
-<span id="L55"><span class="lineNum">      55</span> [<span class="tlaGBC" title="Branch 0 was taken 1 time"> + </span><span class="tlaGBC" title="Branch 1 was taken 2 times"> + </span>][<span class="tlaGBC" title="Branch 0 was taken 15 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 9 times"> + </span>]:<span class="tlaGNC">          27 :     if (contains_error)</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          16 :     {</span></span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">          16 :         return MakeUnexpected(static_cast&lt;ErrorCode&gt;(serialized_error_code));</span></span>
-<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaGNC">          16 :     }</span></span>
-<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaGNC">          11 :     return {};</span></span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">          27 : }</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaUNC">           0 :     const bool contains_error = serialized_error_code != 0;</span></span>
+<span id="L55"><span class="lineNum">      55</span> [<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>][<span class="tlaUNC" title="Branch 0 was not executed"> # </span><span class="tlaUNC" title="Branch 1 was not executed"> # </span>]:<span class="tlaUNC">           0 :     if (contains_error)</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaUNC">           0 :         return MakeUnexpected(static_cast&lt;ErrorCode&gt;(serialized_error_code));</span></span>
+<span id="L58"><span class="lineNum">      58</span>                 :<span class="tlaUNC">           0 :     }</span></span>
+<span id="L59"><span class="lineNum">      59</span>                 :<span class="tlaUNC">           0 :     return {};</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaUNC">           0 : }</span></span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
 <span id="L62"><span class="lineNum">      62</span>                 :             : template class ErrorSerializer&lt;ComErrc&gt;;</span>
 <span id="L63"><span class="lineNum">      63</span>                 :             : template class ErrorSerializer&lt;lola::MethodErrc&gt;;</span>

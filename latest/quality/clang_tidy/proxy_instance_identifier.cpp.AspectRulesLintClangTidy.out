@@ -1,3 +1,15 @@
-4388 warnings generated.
-Suppressed 4411 warnings (4385 in non-user code, 23 NOLINT, 3 with check filters).
+7813 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3755/execroot/_main/score/mw/com/impl/bindings/lola/proxy_instance_identifier.cpp:23:10: warning: no header providing "score::mw::log::LogStream" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola
+   16 | {
+   17 | 
+   18 | bool operator==(const ProxyInstanceIdentifier& lhs, const ProxyInstanceIdentifier& rhs) noexcept
+   19 | {
+   20 |     return ((lhs.application_id == rhs.application_id) && (lhs.proxy_instance_counter == rhs.proxy_instance_counter));
+   21 | }
+   22 | 
+   23 | mw::log::LogStream& operator<<(score::mw::log::LogStream& stream, const ProxyInstanceIdentifier& value) noexcept
+      |          ^
+Suppressed 7836 warnings (7809 in non-user code, 24 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

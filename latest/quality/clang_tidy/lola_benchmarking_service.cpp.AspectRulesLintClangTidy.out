@@ -1,6 +1,30 @@
-13528 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4831/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:66:53: warning: passing result of std::move() as a const reference argument; no move will actually happen [hicpp-move-const-arg]
+27111 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:23:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   23 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   24 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:41:69: warning: the parameter 'test_stop_token' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   41 | bool RunService(const ServiceConfig& config, score::cpp::stop_token test_stop_token)
+      |                                                                     ^
+      |                                              const                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:66:53: warning: passing result of std::move() as a const reference argument; no move will actually happen [hicpp-move-const-arg,performance-move-const-arg]
    66 |     auto skeleton_result = TestDataSkeleton::Create(std::move(instance_specifier_result.value()));
       |                                                     ^~~~~~~~~~                                 ~
-Suppressed 13740 warnings (13519 in non-user code, 213 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:66:58: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   31 |     auto skeleton_result = TestDataSkeleton::Create(std::move(instance_specifier_result.value()));
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:102:40: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  102 |         auto sample_allocatee_ptr{std::move(sample_allocatee_ptr_result).value()};
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:106:14: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   31 |         std::ignore = skeleton.test_event.Send(std::move(sample_allocatee_ptr));
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:106:53: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  106 |         std::ignore = skeleton.test_event.Send(std::move(sample_allocatee_ptr));
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4792/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_service.cpp:149:10: warning: the variable 'args' is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  149 |     auto args = args_maybe.value();
+      |          ^
+      |     const  &
+Suppressed 27316 warnings (27094 in non-user code, 214 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

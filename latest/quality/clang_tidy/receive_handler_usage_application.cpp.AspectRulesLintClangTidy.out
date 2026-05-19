@@ -1,6 +1,108 @@
-9220 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:79:9: warning: std::move of the const variable 'instance_specifier' has no effect; remove std::move() or make the variable non-const [hicpp-move-const-arg]
+21814 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:26:1: warning: included header atomic is not used directly [misc-include-cleaner]
+   26 | #include <atomic>
+      | ^~~~~~~~~~~~~~~~~
+   27 | #include <chrono>
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:27:1: warning: included header chrono is not used directly [misc-include-cleaner]
+   27 | #include <chrono>
+      | ^~~~~~~~~~~~~~~~~
+   28 | #include <future>
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:35:12: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   23 | #include <score/jthread.hpp>
+   24 | #include <score/stop_token.hpp>
+   25 | 
+   26 | #include <atomic>
+   27 | #include <chrono>
+   28 | #include <future>
+   29 | #include <iostream>
+   30 | 
+   31 | namespace
+   32 | {
+   33 | 
+   34 | const score::mw::com::test::MapApiLanesStamped kEvent_sample{};
+   35 | const std::size_t kSampleSubscriptionCount{1};
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:36:40: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   23 | #include <score/jthread.hpp>
+   24 | #include <score/stop_token.hpp>
+   25 | 
+   26 | #include <atomic>
+   27 | #include <chrono>
+   28 | #include <future>
+   29 | #include <iostream>
+   30 | 
+   31 | namespace
+   32 | {
+   33 | 
+   34 | const score::mw::com::test::MapApiLanesStamped kEvent_sample{};
+   35 | const std::size_t kSampleSubscriptionCount{1};
+   36 | enum class ReceiveHandlerStatus : std::uint8_t
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:48:8: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   22 | score::Result<score::mw::com::test::BigDataSkeleton> CreateAndOfferSkeleton(
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:63:23: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+   63 |         return score::MakeUnexpected<score::mw::com::test::BigDataSkeleton>(
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:64:35: warning: no header providing "score::mw::com::impl::MakeError" is directly included [misc-include-cleaner]
+   17 |             score::mw::com::impl::MakeError(score::mw::com::impl::ComErrc::kServiceNotOffered));
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:64:67: warning: no header providing "score::mw::com::impl::ComErrc" is directly included [misc-include-cleaner]
+   64 |             score::mw::com::impl::MakeError(score::mw::com::impl::ComErrc::kServiceNotOffered));
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:72:23: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   30 |     std::promise<std::vector<score::mw::com::test::BigDataProxy::HandleType>> service_discovery_promise{};
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:75:49: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   30 |         [moved_service_discovery_promise = std::move(service_discovery_promise)](auto handles, auto handle) mutable {
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:75:87: warning: the parameter 'handles' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   75 |         [moved_service_discovery_promise = std::move(service_discovery_promise)](auto handles, auto handle) mutable {
+      |                                                                                       ^
+      |                                                                                  const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:77:25: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   30 |             score::cpp::ignore = score::mw::com::test::BigDataProxy::StopFindService(handle);
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:79:9: warning: std::move of the const variable 'instance_specifier' has no effect; remove std::move() or make the variable non-const [hicpp-move-const-arg,performance-move-const-arg]
    79 |         std::move(instance_specifier));
       |         ^~~~~~~~~~                  ~
-Suppressed 9414 warnings (9208 in non-user code, 196 NOLINT, 10 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:79:14: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   79 |         std::move(instance_specifier));
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:84:23: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+   84 |         return score::MakeUnexpected<score::mw::com::test::BigDataProxy>(handles_result.error());
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:198:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   23 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:261:14: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   30 |         std::ignore = skeleton.map_api_lanes_stamped_.Send(kEvent_sample);
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:267:73: warning: no header providing "std::operator""ms" is directly included [misc-include-cleaner]
+   23 |         receive_handler_ctrl.finished_notification.waitForWithAbort(5000ms, stop_source.get_token());
+      |                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:275:20: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+  275 |             return EXIT_SUCCESS;
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:277:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  277 |         else
+      |         ^~~~
+  278 |         {
+      |         ~
+  279 |             std::cout << "ERROR!" << std::endl;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  280 |             // Doing a hard terminate here as a normal return would try to call the destructors in main thread, but in
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  281 |             // case we are deadlocking in EventReceiveHandler, there is also a high likelihood, that our proxy dtor
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  282 |             // might be blocked on the deadlock.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  283 |             std::terminate();
+      |             ~~~~~~~~~~~~~~~~~
+  284 |         }
+      |         ~
+/home/runner/.bazel/sandbox/linux-sandbox/4662/execroot/_main/score/mw/com/test/receive_handler_usage/receive_handler_usage_application.cpp:283:18: warning: no header providing "std::terminate" is directly included [misc-include-cleaner]
+   23 |             std::terminate();
+      |                  ^
+Suppressed 21987 warnings (21780 in non-user code, 197 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

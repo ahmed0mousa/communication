@@ -1,3 +1,17 @@
-4331 warnings generated.
-Suppressed 4343 warnings (4328 in non-user code, 12 NOLINT, 3 with check filters).
+7650 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/869/execroot/_main/score/message_passing/log/logging_callback.cpp:28:18: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::message_passing
+   19 | {
+   20 | 
+   21 | LoggingCallback GetCerrLogger()
+   22 | {
+   23 |     return [](LogSeverity /*severity*/, LogItems items) -> void {
+   24 |         static std::mutex cerr_mutex;
+   25 |         std::lock_guard<std::mutex> guard(cerr_mutex);
+   26 |         for (auto& item : items)
+   27 |         {
+   28 |             std::visit(
+      |                  ^
+Suppressed 7662 warnings (7646 in non-user code, 13 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

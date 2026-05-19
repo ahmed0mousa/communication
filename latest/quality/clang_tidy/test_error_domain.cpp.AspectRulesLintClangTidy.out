@@ -1,3 +1,18 @@
-4168 warnings generated.
-Suppressed 4189 warnings (4165 in non-user code, 21 NOLINT, 3 with check filters).
+7341 warnings generated.
+./score/mw/com/test/common_test_resources/test_error_domain.h:33:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4713/execroot/_main/score/mw/com/test/common_test_resources/test_error_domain.cpp:16:6: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   15 | 
+   16 | std::string_view score::mw::com::test::TestErrorDomain::MessageFor(const score::result::ErrorCode& code) const noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4713/execroot/_main/score/mw/com/test/common_test_resources/test_error_domain.cpp:16:89: warning: no header providing "score::result::ErrorCode" is directly included [misc-include-cleaner]
+   15 | 
+   16 | std::string_view score::mw::com::test::TestErrorDomain::MessageFor(const score::result::ErrorCode& code) const noexcept
+      |                                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4713/execroot/_main/score/mw/com/test/common_test_resources/test_error_domain.cpp:32:16: warning: no header providing "score::result::Error" is directly included [misc-include-cleaner]
+   15 | score::result::Error score::mw::com::test::MakeError(score::mw::com::test::TestErrorCode code,
+      |                ^
+Suppressed 7359 warnings (7334 in non-user code, 22 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,4 +1,4 @@
-11193 warnings generated.
+28434 warnings generated.
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:55:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    55 |     EventSubscriptionControlAttorney(EventSubscriptionControl& event_subscription_control) noexcept
       |     ^
@@ -18,6 +18,12 @@
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:147:7: warning: class 'SharedMemoryFactoryGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   147 | class SharedMemoryFactoryGuard
       |       ^
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:180:53: warning: 0x10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  180 |     LolaServiceInstanceId lola_service_instance_id_{0x10};
+      |                                                     ^
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:181:36: warning: 0xcdef is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  181 |     LolaServiceId lola_service_id_{0xcdef};
+      |                                    ^
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: warning: class 'LolaProxyEventResources' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   218 | class LolaProxyEventResources : public ProxyMockedMemoryFixture
       |       ^
@@ -25,8 +31,102 @@
 ./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:218:7: note: make it protected and non-virtual
   218 | class LolaProxyEventResources : public ProxyMockedMemoryFixture
       |       ^
-/home/runner/.bazel/sandbox/linux-sandbox/4112/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:32:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+./score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.h:241:82: warning: 37U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  241 |     IMessagePassingService::HandlerRegistrationNoType current_subscription_no_ = 37U;
+      |                                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:32:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
    32 | using namespace ::score::memory::shared;
       | ^
-Suppressed 11385 warnings (11177 in non-user code, 200 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:42:54: warning: no header providing "score::mw::com::impl::lola::GenericProxyEvent" is directly included [misc-include-cleaner]
+   16 | GenericProxyEventAttorney::GenericProxyEventAttorney(GenericProxyEvent& generic_proxy_event) noexcept
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:47:52: warning: no header providing "score::mw::com::impl::lola::ProxyEventCommon" is directly included [misc-include-cleaner]
+   16 | ProxyEventCommonAttorney::ProxyEventCommonAttorney(ProxyEventCommon& proxy_event_common) noexcept
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:52:52: warning: no header providing "score::mw::com::impl::lola::SlotCollector" is directly included [misc-include-cleaner]
+   16 | void ProxyEventCommonAttorney::InjectSlotCollector(SlotCollector&& slot_collector)
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:59:60: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   16 |     ON_CALL(runtime_mock_.runtime_mock_, GetBindingRuntime(BindingType::kLoLa))
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:65:35: warning: no header providing "score::mw::com::impl::lola::FakeMockedServiceData" is directly included [misc-include-cleaner]
+   16 |     fake_data_ = std::make_unique<FakeMockedServiceData>(kDummyPid, kDummyUid);
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:81:86: warning: no header providing "score::memory::shared::ISharedMemoryResource" is directly included [misc-include-cleaner]
+   15 |         .WillByDefault(InvokeWithoutArgs([this]() -> std::shared_ptr<memory::shared::ISharedMemoryResource> {
+      |                                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:94:69: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   16 | void ProxyMockedMemoryFixture::InitialiseProxyWithConstructor(const InstanceIdentifier& instance_identifier)
+      |                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:96:5: warning: no header providing "score::mw::com::impl::EnrichedInstanceIdentifier" is directly included [misc-include-cleaner]
+   16 |     EnrichedInstanceIdentifier enriched_instance_identifier{instance_identifier};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:98:31: warning: no header providing "score::mw::com::impl::make_FindServiceHandle" is directly included [misc-include-cleaner]
+   16 |         .WillByDefault(Return(make_FindServiceHandle(10U)));
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:98:54: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   98 |         .WillByDefault(Return(make_FindServiceHandle(10U)));
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:100:5: warning: no header providing "score::mw::com::impl::lola::Proxy" is directly included [misc-include-cleaner]
+   16 |     Proxy::EventNameToElementFqIdConverter event_name_to_element_fq_id_converter{lola_service_deployment_,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:106:38: warning: no header providing "score::mw::com::impl::make_HandleType" is directly included [misc-include-cleaner]
+   16 |                                      make_HandleType(instance_identifier),
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:107:43: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   21 |                                      std::optional<memory::shared::LockFile>{},
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:107:68: warning: no header providing "score::memory::shared::LockFile" is directly included [misc-include-cleaner]
+   15 |                                      std::optional<memory::shared::LockFile>{},
+      |                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:117:54: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  117 |         .WillByDefault(Return(make_FindServiceHandle(10U)));
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:122:67: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   16 | void ProxyMockedMemoryFixture::InitialiseDummySkeletonEvent(const ElementFqId element_fq_id,
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:123:67: warning: no header providing "score::mw::com::impl::lola::SkeletonEventProperties" is directly included [misc-include-cleaner]
+   16 |                                                             const SkeletonEventProperties& skeleton_event_properties)
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:125:10: warning: no header providing "std::tie" is directly included [misc-include-cleaner]
+   21 |     std::tie(event_control_, event_data_storage_) =
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:127:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT" is directly included [misc-include-cleaner]
+   21 |     SCORE_LANGUAGE_FUTURECPP_ASSERT(event_control_ != nullptr);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:143:6: warning: no header providing "std::future" is directly included [misc-include-cleaner]
+   17 | std::future<std::shared_ptr<ScopedEventReceiveHandler>> LolaProxyEventResources::ExpectRegisterEventNotification(
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:143:29: warning: no header providing "score::mw::com::impl::ScopedEventReceiveHandler" is directly included [misc-include-cleaner]
+   16 | std::future<std::shared_ptr<ScopedEventReceiveHandler>> LolaProxyEventResources::ExpectRegisterEventNotification(
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:144:17: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   21 |     score::cpp::optional<pid_t> pid)
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:144:26: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   21 |     score::cpp::optional<pid_t> pid)
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:151:56: warning: no header providing "std::promise" is directly included [misc-include-cleaner]
+  151 |     auto local_handler_promise = std::make_shared<std::promise<std::shared_ptr<ScopedEventReceiveHandler>>>();
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:155:43: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   16 |                 RegisterEventNotification(QualityType::kASIL_QM, element_fq_id_, ::testing::_, pid_to_use))
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:157:100: warning: the parameter 'handler_weak_ptr' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  157 |             ::testing::WithArg<2>([local_handler_promise](std::weak_ptr<ScopedEventReceiveHandler> handler_weak_ptr)
+      |                                                                                                    ^
+      |                                                           const                                   &
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:158:42: warning: no header providing "score::mw::com::impl::lola::IMessagePassingService" is directly included [misc-include-cleaner]
+   16 |                                       -> IMessagePassingService::HandlerRegistrationNoType {
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:183:1: warning: no header providing "score::mw::com::impl::lola::SlotIndexType" is directly included [misc-include-cleaner]
+   16 | SlotIndexType LolaProxyEventResources::PutData(const std::uint32_t value,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:183:59: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   17 | SlotIndexType LolaProxyEventResources::PutData(const std::uint32_t value,
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4158/execroot/_main/score/mw/com/impl/bindings/lola/test/proxy_event_test_resources.cpp:184:54: warning: no header providing "score::mw::com::impl::lola::EventSlotStatus" is directly included [misc-include-cleaner]
+   16 |                                                const EventSlotStatus::EventTimeStamp timestamp)
+      |                                                      ^
+Suppressed 28809 warnings (28380 in non-user code, 421 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

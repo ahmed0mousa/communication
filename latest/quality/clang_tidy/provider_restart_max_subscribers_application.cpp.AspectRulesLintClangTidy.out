@@ -1,3 +1,64 @@
-13367 warnings generated.
-Suppressed 13532 warnings (13359 in non-user code, 165 NOLINT, 8 with check filters).
+26830 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:20:1: warning: included header child_process_guard.h is not used directly [misc-include-cleaner]
+   20 | #include "score/mw/com/test/common_test_resources/child_process_guard.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | #include "score/mw/com/test/common_test_resources/general_resources.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:23:1: warning: included header test_datatype.h is not used directly [misc-include-cleaner]
+   23 | #include "score/mw/com/test/partial_restart/test_datatype.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   24 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:28:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   28 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   29 | #include <cstdio>
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:42:20: warning: no header providing "std::chrono::seconds" is directly included [misc-include-cleaner]
+   26 | const std::chrono::seconds kMaxWaitTimeToReachCheckpoint{60U};
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:48:31: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   32 |     score::cpp::optional<std::string> service_instance_manifest{};
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:60:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   26 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:67:43: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   26 |         ("service_instance_manifest", po::value<std::string>(&service_instance_manifest)->default_value(""), "Path to the com configuration file")
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:68:30: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   68 |         ("iterations,t", po::value<std::size_t>(&test_parameters.number_test_iterations)->default_value(5), "Number of cycles (provider restarts) to be done")
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:68:105: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   68 |         ("iterations,t", po::value<std::size_t>(&test_parameters.number_test_iterations)->default_value(5), "Number of cycles (provider restarts) to be done")
+      |                                                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:69:53: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   69 |         ("is-proxy-connected-during-restart,c", po::value<bool>(&test_parameters.connected_proxy_during_restart), "Whether a proxy should be connected to the skeleton during skeleton restart.");
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:71:9: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   26 |     po::variables_map args;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:75:44: warning: no header providing "boost::program_options::command_line_style::unix_style" is directly included [misc-include-cleaner]
+   26 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:75:81: warning: no header providing "boost::program_options::command_line_style::allow_long_disguise" is directly included [misc-include-cleaner]
+   75 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:77:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+   77 |     po::store(parsed_args, args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:85:9: warning: no header providing "boost::program_options::notify" is directly included [misc-include-cleaner]
+   85 |     po::notify(args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:94:35: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   32 | int DoProviderRestart(score::cpp::stop_token test_stop_token,
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:94:46: warning: the parameter 'test_stop_token' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   94 | int DoProviderRestart(score::cpp::stop_token test_stop_token,
+      |                                              ^
+      |                       const                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:343:17: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+  343 |     score::cpp::stop_source test_stop_source{};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4984/execroot/_main/score/mw/com/test/partial_restart/provider_restart_max_subscribers/provider_restart_max_subscribers_application.cpp:357:17: warning: no header providing "score::cpp::set_assertion_handler" is directly included [misc-include-cleaner]
+   26 |     score::cpp::set_assertion_handler(&score::mw::com::test::assertion_stdout_handler);
+      |                 ^
+Suppressed 26977 warnings (26803 in non-user code, 166 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,3 +1,59 @@
-146 warnings generated.
-Suppressed 146 warnings (143 in non-user code, 3 with check filters).
+267 warnings generated.
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:23:57: warning: no header providing "std::numeric_limits" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola
+   16 | {
+   17 | namespace
+   18 | {
+   19 | /// \brief Indicates that the event was never written.
+   20 | constexpr EventSlotStatus::value_type INVALID_EVENT = 0U;
+   21 | 
+   22 | /// \brief Indicates that the event data is altered and one should not increase the refcount.
+   23 | constexpr EventSlotStatus::value_type IN_WRITING = std::numeric_limits<EventSlotStatus::SubscriberCount>::max();
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:36:49: warning: 0x00000000FFFFFFFFU is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   36 |     return static_cast<SubscriberCount>(data_ & 0x00000000FFFFFFFFU);  // ignore first 4 byte
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:41:49: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   41 |     return static_cast<EventTimeStamp>(data_ >> 32U);  // ignore last 4 byte
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:66:52: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   66 |     data_ = static_cast<value_type>(time_stamp) << 32U;
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:71:22: warning: 0xFFFFFFFF00000000U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   71 |     data_ = (data_ & 0xFFFFFFFF00000000U) | static_cast<value_type>(ref_count);
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:82:31: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   82 |     return ((IsInWriting() == false) && (IsInvalid() == false) && (GetTimeStamp() > min_timestamp) &&
+      |              ~~~~~~~~~~~~~~~~~^~~~~
+      |              !IsInWriting()
+/home/runner/.bazel/sandbox/linux-sandbox/931/execroot/_main/score/mw/com/impl/bindings/lola/event_slot_status.cpp:82:57: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   82 |     return ((IsInWriting() == false) && (IsInvalid() == false) && (GetTimeStamp() > min_timestamp) &&
+      |                                          ~~~~~~~~~~~~~~~^~~~~
+      |                                          !IsInvalid()
+Suppressed 254 warnings (251 in non-user code, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

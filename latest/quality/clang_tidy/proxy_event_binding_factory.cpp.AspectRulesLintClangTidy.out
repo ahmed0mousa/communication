@@ -1,3 +1,31 @@
-8552 warnings generated.
-Suppressed 8686 warnings (8544 in non-user code, 134 NOLINT, 8 with check filters).
+18289 warnings generated.
+./score/mw/com/impl/plumbing/sample_ptr.h:96:5: warning: function 'get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   96 |     pointer get() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:124:5: warning: function 'Get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  124 |     pointer Get() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:133:46: warning: use c++14 style type templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/plumbing/sample_ptr.h:133:62: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+./score/mw/com/impl/plumbing/sample_ptr.h:148:82: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  148 |         return std::holds_alternative<score::cpp::blank>(binding_sample_ptr_) == false;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                !static_cast<bool>(std::holds_alternative<score::cpp::blank>(binding_sample_ptr_))
+/home/runner/.bazel/sandbox/linux-sandbox/4195/execroot/_main/score/mw/com/impl/plumbing/proxy_event_binding_factory.cpp:20:1: warning: no header providing "score::mw::com::impl::IGenericProxyEventBindingFactory" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/plumbing/proxy_event_binding_factory_impl.h"
+   16 | 
+   17 | namespace score::mw::com::impl
+   18 | {
+   19 | 
+   20 | IGenericProxyEventBindingFactory* GenericProxyEventBindingFactory::mock_{nullptr};
+      | ^
+Suppressed 18417 warnings (18274 in non-user code, 135 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

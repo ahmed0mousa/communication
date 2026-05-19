@@ -1,3 +1,6 @@
-3864 warnings generated.
-Suppressed 3870 warnings (3861 in non-user code, 6 NOLINT, 3 with check filters).
+6813 warnings generated.
+./score/mw/com/impl/tracing/type_erased_sample_ptr.h:33:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   33 |     score::cpp::callback<void(), 128U> type_erased_sample_ptr_;
+      |                                  ^
+Suppressed 6819 warnings (6809 in non-user code, 7 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

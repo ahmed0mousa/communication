@@ -1,4 +1,12 @@
-6197 warnings generated.
+13108 warnings generated.
+./score/message_passing/mock/client_connection_mock.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
 ./score/message_passing/mock/client_connection_mock.h:25:7: warning: class 'ClientConnectionMock' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    25 | class ClientConnectionMock : public IClientConnection
       |       ^
@@ -6,8 +14,80 @@
    64 |     ClientConnectionMockFacade(ClientConnectionMock& client_connection_mock)
       |     ^
       |     explicit 
+./score/message_passing/mock/client_connection_mock.h:88:5: warning: function 'GetState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     State GetState() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/mock/client_connection_mock.h:93:5: warning: function 'GetStopReason' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   93 |     StopReason GetStopReason() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/mock/client_factory_mock.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/mock/server_connection_mock.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/mock/server_factory_mock.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/mock/server_mock.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
 ./score/message_passing/mock/server_mock.h:25:7: warning: class 'ServerMock' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    25 | class ServerMock : public IServer
       |       ^
-Suppressed 6278 warnings (6191 in non-user code, 84 NOLINT, 3 with check filters).
+./score/message_passing/mock/shared_resource_engine_mock.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+/home/runner/.bazel/sandbox/linux-sandbox/906/execroot/_main/score/message_passing/mock/mocks.cpp:13:1: warning: included header client_connection_mock.h is not used directly [misc-include-cleaner]
+   13 | #include "score/message_passing/mock/client_connection_mock.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   14 | #include "score/message_passing/mock/client_factory_mock.h"
+/home/runner/.bazel/sandbox/linux-sandbox/906/execroot/_main/score/message_passing/mock/mocks.cpp:14:1: warning: included header client_factory_mock.h is not used directly [misc-include-cleaner]
+   14 | #include "score/message_passing/mock/client_factory_mock.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | #include "score/message_passing/mock/server_connection_mock.h"
+/home/runner/.bazel/sandbox/linux-sandbox/906/execroot/_main/score/message_passing/mock/mocks.cpp:15:1: warning: included header server_connection_mock.h is not used directly [misc-include-cleaner]
+   15 | #include "score/message_passing/mock/server_connection_mock.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/message_passing/mock/server_factory_mock.h"
+/home/runner/.bazel/sandbox/linux-sandbox/906/execroot/_main/score/message_passing/mock/mocks.cpp:16:1: warning: included header server_factory_mock.h is not used directly [misc-include-cleaner]
+   16 | #include "score/message_passing/mock/server_factory_mock.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/message_passing/mock/server_mock.h"
+/home/runner/.bazel/sandbox/linux-sandbox/906/execroot/_main/score/message_passing/mock/mocks.cpp:17:1: warning: included header server_mock.h is not used directly [misc-include-cleaner]
+   17 | #include "score/message_passing/mock/server_mock.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | #include "score/message_passing/mock/shared_resource_engine_mock.h"
+/home/runner/.bazel/sandbox/linux-sandbox/906/execroot/_main/score/message_passing/mock/mocks.cpp:18:1: warning: included header shared_resource_engine_mock.h is not used directly [misc-include-cleaner]
+   18 | #include "score/message_passing/mock/shared_resource_engine_mock.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   19 | 
+Suppressed 13220 warnings (13088 in non-user code, 129 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

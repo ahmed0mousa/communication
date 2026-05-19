@@ -1,12 +1,386 @@
-4613 warnings generated.
+8948 warnings generated.
+./score/mw/com/impl/bindings/lola/methods/method_resource_map.h:67:5: warning: function 'Contains' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     bool Contains(const ProxyInstanceIdentifier proxy_instance_identifier, const pid_t proxy_pid) const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:69:5: warning: function 'GetReceiverMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   69 |     std::int32_t GetReceiverMessageQueueSize(const QualityType quality_type) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:71:5: warning: function 'GetSenderMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   71 |     std::int32_t GetSenderMessageQueueSize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:76:5: warning: function 'GetProcessAsilLevel' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     QualityType GetProcessAsilLevel() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:86:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     score::cpp::optional<ApplicationId> GetApplicationId() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:91:5: warning: function 'GetShmSizeCalcMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   91 |     ShmSizeCalculationMode GetShmSizeCalcMode() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3939/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_resource_map.cpp:22:40: warning: no header providing "score::mw::com::impl::lola::ProxyInstanceIdentifier" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <score/assert.hpp>
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | bool MethodResourceMap::Contains(const ProxyInstanceIdentifier proxy_instance_identifier, const pid_t proxy_pid) const
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3939/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_resource_map.cpp:22:97: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | bool MethodResourceMap::Contains(const ProxyInstanceIdentifier proxy_instance_identifier, const pid_t proxy_pid) const
+      |                                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3939/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_resource_map.cpp:41:43: warning: no header providing "std::shared_ptr" is directly included [misc-include-cleaner]
+   17 |                                const std::shared_ptr<memory::shared::ISharedMemoryResource>& methods_shm_resource)
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3939/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_resource_map.cpp:41:70: warning: no header providing "score::memory::shared::ISharedMemoryResource" is directly included [misc-include-cleaner]
+   15 |                                const std::shared_ptr<memory::shared::ISharedMemoryResource>& methods_shm_resource)
+      |                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3939/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_resource_map.cpp:64:64: warning: no header providing "score::mw::com::impl::GlobalConfiguration" is directly included [misc-include-cleaner]
+   15 | auto MethodResourceMap::EraseRegionsFromCrashedProcesses(const GlobalConfiguration::ApplicationId proxy_app_id,
+      |                                                                ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | 
+   26 | namespace common
+      | ~~~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | 
+   29 | namespace visitor
+      | ~~~~~~~~~~~~~~~~~
+      | namespace score::common::visitor
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:11: warning: function 'strip_trailing_spaces' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
       |                                                          ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:11: warning: function 'visitor_extract_type_span' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:86: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
       |                                                                                      ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:11: warning: function 'visitor_extract_type' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:52: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
   114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
       |                                                    ^
-Suppressed 4644 warnings (4607 in non-user code, 34 NOLINT, 3 with check filters).
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:121:11: warning: function 'pack_values' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  121 | constexpr inline auto pack_values(Args&&... args)
+      |           ^~~~~~
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:143:41: warning: use c++17 style variable templates [modernize-type-traits]
+  143 | using if_same_struct = std::enable_if_t<std::is_same<S, detail::no_cref_t<T>>::value, std::int32_t>;
+      |                                         ^                                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/memory/shared/i_shared_memory_resource.h:72:5: warning: function 'getPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   72 |     virtual const std::string* getPath() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/i_shared_memory_resource.h:74:5: warning: function 'GetFileDescriptor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   74 |     virtual FileDescriptor GetFileDescriptor() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/i_shared_memory_resource.h:75:5: warning: function 'IsShmInTypedMemory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   75 |     virtual bool IsShmInTypedMemory() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/i_shared_memory_resource.h:76:5: warning: function 'GetIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     virtual std::string_view GetIdentifier() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:99:5: warning: function 'getBaseAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   99 |     virtual void* getBaseAddress() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:107:5: warning: function 'getUsableBaseAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     virtual void* getUsableBaseAddress() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:114:5: warning: function 'GetUserAllocatedBytes' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  114 |     virtual std::size_t GetUserAllocatedBytes() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:121:5: warning: function 'IsOffsetPtrBoundsCheckBypassingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  121 |     virtual bool IsOffsetPtrBoundsCheckBypassingEnabled() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/memory/shared/managed_memory_resource.h:158:5: warning: function 'getEndAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  158 |     virtual const void* getEndAddress() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/detail/logging_identifier.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace mw
+      | ~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace log
+      | ~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::mw::log::detail
+external/score_baselibs+/score/mw/log/detail/logging_identifier.h:40:5: warning: function 'GetStringView' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view GetStringView() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_common.h:21:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   21 | namespace score
+      | ^~~~~~~~~~~~~~~
+   22 | {
+      | ~
+   23 | namespace mw
+      | ~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_common.h:43:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   43 |     else
+      |     ^~~~
+   44 |     {
+      |     ~
+   45 |         // should never reach here
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   46 |         return std::string_view{"not support unit"};  // LCOV_EXCL_LINE : unreachable
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   47 |     }
+      |     ~
+external/score_baselibs+/score/mw/log/log_level.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_stream.h:33:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   33 | namespace mw
+      | ^~~~~~~~~~~~
+   34 | {
+      | ~
+   35 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace mw::log
+external/score_baselibs+/score/mw/log/log_stream.h:397:14: warning: use c++14 style type templates [modernize-type-traits]
+  397 |     typename std::enable_if<((!std::is_same<long long, int64_t>::value) && (sizeof(long long) == sizeof(int64_t))),
+      |     ~~~~~~~~ ^             
+      |                            _t
+  398 |                             T>::type* = nullptr>
+      |                               ~~~~~~
+external/score_baselibs+/score/mw/log/log_stream.h:397:32: warning: use c++17 style variable templates [modernize-type-traits]
+  397 |     typename std::enable_if<((!std::is_same<long long, int64_t>::value) && (sizeof(long long) == sizeof(int64_t))),
+      |                                ^                               ~~~~~~~
+      |                                            _v
+external/score_baselibs+/score/mw/log/log_stream.h:400:1: warning: function 'operator<<' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  400 | inline LogStream& operator<<(LogStream& out, long long value) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_stream.h:410:51: warning: use c++17 style variable templates [modernize-type-traits]
+  410 | template <typename EnumerationT, std::enable_if_t<std::is_enum<EnumerationT>::value, bool> = true>
+      |                                                   ^                         ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/mw/log/log_stream.h:426:30: warning: use c++14 style type templates [modernize-type-traits]
+  426 |     return (out << +typename std::underlying_type<EnumerationT>::type(enumvalue));
+      |                     ~~~~~~~~ ^                                 ~~~~~~
+      |                                                  _t
+external/score_baselibs+/score/mw/log/log_types.h:27:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   27 | namespace score
+      | ^~~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace mw
+      | ~~~~~~~~~~~~
+   30 | {
+      | ~
+   31 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_types.h:177:5: warning: function 'Data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  177 |     constexpr auto* Data() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:181:5: warning: function 'Size' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  181 |     constexpr auto Size() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:214:5: warning: function 'GetCode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  214 |     std::uint16_t GetCode() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:219:5: warning: function 'GetMessage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  219 |     std::string_view GetMessage() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:260:51: warning: use c++17 style variable templates [modernize-type-traits]
+  260 | template <typename T, typename = std::enable_if_t<std::is_scalar<T>::value>>
+      |                                                   ^                ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/mw/log/log_types.h:262:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  262 | inline LogRawBuffer MakeLogRawBuffer(const T& value) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:275:13: warning: redundant explicit casting to the same type 'LogRawBuffer::size_type' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  275 |             static_cast<LogRawBuffer::size_type>(sizeof(T))};
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~
+external/score_baselibs+/score/mw/log/log_types.h:284:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  284 | inline LogRawBuffer MakeLogRawBuffer(const score::cpp::span<T> values)
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:288:40: warning: use c++17 style variable templates [modernize-type-traits]
+  288 |     constexpr const bool kIsEligible = std::is_scalar<T>::value;
+      |                                        ^                ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/mw/log/log_types.h:302:46: warning: redundant explicit casting to the same type 'LogRawBuffer::size_type' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  302 |     const auto buffer_size = values.size() * static_cast<LogRawBuffer::size_type>(sizeof(T));
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~
+external/score_baselibs+/score/mw/log/log_types.h:316:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  316 | inline LogRawBuffer MakeLogRawBuffer(const std::vector<T>& values) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:328:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  328 | inline LogRawBuffer MakeLogRawBuffer(const std::array<T, n>& values) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/logging.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | 
+   27 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/recorder.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace mw
+      | ~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/recorder.h:113:5: warning: function 'IsLogEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  113 |     virtual bool IsLogEnabled(const LogLevel&, const std::string_view context) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/slot_handle.h:57:5: warning: function 'GetSlotOfSelectedRecorder' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     SlotIndex GetSlotOfSelectedRecorder() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:61:5: warning: function 'GetSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     SlotIndex GetSlot(const RecorderIdentifier) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:68:5: warning: function 'GetSelectedRecorder' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     RecorderIdentifier GetSelectedRecorder() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:75:5: warning: function 'IsRecorderActive' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   75 |     bool IsRecorderActive(const RecorderIdentifier) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/ObjectSeam.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/acl.h:29:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   29 | namespace score
+      | ^~~~~~~~~~~~~~~
+   30 | {
+      | ~
+   31 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/acl.h:84:5: warning: function 'acl_get_fd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   84 |     virtual score::cpp::expected<AclCollection, score::os::Error> acl_get_fd(const FileDescriptor) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/acl.h:85:5: warning: function 'acl_get_file' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   85 |     virtual score::cpp::expected<AclCollection, score::os::Error> acl_get_file(const std::string) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/errno.h:24:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   24 | namespace score
+      | ^~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/errno.h:117:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  117 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/errno.h:120:5: warning: function 'ToStringContainer' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  120 |     std::array<char, 32> ToStringContainer(const score::os::Error& error) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/errno.h:120:22: warning: 32 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  120 |     std::array<char, 32> ToStringContainer(const score::os::Error& error) const noexcept;
+      |                      ^
+external/score_baselibs+/score/os/errno.h:123:5: warning: function 'GetOsDependentErrorCode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  123 |     std::int32_t GetOsDependentErrorCode() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/utils/acl/i_access_control_list.h:24:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   24 | namespace score
+      | ^~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/utils/acl/i_access_control_list.h:42:5: warning: function 'VerifyMaskPermissions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual score::cpp::expected<bool, score::os::Error> VerifyMaskPermissions(
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/utils/acl/i_access_control_list.h:46:5: warning: function 'FindUserIdsWithPermission' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual score::cpp::expected<std::vector<UserIdentifier>, score::os::Error> FindUserIdsWithPermission(
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 8906 warnings (8868 in non-user code, 35 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

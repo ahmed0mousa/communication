@@ -1,3 +1,15 @@
-4150 warnings generated.
-Suppressed 4170 warnings (4147 in non-user code, 20 NOLINT, 3 with check filters).
+7493 warnings generated.
+./score/mw/com/impl/util/type_erased_storage.h:89:75: warning: use c++14 style type templates [modernize-type-traits]
+   89 | auto Deserialize(MemoryBufferAccessor& src_buffer) -> std::tuple<typename std::add_pointer<Args>::type...>
+      |                                                                  ~~~~~~~~ ^                     ~~~~~~
+      |                                                                                           _t
+./score/mw/com/impl/util/type_erased_storage.h:91:48: warning: use c++14 style type templates [modernize-type-traits]
+   91 |     auto tuple_with_args = std::tuple<typename std::add_pointer<Args>::type...>();
+      |                                       ~~~~~~~~ ^                     ~~~~~~
+      |                                                                _t
+./score/mw/com/impl/util/type_erased_storage.h:242:81: warning: use c++14 style type templates [modernize-type-traits]
+  242 | auto Deserialize(score::cpp::span<std::byte> src_buffer) -> std::tuple<typename std::add_pointer<Args>::type...>
+      |                                                                        ~~~~~~~~ ^                     ~~~~~~
+      |                                                                                                 _t
+Suppressed 7511 warnings (7487 in non-user code, 21 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

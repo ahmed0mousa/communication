@@ -1,3 +1,7 @@
-4782 warnings generated.
-Suppressed 4821 warnings (4776 in non-user code, 39 NOLINT, 6 with check filters).
+9435 warnings generated.
+./score/mw/com/impl/configuration/someip_field_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 9474 warnings (9428 in non-user code, 40 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,11 +1,99 @@
-5390 warnings generated.
-./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:125:44: warning: use nullptr [hicpp-use-nullptr]
+10433 warnings generated.
+./score/mw/com/test/common_test_resources/child_process_guard.h:35:5: warning: function 'GetPid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     pid_t GetPid() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:125:44: warning: use nullptr [hicpp-use-nullptr,modernize-use-nullptr]
   125 |         ::score::os::Mman::instance().mmap(NULL,
       |                                            ^~~~
       |                                            nullptr
-./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:176:44: warning: use nullptr [hicpp-use-nullptr]
+./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:176:44: warning: use nullptr [hicpp-use-nullptr,modernize-use-nullptr]
   176 |         ::score::os::Mman::instance().mmap(NULL,
       |                                            ^~~~
       |                                            nullptr
-Suppressed 5439 warnings (5383 in non-user code, 53 NOLINT, 3 with check filters).
+./score/mw/com/test/common_test_resources/shared_memory_object_creator.h:220:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  220 |     else
+      |     ^~~~
+  221 |     {
+      |     ~
+  222 |         std::stringstream ss{};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~
+  223 |         ss << "SharedMemoryObjectCreator: Unexpected error while opening object with SharedMemoryObjectCreator at path"
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  224 |            << shared_memory_file_name << "with errno" << open_object_result.error();
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  225 |         std::cerr << ss.str() << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  226 |         std::terminate();
+      |         ~~~~~~~~~~~~~~~~~
+  227 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:17:1: warning: included header shared_memory_object_guard.h is not used directly [misc-include-cleaner]
+   17 | #include "score/mw/com/test/common_test_resources/shared_memory_object_guard.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:31:5: warning: no header providing "score::mw::com::test::SharedMemoryObjectCreator" is directly included [misc-include-cleaner]
+   17 | #include "score/mw/com/test/common_test_resources/shared_memory_object_guard.h"
+   18 | 
+   19 | #include <score/expected.hpp>
+   20 | 
+   21 | #include <chrono>
+   22 | #include <iostream>
+   23 | #include <string>
+   24 | #include <thread>
+   25 | #include <utility>
+   26 | 
+   27 | namespace score::mw::com::test
+   28 | {
+   29 | 
+   30 | void ObjectCleanupGuard::AddConsumerCheckpointControlGuard(
+   31 |     SharedMemoryObjectCreator<CheckPointControl>& consumer_checkpoint_control_guard) noexcept
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:42:47: warning: no header providing "score::mw::com::test::ChildProcessGuard" is directly included [misc-include-cleaner]
+   17 | void ObjectCleanupGuard::AddForkConsumerGuard(ChildProcessGuard& fork_consumer_pid_guard) noexcept
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:84:49: warning: no header providing "score::cpp::handler_parameters" is directly included [misc-include-cleaner]
+   19 | void assertion_stdout_handler(const score::cpp::handler_parameters& param) noexcept
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:91:71: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   23 |                                                           score::cpp::stop_token test_stop_token)
+      |                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:106:5: warning: no header providing "score::os::Result" is directly included [misc-include-cleaner]
+   18 | os::Result<SharedMemoryObjectCreator<CheckPointControl>> CreateSharedCheckPointControl(
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:107:16: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   24 |     const std::string_view message_prefix,
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:153:14: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   19 |         std::uint8_t retry_counter{20};
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:153:36: warning: 20 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  153 |         std::uint8_t retry_counter{20};
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:175:13: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   23 | score::cpp::optional<ChildProcessGuard> ForkProcessAndRunInChildProcess(std::string_view parent_message_prefix,
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:177:78: warning: no header providing "std::function" is directly included [misc-include-cleaner]
+   19 |                                                                         std::function<void()> child_callable) noexcept
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:177:95: warning: the parameter 'child_callable' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  177 |                                                                         std::function<void()> child_callable) noexcept
+      |                                                                                               ^
+      |                                                                         const                &
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:183:55: warning: no header providing "fork" is directly included [misc-include-cleaner]
+   25 |     score::mw::com::test::ChildProcessGuard pid_guard{fork()};
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:186:84: warning: no header providing "strerror" is directly included [misc-include-cleaner]
+   19 |         std::cerr << parent_message_prefix << ": Error forking child process: " << strerror(errno) << ", exiting."
+      |                                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:186:93: warning: no header providing "errno" is directly included [misc-include-cleaner]
+   19 |         std::cerr << parent_message_prefix << ": Error forking child process: " << strerror(errno) << ", exiting."
+      |                                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:201:14: warning: no header providing "std::exit" is directly included [misc-include-cleaner]
+   19 |         std::exit(EXIT_SUCCESS);
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1413/execroot/_main/score/mw/com/test/common_test_resources/general_resources.cpp:201:19: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+  201 |         std::exit(EXIT_SUCCESS);
+      |                   ^
+Suppressed 10459 warnings (10402 in non-user code, 54 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

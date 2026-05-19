@@ -1,3 +1,10 @@
-4296 warnings generated.
-Suppressed 4296 warnings (4293 in non-user code, 3 with check filters).
+7334 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/884/execroot/_main/score/mw/com/test/common_test_resources/fail_test.cpp:22:20: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score::mw::com::test::detail
+   20 | {
+   21 | 
+   22 | void FailTest(std::stringstream&& strstr)
+      |                    ^
+Suppressed 7334 warnings (7330 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

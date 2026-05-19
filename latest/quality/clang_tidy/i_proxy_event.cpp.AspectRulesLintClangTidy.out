@@ -1,3 +1,14 @@
-5075 warnings generated.
-Suppressed 5132 warnings (5072 in non-user code, 57 NOLINT, 3 with check filters).
+9938 warnings generated.
+./score/mw/com/impl/mocking/i_proxy_event.h:38:5: warning: function 'GetSubscriptionState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     virtual SubscriptionState GetSubscriptionState() const = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/mocking/i_proxy_event.h:39:5: warning: function 'GetFreeSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     virtual std::size_t GetFreeSampleCount() const = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/mocking/i_proxy_event.h:60:72: warning: 80U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   60 |     using Callback = score::cpp::callback<void(SamplePtr<SampleType>), 80U>;
+      |                                                                        ^
+Suppressed 9993 warnings (9932 in non-user code, 58 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

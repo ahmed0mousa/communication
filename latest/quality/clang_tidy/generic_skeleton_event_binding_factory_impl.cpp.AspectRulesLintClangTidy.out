@@ -1,3 +1,83 @@
-8643 warnings generated.
-Suppressed 8790 warnings (8635 in non-user code, 147 NOLINT, 8 with check filters).
+18684 warnings generated.
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:109:49: warning: use c++14 style type templates [modernize-type-traits]
+  109 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                        ~~~~~~~~ ^                                           ~~~~~~
+      |                                                               _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:109:65: warning: use c++17 style variable templates [modernize-type-traits]
+  109 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                                                 ^              ~~~~~~~
+      |                                                                             _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:110:14: warning: use c++14 style type templates [modernize-type-traits]
+  110 |     typename std::add_lvalue_reference<SampleType>::type operator*() const noexcept;
+      |     ~~~~~~~~ ^                                    ~~~~~~
+      |                                       _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:117:49: warning: use c++14 style type templates [modernize-type-traits]
+  117 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                        ~~~~~~~~ ^                                           ~~~~~~
+      |                                                               _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:117:65: warning: use c++17 style variable templates [modernize-type-traits]
+  117 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                                                 ^              ~~~~~~~
+      |                                                                             _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:264:32: warning: use c++14 style type templates [modernize-type-traits]
+  264 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                       ~~~~~~~~ ^                                           ~~~~~~
+      |                                              _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:264:48: warning: use c++17 style variable templates [modernize-type-traits]
+  264 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                                                ^              ~~~~~~~
+      |                                                            _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:265:10: warning: use c++14 style type templates [modernize-type-traits]
+  265 | typename std::add_lvalue_reference<SampleType>::type SampleAllocateePtr<SampleType>::operator*() const noexcept
+      | ~~~~~~~~ ^                                    ~~~~~~
+      |                                   _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:267:33: warning: use c++14 style type templates [modernize-type-traits]
+  267 |     using ReturnType = typename std::add_lvalue_reference<SampleType>::type;
+      |                        ~~~~~~~~ ^                                    ~~~~~~
+      |                                                          _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:296:32: warning: use c++14 style type templates [modernize-type-traits]
+  296 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                       ~~~~~~~~ ^                                           ~~~~~~
+      |                                              _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:296:48: warning: use c++17 style variable templates [modernize-type-traits]
+  296 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                                                ^              ~~~~~~~
+      |                                                            _v
+/home/runner/.bazel/sandbox/linux-sandbox/4301/execroot/_main/score/mw/com/impl/plumbing/generic_skeleton_event_binding_factory_impl.cpp:20:8: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   18 | 
+   19 | // Updated signature to use DataTypeMetaInfo
+   20 | score::Result<std::unique_ptr<score::mw::com::impl::GenericSkeletonEventBinding>>
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4301/execroot/_main/score/mw/com/impl/plumbing/generic_skeleton_event_binding_factory_impl.cpp:20:20: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   18 | 
+   19 | // Updated signature to use DataTypeMetaInfo
+   20 | score::Result<std::unique_ptr<score::mw::com::impl::GenericSkeletonEventBinding>>
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4301/execroot/_main/score/mw/com/impl/plumbing/generic_skeleton_event_binding_factory_impl.cpp:20:53: warning: no header providing "score::mw::com::impl::GenericSkeletonEventBinding" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/plumbing/skeleton_service_element_binding_factory_impl.h"
+   16 | #include "score/mw/com/impl/service_element_type.h"
+   17 | #include "score/mw/com/impl/skeleton_base.h"
+   18 | 
+   19 | // Updated signature to use DataTypeMetaInfo
+   20 | score::Result<std::unique_ptr<score::mw::com::impl::GenericSkeletonEventBinding>>
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4301/execroot/_main/score/mw/com/impl/plumbing/generic_skeleton_event_binding_factory_impl.cpp:22:75: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   18 | 
+   19 | // Updated signature to use DataTypeMetaInfo
+   20 | score::Result<std::unique_ptr<score::mw::com::impl::GenericSkeletonEventBinding>>
+   21 | score::mw::com::impl::GenericSkeletonEventBindingFactoryImpl::Create(SkeletonBase& parent,
+   22 |                                                                      std::string_view event_name,
+      |                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4301/execroot/_main/score/mw/com/impl/plumbing/generic_skeleton_event_binding_factory_impl.cpp:23:76: warning: no header providing "score::mw::com::impl::DataTypeMetaInfo" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/plumbing/skeleton_service_element_binding_factory_impl.h"
+   16 | #include "score/mw/com/impl/service_element_type.h"
+   17 | #include "score/mw/com/impl/skeleton_base.h"
+   18 | 
+   19 | // Updated signature to use DataTypeMetaInfo
+   20 | score::Result<std::unique_ptr<score::mw::com::impl::GenericSkeletonEventBinding>>
+   21 | score::mw::com::impl::GenericSkeletonEventBindingFactoryImpl::Create(SkeletonBase& parent,
+   22 |                                                                      std::string_view event_name,
+   23 |                                                                      const DataTypeMetaInfo& meta_info) noexcept
+      |                                                                            ^
+Suppressed 18816 warnings (18660 in non-user code, 148 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

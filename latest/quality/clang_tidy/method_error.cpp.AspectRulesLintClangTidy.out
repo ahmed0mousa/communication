@@ -1,3 +1,45 @@
-4168 warnings generated.
-Suppressed 4189 warnings (4165 in non-user code, 21 NOLINT, 3 with check filters).
+7341 warnings generated.
+./score/mw/com/impl/bindings/lola/methods/method_error.h:51:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/844/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_error.cpp:23:16: warning: no header providing "score::result::Error" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace
+   16 | {
+   17 | constexpr score::mw::com::impl::lola::MethodErrorDomain g_methodErrorDomain;
+   18 | }  // namespace
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | score::result::Error MakeError(const MethodErrc code, const std::string_view message)
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/844/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_error.cpp:23:66: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace
+   16 | {
+   17 | constexpr score::mw::com::impl::lola::MethodErrorDomain g_methodErrorDomain;
+   18 | }  // namespace
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | score::result::Error MakeError(const MethodErrc code, const std::string_view message)
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/844/execroot/_main/score/mw/com/impl/bindings/lola/methods/method_error.cpp:25:40: warning: no header providing "score::result::ErrorCode" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace
+   16 | {
+   17 | constexpr score::mw::com::impl::lola::MethodErrorDomain g_methodErrorDomain;
+   18 | }  // namespace
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | score::result::Error MakeError(const MethodErrc code, const std::string_view message)
+   24 | {
+   25 |     return {static_cast<score::result::ErrorCode>(code), g_methodErrorDomain, message};
+      |                                        ^
+Suppressed 7359 warnings (7334 in non-user code, 22 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

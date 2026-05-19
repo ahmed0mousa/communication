@@ -1,7 +1,31 @@
-5906 warnings generated.
+12410 warnings generated.
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:32:5: warning: function 'GetServiceInstanceExistenceMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     virtual std::string GetServiceInstanceExistenceMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:36:5: warning: function 'GetServiceInstanceUsageMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     virtual std::string GetServiceInstanceUsageMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:40:5: warning: function 'GetLolaPartialRestartDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual std::string GetLolaPartialRestartDirectoryPath() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/partial_restart_path_builder_mock.h:40:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    40 |     PartialRestartPathBuilderFacade(PartialRestartPathBuilderMock& partial_restart_path_builder_mock)
       |     ^
       |     explicit 
-Suppressed 6003 warnings (5899 in non-user code, 98 NOLINT, 6 with check filters).
+./score/mw/com/impl/bindings/lola/partial_restart_path_builder_mock.h:45:5: warning: function 'GetServiceInstanceExistenceMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   45 |     std::string GetServiceInstanceExistenceMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/partial_restart_path_builder_mock.h:51:5: warning: function 'GetServiceInstanceUsageMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     std::string GetServiceInstanceUsageMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/partial_restart_path_builder_mock.h:57:5: warning: function 'GetLolaPartialRestartDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     std::string GetLolaPartialRestartDirectoryPath() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 12513 warnings (12397 in non-user code, 110 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

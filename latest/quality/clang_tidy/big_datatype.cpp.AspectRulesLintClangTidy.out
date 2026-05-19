@@ -1,12 +1,54 @@
-8763 warnings generated.
+20048 warnings generated.
+./score/mw/com/test/common_test_resources/big_datatype.h:129:63: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  129 | using LaneConnectionInfoList = std::array<LaneConnectionInfo, 10U>;
+      |                                                               ^
+./score/mw/com/test/common_test_resources/big_datatype.h:141:65: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  141 | using LaneRestrictionInfoList = std::array<LaneRestrictionInfo, 10U>;
+      |                                                                 ^
+./score/mw/com/test/common_test_resources/big_datatype.h:153:59: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  153 | using ShoulderLaneInfoList = std::array<ShoulderLaneInfo, 10U>;
+      |                                                           ^
 ./score/mw/com/test/common_test_resources/big_datatype.h:212:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
   212 | struct MapApiLaneData
       |        ^
 ./score/mw/com/test/common_test_resources/big_datatype.h:212:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+./score/mw/com/test/common_test_resources/big_datatype.h:228:33: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  228 |     std::array<map_api::LinkId, 10U> link_ids;
+      |                                 ^
+./score/mw/com/test/common_test_resources/big_datatype.h:231:28: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  231 |     std::array<LaneIdType, 10U> predecessor_lanes;
+      |                            ^
+./score/mw/com/test/common_test_resources/big_datatype.h:237:38: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  237 |     std::array<adp::MapApiPointData, 10U> center_line;
+      |                                      ^
+./score/mw/com/test/common_test_resources/big_datatype.h:281:42: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  281 |     std::array<adp::map_api::SpeedLimit, 10U> speed_limits;
+      |                                          ^
+./score/mw/com/test/common_test_resources/big_datatype.h:290:32: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  290 |     std::array<LaneBoundaryId, 10U> left_lane_boundaries_ids;
+      |                                ^
+./score/mw/com/test/common_test_resources/big_datatype.h:293:32: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  293 |     std::array<LaneBoundaryId, 10U> right_lane_boundaries_ids;
+      |                                ^
+./score/mw/com/test/common_test_resources/big_datatype.h:296:48: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  296 |     std::array<map_api::LaneToLinkAssociation, 10U> link_associations;
+      |                                                ^
+./score/mw/com/test/common_test_resources/big_datatype.h:299:51: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  299 |     std::array<map_api::LaneUsedInBothDirections, 10U> used_in_both_directions;
+      |                                                   ^
 ./score/mw/com/test/common_test_resources/big_datatype.h:343:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
   343 | struct MapApiLanesStamped
       |        ^
 ./score/mw/com/test/common_test_resources/big_datatype.h:343:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+./score/mw/com/test/common_test_resources/big_datatype.h:362:22: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  362 |     std::array<char, 10U> frame_id;
+      |                      ^
+./score/mw/com/test/common_test_resources/big_datatype.h:378:40: warning: 20000U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  378 |     std::array<MapApiLaneBoundaryData, 20000U> lane_boundaries;
+      |                                        ^
+./score/mw/com/test/common_test_resources/big_datatype.h:383:31: warning: 20000U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  383 |     std::array<LaneGroupData, 20000U> lane_groups;
+      |                               ^
 ./score/mw/com/test/common_test_resources/big_datatype.h:405:8: warning: constructor does not initialize these fields: x, hash_value [cppcoreguidelines-pro-type-member-init]
   405 | struct DummyDataStamped
       |        ^
@@ -30,5 +72,5 @@
       |                           
       |                           {}
 ./score/mw/com/test/common_test_resources/big_datatype.h:405:8: warning: class 'DummyDataStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
-Suppressed 8920 warnings (8749 in non-user code, 163 NOLINT, 8 with check filters).
+Suppressed 20192 warnings (20020 in non-user code, 164 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

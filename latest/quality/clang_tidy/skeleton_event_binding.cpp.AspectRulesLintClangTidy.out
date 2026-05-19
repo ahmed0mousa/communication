@@ -1,8 +1,16 @@
-5252 warnings generated.
+10895 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/event_data_control_composite.h:48:12: warning: constructor does not initialize these fields: qm_misbehaved [cppcoreguidelines-pro-type-member-init]
    48 |     struct AllocationResult
       |            ^
@@ -16,13 +24,166 @@
    56 |         bool qm_misbehaved;
       |                           
       |                           {}
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:95:5: warning: function 'IsQmControlDisconnected' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   95 |     bool IsQmControlDisconnected() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:98:5: warning: function 'GetQmEventDataControlLocal' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     ProviderEventDataControlLocalView<AtomicIndirectorType>& GetQmEventDataControlLocal() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:105:5: warning: function 'GetEventSlotTimestamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     EventSlotStatus::EventTimeStamp GetEventSlotTimestamp(const SlotIndexType slot_index) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:115:5: warning: function 'GetLatestTimestamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  115 |     EventSlotStatus::EventTimeStamp GetLatestTimestamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_data_control_composite.h:128:5: warning: function 'GetNextFreeMultiSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::optional<typename ProviderEventDataControlLocalView<AtomicIndirectorType>::SlotInfo> GetNextFreeMultiSlot()
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:111:5: warning: function 'FindOldestUnusedSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  111 |     std::optional<ProviderEventDataControlLocalView::SlotInfo> FindOldestUnusedSlot() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:144:14: warning: use c++14 style type templates [modernize-type-traits]
+  144 |     typename std::add_lvalue_reference<SampleType>::type operator*() const noexcept
+      |     ~~~~~~~~ ^                                    ~~~~~~
+      |                                       _t
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:174:5: warning: function 'GetReferencedSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  174 |     SlotIndexType GetReferencedSlot() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:218:5: warning: function 'GetEventDataControlComposite' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  218 |     const std::optional<EventDataControlComposite<>>& GetEventDataControlComposite() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/sample_allocatee_ptr.h:239:5: warning: function 'GetEventDataControlComposite' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  239 |     const std::optional<EventDataControlComposite<>>& GetEventDataControlComposite() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5320 warnings (5242 in non-user code, 72 NOLINT, 6 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:109:49: warning: use c++14 style type templates [modernize-type-traits]
+  109 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                        ~~~~~~~~ ^                                           ~~~~~~
+      |                                                               _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:109:65: warning: use c++17 style variable templates [modernize-type-traits]
+  109 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                                                 ^              ~~~~~~~
+      |                                                                             _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:110:14: warning: use c++14 style type templates [modernize-type-traits]
+  110 |     typename std::add_lvalue_reference<SampleType>::type operator*() const noexcept;
+      |     ~~~~~~~~ ^                                    ~~~~~~
+      |                                       _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:117:49: warning: use c++14 style type templates [modernize-type-traits]
+  117 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                        ~~~~~~~~ ^                                           ~~~~~~
+      |                                                               _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:117:65: warning: use c++17 style variable templates [modernize-type-traits]
+  117 |     template <typename T = SampleType, typename std::enable_if<!std::is_void<T>::value, int>::type = 0>
+      |                                                                 ^              ~~~~~~~
+      |                                                                             _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:264:32: warning: use c++14 style type templates [modernize-type-traits]
+  264 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                       ~~~~~~~~ ^                                           ~~~~~~
+      |                                              _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:264:48: warning: use c++17 style variable templates [modernize-type-traits]
+  264 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                                                ^              ~~~~~~~
+      |                                                            _v
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:265:10: warning: use c++14 style type templates [modernize-type-traits]
+  265 | typename std::add_lvalue_reference<SampleType>::type SampleAllocateePtr<SampleType>::operator*() const noexcept
+      | ~~~~~~~~ ^                                    ~~~~~~
+      |                                   _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:267:33: warning: use c++14 style type templates [modernize-type-traits]
+  267 |     using ReturnType = typename std::add_lvalue_reference<SampleType>::type;
+      |                        ~~~~~~~~ ^                                    ~~~~~~
+      |                                                          _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:296:32: warning: use c++14 style type templates [modernize-type-traits]
+  296 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                       ~~~~~~~~ ^                                           ~~~~~~
+      |                                              _t
+./score/mw/com/impl/plumbing/sample_allocatee_ptr.h:296:48: warning: use c++17 style variable templates [modernize-type-traits]
+  296 | template <typename T, typename std::enable_if<!std::is_void<T>::value, int>::type>
+      |                                                ^              ~~~~~~~
+      |                                                            _v
+./score/mw/com/impl/skeleton_event_binding.h:38:82: warning: 64U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   38 |     using SubscribeTraceCallback = score::cpp::callback<void(std::size_t, bool), 64U>;
+      |                                                                                  ^
+./score/mw/com/impl/skeleton_event_binding.h:39:67: warning: 64U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   39 |     using UnsubscribeTraceCallback = score::cpp::callback<void(), 64U>;
+      |                                                                   ^
+./score/mw/com/impl/skeleton_event_binding.h:62:5: warning: function 'GetMaxSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     virtual std::size_t GetMaxSize() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/skeleton_event_binding.h:65:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     virtual BindingType GetBindingType() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/skeleton_event_binding.h:77:91: warning: 64U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   77 |     using SendTraceCallback = score::cpp::callback<void(SampleAllocateePtr<SampleType>&), 64U>;
+      |                                                                                           ^
+./score/mw/com/impl/skeleton_event_binding.h:92:5: warning: function 'GetMaxSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   92 |     std::size_t GetMaxSize() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+Suppressed 10918 warnings (10839 in non-user code, 73 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

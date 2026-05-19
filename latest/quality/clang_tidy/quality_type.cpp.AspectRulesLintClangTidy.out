@@ -1,3 +1,51 @@
-4108 warnings generated.
-Suppressed 4108 warnings (4105 in non-user code, 3 with check filters).
+7113 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/928/execroot/_main/score/mw/com/impl/configuration/quality_type.cpp:29:6: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl
+   18 | {
+   19 | 
+   20 | namespace
+   21 | {
+   22 | 
+   23 | constexpr auto kInvalidString = "kInvalid";
+   24 | constexpr auto kAsilQmString = "kASIL_QM";
+   25 | constexpr auto kAsilBString = "kASIL_B";
+   26 | 
+   27 | }  // namespace
+   28 | 
+   29 | std::string ToString(QualityType quality_type) noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/928/execroot/_main/score/mw/com/impl/configuration/quality_type.cpp:53:36: warning: the parameter 'quality_type' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   53 | QualityType FromString(std::string quality_type) noexcept
+      |                                    ^
+      |                        const      &
+/home/runner/.bazel/sandbox/linux-sandbox/928/execroot/_main/score/mw/com/impl/configuration/quality_type.cpp:59:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   59 |     else if (quality_type == kAsilQmString)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |     {
+      |     ~
+   61 |         return QualityType::kASIL_QM;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   62 |     }
+      |     ~
+   63 |     else if (quality_type == kAsilBString)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   64 |     {
+      |     ~
+   65 |         return QualityType::kASIL_B;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   66 |     }
+      |     ~
+   67 |     else
+      |     ~~~~
+   68 |     {
+      |     ~
+   69 |         std::terminate();
+      |         ~~~~~~~~~~~~~~~~~
+   70 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/928/execroot/_main/score/mw/com/impl/configuration/quality_type.cpp:78:6: warning: no header providing "std::ostream" is directly included [misc-include-cleaner]
+   16 | std::ostream& operator<<(std::ostream& ostream_out, const QualityType& type)
+      |      ^
+Suppressed 7110 warnings (7106 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

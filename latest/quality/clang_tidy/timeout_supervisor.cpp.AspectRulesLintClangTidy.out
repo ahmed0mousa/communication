@@ -1,13 +1,82 @@
-5325 warnings generated.
+10356 warnings generated.
 ./score/mw/com/test/common_test_resources/timeout_supervisor.h:44:10: warning: function 'score::mw::com::test::TimeoutSupervisor::StartSupervision' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    44 |     void StartSupervision(std::chrono::milliseconds timeout, score::cpp::callback<void(void)> timeout_callback);
       |          ^
-/home/runner/.bazel/sandbox/linux-sandbox/1566/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:41:25: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:41:25: note: the definition seen here
    41 | void TimeoutSupervisor::StartSupervision(std::chrono::milliseconds timeout_milliseconds,
       |                         ^
 ./score/mw/com/test/common_test_resources/timeout_supervisor.h:44:10: note: differing parameters are named here: ('timeout'), in definition: ('timeout_milliseconds')
    44 |     void StartSupervision(std::chrono::milliseconds timeout, score::cpp::callback<void(void)> timeout_callback);
       |          ^                                          ~~~~~~~
       |                                                     timeout_milliseconds
-Suppressed 5382 warnings (5321 in non-user code, 58 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:23:34: warning: no header providing "score::cpp::pmr::make_unique" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::mw::com::test
+   19 | {
+   20 | 
+   21 | void TimeoutSupervisor::CreateExecutor()
+   22 | {
+   23 |     executor_ = score::cpp::pmr::make_unique<score::concurrency::ConcurrentTimedExecutor<std::chrono::steady_clock>>(
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:23:66: warning: no header providing "score::concurrency::ConcurrentTimedExecutor" is directly included [misc-include-cleaner]
+   16 | #include "score/concurrency/timed_executor/delayed_task.h"
+   17 | 
+   18 | namespace score::mw::com::test
+   19 | {
+   20 | 
+   21 | void TimeoutSupervisor::CreateExecutor()
+   22 | {
+   23 |     executor_ = score::cpp::pmr::make_unique<score::concurrency::ConcurrentTimedExecutor<std::chrono::steady_clock>>(
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:23:103: warning: no header providing "std::chrono::steady_clock" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::mw::com::test
+   19 | {
+   20 | 
+   21 | void TimeoutSupervisor::CreateExecutor()
+   22 | {
+   23 |     executor_ = score::cpp::pmr::make_unique<score::concurrency::ConcurrentTimedExecutor<std::chrono::steady_clock>>(
+      |                                                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:24:26: warning: no header providing "score::cpp::pmr::new_delete_resource" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::mw::com::test
+   19 | {
+   20 | 
+   21 | void TimeoutSupervisor::CreateExecutor()
+   22 | {
+   23 |     executor_ = score::cpp::pmr::make_unique<score::concurrency::ConcurrentTimedExecutor<std::chrono::steady_clock>>(
+   24 |         score::cpp::pmr::new_delete_resource(),
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:26:26: warning: no header providing "score::cpp::pmr::make_unique" is directly included [misc-include-cleaner]
+   26 |         score::cpp::pmr::make_unique<score::concurrency::ThreadPool>(score::cpp::pmr::new_delete_resource(), 1U));
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:26:58: warning: no header providing "score::concurrency::ThreadPool" is directly included [misc-include-cleaner]
+   16 | #include "score/concurrency/timed_executor/delayed_task.h"
+   17 | 
+   18 | namespace score::mw::com::test
+   19 | {
+   20 | 
+   21 | void TimeoutSupervisor::CreateExecutor()
+   22 | {
+   23 |     executor_ = score::cpp::pmr::make_unique<score::concurrency::ConcurrentTimedExecutor<std::chrono::steady_clock>>(
+   24 |         score::cpp::pmr::new_delete_resource(),
+   25 |         score::cpp::pmr::new_delete_resource(),
+   26 |         score::cpp::pmr::make_unique<score::concurrency::ThreadPool>(score::cpp::pmr::new_delete_resource(), 1U));
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:36:16: warning: no header providing "std::scoped_lock" is directly included [misc-include-cleaner]
+   17 |     const std::scoped_lock lock{mutex_};
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:41:55: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+   41 | void TimeoutSupervisor::StartSupervision(std::chrono::milliseconds timeout_milliseconds,
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:42:54: warning: no header providing "score::cpp::callback" is directly included [misc-include-cleaner]
+   17 |                                          score::cpp::callback<void(void)> timeout_callback)
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:49:47: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   17 |         [abort_token, timeout_callback = std::move(timeout_callback)](const auto& stop_token, auto) -> void {
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/657/execroot/_main/score/mw/com/test/common_test_resources/timeout_supervisor.cpp:57:26: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   57 |     executor_->Post(std::move(task));
+      |                          ^
+Suppressed 10403 warnings (10341 in non-user code, 59 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

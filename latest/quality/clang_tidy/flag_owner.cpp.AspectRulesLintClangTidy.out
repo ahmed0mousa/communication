@@ -1,2 +1,6 @@
-3 warnings generated.
+4 warnings generated.
+./score/mw/com/impl/flag_owner.h:62:5: warning: function 'IsSet' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsSet() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 Suppressed 3 warnings (3 with check filters).

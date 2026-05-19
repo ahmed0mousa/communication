@@ -1,11 +1,53 @@
-8777 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
+20061 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:98:63: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   98 | using LaneConnectionInfoList = std::array<LaneConnectionInfo, 10U>;
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:104:65: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  104 | using LaneRestrictionInfoList = std::array<LaneRestrictionInfo, 10U>;
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:110:59: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  110 | using ShoulderLaneInfoList = std::array<ShoulderLaneInfo, 10U>;
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
   151 | struct MapApiLaneData
       |        ^
-/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
-/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:167:33: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  167 |     std::array<map_api::LinkId, 10U> link_ids;
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:170:28: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  170 |     std::array<LaneIdType, 10U> predecessor_lanes;
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:176:38: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  176 |     std::array<adp::MapApiPointData, 10U> center_line;
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:220:42: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  220 |     std::array<adp::map_api::SpeedLimit, 10U> speed_limits;
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:229:32: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  229 |     std::array<LaneBoundaryId, 10U> left_lane_boundaries_ids;
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:232:32: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  232 |     std::array<LaneBoundaryId, 10U> right_lane_boundaries_ids;
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:235:48: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  235 |     std::array<map_api::LaneToLinkAssociation, 10U> link_associations;
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:238:51: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  238 |     std::array<map_api::LaneUsedInBothDirections, 10U> used_in_both_directions;
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
   245 | struct MapApiLanesStamped
       |        ^
-/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
-Suppressed 8936 warnings (8765 in non-user code, 163 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:264:22: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  264 |     std::array<char, 10U> frame_id;
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:280:40: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  280 |     std::array<MapApiLaneBoundaryData, 10U> lane_boundaries;
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4503/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:285:31: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  285 |     std::array<LaneGroupData, 10U> lane_groups;
+      |                               ^
+Suppressed 20207 warnings (20035 in non-user code, 164 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

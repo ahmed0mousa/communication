@@ -1,3 +1,62 @@
-5849 warnings generated.
-Suppressed 5923 warnings (5843 in non-user code, 74 NOLINT, 6 with check filters).
+11238 warnings generated.
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/lola_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:49:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   49 |     InstanceId GetId() const
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1386/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_id.cpp:17:1: warning: included header json_parser.h is not used directly [misc-include-cleaner]
+   17 | #include "score/json/json_parser.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1386/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_id.cpp:19:1: warning: included header assert.hpp is not used directly [misc-include-cleaner]
+   19 | #include <score/assert.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1386/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_id.cpp:47:65: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | LolaServiceInstanceId::LolaServiceInstanceId(const score::json::Object& json_object) noexcept
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1386/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_id.cpp:51:31: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   19 |         GetValueFromJson<std::uint32_t>(json_object, kSerializationVersionKeyLolaSerInstID);
+      |                               ^
+Suppressed 11299 warnings (11218 in non-user code, 75 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

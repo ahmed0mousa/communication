@@ -1,4 +1,20 @@
-8836 warnings generated.
+20345 warnings generated.
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:99:16: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   99 |         return std::string_view(data, len);
+      |                ^~~~~~~~~~~~~~~~~         ~
+      |                {                         }
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:112:1: warning: function 'GetSamplesFromEvent' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  112 | inline score::Result<std::uint32_t> GetSamplesFromEvent(::score::mw::com::impl::ProxyEvent<T>& proxy_event,
+      | ^~~~~~
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:124:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  124 |     else
+      |     ^~~~
+  125 |     {
+      |     ~
+  126 |         return score::MakeUnexpected<std::uint32_t>(samples.error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  127 |     }
+      |     ~
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:228:35: warning: statement should be inside braces [readability-braces-around-statements]
   228 |         if (sample_ptr == nullptr)
       |                                   ^
@@ -15,6 +31,24 @@
   422 |             AsProxy* proxy = new AsProxy{std::move(result).value()};
       |             ^~~~~~~
       |             auto
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:425:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  425 |         else
+      |         ^~~~
+  426 |         {
+      |         ~
+  427 |             return nullptr;
+      |             ~~~~~~~~~~~~~~~
+  428 |         }
+      |         ~
+./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:438:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  438 |         else
+      |         ^~~~
+  439 |         {
+      |         ~
+  440 |             return nullptr;
+      |             ~~~~~~~~~~~~~~~
+  441 |         }
+      |         ~
 ./score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.h:492:13: warning: implicit conversion 'InterfaceOperations *' -> 'bool' [readability-implicit-bool-conversion]
   492 |         if (registries)
       |             ^         
@@ -23,5 +57,94 @@
   542 |         if (ops)
       |             ^  
       |                 != nullptr
-Suppressed 8995 warnings (8823 in non-user code, 164 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:27:1: warning: included header proxy_event.h is not used directly [misc-include-cleaner]
+   27 | #include "score/mw/com/impl/proxy_event.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   28 | #include "score/mw/com/impl/proxy_event_base.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:30:1: warning: included header skeleton_event.h is not used directly [misc-include-cleaner]
+   30 | #include "score/mw/com/impl/skeleton_event.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 | #include "score/mw/com/impl/skeleton_event_base.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:124:62: warning: no header providing "uint32_t" is directly included [misc-include-cleaner]
+   35 | bool mw_com_proxy_event_subscribe(ProxyEventBase* event_ptr, uint32_t max_sample_count)
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:135:16: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+  133 |     if (!result.has_value())
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~
+      |     return result.has_value()
+  134 |     {
+      |     ~
+  135 |         return false;
+      |         ~~~~~~~^~~~~~
+  136 |     }
+      |     ~
+  137 | 
+  138 |     return true;
+      |     ~~~~~~~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:158:63: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   26 | ProxyBase* mw_com_create_proxy(StringView interface_id, const HandleType& handle_ptr)
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:257:6: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+  257 | std::uint32_t mw_com_type_registry_get_samples_from_event(ProxyEventBase* event_ptr,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:259:65: warning: no header providing "score::mw::com::impl::rust::FatPtr" is directly included [misc-include-cleaner]
+   29 |                                                           const FatPtr* callback,
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:276:31: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  276 |     if (result.has_value() == false)
+      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |         !result.has_value()
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:428:48: warning: no header providing "score::mw::com::impl::rust::RustFnMutCallable" is directly included [misc-include-cleaner]
+  428 |     auto result = event_ptr->SetReceiveHandler(RustFnMutCallable<RustBoxedCallable>{*boxed_handler});
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:428:66: warning: no header providing "score::mw::com::impl::rust::RustBoxedCallable" is directly included [misc-include-cleaner]
+  428 |     auto result = event_ptr->SetReceiveHandler(RustFnMutCallable<RustBoxedCallable>{*boxed_handler});
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:429:31: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  429 |     if (result.has_value() == false)
+      |                               ^
+note: this fix will not be applied because it overlaps with another fix
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:431:16: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+  429 |     if (result.has_value() == false)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     return result.has_value() != false
+  430 |     {
+      |     ~
+  431 |         return false;
+      |         ~~~~~~~^~~~~~
+  432 |     }
+      |     ~
+  433 |     return true;
+      |     ~~~~~~~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:445:17: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   36 |     score::cpp::ignore = event_ptr->UnsetReceiveHandler();
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:461:57: warning: no header providing "score::mw::com::impl::InstanceSpecifier" is directly included [misc-include-cleaner]
+   26 | void* mw_com_start_find_service(const FatPtr* callback, InstanceSpecifier* instance_spec)
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:470:84: warning: no header providing "score::mw::com::impl::FindServiceHandle" is directly included [misc-include-cleaner]
+   25 |     RustFnMutCallable<RustBoxedCallable, void, ServiceHandleContainer<HandleType>, FindServiceHandle> rust_callable{
+      |                                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:473:47: warning: no header providing "score::mw::com::impl::Runtime" is directly included [misc-include-cleaner]
+   29 |     if (auto result = ::score::mw::com::impl::Runtime::getInstance().GetServiceDiscovery().StartFindService(
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:474:18: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   37 |             std::move(rust_callable), std::move(*instance_spec));
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:474:44: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  474 |             std::move(rust_callable), std::move(*instance_spec));
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:477:43: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  477 |         return new FindServiceHandle{std::move(result).value()};
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4539/execroot/_main/score/mw/com/impl/rust/com-api/com-api-ffi-lola/registry_bridge_macro.cpp:479:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  479 |     else
+      |     ^~~~
+  480 |     {
+      |     ~
+  481 |         return nullptr;
+      |         ~~~~~~~~~~~~~~~
+  482 |     }
+      |     ~
+Suppressed 20480 warnings (20307 in non-user code, 165 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

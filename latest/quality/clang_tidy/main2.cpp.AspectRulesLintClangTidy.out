@@ -1,3 +1,18 @@
-4842 warnings generated.
-Suppressed 4842 warnings (4839 in non-user code, 3 with check filters).
+8245 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/899/execroot/_main/quality/integration_testing/test/main2.cpp:22:50: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+   13 | #include <fstream>
+   14 | #include <thread>
+   15 | 
+   16 | int main()
+   17 | {
+   18 |     std::ifstream file("/tmp/Hello.txt");
+   19 |     while (not file.is_open())
+   20 |     {
+   21 |         file = std::ifstream("/tmp/Hello.txt");
+   22 |         std::this_thread::sleep_for(std::chrono::milliseconds(50));
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/899/execroot/_main/quality/integration_testing/test/main2.cpp:22:63: warning: 50 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   22 |         std::this_thread::sleep_for(std::chrono::milliseconds(50));
+      |                                                               ^
+Suppressed 8244 warnings (8240 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

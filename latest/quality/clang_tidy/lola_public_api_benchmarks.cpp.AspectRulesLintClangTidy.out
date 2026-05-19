@@ -1,16 +1,32 @@
-8841 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4626/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:61:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
+20395 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:20:1: warning: included header filesystem is not used directly [misc-include-cleaner]
+   20 | #include <filesystem>
+      | ^~~~~~~~~~~~~~~~~~~~~
+   21 | #include <string_view>
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:37:27: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   37 |         this->Repetitions(10);
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:61:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
    61 |     for (auto _ : state)
       |               ^ ~
-/home/runner/.bazel/sandbox/linux-sandbox/4626/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:61:15: note: Value stored to '_' during its initialization is never read
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:61:15: note: Value stored to '_' during its initialization is never read
    61 |     for (auto _ : state)
       |               ^ ~
-/home/runner/.bazel/sandbox/linux-sandbox/4626/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:73:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:73:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
    73 |     for (auto _ : state)
       |               ^ ~
-/home/runner/.bazel/sandbox/linux-sandbox/4626/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:73:15: note: Value stored to '_' during its initialization is never read
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:73:15: note: Value stored to '_' during its initialization is never read
    73 |     for (auto _ : state)
       |               ^ ~
-Suppressed 9005 warnings (8829 in non-user code, 166 NOLINT, 10 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:77:35: warning: no header providing "std::chrono::high_resolution_clock" is directly included [misc-include-cleaner]
+   20 |         auto start = std::chrono::high_resolution_clock::now();
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:81:45: warning: no header providing "std::chrono::duration_cast" is directly included [misc-include-cleaner]
+   81 |         auto elapsed_seconds = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4654/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_public_api_benchmarks.cpp:81:72: warning: no header providing "std::chrono::duration" is directly included [misc-include-cleaner]
+   81 |         auto elapsed_seconds = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
+      |                                                                        ^
+Suppressed 20555 warnings (20378 in non-user code, 167 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 2 warnings treated as errors

@@ -1,3 +1,41 @@
-1744 warnings generated.
-Suppressed 1744 warnings (1741 in non-user code, 3 with check filters).
+3386 warnings generated.
+./score/mw/com/impl/bindings/lola/methods/offered_state_machine.h:54:5: warning: function 'GetCurrentState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     State GetCurrentState() const
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/979/execroot/_main/score/mw/com/impl/bindings/lola/methods/offered_state_machine.cpp:22:20: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   15 | #include <score/assert.hpp>
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | 
+   20 | OfferedStateMachine::OfferedStateMachine()
+   21 |     : current_state_{State::OFFERED},
+   22 |       states_{std::make_unique<detail::OfferedState>(),
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/979/execroot/_main/score/mw/com/impl/bindings/lola/methods/offered_state_machine.cpp:23:20: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   23 |               std::make_unique<detail::StopOfferedState>(),
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/979/execroot/_main/score/mw/com/impl/bindings/lola/methods/offered_state_machine.cpp:24:20: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   24 |               std::make_unique<detail::ReOfferedState>()}
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/979/execroot/_main/score/mw/com/impl/bindings/lola/methods/offered_state_machine.cpp:30:50: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   15 | #include <score/assert.hpp>
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | 
+   20 | OfferedStateMachine::OfferedStateMachine()
+   21 |     : current_state_{State::OFFERED},
+   22 |       states_{std::make_unique<detail::OfferedState>(),
+   23 |               std::make_unique<detail::StopOfferedState>(),
+   24 |               std::make_unique<detail::ReOfferedState>()}
+   25 | {
+   26 | }
+   27 | 
+   28 | void OfferedStateMachine::Offer()
+   29 | {
+   30 |     current_state_ = states_.at(static_cast<std::uint8_t>(current_state_))->Offer();
+      |                                                  ^
+Suppressed 3382 warnings (3378 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

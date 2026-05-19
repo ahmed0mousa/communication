@@ -1,3 +1,53 @@
-5285 warnings generated.
-Suppressed 5352 warnings (5279 in non-user code, 67 NOLINT, 6 with check filters).
+10481 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4775/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/json_parsing_convenience_wrappers.cpp:24:18: warning: no header providing "score::json::JsonParser" is directly included [misc-include-cleaner]
+   15 | 
+   16 | #include <optional>
+   17 | #include <string_view>
+   18 | #include <utility>
+   19 | namespace score::mw::com::test
+   20 | {
+   21 | 
+   22 | score::json::Object parse_json_from_file(std::string_view path)
+   23 | {
+   24 |     score::json::JsonParser json_parser;
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4775/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/json_parsing_convenience_wrappers.cpp:29:25: warning: no header providing "score::mw::log::LogError" is directly included [misc-include-cleaner]
+   15 | 
+   16 | #include <optional>
+   17 | #include <string_view>
+   18 | #include <utility>
+   19 | namespace score::mw::com::test
+   20 | {
+   21 | 
+   22 | score::json::Object parse_json_from_file(std::string_view path)
+   23 | {
+   24 |     score::json::JsonParser json_parser;
+   25 | 
+   26 |     auto json_res = json_parser.FromFile(path);
+   27 |     if (!json_res.has_value())
+   28 |     {
+   29 |         score::mw::log::LogError(kJsonParserLogContext) << "Can not create a json from: " << path;
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4775/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/json_parsing_convenience_wrappers.cpp:31:14: warning: no header providing "std::exit" is directly included [misc-include-cleaner]
+   16 | #include <optional>
+   17 | #include <string_view>
+   18 | #include <utility>
+   19 | namespace score::mw::com::test
+   20 | {
+   21 | 
+   22 | score::json::Object parse_json_from_file(std::string_view path)
+   23 | {
+   24 |     score::json::JsonParser json_parser;
+   25 | 
+   26 |     auto json_res = json_parser.FromFile(path);
+   27 |     if (!json_res.has_value())
+   28 |     {
+   29 |         score::mw::log::LogError(kJsonParserLogContext) << "Can not create a json from: " << path;
+   30 |         score::mw::log::LogError(kJsonParserLogContext) << json_res.error();
+   31 |         std::exit(EXIT_FAILURE);
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4775/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/json_parsing_convenience_wrappers.cpp:31:19: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   31 |         std::exit(EXIT_FAILURE);
+      |                   ^
+Suppressed 10545 warnings (10471 in non-user code, 68 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,3 +1,6 @@
-8762 warnings generated.
-Suppressed 8925 warnings (8754 in non-user code, 163 NOLINT, 8 with check filters).
+19879 warnings generated.
+./score/mw/com/performance_benchmarks/macro_benchmark/lola_interface.h:31:35: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   31 | using DataType = std::array<byte, 5 * MB>;
+      |                                   ^
+Suppressed 20042 warnings (19870 in non-user code, 164 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

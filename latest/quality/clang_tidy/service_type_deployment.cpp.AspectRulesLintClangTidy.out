@@ -1,3 +1,132 @@
-5915 warnings generated.
-Suppressed 5994 warnings (5909 in non-user code, 79 NOLINT, 6 with check filters).
+11515 warnings generated.
+./score/mw/com/impl/configuration/binding_service_type_deployment.h:43:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/binding_service_type_deployment.h:44:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/binding_service_type_deployment_impl.h:51:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+   51 |     for (auto it : input_map)
+      |               ^
+      |          const  &
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/service_type_deployment.h:39:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_type_deployment.h:40:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:17:1: warning: included header json_parser.h is not used directly [misc-include-cleaner]
+   17 | #include "score/json/json_parser.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:20:1: warning: included header limits is not used directly [misc-include-cleaner]
+   20 | #include <limits>
+      | ^~~~~~~~~~~~~~~~~
+   21 | #include <sstream>
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:30:85: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/configuration_common_resources.h"
+   16 | 
+   17 | #include "score/json/json_parser.h"
+   18 | 
+   19 | #include <score/overload.hpp>
+   20 | #include <limits>
+   21 | #include <sstream>
+   22 | 
+   23 | namespace score::mw::com::impl
+   24 | {
+   25 | 
+   26 | namespace
+   27 | {
+   28 | 
+   29 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, function is in anonymous namespace
+   30 | ServiceTypeDeployment::BindingInformation GetBindingInfoFromJson(const score::json::Object& json_object) noexcept
+      |                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:32:54: warning: no header providing "std::ptrdiff_t" is directly included [misc-include-cleaner]
+   19 | #include <score/overload.hpp>
+   20 | #include <limits>
+   21 | #include <sstream>
+   22 | 
+   23 | namespace score::mw::com::impl
+   24 | {
+   25 | 
+   26 | namespace
+   27 | {
+   28 | 
+   29 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, function is in anonymous namespace
+   30 | ServiceTypeDeployment::BindingInformation GetBindingInfoFromJson(const score::json::Object& json_object) noexcept
+   31 | {
+   32 |     const auto variant_index = GetValueFromJson<std::ptrdiff_t>(json_object, kBindingInfoIndexKey);
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:53:6: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   22 | std::string ToHashStringImpl(const ServiceTypeDeployment::BindingInformation& binding_info) noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:57:24: warning: no header providing "std::variant_size" is directly included [misc-include-cleaner]
+   22 |     static_assert(std::variant_size<ServiceTypeDeployment::BindingInformation>::value <= 0xFU,
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:57:90: warning: 0xFU is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   57 |     static_assert(std::variant_size<ServiceTypeDeployment::BindingInformation>::value <= 0xFU,
+      |                                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:68:41: warning: no header providing "std::hex" is directly included [misc-include-cleaner]
+   19 |     binding_index_string_stream << std::hex << binding_info_index;
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:71:18: warning: no header providing "score::mw::com::impl::LolaServiceTypeDeployment" is directly included [misc-include-cleaner]
+   18 |         [](const LolaServiceTypeDeployment& service_type_deployment) noexcept -> std::string_view {
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:76:30: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   19 |         [](const score::cpp::blank&) noexcept -> std::string_view {
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:79:72: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+   79 |     const auto binding_service_type_deployment_hash_string_view = std::visit(visitor, binding_info);
+      |                                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:92:71: warning: the const qualified parameter 'binding' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   92 | ServiceTypeDeployment::ServiceTypeDeployment(const BindingInformation binding) noexcept
+      |                                                                       ^
+      |                                                                      &
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:104:62: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   19 |     const auto serialization_version = GetValueFromJson<std::uint32_t>(json_object, kSerializationVersionKey);
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:107:14: warning: no header providing "std::terminate" is directly included [misc-include-cleaner]
+   19 |         std::terminate();
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1439/execroot/_main/score/mw/com/impl/configuration/service_type_deployment.cpp:129:10: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+  129 |     std::visit(visitor, binding_info_);
+      |          ^
+Suppressed 11568 warnings (11482 in non-user code, 80 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

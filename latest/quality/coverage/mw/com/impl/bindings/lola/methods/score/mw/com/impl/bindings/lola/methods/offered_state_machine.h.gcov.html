@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">25.0&nbsp;%</td>
             <td class="headerCovTableEntry">4</td>
-            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">1</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">1</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -130,9 +130,9 @@
 <span id="L52"><span class="lineNum">      52</span>                 :             :     void StopOffer();</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             : </span>
 <span id="L54"><span class="lineNum">      54</span>                 :             :     State GetCurrentState() const</span>
-<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaGNC tlaBgGNC">          31 :     {</span></span>
-<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaGNC">          31 :         return current_state_;</span></span>
-<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaGNC">          31 :     }</span></span>
+<span id="L55"><span class="lineNum">      55</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
+<span id="L56"><span class="lineNum">      56</span>                 :<span class="tlaUNC">           0 :         return current_state_;</span></span>
+<span id="L57"><span class="lineNum">      57</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L58"><span class="lineNum">      58</span>                 :             : </span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :   private:</span>
 <span id="L60"><span class="lineNum">      60</span>                 :             :     State current_state_;</span>
@@ -150,7 +150,7 @@
 <span id="L72"><span class="lineNum">      72</span>                 :             : class IOfferedState</span>
 <span id="L73"><span class="lineNum">      73</span>                 :             : {</span>
 <span id="L74"><span class="lineNum">      74</span>                 :             :   public:</span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         621 :     virtual ~IOfferedState() = default;</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC tlaBgGNC">           3 :     virtual ~IOfferedState() = default;</span></span>
 <span id="L76"><span class="lineNum">      76</span>                 :             :     virtual OfferedStateMachine::State Offer() = 0;</span>
 <span id="L77"><span class="lineNum">      77</span>                 :             :     virtual OfferedStateMachine::State StopOffer() = 0;</span>
 <span id="L78"><span class="lineNum">      78</span>                 :             : };</span>

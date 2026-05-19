@@ -1,3 +1,160 @@
-6583 warnings generated.
-Suppressed 6708 warnings (6575 in non-user code, 125 NOLINT, 8 with check filters).
+14961 warnings generated.
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:42:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:46:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:50:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:54:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:31:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:35:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:39:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:43:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:65:5: warning: function 'GetTraceClientId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     virtual analysis::tracing::TraceClientId GetTraceClientId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:73:5: warning: function 'GetDataLossFlag' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   73 |     virtual bool GetDataLossFlag() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:87:5: warning: function 'GetShmObjectHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     virtual std::optional<analysis::tracing::ShmObjectHandle> GetShmObjectHandle(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:90:5: warning: function 'GetShmRegionStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     virtual std::optional<void*> GetShmRegionStartAddress(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:98:5: warning: function 'GetCachedFileDescriptorForReregisteringShmObject' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     virtual std::optional<std::pair<memory::shared::ISharedMemoryResource::FileDescriptor, void*>>
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:105:5: warning: function 'ConvertToTracingServiceInstanceElement' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     virtual analysis::tracing::ServiceInstanceElement ConvertToTracingServiceInstanceElement(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_tracing_runtime.h:80:5: warning: function 'GetBindingTracingRuntime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     virtual IBindingTracingRuntime& GetBindingTracingRuntime(const BindingType binding_type) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/proxy_event_tracing.h:58:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   58 | score::cpp::callback<void(void), 128U> CreateTracingReceiveHandler(
+      |                                  ^
+./score/mw/com/impl/tracing/proxy_event_tracing.h:91:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   91 |     else
+      |     ^~~~
+   92 |     {
+      |     ~
+   93 |         typename ProxyEventBinding<SampleType>::Callback tracing_receiver =
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   94 |             // Suppress "AUTOSAR C++14 A18-9-2", The rule states: "Forwarding values to other functions shall be done
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   95 |             // via: (1) std::move if the value is an rvalue reference, (2) std::forward if the value is forwarding
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   96 |             // reference. std::forward is already used here.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   97 |             // coverity[autosar_cpp14_a18_9_2_violation : FALSE]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   98 |             [receiver = std::forward<ReceiverType>(receiver)](SamplePtr<SampleType> sample_ptr,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   99 |                                                               ITracingRuntime::TracePointDataId) noexcept {
+      |                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  100 |                 // Suppress "AUTOSAR C++14 A18-9-2", The rule states: "Forwarding values to other functions shall be
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  101 |                 // done via: (1) std::move if the value is an rvalue reference, (2) std::forward if the value is
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  102 |                 // forwarding reference. std::move is already used here.
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  103 |                 // coverity[autosar_cpp14_a18_9_2_violation : FALSE]
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  104 |                 receiver(std::move(sample_ptr));
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  105 |             };
+      |             ~~
+  106 |         return tracing_receiver;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~
+./score/mw/com/impl/tracing/trace_error.h:34:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/type_erased_sample_ptr.h:33:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   33 |     score::cpp::callback<void(), 128U> type_erased_sample_ptr_;
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:35:39: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   28 | 
+   29 | namespace score::mw::com::impl::tracing
+   30 | {
+   31 | 
+   32 | namespace
+   33 | {
+   34 | 
+   35 | void UpdateTracingDataFromTraceResult(Result<void> trace_result,
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:63:71: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   19 | ProxyEventTracingData GenerateProxyTracingStructFromEventConfig(const InstanceIdentifier& instance_identifier,
+      |                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:71:86: warning: no header providing "score::mw::com::impl::ServiceElementType" is directly included [misc-include-cleaner]
+   20 |             GetServiceElementInstanceIdentifierView(instance_identifier, event_name, ServiceElementType::EVENT);
+      |                                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:168:27: warning: no header providing "score::mw::com::impl::ProxyEventBindingBase" is directly included [misc-include-cleaner]
+   19 |                     const ProxyEventBindingBase& proxy_event_binding_base,
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:169:32: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   28 |                     const std::size_t max_sample_count) noexcept
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:178:9: warning: no header providing "score::mw::com::impl::tracing::TracingRuntime" is directly included [misc-include-cleaner]
+   27 |         TracingRuntime::TracePointType trace_point{};
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:192:13: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   28 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(false, "Service element type must be EVENT or FIELD");
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:345:37: warning: no header providing "score::mw::com::impl::tracing::ITracingRuntime" is directly included [misc-include-cleaner]
+   24 |                                     ITracingRuntime::TracePointDataId trace_point_data_id) noexcept
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:417:13: warning: no header providing "score::cpp::callback" is directly included [misc-include-cleaner]
+   28 | score::cpp::callback<void(void), 128U> CreateTracingReceiveHandler(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:417:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  417 | score::cpp::callback<void(void), 128U> CreateTracingReceiveHandler(
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:420:5: warning: no header providing "score::mw::com::impl::EventReceiveHandler" is directly included [misc-include-cleaner]
+   19 |     EventReceiveHandler handler) noexcept
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:424:42: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  424 |         score::cpp::callback<void(void), 128U> tracing_receive_handler =
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4004/execroot/_main/score/mw/com/impl/tracing/proxy_event_tracing.cpp:425:83: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   28 |             [&proxy_event_tracing_data, &proxy_event_binding_base, handler = std::move(handler)]() noexcept {
+      |                                                                                   ^
+Suppressed 15053 warnings (14919 in non-user code, 126 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

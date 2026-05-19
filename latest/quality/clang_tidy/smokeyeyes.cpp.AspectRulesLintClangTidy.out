@@ -1,33 +1,201 @@
-14317 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:128:8: warning: class 'SharedState' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+28720 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:20:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   20 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:41:7: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   23 | const uid_t kUidStart{1300};
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:54:30: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   22 |     explicit Data(const std::uint32_t start_counter)
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:76:5: warning: function 'CheckHash' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool CheckHash() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:82:5: warning: function 'GetSequenceCounter' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   82 |     std::uint32_t GetSequenceCounter() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:103:5: warning: function 'GenerateHash' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     std::size_t GenerateHash() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:106:16: warning: no header providing "boost::hash_combine" is directly included [misc-include-cleaner]
+   18 |         boost::hash_combine(hash, sequence_counter_);
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:125:22: warning: no header providing "score::mw::com::AsSkeleton" is directly included [misc-include-cleaner]
+   17 | using DataSkeleton = AsSkeleton<DataInterface>;
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:126:19: warning: no header providing "score::mw::com::AsProxy" is directly included [misc-include-cleaner]
+  126 | using DataProxy = AsProxy<DataInterface>;
+      |                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:128:8: warning: class 'SharedState' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   128 | struct SharedState
       |        ^
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:388:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:132:9: warning: no header providing "pthread_barrierattr_t" is directly included [misc-include-cleaner]
+   18 |         pthread_barrierattr_t barrier_attr{};
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:145:5: warning: no header providing "pthread_barrier_t" is directly included [misc-include-cleaner]
+  145 |     pthread_barrier_t barrier_{};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:159:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+  159 |         score::mw::com::InstanceSpecifier::Create(std::string{"smokeyeyes/small_but_great"});
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:178:17: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  178 |         return -5;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:190:18: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   24 |             std::ignore = sender.struct_event_.Send(data);
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:195:38: warning: no header providing "std::chrono_literals::operator""s" is directly included [misc-include-cleaner]
+   18 |         if (now - time_last_stats > 1s)
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:197:79: warning: 16 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  197 |             std::cout << "\rSent samples: " << std::setfill(' ') << std::setw(16) << turn * batch_size << std::flush;
+      |                                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:213:39: warning: 1000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  213 |               << turns * batch_size * 1000 / static_cast<std::size_t>(elapsed_ms) << " msg/s)\n";
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:224:49: warning: no header providing "std::operator""ms" is directly included [misc-include-cleaner]
+  224 |     constexpr auto FIND_SERVICE_POLL_INTERVAL{20ms};
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:227:5: warning: no header providing "score::mw::com::ServiceHandleContainer" is directly included [misc-include-cleaner]
+  227 |     ServiceHandleContainer<DataProxy::HandleType> handles{};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:245:91: warning: the parameter 'found_handles' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  245 |             [moved_service_discovery_promise = std::move(service_discovery_promise)](auto found_handles,
+      |                                                                                           ^
+      |                                                                                      const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:248:29: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   23 |                 score::cpp::ignore = DataProxy::StopFindService(handle);
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:280:17: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  280 |         return -5;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:284:42: warning: 100U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  284 |     for (std::size_t retry = 0U; retry < 100U; ++retry)
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:286:62: warning: no header providing "score::mw::com::SubscriptionState" is directly included [misc-include-cleaner]
+  286 |         if (receiver.struct_event_.GetSubscriptionState() != SubscriptionState::kSubscribed)
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:288:41: warning: 10ms is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  288 |             std::this_thread::sleep_for(10ms);
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:292:51: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  292 |             out << "Subscribed after " << retry * 10 << "ms\n";
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:300:17: warning: 7 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  300 |         return -7;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:316:21: warning: no header providing "score::mw::com::SamplePtr" is directly included [misc-include-cleaner]
+  316 |                 [&](SamplePtr<Data> sample) noexcept {
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:334:27: warning: 6 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  334 |                 result = -6;
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:337:13: warning: do not use 'else' after 'break' [readability-else-after-return]
+  337 |             else
+      |             ^~~~
+  338 |             {
+      |             ~
+  339 |                 samples_received_in_batch += *num_samples_received;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  340 |             }
+      |             ~
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:357:26: warning: no header providing "std::terminate" is directly included [misc-include-cleaner]
+   22 |                     std::terminate();
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:375:19: warning: 8 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  375 |         result = -8;
+      |                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:388:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   388 |     using namespace score;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:390:17: warning: variable 'num_clients' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:390:17: warning: variable 'num_clients' is not initialized [cppcoreguidelines-init-variables]
   390 |     std::size_t num_clients;
       |                 ^          
       |                             = 0
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:391:17: warning: variable 'turns' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:391:17: warning: variable 'turns' is not initialized [cppcoreguidelines-init-variables]
   391 |     std::size_t turns;
       |                 ^    
       |                       = 0
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:392:17: warning: variable 'batch_size' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:392:17: warning: variable 'batch_size' is not initialized [cppcoreguidelines-init-variables]
   392 |     std::size_t batch_size;
       |                 ^         
       |                            = 0
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:393:10: warning: variable 'no_wait' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:393:10: warning: variable 'no_wait' is not initialized [cppcoreguidelines-init-variables]
   393 |     bool no_wait;
       |          ^      
       |                  = false
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:394:17: warning: variable 'num_slots' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:394:17: warning: variable 'num_slots' is not initialized [cppcoreguidelines-init-variables]
   394 |     std::size_t num_slots;
       |                 ^        
       |                           = 0
-/home/runner/.bazel/sandbox/linux-sandbox/4526/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:490:17: warning: variable 'wstatus' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:396:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   22 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:400:43: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   22 |         ("service_instance_manifest", po::value<std::string>(), "Path to the com configuration file")
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:401:29: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+  401 |         ("num-clients", po::value<std::size_t>(&num_clients)->default_value(1U), "Number of clients that will be spawned during a test run")
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:402:65: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  402 |         ("turns", po::value<std::size_t>(&turns)->default_value(10U), "Number of sample batches to send before terminating")
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:404:25: warning: no header providing "boost::program_options::bool_switch" is directly included [misc-include-cleaner]
+  404 |         ("no-wait", po::bool_switch(&no_wait), "If set, do not wait for receivers after having sent a batch")
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:408:9: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   22 |     po::variables_map args;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:412:44: warning: no header providing "boost::program_options::command_line_style::unix_style" is directly included [misc-include-cleaner]
+   22 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:412:81: warning: no header providing "boost::program_options::command_line_style::allow_long_disguise" is directly included [misc-include-cleaner]
+  412 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:414:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+  414 |     po::store(parsed_args, args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:422:9: warning: no header providing "boost::program_options::notify" is directly included [misc-include-cleaner]
+  422 |     po::notify(args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:424:10: warning: no header providing "boost::interprocess::mapped_region" is directly included [misc-include-cleaner]
+   20 |     ipc::mapped_region shared_state_mem{ipc::anonymous_shared_memory(sizeof(mw::com::test::SharedState))};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:428:86: warning: '*' has higher precedence than '-'; add parentheses to explicitly specify the order of operations [readability-math-missing-parentheses]
+  428 |         new (shared_state_mem.get_address()) mw::com::test::SharedState{num_clients, turns * batch_size - 1};
+      |                                                                                      ^~~~~~~~~~~~~~~~~~
+      |                                                                                      (                 )
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:430:17: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+  430 |     std::vector<pid_t> children{};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:440:65: warning: no header providing "strerror" is directly included [misc-include-cleaner]
+   22 |                 std::cerr << "Error forking child process: " << strerror(errno) << ", terminating.";
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:440:74: warning: no header providing "errno" is directly included [misc-include-cleaner]
+   22 |                 std::cerr << "Error forking child process: " << strerror(errno) << ", terminating.";
+      |                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:465:14: warning: no header providing "std::reference_wrapper" is directly included [misc-include-cleaner]
+   22 |         std::reference_wrapper<std::ostream> out{std::cout};
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:469:18: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   23 |             std::stringstream ss{};
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:477:52: warning: no header providing "std::strerror" is directly included [misc-include-cleaner]
+  477 |             out.get() << "set uid fails: " << std::strerror(errno) << "\n";
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:490:17: warning: variable 'wstatus' is not initialized [cppcoreguidelines-init-variables]
   490 |             int wstatus;
       |                 ^      
       |                         = 0
-Suppressed 14499 warnings (14299 in non-user code, 190 NOLINT, 10 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:492:17: warning: no header providing "WIFEXITED" is directly included [misc-include-cleaner]
+   23 |             if (WIFEXITED(wstatus))
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4851/execroot/_main/score/mw/com/test/smokeyeyes/smokeyeyes.cpp:494:43: warning: no header providing "WEXITSTATUS" is directly included [misc-include-cleaner]
+  494 |                 const auto child_status = WEXITSTATUS(wstatus);
+      |                                           ^
+Suppressed 28851 warnings (28650 in non-user code, 191 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

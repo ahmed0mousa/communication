@@ -1,11 +1,117 @@
-11201 warnings generated.
+29029 warnings generated.
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:358:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
   358 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:363:5: warning: function 'GetServiceDataControl' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  363 |     ServiceDataControl* GetServiceDataControl(const QualityType quality_type) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:376:5: warning: function 'GetEventMetaInfo' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  376 |     score::cpp::optional<EventMetaInfo> GetEventMetaInfo(const ElementFqId element_fq_id) const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:383:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  383 |         else
+      |         ^~~~
+  384 |         {
+      |         ~
+  385 |             return search->second;
+      |             ~~~~~~~~~~~~~~~~~~~~~~
+  386 |         }
+      |         ~
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:396:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
   396 |     SkeletonAttorney(Skeleton& skeleton) noexcept : skeleton_{skeleton} {}
       |     ^
       |     explicit 
-Suppressed 11408 warnings (11191 in non-user code, 209 NOLINT, 8 with check filters).
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:398:5: warning: function 'GetServiceDataControl' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  398 |     ServiceDataControl* GetServiceDataControl(const QualityType quality_type) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:403:5: warning: function 'GetEventMetaInfo' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  403 |     score::cpp::optional<EventMetaInfo> GetEventMetaInfo(const ElementFqId element_fq_id) const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:459:13: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  459 |             10U, *data_shared_memory_resource_mock_);
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:23:18: warning: no header providing "testing::_" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | 
+   20 | namespace
+   21 | {
+   22 | 
+   23 | using ::testing::_;
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:30:48: warning: no header providing "score::mw::com::impl::lola::SkeletonMockedMemoryFixture" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | 
+   20 | namespace
+   21 | {
+   22 | 
+   23 | using ::testing::_;
+   24 | using ::testing::Invoke;
+   25 | using ::testing::Return;
+   26 | using ::testing::ReturnRef;
+   27 | 
+   28 | }  // namespace
+   29 | 
+   30 | SkeletonEventFixture::SkeletonEventFixture() : SkeletonMockedMemoryFixture{}
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:32:5: warning: no header providing "ON_CALL" is directly included [misc-include-cleaner]
+   32 |     ON_CALL(runtime_mock_, GetServiceDiscovery()).WillByDefault(ReturnRef(service_discovery_mock_));
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:35:58: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   15 | void SkeletonEventFixture::InitialiseSkeletonEvent(const ElementFqId element_fq_id,
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:36:63: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   16 |                                                    const std::string& service_element_name,
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:37:63: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   16 |                                                    const std::size_t max_samples,
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:38:63: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   16 |                                                    const std::uint8_t max_subscribers,
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:40:67: warning: no header providing "score::mw::com::impl::tracing::SkeletonEventTracingData" is directly included [misc-include-cleaner]
+   16 |                                                    impl::tracing::SkeletonEventTracingData skeleton_event_tracing_data)
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:46:5: warning: no header providing "score::mw::com::impl::SkeletonBinding" is directly included [misc-include-cleaner]
+   16 |     SkeletonBinding::SkeletonEventBindings events{};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:48:10: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   16 |     std::optional<SkeletonBinding::RegisterShmObjectTraceCallback> register_shm_object_trace_callback{};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:49:10: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   16 |     std::ignore = skeleton_->PrepareOffer(events, fields, std::move(register_shm_object_trace_callback));
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:49:64: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   16 |     std::ignore = skeleton_->PrepareOffer(events, fields, std::move(register_shm_object_trace_callback));
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:51:28: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   16 |     skeleton_event_ = std::make_unique<SkeletonEvent<test::TestSampleType>>(
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:51:40: warning: no header providing "score::mw::com::impl::lola::SkeletonEvent" is directly included [misc-include-cleaner]
+   15 |     skeleton_event_ = std::make_unique<SkeletonEvent<test::TestSampleType>>(
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:51:60: warning: no header providing "score::mw::com::impl::lola::test::TestSampleType" is directly included [misc-include-cleaner]
+   51 |     skeleton_event_ = std::make_unique<SkeletonEvent<test::TestSampleType>>(
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:59:1: warning: no header providing "score::mw::com::impl::lola::EventControl" is directly included [misc-include-cleaner]
+   15 | EventControl* SkeletonEventFixture::GetEventControl(const ElementFqId element_fq_id,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:60:59: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   16 |                                                     const QualityType quality_type) const noexcept
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:75:1: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   16 | InstanceIdentifier SkeletonEventFixture::GetValidInstanceIdentifier()
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4440/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_event_test_resources.cpp:77:12: warning: no header providing "score::mw::com::impl::make_InstanceIdentifier" is directly included [misc-include-cleaner]
+   77 |     return make_InstanceIdentifier(valid_asil_instance_deployment_, valid_type_deployment_);
+      |            ^
+Suppressed 29455 warnings (28994 in non-user code, 453 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

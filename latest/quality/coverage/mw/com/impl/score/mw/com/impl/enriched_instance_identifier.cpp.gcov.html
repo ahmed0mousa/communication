@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -56,9 +56,9 @@
 </td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">50.0&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">3</td>
           </tr>
                   <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -94,11 +94,11 @@
 <span id="L16"><span class="lineNum">      16</span>                 :             : {</span>
 <span id="L17"><span class="lineNum">      17</span>                 :             : </span>
 <span id="L18"><span class="lineNum">      18</span>                 :             : bool operator==(const EnrichedInstanceIdentifier&amp; lhs, const EnrichedInstanceIdentifier&amp; rhs) noexcept</span>
-<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC tlaBgGNC">         237 : {</span></span>
-<span id="L20"><span class="lineNum">      20</span>         [<span class="tlaGBC" title="Branch 0 was taken 219 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 18 times"> + </span>]:<span class="tlaGNC">         237 :     return (((lhs.GetInstanceIdentifier() == rhs.GetInstanceIdentifier()) &amp;&amp;</span></span>
-<span id="L21"><span class="lineNum">      21</span>         [<span class="tlaGBC" title="Branch 0 was taken 218 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">         237 :              ((lhs.GetInstanceId() == rhs.GetInstanceId()))) &amp;&amp;</span></span>
-<span id="L22"><span class="lineNum">      22</span>         [<span class="tlaGBC" title="Branch 0 was taken 217 times"> + </span><span class="tlaGBC" title="Branch 1 was taken 1 time"> + </span>]:<span class="tlaGNC">         237 :             (lhs.GetQualityType() == rhs.GetQualityType()));</span></span>
-<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">         237 : }</span></span>
+<span id="L19"><span class="lineNum">      19</span>                 :<span class="tlaGNC tlaBgGNC">           2 : {</span></span>
+<span id="L20"><span class="lineNum">      20</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">           2 :     return (((lhs.GetInstanceIdentifier() == rhs.GetInstanceIdentifier()) &amp;&amp;</span></span>
+<span id="L21"><span class="lineNum">      21</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">           2 :              ((lhs.GetInstanceId() == rhs.GetInstanceId()))) &amp;&amp;</span></span>
+<span id="L22"><span class="lineNum">      22</span>         [<span class="tlaGBC" title="Branch 0 was taken 2 times"> + </span><span class="tlaUNC" title="Branch 1 was not taken"> - </span>]:<span class="tlaGNC">           2 :             (lhs.GetQualityType() == rhs.GetQualityType()));</span></span>
+<span id="L23"><span class="lineNum">      23</span>                 :<span class="tlaGNC">           2 : }</span></span>
 <span id="L24"><span class="lineNum">      24</span>                 :             : </span>
 <span id="L25"><span class="lineNum">      25</span>                 :             : }  // namespace score::mw::com::impl</span>
         </pre>

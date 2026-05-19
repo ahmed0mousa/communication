@@ -1,3 +1,20 @@
-5175 warnings generated.
-Suppressed 5223 warnings (5172 in non-user code, 48 NOLINT, 3 with check filters).
+9443 warnings generated.
+./score/mw/com/impl/bindings/lola/service_discovery/test/file_system_guard.h:26:66: warning: pass by value and use std::move [modernize-pass-by-value]
+   16 | #include "score/filesystem/filesystem_struct.h"
+   17 | #include "score/filesystem/path.h"
+   18 | 
+   19 | namespace score::mw::com::impl::lola::test
+   20 | {
+   21 | 
+   22 | /// \brief RAII wrapper around a Filesytem which removes the provided path on destruction
+   23 | class FileSystemGuard
+   24 | {
+   25 |   public:
+   26 |     explicit FileSystemGuard(filesystem::Filesystem& filesystem, const filesystem::Path& path_to_remove) noexcept
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                  filesystem::Path 
+   27 |         : filesystem_{filesystem}, path_to_remove_{path_to_remove}
+      |                                                                  
+      |                                                    std::move(    )
+Suppressed 9491 warnings (9439 in non-user code, 49 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

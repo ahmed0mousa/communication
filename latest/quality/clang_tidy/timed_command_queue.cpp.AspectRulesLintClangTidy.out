@@ -1,3 +1,64 @@
-4144 warnings generated.
-Suppressed 4154 warnings (4141 in non-user code, 10 NOLINT, 3 with check filters).
+7733 warnings generated.
+./score/message_passing/timed_command_queue.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+./score/message_passing/timed_command_queue_entry.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+/home/runner/.bazel/sandbox/linux-sandbox/985/execroot/_main/score/message_passing/timed_command_queue.cpp:17:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   17 | namespace score
+      | ^~~~~~~~~~~~~~~
+   18 | {
+      | ~
+   19 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | {
+      | ~
+   21 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+/home/runner/.bazel/sandbox/linux-sandbox/985/execroot/_main/score/message_passing/timed_command_queue.cpp:26:49: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score
+   18 | {
+   19 | namespace message_passing
+   20 | {
+   21 | namespace detail
+   22 | {
+   23 | 
+   24 | void TimedCommandQueue::RegisterImmediateEntry(Entry& entry, QueuedCallback callback, const void* const owner) noexcept
+   25 | {
+   26 |     RegisterTimedEntry(entry, TimePoint{}, std::move(callback), owner);
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/985/execroot/_main/score/message_passing/timed_command_queue.cpp:38:10: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   15 |     std::lock_guard<std::mutex> guard(mutex_);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/985/execroot/_main/score/message_passing/timed_command_queue.cpp:38:26: warning: no header providing "std::mutex" is directly included [misc-include-cleaner]
+   38 |     std::lock_guard<std::mutex> guard(mutex_);
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/985/execroot/_main/score/message_passing/timed_command_queue.cpp:39:45: warning: no header providing "std::find_if" is directly included [misc-include-cleaner]
+   15 |     score::cpp::ignore = queue_.insert(std::find_if(queue_.begin(),
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/985/execroot/_main/score/message_passing/timed_command_queue.cpp:49:10: warning: no header providing "std::unique_lock" is directly included [misc-include-cleaner]
+   49 |     std::unique_lock<std::mutex> lock(mutex_);
+      |          ^
+Suppressed 7736 warnings (7722 in non-user code, 11 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

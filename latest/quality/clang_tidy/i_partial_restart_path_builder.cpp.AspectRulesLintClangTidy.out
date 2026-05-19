@@ -1,3 +1,15 @@
-4782 warnings generated.
-Suppressed 4821 warnings (4776 in non-user code, 39 NOLINT, 6 with check filters).
+9440 warnings generated.
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:32:5: warning: function 'GetServiceInstanceExistenceMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     virtual std::string GetServiceInstanceExistenceMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:36:5: warning: function 'GetServiceInstanceUsageMarkerFilePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     virtual std::string GetServiceInstanceUsageMarkerFilePath(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_partial_restart_path_builder.h:40:5: warning: function 'GetLolaPartialRestartDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual std::string GetLolaPartialRestartDirectoryPath() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 9477 warnings (9431 in non-user code, 40 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

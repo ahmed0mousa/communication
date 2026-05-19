@@ -1,11 +1,93 @@
-5093 warnings generated.
+9977 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/slot_collector.h:62:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     std::size_t GetNumNewSamplesAvailable() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5147 warnings (5088 in non-user code, 56 NOLINT, 3 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1219/execroot/_main/score/mw/com/impl/bindings/lola/slot_collector.cpp:22:30: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   14 | 
+   15 | #include <score/assert.hpp>
+   16 | 
+   17 | #include <iterator>
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | SlotCollector::SlotCollector(ConsumerEventDataControlLocalView<>& event_data_control_local,
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1219/execroot/_main/score/mw/com/impl/bindings/lola/slot_collector.cpp:23:41: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   15 | #include <score/assert.hpp>
+   16 | 
+   17 | #include <iterator>
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | SlotCollector::SlotCollector(ConsumerEventDataControlLocalView<>& event_data_control_local,
+   23 |                              const std::size_t max_slots) noexcept
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1219/execroot/_main/score/mw/com/impl/bindings/lola/slot_collector.cpp:40:5: warning: no header providing "score::mw::com::impl::lola::EventSlotStatus" is directly included [misc-include-cleaner]
+   14 |     EventSlotStatus::EventTimeStamp newest_delivered{last_ts_};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1219/execroot/_main/score/mw/com/impl/bindings/lola/slot_collector.cpp:47:33: warning: no header providing "std::max" is directly included [misc-include-cleaner]
+   15 |         newest_delivered = std::max(newest_delivered, slot_status.GetTimeStamp());
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1219/execroot/_main/score/mw/com/impl/bindings/lola/slot_collector.cpp:64:20: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   15 |         const std::optional<SlotIndexType> slot =
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1219/execroot/_main/score/mw/com/impl/bindings/lola/slot_collector.cpp:64:29: warning: no header providing "score::mw::com::impl::lola::SlotIndexType" is directly included [misc-include-cleaner]
+   14 |         const std::optional<SlotIndexType> slot =
+      |                             ^
+Suppressed 10012 warnings (9952 in non-user code, 57 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

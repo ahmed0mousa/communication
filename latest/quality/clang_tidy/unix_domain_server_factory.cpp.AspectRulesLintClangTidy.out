@@ -1,4 +1,12 @@
-4864 warnings generated.
+9390 warnings generated.
+./score/message_passing/unix_domain/unix_domain_engine.h:34:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   34 | namespace score
+      | ^~~~~~~~~~~~~~~
+   35 | {
+      | ~
+   36 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
 ./score/message_passing/unix_domain/unix_domain_engine.h:47:7: warning: class 'UnixDomainEngine' defines a destructor, a copy constructor and a copy assignment operator but does not define a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    47 | class UnixDomainEngine final : public ISharedResourceEngine
       |       ^
@@ -9,15 +17,104 @@
 ./score/message_passing/unix_domain/unix_domain_engine.h:96:10: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    96 |     void EnqueueCommand(CommandQueueEntry& entry,
       |          ^
+./score/message_passing/unix_domain/unix_domain_engine.h:112:5: warning: function 'IsOnCallbackThread' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  112 |     bool IsOnCallbackThread() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/unix_domain/unix_domain_server.h:26:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   26 | namespace score
+      | ^~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   29 | {
+      | ~
+   30 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+./score/message_passing/unix_domain/unix_domain_server.h:42:9: warning: function 'GetClientIdentity' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |         const ClientIdentity& GetClientIdentity() const noexcept override;
+      |         ^
+      |         [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_server.h:71:50: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    71 |     score::cpp::expected_blank<score::os::Error> StartListening(
       |                                                  ^
+./score/message_passing/unix_domain/unix_domain_server_factory.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
 ./score/message_passing/unix_domain/unix_domain_server_factory.h:25:7: warning: class 'UnixDomainServerFactory' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    25 | class UnixDomainServerFactory final : public IServerFactory
       |       ^
-/home/runner/.bazel/sandbox/linux-sandbox/1853/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+./score/message_passing/unix_domain/unix_domain_server_factory.h:36:5: warning: function 'GetEngine' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     std::shared_ptr<UnixDomainEngine> GetEngine() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:23:67: warning: no header providing "score::cpp::pmr::memory_resource" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score
+   19 | {
+   20 | namespace message_passing
+   21 | {
+   22 | 
+   23 | UnixDomainServerFactory::UnixDomainServerFactory(score::cpp::pmr::memory_resource* const resource) noexcept
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:24:48: warning: no header providing "score::cpp::pmr::make_shared" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score
+   19 | {
+   20 | namespace message_passing
+   21 | {
+   22 | 
+   23 | UnixDomainServerFactory::UnixDomainServerFactory(score::cpp::pmr::memory_resource* const resource) noexcept
+   24 |     : UnixDomainServerFactory{score::cpp::pmr::make_shared<UnixDomainEngine>(resource, resource)}
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:28:61: warning: no header providing "std::shared_ptr" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score
+   19 | {
+   20 | namespace message_passing
+   21 | {
+   22 | 
+   23 | UnixDomainServerFactory::UnixDomainServerFactory(score::cpp::pmr::memory_resource* const resource) noexcept
+   24 |     : UnixDomainServerFactory{score::cpp::pmr::make_shared<UnixDomainEngine>(resource, resource)}
+   25 | {
+   26 | }
+   27 | 
+   28 | UnixDomainServerFactory::UnixDomainServerFactory(const std::shared_ptr<UnixDomainEngine> engine) noexcept
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:28:90: warning: the const qualified parameter 'engine' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   28 | UnixDomainServerFactory::UnixDomainServerFactory(const std::shared_ptr<UnixDomainEngine> engine) noexcept
+      |                                                                                          ^
+      |                                                                                         &
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:33:26: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
    33 | UnixDomainServerFactory::~UnixDomainServerFactory() noexcept {}
       |                          ^                                   ~~
       |                                                              = default;
-Suppressed 4890 warnings (4855 in non-user code, 32 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:35:18: warning: no header providing "score::cpp::pmr::unique_ptr" is directly included [misc-include-cleaner]
+   35 | score::cpp::pmr::unique_ptr<IServer> UnixDomainServerFactory::Create(const ServiceProtocolConfig& protocol_config,
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:35:29: warning: no header providing "score::message_passing::IServer" is directly included [misc-include-cleaner]
+   15 | score::cpp::pmr::unique_ptr<IServer> UnixDomainServerFactory::Create(const ServiceProtocolConfig& protocol_config,
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:35:76: warning: no header providing "score::message_passing::ServiceProtocolConfig" is directly included [misc-include-cleaner]
+   15 | score::cpp::pmr::unique_ptr<IServer> UnixDomainServerFactory::Create(const ServiceProtocolConfig& protocol_config,
+      |                                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/986/execroot/_main/score/message_passing/unix_domain/unix_domain_server_factory.cpp:38:29: warning: no header providing "score::cpp::pmr::make_unique" is directly included [misc-include-cleaner]
+   38 |     return score::cpp::pmr::make_unique<detail::UnixDomainServer>(
+      |                             ^
+Suppressed 9402 warnings (9366 in non-user code, 33 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

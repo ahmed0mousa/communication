@@ -1,3 +1,72 @@
-5193 warnings generated.
-Suppressed 5242 warnings (5187 in non-user code, 49 NOLINT, 6 with check filters).
+10238 warnings generated.
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:51:5: warning: function 'GetDataChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::string GetDataChannelShmName(const LolaServiceInstanceId::InstanceId instance_id) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:57:5: warning: function 'GetControlChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     virtual std::string GetControlChannelShmName(const LolaServiceInstanceId::InstanceId instance_id,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:67:5: warning: function 'GetMethodChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     virtual std::string GetMethodChannelShmName(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/path_builder.h:44:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   44 |     else
+      |     ^~~~
+   45 |     {
+      |     ~
+   46 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+   47 |     }
+      |     ~
+./score/mw/com/impl/bindings/lola/shm_path_builder.h:34:5: warning: function 'GetDataChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     std::string GetDataChannelShmName(const LolaServiceInstanceId::InstanceId instance_id) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/shm_path_builder.h:36:5: warning: function 'GetControlChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     std::string GetControlChannelShmName(const LolaServiceInstanceId::InstanceId instance_id,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/shm_path_builder.h:39:5: warning: function 'GetMethodChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     std::string GetMethodChannelShmName(
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:16:1: warning: included header global_configuration.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/configuration/global_configuration.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include <sched.h>
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:17:1: warning: included header sched.h is not used directly [misc-include-cleaner]
+   17 | #include <sched.h>
+      | ^~~~~~~~~~~~~~~~~~
+   18 | 
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:20:1: warning: included header sstream is not used directly [misc-include-cleaner]
+   20 | #include <sstream>
+      | ^~~~~~~~~~~~~~~~~~
+   21 | #include <string>
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:39:31: warning: no header providing "std::ostream" is directly included [misc-include-cleaner]
+   17 | void EmitControlFileName(std::ostream& out,
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:40:32: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   17 |                          const QualityType channel_type,
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:41:37: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   17 |                          const std::uint16_t service_id,
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:42:32: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   17 |                          const LolaServiceInstanceId::InstanceId instance_id) noexcept
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:70:13: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   20 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(false, "Invalid quality type");
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:99:31: warning: no header providing "score::mw::com::impl::lola::ProxyInstanceIdentifier" is directly included [misc-include-cleaner]
+   16 |                         const ProxyInstanceIdentifier& proxy_instance_identifier) noexcept
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:105:43: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  105 |     out << std::setfill('0') << std::setw(5) << proxy_instance_identifier.application_id << '-';
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3790/execroot/_main/score/mw/com/impl/bindings/lola/shm_path_builder.cpp:106:43: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  106 |     out << std::setfill('0') << std::setw(5) << proxy_instance_identifier.proxy_instance_counter;
+      |                                           ^
+Suppressed 10270 warnings (10214 in non-user code, 50 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

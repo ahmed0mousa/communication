@@ -1,4 +1,12 @@
-5021 warnings generated.
+9510 warnings generated.
+./score/message_passing/unix_domain/unix_domain_engine.h:34:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   34 | namespace score
+      | ^~~~~~~~~~~~~~~
+   35 | {
+      | ~
+   36 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
 ./score/message_passing/unix_domain/unix_domain_engine.h:47:7: warning: class 'UnixDomainEngine' defines a non-default destructor, a copy constructor and a copy assignment operator but does not define a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    47 | class UnixDomainEngine final : public ISharedResourceEngine
       |       ^
@@ -9,13 +17,29 @@
 ./score/message_passing/unix_domain/unix_domain_engine.h:96:10: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    96 |     void EnqueueCommand(CommandQueueEntry& entry,
       |          ^
+./score/message_passing/unix_domain/unix_domain_engine.h:112:5: warning: function 'IsOnCallbackThread' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  112 |     bool IsOnCallbackThread() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/unix_domain/unix_domain_socket_address.h:28:5: warning: function 'GetAddressString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   28 |     const char* GetAddressString() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:30:18: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
    30 |         return &(addr_.sun_path[IsAbstract() ? 1 : 0]);
       |                  ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:33:5: warning: function 'IsAbstract' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     bool IsAbstract() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:35:17: warning: implicit conversion 'char' -> 'bool' [readability-implicit-bool-conversion]
    35 |         return !addr_.sun_path[0];
       |                ~^                
       |                                   == 0
+./score/message_passing/unix_domain/unix_domain_socket_address.h:38:5: warning: function 'data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     const sockaddr* data() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:40:16: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
    40 |         return reinterpret_cast<const sockaddr*>(&addr_);
       |                ^
@@ -33,48 +57,206 @@
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:56:32: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
    56 |     std::memcpy(addr_.sun_path + (isAbstract ? 1 : 0), path.data(), len);
       |                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:24:1: warning: constructor does not initialize these fields: pipe_fds_ [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:19:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   19 | namespace score
+      | ^~~~~~~~~~~~~~~
+   20 | {
+      | ~
+   21 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:24:1: warning: constructor does not initialize these fields: pipe_fds_ [cppcoreguidelines-pro-type-member-init]
    24 | UnixDomainEngine::UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource, LoggingCallback logger) noexcept
       | ^
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:107:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:24:53: warning: no header providing "score::cpp::pmr::memory_resource" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score
+   20 | {
+   21 | namespace message_passing
+   22 | {
+   23 | 
+   24 | UnixDomainEngine::UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource, LoggingCallback logger) noexcept
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:24:87: warning: no header providing "score::message_passing::LoggingCallback" is directly included [misc-include-cleaner]
+   15 | #include "score/message_passing/unix_domain/unix_domain_socket_address.h"
+   16 | 
+   17 | #include <future>
+   18 | 
+   19 | namespace score
+   20 | {
+   21 | namespace message_passing
+   22 | {
+   23 | 
+   24 | UnixDomainEngine::UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource, LoggingCallback logger) noexcept
+      |                                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:27:20: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score
+   20 | {
+   21 | namespace message_passing
+   22 | {
+   23 | 
+   24 | UnixDomainEngine::UnixDomainEngine(score::cpp::pmr::memory_resource* memory_resource, LoggingCallback logger) noexcept
+   25 |     : memory_resource_{memory_resource},
+   26 |       os_resources_{GetDefaultOsResources(memory_resource)},
+   27 |       logger_{std::move(logger)},
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:43:5: warning: no header providing "sigset_t" is directly included [misc-include-cleaner]
+   17 |     sigset_t new_set;
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:46:17: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   18 |     score::cpp::ignore = os_resources_.signal->SigEmptySet(new_set);
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:48:63: warning: no header providing "SIG_BLOCK" is directly included [misc-include-cleaner]
+   18 |     score::cpp::ignore = os_resources_.signal->PthreadSigMask(SIG_BLOCK, new_set, old_set);
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:50:14: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   18 |         std::lock_guard acquire{thread_mutex_};  // postpone RunOnThread() till we assign thread_
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:58:63: warning: no header providing "SIG_SETMASK" is directly included [misc-include-cleaner]
+   58 |     score::cpp::ignore = os_resources_.signal->PthreadSigMask(SIG_SETMASK, old_set);
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:69:13: warning: no header providing "score::cpp::expected" is directly included [misc-include-cleaner]
+   18 | score::cpp::expected<std::int32_t, score::os::Error> UnixDomainEngine::TryOpenClientConnection(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:69:27: warning: no header providing "std::int32_t" is directly included [misc-include-cleaner]
+   17 | score::cpp::expected<std::int32_t, score::os::Error> UnixDomainEngine::TryOpenClientConnection(
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:69:47: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   16 | score::cpp::expected<std::int32_t, score::os::Error> UnixDomainEngine::TryOpenClientConnection(
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:70:10: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   18 |     std::string_view identifier) noexcept
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:75:28: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+   75 |         return score::cpp::make_unexpected(fd_expected.error());
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:97:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+   18 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(IsOnCallbackThread());
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:104:10: warning: no header providing "std::int16_t" is directly included [misc-include-cleaner]
+  104 |     std::int16_t events = 0;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:107:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
   107 |         events |= POLLIN;
       |         ^~~~~~ ~~
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:112:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:107:19: warning: no header providing "POLLIN" is directly included [misc-include-cleaner]
+  107 |         events |= POLLIN;
+      |                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:112:9: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
   112 |         events |= POLLOUT;
       |         ^~~~~~ ~~
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:120:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:112:19: warning: no header providing "POLLOUT" is directly included [misc-include-cleaner]
+  112 |         events |= POLLOUT;
+      |                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:114:29: warning: no header providing "std::find_if" is directly included [misc-include-cleaner]
+   17 |     const auto found = std::find_if(poll_fds_.begin(), poll_fds_.end(), [](pollfd& poll) noexcept {
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:114:76: warning: no header providing "pollfd" is directly included [misc-include-cleaner]
+   18 |     const auto found = std::find_if(poll_fds_.begin(), poll_fds_.end(), [](pollfd& poll) noexcept {
+      |                                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:120:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
   120 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_fds_.begin(), found));
       |         ^~~~~~~~~~~
       |         auto
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:138:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:120:14: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   17 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_fds_.begin(), found));
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:120:55: warning: no header providing "std::distance" is directly included [misc-include-cleaner]
+   18 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_fds_.begin(), found));
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:135:29: warning: no header providing "std::find" is directly included [misc-include-cleaner]
+  135 |     const auto found = std::find(poll_endpoints_.begin(), poll_endpoints_.end(), &endpoint);
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:138:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
   138 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_endpoints_.begin(), found));
       |         ^~~~~~~~~~~
       |         auto
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:156:24: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:138:55: warning: no header providing "std::distance" is directly included [misc-include-cleaner]
+  138 |         std::size_t i = static_cast<std::size_t>(std::distance(poll_endpoints_.begin(), found));
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:156:24: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
   156 | void UnixDomainEngine::EnqueueCommand(CommandQueueEntry& entry,
       |                        ^
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:196:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:161:56: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  161 |     timer_queue_.RegisterTimedEntry(entry, until, std::move(callback), owner);
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:191:13: warning: no header providing "score::cpp::expected_blank" is directly included [misc-include-cleaner]
+  191 | score::cpp::expected_blank<score::os::Error> UnixDomainEngine::SendProtocolMessage(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:193:10: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+  193 |     std::uint8_t code,
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:194:23: warning: no header providing "score::cpp::span" is directly included [misc-include-cleaner]
+   18 |     const score::cpp::span<const std::uint8_t> message) noexcept
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:196:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
   196 |     struct msghdr msg;
       |     ^                
       |                      {}
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:199:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:196:12: warning: no header providing "msghdr" is directly included [misc-include-cleaner]
+   18 |     struct msghdr msg;
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:197:10: warning: no header providing "std::memset" is directly included [misc-include-cleaner]
+   17 |     std::memset(static_cast<void*>(&msg), 0, sizeof(msg));
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:199:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
   199 |     std::uint16_t size = static_cast<std::uint16_t>(message.size());
       |     ^~~~~~~~~~~~~
       |     auto
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:200:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:199:10: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+  199 |     std::uint16_t size = static_cast<std::uint16_t>(message.size());
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:200:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
   200 |     std::array<iovec, kVectorCount> io;
       |     ^                                 
       |                                       {}
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:222:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:200:10: warning: no header providing "std::array" is directly included [misc-include-cleaner]
+   17 |     std::array<iovec, kVectorCount> io;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:200:16: warning: no header providing "iovec" is directly included [misc-include-cleaner]
+   17 |     std::array<iovec, kVectorCount> io;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:206:21: warning: redundant explicit casting to the same type 'std::size_t' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  206 |     io[2].iov_len = static_cast<std::size_t>(message.size());
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~              ~
+external/score_baselibs+/score/language/futurecpp/include/score/span.hpp:290:15: note: source type originates from the invocation of this method
+  290 |     size_type size() const noexcept { return base_.size(); }
+      |     ~~~~~~~~~ ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:222:5: warning: uninitialized record type: 'msg' [cppcoreguidelines-pro-type-member-init]
   222 |     struct msghdr msg;
       |     ^                
       |                      {}
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:226:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:226:5: warning: uninitialized record type: 'io' [cppcoreguidelines-pro-type-member-init]
   226 |     std::array<iovec, kVectorCount> io;
       |     ^                                 
       |                                       {}
-/home/runner/.bazel/sandbox/linux-sandbox/1883/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:276:15: warning: variable 'pipe_event' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:237:28: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  237 |         return score::cpp::make_unexpected(size_expected.error());
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:242:28: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  242 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EPIPE));
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:242:78: warning: no header providing "EPIPE" is directly included [misc-include-cleaner]
+   17 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EPIPE));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:250:78: warning: no header providing "EMSGSIZE" is directly included [misc-include-cleaner]
+  250 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EMSGSIZE));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:264:78: warning: no header providing "EIO" is directly included [misc-include-cleaner]
+  264 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EIO));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:276:15: warning: variable 'pipe_event' is not initialized [cppcoreguidelines-init-variables]
   276 |     PipeEvent pipe_event;
       |               ^
-Suppressed 5032 warnings (4996 in non-user code, 33 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:343:40: warning: no header providing "std::chrono::duration_cast" is directly included [misc-include-cleaner]
+   17 |     const auto distance = std::chrono::duration_cast<std::chrono::milliseconds>(then - Clock::now()).count() + 1;
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:343:67: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+  343 |     const auto distance = std::chrono::duration_cast<std::chrono::milliseconds>(then - Clock::now()).count() + 1;
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/1005/execroot/_main/score/message_passing/unix_domain/unix_domain_engine.cpp:344:20: warning: no header providing "INT32_MAX" is directly included [misc-include-cleaner]
+  344 |     if (distance > INT32_MAX)
+      |                    ^
+Suppressed 9475 warnings (9438 in non-user code, 34 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

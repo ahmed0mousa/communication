@@ -1,3 +1,29 @@
-4368 warnings generated.
-Suppressed 4387 warnings (4365 in non-user code, 19 NOLINT, 3 with check filters).
+7766 warnings generated.
+./score/mw/com/impl/find_service_handle.h:159:5: warning: function 'getUid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  159 |     constexpr std::size_t getUid() const
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1237/execroot/_main/score/mw/com/impl/find_service_handle.cpp:20:49: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl
+   18 | {
+   19 | 
+   20 | FindServiceHandle::FindServiceHandle(const std::size_t uid) : uid_{uid} {}
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1237/execroot/_main/score/mw/com/impl/find_service_handle.cpp:41:6: warning: no header providing "std::ostream" is directly included [misc-include-cleaner]
+   16 | std::ostream& operator<<(std::ostream& ostream_out, const FindServiceHandle& find_service_handle)
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1237/execroot/_main/score/mw/com/impl/find_service_handle.cpp:57:13: warning: no header providing "std::hash" is directly included [misc-include-cleaner]
+   57 | std::size_t hash<score::mw::com::impl::FindServiceHandle>::operator()(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1237/execroot/_main/score/mw/com/impl/find_service_handle.cpp:57:60: warning: no header providing "std::hash<score::mw::com::impl::FindServiceHandle>::operator()" is directly included [misc-include-cleaner]
+   16 | std::size_t hash<score::mw::com::impl::FindServiceHandle>::operator()(
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1237/execroot/_main/score/mw/com/impl/find_service_handle.cpp:60:49: warning: no header providing "view" is directly included [misc-include-cleaner]
+   60 |     score::mw::com::impl::FindServiceHandleView view{find_service_handle};
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1237/execroot/_main/score/mw/com/impl/find_service_handle.cpp:60:54: warning: no header providing "find_service_handle" is directly included [misc-include-cleaner]
+   60 |     score::mw::com::impl::FindServiceHandleView view{find_service_handle};
+      |                                                      ^
+Suppressed 7779 warnings (7756 in non-user code, 20 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,3 +1,118 @@
-6677 warnings generated.
-Suppressed 6804 warnings (6671 in non-user code, 127 NOLINT, 6 with check filters).
+16285 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:21:1: warning: included header utility.hpp is not used directly [misc-include-cleaner]
+   21 | #include <score/utility.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   22 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:26:42: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/lola_service_type_deployment.h"
+   16 | 
+   17 | #include "score/mw/com/impl/bindings/lola/runtime.h"
+   18 | #include "score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h"
+   19 | 
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:26:60: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:26:93: warning: no header providing "score::mw::com::impl::IBindingRuntime" is directly included [misc-include-cleaner]
+   19 | 
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+      |                                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:28:5: warning: no header providing "score::mw::com::impl::Configuration" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/lola_service_type_deployment.h"
+   16 | 
+   17 | #include "score/mw/com/impl/bindings/lola/runtime.h"
+   18 | #include "score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h"
+   19 | 
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+   27 | score::mw::com::impl::BindingRuntimeFactory::CreateBindingRuntimes(
+   28 |     Configuration& configuration,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:29:18: warning: no header providing "score::concurrency::Executor" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/lola_service_type_deployment.h"
+   16 | 
+   17 | #include "score/mw/com/impl/bindings/lola/runtime.h"
+   18 | #include "score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h"
+   19 | 
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+   27 | score::mw::com::impl::BindingRuntimeFactory::CreateBindingRuntimes(
+   28 |     Configuration& configuration,
+   29 |     concurrency::Executor& long_running_threads,
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:30:23: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+   27 | score::mw::com::impl::BindingRuntimeFactory::CreateBindingRuntimes(
+   28 |     Configuration& configuration,
+   29 |     concurrency::Executor& long_running_threads,
+   30 |     const score::cpp::optional<tracing::TracingFilterConfig>& tracing_filter_config)
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:30:41: warning: no header providing "score::mw::com::impl::tracing::TracingFilterConfig" is directly included [misc-include-cleaner]
+   19 | 
+   20 | #include <score/overload.hpp>
+   21 | #include <score/utility.hpp>
+   22 | 
+   23 | #include <unordered_map>
+   24 | #include <utility>
+   25 | 
+   26 | std::unordered_map<score::mw::com::impl::BindingType, std::unique_ptr<score::mw::com::impl::IBindingRuntime>>
+   27 | score::mw::com::impl::BindingRuntimeFactory::CreateBindingRuntimes(
+   28 |     Configuration& configuration,
+   29 |     concurrency::Executor& long_running_threads,
+   30 |     const score::cpp::optional<tracing::TracingFilterConfig>& tracing_filter_config)
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:47:30: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   47 |                         std::make_unique<lola::tracing::TracingRuntime>(number_of_needed_tracing_slots, configuration);
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:50:42: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   50 |                 auto lola_runtime = std::make_unique<score::mw::com::impl::lola::Runtime>(
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:52:50: warning: unnecessary temporary object created while calling emplace [modernize-use-emplace]
+   52 |                 const auto pair = result.emplace(std::make_pair(BindingType::kLoLa, std::move(lola_runtime)));
+      |                                                  ^~~~~~~~~~~~~~~                                           ~
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:53:17: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   20 |                 SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(pair.second, "Failed to emplace lola runtime binding");
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:61:34: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   20 |             [](const score::cpp::blank&) noexcept {
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4078/execroot/_main/score/mw/com/impl/plumbing/binding_runtime_factory.cpp:64:43: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+   25 |         const bool runtime_created = std::visit(deployment_info_visitor, service_type.second.binding_info_);
+      |                                           ^
+Suppressed 16399 warnings (16265 in non-user code, 128 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

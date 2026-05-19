@@ -1,3 +1,57 @@
-8544 warnings generated.
-Suppressed 8680 warnings (8536 in non-user code, 136 NOLINT, 8 with check filters).
+18287 warnings generated.
+./score/mw/com/impl/plumbing/sample_ptr.h:96:5: warning: function 'get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   96 |     pointer get() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:124:5: warning: function 'Get' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  124 |     pointer Get() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/plumbing/sample_ptr.h:133:46: warning: use c++14 style type templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/plumbing/sample_ptr.h:133:62: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+/home/runner/.bazel/sandbox/linux-sandbox/4188/execroot/_main/score/mw/com/impl/plumbing/proxy_event_binding_factory_impl.cpp:34:6: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   22 | 
+   23 | namespace score::mw::com::impl
+   24 | {
+   25 | 
+   26 | // Suppress "AUTOSAR C++14 A15-5-3" rule finding. This rule states: "The std::terminate() function shall
+   27 | // not be called implicitly.". std::visit Throws std::bad_variant_access if
+   28 | // as-variant(vars_i).valueless_by_exception() is true for any variant vars_i in vars. The variant may only become
+   29 | // valueless if an exception is thrown during different stages. Since we don't throw exceptions, it's not possible
+   30 | // that the variant can return true from valueless_by_exception and therefore not possible that std::visit throws
+   31 | // an exception.
+   32 | // This suppression should be removed after fixing [Ticket-173043](broken_link_j/Ticket-173043)
+   33 | // coverity[autosar_cpp14_a15_5_3_violation : FALSE]
+   34 | std::unique_ptr<GenericProxyEventBinding> GenericProxyEventBindingFactoryImpl::Create(
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4188/execroot/_main/score/mw/com/impl/plumbing/proxy_event_binding_factory_impl.cpp:35:5: warning: no header providing "score::mw::com::impl::ProxyBase" is directly included [misc-include-cleaner]
+   19 |     ProxyBase& parent,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4188/execroot/_main/score/mw/com/impl/plumbing/proxy_event_binding_factory_impl.cpp:36:16: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   22 | 
+   23 | namespace score::mw::com::impl
+   24 | {
+   25 | 
+   26 | // Suppress "AUTOSAR C++14 A15-5-3" rule finding. This rule states: "The std::terminate() function shall
+   27 | // not be called implicitly.". std::visit Throws std::bad_variant_access if
+   28 | // as-variant(vars_i).valueless_by_exception() is true for any variant vars_i in vars. The variant may only become
+   29 | // valueless if an exception is thrown during different stages. Since we don't throw exceptions, it's not possible
+   30 | // that the variant can return true from valueless_by_exception and therefore not possible that std::visit throws
+   31 | // an exception.
+   32 | // This suppression should be removed after fixing [Ticket-173043](broken_link_j/Ticket-173043)
+   33 | // coverity[autosar_cpp14_a15_5_3_violation : FALSE]
+   34 | std::unique_ptr<GenericProxyEventBinding> GenericProxyEventBindingFactoryImpl::Create(
+   35 |     ProxyBase& parent,
+   36 |     const std::string_view event_name) noexcept
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4188/execroot/_main/score/mw/com/impl/plumbing/proxy_event_binding_factory_impl.cpp:46:17: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   46 |     return std::make_unique<lola::GenericProxyEvent>(lookup->parent, lookup->element_fq_id, event_name);
+      |                 ^
+Suppressed 18415 warnings (18270 in non-user code, 137 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

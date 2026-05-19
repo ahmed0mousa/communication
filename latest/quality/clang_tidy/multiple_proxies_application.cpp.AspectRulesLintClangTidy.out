@@ -1,3 +1,59 @@
-9258 warnings generated.
-Suppressed 9422 warnings (9248 in non-user code, 164 NOLINT, 10 with check filters).
+21074 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:16:1: warning: included header instance_specifier.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/instance_specifier.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/mw/com/test/common_test_resources/sample_sender_receiver.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:42:29: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   19 |             score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped1"});
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:47:20: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   20 |             return EXIT_FAILURE;
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:54:16: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+   54 |         return EXIT_SUCCESS;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:56:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   56 |     else if (mode == "recv" || mode == "proxy")
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   57 |     {
+      |     ~
+   58 |         const std::vector<std::string> instance_names{
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   59 |             "score/cp60/MapApiLanesStamped1", "score/cp60/MapApiLanesStamped2", "score/cp60/MapApiLanesStamped3"};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |         std::vector<std::future<int>> future_return_values{};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   61 |         const auto cycle_time = run_parameters.GetOptionalCycleTime();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   62 | 
+   63 |         // Launch threads which each contain a proxy instance and receive messages from the sender.
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   64 |         for (const auto& instance_name : instance_names)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   65 |         {
+      |         ~
+   66 |             const auto instance_specifier_result =
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   67 |                 score::mw::com::InstanceSpecifier::Create(std::string{instance_name});
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |             if (!instance_specifier_result.has_value())
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |             {
+      |             ~
+   70 |                 std::cerr << "Invalid instance specifier, terminating." << std::endl;
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   71 | 
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:79:54: warning: no header providing "score::mw::com::test::BigDataProxy" is directly included [misc-include-cleaner]
+   17 |                                score::mw::com::test::BigDataProxy,
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:80:54: warning: no header providing "score::mw::com::impl::ProxyEvent" is directly included [misc-include-cleaner]
+   17 |                                score::mw::com::impl::ProxyEvent<score::mw::com::test::MapApiLanesStamped>>,
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:80:87: warning: no header providing "score::mw::com::test::MapApiLanesStamped" is directly included [misc-include-cleaner]
+   80 |                                score::mw::com::impl::ProxyEvent<score::mw::com::test::MapApiLanesStamped>>,
+      |                                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/5168/execroot/_main/score/mw/com/test/multiple_proxies/multiple_proxies_application.cpp:85:33: warning: no header providing "std::cref" is directly included [misc-include-cleaner]
+   20 |                            std::cref(stop_token),
+      |                                 ^
+Suppressed 21230 warnings (21055 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

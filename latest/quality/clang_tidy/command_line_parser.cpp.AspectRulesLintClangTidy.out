@@ -1,6 +1,55 @@
-9258 warnings generated.
+14528 warnings generated.
 ./score/mw/com/test/common_test_resources/command_line_parser.h:80:76: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
    80 |             std::from_chars<ReturnType>(value_str.data(), value_str.data() + value_str.size(), parsed_value);
       |                                                                            ^
-Suppressed 9278 warnings (9254 in non-user code, 21 NOLINT, 3 with check filters).
+./score/mw/com/test/common_test_resources/test_error_domain.h:33:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:25:55: warning: no header providing "std::pair" is directly included [misc-include-cleaner]
+   18 | #include <vector>
+   19 | 
+   20 | namespace score::mw::com::test
+   21 | {
+   22 | 
+   23 | auto ParseCommandLineArguments(int argc,
+   24 |                                const char** argv,
+   25 |                                const std::vector<std::pair<std::string, std::string>>& param_names)
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:29:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   15 | #include <iostream>
+   16 | #include <string>
+   17 | #include <unordered_map>
+   18 | #include <vector>
+   19 | 
+   20 | namespace score::mw::com::test
+   21 | {
+   22 | 
+   23 | auto ParseCommandLineArguments(int argc,
+   24 |                                const char** argv,
+   25 |                                const std::vector<std::pair<std::string, std::string>>& param_names)
+   26 |     -> CommandLineArgsMapType
+   27 | {
+   28 |     namespace po = boost::program_options;
+   29 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:34:36: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   15 |             param_name.data(), po::value<std::string>(), ("specify " + std::string{param_doc}).data());
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:37:29: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   15 |     boost::program_options::variables_map args;
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:42:44: warning: no header providing "boost::program_options::command_line_style::unix_style" is directly included [misc-include-cleaner]
+   15 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:42:81: warning: no header providing "boost::program_options::command_line_style::allow_long_disguise" is directly included [misc-include-cleaner]
+   42 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:44:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+   44 |     po::store(parsed_args, args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4739/execroot/_main/score/mw/com/test/common_test_resources/command_line_parser.cpp:45:9: warning: no header providing "boost::program_options::notify" is directly included [misc-include-cleaner]
+   45 |     po::notify(args);
+      |         ^
+Suppressed 14540 warnings (14515 in non-user code, 22 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

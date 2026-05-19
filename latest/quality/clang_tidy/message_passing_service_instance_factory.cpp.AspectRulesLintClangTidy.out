@@ -1,3 +1,73 @@
-5560 warnings generated.
-Suppressed 5618 warnings (5554 in non-user code, 58 NOLINT, 6 with check filters).
+11867 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:5:6: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:5:45: warning: no header providing "score::mw::com::impl::lola::IMessagePassingServiceInstance" is directly included [misc-include-cleaner]
+    3 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:7:5: warning: no header providing "score::mw::com::impl::lola::ClientQualityType" is directly included [misc-include-cleaner]
+    3 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+    6 | score::mw::com::impl::lola::MessagePassingServiceInstanceFactory::Create(
+    7 |     ClientQualityType client_quality_type,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:8:5: warning: no header providing "score::mw::com::impl::lola::AsilSpecificCfg" is directly included [misc-include-cleaner]
+    3 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+    6 | score::mw::com::impl::lola::MessagePassingServiceInstanceFactory::Create(
+    7 |     ClientQualityType client_quality_type,
+    8 |     AsilSpecificCfg config,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:9:29: warning: no header providing "score::message_passing::IServerFactory" is directly included [misc-include-cleaner]
+    3 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+    6 | score::mw::com::impl::lola::MessagePassingServiceInstanceFactory::Create(
+    7 |     ClientQualityType client_quality_type,
+    8 |     AsilSpecificCfg config,
+    9 |     score::message_passing::IServerFactory& server_factory,
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:10:29: warning: no header providing "score::message_passing::IClientFactory" is directly included [misc-include-cleaner]
+    3 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+    6 | score::mw::com::impl::lola::MessagePassingServiceInstanceFactory::Create(
+    7 |     ClientQualityType client_quality_type,
+    8 |     AsilSpecificCfg config,
+    9 |     score::message_passing::IServerFactory& server_factory,
+   10 |     score::message_passing::IClientFactory& client_factory,
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:11:25: warning: no header providing "score::concurrency::Executor" is directly included [misc-include-cleaner]
+    3 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+    6 | score::mw::com::impl::lola::MessagePassingServiceInstanceFactory::Create(
+    7 |     ClientQualityType client_quality_type,
+    8 |     AsilSpecificCfg config,
+    9 |     score::message_passing::IServerFactory& server_factory,
+   10 |     score::message_passing::IClientFactory& client_factory,
+   11 |     score::concurrency::Executor& executor) const noexcept
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:13:17: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   13 |     return std::make_unique<MessagePassingServiceInstance>(
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3942/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.cpp:14:35: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+    4 | 
+    5 | std::unique_ptr<score::mw::com::impl::lola::IMessagePassingServiceInstance>
+    6 | score::mw::com::impl::lola::MessagePassingServiceInstanceFactory::Create(
+    7 |     ClientQualityType client_quality_type,
+    8 |     AsilSpecificCfg config,
+    9 |     score::message_passing::IServerFactory& server_factory,
+   10 |     score::message_passing::IClientFactory& client_factory,
+   11 |     score::concurrency::Executor& executor) const noexcept
+   12 | {
+   13 |     return std::make_unique<MessagePassingServiceInstance>(
+   14 |         client_quality_type, std::move(config), server_factory, client_factory, executor);
+      |                                   ^
+Suppressed 11917 warnings (11852 in non-user code, 59 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,3 +1,108 @@
-8596 warnings generated.
-Suppressed 8732 warnings (8588 in non-user code, 136 NOLINT, 8 with check filters).
+18540 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:14:1: warning: included header proxy_method_instance_identifier.h is not used directly [misc-include-cleaner]
+   14 | #include "score/mw/com/impl/bindings/lola/methods/proxy_method_instance_identifier.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | #include "score/mw/com/impl/bindings/lola/skeleton.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:23:47: warning: no header providing "score::mw::com::impl::SkeletonBinding" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | auto SkeletonMethodBindingFactoryImpl::Create(const InstanceIdentifier& instance_identifier,
+   23 |                                               SkeletonBinding* parent_binding,
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:24:58: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | auto SkeletonMethodBindingFactoryImpl::Create(const InstanceIdentifier& instance_identifier,
+   23 |                                               SkeletonBinding* parent_binding,
+   24 |                                               const std::string_view method_name,
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:25:47: warning: no header providing "score::mw::com::impl::MethodType" is directly included [misc-include-cleaner]
+   18 | #include "score/mw/com/impl/service_element_type.h"
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | auto SkeletonMethodBindingFactoryImpl::Create(const InstanceIdentifier& instance_identifier,
+   23 |                                               SkeletonBinding* parent_binding,
+   24 |                                               const std::string_view method_name,
+   25 |                                               MethodType method_type) -> std::unique_ptr<SkeletonMethodBinding>
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:25:79: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | auto SkeletonMethodBindingFactoryImpl::Create(const InstanceIdentifier& instance_identifier,
+   23 |                                               SkeletonBinding* parent_binding,
+   24 |                                               const std::string_view method_name,
+   25 |                                               MethodType method_type) -> std::unique_ptr<SkeletonMethodBinding>
+      |                                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:25:90: warning: no header providing "score::mw::com::impl::SkeletonMethodBinding" is directly included [misc-include-cleaner]
+   18 | #include "score/mw/com/impl/service_element_type.h"
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | auto SkeletonMethodBindingFactoryImpl::Create(const InstanceIdentifier& instance_identifier,
+   23 |                                               SkeletonBinding* parent_binding,
+   24 |                                               const std::string_view method_name,
+   25 |                                               MethodType method_type) -> std::unique_ptr<SkeletonMethodBinding>
+      |                                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:32:46: warning: no header providing "score::mw::com::impl::LolaServiceTypeDeployment" is directly included [misc-include-cleaner]
+   17 | #include "score/mw/com/impl/instance_identifier.h"
+   18 | #include "score/mw/com/impl/service_element_type.h"
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | auto SkeletonMethodBindingFactoryImpl::Create(const InstanceIdentifier& instance_identifier,
+   23 |                                               SkeletonBinding* parent_binding,
+   24 |                                               const std::string_view method_name,
+   25 |                                               MethodType method_type) -> std::unique_ptr<SkeletonMethodBinding>
+   26 | {
+   27 | 
+   28 |     const InstanceIdentifierView instance_identifier_view{instance_identifier};
+   29 | 
+   30 |     using LambdaReturnType = std::unique_ptr<SkeletonMethodBinding>;
+   31 |     auto lola_deployment_handler = [&instance_identifier_view, parent_binding, &method_name, method_type](
+   32 |                                        const LolaServiceTypeDeployment& lola_type_deployment) -> LambdaReturnType {
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:39:29: warning: no header providing "score::mw::log::LogError" is directly included [misc-include-cleaner]
+   19 |             score::mw::log::LogError("lola") << error_msg;
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:45:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   19 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(instance_id_maybe.has_value(),
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:48:18: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+   19 |             std::get_if<LolaServiceInstanceId>(&(instance_id_maybe.value().binding_info_));
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:48:25: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   17 |             std::get_if<LolaServiceInstanceId>(&(instance_id_maybe.value().binding_info_));
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:52:9: warning: no header providing "score::mw::com::impl::LolaServiceElementId" is directly included [misc-include-cleaner]
+   17 |         LolaServiceElementId lola_element_id{};
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:56:17: warning: no header providing "score::mw::com::impl::GetServiceElementId" is directly included [misc-include-cleaner]
+   17 |                 GetServiceElementId<ServiceElementType::FIELD>(lola_type_deployment, std::string{method_name});
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:61:17: warning: no header providing "score::mw::com::impl::GetServiceElementId" is directly included [misc-include-cleaner]
+   61 |                 GetServiceElementId<ServiceElementType::METHOD>(lola_type_deployment, std::string{method_name});
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:64:15: warning: no header providing "score::mw::com::impl::lola::UniqueMethodIdentifier" is directly included [misc-include-cleaner]
+   15 |         lola::UniqueMethodIdentifier unique_method_identifier{lola_element_id, method_type};
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:65:21: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   65 |         return std::make_unique<lola::SkeletonMethod>(*lola_parent, unique_method_identifier);
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:68:48: warning: no header providing "score::cpp::overload" is directly included [misc-include-cleaner]
+   19 |     auto deployment_info_visitor = score::cpp::overload(
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:70:30: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   19 |         [](const score::cpp::blank&) noexcept -> LambdaReturnType {
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:77:18: warning: no header providing "score::mw::com::impl::SomeIpServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   17 |         [](const SomeIpServiceInstanceDeployment&) noexcept -> LambdaReturnType {
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4168/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.cpp:86:17: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+   86 |     return std::visit(deployment_info_visitor, type_deployment.binding_info_);
+      |                 ^
+Suppressed 18657 warnings (18512 in non-user code, 137 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

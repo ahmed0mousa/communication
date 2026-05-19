@@ -1,3 +1,68 @@
-4378 warnings generated.
-Suppressed 4401 warnings (4375 in non-user code, 23 NOLINT, 3 with check filters).
+7793 warnings generated.
+./score/mw/com/impl/configuration/global_configuration.h:69:5: warning: function 'GetReceiverMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   69 |     std::int32_t GetReceiverMessageQueueSize(const QualityType quality_type) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:71:5: warning: function 'GetSenderMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   71 |     std::int32_t GetSenderMessageQueueSize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:76:5: warning: function 'GetProcessAsilLevel' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     QualityType GetProcessAsilLevel() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:86:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     score::cpp::optional<ApplicationId> GetApplicationId() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:91:5: warning: function 'GetShmSizeCalcMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   91 |     ShmSizeCalculationMode GetShmSizeCalcMode() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1086/execroot/_main/score/mw/com/impl/configuration/global_configuration.cpp:23:27: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <exception>
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | GlobalConfiguration::GlobalConfiguration() noexcept
+   23 |     : process_asil_level_{QualityType::kASIL_QM},
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1086/execroot/_main/score/mw/com/impl/configuration/global_configuration.cpp:28:27: warning: no header providing "score::mw::com::impl::ShmSizeCalculationMode" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <exception>
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | GlobalConfiguration::GlobalConfiguration() noexcept
+   23 |     : process_asil_level_{QualityType::kASIL_QM},
+   24 |       application_id_{},
+   25 |       message_rx_queue_size_qm{DEFAULT_MIN_NUM_MESSAGES_RX_QUEUE},
+   26 |       message_rx_queue_size_b{DEFAULT_MIN_NUM_MESSAGES_RX_QUEUE},
+   27 |       message_tx_queue_size_b{DEFAULT_MIN_NUM_MESSAGES_TX_QUEUE},
+   28 |       shm_size_calc_mode_{ShmSizeCalculationMode::kSimulation}
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1086/execroot/_main/score/mw/com/impl/configuration/global_configuration.cpp:32:6: warning: no header providing "std::int32_t" is directly included [misc-include-cleaner]
+   17 | #include <exception>
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | GlobalConfiguration::GlobalConfiguration() noexcept
+   23 |     : process_asil_level_{QualityType::kASIL_QM},
+   24 |       application_id_{},
+   25 |       message_rx_queue_size_qm{DEFAULT_MIN_NUM_MESSAGES_RX_QUEUE},
+   26 |       message_rx_queue_size_b{DEFAULT_MIN_NUM_MESSAGES_RX_QUEUE},
+   27 |       message_tx_queue_size_b{DEFAULT_MIN_NUM_MESSAGES_TX_QUEUE},
+   28 |       shm_size_calc_mode_{ShmSizeCalculationMode::kSimulation}
+   29 | {
+   30 | }
+   31 | 
+   32 | std::int32_t GlobalConfiguration::GetReceiverMessageQueueSize(const QualityType quality_type) const noexcept
+      |      ^
+Suppressed 7809 warnings (7782 in non-user code, 24 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

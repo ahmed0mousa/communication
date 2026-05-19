@@ -1,3 +1,127 @@
-5857 warnings generated.
-Suppressed 5931 warnings (5851 in non-user code, 74 NOLINT, 6 with check filters).
+11256 warnings generated.
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/service_identifier_type.h:84:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   84 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:90:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     std::string_view ToHashString() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:95:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   95 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:159:5: warning: function 'getInternalTypeName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  159 |     inline std::string_view getInternalTypeName() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:159:5: warning: function 'getInternalTypeName' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  159 |     inline std::string_view getInternalTypeName() const
+      |     ^~~~~~
+./score/mw/com/impl/configuration/service_identifier_type.h:164:5: warning: function 'GetVersion' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  164 |     inline ServiceVersionType GetVersion() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:164:5: warning: function 'GetVersion' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  164 |     inline ServiceVersionType GetVersion() const
+      |     ^~~~~~
+./score/mw/com/impl/configuration/service_identifier_type.h:169:22: warning: function 'GetSerializationVersion' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  169 |     constexpr static inline std::uint32_t GetSerializationVersion()
+      |                      ^~~~~~
+./score/mw/com/impl/configuration/service_version_type.h:107:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:109:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  109 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:173:5: warning: function 'getMajor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  173 |     constexpr inline std::uint32_t getMajor() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:173:15: warning: function 'getMajor' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  173 |     constexpr inline std::uint32_t getMajor() const
+      |               ^~~~~~
+./score/mw/com/impl/configuration/service_version_type.h:178:5: warning: function 'getMinor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  178 |     constexpr inline std::uint32_t getMinor() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:178:15: warning: function 'getMinor' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  178 |     constexpr inline std::uint32_t getMinor() const
+      |               ^~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:34:51: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   18 | ServiceIdentifierType::ServiceIdentifierType(std::string serviceTypeName, ServiceVersionType version)
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:34:75: warning: no header providing "score::mw::com::impl::ServiceVersionType" is directly included [misc-include-cleaner]
+   16 | ServiceIdentifierType::ServiceIdentifierType(std::string serviceTypeName, ServiceVersionType version)
+      |                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:34:75: warning: pass by value and use std::move [modernize-pass-by-value]
+   19 | 
+   20 | namespace score::mw::com::impl
+   21 | {
+   22 | 
+   23 | namespace
+   24 | {
+   25 | 
+   26 | constexpr auto kSerializationVersionKeyServIdentType = "serializationVersion";
+   27 | constexpr auto kServiceTypeKeyServIdentType = "serviceType";
+   28 | constexpr auto kVersionKeyServIdentType = "version";
+   29 | 
+   30 | }  // namespace
+   31 | 
+   32 | // False positive: Other constructors are delegated to this one, so this one can not be further delegated
+   33 | // coverity[autosar_cpp14_a12_1_5_violation] See above
+   34 | ServiceIdentifierType::ServiceIdentifierType(std::string serviceTypeName, ServiceVersionType version)
+      |                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:35:29: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   19 |     : serviceTypeName_{std::move(serviceTypeName)}, version_{version}, serialized_string_{ToStringImpl(Serialize())}
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:35:62: warning: parameter 'version' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   19 |     : serviceTypeName_{std::move(serviceTypeName)}, version_{version}, serialized_string_{ToStringImpl(Serialize())}
+      |                                                              ^      
+      |                                                              std::move( )
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:40:57: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   17 |                                              const std::uint32_t major_version_number,
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:43:29: warning: no header providing "score::mw::com::impl::make_ServiceVersionType" is directly included [misc-include-cleaner]
+   43 |                             make_ServiceVersionType(major_version_number, minor_version_number))
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1487/execroot/_main/score/mw/com/impl/configuration/service_identifier_type.cpp:47:65: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | ServiceIdentifierType::ServiceIdentifierType(const score::json::Object& json_object) noexcept
+      |                                                                 ^
+Suppressed 11302 warnings (11221 in non-user code, 75 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

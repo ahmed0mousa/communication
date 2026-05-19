@@ -1,8 +1,8 @@
-6747 warnings generated.
+14757 warnings generated.
 ./score/mw/com/impl/configuration/test/configuration_test_resources.h:46:29: warning: function 'score::mw::com::impl::MakeLolaEventInstanceDeployment' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    46 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
       |                             ^
-/home/runner/.bazel/sandbox/linux-sandbox/1983/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:35:29: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:35:29: note: the definition seen here
    35 | LolaEventInstanceDeployment MakeLolaEventInstanceDeployment(
       |                             ^
 ./score/mw/com/impl/configuration/test/configuration_test_resources.h:46:29: note: differing parameters are named here: ('number_of_sample_slots'), in definition: ('max_samples')
@@ -11,5 +11,166 @@
    47 |     const std::optional<std::uint16_t> number_of_sample_slots = 12U,
       |                                        ~~~~~~~~~~~~~~~~~~~~~~
       |                                        max_samples
-Suppressed 6885 warnings (6740 in non-user code, 139 NOLINT, 6 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:30:1: warning: no header providing "score::mw::com::impl::LolaEventInstanceDeployment" is directly included [misc-include-cleaner]
+   14 | LolaEventInstanceDeployment MakeDefaultLolaEventInstanceDeployment() noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:36:16: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   14 |     const std::optional<std::uint16_t> max_samples,
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:36:30: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   14 |     const std::optional<std::uint16_t> max_samples,
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:37:30: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   37 |     const std::optional<std::uint8_t> max_subscribers,
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:47:1: warning: no header providing "score::mw::com::impl::LolaFieldInstanceDeployment" is directly included [misc-include-cleaner]
+   14 | LolaFieldInstanceDeployment MakeLolaFieldInstanceDeployment(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:59:1: warning: no header providing "score::mw::com::impl::LolaMethodInstanceDeployment" is directly included [misc-include-cleaner]
+   14 | LolaMethodInstanceDeployment MakeDefaultLolaMethodInstanceDeployment() noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:61:46: warning: no header providing "std::nullopt" is directly included [misc-include-cleaner]
+   61 |     return LolaMethodInstanceDeployment{std::nullopt};
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:71:1: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   14 | LolaServiceInstanceDeployment MakeLolaServiceInstanceDeployment(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:72:23: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   14 |     const score::cpp::optional<LolaServiceInstanceId> instance_id,
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:72:32: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   14 |     const score::cpp::optional<LolaServiceInstanceId> instance_id,
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:72:55: warning: the const qualified parameter 'instance_id' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   72 |     const score::cpp::optional<LolaServiceInstanceId> instance_id,
+      |                                                       ^
+      |                                                      &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:73:37: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   14 |     const score::cpp::optional<std::size_t> shared_memory_size,
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:73:45: warning: the const qualified parameter 'shared_memory_size' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   73 |     const score::cpp::optional<std::size_t> shared_memory_size,
+      |                                             ^
+      |                                            &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:74:45: warning: the const qualified parameter 'control_asil_b_memory_size' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   74 |     const score::cpp::optional<std::size_t> control_asil_b_memory_size,
+      |                                             ^
+      |                                            &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:75:45: warning: the const qualified parameter 'control_qm_memory_size' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   75 |     const score::cpp::optional<std::size_t> control_qm_memory_size) noexcept
+      |                                             ^
+      |                                            &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:95:16: warning: no header providing "std::unordered_map" is directly included [misc-include-cleaner]
+   14 |     const std::unordered_map<QualityType, std::vector<uid_t>> allowed_consumer{
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:95:30: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   14 |     const std::unordered_map<QualityType, std::vector<uid_t>> allowed_consumer{
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:95:48: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   14 |     const std::unordered_map<QualityType, std::vector<uid_t>> allowed_consumer{
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:95:55: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   14 |     const std::unordered_map<QualityType, std::vector<uid_t>> allowed_consumer{
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:114:1: warning: no header providing "score::mw::com::impl::SomeIpServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   14 | SomeIpServiceInstanceDeployment MakeSomeIpServiceInstanceDeployment(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:115:32: warning: no header providing "score::mw::com::impl::SomeIpServiceInstanceId" is directly included [misc-include-cleaner]
+   14 |     const score::cpp::optional<SomeIpServiceInstanceId> instance_id) noexcept
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:115:57: warning: the const qualified parameter 'instance_id' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+  115 |     const score::cpp::optional<SomeIpServiceInstanceId> instance_id) noexcept
+      |                                                         ^
+      |                                                        &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:117:11: warning: no header providing "score::mw::com::impl::SomeIpEventInstanceDeployment" is directly included [misc-include-cleaner]
+   14 |     const SomeIpEventInstanceDeployment event_instance_deployment_1{};
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:120:11: warning: no header providing "score::mw::com::impl::SomeIpFieldInstanceDeployment" is directly included [misc-include-cleaner]
+   14 |     const SomeIpFieldInstanceDeployment field_instance_deployment_1{};
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:132:1: warning: no header providing "score::mw::com::impl::LolaServiceTypeDeployment" is directly included [misc-include-cleaner]
+   14 | LolaServiceTypeDeployment MakeLolaServiceTypeDeployment(const std::uint16_t service_id) noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:134:11: warning: no header providing "score::mw::com::impl::LolaEventId" is directly included [misc-include-cleaner]
+   14 |     const LolaEventId event_type_deployment_1{33U};
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:137:11: warning: no header providing "score::mw::com::impl::LolaFieldId" is directly included [misc-include-cleaner]
+   14 |     const LolaFieldId field_type_deployment_1{35U};
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:140:11: warning: no header providing "score::mw::com::impl::LolaMethodId" is directly included [misc-include-cleaner]
+   14 |     const LolaMethodId method_type_deployment_1{37U};
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:161:5: warning: no header providing "EXPECT_EQ" is directly included [misc-include-cleaner]
+   14 |     EXPECT_EQ(lhs.max_subscribers_, rhs.max_subscribers_);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:205:5: warning: no header providing "ASSERT_EQ" is directly included [misc-include-cleaner]
+  205 |     ASSERT_EQ(lhs.events_.size(), rhs.events_.size());
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:209:9: warning: no header providing "ASSERT_NE" is directly included [misc-include-cleaner]
+  209 |         ASSERT_NE(rhs_it, rhs.events_.end());
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:284:11: warning: no header providing "score::mw::com::impl::ServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   14 |     const ServiceInstanceDeployment& lhs,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:291:32: warning: no header providing "score::cpp::overload" is directly included [misc-include-cleaner]
+   14 |     auto visitor = score::cpp::overload(
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:293:53: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+   14 |             const auto* const rhs_deployment = std::get_if<LolaServiceInstanceDeployment>(&rhs.bindingInfo_);
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:298:53: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+  298 |             const auto* const rhs_deployment = std::get_if<SomeIpServiceInstanceDeployment>(&rhs.bindingInfo_);
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:302:30: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   14 |         [](const score::cpp::blank&) noexcept {});
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:303:10: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+  303 |     std::visit(visitor, lhs.bindingInfo_);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:313:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  313 |     for (auto lhs_it : lhs.events_)
+      |               ^
+      |          const  &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:321:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  321 |     for (auto lhs_it : lhs.fields_)
+      |               ^
+      |          const  &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:329:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  329 |     for (auto lhs_it : lhs.methods_)
+      |               ^
+      |          const  &
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:338:11: warning: no header providing "score::mw::com::impl::ServiceTypeDeployment" is directly included [misc-include-cleaner]
+   14 |     const ServiceTypeDeployment& lhs,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:341:32: warning: no header providing "score::cpp::overload" is directly included [misc-include-cleaner]
+  341 |     auto visitor = score::cpp::overload(
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:343:53: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+  343 |             const auto* const rhs_deployment = std::get_if<LolaServiceTypeDeployment>(&rhs.binding_info_);
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:348:10: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+  348 |     std::visit(visitor, lhs.binding_info_);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:351:78: warning: no header providing "score::mw::com::impl::ServiceVersionType" is directly included [misc-include-cleaner]
+   14 | void ConfigurationStructsFixture::ExpectServiceVersionTypeObjectsEqual(const ServiceVersionType& lhs,
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:361:11: warning: no header providing "score::mw::com::impl::ServiceIdentifierType" is directly included [misc-include-cleaner]
+   14 |     const ServiceIdentifierType& lhs,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:370:77: warning: no header providing "score::mw::com::impl::ServiceInstanceId" is directly included [misc-include-cleaner]
+   14 | void ConfigurationStructsFixture::ExpectServiceInstanceIdObjectsEqual(const ServiceInstanceId& lhs,
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:373:32: warning: no header providing "score::cpp::overload" is directly included [misc-include-cleaner]
+  373 |     auto visitor = score::cpp::overload(
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:375:54: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+  375 |             const auto* const rhs_instance_id = std::get_if<LolaServiceInstanceId>(&rhs.binding_info_);
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:380:54: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+  380 |             const auto* const rhs_instance_id = std::get_if<SomeIpServiceInstanceId>(&rhs.binding_info_);
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3044/execroot/_main/score/mw/com/impl/configuration/test/configuration_test_resources.cpp:385:10: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+  385 |     std::visit(visitor, lhs.binding_info_);
+      |          ^
+Suppressed 14853 warnings (14699 in non-user code, 148 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

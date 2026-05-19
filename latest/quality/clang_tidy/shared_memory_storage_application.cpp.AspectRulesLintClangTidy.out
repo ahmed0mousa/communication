@@ -1,8 +1,24 @@
-9220 warnings generated.
+21898 warnings generated.
+./score/mw/com/test/shared_memory_storage/test_resources.h:46:5: warning: function 'GetEventMetaInfoAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     score::cpp::optional<uintptr_t> GetEventMetaInfoAddress(const ElementFqId element_fq_id) const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/test/shared_memory_storage/test_resources.h:69:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    69 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
       |     ^
       |     explicit 
+./score/mw/com/test/shared_memory_storage/test_resources.h:74:5: warning: function 'GetServiceDataStorage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   74 |     ServiceDataStorage& GetServiceDataStorage() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/test/shared_memory_storage/test_resources.h:80:5: warning: function 'GetServiceDataStorageResource' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     score::memory::shared::ManagedMemoryResource& GetServiceDataStorageResource() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/test/shared_memory_storage/test_resources.h:95:5: warning: function 'GetEventMetaInfoAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   95 |     score::cpp::optional<uintptr_t> GetEventMetaInfoAddress(const ElementFqId element_fq_id) const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/test/shared_memory_storage/test_resources.h:120:7: warning: class 'NotifierGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   120 | class NotifierGuard
       |       ^
@@ -18,9 +34,54 @@
   143 |     std::array<uintptr_t, 2> service_element_type_meta_information_addresses;
       |                                                                             
       |                                                                             {}
-/home/runner/.bazel/sandbox/linux-sandbox/4932/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:32:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:32:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
    32 | #include <stdint.h>
       |          ^~~~~~~~~~
       |          <cstdint>
-Suppressed 9403 warnings (9207 in non-user code, 188 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:34:1: warning: included header chrono is not used directly [misc-include-cleaner]
+   34 | #include <chrono>
+      | ^~~~~~~~~~~~~~~~~
+   35 | #include <cstdlib>
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:57:41: warning: function 'ExtractId' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   57 | score::mw::com::impl::lola::ElementFqId ExtractId(const score::mw::com::impl::lola::SkeletonEvent<SampleType>* binding)
+      |                                         ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:64:41: warning: function 'ExtractId' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   64 | score::mw::com::impl::lola::ElementFqId ExtractId(const BindingType* binding)
+      |                                         ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:81:13: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   32 | score::cpp::optional<score::mw::com::impl::lola::ElementFqId> GetElementFqId(ServiceElementType& service_element)
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:100:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   32 |         std::cerr << "Could not get lola binding.\n";
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:135:16: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   39 |     const std::vector<Parameters> allowed_parameters{Parameters::MODE, Parameters::NUM_CYCLES, Parameters::CYCLE_TIME};
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:142:31: warning: no header providing "score::mw::com::test::SharedMemoryObjectCreator" is directly included [misc-include-cleaner]
+   27 |         score::mw::com::test::SharedMemoryObjectCreator<BigDataServiceElementData>::CreateOrOpenObject(
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:146:14: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   32 |         std::stringstream ss;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:149:14: warning: no header providing "std::cout" is directly included [misc-include-cleaner]
+  149 |         std::cout << ss.str() << std::endl;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:188:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   30 |         score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped"}).value();
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:224:50: warning: no header providing "score::mw::com::impl::SkeletonEventView" is directly included [misc-include-cleaner]
+   25 |             GetElementFqId<score::mw::com::impl::SkeletonEventView<MapApiLanesStamped>,
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:249:60: warning: no header providing "score::mw::com::impl::SkeletonBaseView" is directly included [misc-include-cleaner]
+   25 |                                      score::mw::com::impl::SkeletonBaseView,
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:309:18: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   39 |             std::ignore = score::mw::com::test::BigDataProxy::StopFindService(find_service_handle);
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4868/execroot/_main/score/mw/com/test/shared_memory_storage/shared_memory_storage_application.cpp:329:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE" is directly included [misc-include-cleaner]
+   32 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_MESSAGE(proxy_creation_data.handle != nullptr,
+      |         ^
+Suppressed 22064 warnings (21867 in non-user code, 189 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

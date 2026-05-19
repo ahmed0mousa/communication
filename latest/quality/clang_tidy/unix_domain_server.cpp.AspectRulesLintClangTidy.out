@@ -1,4 +1,12 @@
-4919 warnings generated.
+9494 warnings generated.
+./score/message_passing/unix_domain/unix_domain_engine.h:34:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   34 | namespace score
+      | ^~~~~~~~~~~~~~~
+   35 | {
+      | ~
+   36 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
 ./score/message_passing/unix_domain/unix_domain_engine.h:47:7: warning: class 'UnixDomainEngine' defines a destructor, a copy constructor and a copy assignment operator but does not define a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    47 | class UnixDomainEngine final : public ISharedResourceEngine
       |       ^
@@ -9,22 +17,66 @@
 ./score/message_passing/unix_domain/unix_domain_engine.h:96:10: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    96 |     void EnqueueCommand(CommandQueueEntry& entry,
       |          ^
+./score/message_passing/unix_domain/unix_domain_engine.h:112:5: warning: function 'IsOnCallbackThread' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  112 |     bool IsOnCallbackThread() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/unix_domain/unix_domain_server.h:26:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   26 | namespace score
+      | ^~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   29 | {
+      | ~
+   30 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
 ./score/message_passing/unix_domain/unix_domain_server.h:33:7: warning: class 'UnixDomainServer' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    33 | class UnixDomainServer final : public IServer
       |       ^
 ./score/message_passing/unix_domain/unix_domain_server.h:36:11: warning: class 'ServerConnection' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    36 |     class ServerConnection final : public IServerConnection
       |           ^
+./score/message_passing/unix_domain/unix_domain_server.h:42:9: warning: function 'GetClientIdentity' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |         const ClientIdentity& GetClientIdentity() const noexcept override;
+      |         ^
+      |         [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_server.h:71:50: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
    71 |     score::cpp::expected_blank<score::os::Error> StartListening(
       |                                                  ^
+./score/message_passing/unix_domain/unix_domain_server_factory.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+      | namespace score::message_passing
+./score/message_passing/unix_domain/unix_domain_server_factory.h:36:5: warning: function 'GetEngine' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   36 |     std::shared_ptr<UnixDomainEngine> GetEngine() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/message_passing/unix_domain/unix_domain_socket_address.h:28:5: warning: function 'GetAddressString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   28 |     const char* GetAddressString() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:30:18: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
    30 |         return &(addr_.sun_path[IsAbstract() ? 1 : 0]);
       |                  ^
+./score/message_passing/unix_domain/unix_domain_socket_address.h:33:5: warning: function 'IsAbstract' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     bool IsAbstract() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:35:17: warning: implicit conversion 'char' -> 'bool' [readability-implicit-bool-conversion]
    35 |         return !addr_.sun_path[0];
       |                ~^                
       |                                   == 0
+./score/message_passing/unix_domain/unix_domain_socket_address.h:38:5: warning: function 'data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     const sockaddr* data() const noexcept
+      |     ^
+      |     [[nodiscard]] 
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:40:16: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
    40 |         return reinterpret_cast<const sockaddr*>(&addr_);
       |                ^
@@ -42,16 +94,141 @@
 ./score/message_passing/unix_domain/unix_domain_socket_address.h:56:32: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
    56 |     std::memcpy(addr_.sun_path + (isAbstract ? 1 : 0), path.data(), len);
       |                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/1856/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:106:18: warning: variable 'code' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:21:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   21 | namespace score
+      | ^~~~~~~~~~~~~~~
+   22 | {
+      | ~
+   23 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:33:16: warning: no header providing "std::int32_t" is directly included [misc-include-cleaner]
+   19 | #include <score/utility.hpp>
+   20 | 
+   21 | namespace score
+   22 | {
+   23 | namespace message_passing
+   24 | {
+   25 | namespace detail
+   26 | {
+   27 | 
+   28 | namespace
+   29 | {
+   30 | 
+   31 | // The socket listening backlog is quite an arbitrary value: if a client gets ECONNREFUSED because it didn't fit
+   32 | // into the connection backlog queue, it will try to reconnect after some delay again.
+   33 | constexpr std::int32_t kSocketListenBacklog = 20;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:39:54: warning: no header providing "score::message_passing::ClientIdentity" is directly included [misc-include-cleaner]
+   16 |                                                      ClientIdentity client_identity) noexcept
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:44:59: warning: no header providing "score::message_passing::UserData" is directly included [misc-include-cleaner]
+   44 | void UnixDomainServer::ServerConnection::AcceptConnection(UserData&& data,
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:45:76: warning: no header providing "score::cpp::pmr::unique_ptr" is directly included [misc-include-cleaner]
+   19 |                                                           score::cpp::pmr::unique_ptr<ServerConnection>&& self) noexcept
+      |                                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:47:23: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   20 |     user_data_ = std::move(data);
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:63:18: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   63 |     self_ = std::move(self);
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:76:13: warning: no header providing "score::cpp::expected_blank" is directly included [misc-include-cleaner]
+   19 | score::cpp::expected_blank<score::os::Error> UnixDomainServer::ServerConnection::Reply(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:76:39: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   18 | score::cpp::expected_blank<score::os::Error> UnixDomainServer::ServerConnection::Reply(
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:77:17: warning: no header providing "score::cpp::span" is directly included [misc-include-cleaner]
+   19 |     score::cpp::span<const std::uint8_t> message) noexcept
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:77:33: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   77 |     score::cpp::span<const std::uint8_t> message) noexcept
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:81:28: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+   81 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EMSGSIZE));
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:81:78: warning: no header providing "EMSGSIZE" is directly included [misc-include-cleaner]
+   19 |         return score::cpp::make_unexpected(score::os::Error::createFromErrno(EMSGSIZE));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:100:10: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   19 |     std::lock_guard<std::recursive_mutex> guard(server_.connection_setup_mutex_);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:100:26: warning: no header providing "std::recursive_mutex" is directly included [misc-include-cleaner]
+  100 |     std::lock_guard<std::recursive_mutex> guard(server_.connection_setup_mutex_);
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:106:18: warning: variable 'code' is not initialized [cppcoreguidelines-init-variables]
   106 |     std::uint8_t code;
       |                  ^   
       |                       = 0
-/home/runner/.bazel/sandbox/linux-sandbox/1856/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:171:64: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:108:57: warning: no header providing "score::message_passing::IConnectionHandler" is directly included [misc-include-cleaner]
+   16 |     using HandlerPointerT = score::cpp::pmr::unique_ptr<IConnectionHandler>;
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:118:26: warning: no header providing "std::holds_alternative" is directly included [misc-include-cleaner]
+   20 |             return (std::holds_alternative<HandlerPointerT>(user_data)
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:154:41: warning: no header providing "std::shared_ptr" is directly included [misc-include-cleaner]
+   19 | UnixDomainServer::UnixDomainServer(std::shared_ptr<UnixDomainEngine> engine,
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:155:42: warning: no header providing "score::message_passing::ServiceProtocolConfig" is directly included [misc-include-cleaner]
+   16 |                                    const ServiceProtocolConfig& protocol_config,
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:156:42: warning: no header providing "score::message_passing::IServerFactory" is directly included [misc-include-cleaner]
+   16 |                                    const IServerFactory::ServerConfig& /*server_config*/) noexcept
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:157:20: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  157 |     : engine_{std::move(engine)},
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:171:64: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
   171 | score::cpp::expected_blank<score::os::Error> UnixDomainServer::StartListening(
       |                                                                ^
-/home/runner/.bazel/sandbox/linux-sandbox/1856/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:247:5: warning: uninitialized record type: 'cr' [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:172:5: warning: no header providing "score::message_passing::ConnectCallback" is directly included [misc-include-cleaner]
+  172 |     ConnectCallback connect_callback,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:173:5: warning: no header providing "score::message_passing::DisconnectCallback" is directly included [misc-include-cleaner]
+  173 |     DisconnectCallback disconnect_callback,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:174:5: warning: no header providing "score::message_passing::MessageCallback" is directly included [misc-include-cleaner]
+  174 |     MessageCallback sent_callback,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:177:30: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  177 |     connect_callback_ = std::move(connect_callback);
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:178:33: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  178 |     disconnect_callback_ = std::move(disconnect_callback);
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:179:27: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  179 |     sent_callback_ = std::move(sent_callback);
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:188:28: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+  188 |         return score::cpp::make_unexpected(fd_expected.error());
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:219:9: warning: no header providing "score::message_passing::ISharedResourceEngine" is directly included [misc-include-cleaner]
+   16 |         ISharedResourceEngine::TimePoint{},
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:247:5: warning: uninitialized record type: 'cr' [cppcoreguidelines-pro-type-member-init]
   247 |     ucred cr;
       |     ^       
       |             {}
-Suppressed 4934 warnings (4900 in non-user code, 31 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:247:5: warning: no header providing "ucred" is directly included [misc-include-cleaner]
+   20 |     ucred cr;
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:248:5: warning: no header providing "socklen_t" is directly included [misc-include-cleaner]
+  248 |     socklen_t cr_len = sizeof(cr);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:249:57: warning: no header providing "SOL_SOCKET" is directly included [misc-include-cleaner]
+   19 |     auto sockopt_expected = socket->getsockopt(data_fd, SOL_SOCKET, SO_PEERCRED, &cr, &cr_len);
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:249:69: warning: no header providing "SO_PEERCRED" is directly included [misc-include-cleaner]
+  249 |     auto sockopt_expected = socket->getsockopt(data_fd, SOL_SOCKET, SO_PEERCRED, &cr, &cr_len);
+      |                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1001/execroot/_main/score/message_passing/unix_domain/unix_domain_server.cpp:259:26: warning: no header providing "score::cpp::pmr::make_unique" is directly included [misc-include-cleaner]
+  259 |         score::cpp::pmr::make_unique<ServerConnection>(engine_->GetMemoryResource(), *this, data_fd, identity);
+      |                          ^
+Suppressed 9467 warnings (9432 in non-user code, 32 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

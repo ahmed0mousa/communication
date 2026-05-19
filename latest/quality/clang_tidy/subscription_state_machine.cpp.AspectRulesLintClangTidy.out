@@ -1,15 +1,270 @@
-5314 warnings generated.
+11175 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/slot_collector.h:62:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     std::size_t GetNumNewSamplesAvailable() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_not_subscribed_states.h:46:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     std::optional<std::uint16_t> GetMaxSampleCount() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_not_subscribed_states.h:48:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_state_base.h:51:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::optional<std::uint16_t> GetMaxSampleCount() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_state_base.h:53:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   53 |     virtual const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_subscribed_states.h:48:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     std::optional<std::uint16_t> GetMaxSampleCount() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_subscribed_states.h:50:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_subscription_pending_states.h:48:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     std::optional<std::uint16_t> GetMaxSampleCount() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_subscription_pending_states.h:50:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5382 warnings (5305 in non-user code, 71 NOLINT, 6 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:26:58: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:27:58: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/slot_collector.h"
+   16 | 
+   17 | #include "score/mw/com/impl/bindings/lola/subscription_not_subscribed_states.h"
+   18 | #include "score/mw/com/impl/bindings/lola/subscription_subscribed_states.h"
+   19 | #include "score/mw/com/impl/bindings/lola/subscription_subscription_pending_states.h"
+   20 | 
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:28:58: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+   28 |                                                    const pid_t event_source_pid,
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:29:52: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/slot_collector.h"
+   16 | 
+   17 | #include "score/mw/com/impl/bindings/lola/subscription_not_subscribed_states.h"
+   18 | #include "score/mw/com/impl/bindings/lola/subscription_subscribed_states.h"
+   19 | #include "score/mw/com/impl/bindings/lola/subscription_subscription_pending_states.h"
+   20 | 
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+   28 |                                                    const pid_t event_source_pid,
+   29 |                                                    ConsumerEventDataControlLocalView<>& event_data_control_local,
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:30:52: warning: no header providing "score::mw::com::impl::lola::EventSubscriptionControl" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/slot_collector.h"
+   16 | 
+   17 | #include "score/mw/com/impl/bindings/lola/subscription_not_subscribed_states.h"
+   18 | #include "score/mw/com/impl/bindings/lola/subscription_subscribed_states.h"
+   19 | #include "score/mw/com/impl/bindings/lola/subscription_subscription_pending_states.h"
+   20 | 
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+   28 |                                                    const pid_t event_source_pid,
+   29 |                                                    ConsumerEventDataControlLocalView<>& event_data_control_local,
+   30 |                                                    EventSubscriptionControl<>& subscription_control,
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:31:52: warning: no header providing "score::mw::com::impl::lola::TransactionLogSet" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+   28 |                                                    const pid_t event_source_pid,
+   29 |                                                    ConsumerEventDataControlLocalView<>& event_data_control_local,
+   30 |                                                    EventSubscriptionControl<>& subscription_control,
+   31 |                                                    TransactionLogSet& transaction_log_set,
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:32:58: warning: no header providing "score::mw::com::impl::lola::TransactionLogId" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+   28 |                                                    const pid_t event_source_pid,
+   29 |                                                    ConsumerEventDataControlLocalView<>& event_data_control_local,
+   30 |                                                    EventSubscriptionControl<>& subscription_control,
+   31 |                                                    TransactionLogSet& transaction_log_set,
+   32 |                                                    const TransactionLogId& transaction_log_id) noexcept
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:33:12: warning: no header providing "std::enable_shared_from_this" is directly included [misc-include-cleaner]
+   21 | #include <utility>
+   22 | 
+   23 | namespace score::mw::com::impl::lola
+   24 | {
+   25 | 
+   26 | SubscriptionStateMachine::SubscriptionStateMachine(const QualityType quality_type,
+   27 |                                                    const ElementFqId element_fq_id,
+   28 |                                                    const pid_t event_source_pid,
+   29 |                                                    ConsumerEventDataControlLocalView<>& event_data_control_local,
+   30 |                                                    EventSubscriptionControl<>& subscription_control,
+   31 |                                                    TransactionLogSet& transaction_log_set,
+   32 |                                                    const TransactionLogId& transaction_log_id) noexcept
+   33 |     : std::enable_shared_from_this<SubscriptionStateMachine>{},
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:35:20: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   35 |       states_{std::make_unique<NotSubscribedState>(*this),
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:36:20: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   36 |               std::make_unique<SubscriptionPendingState>(*this),
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:37:20: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   37 |               std::make_unique<SubscribedState>(*this)},
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:38:26: warning: no header providing "score::mw::com::impl::lola::SubscriptionStateMachineState" is directly included [misc-include-cleaner]
+   18 |       current_state_idx_{SubscriptionStateMachineState::NOT_SUBSCRIBED_STATE},
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:56:10: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   21 |     std::lock_guard<std::mutex> lock{state_mutex_};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:65:1: warning: no header providing "score::mw::com::impl::lola::SubscriptionStateBase" is directly included [misc-include-cleaner]
+   18 | SubscriptionStateBase& SubscriptionStateMachine::GetCurrentEventState() noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:68:38: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   21 |     return *states_[static_cast<std::uint8_t>(current_state_idx_)];
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:77:1: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   20 | Result<void> SubscriptionStateMachine::SubscribeEvent(const std::size_t max_sample_count) noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:77:66: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   21 | Result<void> SubscriptionStateMachine::SubscribeEvent(const std::size_t max_sample_count) noexcept
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:101:55: warning: no header providing "std::weak_ptr" is directly included [misc-include-cleaner]
+  101 | void SubscriptionStateMachine::SetReceiveHandler(std::weak_ptr<ScopedEventReceiveHandler> handler) noexcept
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:101:64: warning: no header providing "score::mw::com::impl::ScopedEventReceiveHandler" is directly included [misc-include-cleaner]
+   20 | void SubscriptionStateMachine::SetReceiveHandler(std::weak_ptr<ScopedEventReceiveHandler> handler) noexcept
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:113:66: warning: no header providing "score::mw::com::impl::SubscriptionStateChangeHandler" is directly included [misc-include-cleaner]
+   20 | void SubscriptionStateMachine::SetSubscriptionStateChangeHandler(SubscriptionStateChangeHandler handler) noexcept
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:125:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   21 | std::optional<std::uint16_t> SubscriptionStateMachine::GetMaxSampleCount() const noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:125:20: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+  125 | std::optional<std::uint16_t> SubscriptionStateMachine::GetMaxSampleCount() const noexcept
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:131:13: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   21 | score::cpp::optional<SlotCollector>& SubscriptionStateMachine::GetSlotCollectorLockFree() noexcept
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4061/execroot/_main/score/mw/com/impl/bindings/lola/subscription_state_machine.cpp:156:56: warning: no header providing "score::mw::com::impl::lola::SubscriptionStateMachineStateToSubscriptionState" is directly included [misc-include-cleaner]
+   17 |             subscription_state_change_handler_.value()(SubscriptionStateMachineStateToSubscriptionState(newState));
+      |                                                        ^
+Suppressed 11194 warnings (11116 in non-user code, 72 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

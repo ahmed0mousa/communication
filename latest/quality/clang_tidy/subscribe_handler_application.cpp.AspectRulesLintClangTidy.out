@@ -1,3 +1,65 @@
-9269 warnings generated.
-Suppressed 9434 warnings (9259 in non-user code, 165 NOLINT, 10 with check filters).
+21008 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:16:1: warning: included header instance_specifier.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/instance_specifier.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/mw/com/test/common_test_resources/sample_sender_receiver.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:25:1: warning: included header future is not used directly [misc-include-cleaner]
+   25 | #include <future>
+      | ^~~~~~~~~~~~~~~~~
+   26 | #include <string>
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:27:1: warning: included header thread is not used directly [misc-include-cleaner]
+   27 | #include <thread>
+      | ^~~~~~~~~~~~~~~~~
+   28 | #include <vector>
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:53:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   21 |         score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped"});
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:56:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   26 |         std::cerr << "Invalid instance specifier, terminating." << std::endl;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:56:73: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   26 |         std::cerr << "Invalid instance specifier, terminating." << std::endl;
+      |                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:58:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   25 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:69:18: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   26 |             std::stringstream ss;
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:72:18: warning: no header providing "std::cout" is directly included [misc-include-cleaner]
+   72 |             std::cout << ss.str() << std::endl;
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/5108/execroot/_main/score/mw/com/test/subscribe_handler/subscribe_handler_application.cpp:81:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   81 |     else if (mode == "recv" || mode == "proxy")
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   82 |     {
+      |     ~
+   83 |         auto interprocess_notification_result =
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   84 |             score::mw::com::test::SharedMemoryObjectCreator<score::os::InterprocessNotification>::CreateOrOpenObject(
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   85 |                 kInterprocessNotificationShmPath);
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   86 |         if (!interprocess_notification_result.has_value())
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   87 |         {
+      |         ~
+   88 |             std::stringstream ss;
+      |             ~~~~~~~~~~~~~~~~~~~~~
+   89 |             ss << "Creating or opening interprocess notification object on proxy side failed:"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   90 |                << interprocess_notification_result.error().ToString();
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   91 |             std::cout << ss.str() << std::endl;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   92 |             return EXIT_FAILURE;
+      |             ~~~~~~~~~~~~~~~~~~~~
+   93 |         }
+      |         ~
+   94 | 
+   95 |         const score::mw::com::test::SharedMemoryObjectGuard<score::os::InterprocessNotification>
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   96 |             interprocess_notification_guard{interprocess_notification_result.value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Suppressed 21164 warnings (20988 in non-user code, 166 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

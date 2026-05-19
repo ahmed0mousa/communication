@@ -1,10 +1,58 @@
-9207 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4877/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:132:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
+21805 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:25:16: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::test
+   21 | {
+   22 | 
+   23 | namespace
+   24 | {
+   25 | constexpr std::string_view kBenchmarkInstanceSpecifier = "test/lolabenchmark";
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:38:27: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   38 |         this->Repetitions(10);
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:60:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+   19 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(skeleton_result_.has_value());
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:61:26: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   19 |         skeleton_ = std::move(skeleton_result_.value());
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:75:23: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   75 |         proxy_ = std::move(proxy_result_.value());
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:78:82: warning: 32 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   78 |         auto subscribe_result = proxy_->test_event.Subscribe(/*max_num_samples*/ 32);
+      |                                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:82:33: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   82 |             for (int i = 0; i < 100; ++i)
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:89:36: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   89 |                 auto sample = std::move(sample_alloc_result.value());
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:90:22: warning: no header providing "std::fill" is directly included [misc-include-cleaner]
+   18 |                 std::fill(sample->begin(), sample->end(), 1U);
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:91:22: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   19 |                 std::ignore = skeleton_->test_event.Send(std::move(sample));
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:92:35: warning: no header providing "std::this_thread::sleep_for" is directly included [misc-include-cleaner]
+   19 |                 std::this_thread::sleep_for(std::chrono::milliseconds{1});
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:118:63: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  118 |         std::this_thread::sleep_for(std::chrono::milliseconds{100});
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:122:10: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   19 |     std::optional<TestDataSkeleton> skeleton_;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:125:17: warning: no header providing "std::atomic" is directly included [misc-include-cleaner]
+   18 |     static std::atomic<bool> fixture_initialized_;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:132:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
   132 |     for (auto _ : state)
       |               ^ ~
-/home/runner/.bazel/sandbox/linux-sandbox/4877/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:132:15: note: Value stored to '_' during its initialization is never read
+/home/runner/.bazel/sandbox/linux-sandbox/4512/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_num_new_samples_benchmarks.cpp:132:15: note: Value stored to '_' during its initialization is never read
   132 |     for (auto _ : state)
       |               ^ ~
-Suppressed 9398 warnings (9196 in non-user code, 192 NOLINT, 10 with check filters).
+Suppressed 21983 warnings (21780 in non-user code, 193 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 1 warning treated as error

@@ -1,3 +1,85 @@
-8513 warnings generated.
-Suppressed 8642 warnings (8505 in non-user code, 129 NOLINT, 8 with check filters).
+18061 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:15:1: warning: included header binding_service_type_deployment.h is not used directly [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/binding_service_type_deployment.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/mw/com/impl/configuration/lola_service_type_deployment.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:33:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   20 | #include <score/assert.hpp>
+   21 | #include <score/blank.hpp>
+   22 | #include <score/overload.hpp>
+   23 | 
+   24 | #include <string>
+   25 | #include <variant>
+   26 | 
+   27 | namespace score::mw::com::impl
+   28 | {
+   29 | 
+   30 | namespace
+   31 | {
+   32 | 
+   33 | std::optional<LoLaProxyElementBuildingBlocks> LookupForLola(const HandleType& handle,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:33:67: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   18 | #include "score/mw/log/logging.h"
+   19 | 
+   20 | #include <score/assert.hpp>
+   21 | #include <score/blank.hpp>
+   22 | #include <score/overload.hpp>
+   23 | 
+   24 | #include <string>
+   25 | #include <variant>
+   26 | 
+   27 | namespace score::mw::com::impl
+   28 | {
+   29 | 
+   30 | namespace
+   31 | {
+   32 | 
+   33 | std::optional<LoLaProxyElementBuildingBlocks> LookupForLola(const HandleType& handle,
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:34:61: warning: no header providing "score::mw::com::impl::ProxyBinding" is directly included [misc-include-cleaner]
+   18 |                                                             ProxyBinding* parent_binding,
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:36:72: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   25 | #include <variant>
+   26 | 
+   27 | namespace score::mw::com::impl
+   28 | {
+   29 | 
+   30 | namespace
+   31 | {
+   32 | 
+   33 | std::optional<LoLaProxyElementBuildingBlocks> LookupForLola(const HandleType& handle,
+   34 |                                                             ProxyBinding* parent_binding,
+   35 |                                                             const LolaServiceTypeDeployment& lola_type_deployment,
+   36 |                                                             const std::string_view name,
+      |                                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:37:67: warning: no header providing "score::mw::com::impl::ServiceElementType" is directly included [misc-include-cleaner]
+   18 |                                                             const ServiceElementType element_type) noexcept
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:39:50: warning: no header providing "score::mw::com::impl::lola::Proxy" is directly included [misc-include-cleaner]
+   15 |     auto* const lola_parent = dynamic_cast<lola::Proxy*>(parent_binding);
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:42:21: warning: no header providing "std::nullopt" is directly included [misc-include-cleaner]
+   42 |         return std::nullopt;
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:46:54: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   16 |     const auto* const lola_instance_id = std::get_if<LolaServiceInstanceId>(&(instance_id.binding_info_));
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:51:5: warning: no header providing "score::mw::com::impl::LolaServiceElementId" is directly included [misc-include-cleaner]
+   16 |     LolaServiceElementId element_id{};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:55:26: warning: no header providing "score::mw::com::impl::GetServiceElementId" is directly included [misc-include-cleaner]
+   16 |             element_id = GetServiceElementId<ServiceElementType::EVENT>(lola_type_deployment, name_str);
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:58:26: warning: no header providing "score::mw::com::impl::GetServiceElementId" is directly included [misc-include-cleaner]
+   58 |             element_id = GetServiceElementId<ServiceElementType::FIELD>(lola_type_deployment, name_str);
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:61:26: warning: no header providing "score::mw::com::impl::GetServiceElementId" is directly included [misc-include-cleaner]
+   61 |             element_id = GetServiceElementId<ServiceElementType::METHOD>(lola_type_deployment, name_str);
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4164/execroot/_main/score/mw/com/impl/plumbing/lola_proxy_element_building_blocks.cpp:71:17: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   15 |     const lola::ElementFqId element_fq_id{
+      |                 ^
+Suppressed 18177 warnings (18039 in non-user code, 130 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

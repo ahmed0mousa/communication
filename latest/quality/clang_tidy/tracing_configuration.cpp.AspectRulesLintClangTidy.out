@@ -1,3 +1,62 @@
-4900 warnings generated.
-Suppressed 4940 warnings (4897 in non-user code, 40 NOLINT, 3 with check filters).
+8775 warnings generated.
+./score/mw/com/impl/configuration/tracing_configuration.h:64:5: warning: function 'IsTracingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   64 |     bool IsTracingEnabled() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:68:5: warning: function 'GetTracingFilterConfigPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     std::string_view GetTracingFilterConfigPath() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:72:5: warning: function 'GetApplicationInstanceID' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   72 |     std::string_view GetApplicationInstanceID() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:79:5: warning: function 'IsServiceElementTracingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   79 |     bool IsServiceElementTracingEnabled(tracing::ServiceElementIdentifierView service_element_identifier_view,
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:20:1: warning: included header iostream is not used directly [misc-include-cleaner]
+   20 | #include <iostream>
+      | ^~~~~~~~~~~~~~~~~~~
+   21 | #include <unordered_set>
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:30:73: warning: no header providing "score::mw::com::impl::tracing::ServiceElementIdentifier" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <score/assert.hpp>
+   18 | 
+   19 | #include <exception>
+   20 | #include <iostream>
+   21 | #include <unordered_set>
+   22 | #include <utility>
+   23 | 
+   24 | namespace score::mw::com::impl
+   25 | {
+   26 | 
+   27 | namespace detail_tracing_configuration
+   28 | {
+   29 | 
+   30 | bool CompareServiceElementIdentifierWithView::operator()(const tracing::ServiceElementIdentifier& lhs,
+      |                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:36:73: warning: no header providing "score::mw::com::impl::tracing::ServiceElementIdentifierView" is directly included [misc-include-cleaner]
+   15 | bool CompareServiceElementIdentifierWithView::operator()(const tracing::ServiceElementIdentifierView lhs_view,
+      |                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:60:58: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   21 | void TracingConfiguration::SetApplicationInstanceID(std::string application_instance_id) noexcept
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:62:47: warning: parameter 'application_instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   62 |     tracing_config_.application_instance_id = application_instance_id;
+      |                                               ^                      
+      |                                               std::move(             )
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:67:48: warning: parameter 'trace_filter_config_path' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   67 |     tracing_config_.trace_filter_config_path = trace_filter_config_path;
+      |                                                ^                       
+      |                                                std::move(              )
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:71:60: warning: no header providing "score::mw::com::impl::InstanceSpecifier" is directly included [misc-include-cleaner]
+   15 |                                                            InstanceSpecifier instance_specifier) noexcept
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1371/execroot/_main/score/mw/com/impl/configuration/tracing_configuration.cpp:118:16: warning: the const qualified variable 'instance_specifier' is copy-constructed from a const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  118 |     const auto instance_specifier = instance_specifier_result.value();
+      |                ^
+      |               &
+Suppressed 8804 warnings (8760 in non-user code, 41 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

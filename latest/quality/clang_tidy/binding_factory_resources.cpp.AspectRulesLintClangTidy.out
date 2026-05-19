@@ -1,4 +1,4 @@
-9748 warnings generated.
+23298 warnings generated.
 ./score/mw/com/impl/test/binding_factory_resources.h:46:7: warning: class 'GenericProxyEventBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    46 | class GenericProxyEventBindingFactoryMockGuard
       |       ^
@@ -26,5 +26,5 @@
 ./score/mw/com/impl/test/binding_factory_resources.h:171:7: warning: class 'SkeletonMethodBindingFactoryMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   171 | class SkeletonMethodBindingFactoryMockGuard
       |       ^
-Suppressed 9948 warnings (9731 in non-user code, 209 NOLINT, 8 with check filters).
+Suppressed 23551 warnings (23281 in non-user code, 262 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

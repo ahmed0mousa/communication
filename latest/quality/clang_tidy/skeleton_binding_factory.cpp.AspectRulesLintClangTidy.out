@@ -1,3 +1,11 @@
-6007 warnings generated.
-Suppressed 6094 warnings (6001 in non-user code, 87 NOLINT, 6 with check filters).
+12492 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3620/execroot/_main/score/mw/com/impl/plumbing/skeleton_binding_factory.cpp:20:1: warning: no header providing "score::mw::com::impl::ISkeletonBindingFactory" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/plumbing/skeleton_binding_factory_impl.h"
+   16 | 
+   17 | namespace score::mw::com::impl
+   18 | {
+   19 | 
+   20 | ISkeletonBindingFactory* SkeletonBindingFactory::mock_{nullptr};
+      | ^
+Suppressed 12579 warnings (12485 in non-user code, 88 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

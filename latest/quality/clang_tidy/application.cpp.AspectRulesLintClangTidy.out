@@ -1,6 +1,65 @@
-9055 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4741/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:25:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+21260 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:15:1: warning: included header child_process_guard.h is not used directly [misc-include-cleaner]
+   15 | #include "score/mw/com/test/common_test_resources/child_process_guard.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/mw/com/test/common_test_resources/general_resources.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:18:1: warning: included header shared_memory_object_guard.h is not used directly [misc-include-cleaner]
+   18 | #include "score/mw/com/test/common_test_resources/shared_memory_object_guard.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   19 | #include "score/mw/com/test/common_test_resources/stop_token_sig_term_handler.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:25:1: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
    25 | using namespace score::mw::com::test;
       | ^
-Suppressed 9240 warnings (9046 in non-user code, 186 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:27:12: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   24 | 
+   25 | using namespace score::mw::com::test;
+   26 | 
+   27 | const std::string_view kShmSkeletonCheckpointControlFileName = "skeleton_checks_number_of_allocations_checkpoint_file";
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:33:20: warning: no header providing "std::chrono::seconds" is directly included [misc-include-cleaner]
+   22 | #include <cstdlib>
+   23 | #include <iostream>
+   24 | 
+   25 | using namespace score::mw::com::test;
+   26 | 
+   27 | const std::string_view kShmSkeletonCheckpointControlFileName = "skeleton_checks_number_of_allocations_checkpoint_file";
+   28 | const std::string_view kSkeletonCheckpointControlName = "Skeleton";
+   29 | constexpr int kNumberOfSampleSlots{10};
+   30 | constexpr int kNumberOfTracingSlots{1};
+   31 | constexpr int kMaxNumSamples{kNumberOfSampleSlots + kNumberOfTracingSlots};
+   32 | const std::string_view kInstanceSpecifier = "partial_restart/small_but_great";
+   33 | const std::chrono::seconds kMaxWaitTimeToReachCheckpoint{30U};
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:35:6: warning: function 'PerformProviderActions' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   35 | void PerformProviderActions(CheckPointControl& check_point_control, score::cpp::stop_token stop_token)
+      |      ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:35:81: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   24 | 
+   25 | using namespace score::mw::com::test;
+   26 | 
+   27 | const std::string_view kShmSkeletonCheckpointControlFileName = "skeleton_checks_number_of_allocations_checkpoint_file";
+   28 | const std::string_view kSkeletonCheckpointControlName = "Skeleton";
+   29 | constexpr int kNumberOfSampleSlots{10};
+   30 | constexpr int kNumberOfTracingSlots{1};
+   31 | constexpr int kMaxNumSamples{kNumberOfSampleSlots + kNumberOfTracingSlots};
+   32 | const std::string_view kInstanceSpecifier = "partial_restart/small_but_great";
+   33 | const std::chrono::seconds kMaxWaitTimeToReachCheckpoint{30U};
+   34 | 
+   35 | void PerformProviderActions(CheckPointControl& check_point_control, score::cpp::stop_token stop_token)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:57:10: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   24 |     std::vector<score::mw::com::SampleAllocateePtr<SimpleEventDatatype>> sample_ptrs{};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:67:36: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   24 |         sample_ptrs.push_back(std::move(sample_result.value()));
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:91:50: warning: parameter 'stop_token' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   24 |     if (WaitForChildProceed(check_point_control, stop_token) != CheckPointControl::ProceedInstruction::FINISH_ACTIONS)
+      |                                                  ^         
+      |                                                  std::move()
+/home/runner/.bazel/sandbox/linux-sandbox/4786/execroot/_main/score/mw/com/test/partial_restart/checks_number_of_allocations/application.cpp:105:17: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+  105 |     score::cpp::stop_source test_stop_source{};
+      |                 ^
+Suppressed 21436 warnings (21241 in non-user code, 187 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

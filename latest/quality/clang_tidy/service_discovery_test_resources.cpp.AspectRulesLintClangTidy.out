@@ -1,6 +1,52 @@
-6760 warnings generated.
+15121 warnings generated.
 ./score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.h:33:7: warning: class 'FileSystemGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    33 | class FileSystemGuard
       |       ^
-Suppressed 6908 warnings (6753 in non-user code, 149 NOLINT, 6 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4425/execroot/_main/score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.cpp:34:13: warning: no header providing "score::cpp::callback" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | namespace
+   24 | {
+   25 | 
+   26 | #ifdef __QNXNTO__
+   27 | const filesystem::Path kTmpPath{"/tmp_discovery/mw_com_lola/service_discovery"};
+   28 | #else
+   29 | const filesystem::Path kTmpPath{"/tmp/mw_com_lola/service_discovery"};
+   30 | #endif
+   31 | 
+   32 | }  // namespace
+   33 | 
+   34 | score::cpp::callback<void(ServiceHandleContainer<HandleType>, FindServiceHandle)> CreateWrappedMockFindServiceHandler(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4425/execroot/_main/score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.cpp:34:50: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | namespace
+   24 | {
+   25 | 
+   26 | #ifdef __QNXNTO__
+   27 | const filesystem::Path kTmpPath{"/tmp_discovery/mw_com_lola/service_discovery"};
+   28 | #else
+   29 | const filesystem::Path kTmpPath{"/tmp/mw_com_lola/service_discovery"};
+   30 | #endif
+   31 | 
+   32 | }  // namespace
+   33 | 
+   34 | score::cpp::callback<void(ServiceHandleContainer<HandleType>, FindServiceHandle)> CreateWrappedMockFindServiceHandler(
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4425/execroot/_main/score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.cpp:35:16: warning: no header providing "testing::MockFunction" is directly included [misc-include-cleaner]
+   19 |     ::testing::MockFunction<void(ServiceHandleContainer<HandleType>, FindServiceHandle)>& mock_find_service_handler)
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4425/execroot/_main/score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.cpp:39:55: warning: parameter 'containers' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   14 |             mock_find_service_handler.AsStdFunction()(containers, handle);
+      |                                                       ^         
+      |                                                       std::move()
+/home/runner/.bazel/sandbox/linux-sandbox/4425/execroot/_main/score/mw/com/impl/bindings/lola/test/service_discovery_test_resources.cpp:45:10: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   19 |     std::ignore = filesystem_.standard->RemoveAll(kTmpPath);
+      |          ^
+Suppressed 15275 warnings (15109 in non-user code, 160 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

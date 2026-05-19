@@ -1,3 +1,53 @@
-4622 warnings generated.
-Suppressed 4644 warnings (4619 in non-user code, 22 NOLINT, 3 with check filters).
+8656 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:34:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   16 | std::optional<pid_t> TryUpdatePidForExistingId(
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:34:15: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   16 | std::optional<pid_t> TryUpdatePidForExistingId(
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:40:24: warning: no header providing "score::containers::DynamicArray" is directly included [misc-include-cleaner]
+   15 |     score::containers::DynamicArray<ApplicationIdPidMappingEntry>::iterator entries_begin,
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:40:37: warning: no header providing "score::mw::com::impl::lola::ApplicationIdPidMappingEntry" is directly included [misc-include-cleaner]
+   15 |     score::containers::DynamicArray<ApplicationIdPidMappingEntry>::iterator entries_begin,
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:42:16: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   16 |     const std::uint32_t application_id,
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:64:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+   64 |         else if ((entry_status == ApplicationIdPidMappingEntry::MappingEntryStatus::kUpdating) &&
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   65 |                  (entry_applicationid == application_id))
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   66 |         {
+      |         ~
+   67 |             // This is a very odd situation! I.e. someone is currently updating the pid for OUR application ID!
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |             // this could only be possible, when our application has crashed before, while updating the pid
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |             // for our application ID.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |             score::mw::log::LogWarn("lola")
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   71 |                 << "ApplicationIdPidMapping: Found mapping entry for own application ID in state kUpdating. Maybe we "
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   72 |                    "crashed before!? Now taking over entry and updating with current PID.";
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |             it->pid_ = pid;
+      |             ~~~~~~~~~~~~~~~
+   74 |             it->SetStatusAndApplicationIdAtomic(ApplicationIdPidMappingEntry::MappingEntryStatus::kUsed,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   75 |                                                 application_id);
+      |                                                 ~~~~~~~~~~~~~~~~
+   76 |             return pid;
+      |             ~~~~~~~~~~~
+   77 |         }
+      |         ~
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:108:20: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   16 |     constexpr std::size_t kMaxRetries{50U};
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1189/execroot/_main/score/mw/com/impl/bindings/lola/application_id_pid_mapping.cpp:130:96: warning: no header providing "std::memory_order_acq_rel" is directly included [misc-include-cleaner]
+   16 |                         it->key_application_id_status_, current_entry_key, new_entry_key, std::memory_order_acq_rel))
+      |                                                                                                ^
+Suppressed 8671 warnings (8645 in non-user code, 23 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

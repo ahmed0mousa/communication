@@ -1,3 +1,27 @@
-5981 warnings generated.
-Suppressed 6065 warnings (5975 in non-user code, 84 NOLINT, 6 with check filters).
+12353 warnings generated.
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:42:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:46:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:50:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:54:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 12432 warnings (12341 in non-user code, 85 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

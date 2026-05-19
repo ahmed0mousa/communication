@@ -1,3 +1,57 @@
-8519 warnings generated.
-Suppressed 8654 warnings (8511 in non-user code, 135 NOLINT, 8 with check filters).
+18066 warnings generated.
+./score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.h:88:22: warning: parameter 'parent_handle' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   37 |         GetQueueSize(parent_handle, method_name_str, method_type);
+      |                      ^            
+      |                      std::move(   )
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:22:1: warning: no header providing "score::mw::com::impl::LolaMethodInstanceDeployment" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <score/assert.hpp>
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | LolaMethodInstanceDeployment::QueueSize GetQueueSize(HandleType parent_handle,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:22:54: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <score/assert.hpp>
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | LolaMethodInstanceDeployment::QueueSize GetQueueSize(HandleType parent_handle,
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:22:65: warning: the parameter 'parent_handle' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   22 | LolaMethodInstanceDeployment::QueueSize GetQueueSize(HandleType parent_handle,
+      |                                                                 ^
+      |                                                      const     &
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:23:65: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | LolaMethodInstanceDeployment::QueueSize GetQueueSize(HandleType parent_handle,
+   23 |                                                      const std::string& method_name_str,
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:24:54: warning: no header providing "score::mw::com::impl::MethodType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <score/assert.hpp>
+   18 | 
+   19 | namespace score::mw::com::impl
+   20 | {
+   21 | 
+   22 | LolaMethodInstanceDeployment::QueueSize GetQueueSize(HandleType parent_handle,
+   23 |                                                      const std::string& method_name_str,
+   24 |                                                      MethodType method_type)
+      |                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:33:52: warning: no header providing "score::mw::com::impl::GetServiceInstanceDeploymentBinding" is directly included [misc-include-cleaner]
+   15 |     const auto& lola_service_instance_deployment = GetServiceInstanceDeploymentBinding<LolaServiceInstanceDeployment>(
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4211/execroot/_main/score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.cpp:33:88: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   15 |     const auto& lola_service_instance_deployment = GetServiceInstanceDeploymentBinding<LolaServiceInstanceDeployment>(
+      |                                                                                        ^
+Suppressed 18194 warnings (18050 in non-user code, 136 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

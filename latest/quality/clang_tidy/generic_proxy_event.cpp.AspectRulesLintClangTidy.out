@@ -1,3 +1,108 @@
-6561 warnings generated.
-Suppressed 6708 warnings (6555 in non-user code, 147 NOLINT, 6 with check filters).
+14962 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:18:1: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:18:13: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:18:67: warning: no header providing "score::mw::com::impl::GenericProxyEventBinding" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:19:58: warning: no header providing "score::mw::com::impl::TrackerGuardFactory" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+   19 |                                                          TrackerGuardFactory& tracker)
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:21:42: warning: no header providing "std::min" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+   19 |                                                          TrackerGuardFactory& tracker)
+   20 | {
+   21 |     const std::size_t num_samples = std::min(fake_samples_.size(), tracker.GetNumAvailableGuards());
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:23:24: warning: no header providing "std::make_move_iterator" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+   19 |                                                          TrackerGuardFactory& tracker)
+   20 | {
+   21 |     const std::size_t num_samples = std::min(fake_samples_.size(), tracker.GetNumAvailableGuards());
+   22 |     const auto start_iter = fake_samples_.end() - static_cast<typename FakeSamples::difference_type>(num_samples);
+   23 |     auto sample = std::make_move_iterator(start_iter);
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:27:14: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+   19 |                                                          TrackerGuardFactory& tracker)
+   20 | {
+   21 |     const std::size_t num_samples = std::min(fake_samples_.size(), tracker.GetNumAvailableGuards());
+   22 |     const auto start_iter = fake_samples_.end() - static_cast<typename FakeSamples::difference_type>(num_samples);
+   23 |     auto sample = std::make_move_iterator(start_iter);
+   24 | 
+   25 |     while (sample.base() != fake_samples_.end())
+   26 |     {
+   27 |         std::optional<SampleReferenceGuard> guard = tracker.TakeGuard();
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:27:23: warning: no header providing "score::mw::com::impl::SampleReferenceGuard" is directly included [misc-include-cleaner]
+   27 |         std::optional<SampleReferenceGuard> guard = tracker.TakeGuard();
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:28:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::mock_binding
+   16 | {
+   17 | 
+   18 | Result<std::size_t> GenericProxyEvent::GetNewFakeSamples(typename GenericProxyEventBinding::Callback&& callable,
+   19 |                                                          TrackerGuardFactory& tracker)
+   20 | {
+   21 |     const std::size_t num_samples = std::min(fake_samples_.size(), tracker.GetNumAvailableGuards());
+   22 |     const auto start_iter = fake_samples_.end() - static_cast<typename FakeSamples::difference_type>(num_samples);
+   23 |     auto sample = std::make_move_iterator(start_iter);
+   24 | 
+   25 |     while (sample.base() != fake_samples_.end())
+   26 |     {
+   27 |         std::optional<SampleReferenceGuard> guard = tracker.TakeGuard();
+   28 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(guard.has_value(), "No guards available.");
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:30:9: warning: no header providing "score::mw::com::impl::mock_binding::SamplePtr" is directly included [misc-include-cleaner]
+   14 |         SamplePtr<void> ptr = *sample;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:31:15: warning: no header providing "score::mw::com::impl::SamplePtr" is directly included [misc-include-cleaner]
+   14 |         impl::SamplePtr<void> impl_ptr = this->MakeSamplePtr(std::move(ptr), std::move(*guard));
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:31:67: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   14 |         impl::SamplePtr<void> impl_ptr = this->MakeSamplePtr(std::move(ptr), std::move(*guard));
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:31:83: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   31 |         impl::SamplePtr<void> impl_ptr = this->MakeSamplePtr(std::move(ptr), std::move(*guard));
+      |                                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:33:24: warning: no header providing "score::mw::com::impl::tracing::ITracingRuntime" is directly included [misc-include-cleaner]
+   14 |         const tracing::ITracingRuntime::TracePointDataId dummy_trace_point_data_id{0U};
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3776/execroot/_main/score/mw/com/impl/bindings/mock_binding/generic_proxy_event.cpp:34:23: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   34 |         callable(std::move(impl_ptr), dummy_trace_point_data_id);
+      |                       ^
+Suppressed 15125 warnings (14941 in non-user code, 178 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

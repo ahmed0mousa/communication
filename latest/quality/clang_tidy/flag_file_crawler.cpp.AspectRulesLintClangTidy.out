@@ -1,12 +1,2203 @@
-6315 warnings generated.
+13633 warnings generated.
+./score/mw/com/impl/bindings/lola/service_discovery/known_instances_container.h:34:5: warning: function 'GetKnownHandles' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     auto GetKnownHandles(const EnrichedInstanceIdentifier& enriched_instance_identifier) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/service_discovery/known_instances_container.h:39:5: warning: function 'Empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     auto Empty() const noexcept -> bool;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/com_error.h:97:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/binding_service_type_deployment.h:43:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/binding_service_type_deployment.h:44:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:70:5: warning: function 'GetServiceTypes' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   70 |     const ServiceTypeDeployments& GetServiceTypes() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:74:5: warning: function 'GetServiceInstances' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   74 |     const ServiceInstanceDeployments& GetServiceInstances() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:78:5: warning: function 'GetGlobalConfiguration' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   78 |     const GlobalConfiguration& GetGlobalConfiguration() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration.h:82:5: warning: function 'GetTracingConfiguration' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   82 |     const TracingConfiguration& GetTracingConfiguration() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/global_configuration.h:69:5: warning: function 'GetReceiverMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   69 |     std::int32_t GetReceiverMessageQueueSize(const QualityType quality_type) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:71:5: warning: function 'GetSenderMessageQueueSize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   71 |     std::int32_t GetSenderMessageQueueSize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:76:5: warning: function 'GetProcessAsilLevel' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     QualityType GetProcessAsilLevel() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:86:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     score::cpp::optional<ApplicationId> GetApplicationId() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/global_configuration.h:91:5: warning: function 'GetShmSizeCalcMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   91 |     ShmSizeCalculationMode GetShmSizeCalcMode() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_method_instance_deployment.h:57:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     score::json::Object Serialize() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:85:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   85 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:86:5: warning: function 'ContainsEvent' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     bool ContainsEvent(const std::string& event_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:87:5: warning: function 'ContainsField' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     bool ContainsField(const std::string& field_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:88:5: warning: function 'ContainsMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     bool ContainsMethod(const std::string& method_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:49:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   49 |     InstanceId GetId() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:84:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   84 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:90:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     std::string_view ToHashString() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:95:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   95 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:159:5: warning: function 'getInternalTypeName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  159 |     inline std::string_view getInternalTypeName() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:159:5: warning: function 'getInternalTypeName' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  159 |     inline std::string_view getInternalTypeName() const
+      |     ^~~~~~
+./score/mw/com/impl/configuration/service_identifier_type.h:164:5: warning: function 'GetVersion' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  164 |     inline ServiceVersionType GetVersion() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_identifier_type.h:164:5: warning: function 'GetVersion' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  164 |     inline ServiceVersionType GetVersion() const
+      |     ^~~~~~
+./score/mw/com/impl/configuration/service_identifier_type.h:169:22: warning: function 'GetSerializationVersion' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  169 |     constexpr static inline std::uint32_t GetSerializationVersion()
+      |                      ^~~~~~
+./score/mw/com/impl/configuration/service_instance_deployment.h:45:59: warning: the const qualified parameter 'service' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   45 |     ServiceInstanceDeployment(const ServiceIdentifierType service,
+      |                                                           ^
+      |                                                          &
+./score/mw/com/impl/configuration/service_instance_deployment.h:63:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   63 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_instance_deployment.h:65:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     BindingType GetBindingType() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_instance_id.h:39:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_instance_id.h:40:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_type_deployment.h:39:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_type_deployment.h:40:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:107:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:109:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  109 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:173:5: warning: function 'getMajor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  173 |     constexpr inline std::uint32_t getMajor() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:173:15: warning: function 'getMajor' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  173 |     constexpr inline std::uint32_t getMajor() const
+      |               ^~~~~~
+./score/mw/com/impl/configuration/service_version_type.h:178:5: warning: function 'getMinor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  178 |     constexpr inline std::uint32_t getMinor() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/service_version_type.h:178:15: warning: function 'getMinor' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  178 |     constexpr inline std::uint32_t getMinor() const
+      |               ^~~~~~
+./score/mw/com/impl/configuration/someip_event_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_field_instance_deployment.h:27:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:39:46: warning: pass by value and use std::move [modernize-pass-by-value]
+   39 |     explicit SomeIpServiceInstanceDeployment(score::cpp::optional<SomeIpServiceInstanceId> instance_id = {},
+      |                                              ^
+   40 |                                              EventInstanceMapping events = {},
+   41 |                                              FieldInstanceMapping fields = {})
+   42 |         : instance_id_{instance_id}, events_{std::move(events)}, fields_{std::move(fields)}
+      |                                   
+      |                        std::move( )
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:42:24: warning: parameter 'instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   42 |         : instance_id_{instance_id}, events_{std::move(events)}, fields_{std::move(fields)}
+      |                        ^          
+      |                        std::move( )
+./score/mw/com/impl/configuration/someip_service_instance_deployment.h:58:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   58 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/someip_service_instance_id.h:40:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     InstanceId GetId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:64:5: warning: function 'IsTracingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   64 |     bool IsTracingEnabled() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:68:5: warning: function 'GetTracingFilterConfigPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     std::string_view GetTracingFilterConfigPath() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:72:5: warning: function 'GetApplicationInstanceID' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   72 |     std::string_view GetApplicationInstanceID() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/tracing_configuration.h:79:5: warning: function 'IsServiceElementTracingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   79 |     bool IsServiceElementTracingEnabled(tracing::ServiceElementIdentifierView service_element_identifier_view,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:41:60: warning: the parameter 'instance_identifier' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   41 |     explicit EnrichedInstanceIdentifier(InstanceIdentifier instance_identifier) noexcept
+      |                                                            ^
+      |                                         const             &
+./score/mw/com/impl/enriched_instance_identifier.h:53:51: warning: the parameter 'instance_identifier' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   53 |     EnrichedInstanceIdentifier(InstanceIdentifier instance_identifier, const ServiceInstanceId instance_id) noexcept
+      |                                                   ^
+      |                                const             &
+./score/mw/com/impl/enriched_instance_identifier.h:53:96: warning: the const qualified parameter 'instance_id' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   53 |     EnrichedInstanceIdentifier(InstanceIdentifier instance_identifier, const ServiceInstanceId instance_id) noexcept
+      |                                                                                                ^
+      |                                                                                               &
+./score/mw/com/impl/enriched_instance_identifier.h:74:58: warning: the const qualified parameter 'handle' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   74 |     explicit EnrichedInstanceIdentifier(const HandleType handle) noexcept
+      |                                                          ^
+      |                                                         &
+./score/mw/com/impl/enriched_instance_identifier.h:82:32: warning: pass by value and use std::move [modernize-pass-by-value]
+   82 |     EnrichedInstanceIdentifier(score::cpp::optional<ServiceInstanceId> instance_id,
+      |                                ^
+   83 |                                QualityType quality_type,
+   84 |                                InstanceIdentifier instance_identifier) noexcept
+   85 |         : instance_identifier_{std::move(instance_identifier)}, instance_id_{instance_id}, quality_type_{quality_type}
+      |                                                                                         
+      |                                                                              std::move( )
+./score/mw/com/impl/enriched_instance_identifier.h:85:78: warning: parameter 'instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   85 |         : instance_identifier_{std::move(instance_identifier)}, instance_id_{instance_id}, quality_type_{quality_type}
+      |                                                                              ^          
+      |                                                                              std::move( )
+./score/mw/com/impl/enriched_instance_identifier.h:89:5: warning: function 'GetInstanceIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   89 |     const InstanceIdentifier& GetInstanceIdentifier() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:112:5: warning: function 'GetInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  112 |     const score::cpp::optional<ServiceInstanceId>& GetInstanceId() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:122:5: warning: function 'GetBindingSpecificInstanceId<score::mw::com::impl::LolaServiceInstanceId>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  122 |     score::cpp::optional<typename ServiceInstanceId::InstanceId> GetBindingSpecificInstanceId() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/enriched_instance_identifier.h:137:5: warning: function 'GetQualityType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  137 |     QualityType GetQualityType() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:83:5: warning: function 'GetInstanceIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     const InstanceIdentifier& GetInstanceIdentifier() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:88:5: warning: function 'GetServiceInstanceDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     const ServiceInstanceDeployment& GetServiceInstanceDeployment() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:93:5: warning: function 'GetServiceTypeDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   93 |     const ServiceTypeDeployment& GetServiceTypeDeployment() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/handle_type.h:102:5: warning: function 'GetInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  102 |     ServiceInstanceId GetInstanceId() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:103:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:151:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  151 |     json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:230:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  230 |     json::Object Serialize() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:235:5: warning: function 'GetServiceInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  235 |     score::cpp::optional<ServiceInstanceId> GetServiceInstanceId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:236:5: warning: function 'GetServiceInstanceDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  236 |     const ServiceInstanceDeployment& GetServiceInstanceDeployment() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:237:5: warning: function 'GetServiceTypeDeployment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  237 |     const ServiceTypeDeployment& GetServiceTypeDeployment() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:238:5: warning: function 'isCompatibleWith' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  238 |     bool isCompatibleWith(const InstanceIdentifier&) const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_identifier.h:239:5: warning: function 'isCompatibleWith' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  239 |     bool isCompatibleWith(const InstanceIdentifierView&) const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_specifier.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:18:1: warning: included header filesystem.h is not used directly [misc-include-cleaner]
+   18 | #include "score/filesystem/filesystem.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   19 | #include "score/mw/log/logging.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:42:1: warning: no header providing "score::mw::com::impl::lola::QualityAwareContainer" is directly included [misc-include-cleaner]
+   16 | QualityAwareContainer<KnownInstancesContainer> GetAlreadyExistingInstances(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:42:23: warning: no header providing "score::mw::com::impl::lola::KnownInstancesContainer" is directly included [misc-include-cleaner]
+   16 | QualityAwareContainer<KnownInstancesContainer> GetAlreadyExistingInstances(
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:43:10: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   35 | 
+   36 | namespace score::mw::com::impl::lola
+   37 | {
+   38 | 
+   39 | namespace
+   40 | {
+   41 | 
+   42 | QualityAwareContainer<KnownInstancesContainer> GetAlreadyExistingInstances(
+   43 |     std::vector<EnrichedInstanceIdentifier>& quality_unaware_identifiers_to_check) noexcept
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:43:17: warning: no header providing "score::mw::com::impl::EnrichedInstanceIdentifier" is directly included [misc-include-cleaner]
+   19 |     std::vector<EnrichedInstanceIdentifier>& quality_unaware_identifiers_to_check) noexcept
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:52:24: warning: no header providing "std::array" is directly included [misc-include-cleaner]
+   24 |         constexpr std::array<QualityType, 2> supported_quality_types{QualityType::kASIL_B, QualityType::kASIL_QM};
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:52:30: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   19 |         constexpr std::array<QualityType, 2> supported_quality_types{QualityType::kASIL_B, QualityType::kASIL_QM};
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:107:38: warning: no header providing "score::os::InotifyInstance" is directly included [misc-include-cleaner]
+   21 | FlagFileCrawler::FlagFileCrawler(os::InotifyInstance& inotify_instance, filesystem::Filesystem filesystem)
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:107:85: warning: no header providing "score::filesystem::Filesystem" is directly included [misc-include-cleaner]
+   15 | FlagFileCrawler::FlagFileCrawler(os::InotifyInstance& inotify_instance, filesystem::Filesystem filesystem)
+      |                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:131:27: warning: no header providing "std::tuple" is directly included [misc-include-cleaner]
+   34 |     -> score::Result<std::tuple<std::unordered_map<os::InotifyWatchDescriptor, EnrichedInstanceIdentifier>,
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:131:38: warning: no header providing "std::unordered_map" is directly included [misc-include-cleaner]
+   34 |     -> score::Result<std::tuple<std::unordered_map<os::InotifyWatchDescriptor, EnrichedInstanceIdentifier>,
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:131:56: warning: no header providing "score::os::InotifyWatchDescriptor" is directly included [misc-include-cleaner]
+   21 |     -> score::Result<std::tuple<std::unordered_map<os::InotifyWatchDescriptor, EnrichedInstanceIdentifier>,
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:169:67: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   19 |     if (enriched_instance_identifier.GetBindingSpecificInstanceId<LolaServiceInstanceId>().has_value())
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:253:38: warning: no header providing "std::errc" is directly included [misc-include-cleaner]
+   33 |     if (conversion_result.ec != std::errc{})
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:262:75: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   33 |     if (filename.find(GetQualityTypeString(QualityType::kASIL_B)) != std::string::npos)
+      |                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:286:17: warning: no header providing "score::filesystem::DirectoryIterator" is directly included [misc-include-cleaner]
+   15 |     filesystem::DirectoryIterator directory_iterator{GetSearchPathForIdentifier(enriched_instance_identifier)};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:298:43: warning: no header providing "score::filesystem::FileType" is directly included [misc-include-cleaner]
+   15 |         if (status->Type() != filesystem::FileType::kDirectory)
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:338:37: warning: no header providing "score::os::Inotify" is directly included [misc-include-cleaner]
+   21 |     constexpr auto event_mask = os::Inotify::EventMask::kInCreate | os::Inotify::EventMask::kInDelete;
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:349:50: warning: no header providing "score::os::ModeToInteger" is directly included [misc-include-cleaner]
+   21 |                 const auto permissions_integer = ModeToInteger(status_result.value().Permissions());
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3506/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/flag_file_crawler.cpp:360:61: warning: no header providing "std::oct" is directly included [misc-include-cleaner]
+   24 |                 permissions_integer_as_octal_string << std::oct << permissions_integer;
+      |                                                             ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | 
+   26 | namespace common
+      | ~~~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | 
+   29 | namespace visitor
+      | ~~~~~~~~~~~~~~~~~
+      | namespace score::common::visitor
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:11: warning: function 'strip_trailing_spaces' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:51:58: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    51 | constexpr inline std::size_t strip_trailing_spaces(const char (&pretty_name)[N], std::size_t begin, std::size_t end)
       |                                                          ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:11: warning: function 'visitor_extract_type_span' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:84:86: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
    84 | constexpr inline std::pair<std::size_t, std::size_t> visitor_extract_type_span(const char (&pretty_name)[N])
       |                                                                                      ^
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:11: warning: function 'visitor_extract_type' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
+      |           ^~~~~~
 bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:114:52: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
   114 | constexpr inline Output visitor_extract_type(const char (&pretty_name)[N])
       |                                                    ^
-Suppressed 6446 warnings (6306 in non-user code, 134 NOLINT, 6 with check filters).
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:121:11: warning: function 'pack_values' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  121 | constexpr inline auto pack_values(Args&&... args)
+      |           ^~~~~~
+bazel-out/k8-fastbuild/bin/external/score_baselibs+/score/static_reflection_with_serialization/visitor/_virtual_includes/visitor/static_reflection_with_serialization/visitor/visit_as_struct.h:143:41: warning: use c++17 style variable templates [modernize-type-traits]
+  143 | using if_same_struct = std::enable_if_t<std::is_same<S, detail::no_cref_t<T>>::value, std::int32_t>;
+      |                                         ^                                    ~~~~~~~
+      |                                                     _v
+external/score_baselibs+/score/bitmanipulation/bitmask_operators.h:66:14: warning: use c++14 style type templates [modernize-type-traits]
+   66 |     typename std::enable_if<std::is_enum<T>::value && score::enable_bitmask_operators<T>::value, T>::type;
+      |     ~~~~~~~~ ^                                                                                     ~~~~~~
+      |                            _t
+external/score_baselibs+/score/bitmanipulation/bitmask_operators.h:66:29: warning: use c++17 style variable templates [modernize-type-traits]
+   66 |     typename std::enable_if<std::is_enum<T>::value && score::enable_bitmask_operators<T>::value, T>::type;
+      |                             ^              ~~~~~~~
+      |                                         _v
+external/score_baselibs+/score/bitmanipulation/bitmask_operators.h:116:20: warning: use c++14 style type templates [modernize-type-traits]
+  116 | constexpr typename std::enable_if<std::is_enum<T>::value && score::enable_bitmask_operators<T>::value, bool>::type
+      |           ~~~~~~~~ ^                                                                                        ~~~~~~
+      |                                  _t
+external/score_baselibs+/score/bitmanipulation/bitmask_operators.h:116:35: warning: use c++17 style variable templates [modernize-type-traits]
+  116 | constexpr typename std::enable_if<std::is_enum<T>::value && score::enable_bitmask_operators<T>::value, bool>::type
+      |                                   ^              ~~~~~~~
+      |                                               _v
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:26:5: warning: function 'Absolute' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   26 |     Result<Path> Absolute(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:27:5: warning: function 'Canonical' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   27 |     Result<Path> Canonical(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:28:5: warning: function 'Exists' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   28 |     Result<bool> Exists(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:29:5: warning: function 'CopyFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   29 |     Result<void> CopyFile(const Path& from, const Path& to) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:30:5: warning: function 'CopyFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   30 |     Result<void> CopyFile(const Path& from, const Path& to, const CopyOptions copy_option) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:31:5: warning: function 'CreateDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     Result<void> CreateDirectory(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:32:5: warning: function 'CreateDirectories' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     Result<void> CreateDirectories(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:33:5: warning: function 'LastWriteTime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     Result<FileTime> LastWriteTime(const Path&) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:34:5: warning: function 'Permissions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     Result<void> Permissions(const Path& path, const Perms permissions) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:35:5: warning: function 'Permissions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     Result<void> Permissions(const Path& path,
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:38:5: warning: function 'ReadSymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     Result<Path> ReadSymlink(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:39:5: warning: function 'Remove' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     Result<void> Remove(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:40:5: warning: function 'RemoveAll' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     Result<void> RemoveAll(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:41:5: warning: function 'Status' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   41 |     Result<FileStatus> Status(const Path&) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:42:5: warning: function 'SymlinkStatus' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     Result<FileStatus> SymlinkStatus(const Path&) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:43:5: warning: function 'TempDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     Result<Path> TempDirectoryPath() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:44:5: warning: function 'WeaklyCanonical' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     Result<Path> WeaklyCanonical(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:45:5: warning: function 'CurrentPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   45 |     Result<Path> CurrentPath() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:46:5: warning: function 'CurrentPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     Result<void> CurrentPath(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:47:5: warning: function 'CreateHardLink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   47 |     Result<void> CreateHardLink(const Path& oldpath, const Path& newpath) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:48:5: warning: function 'CreateSymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     Result<void> CreateSymlink(const Path& target, const Path& linkpath) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:49:5: warning: function 'CreateDirectorySymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   49 |     Result<void> CreateDirectorySymlink(const Path& target, const Path& linkpath) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:50:5: warning: function 'CopySymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     Result<void> CopySymlink(const Path& from, const Path& dest) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:51:5: warning: function 'HardLinkCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     Result<uint64_t> HardLinkCount(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:52:5: warning: function 'IsDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   52 |     Result<bool> IsDirectory(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:53:5: warning: function 'IsRegularFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   53 |     Result<bool> IsRegularFile(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:54:5: warning: function 'IsSymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     Result<bool> IsSymlink(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:55:5: warning: function 'IsEmpty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   55 |     Result<bool> IsEmpty(const Path& path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:58:5: warning: function 'RemoveContentFromExistingDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   58 |     Result<void> RemoveContentFromExistingDirectory(const Path& path) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/details/standard_filesystem.h:59:5: warning: function 'CopyKnownFileType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   59 |     Result<void> CopyKnownFileType(const Path& from,
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/error.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/factory/filesystem_factory.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+   21 | {
+   22 | 
+   23 | class FilesystemFactory : public IFilesystemFactory
+   24 | {
+   25 |   public:
+   26 |     Filesystem CreateInstance() const noexcept override;
+   27 | };
+   28 | 
+   29 | }  // namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | } // namespace score::filesystem
+   30 | }  // namespace score
+      | ~~~~~~~~~~~~~~~~~~~~~
+external/score_baselibs+/score/filesystem/factory/filesystem_factory.h:26:5: warning: function 'CreateInstance' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   26 |     Filesystem CreateInstance() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/factory/i_filesystem_factory.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/factory/i_filesystem_factory.h:35:5: warning: function 'CreateInstance' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     virtual Filesystem CreateInstance() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_status.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/file_status.h:60:5: warning: function 'Type' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   60 |     FileType Type() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_status.h:66:5: warning: function 'Permissions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   66 |     Perms Permissions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/file_utils.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:21:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   21 | namespace score
+      | ^~~~~~~~~~~~~~~
+   22 | {
+      | ~
+   23 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:39:5: warning: function 'ChangeGroup' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     virtual Result<void> ChangeGroup(const Path& path, const std::string& group_name) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:45:5: warning: function 'ChangeGroup' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   45 |     virtual Result<void> ChangeGroup(const Path& path, const gid_t group_id) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:51:5: warning: function 'CheckFileSystem' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual Result<void> CheckFileSystem(const Path& partition) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:56:5: warning: function 'RepairFileSystem' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     virtual Result<void> RepairFileSystem(const Path& partition) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:63:5: warning: function 'CreateDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   63 |     virtual Result<void> CreateDirectory(const Path& path, const score::os::Stat::Mode perms) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:68:5: warning: function 'CreateDirectories' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     virtual Result<void> CreateDirectories(const Path& path, const score::os::Stat::Mode perms) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:71:5: warning: function 'OpenUniqueFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   71 |     virtual Result<std::pair<std::unique_ptr<std::iostream>, Path>> OpenUniqueFile(
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:78:5: warning: function 'FileContentsAreIdentical' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   78 |     virtual Result<bool> FileContentsAreIdentical(const Path& path1, const Path& path2) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:85:5: warning: function 'FormatPartition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   85 |     virtual Result<void> FormatPartition(const Path& partition) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:91:5: warning: function 'IsQnxCompatible' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   91 |     virtual bool IsQnxCompatible(const Path& partition) const = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:96:5: warning: function 'SyncDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   96 |     virtual Result<void> SyncDirectory(const Path& dirname) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/file_utils/i_file_utils.h:102:5: warning: function 'ValidateGroup' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  102 |     virtual Result<bool> ValidateGroup(const Path& path, const std::string& group_name) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/filestream/file_factory.h:69:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   69 |     else
+      |     ^~~~
+   70 |     {
+      |     ~
+   71 |         return std::make_unique<details::FileStreamImpl<Buf>>(std::move(filebuf));
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   72 |     }
+      |     ~
+external/score_baselibs+/score/filesystem/filestream/i_file_factory.h:26:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   26 | namespace score
+      | ^~~~~~~~~~~~~~~
+   27 | {
+      | ~
+   28 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/filestream/i_file_factory.h:33:66: warning: redundant explicit casting to the same type 'AtomicUpdateOwnershipFlags' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   33 | inline constexpr AtomicUpdateOwnershipFlags kUseTargetFileUID = (static_cast<AtomicUpdateOwnershipFlags>(1U)) << 0U;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+external/score_baselibs+/score/filesystem/filestream/i_file_factory.h:34:66: warning: redundant explicit casting to the same type 'AtomicUpdateOwnershipFlags' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   34 | inline constexpr AtomicUpdateOwnershipFlags kUseTargetFileGID = (static_cast<AtomicUpdateOwnershipFlags>(1U)) << 1U;
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+external/score_baselibs+/score/filesystem/filestream/i_file_factory.h:35:70: warning: redundant explicit casting to the same type 'AtomicUpdateOwnershipFlags' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   35 | inline constexpr AtomicUpdateOwnershipFlags kUseCurrentProcessUID = (static_cast<AtomicUpdateOwnershipFlags>(1U)) << 2U;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+external/score_baselibs+/score/filesystem/filestream/i_file_factory.h:36:70: warning: redundant explicit casting to the same type 'AtomicUpdateOwnershipFlags' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   36 | inline constexpr AtomicUpdateOwnershipFlags kUseCurrentProcessGID = (static_cast<AtomicUpdateOwnershipFlags>(1U)) << 3U;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+external/score_baselibs+/score/filesystem/filestream/stdio_filebuf_base.h:75:5: warning: function 'fd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   75 |     int fd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/filesystem_struct.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+   25 | {
+   26 | 
+   27 | struct Filesystem
+   28 | {
+   29 |     // coverity[autosar_cpp14_m11_0_1_violation]
+   30 |     std::shared_ptr<IStandardFilesystem> standard;
+   31 |     // coverity[autosar_cpp14_m11_0_1_violation]
+   32 |     std::shared_ptr<IFileUtils> utils;
+   33 |     // coverity[autosar_cpp14_m11_0_1_violation]
+   34 |     std::shared_ptr<IFileFactory> streams;
+   35 | };
+   36 | 
+   37 | }  // namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | } // namespace score::filesystem
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:24:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   24 | namespace score
+      | ^~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:80:5: warning: function 'Absolute' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     virtual Result<Path> Absolute(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:85:5: warning: function 'Canonical' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   85 |     virtual Result<Path> Canonical(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:88:5: warning: function 'Exists' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     virtual Result<bool> Exists(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:91:5: warning: function 'CopyFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   91 |     virtual Result<void> CopyFile(const Path& from, const Path& to) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:96:5: warning: function 'CopyFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   96 |     virtual Result<void> CopyFile(const Path& from, const Path& to, const CopyOptions) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:101:5: warning: function 'CreateDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  101 |     virtual Result<void> CreateDirectory(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:105:5: warning: function 'CreateDirectories' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     virtual Result<void> CreateDirectories(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:109:5: warning: function 'LastWriteTime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  109 |     virtual Result<FileTime> LastWriteTime(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:113:5: warning: function 'Permissions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  113 |     virtual Result<void> Permissions(const Path&, const Perms) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:117:5: warning: function 'Permissions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  117 |     virtual Result<void> Permissions(const Path&, const Perms, const PermOptions) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:121:5: warning: function 'ReadSymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  121 |     virtual Result<Path> ReadSymlink(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:125:5: warning: function 'Remove' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  125 |     virtual Result<void> Remove(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:130:5: warning: function 'RemoveAll' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  130 |     virtual Result<void> RemoveAll(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:134:5: warning: function 'Status' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  134 |     virtual Result<FileStatus> Status(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:138:5: warning: function 'SymlinkStatus' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  138 |     virtual Result<FileStatus> SymlinkStatus(const Path&) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:141:5: warning: function 'TempDirectoryPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  141 |     virtual Result<Path> TempDirectoryPath() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:146:5: warning: function 'WeaklyCanonical' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  146 |     virtual Result<Path> WeaklyCanonical(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:149:5: warning: function 'CurrentPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  149 |     virtual Result<Path> CurrentPath() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:152:5: warning: function 'CurrentPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  152 |     virtual Result<void> CurrentPath(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:155:5: warning: function 'CreateHardLink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  155 |     virtual Result<void> CreateHardLink(const Path& oldpath, const Path& newpath) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:158:5: warning: function 'CreateSymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  158 |     virtual Result<void> CreateSymlink(const Path& target, const Path& linkpath) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:163:5: warning: function 'CreateDirectorySymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  163 |     virtual Result<void> CreateDirectorySymlink(const Path& target, const Path& linkpath) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:166:5: warning: function 'CopySymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  166 |     virtual Result<void> CopySymlink(const Path& from, const Path& dest) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:169:5: warning: function 'HardLinkCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  169 |     virtual Result<uint64_t> HardLinkCount(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:172:5: warning: function 'IsDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  172 |     virtual Result<bool> IsDirectory(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:175:5: warning: function 'IsRegularFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  175 |     virtual Result<bool> IsRegularFile(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:178:5: warning: function 'IsSymlink' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  178 |     virtual Result<bool> IsSymlink(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/i_standard_filesystem.h:181:5: warning: function 'IsEmpty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  181 |     virtual Result<bool> IsEmpty(const Path& path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_entry.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/iterator/directory_entry.h:50:5: warning: function 'GetPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     const Path& GetPath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_entry.h:53:5: warning: function 'Exists' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   53 |     score::Result<bool> Exists() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_entry.h:57:5: warning: function 'Status' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     score::Result<FileStatus> Status() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_entry.h:61:5: warning: function 'SymlinkStatus' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     score::Result<FileStatus> SymlinkStatus() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_iterator.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/iterator/directory_iterator.h:84:5: warning: function 'HasValue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   84 |     bool HasValue() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_iterator.h:88:5: warning: function 'Error' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     score::os::Error Error() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_iterator.h:105:9: warning: function 'CurrentEntry' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |         const DirectoryEntry& CurrentEntry() const noexcept;
+      |         ^
+      |         [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_iterator.h:106:9: warning: function 'HasError' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  106 |         bool HasError() const noexcept;
+      |         ^
+      |         [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/directory_iterator.h:107:9: warning: function 'GetError' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |         score::os::Error GetError() const noexcept;
+      |         ^
+      |         [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/recursive_directory_iterator.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/iterator/recursive_directory_iterator.h:76:5: warning: function 'HasValue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool HasValue() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/iterator/recursive_directory_iterator.h:80:5: warning: function 'Error' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     score::os::Error Error() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace filesystem
+      | ~~~~~~~~~~~~~~~~~~~~
+      | namespace score::filesystem
+external/score_baselibs+/score/filesystem/path.h:169:5: warning: function 'CStr' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  169 |     const value_type* CStr() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:172:5: warning: function 'Native' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  172 |     const string_type& Native() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:185:5: warning: function 'LexicallyNormal' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  185 |     Path LexicallyNormal() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:191:5: warning: function 'RootName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  191 |     Path RootName() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:195:5: warning: function 'RootDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  195 |     Path RootDirectory() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:200:5: warning: function 'RootPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  200 |     Path RootPath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:204:5: warning: function 'RelativePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  204 |     Path RelativePath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:211:5: warning: function 'ParentPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  211 |     Path ParentPath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:215:5: warning: function 'Filename' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  215 |     Path Filename() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:238:5: warning: function 'Extension' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  238 |     Path Extension() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:255:5: warning: function 'Stem' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  255 |     Path Stem() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:269:5: warning: function 'Empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  269 |     bool Empty() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:273:5: warning: function 'HasRootPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  273 |     bool HasRootPath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:277:5: warning: function 'HasRootName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  277 |     bool HasRootName() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:281:5: warning: function 'HasRootDirectory' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  281 |     bool HasRootDirectory() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:285:5: warning: function 'HasRelativePath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  285 |     bool HasRelativePath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:289:5: warning: function 'HasParentPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  289 |     bool HasParentPath() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:293:5: warning: function 'HasFilename' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  293 |     bool HasFilename() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:297:5: warning: function 'HasExtension' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  297 |     bool HasExtension() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:303:5: warning: function 'IsAbsolute' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  303 |     bool IsAbsolute() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:309:5: warning: function 'IsRelative' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  309 |     bool IsRelative() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:380:9: warning: function 'equals' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  380 |         bool equals(const iterator& r) const noexcept;
+      |         ^
+      |         [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:389:5: warning: function 'begin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  389 |     iterator begin() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:391:5: warning: function 'end' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  391 |     iterator end() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:401:5: warning: function 'FilenamePosition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  401 |     std::size_t FilenamePosition() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:406:5: warning: function 'ExtensionPosition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  406 |     std::size_t ExtensionPosition(const std::size_t position_of_filename) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/filesystem/path.h:410:5: warning: function 'ExtensionPosition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  410 |     std::size_t ExtensionPosition() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/i_json_parser.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/i_json_parser.h:31:5: warning: function 'FromFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     virtual score::Result<Any> FromFile(const std::string_view file_path) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/i_json_parser.h:32:5: warning: function 'FromBuffer' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     virtual score::Result<Any> FromBuffer(const std::string_view buffer) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/i_json_writer.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/any.h:30:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   30 | namespace score
+      | ^~~~~~~~~~~~~~~
+   31 | {
+      | ~
+   32 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/any.h:59:42: warning: use c++17 style variable templates [modernize-type-traits]
+   59 |               typename std::enable_if_t<!std::is_same<T, Result<Any>>::value, bool> = true,
+      |                                          ^                           ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/json/internal/model/any.h:60:42: warning: use c++17 style variable templates [modernize-type-traits]
+   60 |               typename std::enable_if_t<(std::is_same<T, bool>::value) ||
+      |                                          ^                    ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/json/internal/model/any.h:61:47: warning: use c++17 style variable templates [modernize-type-traits]
+   61 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                               ^                    ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/json/internal/model/any.h:61:80: warning: use c++17 style variable templates [modernize-type-traits]
+   61 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                                                                ^                      ~~~~~~~
+      |                                                                                            _v
+external/score_baselibs+/score/json/internal/model/any.h:62:47: warning: use c++17 style variable templates [modernize-type-traits]
+   62 |                                              !std::is_same<T, List>::value),
+      |                                               ^                    ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/json/internal/model/any.h:74:44: warning: use c++17 style variable templates [modernize-type-traits]
+   74 |               typename = std::enable_if_t<!std::is_same<T, score::Result<Any>>::value, bool>,
+      |                                            ^                                  ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:75:44: warning: use c++17 style variable templates [modernize-type-traits]
+   75 |               typename = std::enable_if_t<!std::is_same<T, bool>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:76:43: warning: use c++17 style variable templates [modernize-type-traits]
+   76 |               typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                             _v
+external/score_baselibs+/score/json/internal/model/any.h:93:42: warning: use c++17 style variable templates [modernize-type-traits]
+   93 |               typename std::enable_if_t<(std::is_same<T, bool>::value) ||
+      |                                          ^                    ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/json/internal/model/any.h:94:47: warning: use c++17 style variable templates [modernize-type-traits]
+   94 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                               ^                    ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/json/internal/model/any.h:94:80: warning: use c++17 style variable templates [modernize-type-traits]
+   94 |                                             (!std::is_arithmetic<T>::value && !std::is_same<T, Object>::value &&
+      |                                                                                ^                      ~~~~~~~
+      |                                                                                            _v
+external/score_baselibs+/score/json/internal/model/any.h:95:47: warning: use c++17 style variable templates [modernize-type-traits]
+   95 |                                              !std::is_same<T, List>::value && !std::is_same<T, Any>::value),
+      |                                               ^                    ~~~~~~~
+      |                                                           _v
+external/score_baselibs+/score/json/internal/model/any.h:95:80: warning: use c++17 style variable templates [modernize-type-traits]
+   95 |                                              !std::is_same<T, List>::value && !std::is_same<T, Any>::value),
+      |                                                                                ^                   ~~~~~~~
+      |                                                                                            _v
+external/score_baselibs+/score/json/internal/model/any.h:118:44: warning: use c++17 style variable templates [modernize-type-traits]
+  118 |               typename = std::enable_if_t<!std::is_same<T, bool>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:119:43: warning: use c++17 style variable templates [modernize-type-traits]
+  119 |               typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                             _v
+external/score_baselibs+/score/json/internal/model/any.h:137:5: warning: function 'CloneByValue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  137 |     Any CloneByValue() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/any.h:144:44: warning: use c++17 style variable templates [modernize-type-traits]
+  144 |               typename = std::enable_if_t<!std::is_same<T, Object>::value, bool>,
+      |                                            ^                      ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:145:44: warning: use c++17 style variable templates [modernize-type-traits]
+  145 |               typename = std::enable_if_t<!std::is_same<T, List>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:146:44: warning: use c++17 style variable templates [modernize-type-traits]
+  146 |               typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>,
+      |                                            ^                                ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:147:44: warning: use c++17 style variable templates [modernize-type-traits]
+  147 |               typename = std::enable_if_t<!std::is_arithmetic<T>::value>>
+      |                                            ^                    ~~~~~~~
+      |                                                              _v
+external/score_baselibs+/score/json/internal/model/any.h:162:44: warning: use c++17 style variable templates [modernize-type-traits]
+  162 |               typename = std::enable_if_t<!std::is_same<T, Object>::value, bool>,
+      |                                            ^                      ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:163:44: warning: use c++17 style variable templates [modernize-type-traits]
+  163 |               typename = std::enable_if_t<!std::is_same<T, List>::value, bool>,
+      |                                            ^                    ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:164:44: warning: use c++17 style variable templates [modernize-type-traits]
+  164 |               typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                            ^                    ~~~~~~~
+      |                                                              _v
+external/score_baselibs+/score/json/internal/model/any.h:165:44: warning: use c++17 style variable templates [modernize-type-traits]
+  165 |               typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                            ^                                ~~~~~~~
+      |                                                        _v
+external/score_baselibs+/score/json/internal/model/any.h:181:43: warning: use c++17 style variable templates [modernize-type-traits]
+  181 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:181:75: warning: use c++17 style variable templates [modernize-type-traits]
+  181 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                                                           ^                      ~~~~~~~
+      |                                                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:196:43: warning: use c++17 style variable templates [modernize-type-traits]
+  196 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                           ^                    ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:196:75: warning: use c++17 style variable templates [modernize-type-traits]
+  196 |               typename = std::enable_if_t<std::is_same<T, List>::value || std::is_same<T, Object>::value, bool>>
+      |                                                                           ^                      ~~~~~~~
+      |                                                                                       _v
+external/score_baselibs+/score/json/internal/model/any.h:197:5: warning: function 'As<std::map<score::memory::StringComparisonAdaptor, score::json::Any>, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  197 |     score::Result<std::reference_wrapper<const T>> As() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/any.h:208:55: warning: use c++17 style variable templates [modernize-type-traits]
+  208 |     template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                       ^                    ~~~~~~~
+      |                                                                         _v
+external/score_baselibs+/score/json/internal/model/any.h:229:55: warning: use c++17 style variable templates [modernize-type-traits]
+  229 |     template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                       ^                                ~~~~~~~
+      |                                                                   _v
+external/score_baselibs+/score/json/internal/model/any.h:230:5: warning: function 'As' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  230 |     score::Result<std::string_view> As() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/error.h:19:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   19 | namespace score
+      | ^~~~~~~~~~~~~~~
+   20 | {
+      | ~
+   21 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/error.h:35:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/null.h:17:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   17 | namespace score
+      | ^~~~~~~~~~~~~~~
+   18 | {
+      | ~
+   19 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/number.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/number.h:55:55: warning: use c++17 style variable templates [modernize-type-traits]
+   55 |     template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                       ^                    ~~~~~~~
+      |                                                                         _v
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<bool, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<double, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<float, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<int, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<long, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<short, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<signed char, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned char, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned int, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned long, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/number.h:56:5: warning: function 'As<unsigned short, bool>' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     score::Result<T> As() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/internal/model/object.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/internal/model/object.h:33:39: warning: use c++17 style variable templates [modernize-type-traits]
+   33 | using IsJsonObject = std::enable_if_t<std::is_same<T, std::reference_wrapper<const Object>>::value ||
+      |                                       ^                                                    ~~~~~~~
+      |                                                   _v
+external/score_baselibs+/score/json/internal/model/object.h:34:43: warning: use c++17 style variable templates [modernize-type-traits]
+   34 |                                           std::is_same<T, Result<std::reference_wrapper<const Object>>>::value,
+      |                                           ^                                                            ~~~~~~~
+      |                                                       _v
+external/score_baselibs+/score/json/internal/model/object.h:38:1: warning: function 'GetAttribute' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   38 | inline const Result<RV> GetAttribute(const json::Object& object, const std::string_view& key) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/json/internal/model/object.h:49:1: warning: function 'GetAttribute' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   49 | inline const Result<RV> GetAttribute(const std::reference_wrapper<const json::Object>& object_result,
+      | ^~~~~~
+external/score_baselibs+/score/json/internal/model/object.h:56:1: warning: function 'GetAttribute' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   56 | inline const Result<RV> GetAttribute(const Result<std::reference_wrapper<const json::Object>>& object_result,
+      | ^~~~~~
+external/score_baselibs+/score/json/internal/model/object.h:71:30: warning: use c++17 style variable templates [modernize-type-traits]
+   71 |           std::enable_if_t<(!std::is_same<V, List>::value) && (!std::is_same<V, Object>::value), bool> = true,
+      |                              ^                    ~~~~~~~
+      |                                          _v
+external/score_baselibs+/score/json/internal/model/object.h:71:65: warning: use c++17 style variable templates [modernize-type-traits]
+   71 |           std::enable_if_t<(!std::is_same<V, List>::value) && (!std::is_same<V, Object>::value), bool> = true,
+      |                                                                 ^                      ~~~~~~~
+      |                                                                             _v
+external/score_baselibs+/score/json/internal/model/object.h:81:28: warning: use c++17 style variable templates [modernize-type-traits]
+   81 |           std::enable_if_t<std::is_same<V, List>::value || std::is_same<V, Object>::value, bool> = true,
+      |                            ^                    ~~~~~~~
+      |                                        _v
+external/score_baselibs+/score/json/internal/model/object.h:81:60: warning: use c++17 style variable templates [modernize-type-traits]
+   81 |           std::enable_if_t<std::is_same<V, List>::value || std::is_same<V, Object>::value, bool> = true,
+      |                                                            ^                      ~~~~~~~
+      |                                                                        _v
+external/score_baselibs+/score/json/json_parser.h:24:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   24 | namespace score
+      | ^~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/json/json_parser.h:35:5: warning: function 'FromFile' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     score::Result<Any> FromFile(const std::string_view file_path) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/json_parser.h:40:5: warning: function 'FromBuffer' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     score::Result<Any> FromBuffer(const std::string_view buffer) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/json/json_writer.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace json
+      | ~~~~~~~~~~~~~~
+      | namespace score::json
+external/score_baselibs+/score/memory/string_comparison_adaptor.h:68:5: warning: function 'GetAsStringView' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     score::cpp::string_view GetAsStringView() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/detail/logging_identifier.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace mw
+      | ~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace log
+      | ~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::mw::log::detail
+external/score_baselibs+/score/mw/log/detail/logging_identifier.h:40:5: warning: function 'GetStringView' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::string_view GetStringView() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_common.h:21:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   21 | namespace score
+      | ^~~~~~~~~~~~~~~
+   22 | {
+      | ~
+   23 | namespace mw
+      | ~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_common.h:43:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   43 |     else
+      |     ^~~~
+   44 |     {
+      |     ~
+   45 |         // should never reach here
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   46 |         return std::string_view{"not support unit"};  // LCOV_EXCL_LINE : unreachable
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   47 |     }
+      |     ~
+external/score_baselibs+/score/mw/log/log_level.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_stream.h:33:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   33 | namespace mw
+      | ^~~~~~~~~~~~
+   34 | {
+      | ~
+   35 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace mw::log
+external/score_baselibs+/score/mw/log/log_stream.h:397:14: warning: use c++14 style type templates [modernize-type-traits]
+  397 |     typename std::enable_if<((!std::is_same<long long, int64_t>::value) && (sizeof(long long) == sizeof(int64_t))),
+      |     ~~~~~~~~ ^             
+      |                            _t
+  398 |                             T>::type* = nullptr>
+      |                               ~~~~~~
+external/score_baselibs+/score/mw/log/log_stream.h:397:32: warning: use c++17 style variable templates [modernize-type-traits]
+  397 |     typename std::enable_if<((!std::is_same<long long, int64_t>::value) && (sizeof(long long) == sizeof(int64_t))),
+      |                                ^                               ~~~~~~~
+      |                                            _v
+external/score_baselibs+/score/mw/log/log_stream.h:400:1: warning: function 'operator<<' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  400 | inline LogStream& operator<<(LogStream& out, long long value) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_stream.h:410:51: warning: use c++17 style variable templates [modernize-type-traits]
+  410 | template <typename EnumerationT, std::enable_if_t<std::is_enum<EnumerationT>::value, bool> = true>
+      |                                                   ^                         ~~~~~~~
+      |                                                               _v
+external/score_baselibs+/score/mw/log/log_stream.h:426:30: warning: use c++14 style type templates [modernize-type-traits]
+  426 |     return (out << +typename std::underlying_type<EnumerationT>::type(enumvalue));
+      |                     ~~~~~~~~ ^                                 ~~~~~~
+      |                                                  _t
+external/score_baselibs+/score/mw/log/log_types.h:27:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   27 | namespace score
+      | ^~~~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace mw
+      | ~~~~~~~~~~~~
+   30 | {
+      | ~
+   31 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/log_types.h:177:5: warning: function 'Data' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  177 |     constexpr auto* Data() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:181:5: warning: function 'Size' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  181 |     constexpr auto Size() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:214:5: warning: function 'GetCode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  214 |     std::uint16_t GetCode() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:219:5: warning: function 'GetMessage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  219 |     std::string_view GetMessage() const
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/log_types.h:260:51: warning: use c++17 style variable templates [modernize-type-traits]
+  260 | template <typename T, typename = std::enable_if_t<std::is_scalar<T>::value>>
+      |                                                   ^                ~~~~~~~
+      |                                                                 _v
+external/score_baselibs+/score/mw/log/log_types.h:262:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  262 | inline LogRawBuffer MakeLogRawBuffer(const T& value) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:275:13: warning: redundant explicit casting to the same type 'LogRawBuffer::size_type' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  275 |             static_cast<LogRawBuffer::size_type>(sizeof(T))};
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~
+external/score_baselibs+/score/mw/log/log_types.h:284:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  284 | inline LogRawBuffer MakeLogRawBuffer(const score::cpp::span<T> values)
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:288:40: warning: use c++17 style variable templates [modernize-type-traits]
+  288 |     constexpr const bool kIsEligible = std::is_scalar<T>::value;
+      |                                        ^                ~~~~~~~
+      |                                                      _v
+external/score_baselibs+/score/mw/log/log_types.h:302:46: warning: redundant explicit casting to the same type 'LogRawBuffer::size_type' (aka 'unsigned long') as the sub-expression, remove this casting [readability-redundant-casting]
+  302 |     const auto buffer_size = values.size() * static_cast<LogRawBuffer::size_type>(sizeof(T));
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         ~
+external/score_baselibs+/score/mw/log/log_types.h:316:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  316 | inline LogRawBuffer MakeLogRawBuffer(const std::vector<T>& values) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/log_types.h:328:1: warning: function 'MakeLogRawBuffer' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+  328 | inline LogRawBuffer MakeLogRawBuffer(const std::array<T, n>& values) noexcept
+      | ^~~~~~
+external/score_baselibs+/score/mw/log/logging.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | 
+   27 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/recorder.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace mw
+      | ~~~~~~~~~~~~
+   28 | {
+      | ~
+   29 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/recorder.h:113:5: warning: function 'IsLogEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  113 |     virtual bool IsLogEnabled(const LogLevel&, const std::string_view context) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace mw
+      | ~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace log
+      | ~~~~~~~~~~~~~
+      | namespace score::mw::log
+external/score_baselibs+/score/mw/log/slot_handle.h:57:5: warning: function 'GetSlotOfSelectedRecorder' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     SlotIndex GetSlotOfSelectedRecorder() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:61:5: warning: function 'GetSlot' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     SlotIndex GetSlot(const RecorderIdentifier) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:68:5: warning: function 'GetSelectedRecorder' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     RecorderIdentifier GetSelectedRecorder() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/mw/log/slot_handle.h:75:5: warning: function 'IsRecorderActive' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   75 |     bool IsRecorderActive(const RecorderIdentifier) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/ObjectSeam.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/errno.h:24:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   24 | namespace score
+      | ^~~~~~~~~~~~~~~
+   25 | {
+      | ~
+   26 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/errno.h:117:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  117 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/errno.h:120:5: warning: function 'ToStringContainer' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  120 |     std::array<char, 32> ToStringContainer(const score::os::Error& error) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/errno.h:120:22: warning: 32 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  120 |     std::array<char, 32> ToStringContainer(const score::os::Error& error) const noexcept;
+      |                      ^
+external/score_baselibs+/score/os/errno.h:123:5: warning: function 'GetOsDependentErrorCode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  123 |     std::int32_t GetOsDependentErrorCode() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/inotify.h:25:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   25 | namespace score
+      | ^~~~~~~~~~~~~~~
+   26 | {
+      | ~
+   27 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/inotify.h:44:5: warning: function 'inotify_init' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     virtual score::cpp::expected<std::int32_t, Error> inotify_init() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/inotify.h:48:5: warning: function 'inotify_rm_watch' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     virtual score::cpp::expected<std::int32_t, Error> inotify_rm_watch(const std::int32_t fd,
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/stat.h:31:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   31 | namespace score
+      | ^~~~~~~~~~~~~~~
+   32 | {
+      | ~
+   33 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/stat.h:108:5: warning: function 'fchmod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  108 |     virtual score::cpp::expected_blank<Error> fchmod(const std::int32_t fd, const Mode mode) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/stat.h:111:5: warning: function 'umask' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  111 |     virtual score::cpp::expected<Mode, Error> umask(const Mode umask) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/utils/inotify/inotify_event.h:29:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   29 | namespace score
+      | ^~~~~~~~~~~~~~~
+   30 | {
+      | ~
+   31 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/utils/inotify/inotify_instance.h:23:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   23 | namespace score
+      | ^~~~~~~~~~~~~~~
+   24 | {
+      | ~
+   25 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/utils/inotify/inotify_instance.h:47:5: warning: function 'IsValid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   47 |     virtual score::cpp::expected_blank<Error> IsValid() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/os/utils/inotify/inotify_watch_descriptor.h:21:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   21 | namespace score
+      | ^~~~~~~~~~~~~~~
+   22 | {
+      | ~
+   23 | namespace os
+      | ~~~~~~~~~~~~
+      | namespace score::os
+external/score_baselibs+/score/os/utils/inotify/inotify_watch_descriptor.h:31:5: warning: function 'GetUnderlying' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     std::int32_t GetUnderlying() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/details/expected/expected.h:118:5: warning: function 'error' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  118 |     constexpr const E& error() const& noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/details/expected/expected.h:127:5: warning: function 'error' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  127 |     constexpr const E&& error() const&& noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/details/expected/expected.h:570:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  570 |         else
+      |         ^~~~
+  571 |         {
+      |         ~
+  572 |             return static_cast<T>(std::forward<U>(default_val));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  573 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:585:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  585 |         else
+      |         ^~~~
+  586 |         {
+      |         ~
+  587 |             return static_cast<T>(std::forward<U>(default_val));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  588 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:599:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  599 |         else
+      |         ^~~~
+  600 |         {
+      |         ~
+  601 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  602 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:614:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  614 |         else
+      |         ^~~~
+  615 |         {
+      |         ~
+  616 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  617 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:626:23: warning: use c++17 style variable templates [modernize-type-traits]
+  626 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:632:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  632 |         else
+      |         ^~~~
+  633 |         {
+      |         ~
+  634 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  635 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:645:23: warning: use c++17 style variable templates [modernize-type-traits]
+  645 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:651:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  651 |         else
+      |         ^~~~
+  652 |         {
+      |         ~
+  653 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  654 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:664:23: warning: use c++17 style variable templates [modernize-type-traits]
+  664 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:670:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  670 |         else
+      |         ^~~~
+  671 |         {
+      |         ~
+  672 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  673 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:683:23: warning: use c++17 style variable templates [modernize-type-traits]
+  683 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:691:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  691 |         else
+      |         ^~~~
+  692 |         {
+      |         ~
+  693 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  694 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  695 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  696 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:705:23: warning: use c++17 style variable templates [modernize-type-traits]
+  705 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:711:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  711 |         else
+      |         ^~~~
+  712 |         {
+      |         ~
+  713 |             return G{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  714 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:724:23: warning: use c++17 style variable templates [modernize-type-traits]
+  724 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:730:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  730 |         else
+      |         ^~~~
+  731 |         {
+      |         ~
+  732 |             return G{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  733 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:743:23: warning: use c++17 style variable templates [modernize-type-traits]
+  743 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:749:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  749 |         else
+      |         ^~~~
+  750 |         {
+      |         ~
+  751 |             return G{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  752 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:762:23: warning: use c++17 style variable templates [modernize-type-traits]
+  762 |         static_assert(std::is_same<typename G::value_type, T>::value, "Value types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:770:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  770 |         else
+      |         ^~~~
+  771 |         {
+      |         ~
+  772 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  773 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  774 |             return G{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  775 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:898:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  898 |         else
+      |         ^~~~
+  899 |         {
+      |         ~
+  900 |             return expected<T, G>{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  901 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:915:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  915 |         else
+      |         ^~~~
+  916 |         {
+      |         ~
+  917 |             return expected<T, G>{std::in_place, value()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  918 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:932:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  932 |         else
+      |         ^~~~
+  933 |         {
+      |         ~
+  934 |             return expected<T, G>{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  935 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:951:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  951 |         else
+      |         ^~~~
+  952 |         {
+      |         ~
+  953 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  954 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  955 |             return expected<T, G>{std::in_place, std::move(value())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  956 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:973:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  973 |         else
+      |         ^~~~
+  974 |         {
+      |         ~
+  975 |             return (!rhs.has_value()) && (lhs.error() == rhs.error());
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  976 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1259:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1259 |         else
+      |         ^~~~
+ 1260 |         {
+      |         ~
+ 1261 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1262 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1274:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1274 |         else
+      |         ^~~~
+ 1275 |         {
+      |         ~
+ 1276 |             return std::forward<G>(default_err);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1277 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1286:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1286 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1292:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1292 |         else
+      |         ^~~~
+ 1293 |         {
+      |         ~
+ 1294 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1295 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1305:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1305 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1311:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1311 |         else
+      |         ^~~~
+ 1312 |         {
+      |         ~
+ 1313 |             return U{unexpect, error()};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1314 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1324:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1324 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1330:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1330 |         else
+      |         ^~~~
+ 1331 |         {
+      |         ~
+ 1332 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1333 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1343:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1343 |         static_assert(std::is_same<typename U::error_type, E>::value, "Error types must match");
+      |                       ^                                      ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1351:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1351 |         else
+      |         ^~~~
+ 1352 |         {
+      |         ~
+ 1353 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1354 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1355 |             return U{unexpect, std::move(error())};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1356 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1365:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1365 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1371:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1371 |         else
+      |         ^~~~
+ 1372 |         {
+      |         ~
+ 1373 |             return G{};
+      |             ~~~~~~~~~~~
+ 1374 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1384:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1384 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1390:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1390 |         else
+      |         ^~~~
+ 1391 |         {
+      |         ~
+ 1392 |             return G{};
+      |             ~~~~~~~~~~~
+ 1393 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1403:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1403 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1409:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1409 |         else
+      |         ^~~~
+ 1410 |         {
+      |         ~
+ 1411 |             return G{};
+      |             ~~~~~~~~~~~
+ 1412 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1422:23: warning: use c++17 style variable templates [modernize-type-traits]
+ 1422 |         static_assert(std::is_void<typename G::value_type>::value, "Value type must be void for expected<void, E>");
+      |                       ^                                   ~~~~~~~
+      |                                   _v
+external/score_baselibs+/score/result/details/expected/expected.h:1430:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1430 |         else
+      |         ^~~~
+ 1431 |         {
+      |         ~
+ 1432 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1433 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1434 |             return G{};
+      |             ~~~~~~~~~~~
+ 1435 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1558:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1558 |         else
+      |         ^~~~
+ 1559 |         {
+      |         ~
+ 1560 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1561 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1575:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1575 |         else
+      |         ^~~~
+ 1576 |         {
+      |         ~
+ 1577 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1578 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1592:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1592 |         else
+      |         ^~~~
+ 1593 |         {
+      |         ~
+ 1594 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1595 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1611:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+ 1611 |         else
+      |         ^~~~
+ 1612 |         {
+      |         ~
+ 1613 |             // Refer on top for suppression justification.
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1614 |             // coverity[autosar_cpp14_a18_9_3_violation]
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1615 |             return expected<void, G>{};
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1616 |         }
+      |         ~
+external/score_baselibs+/score/result/details/expected/expected.h:1680:16: warning: swap functions should be marked noexcept [performance-noexcept-swap]
+ 1680 | constexpr void swap(::score::details::expected<T, E>& lhs, ::score::details::expected<T, E>& rhs)
+      |                ^
+ 1681 | // NOLINTEND(cert-dcl58-cpp) See comment on the namespace above
+      |  noexcept 
+external/score_baselibs+/score/result/details/expected/extensions.h:34:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   34 |     else
+      |     ^~~~
+   35 |     {
+      |     ~
+   36 |         return score::cpp::unexpected{expected.error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:47:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   47 |     else
+      |     ^~~~
+   48 |     {
+      |     ~
+   49 |         return score::cpp::unexpected{std::move(expected).error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   50 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:60:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   60 |     else
+      |     ^~~~
+   61 |     {
+      |     ~
+   62 |         return unexpected{expected.error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:73:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   73 |     else
+      |     ^~~~
+   74 |     {
+      |     ~
+   75 |         return unexpected{std::move(expected).error()};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:86:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   86 |     else
+      |     ^~~~
+   87 |     {
+      |     ~
+   88 |         std::invoke(std::forward<F>(error_handling), expected.error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   89 |         return score::cpp::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   90 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:100:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  100 |     else
+      |     ^~~~
+  101 |     {
+      |     ~
+  102 |         std::invoke(std::forward<F>(error_handling), std::move(expected).error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  103 |         return score::cpp::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  104 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:114:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  114 |     else
+      |     ^~~~
+  115 |     {
+      |     ~
+  116 |         std::invoke(std::forward<F>(error_handling), expected.error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  117 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+  118 |     }
+      |     ~
+external/score_baselibs+/score/result/details/expected/extensions.h:128:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  128 |     else
+      |     ^~~~
+  129 |     {
+      |     ~
+  130 |         std::invoke(std::forward<F>(error_handling), std::move(expected).error());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  131 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+  132 |     }
+      |     ~
+external/score_baselibs+/score/result/error.h:22:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   22 | namespace score
+      | ^~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace result
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::result
+external/score_baselibs+/score/result/error.h:94:5: warning: function 'Message' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   94 |     std::string_view Message() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/error.h:101:5: warning: function 'UserMessage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  101 |     std::string_view UserMessage() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+external/score_baselibs+/score/result/error_code.h:18:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   18 | namespace score
+      | ^~~~~~~~~~~~~~~
+   19 | {
+      | ~
+   20 | namespace result
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::result
+   21 | {
+   22 | 
+   23 | /// \brief Every user-defined error code shall inherit from here
+   24 | ///
+   25 | /// \details This way we can ensure that the user-defined error codes can be stored in our globally defined Error class.
+   26 | using ErrorCode = std::int32_t;
+   27 | 
+   28 | }  // namespace result
+      | ~~~~~~~~~~~~~~~~~~~~~~
+      | } // namespace score::result
+   29 | }  // namespace score
+      | ~~~~~~~~~~~~~~~~~~~~~
+external/score_baselibs+/score/result/error_domain.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace result
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::result
+external/score_baselibs+/score/result/error_domain.h:39:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     virtual std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 13328 warnings (13187 in non-user code, 135 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

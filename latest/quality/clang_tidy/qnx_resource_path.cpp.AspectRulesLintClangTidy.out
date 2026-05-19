@@ -1,3 +1,45 @@
-4034 warnings generated.
-Suppressed 4044 warnings (4031 in non-user code, 10 NOLINT, 3 with check filters).
+7590 warnings generated.
+./score/message_passing/qnx_dispatch/qnx_resource_path.h:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+./score/message_passing/qnx_dispatch/qnx_resource_path.h:27:1: warning: function 'GetQnxPrefix' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   27 | inline constexpr std::string_view GetQnxPrefix() noexcept
+      | ^~~~~~
+./score/message_passing/qnx_dispatch/qnx_resource_path.h:39:5: warning: function 'c_str' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     const char* c_str() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/875/execroot/_main/score/message_passing/qnx_dispatch/qnx_resource_path.cpp:20:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   20 | namespace score
+      | ^~~~~~~~~~~~~~~
+   21 | {
+      | ~
+   22 | namespace message_passing
+      | ~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | {
+      | ~
+   24 | namespace detail
+      | ~~~~~~~~~~~~~~~~
+      | namespace score::message_passing::detail
+/home/runner/.bazel/sandbox/linux-sandbox/875/execroot/_main/score/message_passing/qnx_dispatch/qnx_resource_path.cpp:27:45: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score
+   21 | {
+   22 | namespace message_passing
+   23 | {
+   24 | namespace detail
+   25 | {
+   26 | 
+   27 | QnxResourcePath::QnxResourcePath(const std::string_view identifier) noexcept
+      |                                             ^
+Suppressed 7596 warnings (7582 in non-user code, 11 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

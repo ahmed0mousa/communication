@@ -1,7 +1,72 @@
-8513 warnings generated.
+17942 warnings generated.
+./score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.h:89:1: warning: function 'AddEvent' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   89 | inline std::tuple<EventControl*, EventDataStorage<SampleType>*> FakeServiceData::AddEvent(
+      | ^~~~~~
 ./score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.h:93:10: warning: variable 'inserted' is not initialized [cppcoreguidelines-init-variables]
    93 |     bool inserted;
       |          ^       
       |                   = false
-Suppressed 8643 warnings (8504 in non-user code, 131 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:23:69: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::mw::com::impl::lola
+   19 | {
+   20 | 
+   21 | using ::score::memory::shared::ISharedMemoryResource;
+   22 | 
+   23 | std::unique_ptr<FakeServiceData> FakeServiceData::Create(const std::string& control_file_name,
+      |                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:26:64: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   17 | 
+   18 | namespace score::mw::com::impl::lola
+   19 | {
+   20 | 
+   21 | using ::score::memory::shared::ISharedMemoryResource;
+   22 | 
+   23 | std::unique_ptr<FakeServiceData> FakeServiceData::Create(const std::string& control_file_name,
+   24 |                                                          const std::string& data_file_name,
+   25 |                                                          const std::string& usage_marker_file,
+   26 |                                                          const pid_t skeleton_process_pid_in,
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:27:64: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   27 |                                                          const uid_t skeleton_uid_in,
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:33:36: warning: no header providing "score::os::Stat" is directly included [misc-include-cleaner]
+   16 |     constexpr auto permissions{os::Stat::Mode::kReadWriteExecUser | os::Stat::Mode::kReadWriteExecGroup |
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:38:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   16 |         std::cerr << "Failed to create: " << lola_tmp_folder.Native() << std::endl;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:38:79: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   17 |         std::cerr << "Failed to create: " << lola_tmp_folder.Native() << std::endl;
+      |                                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:42:40: warning: no header providing "score::memory::shared::LockFile" is directly included [misc-include-cleaner]
+   16 |     auto marker_file = memory::shared::LockFile::Create(usage_marker_file);
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:51:51: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   17 |                                              std::move(marker_file.value()),
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:68:28: warning: no header providing "score::memory::shared::SharedMemoryFactory" is directly included [misc-include-cleaner]
+   16 |     score::memory::shared::SharedMemoryFactory::Remove(control_path);
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:73:81: warning: the parameter 'memory_resource' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   73 |         [this, initialise_skeleton_data](std::shared_ptr<ISharedMemoryResource> memory_resource) {
+      |                                                                                 ^
+      |                                          const                                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:76:59: warning: no header providing "score::mw::com::impl::lola::ServiceDataControl" is directly included [misc-include-cleaner]
+   16 |                 data_control = memory_resource->construct<ServiceDataControl>(*memory_resource);
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:79:9: warning: 65535U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   79 |         65535U);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:84:52: warning: the parameter 'memory_resource' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   84 |             std::shared_ptr<ISharedMemoryResource> memory_resource) {
+      |                                                    ^
+      |             const                                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:87:59: warning: no header providing "score::mw::com::impl::lola::ServiceDataStorage" is directly included [misc-include-cleaner]
+   16 |                 data_storage = memory_resource->construct<ServiceDataStorage>(*memory_resource);
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4147/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_service_data.cpp:92:9: warning: 65535U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   92 |         65535U);
+      |         ^
+Suppressed 18057 warnings (17917 in non-user code, 132 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

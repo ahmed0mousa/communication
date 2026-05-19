@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">18</td>
-            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">5</td>
-            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -141,25 +141,25 @@
 <span id="L63"><span class="lineNum">      63</span>                 :             :     UnixDomainEngine&amp; operator=(const UnixDomainEngine&amp;) = delete;</span>
 <span id="L64"><span class="lineNum">      64</span>                 :             : </span>
 <span id="L65"><span class="lineNum">      65</span>                 :             :     static OsResources GetDefaultOsResources(score::cpp::pmr::memory_resource* const memory_resource) noexcept</span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC tlaBgGNC">         100 :     {</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">         100 :         return {score::cpp::pmr::make_unique&lt;score::os::SignalImpl&gt;(memory_resource),</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">         100 :                 score::os::Socket::Default(memory_resource),</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">         100 :                 score::os::SysPoll::Default(memory_resource),</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">         100 :                 score::os::Unistd::Default(memory_resource)};</span></span>
-<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaGNC">         100 :     }</span></span>
+<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
+<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaUNC">           0 :         return {score::cpp::pmr::make_unique&lt;score::os::SignalImpl&gt;(memory_resource),</span></span>
+<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaUNC">           0 :                 score::os::Socket::Default(memory_resource),</span></span>
+<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaUNC">           0 :                 score::os::SysPoll::Default(memory_resource),</span></span>
+<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaUNC">           0 :                 score::os::Unistd::Default(memory_resource)};</span></span>
+<span id="L71"><span class="lineNum">      71</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L72"><span class="lineNum">      72</span>                 :             : </span>
 <span id="L73"><span class="lineNum">      73</span>                 :             :     score::cpp::pmr::memory_resource* GetMemoryResource() noexcept override</span>
-<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">         256 :     {</span></span>
-<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaGNC">         256 :         return memory_resource_;</span></span>
-<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaGNC">         256 :     }</span></span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L75"><span class="lineNum">      75</span>                 :<span class="tlaUNC">           0 :         return memory_resource_;</span></span>
+<span id="L76"><span class="lineNum">      76</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L77"><span class="lineNum">      77</span>                 :             :     OsResources&amp; GetOsResources() noexcept</span>
-<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaGNC">         218 :     {</span></span>
-<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaGNC">         218 :         return os_resources_;</span></span>
-<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaGNC">         218 :     }</span></span>
+<span id="L78"><span class="lineNum">      78</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L79"><span class="lineNum">      79</span>                 :<span class="tlaUNC">           0 :         return os_resources_;</span></span>
+<span id="L80"><span class="lineNum">      80</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L81"><span class="lineNum">      81</span>                 :             :     const LoggingCallback&amp; GetLogger() noexcept override</span>
-<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaGNC">         166 :     {</span></span>
-<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaGNC">         166 :         return logger_;</span></span>
-<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaGNC">         166 :     }</span></span>
+<span id="L82"><span class="lineNum">      82</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L83"><span class="lineNum">      83</span>                 :<span class="tlaUNC">           0 :         return logger_;</span></span>
+<span id="L84"><span class="lineNum">      84</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L85"><span class="lineNum">      85</span>                 :             : </span>
 <span id="L86"><span class="lineNum">      86</span>                 :             :     using FinalizeOwnerCallback = score::cpp::callback&lt;void() /* noexcept */&gt;;</span>
 <span id="L87"><span class="lineNum">      87</span>                 :             : </span>
@@ -188,9 +188,9 @@
 <span id="L110"><span class="lineNum">     110</span>                 :             :         std::uint8_t&amp; code) noexcept override;</span>
 <span id="L111"><span class="lineNum">     111</span>                 :             : </span>
 <span id="L112"><span class="lineNum">     112</span>                 :             :     bool IsOnCallbackThread() const noexcept override</span>
-<span id="L113"><span class="lineNum">     113</span>                 :<span class="tlaGNC">         502 :     {</span></span>
-<span id="L114"><span class="lineNum">     114</span>                 :<span class="tlaGNC">         502 :         return std::this_thread::get_id() == thread_.get_id();</span></span>
-<span id="L115"><span class="lineNum">     115</span>                 :<span class="tlaGNC">         502 :     }</span></span>
+<span id="L113"><span class="lineNum">     113</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L114"><span class="lineNum">     114</span>                 :<span class="tlaUNC">           0 :         return std::this_thread::get_id() == thread_.get_id();</span></span>
+<span id="L115"><span class="lineNum">     115</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L116"><span class="lineNum">     116</span>                 :             : </span>
 <span id="L117"><span class="lineNum">     117</span>                 :             :   private:</span>
 <span id="L118"><span class="lineNum">     118</span>                 :             :     enum class PipeEvent : uint8_t</span>

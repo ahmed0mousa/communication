@@ -1,3 +1,149 @@
-5800 warnings generated.
-Suppressed 5873 warnings (5794 in non-user code, 73 NOLINT, 6 with check filters).
+11149 warnings generated.
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:20:6: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:20:41: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:20:74: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+      |                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:24:10: warning: no header providing "std::stringstream" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+   21 | {
+   22 |     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string
+   23 |     /// with no dynamic allocations.
+   24 |     std::stringstream stream;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:25:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+   21 | {
+   22 |     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string
+   23 |     /// with no dynamic allocations.
+   24 |     std::stringstream stream;
+   25 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(hash_string_size <= static_cast<std::size_t>(std::numeric_limits<int>::max()));
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:25:91: warning: no header providing "std::numeric_limits" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+   21 | {
+   22 |     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string
+   23 |     /// with no dynamic allocations.
+   24 |     std::stringstream stream;
+   25 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(hash_string_size <= static_cast<std::size_t>(std::numeric_limits<int>::max()));
+      |                                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:29:20: warning: no header providing "std::setfill" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+   21 | {
+   22 |     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string
+   23 |     /// with no dynamic allocations.
+   24 |     std::stringstream stream;
+   25 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(hash_string_size <= static_cast<std::size_t>(std::numeric_limits<int>::max()));
+   26 |     // Passing std::hex to std::stringstream object with the stream operator follows the idiomatic way that both
+   27 |     // features in conjunction were designed in the C++ standard.
+   28 |     // coverity[autosar_cpp14_m8_4_4_violation] See above
+   29 |     stream << std::setfill('0') << std::setw(static_cast<int>(hash_string_size)) << std::hex << instance_id;
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:29:41: warning: no header providing "std::setw" is directly included [misc-include-cleaner]
+   29 |     stream << std::setfill('0') << std::setw(static_cast<int>(hash_string_size)) << std::hex << instance_id;
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:29:90: warning: no header providing "std::hex" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | 
+   18 | // There is a template-method in service_type_deployment.cpp with the same signature, but different due to template use
+   19 | // coverity[autosar_cpp14_a2_10_4_violation] False positive, see above
+   20 | std::string ToHashStringImpl(const std::uint16_t instance_id, const std::size_t hash_string_size) noexcept
+   21 | {
+   22 |     /// \todo When we can use C++17 features, use std::to_chars so that we can convert from an int to a hex string
+   23 |     /// with no dynamic allocations.
+   24 |     std::stringstream stream;
+   25 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(hash_string_size <= static_cast<std::size_t>(std::numeric_limits<int>::max()));
+   26 |     // Passing std::hex to std::stringstream object with the stream operator follows the idiomatic way that both
+   27 |     // features in conjunction were designed in the C++ standard.
+   28 |     // coverity[autosar_cpp14_m8_4_4_violation] See above
+   29 |     stream << std::setfill('0') << std::setw(static_cast<int>(hash_string_size)) << std::hex << instance_id;
+      |                                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:40:38: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   14 | std::string ToStringImpl(const json::Object& serialized_json_object) noexcept
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1344/execroot/_main/score/mw/com/impl/configuration/configuration_common_resources.cpp:42:18: warning: no header providing "score::json::JsonWriter" is directly included [misc-include-cleaner]
+   14 |     score::json::JsonWriter writer{};
+      |                  ^
+Suppressed 11205 warnings (11125 in non-user code, 74 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

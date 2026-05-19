@@ -1,7 +1,46 @@
-5278 warnings generated.
+9955 warnings generated.
 ./score/mw/com/test/common_test_resources/sync_utils.h:28:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    28 |     SyncCoordinator(std::string file_name);
       |     ^
       |     explicit 
-Suppressed 5320 warnings (5274 in non-user code, 43 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:20:61: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   19 | 
+   20 | score::mw::com::test::SyncCoordinator::SyncCoordinator(std::string file_name) : file_name_{std::move(file_name)} {}
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:20:97: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   19 | 
+   20 | score::mw::com::test::SyncCoordinator::SyncCoordinator(std::string file_name) : file_name_{std::move(file_name)} {}
+      |                                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:33:24: warning: no header providing "std::remove" is directly included [misc-include-cleaner]
+   17 |     auto result = std::remove(file_name.data());
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:45:10: warning: no header providing "std::shared_ptr" is directly included [misc-include-cleaner]
+   19 |     std::shared_ptr<score::concurrency::InterruptiblePromise<void>> promise,
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:45:41: warning: no header providing "score::concurrency::InterruptiblePromise" is directly included [misc-include-cleaner]
+   15 |     std::shared_ptr<score::concurrency::InterruptiblePromise<void>> promise,
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:45:69: warning: the parameter 'promise' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   45 |     std::shared_ptr<score::concurrency::InterruptiblePromise<void>> promise,
+      |                                                                     ^
+      |     const                                                          &
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:46:23: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   19 |     const score::cpp::stop_token& stop_token) noexcept
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:60:27: warning: no header providing "std::this_thread::sleep_for" is directly included [misc-include-cleaner]
+   19 |         std::this_thread::sleep_for(std::chrono::milliseconds{500});
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:60:63: warning: 500 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   60 |         std::this_thread::sleep_for(std::chrono::milliseconds{500});
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:64:21: warning: no header providing "score::concurrency::InterruptibleFuture" is directly included [misc-include-cleaner]
+   15 | score::concurrency::InterruptibleFuture<void> score::mw::com::test::SyncCoordinator::Wait(
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:67:25: warning: no header providing "std::make_shared" is directly included [misc-include-cleaner]
+   67 |     auto promise = std::make_shared<score::concurrency::InterruptiblePromise<void>>();
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/966/execroot/_main/score/mw/com/test/common_test_resources/sync_utils.cpp:70:67: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   70 |     checkfile_thread_ = score::cpp::jthread([this, promise = std::move(promise), stop_token]() noexcept {
+      |                                                                   ^
+Suppressed 9986 warnings (9939 in non-user code, 44 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

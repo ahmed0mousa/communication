@@ -1,3 +1,19 @@
-4463 warnings generated.
-Suppressed 4503 warnings (4460 in non-user code, 40 NOLINT, 3 with check filters).
+8599 warnings generated.
+./score/mw/com/impl/proxy_event_binding_base.h:60:5: warning: function 'GetSubscriptionState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   60 |     virtual SubscriptionState GetSubscriptionState() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:93:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   93 |     virtual Result<std::size_t> GetNumNewSamplesAvailable() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:100:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  100 |     virtual std::optional<std::uint16_t> GetMaxSampleCount() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/proxy_event_binding_base.h:103:5: warning: function 'GetBindingType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     virtual BindingType GetBindingType() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 8636 warnings (8592 in non-user code, 41 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

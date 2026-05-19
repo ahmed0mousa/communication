@@ -1,3 +1,64 @@
-8760 warnings generated.
-Suppressed 8924 warnings (8750 in non-user code, 164 NOLINT, 10 with check filters).
+19989 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:16:1: warning: included header proxy_event.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/proxy_event.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/mw/com/impl/runtime.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:58:61: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   23 |         return new ::score::mw::com::InstanceSpecifier{std::move(result).value()};
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:60:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   60 |     else
+      |     ^~~~
+   61 |     {
+      |     ~
+   62 |         return nullptr;
+      |         ~~~~~~~~~~~~~~~
+   63 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:77:66: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   15 | ::score::mw::com::ServiceHandleContainer<::score::mw::com::impl::HandleType>* mw_com_impl_find_service(
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:81:18: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   81 |             std::move(*instance_specifier));
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:85:18: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   85 |             std::move(result).value()};
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:87:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   87 |     else
+      |     ^~~~
+   88 |     {
+      |     ~
+   89 |         return nullptr;
+      |         ~~~~~~~~~~~~~~~
+   90 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:122:64: warning: no header providing "score::mw::com::impl::ProxyEventBase" is directly included [misc-include-cleaner]
+   17 | bool mw_com_impl_proxy_event_subscribe(::score::mw::com::impl::ProxyEventBase* proxy_event,
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:141:16: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+  139 |     if (!result.has_value())
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~
+      |     return result.has_value()
+  140 |     {
+      |     ~
+  141 |         return false;
+      |         ~~~~~~~^~~~~~
+  142 |     }
+      |     ~
+  143 |     return true;
+      |     ~~~~~~~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/4527/execroot/_main/score/mw/com/impl/rust/proxy_bridge.cpp:151:16: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+  149 |     if (!result.has_value())
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~
+      |     return result.has_value()
+  150 |     {
+      |     ~
+  151 |         return false;
+      |         ~~~~~~~^~~~~~
+  152 |     }
+      |     ~
+  153 |     return true;
+      |     ~~~~~~~~~~~
+Suppressed 20144 warnings (19969 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

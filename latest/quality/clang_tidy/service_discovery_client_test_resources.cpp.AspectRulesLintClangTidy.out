@@ -1,3 +1,55 @@
-6759 warnings generated.
-Suppressed 6908 warnings (6753 in non-user code, 149 NOLINT, 6 with check filters).
+15055 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:18:13: warning: no header providing "score::filesystem::Path" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola::test
+   16 | {
+   17 | 
+   18 | filesystem::Path GetServiceDiscoveryPath() noexcept
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:28:61: warning: no header providing "score::mw::com::impl::LolaServiceId" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola::test
+   16 | {
+   17 | 
+   18 | filesystem::Path GetServiceDiscoveryPath() noexcept
+   19 | {
+   20 | #ifdef __QNXNTO__
+   21 |     return "/tmp_discovery/mw_com_lola/service_discovery";
+   22 | #else
+   23 |     return "/tmp/mw_com_lola/service_discovery";
+   24 | #endif
+   25 | }
+   26 | 
+   27 | // Generates the file path to the service ID directory (which contains the instance ID)
+   28 | filesystem::Path GenerateExpectedServiceDirectoryPath(const LolaServiceId service_id)
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:30:45: warning: no header providing "std::to_string" is directly included [misc-include-cleaner]
+   14 |     return GetServiceDiscoveryPath() / std::to_string(static_cast<std::uint32_t>(service_id));
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:30:72: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   14 |     return GetServiceDiscoveryPath() / std::to_string(static_cast<std::uint32_t>(service_id));
+      |                                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:35:62: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   14 |                                                        const LolaServiceInstanceId::InstanceId instance_id)
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:42:13: warning: no header providing "score::cpp::callback" is directly included [misc-include-cleaner]
+   14 | score::cpp::callback<void(ServiceHandleContainer<HandleType>, FindServiceHandle)> CreateWrappedMockFindServiceHandler(
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:42:27: warning: no header providing "score::mw::com::impl::ServiceHandleContainer" is directly included [misc-include-cleaner]
+   14 | score::cpp::callback<void(ServiceHandleContainer<HandleType>, FindServiceHandle)> CreateWrappedMockFindServiceHandler(
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:42:50: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   14 | score::cpp::callback<void(ServiceHandleContainer<HandleType>, FindServiceHandle)> CreateWrappedMockFindServiceHandler(
+      |                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:42:63: warning: no header providing "score::mw::com::impl::FindServiceHandle" is directly included [misc-include-cleaner]
+   14 | score::cpp::callback<void(ServiceHandleContainer<HandleType>, FindServiceHandle)> CreateWrappedMockFindServiceHandler(
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:43:16: warning: no header providing "testing::MockFunction" is directly included [misc-include-cleaner]
+   14 |     ::testing::MockFunction<void(ServiceHandleContainer<HandleType>, FindServiceHandle)>& mock_find_service_handler)
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3287/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/test/service_discovery_client_test_resources.cpp:47:55: warning: parameter 'containers' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   14 |             mock_find_service_handler.AsStdFunction()(containers, handle);
+      |                                                       ^         
+      |                                                       std::move()
+Suppressed 15204 warnings (15038 in non-user code, 160 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

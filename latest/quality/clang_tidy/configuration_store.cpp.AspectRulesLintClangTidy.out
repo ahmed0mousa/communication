@@ -1,3 +1,121 @@
-6065 warnings generated.
-Suppressed 6153 warnings (6059 in non-user code, 88 NOLINT, 6 with check filters).
+12643 warnings generated.
+./score/mw/com/impl/configuration/test/configuration_store.h:53:5: warning: function 'GetInstanceIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   53 |     InstanceIdentifier GetInstanceIdentifier() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/test/configuration_store.h:54:5: warning: function 'GetEnrichedInstanceIdentifier' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     EnrichedInstanceIdentifier GetEnrichedInstanceIdentifier(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/test/configuration_store.h:56:5: warning: function 'GetHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     HandleType GetHandle(score::cpp::optional<ServiceInstanceId> instance_id = {}) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:27:40: warning: no header providing "score::mw::com::impl::InstanceSpecifier" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include <memory>
+   22 | #include <utility>
+   23 | 
+   24 | namespace score::mw::com::impl
+   25 | {
+   26 | 
+   27 | ConfigurationStore::ConfigurationStore(InstanceSpecifier instance_specifier,
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:28:46: warning: no header providing "score::mw::com::impl::ServiceIdentifierType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/service_instance_deployment.h"
+   16 | #include "score/mw/com/impl/configuration/service_type_deployment.h"
+   17 | #include "score/mw/com/impl/enriched_instance_identifier.h"
+   18 | #include "score/mw/com/impl/handle_type.h"
+   19 | #include "score/mw/com/impl/instance_identifier.h"
+   20 | 
+   21 | #include <memory>
+   22 | #include <utility>
+   23 | 
+   24 | namespace score::mw::com::impl
+   25 | {
+   26 | 
+   27 | ConfigurationStore::ConfigurationStore(InstanceSpecifier instance_specifier,
+   28 |                                        const ServiceIdentifierType service_identifier,
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:28:68: warning: the const qualified parameter 'service_identifier' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   28 |                                        const ServiceIdentifierType service_identifier,
+      |                                                                    ^
+      |                                                                   &
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:29:46: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/service_instance_deployment.h"
+   16 | #include "score/mw/com/impl/configuration/service_type_deployment.h"
+   17 | #include "score/mw/com/impl/enriched_instance_identifier.h"
+   18 | #include "score/mw/com/impl/handle_type.h"
+   19 | #include "score/mw/com/impl/instance_identifier.h"
+   20 | 
+   21 | #include <memory>
+   22 | #include <utility>
+   23 | 
+   24 | namespace score::mw::com::impl
+   25 | {
+   26 | 
+   27 | ConfigurationStore::ConfigurationStore(InstanceSpecifier instance_specifier,
+   28 |                                        const ServiceIdentifierType service_identifier,
+   29 |                                        const QualityType quality_type,
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:30:46: warning: no header providing "score::mw::com::impl::LolaServiceId" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/configuration/service_instance_deployment.h"
+   16 | #include "score/mw/com/impl/configuration/service_type_deployment.h"
+   17 | #include "score/mw/com/impl/enriched_instance_identifier.h"
+   18 | #include "score/mw/com/impl/handle_type.h"
+   19 | #include "score/mw/com/impl/instance_identifier.h"
+   20 | 
+   21 | #include <memory>
+   22 | #include <utility>
+   23 | 
+   24 | namespace score::mw::com::impl
+   25 | {
+   26 | 
+   27 | ConfigurationStore::ConfigurationStore(InstanceSpecifier instance_specifier,
+   28 |                                        const ServiceIdentifierType service_identifier,
+   29 |                                        const QualityType quality_type,
+   30 |                                        const LolaServiceId lola_service_id,
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:31:58: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   22 | #include <utility>
+   23 | 
+   24 | namespace score::mw::com::impl
+   25 | {
+   26 | 
+   27 | ConfigurationStore::ConfigurationStore(InstanceSpecifier instance_specifier,
+   28 |                                        const ServiceIdentifierType service_identifier,
+   29 |                                        const QualityType quality_type,
+   30 |                                        const LolaServiceId lola_service_id,
+   31 |                                        const score::cpp::optional<LolaServiceInstanceId> lola_instance_id) noexcept
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:31:67: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   15 |                                        const score::cpp::optional<LolaServiceInstanceId> lola_instance_id) noexcept
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:31:90: warning: the const qualified parameter 'lola_instance_id' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   31 |                                        const score::cpp::optional<LolaServiceInstanceId> lola_instance_id) noexcept
+      |                                                                                          ^
+      |                                                                                         &
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:47:68: warning: the const qualified parameter 'service_identifier' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   47 |                                        const ServiceIdentifierType service_identifier,
+      |                                                                    ^
+      |                                                                   &
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:49:72: warning: the const qualified parameter 'lola_service_type_deployment' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   49 |                                        const LolaServiceTypeDeployment lola_service_type_deployment,
+      |                                                                        ^
+      |                                                                       &
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:50:76: warning: the const qualified parameter 'lola_service_instance_deployment' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   50 |                                        const LolaServiceInstanceDeployment lola_service_instance_deployment) noexcept
+      |                                                                            ^
+      |                                                                           &
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:71:26: warning: no header providing "score::mw::com::impl::ServiceInstanceId" is directly included [misc-include-cleaner]
+   16 |     score::cpp::optional<ServiceInstanceId> instance_id) const noexcept
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:75:16: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   75 |         return EnrichedInstanceIdentifier(GetInstanceIdentifier(), instance_id.value());
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3353/execroot/_main/score/mw/com/impl/configuration/test/configuration_store.cpp:82:53: warning: parameter 'instance_id' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   82 |     return make_HandleType(GetInstanceIdentifier(), instance_id);
+      |                                                     ^          
+      |                                                     std::move( )
+Suppressed 12715 warnings (12620 in non-user code, 89 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,3 +1,25 @@
-8766 warnings generated.
-Suppressed 8929 warnings (8758 in non-user code, 163 NOLINT, 8 with check filters).
+19908 warnings generated.
+./score/mw/com/test/methods/methods_test_resources/method_consumer.h:116:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  116 |         else
+      |         ^~~~
+  117 |         {
+      |         ~
+  118 |             std::cout << "\n=== Test: with_in_args_and_return (copy call) ===" << std::endl;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  119 |             return proxy.with_in_args_and_return(input_argument_a, input_argument_b);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  120 |         }
+      |         ~
+./score/mw/com/test/methods/methods_test_resources/method_consumer.h:165:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  165 |         else
+      |         ^~~~
+  166 |         {
+      |         ~
+  167 |             std::cout << "\n=== Test: with_in_args_only (copy call) ===" << std::endl;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  168 |             return proxy.with_in_args_only(input_argument_a, input_argument_b);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  169 |         }
+      |         ~
+Suppressed 20070 warnings (19898 in non-user code, 164 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

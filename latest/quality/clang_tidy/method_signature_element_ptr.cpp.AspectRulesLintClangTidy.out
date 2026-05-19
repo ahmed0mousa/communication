@@ -1,3 +1,7 @@
-14 warnings generated.
-Suppressed 14 warnings (11 in non-user code, 3 with check filters).
+22 warnings generated.
+./score/mw/com/impl/methods/method_signature_element_ptr.h:78:5: warning: function 'GetQueuePosition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   78 |     std::size_t GetQueuePosition() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 21 warnings (18 in non-user code, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

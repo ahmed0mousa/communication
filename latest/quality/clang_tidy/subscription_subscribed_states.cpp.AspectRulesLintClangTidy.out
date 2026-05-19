@@ -1,15 +1,166 @@
-5308 warnings generated.
+11138 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/slot_collector.h:62:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     std::size_t GetNumNewSamplesAvailable() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_state_base.h:51:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::optional<std::uint16_t> GetMaxSampleCount() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_state_base.h:53:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   53 |     virtual const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_subscribed_states.h:48:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     std::optional<std::uint16_t> GetMaxSampleCount() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_subscribed_states.h:50:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5374 warnings (5299 in non-user code, 69 NOLINT, 6 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:28:1: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include <score/assert.hpp>
+   22 | 
+   23 | #include <utility>
+   24 | 
+   25 | namespace score::mw::com::impl::lola
+   26 | {
+   27 | 
+   28 | Result<void> SubscribedState::SubscribeEvent(const std::size_t max_sample_count) noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:28:57: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   21 | #include <score/assert.hpp>
+   22 | 
+   23 | #include <utility>
+   24 | 
+   25 | namespace score::mw::com::impl::lola
+   26 | {
+   27 | 
+   28 | Result<void> SubscribedState::SubscribeEvent(const std::size_t max_sample_count) noexcept
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:35:59: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   21 | #include <score/assert.hpp>
+   22 | 
+   23 | #include <utility>
+   24 | 
+   25 | namespace score::mw::com::impl::lola
+   26 | {
+   27 | 
+   28 | Result<void> SubscribedState::SubscribeEvent(const std::size_t max_sample_count) noexcept
+   29 | {
+   30 |     // Suppress "AUTOSAR C++14 A4-7-1" rule finding. This rule states: "An integer expression shall
+   31 |     // not lead to data loss.".
+   32 |     // This is an in purpose casting and below we do check on the max_sample_count and an error reported in case of
+   33 |     // different max_sample_count.
+   34 |     // coverity[autosar_cpp14_a4_7_1_violation]
+   35 |     const auto max_sample_count_uint16 = static_cast<std::uint16_t>(max_sample_count);
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:44:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   44 |     else
+      |     ^~~~
+   45 |     {
+      |     ~
+   46 |         ::score::mw::log::LogError("lola") << CreateLoggingString(
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   47 |             "Calling SubscribeEvent() while already subscribed with a different max_sample_count is illegal.",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   48 |             state_machine_.GetElementFqId(),
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   49 |             state_machine_.GetCurrentStateNoLock());
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   50 |         return MakeUnexpected(ComErrc::kMaxSampleCountNotRealizable);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   51 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:50:16: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+   50 |         return MakeUnexpected(ComErrc::kMaxSampleCountNotRealizable);
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:68:42: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   23 | void SubscribedState::ReOfferEvent(const pid_t) noexcept
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:75:46: warning: no header providing "std::weak_ptr" is directly included [misc-include-cleaner]
+   21 | void SubscribedState::SetReceiveHandler(std::weak_ptr<ScopedEventReceiveHandler> handler) noexcept
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:75:55: warning: no header providing "score::mw::com::impl::ScopedEventReceiveHandler" is directly included [misc-include-cleaner]
+   19 | void SubscribedState::SetReceiveHandler(std::weak_ptr<ScopedEventReceiveHandler> handler) noexcept
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:85:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   21 | std::optional<std::uint16_t> SubscribedState::GetMaxSampleCount() const noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4067/execroot/_main/score/mw/com/impl/bindings/lola/subscription_subscribed_states.cpp:93:13: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   23 | score::cpp::optional<SlotCollector>& SubscribedState::GetSlotCollector() noexcept
+      |             ^
+Suppressed 11173 warnings (11097 in non-user code, 70 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

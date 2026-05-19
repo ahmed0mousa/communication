@@ -1,3 +1,36 @@
-4168 warnings generated.
-Suppressed 4189 warnings (4165 in non-user code, 21 NOLINT, 3 with check filters).
+7341 warnings generated.
+./score/mw/com/impl/tracing/trace_error.h:34:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/889/execroot/_main/score/mw/com/impl/tracing/trace_error.cpp:20:16: warning: no header providing "score::result::Error" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace
+   16 | {
+   17 | constexpr score::mw::com::impl::tracing::TraceErrorDomain g_trace_configuration_error_domain{};
+   18 | }  // namespace
+   19 | 
+   20 | score::result::Error score::mw::com::impl::tracing::MakeError(const TraceErrorCode code, const std::string_view message)
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/889/execroot/_main/score/mw/com/impl/tracing/trace_error.cpp:20:101: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace
+   16 | {
+   17 | constexpr score::mw::com::impl::tracing::TraceErrorDomain g_trace_configuration_error_domain{};
+   18 | }  // namespace
+   19 | 
+   20 | score::result::Error score::mw::com::impl::tracing::MakeError(const TraceErrorCode code, const std::string_view message)
+      |                                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/889/execroot/_main/score/mw/com/impl/tracing/trace_error.cpp:22:40: warning: no header providing "score::result::ErrorCode" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace
+   16 | {
+   17 | constexpr score::mw::com::impl::tracing::TraceErrorDomain g_trace_configuration_error_domain{};
+   18 | }  // namespace
+   19 | 
+   20 | score::result::Error score::mw::com::impl::tracing::MakeError(const TraceErrorCode code, const std::string_view message)
+   21 | {
+   22 |     return {static_cast<score::result::ErrorCode>(code), g_trace_configuration_error_domain, message};
+      |                                        ^
+Suppressed 7359 warnings (7334 in non-user code, 22 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

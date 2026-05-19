@@ -1,6 +1,22 @@
-8518 warnings generated.
+18126 warnings generated.
+./score/mw/com/impl/methods/method_signature_element_ptr.h:78:5: warning: function 'GetQueuePosition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   78 |     std::size_t GetQueuePosition() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/methods/proxy_method.h:57:5: warning: function 'GetTypeErasedReturnType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     std::optional<memory::DataTypeSizeInfo> GetTypeErasedReturnType() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/methods/proxy_method.h:62:5: warning: function 'GetTypeErasedInArgs' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     std::optional<memory::DataTypeSizeInfo> GetTypeErasedInArgs() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/methods/proxy_method.h:168:25: warning: use c++14 style type templates [modernize-type-traits]
+  168 |             [](typename std::add_pointer<ArgTypes>::type... arg_pointers) {
+      |                ~~~~~~~~ ^                         ~~~~~~
+      |                                         _t
 ./score/mw/com/impl/methods/proxy_method_with_in_args_and_return.h:244:11: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
   244 |         *(reinterpret_cast<ReturnType*>(allocated_return_type_storage.value().data())),
       |           ^
-Suppressed 8648 warnings (8509 in non-user code, 131 NOLINT, 8 with check filters).
+Suppressed 18250 warnings (18110 in non-user code, 132 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

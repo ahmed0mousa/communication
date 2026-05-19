@@ -1,17 +1,169 @@
-13766 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4580/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
+27214 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:98:63: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   98 | using LaneConnectionInfoList = std::array<LaneConnectionInfo, 10U>;
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:104:65: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  104 | using LaneRestrictionInfoList = std::array<LaneRestrictionInfo, 10U>;
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:110:59: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  110 | using ShoulderLaneInfoList = std::array<ShoulderLaneInfo, 10U>;
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: constructor does not initialize these fields: link_ids, predecessor_lanes, successor_lanes, center_line, lane_connection_info, lane_restriction_info, shoulder_lane_info, speed_limits, lane_follows_mpp, left_lane_boundaries_ids, right_lane_boundaries_ids, link_associations, used_in_both_directions [cppcoreguidelines-pro-type-member-init]
   151 | struct MapApiLaneData
       |        ^
-/home/runner/.bazel/sandbox/linux-sandbox/4580/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
-/home/runner/.bazel/sandbox/linux-sandbox/4580/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:151:8: warning: class 'MapApiLaneData' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:167:33: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  167 |     std::array<map_api::LinkId, 10U> link_ids;
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:170:28: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  170 |     std::array<LaneIdType, 10U> predecessor_lanes;
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:176:38: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  176 |     std::array<adp::MapApiPointData, 10U> center_line;
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:220:42: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  220 |     std::array<adp::map_api::SpeedLimit, 10U> speed_limits;
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:229:32: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  229 |     std::array<LaneBoundaryId, 10U> left_lane_boundaries_ids;
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:232:32: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  232 |     std::array<LaneBoundaryId, 10U> right_lane_boundaries_ids;
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:235:48: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  235 |     std::array<map_api::LaneToLinkAssociation, 10U> link_associations;
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:238:51: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  238 |     std::array<map_api::LaneUsedInBothDirections, 10U> used_in_both_directions;
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: constructor does not initialize these fields: frame_id, lane_boundaries, lane_groups, x, hash_value [cppcoreguidelines-pro-type-member-init]
   245 | struct MapApiLanesStamped
       |        ^
-/home/runner/.bazel/sandbox/linux-sandbox/4580/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
-/home/runner/.bazel/sandbox/linux-sandbox/4580/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:100:9: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:245:8: warning: class 'MapApiLanesStamped' defines a copy constructor, a copy assignment operator, a move constructor and a move assignment operator but does not define a destructor [cppcoreguidelines-special-member-functions]
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:264:22: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  264 |     std::array<char, 10U> frame_id;
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:280:40: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  280 |     std::array<MapApiLaneBoundaryData, 10U> lane_boundaries;
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/datatype.h:285:31: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  285 |     std::array<LaneGroupData, 10U> lane_groups;
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:16:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   16 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:27:17: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include "score/mw/com/runtime.h"
+   22 | 
+   23 | using namespace std::chrono_literals;
+   24 | 
+   25 | struct Params
+   26 | {
+   27 |     score::cpp::optional<std::string> mode;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:27:31: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   20 | 
+   21 | #include "score/mw/com/runtime.h"
+   22 | 
+   23 | using namespace std::chrono_literals;
+   24 | 
+   25 | struct Params
+   26 | {
+   27 |     score::cpp::optional<std::string> mode;
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:29:39: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+   18 | #include <cstdlib>
+   19 | #include <iostream>
+   20 | 
+   21 | #include "score/mw/com/runtime.h"
+   22 | 
+   23 | using namespace std::chrono_literals;
+   24 | 
+   25 | struct Params
+   26 | {
+   27 |     score::cpp::optional<std::string> mode;
+   28 |     score::cpp::optional<std::string> instance_manifest;
+   29 |     score::cpp::optional<std::chrono::milliseconds> cycle_time;
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:35:13: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   35 | score::cpp::optional<SavedType> GetValueIfProvided(const boost::program_options::variables_map& args,
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:35:33: warning: function 'GetValueIfProvided' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   35 | score::cpp::optional<SavedType> GetValueIfProvided(const boost::program_options::variables_map& args,
+      |                                 ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:35:82: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   18 | score::cpp::optional<SavedType> GetValueIfProvided(const boost::program_options::variables_map& args,
+      |                                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:36:64: warning: the parameter 'arg_string' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   36 |                                                    std::string arg_string)
+      |                                                                ^
+      |                                                    const      &
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:42:8: warning: function 'ParseCommandLineArguments' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   42 | Params ParseCommandLineArguments(const int argc, const char** argv)
+      |        ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:46:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   18 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:51:13: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   18 |         po::value<std::size_t>()->default_value(0U),
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:54:31: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   54 |                           po::value<std::string>(),
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:62:13: warning: no header providing "boost::program_options::bool_switch" is directly included [misc-include-cleaner]
+   62 |         po::bool_switch(),
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:69:44: warning: no header providing "boost::program_options::command_line_style::unix_style" is directly included [misc-include-cleaner]
+   18 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:69:81: warning: no header providing "boost::program_options::command_line_style::allow_long_disguise" is directly included [misc-include-cleaner]
+   69 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:71:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+   71 |     po::store(parsed_args, args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:100:9: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
   100 |         score::StringLiteral runtime_args[2u] = {"-service_instance_manifest", manifest_path.c_str()};
       |         ^
-/home/runner/.bazel/sandbox/linux-sandbox/4580/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:101:55: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:100:16: warning: no header providing "score::StringLiteral" is directly included [misc-include-cleaner]
+   21 |         score::StringLiteral runtime_args[2u] = {"-service_instance_manifest", manifest_path.c_str()};
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:101:55: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
   101 |         score::mw::com::runtime::InitializeRuntime(2, runtime_args);
       |                                                       ^
-Suppressed 13923 warnings (13748 in non-user code, 164 NOLINT, 11 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:112:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   22 |         score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped"});
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4510/execroot/_main/score/mw/com/example/ipc_bridge/main.cpp:124:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  124 |     else if (mode == "gen_skeleton")
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  125 |     {
+      |     ~
+  126 |         return event_sender_receiver.RunAsGenericSkeleton(instance_specifier, cycle_time, cycles);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  127 |     }
+      |     ~
+  128 |     else if (mode == "recv" || mode == "proxy")
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  129 |     {
+      |     ~
+  130 |         return event_sender_receiver.RunAsProxy(instance_specifier, cycle_time, cycles, false, check_sample_hash);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  131 |     }
+      |     ~
+  132 |     else
+      |     ~~~~
+  133 |     {
+      |     ~
+  134 |         std::cerr << "Unknown mode " << mode << ", terminating." << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  135 |         return EXIT_FAILURE;
+      |         ~~~~~~~~~~~~~~~~~~~~
+  136 |     }
+      |     ~
+Suppressed 27336 warnings (27160 in non-user code, 165 NOLINT, 11 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

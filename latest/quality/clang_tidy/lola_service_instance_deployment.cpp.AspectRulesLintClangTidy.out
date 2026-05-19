@@ -1,3 +1,164 @@
-5966 warnings generated.
-Suppressed 6044 warnings (5960 in non-user code, 78 NOLINT, 6 with check filters).
+11841 warnings generated.
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/configuration_common_resources.h:186:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+  186 |     for (auto it : input_map)
+      |               ^
+      |          const  &
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_method_instance_deployment.h:57:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     score::json::Object Serialize() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:85:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   85 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:86:5: warning: function 'ContainsEvent' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   86 |     bool ContainsEvent(const std::string& event_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:87:5: warning: function 'ContainsField' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     bool ContainsField(const std::string& field_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_deployment.h:88:5: warning: function 'ContainsMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     bool ContainsMethod(const std::string& method_name) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:37:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:38:5: warning: function 'ToHashString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   38 |     std::string_view ToHashString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/configuration/lola_service_instance_id.h:49:5: warning: function 'GetId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   49 |     InstanceId GetId() const
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:17:1: warning: included header logging.h is not used directly [misc-include-cleaner]
+   17 | #include "score/mw/log/logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | #include <exception>
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:48:6: warning: no header providing "std::unordered_map" is directly included [misc-include-cleaner]
+   19 | std::unordered_map<QualityType, std::vector<uid_t>> ConvertJsonToUidMap(const json::Object& json_object,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:48:20: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   17 | std::unordered_map<QualityType, std::vector<uid_t>> ConvertJsonToUidMap(const json::Object& json_object,
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:48:38: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   19 | std::unordered_map<QualityType, std::vector<uid_t>> ConvertJsonToUidMap(const json::Object& json_object,
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:48:45: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   19 | std::unordered_map<QualityType, std::vector<uid_t>> ConvertJsonToUidMap(const json::Object& json_object,
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:48:85: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | std::unordered_map<QualityType, std::vector<uid_t>> ConvertJsonToUidMap(const json::Object& json_object,
+      |                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:49:78: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   19 |                                                                         std::string_view key) noexcept
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:56:14: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   19 |         std::string quality_string{it.first.GetAsStringView().data(), it.first.GetAsStringView().size()};
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:57:40: warning: no header providing "score::mw::com::impl::FromString" is directly included [misc-include-cleaner]
+   57 |         const QualityType quality_type{FromString(std::move(quality_string))};
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:57:56: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   19 |         const QualityType quality_type{FromString(std::move(quality_string))};
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:60:65: warning: no header providing "score::json::List" is directly included [misc-include-cleaner]
+   60 |         const auto uids_json_result = it.second.As<score::json::List>();
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:61:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   19 |         SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(uids_json_result.has_value(),
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:75:56: warning: no header providing "std::make_pair" is directly included [misc-include-cleaner]
+   75 |         const auto insert_result = uid_map.insert(std::make_pair(quality_type, std::move(uids)));
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:75:85: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   75 |         const auto insert_result = uid_map.insert(std::make_pair(quality_type, std::move(uids)));
+      |                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:76:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   76 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(insert_result.second, "Could not insert element in map");
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:87:36: warning: no header providing "score::mw::com::impl::ToString" is directly included [misc-include-cleaner]
+   87 |         auto quality_type_string = ToString(quality_type);
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:92:37: warning: no header providing "std::make_pair" is directly included [misc-include-cleaner]
+   92 |             json_object.insert(std::make_pair(std::move(quality_type_string), std::move(uids_json)));
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:92:84: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   92 |             json_object.insert(std::make_pair(std::move(quality_type_string), std::move(uids_json)));
+      |                                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:102:44: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  102 |     if (((lhs.instance_id_.has_value()) == false) || (rhs.instance_id_.has_value() == false))
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |           !lhs.instance_id_.has_value()
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:102:87: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  102 |     if (((lhs.instance_id_.has_value()) == false) || (rhs.instance_id_.has_value() == false))
+      |                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |                                                       !rhs.instance_id_.has_value()
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:154:62: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   18 |     const auto serialization_version = GetValueFromJson<std::uint32_t>(json_object, kSerializationVersionKeyInstDepl);
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:169:69: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   18 |         shared_memory_size_ = shared_memory_size_it->second.As<std::size_t>().value();
+      |                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:190:23: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   19 |     const score::cpp::optional<LolaServiceInstanceId> instance_id,
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:190:32: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   17 |     const score::cpp::optional<LolaServiceInstanceId> instance_id,
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:190:55: warning: the const qualified parameter 'instance_id' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+  190 |     const score::cpp::optional<LolaServiceInstanceId> instance_id,
+      |                                                       ^
+      |                                                      &
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:201:20: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  201 |       events_{std::move(events)},
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:203:21: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  203 |       methods_{std::move(methods)},
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1377/execroot/_main/score/mw/com/impl/configuration/lola_service_instance_deployment.cpp:205:30: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  205 |       allowed_consumer_{std::move(allowed_consumer)},
+      |                              ^
+Suppressed 11874 warnings (11789 in non-user code, 79 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

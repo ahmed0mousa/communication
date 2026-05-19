@@ -1,3 +1,51 @@
-4168 warnings generated.
-Suppressed 4189 warnings (4165 in non-user code, 21 NOLINT, 3 with check filters).
+7342 warnings generated.
+./score/mw/com/impl/com_error.h:97:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/836/execroot/_main/score/mw/com/impl/com_error.cpp:14:1: warning: included header result.h is not used directly [misc-include-cleaner]
+   14 | #include "score/result/result.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | 
+/home/runner/.bazel/sandbox/linux-sandbox/836/execroot/_main/score/mw/com/impl/com_error.cpp:24:16: warning: no header providing "score::result::Error" is directly included [misc-include-cleaner]
+   14 | #include "score/result/result.h"
+   15 | 
+   16 | namespace
+   17 | {
+   18 | constexpr score::mw::com::impl::ComErrorDomain g_comErrorDomain;
+   19 | }  // namespace
+   20 | 
+   21 | namespace score::mw::com::impl
+   22 | {
+   23 | 
+   24 | score::result::Error MakeError(const ComErrc code, const std::string_view message)
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/836/execroot/_main/score/mw/com/impl/com_error.cpp:24:63: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   15 | 
+   16 | namespace
+   17 | {
+   18 | constexpr score::mw::com::impl::ComErrorDomain g_comErrorDomain;
+   19 | }  // namespace
+   20 | 
+   21 | namespace score::mw::com::impl
+   22 | {
+   23 | 
+   24 | score::result::Error MakeError(const ComErrc code, const std::string_view message)
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/836/execroot/_main/score/mw/com/impl/com_error.cpp:26:40: warning: no header providing "score::result::ErrorCode" is directly included [misc-include-cleaner]
+   14 | #include "score/result/result.h"
+   15 | 
+   16 | namespace
+   17 | {
+   18 | constexpr score::mw::com::impl::ComErrorDomain g_comErrorDomain;
+   19 | }  // namespace
+   20 | 
+   21 | namespace score::mw::com::impl
+   22 | {
+   23 | 
+   24 | score::result::Error MakeError(const ComErrc code, const std::string_view message)
+   25 | {
+   26 |     return {static_cast<score::result::ErrorCode>(code), g_comErrorDomain, message};
+      |                                        ^
+Suppressed 7359 warnings (7334 in non-user code, 22 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

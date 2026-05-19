@@ -1,4 +1,4 @@
-9317 warnings generated.
+21200 warnings generated.
 ./score/mw/com/impl/test/proxy_resources.h:31:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    31 |     ProxyFieldAttorney(ProxyField<FieldType>& proxy_field) noexcept : proxy_field_{proxy_field} {}
       |     ^
@@ -11,5 +11,9 @@
    49 |     ProxyEventBaseAttorney(ProxyField<FieldType>& proxy_field) noexcept
       |     ^
       |     explicit 
-Suppressed 9509 warnings (9306 in non-user code, 195 NOLINT, 8 with check filters).
+./score/mw/com/impl/test/proxy_resources.h:68:5: warning: function 'GetProxyEventTracing' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     tracing::ProxyEventTracingData GetProxyEventTracing() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 21414 warnings (21188 in non-user code, 218 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,12 +1,44 @@
-5087 warnings generated.
+9934 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/slot_decrementer.h:25:5: warning: function 'score::mw::com::impl::lola::SlotDecrementer::SlotDecrementer' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    25 |     SlotDecrementer(ConsumerEventDataControlLocalView<>& event_data_control,
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/1593/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:21:18: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/1307/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:21:18: note: the definition seen here
    21 | SlotDecrementer::SlotDecrementer(ConsumerEventDataControlLocalView<>& event_data_control_local,
       |                  ^
 ./score/mw/com/impl/bindings/lola/slot_decrementer.h:25:5: note: differing parameters are named here: ('event_data_control'), in definition: ('event_data_control_local')
@@ -17,5 +49,36 @@
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 5140 warnings (5081 in non-user code, 56 NOLINT, 3 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1307/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:16:1: warning: included header transaction_log_local_view.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/bindings/lola/transaction_log_local_view.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | 
+/home/runner/.bazel/sandbox/linux-sandbox/1307/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:21:34: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/control_slot_types.h"
+   16 | #include "score/mw/com/impl/bindings/lola/transaction_log_local_view.h"
+   17 | 
+   18 | namespace score::mw::com::impl::lola
+   19 | {
+   20 | 
+   21 | SlotDecrementer::SlotDecrementer(ConsumerEventDataControlLocalView<>& event_data_control_local,
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1307/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:39:25: warning: std::move of the expression of the trivially-copyable type 'SlotIndexType' (aka 'unsigned short') has no effect; remove std::move() [performance-move-const-arg]
+   39 |       event_slot_index_{std::move(other.event_slot_index_)}
+      |                         ^~~~~~~~~~                       ~
+/home/runner/.bazel/sandbox/linux-sandbox/1307/execroot/_main/score/mw/com/impl/bindings/lola/slot_decrementer.cpp:39:30: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   17 |       event_slot_index_{std::move(other.event_slot_index_)}
+      |                              ^
+Suppressed 9970 warnings (9910 in non-user code, 57 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

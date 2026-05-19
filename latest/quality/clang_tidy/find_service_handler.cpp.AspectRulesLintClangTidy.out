@@ -1,3 +1,7 @@
-4165 warnings generated.
-Suppressed 4171 warnings (4162 in non-user code, 6 NOLINT, 3 with check filters).
+7234 warnings generated.
+./score/mw/com/impl/find_service_handle.h:159:5: warning: function 'getUid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  159 |     constexpr std::size_t getUid() const
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 7240 warnings (7230 in non-user code, 7 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

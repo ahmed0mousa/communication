@@ -1,4 +1,38 @@
-8371 warnings generated.
+17076 warnings generated.
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/event_meta_info.h:30:57: warning: the const qualified parameter 'event_slots_raw_array' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   30 |                   const memory::shared::OffsetPtr<void> event_slots_raw_array)
+      |                                                         ^
+      |                                                        &
+./score/mw/com/impl/bindings/lola/i_runtime.h:40:5: warning: function 'HasAsilBSupport' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual bool HasAsilBSupport() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:43:5: warning: function 'GetShmSizeCalculationMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     virtual ShmSizeCalculationMode GetShmSizeCalculationMode() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:48:5: warning: function 'GetPid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     virtual pid_t GetPid() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:51:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual GlobalConfiguration::ApplicationId GetApplicationId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/methods/proxy_method_instance_identifier.h:30:8: warning: constructor does not initialize these fields: proxy_instance_identifier [cppcoreguidelines-pro-type-member-init]
    30 | struct ProxyMethodInstanceIdentifier
       |        ^
@@ -6,5 +40,5 @@
    32 |     ProxyInstanceIdentifier proxy_instance_identifier;
       |                                                      
       |                                                      {}
-Suppressed 8493 warnings (8362 in non-user code, 123 NOLINT, 8 with check filters).
+Suppressed 17190 warnings (17058 in non-user code, 124 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

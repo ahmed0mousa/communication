@@ -1,3 +1,147 @@
-6670 warnings generated.
-Suppressed 6838 warnings (6664 in non-user code, 168 NOLINT, 6 with check filters).
+15001 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:17:1: warning: included header filesystem.h is not used directly [misc-include-cleaner]
+   17 | #include "score/filesystem/filesystem.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | #include "score/mw/com/impl/com_error.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:36:34: warning: use c++14 style type templates [modernize-type-traits]
+   36 | using underlying_type_readmask = std::underlying_type<os::InotifyEvent::ReadMask>::type;
+      |                                  ^                                               ~~~~~~
+      |                                                      _t
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:36:39: warning: no header providing "std::underlying_type" is directly included [misc-include-cleaner]
+   29 | #include <utility>
+   30 | 
+   31 | namespace score::mw::com::impl::lola
+   32 | {
+   33 | 
+   34 | namespace
+   35 | {
+   36 | using underlying_type_readmask = std::underlying_type<os::InotifyEvent::ReadMask>::type;
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:36:59: warning: no header providing "score::os::InotifyEvent" is directly included [misc-include-cleaner]
+   20 | using underlying_type_readmask = std::underlying_type<os::InotifyEvent::ReadMask>::type;
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:45:6: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   30 | 
+   31 | namespace score::mw::com::impl::lola
+   32 | {
+   33 | 
+   34 | namespace
+   35 | {
+   36 | using underlying_type_readmask = std::underlying_type<os::InotifyEvent::ReadMask>::type;
+   37 | 
+   38 | constexpr std::uint8_t kMaxNumberOfCrawlAndWatchRetries{3U};
+   39 | 
+   40 | auto ReadMaskSet(const os::InotifyEvent& event, const os::InotifyEvent::ReadMask mask) noexcept -> bool
+   41 | {
+   42 |     return static_cast<underlying_type_readmask>(event.GetMask() & mask) != 0U;
+   43 | }
+   44 | 
+   45 | std::vector<HandleType> GetKnownHandles(EnrichedInstanceIdentifier enriched_instance_identifier,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:45:13: warning: no header providing "score::mw::com::impl::HandleType" is directly included [misc-include-cleaner]
+   19 | std::vector<HandleType> GetKnownHandles(EnrichedInstanceIdentifier enriched_instance_identifier,
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:45:41: warning: no header providing "score::mw::com::impl::EnrichedInstanceIdentifier" is directly included [misc-include-cleaner]
+   19 | std::vector<HandleType> GetKnownHandles(EnrichedInstanceIdentifier enriched_instance_identifier,
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:45:68: warning: the parameter 'enriched_instance_identifier' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   45 | std::vector<HandleType> GetKnownHandles(EnrichedInstanceIdentifier enriched_instance_identifier,
+      |                                                                    ^
+      |                                         const                     &
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:46:41: warning: no header providing "score::mw::com::impl::lola::QualityAwareContainer" is directly included [misc-include-cleaner]
+   18 |                                         QualityAwareContainer<KnownInstancesContainer> known_instances) noexcept
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:46:63: warning: no header providing "score::mw::com::impl::lola::KnownInstancesContainer" is directly included [misc-include-cleaner]
+   18 |                                         QualityAwareContainer<KnownInstancesContainer> known_instances) noexcept
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:46:88: warning: the parameter 'known_instances' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   46 |                                         QualityAwareContainer<KnownInstancesContainer> known_instances) noexcept
+      |                                                                                        ^
+      |                                         const                                         &
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:55:14: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   19 |         case QualityType::kASIL_B:
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:80:61: warning: no header providing "score::concurrency::Executor" is directly included [misc-include-cleaner]
+   15 | ServiceDiscoveryClient::ServiceDiscoveryClient(concurrency::Executor& long_running_threads) noexcept
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:82:35: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   22 |                              std::make_unique<os::InotifyInstanceImpl>(),
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:82:51: warning: no header providing "score::os::InotifyInstanceImpl" is directly included [misc-include-cleaner]
+   20 |                              std::make_unique<os::InotifyInstanceImpl>(),
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:83:34: warning: no header providing "score::os::Unistd" is directly included [misc-include-cleaner]
+   20 |                              os::Unistd::Default(),
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:89:53: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   89 |                                                std::unique_ptr<os::InotifyInstance> inotify_instance,
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:89:68: warning: no header providing "score::os::InotifyInstance" is directly included [misc-include-cleaner]
+   20 |                                                std::unique_ptr<os::InotifyInstance> inotify_instance,
+      |                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:91:60: warning: no header providing "score::filesystem::Filesystem" is directly included [misc-include-cleaner]
+   15 |                                                filesystem::Filesystem filesystem) noexcept
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:92:7: warning: no header providing "score::mw::com::impl::IServiceDiscoveryClient" is directly included [misc-include-cleaner]
+   19 |     : IServiceDiscoveryClient{},
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:93:68: warning: no header providing "std::chrono::steady_clock" is directly included [misc-include-cleaner]
+   22 |       offer_disambiguator_{static_cast<std::uint64_t>(std::chrono::steady_clock::now().time_since_epoch().count())},
+      |                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:112:76: warning: the const qualified parameter 'stop_token' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+  112 |     worker_thread_result_ = long_running_threads_.Submit([this](const auto stop_token) noexcept {
+      |                                                                            ^
+      |                                                                           &
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:120:21: warning: no header providing "score::cpp::stop_callback" is directly included [misc-include-cleaner]
+   24 |         score::cpp::stop_callback i_notify_close_guard{stop_token, [this]() noexcept {
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:146:49: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   19 | auto ServiceDiscoveryClient::OfferService(const InstanceIdentifier instance_identifier) noexcept -> Result<void>
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:150:67: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   19 |         enriched_instance_identifier.GetBindingSpecificInstanceId<LolaServiceInstanceId>().has_value(),
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:168:39: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   24 |     QualityAwareContainer<score::cpp::optional<FlagFile>> flag_files{};
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:168:48: warning: no header providing "score::mw::com::impl::lola::FlagFile" is directly included [misc-include-cleaner]
+   15 |     QualityAwareContainer<score::cpp::optional<FlagFile>> flag_files{};
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:226:11: warning: no header providing "score::mw::com::impl::IServiceDiscovery" is directly included [misc-include-cleaner]
+   19 |     const IServiceDiscovery::QualityTypeSelector quality_type_selector) noexcept -> Result<void>
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:266:52: warning: no header providing "score::mw::com::impl::FindServiceHandle" is directly included [misc-include-cleaner]
+   19 | auto ServiceDiscoveryClient::StopFindService(const FindServiceHandle find_service_handle) noexcept -> Result<void>
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:298:10: warning: no header providing "std::unordered_set" is directly included [misc-include-cleaner]
+   29 |     std::unordered_set<os::InotifyWatchDescriptor> watch_descriptor_placeholder{};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:298:28: warning: no header providing "score::os::InotifyWatchDescriptor" is directly included [misc-include-cleaner]
+   20 |     std::unordered_set<os::InotifyWatchDescriptor> watch_descriptor_placeholder{};
+      |                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:374:44: warning: no header providing "score::cpp::static_vector" is directly included [misc-include-cleaner]
+   24 |     const score::cpp::expected<score::cpp::static_vector<os::InotifyEvent, os::InotifyInstance::max_events>, os::Error>&
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:374:114: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   20 |     const score::cpp::expected<score::cpp::static_vector<os::InotifyEvent, os::InotifyInstance::max_events>, os::Error>&
+      |                                                                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:437:21: warning: no header providing "score::mw::com::impl::lola::GetSearchPathForIdentifier" is directly included [misc-include-cleaner]
+  437 |                     GetSearchPathForIdentifier(enriched_instance_identifier) / event.GetName().data();
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:611:36: warning: no header providing "std::nullopt" is directly included [misc-include-cleaner]
+   22 |             IdentifierWatches{std::nullopt, std::unordered_set<os::InotifyWatchDescriptor>{watch_descriptor}});
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:706:5: warning: no header providing "score::mw::com::impl::FindServiceHandler" is directly included [misc-include-cleaner]
+   19 |     FindServiceHandler<HandleType> handler,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:719:10: warning: no header providing "std::unordered_map" is directly included [misc-include-cleaner]
+   29 |     std::unordered_map<os::InotifyWatchDescriptor, EnrichedInstanceIdentifier> watch_descriptors{};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:738:35: warning: no header providing "std::for_each" is directly included [misc-include-cleaner]
+   22 |         score::cpp::ignore = std::for_each(watched_identifier->second.child_watches.cbegin(),
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3718/execroot/_main/score/mw/com/impl/bindings/lola/service_discovery/client/service_discovery_client.cpp:910:8: warning: no header providing "score::mw::com::impl::ServiceHandleContainer" is directly included [misc-include-cleaner]
+  910 | Result<ServiceHandleContainer<HandleType>> ServiceDiscoveryClient::FindService(
+      |        ^
+Suppressed 15131 warnings (14956 in non-user code, 169 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">6</td>
-            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -115,14 +115,14 @@
 <span id="L37"><span class="lineNum">      37</span>                 :             :                                      score::containers::DynamicArray&lt;ApplicationIdPidMappingEntry&gt;::iterator,</span>
 <span id="L38"><span class="lineNum">      38</span>                 :             :                                      const std::uint32_t /*application_id*/,</span>
 <span id="L39"><span class="lineNum">      39</span>                 :             :                                      const pid_t) const</span>
-<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaGNC tlaBgGNC">           1 :     {</span></span>
-<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaGNC">           1 :         return expected_register_pid_result_;</span></span>
-<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaGNC">           1 :     }</span></span>
+<span id="L40"><span class="lineNum">      40</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
+<span id="L41"><span class="lineNum">      41</span>                 :<span class="tlaUNC">           0 :         return expected_register_pid_result_;</span></span>
+<span id="L42"><span class="lineNum">      42</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L43"><span class="lineNum">      43</span>                 :             : </span>
 <span id="L44"><span class="lineNum">      44</span>                 :             :     void InjectRegisterPidResult(std::optional&lt;pid_t&gt; expected_register_pid_result)</span>
-<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaGNC">           1 :     {</span></span>
-<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaGNC">           1 :         expected_register_pid_result_ = expected_register_pid_result;</span></span>
-<span id="L47"><span class="lineNum">      47</span>                 :<span class="tlaGNC">           1 :     }</span></span>
+<span id="L45"><span class="lineNum">      45</span>                 :<span class="tlaUNC">           0 :     {</span></span>
+<span id="L46"><span class="lineNum">      46</span>                 :<span class="tlaUNC">           0 :         expected_register_pid_result_ = expected_register_pid_result;</span></span>
+<span id="L47"><span class="lineNum">      47</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L48"><span class="lineNum">      48</span>                 :             : </span>
 <span id="L49"><span class="lineNum">      49</span>                 :             :   private:</span>
 <span id="L50"><span class="lineNum">      50</span>                 :             :     std::optional&lt;pid_t&gt; expected_register_pid_result_{};</span>

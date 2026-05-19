@@ -1,3 +1,26 @@
-5020 warnings generated.
-Suppressed 5074 warnings (5017 in non-user code, 54 NOLINT, 3 with check filters).
+9756 warnings generated.
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1337/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log.cpp:18:43: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola
+   16 | {
+   17 | 
+   18 | TransactionLog::TransactionLog(const std::size_t number_of_slots,
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1337/execroot/_main/score/mw/com/impl/bindings/lola/transaction_log.cpp:19:48: warning: no header providing "score::memory::shared::ManagedMemoryResource" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola
+   16 | {
+   17 | 
+   18 | TransactionLog::TransactionLog(const std::size_t number_of_slots,
+   19 |                                memory::shared::ManagedMemoryResource& resource) noexcept
+      |                                                ^
+Suppressed 9807 warnings (9749 in non-user code, 55 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

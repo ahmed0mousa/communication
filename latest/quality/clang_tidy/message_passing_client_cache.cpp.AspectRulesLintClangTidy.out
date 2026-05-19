@@ -1,3 +1,30 @@
-4839 warnings generated.
-Suppressed 4890 warnings (4836 in non-user code, 51 NOLINT, 3 with check filters).
+9133 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:39:16: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   21 | constexpr std::uint32_t kMaxSendSize{32U};
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:43:24: warning: no header providing "std::chrono::milliseconds" is directly included [misc-include-cleaner]
+   21 | constexpr std::chrono::milliseconds kStateRetryDelay{50};
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:47:60: warning: no header providing "score::mw::com::impl::lola::ClientQualityType" is directly included [misc-include-cleaner]
+   19 | MessagePassingClientCache::MessagePassingClientCache(const ClientQualityType asil_level,
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:54:11: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   26 |     const pid_t target_node_id) noexcept
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:56:10: warning: no header providing "std::lock_guard" is directly included [misc-include-cleaner]
+   21 |     std::lock_guard<std::mutex> lck(mutex_);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:71:97: warning: no header providing "score::cpp::to_underlying" is directly included [misc-include-cleaner]
+   24 |                                         << " (state=" << static_cast<std::uint32_t>(score::cpp::to_underlying(state))
+      |                                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:74:60: warning: no header providing "score::cpp::to_underlying" is directly included [misc-include-cleaner]
+   74 |                                                score::cpp::to_underlying(search->second->GetStopReason()))
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:77:21: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   77 |         score::cpp::ignore = clients_.erase(search);
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3277/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_client_cache.cpp:152:22: warning: no header providing "std::terminate" is directly included [misc-include-cleaner]
+   21 |                 std::terminate();
+      |                      ^
+Suppressed 9176 warnings (9121 in non-user code, 52 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

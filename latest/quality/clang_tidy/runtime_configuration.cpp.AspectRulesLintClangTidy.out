@@ -1,3 +1,11 @@
-4348 warnings generated.
-Suppressed 4381 warnings (4339 in non-user code, 33 NOLINT, 9 with check filters).
+7802 warnings generated.
+./score/mw/com/runtime_configuration.h:63:5: warning: function 'GetConfigurationPath' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   63 |     const filesystem::Path& GetConfigurationPath() const;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1233/execroot/_main/score/mw/com/runtime_configuration.cpp:19:1: warning: included header assert.hpp is not used directly [misc-include-cleaner]
+   19 | #include <score/assert.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | #include <score/span.hpp>
+Suppressed 7834 warnings (7791 in non-user code, 34 NOLINT, 9 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

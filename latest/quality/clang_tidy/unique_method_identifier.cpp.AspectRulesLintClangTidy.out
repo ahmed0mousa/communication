@@ -1,3 +1,23 @@
-4151 warnings generated.
-Suppressed 4174 warnings (4148 in non-user code, 23 NOLINT, 3 with check filters).
+7476 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/1169/execroot/_main/score/mw/com/impl/bindings/lola/methods/unique_method_identifier.cpp:28:10: warning: no header providing "score::mw::log::LogStream" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl::lola
+   16 | {
+   17 | 
+   18 | bool operator==(const UniqueMethodIdentifier& lhs, const UniqueMethodIdentifier& rhs) noexcept
+   19 | {
+   20 |     return ((lhs.method_or_field_id == rhs.method_or_field_id) && (lhs.method_type == rhs.method_type));
+   21 | }
+   22 | 
+   23 | bool operator!=(const UniqueMethodIdentifier& lhs, const UniqueMethodIdentifier& rhs) noexcept
+   24 | {
+   25 |     return !(lhs == rhs);
+   26 | }
+   27 | 
+   28 | mw::log::LogStream& operator<<(score::mw::log::LogStream& stream, const UniqueMethodIdentifier& value) noexcept
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1169/execroot/_main/score/mw/com/impl/bindings/lola/methods/unique_method_identifier.cpp:30:84: warning: no header providing "score::mw::com::impl::to_string" is directly included [misc-include-cleaner]
+   14 |     stream << "MethodOrFieldId:" << value.method_or_field_id << ". MethodType:" << to_string(value.method_type);
+      |                                                                                    ^
+Suppressed 7498 warnings (7471 in non-user code, 24 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

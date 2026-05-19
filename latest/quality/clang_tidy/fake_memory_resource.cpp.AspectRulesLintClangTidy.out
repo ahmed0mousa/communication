@@ -1,9 +1,33 @@
-4042 warnings generated.
+7679 warnings generated.
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:30:5: warning: function 'getBaseAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   30 |     void* getBaseAddress() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:35:5: warning: function 'getUsableBaseAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     void* getUsableBaseAddress() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:40:5: warning: function 'GetUserAllocatedBytes' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     std::size_t GetUserAllocatedBytes() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:45:5: warning: function 'IsOffsetPtrBoundsCheckBypassingEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   45 |     bool IsOffsetPtrBoundsCheckBypassingEnabled() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:51:5: warning: function 'getEndAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     const void* getEndAddress() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:57:16: warning: do not manage memory manually; consider a container or a smart pointer [cppcoreguidelines-no-malloc]
    57 |         return std::malloc(bytes);
       |                ^~~~~~~~~~~~~~~~~~
 ./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:62:9: warning: do not manage memory manually; use RAII [cppcoreguidelines-no-malloc]
    62 |         std::free(memory);
       |         ^~~~~~~~~~~~~~~~~
-Suppressed 4058 warnings (4037 in non-user code, 18 NOLINT, 3 with check filters).
+./score/mw/com/impl/bindings/lola/test_doubles/fake_memory_resource.h:65:5: warning: function 'do_is_equal' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     bool do_is_equal(const memory_resource&) const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 7690 warnings (7668 in non-user code, 19 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

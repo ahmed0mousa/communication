@@ -1,3 +1,7 @@
-5011 warnings generated.
-Suppressed 5058 warnings (5008 in non-user code, 47 NOLINT, 3 with check filters).
+9638 warnings generated.
+./score/mw/com/impl/bindings/lola/event_meta_info.h:30:57: warning: the const qualified parameter 'event_slots_raw_array' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   30 |                   const memory::shared::OffsetPtr<void> event_slots_raw_array)
+      |                                                         ^
+      |                                                        &
+Suppressed 9685 warnings (9634 in non-user code, 48 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

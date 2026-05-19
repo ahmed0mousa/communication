@@ -1,3 +1,34 @@
-4987 warnings generated.
-Suppressed 5038 warnings (4981 in non-user code, 51 NOLINT, 6 with check filters).
+9936 warnings generated.
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3294/execroot/_main/score/mw/com/impl/bindings/lola/element_fq_id.cpp:29:19: warning: no header providing "score::mw::com::impl::ServiceElementType" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/log/logging.h"
+   16 | 
+   17 | #include <cstdint>
+   18 | #include <exception>
+   19 | #include <limits>
+   20 | #include <string>
+   21 | 
+   22 | namespace score::mw::com::impl::lola
+   23 | {
+   24 | 
+   25 | ElementFqId::ElementFqId() noexcept
+   26 |     : ElementFqId{std::numeric_limits<ServiceId>::max(),
+   27 |                   std::numeric_limits<ElementId>::max(),
+   28 |                   std::numeric_limits<InstanceId>::max(),
+   29 |                   ServiceElementType::INVALID}
+      |                   ^
+Suppressed 9983 warnings (9925 in non-user code, 52 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

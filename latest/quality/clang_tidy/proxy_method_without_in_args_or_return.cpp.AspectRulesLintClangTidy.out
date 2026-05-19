@@ -1,3 +1,49 @@
-8525 warnings generated.
-Suppressed 8656 warnings (8517 in non-user code, 131 NOLINT, 8 with check filters).
+18141 warnings generated.
+./score/mw/com/impl/methods/method_signature_element_ptr.h:78:5: warning: function 'GetQueuePosition' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   78 |     std::size_t GetQueuePosition() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/methods/proxy_method.h:57:5: warning: function 'GetTypeErasedReturnType' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     std::optional<memory::DataTypeSizeInfo> GetTypeErasedReturnType() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/methods/proxy_method.h:62:5: warning: function 'GetTypeErasedInArgs' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     std::optional<memory::DataTypeSizeInfo> GetTypeErasedInArgs() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/methods/proxy_method.h:168:25: warning: use c++14 style type templates [modernize-type-traits]
+  168 |             [](typename std::add_pointer<ArgTypes>::type... arg_pointers) {
+      |                ~~~~~~~~ ^                         ~~~~~~
+      |                                         _t
+/home/runner/.bazel/sandbox/linux-sandbox/4250/execroot/_main/score/mw/com/impl/methods/proxy_method_without_in_args_or_return.cpp:17:66: warning: no header providing "score::mw::com::impl::ProxyMethodBase" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | ProxyMethod<void()>::ProxyMethod(ProxyMethod&& other) noexcept : ProxyMethodBase(std::move(other))
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4250/execroot/_main/score/mw/com/impl/methods/proxy_method_without_in_args_or_return.cpp:17:87: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | ProxyMethod<void()>::ProxyMethod(ProxyMethod&& other) noexcept : ProxyMethodBase(std::move(other))
+      |                                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4250/execroot/_main/score/mw/com/impl/methods/proxy_method_without_in_args_or_return.cpp:20:5: warning: no header providing "score::mw::com::impl::ProxyBaseView" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score::mw::com::impl
+   16 | {
+   17 | ProxyMethod<void()>::ProxyMethod(ProxyMethod&& other) noexcept : ProxyMethodBase(std::move(other))
+   18 | {
+   19 |     // Since the address of this method has changed, we need update the address stored in the parent proxy.
+   20 |     ProxyBaseView proxy_base_view{proxy_base_.get()};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4250/execroot/_main/score/mw/com/impl/methods/proxy_method_without_in_args_or_return.cpp:37:8: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   14 | score::Result<void> ProxyMethod<void()>::operator()()
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4250/execroot/_main/score/mw/com/impl/methods/proxy_method_without_in_args_or_return.cpp:39:35: warning: no header providing "score::mw::com::impl::detail::DetermineNextAvailableQueueSlot" is directly included [misc-include-cleaner]
+   14 |     auto queue_position = detail::DetermineNextAvailableQueueSlot(is_return_type_ptr_active_);
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4250/execroot/_main/score/mw/com/impl/methods/proxy_method_without_in_args_or_return.cpp:42:16: warning: no header providing "score::Unexpected" is directly included [misc-include-cleaner]
+   42 |         return Unexpected(queue_position.error());
+      |                ^
+Suppressed 18260 warnings (18120 in non-user code, 132 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

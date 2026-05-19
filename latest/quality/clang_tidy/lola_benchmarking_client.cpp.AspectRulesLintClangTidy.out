@@ -1,7 +1,122 @@
-8941 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4819/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:147:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+20643 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:22:1: warning: included header exception is not used directly [misc-include-cleaner]
+   22 | #include <exception>
+      | ^~~~~~~~~~~~~~~~~~~~
+   23 | #include <optional>
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:58:52: warning: no header providing "std::operator""ms" is directly included [misc-include-cleaner]
+   19 |     static constexpr auto kFindServiceBackoffTime{1ms};
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:60:17: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   24 |     score::cpp::stop_token stop_token_;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:63:58: warning: pass by value and use std::move [modernize-pass-by-value]
+   26 |     ServiceFinder(ServiceFinderMode service_finder_mode, score::cpp::stop_token stop_token)
+      |                                                          ^
+   27 |         : service_finder_mode_{service_finder_mode}, stop_token_{stop_token}
+      |                                                                            
+      |                                                                  std::move()
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:64:66: warning: parameter 'stop_token' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   26 |         : service_finder_mode_{service_finder_mode}, stop_token_{stop_token}
+      |                                                                  ^         
+      |                                                                  std::move()
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:75:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+   75 |         else if (service_finder_mode_ == ServiceFinderMode::ASYNC)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   76 |         {
+      |         ~
+   77 |             mw::log::LogInfo(kLogContext) << "Starting find service in async mode!";
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   78 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(service_finder_mode_ == ServiceFinderMode::ASYNC,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   79 |                                                         "ASYNC mode is not supported yet");
+      |                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   80 |         }
+      |         ~
+   81 |         else
+      |         ~~~~
+   82 |         {
+      |         ~
+   83 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(false, "Unexpected find service mode!");
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   84 |         }
+      |         ~
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:78:13: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   24 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(service_finder_mode_ == ServiceFinderMode::ASYNC,
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:122:34: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   21 | enum class ReceptionState : std::uint8_t
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:134:10: warning: no header providing "std::mutex" is directly included [misc-include-cleaner]
+   23 |     std::mutex mutex{};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:135:10: warning: no header providing "std::condition_variable" is directly included [misc-include-cleaner]
+   21 |     std::condition_variable cv{};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:147:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
   147 |     RunDurationHandler(const ClientConfig& cc) : run_time_limit_(cc.run_time_limit)
       |     ^
       |     explicit 
-Suppressed 9132 warnings (8932 in non-user code, 192 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:152:5: warning: function 'run_duration_was_exceeded' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  152 |     bool run_duration_was_exceeded(unsigned long number_of_samples_received) const
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:192:42: warning: the parameter 'test_stop_token' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  192 |                   score::cpp::stop_token test_stop_token,
+      |                                          ^
+      |                   const                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:218:13: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+  218 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(number_of_callbacks_called_result.value() > 0);
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:238:17: warning: no header providing "score::cpp::stop_callback" is directly included [misc-include-cleaner]
+  238 |     score::cpp::stop_callback stop_callback{test_stop_token, [&receive_handler_context]() {
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:240:58: warning: no header providing "std::unique_lock" is directly included [misc-include-cleaner]
+  240 |                                                     std::unique_lock lk(receive_handler_context.mutex);
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:257:42: warning: the parameter 'test_stop_token' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  257 |                   score::cpp::stop_token test_stop_token,
+      |                                          ^
+      |                   const                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:310:67: warning: the parameter 'test_stop_token' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  310 | bool RunClient(const ClientConfig& config, score::cpp::stop_token test_stop_token)
+      |                                                                   ^
+      |                                            const                 &
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:327:10: warning: the variable 'proxy_handle' is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  327 |     auto proxy_handle = handle_opt.value();
+      |          ^
+      |     const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:356:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  356 |     else
+      |     ^~~~
+  357 |     {
+      |     ~
+  358 |         return PollForEvent(lola_proxy, config, test_stop_token, rdh);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  359 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:382:10: warning: the variable 'args' is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+  382 |     auto args = args_result.value();
+      |          ^
+      |     const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:384:17: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+  384 |     score::cpp::stop_source test_stop_source{};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:402:77: warning: 100 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  402 |         std::this_thread::sleep_for(std::chrono::milliseconds{std::rand() % 100});
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4784/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/lola_benchmarking_client.cpp:403:17: warning: use emplace_back instead of push_back [modernize-use-emplace]
+  403 |         workers.push_back(std::thread([&config, &exit_code, &test_stop_token]() noexcept {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+      |                 emplace_back(
+  404 |             auto success = score::mw::com::test::RunClient(config, test_stop_token);
+  405 | 
+  406 |             success &= score::mw::com::test::signal_service_that_client_is_done();
+  407 | 
+  408 |             if (!success)
+  409 |             {
+  410 |                 exit_code = EXIT_FAILURE;
+  411 |             }
+  412 |         }));
+      |          ~
+Suppressed 20812 warnings (20611 in non-user code, 193 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

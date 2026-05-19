@@ -1,3 +1,44 @@
-4403 warnings generated.
-Suppressed 4439 warnings (4400 in non-user code, 36 NOLINT, 3 with check filters).
+7928 warnings generated.
+./score/mw/com/impl/com_error.h:97:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   97 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override final
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/instance_specifier.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string_view ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:38:34: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   18 | bool IsShortNameValid(const std::string_view shortname) noexcept
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:61:49: warning: no header providing "std::next" is directly included [misc-include-cleaner]
+   18 |     if (!validate_chars(shortname.begin(), std::next(shortname.begin()), true))
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:74:16: warning: redundant boolean literal in conditional return statement [readability-simplify-boolean-expr]
+   72 |     if (shortname.find(invalid_char_seq, 0U) != std::string_view::npos)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     return shortname.find(invalid_char_seq, 0U) == std::string_view::npos
+   73 |     {
+      |     ~
+   74 |         return false;
+      |         ~~~~~~~^~~~~~
+   75 |     }
+      |     ~
+   76 |     return true;
+      |     ~~~~~~~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:81:8: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   16 | score::Result<InstanceSpecifier> InstanceSpecifier::Create(std::string&& shortname_path) noexcept
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:81:65: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   18 | score::Result<InstanceSpecifier> InstanceSpecifier::Create(std::string&& shortname_path) noexcept
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:93:25: warning: no header providing "score::mw::log::LogWarn" is directly included [misc-include-cleaner]
+   16 |         score::mw::log::LogWarn("lola") << "Shortname" << shortname_path
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:95:16: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+   95 |         return MakeUnexpected(ComErrc::kInvalidMetaModelShortname);
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1374/execroot/_main/score/mw/com/impl/instance_specifier.cpp:98:35: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   18 |     return InstanceSpecifier{std::move(shortname_path)};
+      |                                   ^
+Suppressed 7955 warnings (7915 in non-user code, 37 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

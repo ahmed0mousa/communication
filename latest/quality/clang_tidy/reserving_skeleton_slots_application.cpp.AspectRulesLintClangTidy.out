@@ -1,23 +1,89 @@
-9329 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4845/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:82:41: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+21291 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:31:6: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   21 | #include <future>
+   22 | #include <string>
+   23 | #include <utility>
+   24 | #include <vector>
+   25 | 
+   26 | namespace
+   27 | {
+   28 | 
+   29 | using InstanceSpecifier = score::mw::com::impl::InstanceSpecifier;
+   30 | 
+   31 | std::uint16_t GetNumSkeletonSlotsFromConfig(const std::string& service_instance_manifest_path,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:32:69: warning: the const qualified parameter 'instance_specifier' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   32 |                                             const InstanceSpecifier instance_specifier)
+      |                                                                     ^
+      |                                                                    &
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:51:57: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+   22 |                                       const score::cpp::stop_source& stop_source,
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:52:57: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   52 |                                       const score::cpp::stop_token& stop_token)
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:82:41: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
    82 |     const bool failing_test_success = (!skeleton_return_value && proxy_return_value);
       |                                        ~^
       |                                        (                      == 0)
-/home/runner/.bazel/sandbox/linux-sandbox/4845/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:82:66: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:82:66: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
    82 |     const bool failing_test_success = (!skeleton_return_value && proxy_return_value);
       |                                                                  ^                 
       |                                                                  (                  != 0)
-/home/runner/.bazel/sandbox/linux-sandbox/4845/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:143:43: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:127:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   22 |         std::cerr << "Could not create instance specifier, terminating." << std::endl;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:127:82: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   22 |         std::cerr << "Could not create instance specifier, terminating." << std::endl;
+      |                                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:136:14: warning: no header providing "std::cout" is directly included [misc-include-cleaner]
+  136 |         std::cout << "Running test: passing" << std::endl;
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:143:43: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
   143 |         std::cout << "passing test: " << (passing_test_return_code ? "Failed" : "Passed") << std::endl;
       |                                           ^
       |                                           (                        != 0)
-/home/runner/.bazel/sandbox/linux-sandbox/4845/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:161:16: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:147:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  147 |     else if (mode == "failing_extra_slots")
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  148 |     {
+      |     ~
+  149 |         std::cout << "Running test: failing_extra_slots" << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  150 |         auto failing_test_future_return_values = RunTest(event_sender_receiver,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  151 |                                                          instance_specifier,
+      |                                                          ~~~~~~~~~~~~~~~~~~~
+  152 |                                                          static_cast<std::uint16_t>(num_skeleton_slots + 1U),
+      |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  153 |                                                          num_skeleton_slots,
+      |                                                          ~~~~~~~~~~~~~~~~~~~
+  154 |                                                          stop_source,
+      |                                                          ~~~~~~~~~~~~
+  155 |                                                          stop_token);
+      |                                                          ~~~~~~~~~~~~
+  156 | 
+  157 |         // For failing test, skeleton should return an error value and proxy should return a success value.
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  158 |         const auto failing_test_return_code = WaitForAsyncTestResultsFailureTest(failing_test_future_return_values);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  159 |         std::cout << "failing_extra_slots test: " << (failing_test_return_code ? "Failed" : "Passed") << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  160 | 
   161 |         return failing_test_return_code;
-      |                ^                       
-      |                static_cast<int>(       )
-/home/runner/.bazel/sandbox/linux-sandbox/4845/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:177:16: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  162 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:161:16: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+  161 |         return failing_test_return_code;
+      |                ^
+note: this fix will not be applied because it overlaps with another fix
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:177:16: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
   177 |         return failing_test_return_code;
-      |                ^                       
-      |                static_cast<int>(       )
-Suppressed 9488 warnings (9314 in non-user code, 164 NOLINT, 10 with check filters).
+      |                ^
+note: this fix will not be applied because it overlaps with another fix
+/home/runner/.bazel/sandbox/linux-sandbox/5122/execroot/_main/score/mw/com/test/reserving_skeleton_slots/reserving_skeleton_slots_application.cpp:182:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   21 |         return EXIT_FAILURE;
+      |                ^
+Suppressed 21442 warnings (21267 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

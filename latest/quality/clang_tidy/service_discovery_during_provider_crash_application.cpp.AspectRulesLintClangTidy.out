@@ -1,3 +1,49 @@
-10442 warnings generated.
-Suppressed 10494 warnings (10439 in non-user code, 52 NOLINT, 3 with check filters).
+17655 warnings generated.
+./score/mw/com/test/service_discovery_during_provider_crash/consumer.h:31:58: warning: 101 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   31 |     std::uniform_int_distribution<std::uint32_t> dist(0, 101);
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:25:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   25 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   26 | #include <chrono>
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:58:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   22 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:65:43: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   22 |         ("service_instance_manifest", po::value<std::string>(&service_instance_manifest)->default_value(""), "Path to the com configuration file")
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:66:30: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   66 |         ("iterations,t", po::value<std::size_t>(&test_parameters.number_test_iterations), "Number of cycles (provider restarts) to be done");
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:68:9: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   22 |     po::variables_map args;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:72:44: warning: no header providing "boost::program_options::command_line_style::unix_style" is directly included [misc-include-cleaner]
+   22 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:72:81: warning: no header providing "boost::program_options::command_line_style::allow_long_disguise" is directly included [misc-include-cleaner]
+   72 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:74:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+   74 |     po::store(parsed_args, args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:82:9: warning: no header providing "boost::program_options::notify" is directly included [misc-include-cleaner]
+   82 |     po::notify(args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:158:27: warning: no header providing "score::mw::com::test::TimeoutSupervisor" is directly included [misc-include-cleaner]
+   19 |     score::mw::com::test::TimeoutSupervisor timeout_supervisor{};
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:196:23: warning: no header providing "std::this_thread::sleep_for" is directly included [misc-include-cleaner]
+   32 |     std::this_thread::sleep_for(random_time);
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:203:42: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  203 |     std::chrono::milliseconds short_wait{10};
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:206:23: warning: no header providing "std::this_thread::sleep_for" is directly included [misc-include-cleaner]
+  206 |     std::this_thread::sleep_for(short_wait);
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/5010/execroot/_main/score/mw/com/test/service_discovery_during_provider_crash/service_discovery_during_provider_crash_application.cpp:254:17: warning: no header providing "score::cpp::set_assertion_handler" is directly included [misc-include-cleaner]
+   22 |     score::cpp::set_assertion_handler(&score::mw::com::test::assertion_stdout_handler);
+      |                 ^
+Suppressed 17693 warnings (17637 in non-user code, 53 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

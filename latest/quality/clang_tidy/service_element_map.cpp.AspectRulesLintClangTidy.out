@@ -1,3 +1,7 @@
-4113 warnings generated.
-Suppressed 4113 warnings (4110 in non-user code, 3 with check filters).
+7070 warnings generated.
+./score/mw/com/impl/service_element_map.h:87:5: warning: function 'empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     bool empty() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 7070 warnings (7066 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

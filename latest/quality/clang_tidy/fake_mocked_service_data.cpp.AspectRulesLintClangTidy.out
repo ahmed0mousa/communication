@@ -1,7 +1,52 @@
-9211 warnings generated.
+20214 warnings generated.
+./score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.h:58:1: warning: function 'AddEvent' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   58 | inline std::tuple<EventControl*, EventDataStorage<SampleType>*> FakeMockedServiceData::AddEvent(
+      | ^~~~~~
 ./score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.h:62:10: warning: variable 'inserted' is not initialized [cppcoreguidelines-init-variables]
    62 |     bool inserted;
       |          ^       
       |                   = false
-Suppressed 9400 warnings (9202 in non-user code, 190 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4126/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.cpp:27:12: warning: no header providing "std::uint64_t" is directly included [misc-include-cleaner]
+   17 | #include <memory>
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | namespace
+   23 | {
+   24 | 
+   25 | using ::score::memory::shared::SharedMemoryResourceHeapAllocatorMock;
+   26 | 
+   27 | const std::uint64_t kControlMemoryResourceId{10U};
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4126/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.cpp:32:52: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | namespace
+   23 | {
+   24 | 
+   25 | using ::score::memory::shared::SharedMemoryResourceHeapAllocatorMock;
+   26 | 
+   27 | const std::uint64_t kControlMemoryResourceId{10U};
+   28 | const std::uint64_t kDataMemoryResourceId{11U};
+   29 | 
+   30 | }  // namespace
+   31 | 
+   32 | FakeMockedServiceData::FakeMockedServiceData(const pid_t skeleton_process_pid_in, uid_t skeleton_uid_in)
+      |                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4126/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.cpp:32:83: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   32 | FakeMockedServiceData::FakeMockedServiceData(const pid_t skeleton_process_pid_in, uid_t skeleton_uid_in)
+      |                                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4126/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.cpp:35:37: warning: no header providing "testing::NiceMock" is directly included [misc-include-cleaner]
+   17 |         std::make_shared<::testing::NiceMock<SharedMemoryResourceHeapAllocatorMock>>(kControlMemoryResourceId);
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4126/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.cpp:38:46: warning: no header providing "score::mw::com::impl::lola::ServiceDataControl" is directly included [misc-include-cleaner]
+   16 |     data_control = control_memory->construct<ServiceDataControl>(*control_memory);
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4126/execroot/_main/score/mw/com/impl/bindings/lola/test_doubles/fake_mocked_service_data.cpp:39:43: warning: no header providing "score::mw::com::impl::lola::ServiceDataStorage" is directly included [misc-include-cleaner]
+   16 |     data_storage = data_memory->construct<ServiceDataStorage>(*data_memory);
+      |                                           ^
+Suppressed 20412 warnings (20198 in non-user code, 206 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,8 +1,8 @@
-11483 warnings generated.
+29814 warnings generated.
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:61:31: warning: function 'score::mw::com::impl::lola::CreateLolaServiceInstanceDeployment' has a definition with different parameter names [readability-inconsistent-declaration-parameter-name]
    61 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
       |                               ^
-/home/runner/.bazel/sandbox/linux-sandbox/4103/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:47:31: note: the definition seen here
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:47:31: note: the definition seen here
    47 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
       |                               ^
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:61:31: note: differing parameters are named here: ('size'), in definition: ('shm_size')
@@ -21,16 +21,232 @@
   358 |     SkeletonMemoryManagerTestAttorney(SkeletonMemoryManager& skeleton_memory_manager) noexcept
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:363:5: warning: function 'GetServiceDataControl' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  363 |     ServiceDataControl* GetServiceDataControl(const QualityType quality_type) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:376:5: warning: function 'GetEventMetaInfo' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  376 |     score::cpp::optional<EventMetaInfo> GetEventMetaInfo(const ElementFqId element_fq_id) const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:383:9: warning: do not use 'else' after 'return' [readability-else-after-return]
+  383 |         else
+      |         ^~~~
+  384 |         {
+      |         ~
+  385 |             return search->second;
+      |             ~~~~~~~~~~~~~~~~~~~~~~
+  386 |         }
+      |         ~
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:396:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
   396 |     SkeletonAttorney(Skeleton& skeleton) noexcept : skeleton_{skeleton} {}
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:398:5: warning: function 'GetServiceDataControl' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  398 |     ServiceDataControl* GetServiceDataControl(const QualityType quality_type) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:403:5: warning: function 'GetEventMetaInfo' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  403 |     score::cpp::optional<EventMetaInfo> GetEventMetaInfo(const ElementFqId element_fq_id) const
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:412:7: warning: class 'SkeletonMockedMemoryFixture' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
   412 | class SkeletonMockedMemoryFixture : public ::testing::Test
       |       ^
-/home/runner/.bazel/sandbox/linux-sandbox/4103/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:28:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
+./score/mw/com/impl/bindings/lola/test/skeleton_test_resources.h:459:13: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  459 |             10U, *data_shared_memory_resource_mock_);
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:20:1: warning: included header memory_resource_proxy.h is not used directly [misc-include-cleaner]
+   20 | #include "score/memory/shared/memory_resource_proxy.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | #include "score/memory/shared/offset_ptr.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:22:1: warning: included header fcntl.h is not used directly [misc-include-cleaner]
+   22 | #include "score/os/fcntl.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | #include "score/result/result.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:28:10: warning: inclusion of deprecated C++ header 'stdint.h'; consider using 'cstdint' instead [modernize-deprecated-headers]
    28 | #include <stdint.h>
       |          ^~~~~~~~~~
       |          <cstdint>
-Suppressed 11672 warnings (11470 in non-user code, 194 NOLINT, 8 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:47:1: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   18 | LolaServiceInstanceDeployment CreateLolaServiceInstanceDeployment(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:48:10: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   25 |     std::uint16_t instance_id,
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:49:10: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   31 |     std::vector<std::pair<std::string, LolaEventInstanceDeployment>> lola_event_inst_depls,
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:49:22: warning: no header providing "std::pair" is directly included [misc-include-cleaner]
+   31 |     std::vector<std::pair<std::string, LolaEventInstanceDeployment>> lola_event_inst_depls,
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:49:32: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   27 |     std::vector<std::pair<std::string, LolaEventInstanceDeployment>> lola_event_inst_depls,
+      |                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:49:40: warning: no header providing "score::mw::com::impl::LolaEventInstanceDeployment" is directly included [misc-include-cleaner]
+   18 |     std::vector<std::pair<std::string, LolaEventInstanceDeployment>> lola_event_inst_depls,
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:49:70: warning: the parameter 'lola_event_inst_depls' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   49 |     std::vector<std::pair<std::string, LolaEventInstanceDeployment>> lola_event_inst_depls,
+      |                                                                      ^
+      |     const                                                           &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:50:40: warning: no header providing "score::mw::com::impl::LolaFieldInstanceDeployment" is directly included [misc-include-cleaner]
+   18 |     std::vector<std::pair<std::string, LolaFieldInstanceDeployment>> lola_field_inst_depls,
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:50:70: warning: the parameter 'lola_field_inst_depls' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   50 |     std::vector<std::pair<std::string, LolaFieldInstanceDeployment>> lola_field_inst_depls,
+      |                                                                      ^
+      |     const                                                           &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:51:40: warning: no header providing "score::mw::com::impl::LolaMethodInstanceDeployment" is directly included [misc-include-cleaner]
+   18 |     std::vector<std::pair<std::string, LolaMethodInstanceDeployment>> lola_method_inst_depls,
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:51:71: warning: the parameter 'lola_method_inst_depls' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   51 |     std::vector<std::pair<std::string, LolaMethodInstanceDeployment>> lola_method_inst_depls,
+      |                                                                       ^
+      |     const                                                            &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:52:17: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   27 |     std::vector<uid_t> allowed_consumers_qm,
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:52:24: warning: the parameter 'allowed_consumers_qm' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   52 |     std::vector<uid_t> allowed_consumers_qm,
+      |                        ^
+      |     const             &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:53:24: warning: the parameter 'allowed_consumers_asil_b' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   53 |     std::vector<uid_t> allowed_consumers_asil_b,
+      |                        ^
+      |     const             &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:54:17: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   27 |     score::cpp::optional<std::size_t> shm_size,
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:54:31: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   25 |     score::cpp::optional<std::size_t> shm_size,
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:54:39: warning: the parameter 'shm_size' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   54 |     score::cpp::optional<std::size_t> shm_size,
+      |                                       ^
+      |     const                            &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:55:39: warning: the parameter 'control_asil_b_shm_size' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   55 |     score::cpp::optional<std::size_t> control_asil_b_shm_size,
+      |                                       ^
+      |     const                            &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:56:39: warning: the parameter 'control_qm_shm_size' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   56 |     score::cpp::optional<std::size_t> control_qm_shm_size)
+      |                                       ^
+      |     const                            &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:71:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+   71 |     for (auto lola_event_inst_depl : lola_event_inst_depls)
+      |               ^
+      |          const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:76:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+   76 |     for (auto lola_field_inst_depl : lola_field_inst_depls)
+      |               ^
+      |          const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:81:15: warning: loop variable is copied but only used as const reference; consider making it a const reference [performance-for-range-copy]
+   81 |     for (auto lola_method_inst_depl : lola_method_inst_depls)
+      |               ^
+      |          const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:88:1: warning: no header providing "score::mw::com::impl::ServiceTypeDeployment" is directly included [misc-include-cleaner]
+   22 | ServiceTypeDeployment CreateTypeDeployment(const uint16_t lola_service_id,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:89:90: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   89 |                                            const std::vector<std::pair<std::string, std::uint8_t>>& event_ids,
+      |                                                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:93:5: warning: no header providing "score::mw::com::impl::LolaServiceTypeDeployment" is directly included [misc-include-cleaner]
+   18 |     LolaServiceTypeDeployment::EventIdMapping event_id_mapping{};
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:120:1: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   22 | InstanceIdentifier GetValidInstanceIdentifier()
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:122:12: warning: no header providing "score::mw::com::impl::make_InstanceIdentifier" is directly included [misc-include-cleaner]
+  122 |     return make_InstanceIdentifier(test::kValidMinimalQmInstanceDeployment, test::kValidMinimalTypeDeployment);
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:169:11: warning: no header providing "score::mw::com::impl::Runtime" is directly included [misc-include-cleaner]
+   22 |     impl::Runtime::InjectMock(&runtime_mock_);
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:170:46: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   15 |     ON_CALL(runtime_mock_, GetBindingRuntime(BindingType::kLoLa)).WillByDefault(::testing::Return(&lola_runtime_mock_));
+      |                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:171:21: warning: no header providing "score::memory::shared::SharedMemoryFactory" is directly included [misc-include-cleaner]
+   15 |     memory::shared::SharedMemoryFactory::InjectMock(&shared_memory_factory_mock_);
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:196:43: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   27 |         .WillByDefault(Return(score::cpp::blank{}));
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:201:92: warning: no header providing "score::memory::shared::ISharedMemoryResource" is directly included [misc-include-cleaner]
+   15 |             WithArg<1>([this](auto initialize_callback) -> std::shared_ptr<memory::shared::ISharedMemoryResource> {
+      |                                                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:241:14: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+   31 |         std::get_if<LolaServiceInstanceDeployment>(&instance_depl_info.bindingInfo_);
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:242:5: warning: no header providing "EXPECT_NE" is directly included [misc-include-cleaner]
+   27 |     EXPECT_NE(lola_service_instance_deployment_ptr, nullptr);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:246:14: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+  246 |         std::get_if<LolaServiceTypeDeployment>(&service_type_depl_info.binding_info_);
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:249:34: warning: no header providing "score::mw::com::impl::lola::Skeleton" is directly included [misc-include-cleaner]
+   18 |     skeleton_ = std::make_unique<Skeleton>(
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:254:26: warning: no header providing "score::mw::com::impl::lola::ShmPathBuilderFacade" is directly included [misc-include-cleaner]
+   18 |         std::make_unique<ShmPathBuilderFacade>(shm_path_builder_mock_),
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:255:26: warning: no header providing "score::mw::com::impl::lola::PartialRestartPathBuilderFacade" is directly included [misc-include-cleaner]
+   16 |         std::make_unique<PartialRestartPathBuilderFacade>(partial_restart_path_builder_mock_),
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:256:14: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   27 |         std::optional<memory::shared::LockFile>{},
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:256:39: warning: no header providing "score::memory::shared::LockFile" is directly included [misc-include-cleaner]
+   15 |         std::optional<memory::shared::LockFile>{},
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:300:43: warning: no header providing "score::cpp::make_unexpected" is directly included [misc-include-cleaner]
+   27 |         .WillByDefault(Return(score::cpp::make_unexpected(os::Error::createFromErrno(EWOULDBLOCK))));
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:300:63: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   22 |         .WillByDefault(Return(score::cpp::make_unexpected(os::Error::createFromErrno(EWOULDBLOCK))));
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:300:86: warning: no header providing "EWOULDBLOCK" is directly included [misc-include-cleaner]
+   25 |         .WillByDefault(Return(score::cpp::make_unexpected(os::Error::createFromErrno(EWOULDBLOCK))));
+      |                                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:316:17: warning: no header providing "score::mw::com::impl::lola::ServiceDataControl" is directly included [misc-include-cleaner]
+   17 | std::unique_ptr<ServiceDataControl> SkeletonMockedMemoryFixture::CreateServiceDataControlWithEvent(
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:317:5: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   15 |     ElementFqId element_fq_id,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:325:60: warning: no header providing "std::piecewise_construct" is directly included [misc-include-cleaner]
+  325 |         service_data_control->event_controls_.emplace(std::piecewise_construct,
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:326:60: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+   27 |                                                       std::forward_as_tuple(element_fq_id),
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:327:60: warning: no header providing "std::forward_as_tuple" is directly included [misc-include-cleaner]
+  327 |                                                       std::forward_as_tuple(10U, 10U, true, *created_resource));
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:327:77: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  327 |                                                       std::forward_as_tuple(10U, 10U, true, *created_resource));
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:327:82: warning: 10U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  327 |                                                       std::forward_as_tuple(10U, 10U, true, *created_resource));
+      |                                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:328:5: warning: no header providing "EXPECT_TRUE" is directly included [misc-include-cleaner]
+  328 |     EXPECT_TRUE(event_control.second);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:332:1: warning: no header providing "score::mw::com::impl::lola::EventControl" is directly included [misc-include-cleaner]
+   15 | EventControl& SkeletonMockedMemoryFixture::GetEventControlFromServiceDataControl(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:353:1: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+   15 | ConsumerEventDataControlLocalView<> SkeletonMockedMemoryFixture::GetConsumerEventDataControlLocalFromServiceDataControl(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:361:12: warning: no header providing "score::mw::com::impl::lola::ConsumerEventDataControlLocalView" is directly included [misc-include-cleaner]
+  361 |     return ConsumerEventDataControlLocalView{event_control.data_control};
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:364:1: warning: no header providing "score::mw::com::impl::lola::TransactionLogSet" is directly included [misc-include-cleaner]
+   18 | TransactionLogSet& SkeletonMockedMemoryFixture::GetTransactionLogSetFromServiceDataControl(
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4320/execroot/_main/score/mw/com/impl/bindings/lola/test/skeleton_test_resources.cpp:381:79: warning: the parameter #1 is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+  381 |     EXPECT_CALL(shared_memory_factory_mock_, Remove(_)).WillRepeatedly([](auto) {});
+      |                                                                               ^
+      |                                                                           const  &
+Suppressed 30217 warnings (29737 in non-user code, 472 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

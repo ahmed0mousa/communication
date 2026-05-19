@@ -1,3 +1,44 @@
-9259 warnings generated.
-Suppressed 9423 warnings (9249 in non-user code, 164 NOLINT, 10 with check filters).
+20968 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/test/generic_proxy/generic_proxy_application.cpp:18:1: warning: included header instance_specifier.h is not used directly [misc-include-cleaner]
+   18 | #include "score/mw/com/impl/instance_specifier.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   19 | #include "score/mw/com/test/common_test_resources/sample_sender_receiver.h"
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/test/generic_proxy/generic_proxy_application.cpp:41:25: warning: no header providing "score::mw::com::InstanceSpecifier" is directly included [misc-include-cleaner]
+   21 |         score::mw::com::InstanceSpecifier::Create(std::string{"score/cp60/MapApiLanesStamped"});
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/test/generic_proxy/generic_proxy_application.cpp:46:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   22 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/test/generic_proxy/generic_proxy_application.cpp:55:16: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+   55 |         return EXIT_SUCCESS;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/test/generic_proxy/generic_proxy_application.cpp:57:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   57 |     else if (mode == "recv" || mode == "proxy")
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   58 |     {
+      |     ~
+   59 |         const score::cpp::optional<std::chrono::milliseconds> cycle_time = {};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |         return event_sender_receiver
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   61 |             .RunAsProxy<score::mw::com::impl::GenericProxy, score::mw::com::impl::GenericProxyEvent>(
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   62 |                 instance_specifier, cycle_time, num_cycles, std::cref(stop_token));
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |     }
+      |     ~
+   64 |     else
+      |     ~~~~
+   65 |     {
+      |     ~
+   66 |         std::cerr << "Unknown mode " << mode << ", terminating." << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   67 |         return EXIT_FAILURE;
+      |         ~~~~~~~~~~~~~~~~~~~~
+   68 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/5138/execroot/_main/score/mw/com/test/generic_proxy/generic_proxy_application.cpp:62:66: warning: no header providing "std::cref" is directly included [misc-include-cleaner]
+   22 |                 instance_specifier, cycle_time, num_cycles, std::cref(stop_token));
+      |                                                                  ^
+Suppressed 21127 warnings (20952 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

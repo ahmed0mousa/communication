@@ -1,3 +1,36 @@
-5095 warnings generated.
-Suppressed 5150 warnings (5089 in non-user code, 55 NOLINT, 6 with check filters).
+10242 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/3815/execroot/_main/score/mw/com/impl/bindings/lola/messaging/method_subscription_registration_guard.cpp:24:11: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | MethodSubscriptionRegistrationGuard MethodSubscriptionRegistrationGuardFactory::Create(
+   23 |     IMessagePassingService& message_passing_service,
+   24 |     const QualityType asil_level,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3815/execroot/_main/score/mw/com/impl/bindings/lola/messaging/method_subscription_registration_guard.cpp:25:11: warning: no header providing "score::mw::com::impl::lola::SkeletonInstanceIdentifier" is directly included [misc-include-cleaner]
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | MethodSubscriptionRegistrationGuard MethodSubscriptionRegistrationGuardFactory::Create(
+   23 |     IMessagePassingService& message_passing_service,
+   24 |     const QualityType asil_level,
+   25 |     const SkeletonInstanceIdentifier skeleton_instance_identifier,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3815/execroot/_main/score/mw/com/impl/bindings/lola/messaging/method_subscription_registration_guard.cpp:26:20: warning: no header providing "score::safecpp::Scope" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/messaging/i_message_passing_service.h"
+   16 | 
+   17 | #include "score/language/safecpp/scoped_function/move_only_scoped_function.h"
+   18 | 
+   19 | namespace score::mw::com::impl::lola
+   20 | {
+   21 | 
+   22 | MethodSubscriptionRegistrationGuard MethodSubscriptionRegistrationGuardFactory::Create(
+   23 |     IMessagePassingService& message_passing_service,
+   24 |     const QualityType asil_level,
+   25 |     const SkeletonInstanceIdentifier skeleton_instance_identifier,
+   26 |     const safecpp::Scope<>& message_passing_service_instance_scope)
+      |                    ^
+Suppressed 10295 warnings (10233 in non-user code, 56 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

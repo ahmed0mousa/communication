@@ -1,3 +1,56 @@
-8779 warnings generated.
-Suppressed 8944 warnings (8771 in non-user code, 165 NOLINT, 8 with check filters).
+20171 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:27:64: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+   27 |         return handle_notification_data.service_disappeared == true;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+      |                handle_notification_data.service_disappeared
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:43:39: warning: no header providing "score::mw::com::ServiceHandleContainer" is directly included [misc-include-cleaner]
+   15 | void HandleReceivedNotification(const ServiceHandleContainer<TestServiceProxy::HandleType> service_handle_container,
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:43:62: warning: no header providing "score::mw::com::test::TestServiceProxy" is directly included [misc-include-cleaner]
+   15 | void HandleReceivedNotification(const ServiceHandleContainer<TestServiceProxy::HandleType> service_handle_container,
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:43:92: warning: the const qualified parameter 'service_handle_container' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   43 | void HandleReceivedNotification(const ServiceHandleContainer<TestServiceProxy::HandleType> service_handle_container,
+      |                                                                                            ^
+      |                                                                                           &
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:45:33: warning: no header providing "score::mw::com::test::CheckPointControl" is directly included [misc-include-cleaner]
+   15 |                                 CheckPointControl& check_point_control)
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:54:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   54 |     else if (service_handle_container.size() == 1)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   55 |     {
+      |     ~
+   56 |         std::lock_guard lock{handle_notification_data.mutex};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   57 |         handle_notification_data.handle =
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   58 |             std::make_unique<score::mw::com::test::TestServiceProxy::HandleType>(service_handle_container[0]);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   59 |         handle_notification_data.condition_variable.notify_one();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |         std::cout << "Consumer: FindServiceHandler handler done - found one service instance." << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   61 |     }
+      |     ~
+   62 |     else  // service container size == 0 -> initial empty find-result or service disappeared
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   63 |     {
+      |     ~
+   64 |         std::cout << "Consumer: find service handler called with 0 instances." << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   65 |         std::lock_guard lock{handle_notification_data.mutex};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   66 |         const auto handle_previously_existed = (handle_notification_data.handle != nullptr);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   67 |         handle_notification_data.handle.reset(nullptr);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   68 |         if (handle_previously_existed)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |         {
+      |         ~
+/home/runner/.bazel/sandbox/linux-sandbox/4849/execroot/_main/score/mw/com/test/partial_restart/consumer_handle_notification_data.cpp:58:18: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   18 |             std::make_unique<score::mw::com::test::TestServiceProxy::HandleType>(service_handle_container[0]);
+      |                  ^
+Suppressed 20330 warnings (20156 in non-user code, 166 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

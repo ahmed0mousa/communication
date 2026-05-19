@@ -1,3 +1,65 @@
-5873 warnings generated.
-Suppressed 5950 warnings (5867 in non-user code, 77 NOLINT, 6 with check filters).
+11305 warnings generated.
+./score/mw/com/impl/configuration/configuration_common_resources.h:46:40: warning: use c++17 style variable templates [modernize-type-traits]
+   46 |           typename = std::enable_if_t<!std::is_arithmetic<T>::value>,
+      |                                        ^                    ~~~~~~~
+      |                                                          _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:47:40: warning: use c++17 style variable templates [modernize-type-traits]
+   47 |           typename = std::enable_if_t<!std::is_same<T, std::string_view>::value, bool>>
+      |                                        ^                                ~~~~~~~
+      |                                                    _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:63:51: warning: use c++17 style variable templates [modernize-type-traits]
+   63 | template <typename T, typename = std::enable_if_t<std::is_arithmetic<T>::value, bool>>
+      |                                                   ^                    ~~~~~~~
+      |                                                                     _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:79:51: warning: use c++17 style variable templates [modernize-type-traits]
+   79 | template <typename T, typename = std::enable_if_t<std::is_same<T, std::string_view>::value, bool>>
+      |                                                   ^                                ~~~~~~~
+      |                                                               _v
+./score/mw/com/impl/configuration/configuration_common_resources.h:154:20: warning: use c++14 style type templates [modernize-type-traits]
+  154 |           typename std::enable_if<VariantIndex == std::variant_size<VariantType>::value>::type* = nullptr>
+      |           ~~~~~~~~ ^                                                                    ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:164:20: warning: use c++14 style type templates [modernize-type-traits]
+  164 |           typename std::enable_if<VariantIndex<std::variant_size<VariantType>::value>::type* = nullptr> auto
+      |           ~~~~~~~~ ^                                                                 ~~~~~~
+      |                                  _t
+./score/mw/com/impl/configuration/configuration_common_resources.h:176:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  176 |     else
+      |     ^~~~
+  177 |     {
+      |     ~
+  178 |         return DeserializeVariant<VariantIndex + 1, VariantType>(json_object, variant_index, json_variant_key);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  179 |     }
+      |     ~
+./score/mw/com/impl/configuration/lola_event_instance_deployment.h:44:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   44 |     score::json::Object Serialize() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:19:1: warning: included header optional.hpp is not used directly [misc-include-cleaner]
+   19 | #include <score/optional.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | #include <exception>
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:37:63: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   19 | LolaEventInstanceDeployment::LolaEventInstanceDeployment(std::optional<SampleSlotCountType> number_of_sample_slots,
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:39:77: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   19 |                                                          std::optional<std::uint8_t> max_concurrent_allocations,
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:50:77: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | LolaEventInstanceDeployment::LolaEventInstanceDeployment(const score::json::Object& json_object) noexcept
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:58:62: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   58 |     const auto serialization_version = GetValueFromJson<std::uint32_t>(json_object, kSerializationVersionKey);
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:125:29: warning: no header providing "std::numeric_limits" is directly included [misc-include-cleaner]
+   19 |     if (intermediate > std::numeric_limits<std::uint16_t>::max())
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:125:49: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+  125 |     if (intermediate > std::numeric_limits<std::uint16_t>::max())
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1325/execroot/_main/score/mw/com/impl/configuration/lola_event_instance_deployment.cpp:129:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+   19 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(false);
+      |         ^
+Suppressed 11367 warnings (11283 in non-user code, 78 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

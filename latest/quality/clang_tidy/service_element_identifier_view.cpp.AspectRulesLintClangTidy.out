@@ -1,3 +1,37 @@
-4172 warnings generated.
-Suppressed 4199 warnings (4169 in non-user code, 27 NOLINT, 3 with check filters).
+7538 warnings generated.
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+/home/runner/.bazel/sandbox/linux-sandbox/1357/execroot/_main/score/mw/com/impl/tracing/configuration/service_element_identifier_view.cpp:22:17: warning: no header providing "std::tie" is directly included [misc-include-cleaner]
+   16 | 
+   17 | namespace score::mw::com::impl::tracing
+   18 | {
+   19 | 
+   20 | bool operator==(const ServiceElementIdentifierView& lhs, const ServiceElementIdentifierView& rhs) noexcept
+   21 | {
+   22 |     return std::tie(lhs.service_type_name, lhs.service_element_name, lhs.service_element_type) ==
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1357/execroot/_main/score/mw/com/impl/tracing/configuration/service_element_identifier_view.cpp:32:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   32 |     else if (lhs.service_element_name != rhs.service_element_name)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   33 |     {
+      |     ~
+   34 |         return lhs.service_element_name < rhs.service_element_name;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   35 |     }
+      |     ~
+   36 |     else
+      |     ~~~~
+   37 |     {
+      |     ~
+   38 |         return lhs.service_element_type < rhs.service_element_type;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   39 |     }
+      |     ~
+Suppressed 7562 warnings (7531 in non-user code, 28 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

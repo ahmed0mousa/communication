@@ -1,3 +1,68 @@
-13277 warnings generated.
-Suppressed 13454 warnings (13267 in non-user code, 177 NOLINT, 10 with check filters).
+26218 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:20:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   20 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:31:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   18 | #include <score/stop_token.hpp>
+   19 | 
+   20 | #include <boost/program_options.hpp>
+   21 | 
+   22 | namespace score::mw::com::test
+   23 | {
+   24 | 
+   25 | bool GetStopTokenAndSetUpSigTermHandler(score::cpp::stop_source& test_stop_source)
+   26 | {
+   27 | 
+   28 |     const bool sig_term_handler_setup_success = score::mw::com::SetupStopTokenSigTermHandler(test_stop_source);
+   29 |     if (!sig_term_handler_setup_success)
+   30 |     {
+   31 |         std::cerr << "Test main: Unable to set signal handler for SIGINT and/or SIGTERM.\n";
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:37:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   18 | std::optional<SharedMemoryObjectCreator<CounterType>> GetSharedFlag()
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:37:15: warning: no header providing "score::mw::com::test::SharedMemoryObjectCreator" is directly included [misc-include-cleaner]
+   14 | std::optional<SharedMemoryObjectCreator<CounterType>> GetSharedFlag()
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:49:21: warning: no header providing "std::nullopt" is directly included [misc-include-cleaner]
+   49 |         return std::nullopt;
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:52:17: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   21 |     return std::move(proxy_is_done_flag_res.value());
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:55:24: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   21 | void test_failure(std::string_view msg, std::string_view log_context)
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:63:10: warning: no header providing "std::exit" is directly included [misc-include-cleaner]
+   18 |     std::exit(EXIT_FAILURE);
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:63:15: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   63 |     std::exit(EXIT_FAILURE);
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:74:15: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+   74 |     std::exit(EXIT_SUCCESS);
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:80:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   18 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:85:29: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   18 |         ("config_path", po::value<std::string>(&args.config_path), "REQUIRED: path to <service|client>_config file. The parser assumes that this config file has been validated against it's schema and conforms to it.")
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:89:9: warning: no header providing "boost::program_options::positional_options_description" is directly included [misc-include-cleaner]
+   18 |     po::positional_options_description positional_options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:93:9: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   18 |     po::variables_map arg_map;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:95:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+   95 |     po::store(parsed_args, arg_map);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:99:38: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   18 |         std::cerr << options << std::endl;
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4758/execroot/_main/score/mw/com/performance_benchmarks/macro_benchmark/common_resources.cpp:115:9: warning: no header providing "boost::program_options::notify" is directly included [misc-include-cleaner]
+  115 |     po::notify(arg_map);
+      |         ^
+Suppressed 26379 warnings (26191 in non-user code, 178 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

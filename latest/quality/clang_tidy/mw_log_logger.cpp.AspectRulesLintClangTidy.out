@@ -1,3 +1,48 @@
-4309 warnings generated.
-Suppressed 4332 warnings (4306 in non-user code, 23 NOLINT, 3 with check filters).
+8332 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:23:25: warning: no header providing "score::message_passing::LoggingCallback" is directly included [misc-include-cleaner]
+   16 | #include "score/mw/log/logging.h"
+   17 | 
+   18 | #include <score/utility.hpp>
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | score::message_passing::LoggingCallback GetMwLogLogger()
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:25:39: warning: no header providing "score::message_passing::LogSeverity" is directly included [misc-include-cleaner]
+   25 |     return [](score::message_passing::LogSeverity severity, score::message_passing::LogItems items) -> void {
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:25:85: warning: no header providing "score::message_passing::LogItems" is directly included [misc-include-cleaner]
+   25 |     return [](score::message_passing::LogSeverity severity, score::message_passing::LogItems items) -> void {
+      |                                                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:26:72: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | score::message_passing::LoggingCallback GetMwLogLogger()
+   24 | {
+   25 |     return [](score::message_passing::LogSeverity severity, score::message_passing::LogItems items) -> void {
+   26 |         using LogStreamFactoryPtr = score::mw::log::LogStream (*)(std::string_view) noexcept;
+      |                                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:28:24: warning: no header providing "std::array" is directly included [misc-include-cleaner]
+   18 | #include <score/utility.hpp>
+   19 | 
+   20 | namespace score::mw::com::impl::lola
+   21 | {
+   22 | 
+   23 | score::message_passing::LoggingCallback GetMwLogLogger()
+   24 | {
+   25 |     return [](score::message_passing::LogSeverity severity, score::message_passing::LogItems items) -> void {
+   26 |         using LogStreamFactoryPtr = score::mw::log::LogStream (*)(std::string_view) noexcept;
+   27 |         constexpr auto kLogLevels = score::cpp::to_underlying(score::message_passing::LogSeverity::kVerbose) + 1U;
+   28 |         constexpr std::array<LogStreamFactoryPtr, kLogLevels> StreamFactories{{&score::mw::log::LogFatal,
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:42:18: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+   19 |             std::visit(
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1149/execroot/_main/score/mw/com/impl/bindings/lola/messaging/mw_log_logger.cpp:44:36: warning: no header providing "std::decay_t" is directly included [misc-include-cleaner]
+   19 |                     using T = std::decay_t<decltype(arg)>;
+      |                                    ^
+Suppressed 8349 warnings (8322 in non-user code, 24 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

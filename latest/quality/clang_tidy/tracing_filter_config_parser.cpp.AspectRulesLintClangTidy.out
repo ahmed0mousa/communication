@@ -1,3 +1,174 @@
-6262 warnings generated.
-Suppressed 6372 warnings (6256 in non-user code, 110 NOLINT, 6 with check filters).
+13173 warnings generated.
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:42:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:46:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:50:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:54:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:31:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:35:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:39:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:43:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:26:1: warning: included header type_traits is not used directly [misc-include-cleaner]
+   26 | #include <type_traits>
+      | ^~~~~~~~~~~~~~~~~~~~~~
+   27 | #include <utility>
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:46:16: warning: no header providing "std::array" is directly included [misc-include-cleaner]
+   20 | constexpr std::array<const std::string_view, 2U> service_element_notifier_filter_properties_not_implemented_array{
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:51:56: warning: no header providing "score::mw::com::impl::tracing::ProxyEventTracePointType" is directly included [misc-include-cleaner]
+   15 | constexpr std::array<std::pair<const std::string_view, ProxyEventTracePointType>, 11U>
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:71:56: warning: no header providing "score::mw::com::impl::tracing::SkeletonEventTracePointType" is directly included [misc-include-cleaner]
+   15 | constexpr std::array<std::pair<const std::string_view, SkeletonEventTracePointType>, 2U>
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:79:56: warning: no header providing "score::mw::com::impl::tracing::ProxyFieldTracePointType" is directly included [misc-include-cleaner]
+   15 | constexpr std::array<std::pair<const std::string_view, ProxyFieldTracePointType>, 11U>
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:115:56: warning: no header providing "score::mw::com::impl::tracing::SkeletonFieldTracePointType" is directly included [misc-include-cleaner]
+   15 | constexpr std::array<std::pair<const std::string_view, SkeletonFieldTracePointType>, 2U>
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:144:55: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   15 | bool IsOptionalBoolPropertyEnabled(const score::json::Object& json, const std::string_view bool_property_name)
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:159:60: warning: no header providing "score::mw::com::impl::Configuration" is directly included [misc-include-cleaner]
+   15 | std::set<std::string_view> GetInstancesOfServiceType(const Configuration& configuration, std::string_view service_type)
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:167:25: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   23 |             score::cpp::ignore = result.insert(element_string_view);
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:181:57: warning: no header providing "score::mw::com::impl::ServiceElementType" is directly included [misc-include-cleaner]
+   15 |                                                         ServiceElementType element_type,
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:186:39: warning: no header providing "score::mw::com::impl::LolaServiceTypeDeployment" is directly included [misc-include-cleaner]
+   15 |         [&result, element_type](const LolaServiceTypeDeployment& lola_service_deployment) {
+      |                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:219:30: warning: no header providing "score::cpp::blank" is directly included [misc-include-cleaner]
+   20 |         [](const score::cpp::blank&) noexcept {
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:227:15: warning: no header providing "score::mw::com::impl::ServiceIdentifierTypeView" is directly included [misc-include-cleaner]
+   15 |         const ServiceIdentifierTypeView current_service_type_view{service_type_deployment.first};
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:230:18: warning: no header providing "std::visit" is directly included [misc-include-cleaner]
+   28 |             std::visit(service_type_deployment_visitor, service_type_deployment.second.binding_info_);
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:251:20: warning: no header providing "score::mw::com::impl::tracing::ITracingFilterConfig" is directly included [misc-include-cleaner]
+   15 |                    ITracingFilterConfig::InstanceSpecifierView instance_id,
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:253:20: warning: no header providing "score::mw::com::impl::tracing::TracingFilterConfig" is directly included [misc-include-cleaner]
+   15 |                    TracingFilterConfig& filter_config)
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:276:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   20 |     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(object_result.has_value(),
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:299:20: warning: no header providing "score::mw::com::impl::tracing::ServiceElementIdentifierView" is directly included [misc-include-cleaner]
+   15 |     const tracing::ServiceElementIdentifierView service_element_identifier{
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:363:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  363 |     else
+      |     ^~~~
+  364 |     {
+      |     ~
+  365 |         const std::set<std::string_view>& event_names =
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  366 |             GetElementNamesOfServiceType(service_short_name_path, ServiceElementType::EVENT, configuration);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  367 | 
+  368 |         auto events_list = events->second.As<score::json::List>();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  369 |         SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(events_list.has_value(),
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  370 |                                                           "Configuration corrupted, check with json schema");
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  371 |         for (const auto& event : events_list.value().get())
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  372 |         {
+      |         ~
+  373 |             ParseEvent(event, service_short_name_path, event_names, configuration, instance_specifiers, filter_config);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  374 |         }
+      |         ~
+  375 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:368:59: warning: no header providing "score::json::List" is directly included [misc-include-cleaner]
+  368 |         auto events_list = events->second.As<score::json::List>();
+      |                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:565:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  565 |     else
+      |     ^~~~
+  566 |     {
+      |     ~
+  567 |         const std::set<std::string_view>& field_names =
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  568 |             GetElementNamesOfServiceType(service_short_name_path, ServiceElementType::FIELD, configuration);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  569 | 
+  570 |         auto fields_list = fields->second.As<score::json::List>();
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  571 |         SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(fields_list.has_value(),
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  572 |                                                           "Configuration corrupted, check with json schema");
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  573 |         for (const auto& field : fields_list.value().get())
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  574 |         {
+      |         ~
+  575 |             ParseField(field, service_short_name_path, field_names, configuration, instance_specifiers, filter_config);
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  576 |         }
+      |         ~
+  577 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:603:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  603 |     else
+      |     ^~~~
+  604 |     {
+      |     ~
+  605 |         // @todo: Implement ParseMethod, when we support methods in LoLa.
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  606 |         /* for (const auto& method : methods->second.As<score::json::List>().value().get())
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  607 |         {
+      |         ~
+  608 | 
+  609 |             break;
+      |             ~~~~~~
+  610 |         }*/
+      |         ~~~
+  611 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/3190/execroot/_main/score/mw/com/impl/tracing/configuration/tracing_filter_config_parser.cpp:713:16: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+   19 |         return MakeUnexpected(TraceErrorCode::JsonConfigParseError, json_result.error().UserMessage());
+      |                ^
+Suppressed 13251 warnings (13134 in non-user code, 111 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

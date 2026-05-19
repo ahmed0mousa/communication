@@ -1,3 +1,47 @@
-9989 warnings generated.
-Suppressed 10041 warnings (9986 in non-user code, 52 NOLINT, 3 with check filters).
+16835 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:22:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   22 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | #include <cstdio>
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:44:31: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   26 |     score::cpp::optional<std::string> service_instance_manifest{};
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:59:9: warning: no header providing "boost::program_options::options_description" is directly included [misc-include-cleaner]
+   20 |     po::options_description options;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:66:43: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   20 |         ("service_instance_manifest", po::value<std::string>(&service_instance_manifest)->default_value(""), "Path to the com configuration file")
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:67:25: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   67 |         ("turns,t", po::value<std::size_t>(&test_parameters.number_test_iterations), "Number of cycles (provider restarts) to be done")
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:68:22: warning: no header providing "boost::program_options::value" is directly included [misc-include-cleaner]
+   68 |         ("kill", po::value<bool>(&test_parameters.kill_provider), "Shall the provider get killed before restart or gracefully shutdown?")
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:71:9: warning: no header providing "boost::program_options::variables_map" is directly included [misc-include-cleaner]
+   20 |     po::variables_map args;
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:75:44: warning: no header providing "boost::program_options::command_line_style::unix_style" is directly included [misc-include-cleaner]
+   20 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:75:81: warning: no header providing "boost::program_options::command_line_style::allow_long_disguise" is directly included [misc-include-cleaner]
+   75 |             .style(po::command_line_style::unix_style | po::command_line_style::allow_long_disguise)
+      |                                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:77:9: warning: no header providing "boost::program_options::store" is directly included [misc-include-cleaner]
+   77 |     po::store(parsed_args, args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:85:9: warning: no header providing "boost::program_options::notify" is directly included [misc-include-cleaner]
+   85 |     po::notify(args);
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:99:17: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+   26 |     score::cpp::stop_source test_stop_source{};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:113:17: warning: no header providing "score::cpp::set_assertion_handler" is directly included [misc-include-cleaner]
+   20 |     score::cpp::set_assertion_handler(&score::mw::com::test::assertion_stdout_handler);
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4675/execroot/_main/score/mw/com/test/partial_restart/provider_restart/provider_restart_application.cpp:123:46: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  123 |         if (test_parameters.kill_provider == false)
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+      |             !test_parameters.kill_provider
+Suppressed 16874 warnings (16818 in non-user code, 53 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

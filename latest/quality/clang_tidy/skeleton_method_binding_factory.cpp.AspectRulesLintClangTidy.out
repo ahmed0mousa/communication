@@ -1,3 +1,58 @@
-6083 warnings generated.
-Suppressed 6174 warnings (6077 in non-user code, 91 NOLINT, 6 with check filters).
+12835 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4182/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory.cpp:19:6: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   15 | 
+   16 | namespace score::mw::com::impl
+   17 | {
+   18 | 
+   19 | std::unique_ptr<SkeletonMethodBinding> SkeletonMethodBindingFactory::Create(
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4182/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory.cpp:19:17: warning: no header providing "score::mw::com::impl::SkeletonMethodBinding" is directly included [misc-include-cleaner]
+   14 | #include "score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.h"
+   15 | 
+   16 | namespace score::mw::com::impl
+   17 | {
+   18 | 
+   19 | std::unique_ptr<SkeletonMethodBinding> SkeletonMethodBindingFactory::Create(
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4182/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory.cpp:20:11: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   14 | #include "score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.h"
+   15 | 
+   16 | namespace score::mw::com::impl
+   17 | {
+   18 | 
+   19 | std::unique_ptr<SkeletonMethodBinding> SkeletonMethodBindingFactory::Create(
+   20 |     const InstanceIdentifier& instance_identifier,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4182/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory.cpp:21:5: warning: no header providing "score::mw::com::impl::SkeletonBinding" is directly included [misc-include-cleaner]
+   15 | 
+   16 | namespace score::mw::com::impl
+   17 | {
+   18 | 
+   19 | std::unique_ptr<SkeletonMethodBinding> SkeletonMethodBindingFactory::Create(
+   20 |     const InstanceIdentifier& instance_identifier,
+   21 |     SkeletonBinding* parent_binding,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4182/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory.cpp:22:16: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   15 | 
+   16 | namespace score::mw::com::impl
+   17 | {
+   18 | 
+   19 | std::unique_ptr<SkeletonMethodBinding> SkeletonMethodBindingFactory::Create(
+   20 |     const InstanceIdentifier& instance_identifier,
+   21 |     SkeletonBinding* parent_binding,
+   22 |     const std::string_view method_name,
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4182/execroot/_main/score/mw/com/impl/plumbing/skeleton_method_binding_factory.cpp:23:5: warning: no header providing "score::mw::com::impl::MethodType" is directly included [misc-include-cleaner]
+   14 | #include "score/mw/com/impl/plumbing/skeleton_method_binding_factory_impl.h"
+   15 | 
+   16 | namespace score::mw::com::impl
+   17 | {
+   18 | 
+   19 | std::unique_ptr<SkeletonMethodBinding> SkeletonMethodBindingFactory::Create(
+   20 |     const InstanceIdentifier& instance_identifier,
+   21 |     SkeletonBinding* parent_binding,
+   22 |     const std::string_view method_name,
+   23 |     MethodType method_type)
+      |     ^
+Suppressed 12921 warnings (12823 in non-user code, 92 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

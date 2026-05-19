@@ -1,15 +1,234 @@
-8535 warnings generated.
+18057 warnings generated.
 ./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:57:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    57 |     ConsumerEventDataControlLocalView(EventDataControl& event_data_control_shared) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:107:5: warning: function 'GetNumNewEvents' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::size_t GetNumNewEvents(const EventSlotStatus::EventTimeStamp reference_time) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/consumer_event_data_control_local_view.h:128:5: warning: function 'GetMaxSampleSlots' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  128 |     std::size_t GetMaxSampleSlots() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/event_meta_info.h:30:57: warning: the const qualified parameter 'event_slots_raw_array' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+   30 |                   const memory::shared::OffsetPtr<void> event_slots_raw_array)
+      |                                                         ^
+      |                                                        &
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:40:5: warning: function 'HasAsilBSupport' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual bool HasAsilBSupport() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:43:5: warning: function 'GetShmSizeCalculationMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     virtual ShmSizeCalculationMode GetShmSizeCalculationMode() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:48:5: warning: function 'GetPid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     virtual pid_t GetPid() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:51:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual GlobalConfiguration::ApplicationId GetApplicationId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/offered_state_machine.h:54:5: warning: function 'GetCurrentState' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     State GetCurrentState() const
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:52:5: warning: function 'GetInArgValuesQueueStorage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   52 |     std::optional<score::cpp::span<std::byte>> GetInArgValuesQueueStorage() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:54:5: warning: function 'GetReturnValueQueueStorage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     std::optional<score::cpp::span<std::byte>> GetReturnValueQueueStorage() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:56:5: warning: function 'GetTypeErasedElementInfo' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     auto GetTypeErasedElementInfo() const -> const TypeErasedElementInfo&;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:68:5: warning: function 'AllocateQueue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     std::pair<InArgQueueSpan, ReturnQueueSpan> AllocateQueue() const;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
       |     explicit 
+./score/mw/com/impl/bindings/lola/proxy.h:98:9: warning: function 'Convert' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |         ElementFqId Convert(const std::string_view event_name) const noexcept;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/slot_collector.h:62:5: warning: function 'GetNumNewSamplesAvailable' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     std::size_t GetNumNewSamplesAvailable() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_state_base.h:51:5: warning: function 'GetMaxSampleCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::optional<std::uint16_t> GetMaxSampleCount() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/subscription_state_base.h:53:5: warning: function 'GetSlotCollector' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   53 |     virtual const score::cpp::optional<SlotCollector>& GetSlotCollector() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:47:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    47 |     TransactionLogLocalView(TransactionLog& transaction_log) noexcept;
       |     ^
       |     explicit 
-Suppressed 8662 warnings (8524 in non-user code, 130 NOLINT, 8 with check filters).
+./score/mw/com/impl/bindings/lola/transaction_log_local_view.h:98:5: warning: function 'ContainsTransactions' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     bool ContainsTransactions() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:35:5: warning: function 'GetTransactionBegin' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool GetTransactionBegin() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/transaction_log_slot.h:39:5: warning: function 'GetTransactionEnd' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool GetTransactionEnd() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:24:36: warning: no header providing "score::mw::com::impl::lola::Proxy" is directly included [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/runtime.h"
+   17 | 
+   18 | #include <limits>
+   19 | #include <sstream>
+   20 | 
+   21 | namespace score::mw::com::impl::lola
+   22 | {
+   23 | 
+   24 | ProxyEventCommon::ProxyEventCommon(Proxy& parent, const ElementFqId element_fq_id, const std::string_view event_name)
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:24:57: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/i_runtime.h"
+   16 | #include "score/mw/com/impl/runtime.h"
+   17 | 
+   18 | #include <limits>
+   19 | #include <sstream>
+   20 | 
+   21 | namespace score::mw::com::impl::lola
+   22 | {
+   23 | 
+   24 | ProxyEventCommon::ProxyEventCommon(Proxy& parent, const ElementFqId element_fq_id, const std::string_view event_name)
+      |                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:24:95: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   20 | 
+   21 | namespace score::mw::com::impl::lola
+   22 | {
+   23 | 
+   24 | ProxyEventCommon::ProxyEventCommon(Proxy& parent, const ElementFqId element_fq_id, const std::string_view event_name)
+      |                                                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:31:11: warning: redundant explicit casting to the same type 'TransactionLogId' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   31 |           static_cast<TransactionLogId>(GetBindingRuntime<lola::IRuntime>(BindingType::kLoLa).GetApplicationId())},
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                        ~
+./score/mw/com/impl/bindings/lola/i_runtime.h:51:48: note: source type originates from the invocation of this method
+   51 |     virtual GlobalConfiguration::ApplicationId GetApplicationId() const noexcept = 0;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:31:23: warning: no header providing "score::mw::com::impl::lola::TransactionLogId" is directly included [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/runtime.h"
+   17 | 
+   18 | #include <limits>
+   19 | #include <sstream>
+   20 | 
+   21 | namespace score::mw::com::impl::lola
+   22 | {
+   23 | 
+   24 | ProxyEventCommon::ProxyEventCommon(Proxy& parent, const ElementFqId element_fq_id, const std::string_view event_name)
+   25 |     : test_slot_collector_{},
+   26 |       parent_{parent},
+   27 |       event_fq_id_{element_fq_id},
+   28 |       event_name_{event_name},
+   29 |       // The transaction log is identified by the application's unique identifier.
+   30 |       transaction_log_id_{
+   31 |           static_cast<TransactionLogId>(GetBindingRuntime<lola::IRuntime>(BindingType::kLoLa).GetApplicationId())},
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:31:75: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   15 |           static_cast<TransactionLogId>(GetBindingRuntime<lola::IRuntime>(BindingType::kLoLa).GetApplicationId())},
+      |                                                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:50:1: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   17 | Result<void> ProxyEventCommon::Subscribe(const std::size_t max_sample_count)
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:50:53: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   18 | Result<void> ProxyEventCommon::Subscribe(const std::size_t max_sample_count)
+      |                                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:54:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   19 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(max_sample_count <= std::numeric_limits<std::uint8_t>::max(),
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:54:94: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   18 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(max_sample_count <= std::numeric_limits<std::uint8_t>::max(),
+      |                                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:64:1: warning: no header providing "score::mw::com::impl::SubscriptionState" is directly included [misc-include-cleaner]
+   17 | SubscriptionState ProxyEventCommon::GetSubscriptionState() const noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:67:12: warning: no header providing "score::mw::com::impl::lola::SubscriptionStateMachineStateToSubscriptionState" is directly included [misc-include-cleaner]
+   16 |     return SubscriptionStateMachineStateToSubscriptionState(current_state);
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:75:5: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   75 |     SCORE_LANGUAGE_FUTURECPP_PRECONDITION_PRD_MESSAGE(
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:81:1: warning: no header providing "score::mw::com::impl::lola::SlotCollector" is directly included [misc-include-cleaner]
+   16 | SlotCollector::SlotIndices ProxyEventCommon::GetNewSamplesSlotIndices(const std::size_t max_count) noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:92:55: warning: no header providing "std::weak_ptr" is directly included [misc-include-cleaner]
+   19 | Result<void> ProxyEventCommon::SetReceiveHandler(std::weak_ptr<ScopedEventReceiveHandler> handler)
+      |                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:92:64: warning: no header providing "score::mw::com::impl::ScopedEventReceiveHandler" is directly included [misc-include-cleaner]
+   17 | Result<void> ProxyEventCommon::SetReceiveHandler(std::weak_ptr<ScopedEventReceiveHandler> handler)
+      |                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:94:62: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   20 |     subscription_event_state_machine_.SetReceiveHandler(std::move(handler));
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:104:66: warning: no header providing "score::mw::com::impl::SubscriptionStateChangeHandler" is directly included [misc-include-cleaner]
+   17 | Result<void> ProxyEventCommon::SetSubscriptionStateChangeHandler(SubscriptionStateChangeHandler handler) noexcept
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:106:78: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  106 |     subscription_event_state_machine_.SetSubscriptionStateChangeHandler(std::move(handler));
+      |                                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:116:1: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   20 | pid_t ProxyEventCommon::GetEventSourcePid() const noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:121:6: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   19 | std::optional<std::uint16_t> ProxyEventCommon::GetMaxSampleCount() const noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4098/execroot/_main/score/mw/com/impl/bindings/lola/proxy_event_common.cpp:121:20: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+  121 | std::optional<std::uint16_t> ProxyEventCommon::GetMaxSampleCount() const noexcept
+      |                    ^
+Suppressed 18131 warnings (17992 in non-user code, 131 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

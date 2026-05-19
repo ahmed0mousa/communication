@@ -1,3 +1,19 @@
-5057 warnings generated.
-Suppressed 5111 warnings (5054 in non-user code, 54 NOLINT, 3 with check filters).
+9801 warnings generated.
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:52:5: warning: function 'GetInArgValuesQueueStorage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   52 |     std::optional<score::cpp::span<std::byte>> GetInArgValuesQueueStorage() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:54:5: warning: function 'GetReturnValueQueueStorage' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     std::optional<score::cpp::span<std::byte>> GetReturnValueQueueStorage() const;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:56:5: warning: function 'GetTypeErasedElementInfo' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   56 |     auto GetTypeErasedElementInfo() const -> const TypeErasedElementInfo&;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/methods/type_erased_call_queue.h:68:5: warning: function 'AllocateQueue' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     std::pair<InArgQueueSpan, ReturnQueueSpan> AllocateQueue() const;
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 9852 warnings (9794 in non-user code, 55 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

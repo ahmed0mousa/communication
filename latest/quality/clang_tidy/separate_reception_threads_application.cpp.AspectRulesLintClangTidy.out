@@ -1,3 +1,89 @@
-10988 warnings generated.
-Suppressed 11103 warnings (10980 in non-user code, 115 NOLINT, 8 with check filters).
+20960 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:14:1: warning: included header element_fq_id.h is not used directly [misc-include-cleaner]
+   14 | #include "score/mw/com/impl/bindings/lola/element_fq_id.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | #include "score/mw/com/impl/bindings/lola/i_runtime.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:15:1: warning: included header i_runtime.h is not used directly [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/i_runtime.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/mw/com/impl/i_binding_runtime.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:16:1: warning: included header i_binding_runtime.h is not used directly [misc-include-cleaner]
+   16 | #include "score/mw/com/impl/i_binding_runtime.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   17 | #include "score/mw/com/impl/runtime.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:17:1: warning: included header runtime.h is not used directly [misc-include-cleaner]
+   17 | #include "score/mw/com/impl/runtime.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   18 | #include "score/mw/com/impl/scoped_event_receive_handler.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:18:1: warning: included header scoped_event_receive_handler.h is not used directly [misc-include-cleaner]
+   18 | #include "score/mw/com/impl/scoped_event_receive_handler.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   19 | #include "score/mw/com/impl/service_element_type.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:19:1: warning: included header service_element_type.h is not used directly [misc-include-cleaner]
+   19 | #include "score/mw/com/impl/service_element_type.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | #include "score/mw/com/test/common_test_resources/sctf_test_runner.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:20:1: warning: included header sctf_test_runner.h is not used directly [misc-include-cleaner]
+   20 | #include "score/mw/com/test/common_test_resources/sctf_test_runner.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:22:1: warning: included header logging.h is not used directly [misc-include-cleaner]
+   22 | #include "score/mw/log/logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:24:1: warning: included header scope.h is not used directly [misc-include-cleaner]
+   24 | #include "score/language/safecpp/scoped_function/scope.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   25 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:26:1: warning: included header thread_pool.h is not used directly [misc-include-cleaner]
+   26 | #include "score/concurrency/thread_pool.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   27 | #include "score/os/unistd.h"
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:27:1: warning: included header unistd.h is not used directly [misc-include-cleaner]
+   27 | #include "score/os/unistd.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   28 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:29:1: warning: included header assert.hpp is not used directly [misc-include-cleaner]
+   29 | #include <score/assert.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 | #include <score/stop_token.hpp>
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:30:1: warning: included header stop_token.hpp is not used directly [misc-include-cleaner]
+   30 | #include <score/stop_token.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:32:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   32 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   33 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:34:1: warning: included header atomic is not used directly [misc-include-cleaner]
+   34 | #include <atomic>
+      | ^~~~~~~~~~~~~~~~~
+   35 | #include <chrono>
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:35:1: warning: included header chrono is not used directly [misc-include-cleaner]
+   35 | #include <chrono>
+      | ^~~~~~~~~~~~~~~~~
+   36 | #include <csignal>
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:37:1: warning: included header cstdint is not used directly [misc-include-cleaner]
+   37 | #include <cstdint>
+      | ^~~~~~~~~~~~~~~~~~
+   38 | #include <iostream>
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:38:1: warning: included header iostream is not used directly [misc-include-cleaner]
+   38 | #include <iostream>
+      | ^~~~~~~~~~~~~~~~~~~
+   39 | #include <sstream>
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:39:1: warning: included header sstream is not used directly [misc-include-cleaner]
+   39 | #include <sstream>
+      | ^~~~~~~~~~~~~~~~~~
+   40 | #include <thread>
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:40:1: warning: included header thread is not used directly [misc-include-cleaner]
+   40 | #include <thread>
+      | ^~~~~~~~~~~~~~~~~
+   41 | 
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:234:10: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   41 |     std::ignore = argc;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4930/execroot/_main/score/mw/com/test/separate_reception_threads/separate_reception_threads_application.cpp:236:12: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+   29 |     return EXIT_SUCCESS;
+      |            ^
+Suppressed 21054 warnings (20930 in non-user code, 116 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

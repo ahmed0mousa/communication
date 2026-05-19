@@ -1,3 +1,101 @@
-5671 warnings generated.
-Suppressed 5736 warnings (5665 in non-user code, 65 NOLINT, 6 with check filters).
+12298 warnings generated.
+./score/mw/com/impl/bindings/lola/messaging/thread_abstraction.h:33:5: warning: function 'hardware_concurrency' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     virtual std::uint32_t hardware_concurrency() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:14:1: warning: included header message_passing_service_instance.h is not used directly [misc-include-cleaner]
+   14 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:15:1: warning: included header message_passing_service_instance_factory.h is not used directly [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/messaging/message_passing_service_instance_factory.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/mw/com/impl/bindings/lola/messaging/method_call_registration_guard.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:19:1: warning: included header thread_abstraction.h is not used directly [misc-include-cleaner]
+   19 | #include "score/mw/com/impl/bindings/lola/messaging/thread_abstraction.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | 
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:21:1: warning: included header i_server_connection.h is not used directly [misc-include-cleaner]
+   21 | #include "score/message_passing/i_server_connection.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   22 | #include "score/mw/log/logging.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:22:1: warning: included header logging.h is not used directly [misc-include-cleaner]
+   22 | #include "score/mw/log/logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   23 | #include "score/os/errno_logging.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:23:1: warning: included header errno_logging.h is not used directly [misc-include-cleaner]
+   23 | #include "score/os/errno_logging.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   24 | #include "score/result/result.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:26:1: warning: included header engine.h is not used directly [misc-include-cleaner]
+   26 | #include "score/message_passing/engine.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   27 | 
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:34:11: warning: variable 'kNumberOfLocalThreads' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier]
+   34 | constexpr inline std::size_t kNumberOfLocalThreads = 2U;
+      |           ^~~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:34:23: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   28 | #include <memory>
+   29 | #include <optional>
+   30 | 
+   31 | namespace
+   32 | {
+   33 | 
+   34 | constexpr inline std::size_t kNumberOfLocalThreads = 2U;
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:47:11: warning: no header providing "score::mw::com::impl::lola::AsilSpecificCfg" is directly included [misc-include-cleaner]
+   14 |     const AsilSpecificCfg& config_asil_qm,
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:50:27: warning: no header providing "score::mw::com::impl::lola::IMessagePassingServiceInstanceFactory" is directly included [misc-include-cleaner]
+   14 |     const std::unique_ptr<IMessagePassingServiceInstanceFactory>& factory) noexcept
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:52:40: warning: no header providing "score::cpp::pmr::make_shared" is directly included [misc-include-cleaner]
+   30 |       client_factory_{score::cpp::pmr::make_shared<Engine>(score::cpp::pmr::get_default_resource(),
+      |                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:52:77: warning: no header providing "score::cpp::pmr::get_default_resource" is directly included [misc-include-cleaner]
+   30 |       client_factory_{score::cpp::pmr::make_shared<Engine>(score::cpp::pmr::get_default_resource(),
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:66:37: warning: no header providing "score::mw::com::impl::lola::ClientQualityType" is directly included [misc-include-cleaner]
+   14 |         config_asil_b.has_value() ? ClientQualityType::kASIL_QMfromB : ClientQualityType::kASIL_QM;
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:78:47: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   22 | void MessagePassingService::NotifyEvent(const QualityType asil_level, const ElementFqId event_id) noexcept
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:78:77: warning: no header providing "score::mw::com::impl::lola::ElementFqId" is directly included [misc-include-cleaner]
+   14 | void MessagePassingService::NotifyEvent(const QualityType asil_level, const ElementFqId event_id) noexcept
+      |                                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:88:19: warning: no header providing "score::mw::com::impl::ScopedEventReceiveHandler" is directly included [misc-include-cleaner]
+   22 |     std::weak_ptr<ScopedEventReceiveHandler> callback,
+      |                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:89:11: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   30 |     const pid_t target_node_id) noexcept
+      |           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:93:62: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   30 |     return instance.RegisterEventNotification(event_id, std::move(callback), target_node_id);
+      |                                                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:141:13: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE" is directly included [misc-include-cleaner]
+   30 |             SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD_MESSAGE(false, "Invalid asil level");
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:147:5: warning: no header providing "score::mw::com::impl::lola::SkeletonInstanceIdentifier" is directly included [misc-include-cleaner]
+   22 |     SkeletonInstanceIdentifier skeleton_instance_identifier,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:154:44: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  154 |         skeleton_instance_identifier, std::move(subscribed_callback), allowed_proxy_uids);
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:165:5: warning: no header providing "score::mw::com::impl::lola::ProxyMethodInstanceIdentifier" is directly included [misc-include-cleaner]
+   22 |     ProxyMethodInstanceIdentifier proxy_method_instance_identifier,
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:167:5: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+  167 |     uid_t allowed_proxy_uid)
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:172:48: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  172 |         proxy_method_instance_identifier, std::move(method_call_callback), allowed_proxy_uid);
+      |                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:188:79: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  188 |     instance.RegisterEventNotificationExistenceChangedCallback(event_id, std::move(callback));
+      |                                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3964/execroot/_main/score/mw/com/impl/bindings/lola/messaging/message_passing_service.cpp:202:11: warning: no header providing "score::mw::com::impl::lola::ProxyInstanceIdentifier" is directly included [misc-include-cleaner]
+   22 |     const ProxyInstanceIdentifier& proxy_instance_identifier,
+      |           ^
+Suppressed 12336 warnings (12264 in non-user code, 66 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

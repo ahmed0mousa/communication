@@ -1,6 +1,146 @@
-13342 warnings generated.
+26467 warnings generated.
+./score/mw/com/test/common_test_resources/command_line_parser.h:51:17: warning: the variable 'value_str' is copy-constructed from a const reference but is only used as const reference; consider making it a const reference [performance-unnecessary-copy-initialization]
+   51 |     std::string value_str = args.at(arg_string);
+      |                 ^
+      |     const      &
 ./score/mw/com/test/common_test_resources/command_line_parser.h:80:76: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
    80 |             std::from_chars<ReturnType>(value_str.data(), value_str.data() + value_str.size(), parsed_value);
       |                                                                            ^
-Suppressed 13503 warnings (13329 in non-user code, 164 NOLINT, 10 with check filters).
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:57:9: warning: function 'GetCycleTime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |         std::chrono::milliseconds GetCycleTime() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:58:9: warning: function 'GetMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   58 |         std::string GetMode() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:59:9: warning: function 'GetNumCycles' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   59 |         std::size_t GetNumCycles() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:60:9: warning: function 'GetServiceInstanceManifest' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   60 |         std::string GetServiceInstanceManifest() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:61:9: warning: function 'GetUid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |         uid_t GetUid() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:62:9: warning: function 'GetNumRetries' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |         std::size_t GetNumRetries() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:63:9: warning: function 'GetRetryBackoffTime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   63 |         std::chrono::milliseconds GetRetryBackoffTime() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:64:9: warning: function 'GetShouldModifyDataSegment' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   64 |         bool GetShouldModifyDataSegment() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:66:9: warning: function 'GetOptionalCycleTime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   66 |         score::cpp::optional<std::chrono::milliseconds> GetOptionalCycleTime() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:67:9: warning: function 'GetOptionalMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |         score::cpp::optional<std::string> GetOptionalMode() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:68:9: warning: function 'GetOptionalNumCycles' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |         score::cpp::optional<std::size_t> GetOptionalNumCycles() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:69:9: warning: function 'GetOptionalServiceInstanceManifest' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   69 |         score::cpp::optional<std::string> GetOptionalServiceInstanceManifest() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:70:9: warning: function 'GetOptionalUid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   70 |         score::cpp::optional<uid_t> GetOptionalUid() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:71:9: warning: function 'GetOptionalNumRetries' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   71 |         score::cpp::optional<std::size_t> GetOptionalNumRetries() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:72:9: warning: function 'GetOptionalRetryBackoffTime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   72 |         score::cpp::optional<std::chrono::milliseconds> GetOptionalRetryBackoffTime() const;
+      |         ^
+      |         [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:88:5: warning: function 'GetStopToken' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   88 |     score::cpp::stop_token GetStopToken() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/test/common_test_resources/sctf_test_runner.h:96:5: warning: function 'GetRunParameters' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   96 |     RunParameters GetRunParameters() const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/test/common_test_resources/test_error_domain.h:33:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:20:1: warning: included header program_options.hpp is not used directly [misc-include-cleaner]
+   20 | #include <boost/program_options.hpp>
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | #include <chrono>
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:38:33: warning: no header providing "std::unordered_map" is directly included [misc-include-cleaner]
+   26 | #include <utility>
+   27 | #include <vector>
+   28 | 
+   29 | namespace score::mw::com::test
+   30 | {
+   31 | 
+   32 | namespace
+   33 | {
+   34 | 
+   35 | using Parameters = SctfTestRunner::RunParameters::Parameters;
+   36 | 
+   37 | template <typename ParsedType, typename SavedType = ParsedType>
+   38 | auto ParseAndPackage(const std::unordered_map<std::string, std::string>& args, const std::string& name)
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:39:20: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   24 | #include <stdexcept>
+   25 | #include <string>
+   26 | #include <utility>
+   27 | #include <vector>
+   28 | 
+   29 | namespace score::mw::com::test
+   30 | {
+   31 | 
+   32 | namespace
+   33 | {
+   34 | 
+   35 | using Parameters = SctfTestRunner::RunParameters::Parameters;
+   36 | 
+   37 | template <typename ParsedType, typename SavedType = ParsedType>
+   38 | auto ParseAndPackage(const std::unordered_map<std::string, std::string>& args, const std::string& name)
+   39 |     -> score::cpp::optional<SavedType>
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:44:14: warning: no header providing "std::cerr" is directly included [misc-include-cleaner]
+   24 |         std::cerr << "Optional parameter " << name << " not provided... continuing\n";
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:88:14: warning: no header providing "std::find" is directly included [misc-include-cleaner]
+   20 |     if (std::find(allowed_parameters.begin(), allowed_parameters.end(), parameter) == allowed_parameters.cend())
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:98:58: warning: no header providing "score::cpp::optional" is directly included [misc-include-cleaner]
+   98 |                                              score::cpp::optional<std::chrono::milliseconds> cycle_time,
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:102:67: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   26 |                                              score::cpp::optional<uid_t> uid,
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:224:15: warning: no header providing "setuid" is directly included [misc-include-cleaner]
+   26 |         if (::setuid(uid.value()) != 0)
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:226:47: warning: no header providing "strerror" is directly included [misc-include-cleaner]
+   24 |             std::cerr << "setuid failed: " << strerror(errno) << std::endl;
+      |                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:226:56: warning: no header providing "errno" is directly included [misc-include-cleaner]
+   21 |             std::cerr << "setuid failed: " << strerror(errno) << std::endl;
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:226:71: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   24 |             std::cerr << "setuid failed: " << strerror(errno) << std::endl;
+      |                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4743/execroot/_main/score/mw/com/test/common_test_resources/sctf_test_runner.cpp:281:62: warning: no header providing "std::future" is directly included [misc-include-cleaner]
+   24 | int SctfTestRunner::WaitForAsyncTestResults(std::vector<std::future<int>>& future_return_values)
+      |                                                              ^
+Suppressed 26598 warnings (26423 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

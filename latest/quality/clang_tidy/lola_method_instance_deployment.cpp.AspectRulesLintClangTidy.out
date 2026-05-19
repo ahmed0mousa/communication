@@ -1,3 +1,32 @@
-4840 warnings generated.
-Suppressed 4879 warnings (4834 in non-user code, 39 NOLINT, 6 with check filters).
+9558 warnings generated.
+./score/mw/com/impl/configuration/lola_method_instance_deployment.h:57:5: warning: function 'Serialize' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     score::json::Object Serialize() const;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/664/execroot/_main/score/mw/com/impl/configuration/lola_method_instance_deployment.cpp:15:1: warning: included header limits is not used directly [misc-include-cleaner]
+   15 | #include <limits>
+      | ^~~~~~~~~~~~~~~~~
+   16 | #include <string_view>
+/home/runner/.bazel/sandbox/linux-sandbox/664/execroot/_main/score/mw/com/impl/configuration/lola_method_instance_deployment.cpp:28:65: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   16 | #include <string_view>
+   17 | 
+   18 | namespace score::mw::com::impl
+   19 | {
+   20 | 
+   21 | namespace
+   22 | {
+   23 | using std::string_view_literals::operator""sv;
+   24 | constexpr auto kQueueSizeKey = "queueSize"sv;
+   25 | constexpr auto kMethodEnabledKey = "enabled"sv;
+   26 | }  // namespace
+   27 | 
+   28 | LolaMethodInstanceDeployment::LolaMethodInstanceDeployment(std::optional<QueueSize> queue_size,
+      |                                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/664/execroot/_main/score/mw/com/impl/configuration/lola_method_instance_deployment.cpp:35:24: warning: no header providing "score::json::Object" is directly included [misc-include-cleaner]
+   14 |     const score::json::Object& serialized_lola_method_instance_deployment)
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/664/execroot/_main/score/mw/com/impl/configuration/lola_method_instance_deployment.cpp:36:24: warning: no header providing "std::nullopt" is directly included [misc-include-cleaner]
+   36 |     : queue_size_{std::nullopt}, enabled_{std::nullopt}
+      |                        ^
+Suppressed 9593 warnings (9547 in non-user code, 40 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

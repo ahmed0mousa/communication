@@ -1,6 +1,6 @@
-7215 warnings generated.
+17003 warnings generated.
 ./score/mw/com/impl/test/runtime_mock_guard.h:24:7: warning: class 'RuntimeMockGuard' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
    24 | class RuntimeMockGuard
       |       ^
-Suppressed 7385 warnings (7206 in non-user code, 171 NOLINT, 8 with check filters).
+Suppressed 17189 warnings (16994 in non-user code, 187 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -1,3 +1,138 @@
-6656 warnings generated.
-Suppressed 6788 warnings (6648 in non-user code, 132 NOLINT, 8 with check filters).
+15067 warnings generated.
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:24:67: warning: use c++17 style variable templates [modernize-type-traits]
+   24 | template <typename InputIt, typename T, typename std::enable_if_t<std::is_unsigned<T>::value>* = nullptr>
+      |                                                                   ^                  ~~~~~~~
+      |                                                                                   _v
+./score/mw/com/impl/tracing/configuration/hash_helper_utility.h:28:9: warning: use c++17 style variable templates [modernize-type-traits]
+   28 |         std::is_base_of<std::input_iterator_tag, typename std::iterator_traits<InputIt>::iterator_category>::value,
+      |         ^                                                                                                  ~~~~~~~
+      |                        _v
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:42:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   42 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:46:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   46 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:50:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   50 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/i_tracing_filter_config.h:54:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   54 |     virtual bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:31:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   31 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:35:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   35 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:39:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/configuration/tracing_filter_config.h:43:5: warning: function 'IsTracePointEnabled' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     bool IsTracePointEnabled(std::string_view service_type,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:65:5: warning: function 'GetTraceClientId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   65 |     virtual analysis::tracing::TraceClientId GetTraceClientId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:73:5: warning: function 'GetDataLossFlag' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   73 |     virtual bool GetDataLossFlag() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:87:5: warning: function 'GetShmObjectHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   87 |     virtual std::optional<analysis::tracing::ShmObjectHandle> GetShmObjectHandle(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:90:5: warning: function 'GetShmRegionStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     virtual std::optional<void*> GetShmRegionStartAddress(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:98:5: warning: function 'GetCachedFileDescriptorForReregisteringShmObject' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   98 |     virtual std::optional<std::pair<memory::shared::ISharedMemoryResource::FileDescriptor, void*>>
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_binding_tracing_runtime.h:105:5: warning: function 'ConvertToTracingServiceInstanceElement' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  105 |     virtual analysis::tracing::ServiceInstanceElement ConvertToTracingServiceInstanceElement(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/i_tracing_runtime.h:80:5: warning: function 'GetBindingTracingRuntime' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     virtual IBindingTracingRuntime& GetBindingTracingRuntime(const BindingType binding_type) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/trace_error.h:34:5: warning: function 'MessageFor' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     std::string_view MessageFor(const score::result::ErrorCode& code) const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/tracing/type_erased_sample_ptr.h:33:34: warning: 128U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   33 |     score::cpp::callback<void(), 128U> type_erased_sample_ptr_;
+      |                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:15:1: warning: included header transaction_log_set.h is not used directly [misc-include-cleaner]
+   15 | #include "score/mw/com/impl/bindings/lola/transaction_log_set.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   16 | #include "score/mw/com/impl/runtime.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:19:1: warning: included header proxy_event_trace_point_type.h is not used directly [misc-include-cleaner]
+   19 | #include "score/mw/com/impl/tracing/configuration/proxy_event_trace_point_type.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   20 | #include "score/mw/com/impl/tracing/configuration/proxy_field_trace_point_type.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:20:1: warning: included header proxy_field_trace_point_type.h is not used directly [misc-include-cleaner]
+   20 | #include "score/mw/com/impl/tracing/configuration/proxy_field_trace_point_type.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   21 | #include "score/mw/com/impl/tracing/configuration/service_element_instance_identifier_view.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:24:1: warning: included header tracing_filter_config.h is not used directly [misc-include-cleaner]
+   24 | #include "score/mw/com/impl/tracing/configuration/tracing_filter_config.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   25 | #include "score/mw/com/impl/tracing/skeleton_event_tracing_data.h"
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:38:45: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   27 | 
+   28 | #include <score/assert.hpp>
+   29 | 
+   30 | #include <exception>
+   31 | 
+   32 | namespace score::mw::com::impl::tracing
+   33 | {
+   34 | 
+   35 | namespace detail_skeleton_event_tracing
+   36 | {
+   37 | 
+   38 | void UpdateTracingDataFromTraceResult(const Result<void> trace_result,
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:54:31: warning: no header providing "score::mw::log::LogError" is directly included [misc-include-cleaner]
+   27 |             ::score::mw::log::LogError("lola")
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:65:6: warning: no header providing "std::uint8_t" is directly included [misc-include-cleaner]
+   28 | std::uint8_t GetNumberOfTracingSlots(const InstanceIdentifier& instance_identifier,
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:65:44: warning: no header providing "score::mw::com::impl::InstanceIdentifier" is directly included [misc-include-cleaner]
+   16 | std::uint8_t GetNumberOfTracingSlots(const InstanceIdentifier& instance_identifier,
+      |                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:70:43: warning: no header providing "score::mw::com::impl::InstanceIdentifierView" is directly included [misc-include-cleaner]
+   70 |     const auto instance_identifier_view = InstanceIdentifierView(instance_identifier);
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:73:36: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+   31 |         if (const auto* val = std::get_if<LolaServiceInstanceDeployment>(&service_instance_deployment.bindingInfo_))
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:73:43: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   16 |         if (const auto* val = std::get_if<LolaServiceInstanceDeployment>(&service_instance_deployment.bindingInfo_))
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:77:18: warning: no header providing "score::mw::log::LogFatal" is directly included [misc-include-cleaner]
+   77 |         mw::log::LogFatal("lola")
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:109:16: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   31 |     const std::string service_element_name_str{service_element_name};
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:113:25: warning: no header providing "score::mw::log::LogFatal" is directly included [misc-include-cleaner]
+  113 |         score::mw::log::LogFatal() << "Lola: requested service element (" << service_element_name
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3994/execroot/_main/score/mw/com/impl/tracing/skeleton_event_tracing.cpp:131:77: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   15 |                                                                       const BindingType binding_type,
+      |                                                                             ^
+Suppressed 15166 warnings (15025 in non-user code, 133 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

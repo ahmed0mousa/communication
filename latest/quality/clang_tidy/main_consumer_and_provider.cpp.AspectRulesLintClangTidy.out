@@ -1,11 +1,20 @@
-8770 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4800/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+19938 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4649/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:29:17: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+   23 | 
+   24 | int main(int argc, const char** argv)
+   25 | {
+   26 |     score::mw::com::test::SetupAssertHandler();
+   27 |     score::mw::com::runtime::InitializeRuntime(argc, argv);
+   28 | 
+   29 |     score::cpp::stop_source stop_source{};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4649/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
    45 |     return (provider_return_value && consumer_return_value);
       |            ^
       |            static_cast<int>
-/home/runner/.bazel/sandbox/linux-sandbox/4800/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:38: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+/home/runner/.bazel/sandbox/linux-sandbox/4649/execroot/_main/score/mw/com/test/methods/basic_acceptance_test/main_consumer_and_provider.cpp:45:38: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
    45 |     return (provider_return_value && consumer_return_value);
       |                                      ^                    
       |                                      (                     != 0)
-Suppressed 8932 warnings (8758 in non-user code, 164 NOLINT, 10 with check filters).
+Suppressed 20100 warnings (19925 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

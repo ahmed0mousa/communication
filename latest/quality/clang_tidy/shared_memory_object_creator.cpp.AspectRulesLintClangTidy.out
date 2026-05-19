@@ -1,11 +1,58 @@
-4757 warnings generated.
-./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:124:44: warning: use nullptr [hicpp-use-nullptr]
+8713 warnings generated.
+./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:124:44: warning: use nullptr [hicpp-use-nullptr,modernize-use-nullptr]
   124 |         ::score::os::Mman::instance().mmap(NULL,
       |                                            ^~~~
       |                                            nullptr
-./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:169:44: warning: use nullptr [hicpp-use-nullptr]
+./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:169:44: warning: use nullptr [hicpp-use-nullptr,modernize-use-nullptr]
   169 |         ::score::os::Mman::instance().mmap(NULL,
       |                                            ^~~~
       |                                            nullptr
-Suppressed 4782 warnings (4752 in non-user code, 27 NOLINT, 3 with check filters).
+./score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.h:213:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  213 |     else
+      |     ^~~~
+  214 |     {
+      |     ~
+  215 |         std::stringstream ss{};
+      |         ~~~~~~~~~~~~~~~~~~~~~~~
+  216 |         ss << "SharedMemoryObjectCreator: Unexpected error while opening object with SharedMemoryObjectCreator at path"
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  217 |            << shared_memory_file_name << "with errno" << open_object_result.error();
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  218 |         std::cerr << ss.str() << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  219 |         std::terminate();
+      |         ~~~~~~~~~~~~~~~~~
+  220 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/1111/execroot/_main/score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.cpp:36:31: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   21 | #include <string_view>
+   22 | #include <thread>
+   23 | 
+   24 | namespace score::mw::com::test
+   25 | {
+   26 | 
+   27 | namespace
+   28 | {
+   29 | 
+   30 | #if defined(__QNXNTO__)
+   31 | constexpr std::string_view kSharedMemoryPathPrefix = "/dev/shmem/";
+   32 | #else
+   33 | constexpr std::string_view kSharedMemoryPathPrefix = "/dev/shm/";
+   34 | #endif
+   35 | 
+   36 | bool DoesFileExist(const std::string& file_path) noexcept
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/1111/execroot/_main/score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.cpp:42:35: warning: no header providing "score::os::Error" is directly included [misc-include-cleaner]
+   15 |         if (result.error() != os::Error::Code::kNoSuchFileOrDirectory)
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/1111/execroot/_main/score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.cpp:47:18: warning: no header providing "std::cout" is directly included [misc-include-cleaner]
+   19 |             std::cout << ss.str() << std::endl;
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1111/execroot/_main/score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.cpp:47:43: warning: no header providing "std::endl" is directly included [misc-include-cleaner]
+   20 |             std::cout << ss.str() << std::endl;
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1111/execroot/_main/score/mw/com/performance_benchmarks/common_test_resources/shared_memory_object_creator.cpp:67:20: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   18 |     constexpr std::size_t maxRetryCount = timeout / retryAfter;
+      |                    ^
+Suppressed 8731 warnings (8700 in non-user code, 28 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">99.0&nbsp;%</td>
-            <td class="headerCovTableEntry">105</td>
-            <td class="headerCovTableEntry">104</td>
+            <td class="headerCovTableEntryMed">88.2&nbsp;%</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry">30</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryLo">65.0&nbsp;%</td>
-            <td class="headerCovTableEntry">160</td>
-            <td class="headerCovTableEntry">104</td>
+            <td class="headerCovTableEntryLo">57.9&nbsp;%</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">11</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -129,13 +129,13 @@
 <span id="L51"><span class="lineNum">      51</span>                 :             :     // Suppress &quot;AUTOSAR C++14 A8-5-0&quot;, The rule states: &quot;All memory shall be initialized before it is read.&quot;.</span>
 <span id="L52"><span class="lineNum">      52</span>                 :             :     // This is a false positive, constructor delegation guarantees member initialization.</span>
 <span id="L53"><span class="lineNum">      53</span>                 :             :     // coverity[autosar_cpp14_a8_5_0_violation : FALSE]</span>
-<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC tlaBgGNC">         267 :     constexpr SampleAllocateePtr() noexcept : SampleAllocateePtr{score::cpp::blank{}} {}</span></span>
+<span id="L54"><span class="lineNum">      54</span>                 :<span class="tlaGNC tlaBgGNC">          18 :     constexpr SampleAllocateePtr() noexcept : SampleAllocateePtr{score::cpp::blank{}} {}</span></span>
 <span id="L55"><span class="lineNum">      55</span>                 :             : </span>
 <span id="L56"><span class="lineNum">      56</span>                 :             :     /// \brief Constructs a SampleAllocateePtr that owns nothing.</span>
 <span id="L57"><span class="lineNum">      57</span>                 :             :     // Suppress &quot;AUTOSAR C++14 A8-5-0&quot;, The rule states: &quot;All memory shall be initialized before it is read.&quot;.</span>
 <span id="L58"><span class="lineNum">      58</span>                 :             :     // Constructor delegation guarantees member initialization, this warning is a false positive.</span>
 <span id="L59"><span class="lineNum">      59</span>                 :             :     // coverity[autosar_cpp14_a8_5_0_violation]</span>
-<span id="L60"><span class="lineNum">      60</span>                 :<span class="tlaGNC">           6 :     constexpr explicit SampleAllocateePtr(std::nullptr_t /* ptr */) noexcept : SampleAllocateePtr() {}</span></span>
+<span id="L60"><span class="lineNum">      60</span>                 :             :     constexpr explicit SampleAllocateePtr(std::nullptr_t /* ptr */) noexcept : SampleAllocateePtr() {}</span>
 <span id="L61"><span class="lineNum">      61</span>                 :             : </span>
 <span id="L62"><span class="lineNum">      62</span>                 :             :     // no copy due to unique ownership</span>
 <span id="L63"><span class="lineNum">      63</span>                 :             :     SampleAllocateePtr(const SampleAllocateePtr&lt;SampleType&gt;&amp;) = delete;</span>
@@ -149,7 +149,7 @@
 <span id="L71"><span class="lineNum">      71</span>                 :             : </span>
 <span id="L72"><span class="lineNum">      72</span>                 :             :     SampleAllocateePtr&amp; operator=(std::nullptr_t) noexcept;</span>
 <span id="L73"><span class="lineNum">      73</span>                 :             : </span>
-<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">         404 :     ~SampleAllocateePtr() noexcept = default;</span></span>
+<span id="L74"><span class="lineNum">      74</span>                 :<span class="tlaGNC">          26 :     ~SampleAllocateePtr() noexcept = default;</span></span>
 <span id="L75"><span class="lineNum">      75</span>                 :             : </span>
 <span id="L76"><span class="lineNum">      76</span>                 :             :     /// \brief Replaces the managed object.</span>
 <span id="L77"><span class="lineNum">      77</span>                 :             :     void reset() noexcept;</span>
@@ -201,9 +201,9 @@
 <span id="L123"><span class="lineNum">     123</span>                 :             :     // namespace, or static function with internal linkage, or private member function shall be used.&quot;.</span>
 <span id="L124"><span class="lineNum">     124</span>                 :             :     // False-positive, method is used as a delegation constructor.</span>
 <span id="L125"><span class="lineNum">     125</span>                 :             :     // coverity[autosar_cpp14_a0_1_3_violation : FALSE]</span>
-<span id="L126"><span class="lineNum">     126</span>                 :<span class="tlaGNC">         404 :     explicit SampleAllocateePtr(T ptr) : internal_{std::move(ptr)}</span></span>
-<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">         404 :     {</span></span>
-<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">         404 :     }</span></span>
+<span id="L126"><span class="lineNum">     126</span>                 :<span class="tlaGNC">          26 :     explicit SampleAllocateePtr(T ptr) : internal_{std::move(ptr)}</span></span>
+<span id="L127"><span class="lineNum">     127</span>                 :<span class="tlaGNC">          26 :     {</span></span>
+<span id="L128"><span class="lineNum">     128</span>                 :<span class="tlaGNC">          26 :     }</span></span>
 <span id="L129"><span class="lineNum">     129</span>                 :             : </span>
 <span id="L130"><span class="lineNum">     130</span>                 :             :     // Suppress &quot;AUTOSAR C++14 A11-3-1&quot;, The rule states: &quot;Friend declarations shall not be used&quot;.</span>
 <span id="L131"><span class="lineNum">     131</span>                 :             :     // Friend class required to access private constructor as we do not have everything we need public.</span>
@@ -230,18 +230,18 @@
 <span id="L152"><span class="lineNum">     152</span>                 :             : </span>
 <span id="L153"><span class="lineNum">     153</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L154"><span class="lineNum">     154</span>                 :             : SampleAllocateePtr&lt;SampleType&gt;::SampleAllocateePtr(SampleAllocateePtr&lt;SampleType&gt;&amp;&amp; other) noexcept</span>
-<span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">         241 :     : SampleAllocateePtr()</span></span>
-<span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">         241 : {</span></span>
-<span id="L157"><span class="lineNum">     157</span>                 :<span class="tlaGNC">         241 :     this-&gt;Swap(other);</span></span>
-<span id="L158"><span class="lineNum">     158</span>                 :<span class="tlaGNC">         241 : }</span></span>
+<span id="L155"><span class="lineNum">     155</span>                 :<span class="tlaGNC">          18 :     : SampleAllocateePtr()</span></span>
+<span id="L156"><span class="lineNum">     156</span>                 :<span class="tlaGNC">          18 : {</span></span>
+<span id="L157"><span class="lineNum">     157</span>                 :<span class="tlaGNC">          18 :     this-&gt;Swap(other);</span></span>
+<span id="L158"><span class="lineNum">     158</span>                 :<span class="tlaGNC">          18 : }</span></span>
 <span id="L159"><span class="lineNum">     159</span>                 :             : </span>
 <span id="L160"><span class="lineNum">     160</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L161"><span class="lineNum">     161</span>                 :             : auto SampleAllocateePtr&lt;SampleType&gt;::operator=(SampleAllocateePtr&lt;SampleType&gt;&amp;&amp; other) &amp; noexcept</span>
 <span id="L162"><span class="lineNum">     162</span>                 :             :     -&gt; SampleAllocateePtr&lt;SampleType&gt;&amp;</span>
-<span id="L163"><span class="lineNum">     163</span>                 :<span class="tlaGNC">          10 : {</span></span>
-<span id="L164"><span class="lineNum">     164</span>                 :<span class="tlaGNC">          10 :     this-&gt;Swap(other);</span></span>
-<span id="L165"><span class="lineNum">     165</span>                 :<span class="tlaGNC">          10 :     return *this;</span></span>
-<span id="L166"><span class="lineNum">     166</span>                 :<span class="tlaGNC">          10 : }</span></span>
+<span id="L163"><span class="lineNum">     163</span>                 :             : {</span>
+<span id="L164"><span class="lineNum">     164</span>                 :             :     this-&gt;Swap(other);</span>
+<span id="L165"><span class="lineNum">     165</span>                 :             :     return *this;</span>
+<span id="L166"><span class="lineNum">     166</span>                 :             : }</span>
 <span id="L167"><span class="lineNum">     167</span>                 :             : </span>
 <span id="L168"><span class="lineNum">     168</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L169"><span class="lineNum">     169</span>                 :             : auto SampleAllocateePtr&lt;SampleType&gt;::operator=(std::nullptr_t) noexcept -&gt; SampleAllocateePtr&lt;SampleType&gt;&amp;</span>
@@ -252,71 +252,71 @@
 <span id="L174"><span class="lineNum">     174</span>                 :             : </span>
 <span id="L175"><span class="lineNum">     175</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L176"><span class="lineNum">     176</span>                 :             : void SampleAllocateePtr&lt;SampleType&gt;::reset() noexcept</span>
-<span id="L177"><span class="lineNum">     177</span>                 :<span class="tlaGNC">           3 : {</span></span>
-<span id="L178"><span class="lineNum">     178</span>                 :<span class="tlaGNC">           3 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L177"><span class="lineNum">     177</span>                 :             : {</span>
+<span id="L178"><span class="lineNum">     178</span>                 :             :     auto visitor = score::cpp::overload(</span>
 <span id="L179"><span class="lineNum">     179</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L180"><span class="lineNum">     180</span>                 :             :         // expression statement and identifier declaration shall be placed on a</span>
 <span id="L181"><span class="lineNum">     181</span>                 :             :         // separate line.&quot;. Following line statement is fine, this happens due to</span>
 <span id="L182"><span class="lineNum">     182</span>                 :             :         // clang formatting.</span>
 <span id="L183"><span class="lineNum">     183</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L184"><span class="lineNum">     184</span>                 :<span class="tlaGNC">           3 :         [](lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; void {</span></span>
-<span id="L185"><span class="lineNum">     185</span>                 :<span class="tlaGNC">           1 :             internal_ptr.reset();</span></span>
-<span id="L186"><span class="lineNum">     186</span>                 :<span class="tlaGNC">           1 :         },</span></span>
+<span id="L184"><span class="lineNum">     184</span>                 :             :         [](lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; void {</span>
+<span id="L185"><span class="lineNum">     185</span>                 :             :             internal_ptr.reset();</span>
+<span id="L186"><span class="lineNum">     186</span>                 :             :         },</span>
 <span id="L187"><span class="lineNum">     187</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L188"><span class="lineNum">     188</span>                 :<span class="tlaGNC">           3 :         [](mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; void {</span></span>
-<span id="L189"><span class="lineNum">     189</span>                 :<span class="tlaGNC">           1 :             internal_ptr.reset(nullptr);</span></span>
-<span id="L190"><span class="lineNum">     190</span>                 :<span class="tlaGNC">           1 :         },</span></span>
+<span id="L188"><span class="lineNum">     188</span>                 :             :         [](mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; void {</span>
+<span id="L189"><span class="lineNum">     189</span>                 :             :             internal_ptr.reset(nullptr);</span>
+<span id="L190"><span class="lineNum">     190</span>                 :             :         },</span>
 <span id="L191"><span class="lineNum">     191</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L192"><span class="lineNum">     192</span>                 :<span class="tlaGNC">           3 :         [](const score::cpp::blank&amp;) noexcept -&gt; void {});</span></span>
-<span id="L193"><span class="lineNum">     193</span>                 :<span class="tlaGNC">           3 :     std::visit(visitor, internal_);</span></span>
-<span id="L194"><span class="lineNum">     194</span>                 :<span class="tlaGNC">           3 : }</span></span>
+<span id="L192"><span class="lineNum">     192</span>                 :             :         [](const score::cpp::blank&amp;) noexcept -&gt; void {});</span>
+<span id="L193"><span class="lineNum">     193</span>                 :             :     std::visit(visitor, internal_);</span>
+<span id="L194"><span class="lineNum">     194</span>                 :             : }</span>
 <span id="L195"><span class="lineNum">     195</span>                 :             : </span>
 <span id="L196"><span class="lineNum">     196</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L197"><span class="lineNum">     197</span>                 :             : void SampleAllocateePtr&lt;SampleType&gt;::Swap(SampleAllocateePtr&lt;SampleType&gt;&amp; other) noexcept</span>
-<span id="L198"><span class="lineNum">     198</span>                 :<span class="tlaGNC">         252 : {</span></span>
-<span id="L199"><span class="lineNum">     199</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     // Search for custom swap functions via ADL, and use std::swap if none are found.</span></span>
-<span id="L200"><span class="lineNum">     200</span>                 :<span class="tlaGNC tlaBgGNC">         252 :     using std::swap;</span></span>
-<span id="L201"><span class="lineNum">     201</span>                 :<span class="tlaGNC">         252 :     swap(internal_, other.internal_);</span></span>
-<span id="L202"><span class="lineNum">     202</span>                 :<span class="tlaGNC">         252 : }</span></span>
+<span id="L198"><span class="lineNum">     198</span>                 :<span class="tlaGNC">          18 : {</span></span>
+<span id="L199"><span class="lineNum">     199</span>                 :             :     // Search for custom swap functions via ADL, and use std::swap if none are found.</span>
+<span id="L200"><span class="lineNum">     200</span>                 :<span class="tlaGNC">          18 :     using std::swap;</span></span>
+<span id="L201"><span class="lineNum">     201</span>                 :<span class="tlaGNC">          18 :     swap(internal_, other.internal_);</span></span>
+<span id="L202"><span class="lineNum">     202</span>                 :<span class="tlaGNC">          18 : }</span></span>
 <span id="L203"><span class="lineNum">     203</span>                 :             : </span>
 <span id="L204"><span class="lineNum">     204</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L205"><span class="lineNum">     205</span>                 :             : auto SampleAllocateePtr&lt;SampleType&gt;::Get() const noexcept -&gt; pointer</span>
-<span id="L206"><span class="lineNum">     206</span>                 :<span class="tlaGNC">          12 : {</span></span>
-<span id="L207"><span class="lineNum">     207</span>                 :<span class="tlaGNC">          12 :     using ReturnType = pointer;</span></span>
+<span id="L206"><span class="lineNum">     206</span>                 :             : {</span>
+<span id="L207"><span class="lineNum">     207</span>                 :             :     using ReturnType = pointer;</span>
 <span id="L208"><span class="lineNum">     208</span>                 :             : </span>
-<span id="L209"><span class="lineNum">     209</span>                 :<span class="tlaGNC">          12 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L209"><span class="lineNum">     209</span>                 :             :     auto visitor = score::cpp::overload(</span>
 <span id="L210"><span class="lineNum">     210</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L211"><span class="lineNum">     211</span>                 :             :         // expression statement and identifier declaration shall be placed on a</span>
 <span id="L212"><span class="lineNum">     212</span>                 :             :         // separate line.&quot;. Following line statement is fine, this happens due to</span>
 <span id="L213"><span class="lineNum">     213</span>                 :             :         // clang formatting.</span>
 <span id="L214"><span class="lineNum">     214</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L215"><span class="lineNum">     215</span>                 :<span class="tlaGNC">          12 :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
-<span id="L216"><span class="lineNum">     216</span>                 :<span class="tlaGNC">           8 :             return internal_ptr.get();</span></span>
-<span id="L217"><span class="lineNum">     217</span>                 :<span class="tlaGNC">           8 :         },</span></span>
+<span id="L215"><span class="lineNum">     215</span>                 :             :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span>
+<span id="L216"><span class="lineNum">     216</span>                 :             :             return internal_ptr.get();</span>
+<span id="L217"><span class="lineNum">     217</span>                 :             :         },</span>
 <span id="L218"><span class="lineNum">     218</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A8-4-12&quot; rule finding. This rule states: &quot;A std::unique_ptr shall be passed to a</span>
 <span id="L219"><span class="lineNum">     219</span>                 :             :         // function as: (1) a copy to express the function assumes ownership (2) an lvalue reference to express that</span>
 <span id="L220"><span class="lineNum">     220</span>                 :             :         // the function replaces the managed object&quot;</span>
 <span id="L221"><span class="lineNum">     221</span>                 :             :         // This is a false positive, we here using lvalue reference.</span>
 <span id="L222"><span class="lineNum">     222</span>                 :             :         // coverity[autosar_cpp14_a8_4_12_violation : FALSE]</span>
 <span id="L223"><span class="lineNum">     223</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L224"><span class="lineNum">     224</span>                 :<span class="tlaGNC">          12 :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
-<span id="L225"><span class="lineNum">     225</span>                 :<span class="tlaGNC">           3 :             return internal_ptr.get();</span></span>
-<span id="L226"><span class="lineNum">     226</span>                 :<span class="tlaGNC">           3 :         },</span></span>
+<span id="L224"><span class="lineNum">     224</span>                 :             :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span>
+<span id="L225"><span class="lineNum">     225</span>                 :             :             return internal_ptr.get();</span>
+<span id="L226"><span class="lineNum">     226</span>                 :             :         },</span>
 <span id="L227"><span class="lineNum">     227</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L228"><span class="lineNum">     228</span>                 :<span class="tlaGNC">          12 :         [](const score::cpp::blank&amp;) noexcept -&gt; ReturnType {</span></span>
-<span id="L229"><span class="lineNum">     229</span>                 :<span class="tlaGNC">           1 :             return nullptr;</span></span>
-<span id="L230"><span class="lineNum">     230</span>                 :<span class="tlaGNC">           1 :         });</span></span>
+<span id="L228"><span class="lineNum">     228</span>                 :             :         [](const score::cpp::blank&amp;) noexcept -&gt; ReturnType {</span>
+<span id="L229"><span class="lineNum">     229</span>                 :             :             return nullptr;</span>
+<span id="L230"><span class="lineNum">     230</span>                 :             :         });</span>
 <span id="L231"><span class="lineNum">     231</span>                 :             : </span>
-<span id="L232"><span class="lineNum">     232</span>                 :<span class="tlaGNC">          12 :     return std::visit(visitor, internal_);</span></span>
-<span id="L233"><span class="lineNum">     233</span>                 :<span class="tlaGNC">          12 : }</span></span>
+<span id="L232"><span class="lineNum">     232</span>                 :             :     return std::visit(visitor, internal_);</span>
+<span id="L233"><span class="lineNum">     233</span>                 :             : }</span>
 <span id="L234"><span class="lineNum">     234</span>                 :             : </span>
 <span id="L235"><span class="lineNum">     235</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L236"><span class="lineNum">     236</span>                 :             : SampleAllocateePtr&lt;SampleType&gt;::operator bool() const noexcept</span>
-<span id="L237"><span class="lineNum">     237</span>                 :<span class="tlaGNC">           8 : {</span></span>
-<span id="L238"><span class="lineNum">     238</span>                 :<span class="tlaGNC">           8 :     auto visitor = score::cpp::overload(</span></span>
-<span id="L239"><span class="lineNum">     239</span>                 :<span class="tlaGNC">           8 :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; bool {</span></span>
-<span id="L240"><span class="lineNum">     240</span>                 :<span class="tlaGNC">           3 :             return static_cast&lt;bool&gt;(internal_ptr);</span></span>
-<span id="L241"><span class="lineNum">     241</span>                 :<span class="tlaGNC">           3 :         },</span></span>
+<span id="L237"><span class="lineNum">     237</span>                 :             : {</span>
+<span id="L238"><span class="lineNum">     238</span>                 :             :     auto visitor = score::cpp::overload(</span>
+<span id="L239"><span class="lineNum">     239</span>                 :             :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; bool {</span>
+<span id="L240"><span class="lineNum">     240</span>                 :             :             return static_cast&lt;bool&gt;(internal_ptr);</span>
+<span id="L241"><span class="lineNum">     241</span>                 :             :         },</span>
 <span id="L242"><span class="lineNum">     242</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L243"><span class="lineNum">     243</span>                 :             :         // expression statement and identifier declaration shall be placed on a</span>
 <span id="L244"><span class="lineNum">     244</span>                 :             :         // separate line.&quot;. Following line statement is fine, this happens due to</span>
@@ -327,94 +327,94 @@
 <span id="L249"><span class="lineNum">     249</span>                 :             :         // This is a false positive, we here using lvalue reference.</span>
 <span id="L250"><span class="lineNum">     250</span>                 :             :         // coverity[autosar_cpp14_a8_4_12_violation : FALSE]</span>
 <span id="L251"><span class="lineNum">     251</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L252"><span class="lineNum">     252</span>                 :<span class="tlaGNC">           8 :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; bool {</span></span>
-<span id="L253"><span class="lineNum">     253</span>                 :<span class="tlaGNC">           3 :             return static_cast&lt;bool&gt;(internal_ptr);</span></span>
-<span id="L254"><span class="lineNum">     254</span>                 :<span class="tlaGNC">           3 :         },</span></span>
+<span id="L252"><span class="lineNum">     252</span>                 :             :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; bool {</span>
+<span id="L253"><span class="lineNum">     253</span>                 :             :             return static_cast&lt;bool&gt;(internal_ptr);</span>
+<span id="L254"><span class="lineNum">     254</span>                 :             :         },</span>
 <span id="L255"><span class="lineNum">     255</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L256"><span class="lineNum">     256</span>                 :<span class="tlaGNC">           8 :         [](const score::cpp::blank&amp;) noexcept -&gt; bool {</span></span>
-<span id="L257"><span class="lineNum">     257</span>                 :<span class="tlaGNC">           2 :             return false;</span></span>
-<span id="L258"><span class="lineNum">     258</span>                 :<span class="tlaGNC">           2 :         });</span></span>
+<span id="L256"><span class="lineNum">     256</span>                 :             :         [](const score::cpp::blank&amp;) noexcept -&gt; bool {</span>
+<span id="L257"><span class="lineNum">     257</span>                 :             :             return false;</span>
+<span id="L258"><span class="lineNum">     258</span>                 :             :         });</span>
 <span id="L259"><span class="lineNum">     259</span>                 :             : </span>
-<span id="L260"><span class="lineNum">     260</span>                 :<span class="tlaGNC">           8 :     return std::visit(visitor, internal_);</span></span>
-<span id="L261"><span class="lineNum">     261</span>                 :<span class="tlaGNC">           8 : }</span></span>
+<span id="L260"><span class="lineNum">     260</span>                 :             :     return std::visit(visitor, internal_);</span>
+<span id="L261"><span class="lineNum">     261</span>                 :             : }</span>
 <span id="L262"><span class="lineNum">     262</span>                 :             : </span>
 <span id="L263"><span class="lineNum">     263</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L264"><span class="lineNum">     264</span>                 :             : template &lt;typename T, typename std::enable_if&lt;!std::is_void&lt;T&gt;::value, int&gt;::type&gt;</span>
 <span id="L265"><span class="lineNum">     265</span>                 :             : typename std::add_lvalue_reference&lt;SampleType&gt;::type SampleAllocateePtr&lt;SampleType&gt;::operator*() const noexcept</span>
-<span id="L266"><span class="lineNum">     266</span>                 :<span class="tlaGNC">          24 : {</span></span>
-<span id="L267"><span class="lineNum">     267</span>                 :<span class="tlaGNC">          24 :     using ReturnType = typename std::add_lvalue_reference&lt;SampleType&gt;::type;</span></span>
+<span id="L266"><span class="lineNum">     266</span>                 :<span class="tlaGNC">           4 : {</span></span>
+<span id="L267"><span class="lineNum">     267</span>                 :<span class="tlaGNC">           4 :     using ReturnType = typename std::add_lvalue_reference&lt;SampleType&gt;::type;</span></span>
 <span id="L268"><span class="lineNum">     268</span>                 :             : </span>
-<span id="L269"><span class="lineNum">     269</span>                 :<span class="tlaGNC">          24 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L269"><span class="lineNum">     269</span>                 :<span class="tlaGNC">           4 :     auto visitor = score::cpp::overload(</span></span>
 <span id="L270"><span class="lineNum">     270</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L271"><span class="lineNum">     271</span>                 :             :         // expression statement and identifier declaration shall be placed on a</span>
 <span id="L272"><span class="lineNum">     272</span>                 :             :         // separate line.&quot;. Following line statement is fine, this happens due to</span>
 <span id="L273"><span class="lineNum">     273</span>                 :             :         // clang formatting.</span>
 <span id="L274"><span class="lineNum">     274</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L275"><span class="lineNum">     275</span>                 :<span class="tlaGNC">          24 :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
-<span id="L276"><span class="lineNum">     276</span>                 :<span class="tlaGNC">          11 :             return *internal_ptr;</span></span>
-<span id="L277"><span class="lineNum">     277</span>                 :<span class="tlaGNC">          11 :         },</span></span>
+<span id="L275"><span class="lineNum">     275</span>                 :<span class="tlaGNC">           4 :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
+<span id="L276"><span class="lineNum">     276</span>                 :<span class="tlaGNC">           4 :             return *internal_ptr;</span></span>
+<span id="L277"><span class="lineNum">     277</span>                 :<span class="tlaGNC">           4 :         },</span></span>
 <span id="L278"><span class="lineNum">     278</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A8-4-12&quot; rule finding. This rule states: &quot;A std::unique_ptr shall be passed to a</span>
 <span id="L279"><span class="lineNum">     279</span>                 :             :         // function as: (1) a copy to express the function assumes ownership (2) an lvalue reference to express that</span>
 <span id="L280"><span class="lineNum">     280</span>                 :             :         // the function replaces the managed object&quot;</span>
 <span id="L281"><span class="lineNum">     281</span>                 :             :         // This is a false positive, we here using lvalue reference.</span>
 <span id="L282"><span class="lineNum">     282</span>                 :             :         // coverity[autosar_cpp14_a8_4_12_violation : FALSE]</span>
 <span id="L283"><span class="lineNum">     283</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L284"><span class="lineNum">     284</span>                 :<span class="tlaGNC">          24 :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
-<span id="L285"><span class="lineNum">     285</span>                 :<span class="tlaGNC">          12 :             return *internal_ptr;</span></span>
-<span id="L286"><span class="lineNum">     286</span>                 :<span class="tlaGNC">          12 :         },</span></span>
+<span id="L284"><span class="lineNum">     284</span>                 :<span class="tlaGNC">           4 :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
+<span id="L285"><span class="lineNum">     285</span>                 :<span class="tlaUNC tlaBgUNC">           0 :             return *internal_ptr;</span></span>
+<span id="L286"><span class="lineNum">     286</span>                 :<span class="tlaUNC">           0 :         },</span></span>
 <span id="L287"><span class="lineNum">     287</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L288"><span class="lineNum">     288</span>                 :<span class="tlaGNC">          24 :         [](const score::cpp::blank&amp;) noexcept -&gt; ReturnType {</span></span>
-<span id="L289"><span class="lineNum">     289</span>                 :<span class="tlaGNC">           1 :             std::terminate();</span></span>
-<span id="L290"><span class="lineNum">     290</span>                 :<span class="tlaGNC">           1 :         });</span></span>
+<span id="L288"><span class="lineNum">     288</span>                 :<span class="tlaGNC tlaBgGNC">           4 :         [](const score::cpp::blank&amp;) noexcept -&gt; ReturnType {</span></span>
+<span id="L289"><span class="lineNum">     289</span>                 :<span class="tlaUNC tlaBgUNC">           0 :             std::terminate();</span></span>
+<span id="L290"><span class="lineNum">     290</span>                 :<span class="tlaUNC">           0 :         });</span></span>
 <span id="L291"><span class="lineNum">     291</span>                 :             : </span>
-<span id="L292"><span class="lineNum">     292</span>                 :<span class="tlaGNC">          24 :     return std::visit(visitor, internal_);</span></span>
-<span id="L293"><span class="lineNum">     293</span>                 :<span class="tlaGNC">          24 : }</span></span>
+<span id="L292"><span class="lineNum">     292</span>                 :<span class="tlaGNC tlaBgGNC">           4 :     return std::visit(visitor, internal_);</span></span>
+<span id="L293"><span class="lineNum">     293</span>                 :<span class="tlaGNC">           4 : }</span></span>
 <span id="L294"><span class="lineNum">     294</span>                 :             : </span>
 <span id="L295"><span class="lineNum">     295</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L296"><span class="lineNum">     296</span>                 :             : template &lt;typename T, typename std::enable_if&lt;!std::is_void&lt;T&gt;::value, int&gt;::type&gt;</span>
 <span id="L297"><span class="lineNum">     297</span>                 :             : auto SampleAllocateePtr&lt;SampleType&gt;::operator-&gt;() const noexcept -&gt; pointer</span>
-<span id="L298"><span class="lineNum">     298</span>                 :<span class="tlaGNC">           3 : {</span></span>
-<span id="L299"><span class="lineNum">     299</span>                 :<span class="tlaGNC">           3 :     using ReturnType = pointer;</span></span>
+<span id="L298"><span class="lineNum">     298</span>                 :             : {</span>
+<span id="L299"><span class="lineNum">     299</span>                 :             :     using ReturnType = pointer;</span>
 <span id="L300"><span class="lineNum">     300</span>                 :             : </span>
-<span id="L301"><span class="lineNum">     301</span>                 :<span class="tlaGNC">           3 :     auto visitor = score::cpp::overload(</span></span>
+<span id="L301"><span class="lineNum">     301</span>                 :             :     auto visitor = score::cpp::overload(</span>
 <span id="L302"><span class="lineNum">     302</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A7-1-7&quot; rule finding. This rule states: &quot;Each</span>
 <span id="L303"><span class="lineNum">     303</span>                 :             :         // expression statement and identifier declaration shall be placed on a</span>
 <span id="L304"><span class="lineNum">     304</span>                 :             :         // separate line.&quot;. Following line statement is fine, this happens due to</span>
 <span id="L305"><span class="lineNum">     305</span>                 :             :         // clang formatting.</span>
 <span id="L306"><span class="lineNum">     306</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L307"><span class="lineNum">     307</span>                 :<span class="tlaGNC">           3 :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
-<span id="L308"><span class="lineNum">     308</span>                 :<span class="tlaGNC">           1 :             return internal_ptr.get();</span></span>
-<span id="L309"><span class="lineNum">     309</span>                 :<span class="tlaGNC">           1 :         },</span></span>
+<span id="L307"><span class="lineNum">     307</span>                 :             :         [](const lola::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span>
+<span id="L308"><span class="lineNum">     308</span>                 :             :             return internal_ptr.get();</span>
+<span id="L309"><span class="lineNum">     309</span>                 :             :         },</span>
 <span id="L310"><span class="lineNum">     310</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A8-4-12&quot; rule finding. This rule states: &quot;A std::unique_ptr shall be passed to a</span>
 <span id="L311"><span class="lineNum">     311</span>                 :             :         // function as: (1) a copy to express the function assumes ownership (2) an lvalue reference to express that</span>
 <span id="L312"><span class="lineNum">     312</span>                 :             :         // the function replaces the managed object&quot;</span>
 <span id="L313"><span class="lineNum">     313</span>                 :             :         // This is a false positive, we here using lvalue reference.</span>
 <span id="L314"><span class="lineNum">     314</span>                 :             :         // coverity[autosar_cpp14_a8_4_12_violation : FALSE]</span>
 <span id="L315"><span class="lineNum">     315</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L316"><span class="lineNum">     316</span>                 :<span class="tlaGNC">           3 :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span></span>
-<span id="L317"><span class="lineNum">     317</span>                 :<span class="tlaGNC">           1 :             return internal_ptr.get();</span></span>
-<span id="L318"><span class="lineNum">     318</span>                 :<span class="tlaGNC">           1 :         },</span></span>
+<span id="L316"><span class="lineNum">     316</span>                 :             :         [](const mock_binding::SampleAllocateePtr&lt;SampleType&gt;&amp; internal_ptr) noexcept -&gt; ReturnType {</span>
+<span id="L317"><span class="lineNum">     317</span>                 :             :             return internal_ptr.get();</span>
+<span id="L318"><span class="lineNum">     318</span>                 :             :         },</span>
 <span id="L319"><span class="lineNum">     319</span>                 :             :         // coverity[autosar_cpp14_a7_1_7_violation]</span>
-<span id="L320"><span class="lineNum">     320</span>                 :<span class="tlaGNC">           3 :         [](const score::cpp::blank&amp;) noexcept -&gt; ReturnType {</span></span>
-<span id="L321"><span class="lineNum">     321</span>                 :<span class="tlaGNC">           1 :             std::terminate();</span></span>
-<span id="L322"><span class="lineNum">     322</span>                 :<span class="tlaGNC">           1 :         });</span></span>
+<span id="L320"><span class="lineNum">     320</span>                 :             :         [](const score::cpp::blank&amp;) noexcept -&gt; ReturnType {</span>
+<span id="L321"><span class="lineNum">     321</span>                 :             :             std::terminate();</span>
+<span id="L322"><span class="lineNum">     322</span>                 :             :         });</span>
 <span id="L323"><span class="lineNum">     323</span>                 :             : </span>
-<span id="L324"><span class="lineNum">     324</span>                 :<span class="tlaGNC">           3 :     return std::visit(visitor, internal_);</span></span>
-<span id="L325"><span class="lineNum">     325</span>                 :<span class="tlaGNC">           3 : }</span></span>
+<span id="L324"><span class="lineNum">     324</span>                 :             :     return std::visit(visitor, internal_);</span>
+<span id="L325"><span class="lineNum">     325</span>                 :             : }</span>
 <span id="L326"><span class="lineNum">     326</span>                 :             : </span>
 <span id="L327"><span class="lineNum">     327</span>                 :             : /// \brief Compares the pointer values of two SampleAllocateePtr, or a SampleAllocateePtr and nullptr</span>
 <span id="L328"><span class="lineNum">     328</span>                 :             : template &lt;class T1, class T2&gt;</span>
 <span id="L329"><span class="lineNum">     329</span>                 :             : bool operator==(const SampleAllocateePtr&lt;T1&gt;&amp; lhs, const SampleAllocateePtr&lt;T2&gt;&amp; rhs) noexcept</span>
-<span id="L330"><span class="lineNum">     330</span>                 :<span class="tlaGNC">           1 : {</span></span>
-<span id="L331"><span class="lineNum">     331</span>                 :<span class="tlaGNC">           1 :     return lhs.Get() == rhs.Get();</span></span>
-<span id="L332"><span class="lineNum">     332</span>                 :<span class="tlaGNC">           1 : }</span></span>
+<span id="L330"><span class="lineNum">     330</span>                 :             : {</span>
+<span id="L331"><span class="lineNum">     331</span>                 :             :     return lhs.Get() == rhs.Get();</span>
+<span id="L332"><span class="lineNum">     332</span>                 :             : }</span>
 <span id="L333"><span class="lineNum">     333</span>                 :             : </span>
 <span id="L334"><span class="lineNum">     334</span>                 :             : /// \brief Compares the pointer values of two SampleAllocateePtr, or a SampleAllocateePtr and nullptr</span>
 <span id="L335"><span class="lineNum">     335</span>                 :             : template &lt;class T1, class T2&gt;</span>
 <span id="L336"><span class="lineNum">     336</span>                 :             : bool operator!=(const SampleAllocateePtr&lt;T1&gt;&amp; lhs, const SampleAllocateePtr&lt;T2&gt;&amp; rhs) noexcept</span>
-<span id="L337"><span class="lineNum">     337</span>                 :<span class="tlaGNC">           1 : {</span></span>
-<span id="L338"><span class="lineNum">     338</span>                 :<span class="tlaGNC">           1 :     return lhs.Get() != rhs.Get();</span></span>
-<span id="L339"><span class="lineNum">     339</span>                 :<span class="tlaGNC">           1 : }</span></span>
+<span id="L337"><span class="lineNum">     337</span>                 :             : {</span>
+<span id="L338"><span class="lineNum">     338</span>                 :             :     return lhs.Get() != rhs.Get();</span>
+<span id="L339"><span class="lineNum">     339</span>                 :             : }</span>
 <span id="L340"><span class="lineNum">     340</span>                 :             : </span>
 <span id="L341"><span class="lineNum">     341</span>                 :             : /// \brief Specializes the std::swap algorithm for SampleAllocateePtr. Swaps the contents of lhs and rhs. Calls</span>
 <span id="L342"><span class="lineNum">     342</span>                 :             : /// lhs.swap(rhs)</span>
@@ -427,31 +427,31 @@
 <span id="L349"><span class="lineNum">     349</span>                 :             : /// \brief Helper function to create a SampleAllocateePtr within the middleware (not to be used by the user)</span>
 <span id="L350"><span class="lineNum">     350</span>                 :             : template &lt;typename T&gt;</span>
 <span id="L351"><span class="lineNum">     351</span>                 :             : auto MakeSampleAllocateePtr(T ptr) noexcept -&gt; SampleAllocateePtr&lt;typename T::element_type&gt;</span>
-<span id="L352"><span class="lineNum">     352</span>                 :<span class="tlaGNC">         137 : {</span></span>
-<span id="L353"><span class="lineNum">     353</span>                 :<span class="tlaGNC">         137 :     return SampleAllocateePtr&lt;typename T::element_type&gt;{std::move(ptr)};</span></span>
-<span id="L354"><span class="lineNum">     354</span>                 :<span class="tlaGNC">         137 : }</span></span>
+<span id="L352"><span class="lineNum">     352</span>                 :<span class="tlaGNC">           8 : {</span></span>
+<span id="L353"><span class="lineNum">     353</span>                 :<span class="tlaGNC">           8 :     return SampleAllocateePtr&lt;typename T::element_type&gt;{std::move(ptr)};</span></span>
+<span id="L354"><span class="lineNum">     354</span>                 :<span class="tlaGNC">           8 : }</span></span>
 <span id="L355"><span class="lineNum">     355</span>                 :             : </span>
 <span id="L356"><span class="lineNum">     356</span>                 :             : /// \brief SampleAllocateePtr is user facing, in order to interact with its internals we provide a view towards it</span>
 <span id="L357"><span class="lineNum">     357</span>                 :             : template &lt;typename SampleType&gt;</span>
 <span id="L358"><span class="lineNum">     358</span>                 :             : class SampleAllocateePtrView</span>
 <span id="L359"><span class="lineNum">     359</span>                 :             : {</span>
 <span id="L360"><span class="lineNum">     360</span>                 :             :   public:</span>
-<span id="L361"><span class="lineNum">     361</span>                 :<span class="tlaGNC">          44 :     explicit SampleAllocateePtrView(const SampleAllocateePtr&lt;SampleType&gt;&amp; ptr) : ptr_{ptr} {}</span></span>
+<span id="L361"><span class="lineNum">     361</span>                 :<span class="tlaGNC">           6 :     explicit SampleAllocateePtrView(const SampleAllocateePtr&lt;SampleType&gt;&amp; ptr) : ptr_{ptr} {}</span></span>
 <span id="L362"><span class="lineNum">     362</span>                 :             : </span>
 <span id="L363"><span class="lineNum">     363</span>                 :             :     /// \brief Interpret the binding independent SampleAllocateePtr as a binding specific one</span>
 <span id="L364"><span class="lineNum">     364</span>                 :             :     /// \return pointer to the underlying binding specific type, nullptr if this type is not the expected one</span>
 <span id="L365"><span class="lineNum">     365</span>                 :             :     template &lt;typename T&gt;</span>
 <span id="L366"><span class="lineNum">     366</span>                 :             :     const T* As() const noexcept</span>
-<span id="L367"><span class="lineNum">     367</span>                 :<span class="tlaGNC">          18 :     {</span></span>
-<span id="L368"><span class="lineNum">     368</span>                 :<span class="tlaGNC">          18 :         return std::get_if&lt;T&gt;(&amp;ptr_.internal_);</span></span>
-<span id="L369"><span class="lineNum">     369</span>                 :<span class="tlaGNC">          18 :     }</span></span>
+<span id="L367"><span class="lineNum">     367</span>                 :<span class="tlaGNC">           6 :     {</span></span>
+<span id="L368"><span class="lineNum">     368</span>                 :<span class="tlaGNC">           6 :         return std::get_if&lt;T&gt;(&amp;ptr_.internal_);</span></span>
+<span id="L369"><span class="lineNum">     369</span>                 :<span class="tlaGNC">           6 :     }</span></span>
 <span id="L370"><span class="lineNum">     370</span>                 :             : </span>
 <span id="L371"><span class="lineNum">     371</span>                 :             :     const std::</span>
 <span id="L372"><span class="lineNum">     372</span>                 :             :         variant&lt;score::cpp::blank, lola::SampleAllocateePtr&lt;SampleType&gt;, mock_binding::SampleAllocateePtr&lt;SampleType&gt;&gt;&amp;</span>
 <span id="L373"><span class="lineNum">     373</span>                 :             :         GetUnderlyingVariant() const noexcept</span>
-<span id="L374"><span class="lineNum">     374</span>                 :<span class="tlaGNC">          26 :     {</span></span>
-<span id="L375"><span class="lineNum">     375</span>                 :<span class="tlaGNC">          26 :         return ptr_.internal_;</span></span>
-<span id="L376"><span class="lineNum">     376</span>                 :<span class="tlaGNC">          26 :     }</span></span>
+<span id="L374"><span class="lineNum">     374</span>                 :             :     {</span>
+<span id="L375"><span class="lineNum">     375</span>                 :             :         return ptr_.internal_;</span>
+<span id="L376"><span class="lineNum">     376</span>                 :             :     }</span>
 <span id="L377"><span class="lineNum">     377</span>                 :             : </span>
 <span id="L378"><span class="lineNum">     378</span>                 :             :   private:</span>
 <span id="L379"><span class="lineNum">     379</span>                 :             :     const impl::SampleAllocateePtr&lt;SampleType&gt;&amp; ptr_;</span>
@@ -462,18 +462,18 @@
 <span id="L384"><span class="lineNum">     384</span>                 :             : class SampleAllocateePtrMutableView</span>
 <span id="L385"><span class="lineNum">     385</span>                 :             : {</span>
 <span id="L386"><span class="lineNum">     386</span>                 :             :   public:</span>
-<span id="L387"><span class="lineNum">     387</span>                 :<span class="tlaGNC">          22 :     explicit SampleAllocateePtrMutableView(SampleAllocateePtr&lt;SampleType&gt;&amp; ptr) : ptr_{ptr} {}</span></span>
+<span id="L387"><span class="lineNum">     387</span>                 :             :     explicit SampleAllocateePtrMutableView(SampleAllocateePtr&lt;SampleType&gt;&amp; ptr) : ptr_{ptr} {}</span>
 <span id="L388"><span class="lineNum">     388</span>                 :             : </span>
 <span id="L389"><span class="lineNum">     389</span>                 :             :     std::variant&lt;score::cpp::blank, lola::SampleAllocateePtr&lt;SampleType&gt;, mock_binding::SampleAllocateePtr&lt;SampleType&gt;&gt;&amp;</span>
 <span id="L390"><span class="lineNum">     390</span>                 :             :     GetUnderlyingVariant() noexcept</span>
-<span id="L391"><span class="lineNum">     391</span>                 :<span class="tlaGNC">          22 :     {</span></span>
+<span id="L391"><span class="lineNum">     391</span>                 :             :     {</span>
 <span id="L392"><span class="lineNum">     392</span>                 :             :         // Suppress &quot;AUTOSAR C++14 A9-3-1&quot;, The rule states: &quot;Member functions shall not return non-const “raw” pointers</span>
 <span id="L393"><span class="lineNum">     393</span>                 :             :         // or references to private or protected data owned by the class.&quot;. This method returns a reference to the</span>
 <span id="L394"><span class="lineNum">     394</span>                 :             :         // internal state of the class, which is essential for allowing users to interact directly with the variant type</span>
 <span id="L395"><span class="lineNum">     395</span>                 :             :         // without incurring unnecessary copies.</span>
 <span id="L396"><span class="lineNum">     396</span>                 :             :         // coverity[autosar_cpp14_a9_3_1_violation]</span>
-<span id="L397"><span class="lineNum">     397</span>                 :<span class="tlaGNC">          22 :         return ptr_.internal_;</span></span>
-<span id="L398"><span class="lineNum">     398</span>                 :<span class="tlaGNC">          22 :     }</span></span>
+<span id="L397"><span class="lineNum">     397</span>                 :             :         return ptr_.internal_;</span>
+<span id="L398"><span class="lineNum">     398</span>                 :             :     }</span>
 <span id="L399"><span class="lineNum">     399</span>                 :             : </span>
 <span id="L400"><span class="lineNum">     400</span>                 :             :   private:</span>
 <span id="L401"><span class="lineNum">     401</span>                 :             :     impl::SampleAllocateePtr&lt;SampleType&gt;&amp; ptr_;</span>

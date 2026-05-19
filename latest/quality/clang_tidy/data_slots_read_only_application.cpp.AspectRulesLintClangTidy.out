@@ -1,3 +1,17 @@
-9259 warnings generated.
-Suppressed 9423 warnings (9249 in non-user code, 164 NOLINT, 10 with check filters).
+20966 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/5179/execroot/_main/score/mw/com/test/data_slots_read_only/data_slots_read_only_application.cpp:21:1: warning: included header future is not used directly [misc-include-cleaner]
+   21 | #include <future>
+      | ^~~~~~~~~~~~~~~~~
+   22 | #include <iostream>
+/home/runner/.bazel/sandbox/linux-sandbox/5179/execroot/_main/score/mw/com/test/data_slots_read_only/data_slots_read_only_application.cpp:24:1: warning: included header utility is not used directly [misc-include-cleaner]
+   24 | #include <utility>
+      | ^~~~~~~~~~~~~~~~~~
+   25 | #include <vector>
+/home/runner/.bazel/sandbox/linux-sandbox/5179/execroot/_main/score/mw/com/test/data_slots_read_only/data_slots_read_only_application.cpp:67:21: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   23 |         score::cpp::ignore = event_sender_receiver.RunAsProxy(
+      |                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/5179/execroot/_main/score/mw/com/test/data_slots_read_only/data_slots_read_only_application.cpp:68:62: warning: no header providing "std::cref" is directly included [misc-include-cleaner]
+   21 |             instance_specifier, cycle_time, num_cycles, std::cref(stop_token), should_modify_data_segment);
+      |                                                              ^
+Suppressed 21127 warnings (20952 in non-user code, 165 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

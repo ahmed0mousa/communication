@@ -1,10 +1,69 @@
-9214 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4858/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:157:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
+21833 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:21:1: warning: included header filesystem is not used directly [misc-include-cleaner]
+   21 | #include <filesystem>
+      | ^~~~~~~~~~~~~~~~~~~~~
+   22 | #include <thread>
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:31:16: warning: no header providing "std::string_view" is directly included [misc-include-cleaner]
+   22 | #include <thread>
+   23 | 
+   24 | namespace score::mw::com::test
+   25 | {
+   26 | 
+   27 | namespace
+   28 | {
+   29 | 
+   30 | std::size_t gGetNewSamplesBenchmarkIndex{0};
+   31 | constexpr std::string_view kBenchmarkInstanceSpecifier = "test/lolabenchmark";
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:55:27: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   55 |         this->Repetitions(10);
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:81:9: warning: no header providing "SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD" is directly included [misc-include-cleaner]
+   22 |         SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(skeleton_result_.has_value());
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:82:26: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   23 |         skeleton_ = std::move(skeleton_result_.value());
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:96:23: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   96 |         proxy_ = std::move(proxy_result_.value());
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:102:45: warning: no header providing "score::cpp::stop_token" is directly included [misc-include-cleaner]
+   22 |     void MakeSenderThread(const score::cpp::stop_token stop_token)
+      |                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:102:56: warning: the const qualified parameter 'stop_token' is copied for each invocation; consider making it a reference [performance-unnecessary-value-param]
+  102 |     void MakeSenderThread(const score::cpp::stop_token stop_token)
+      |                                                        ^
+      |                                                       &
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:112:36: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  112 |                 auto sample = std::move(sample_alloc_result).value();
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:113:22: warning: no header providing "std::fill" is directly included [misc-include-cleaner]
+   18 |                 std::fill(sample->begin(), sample->end(), kConfig.fill_data);
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:114:22: warning: no header providing "std::ignore" is directly included [misc-include-cleaner]
+   23 |                 std::ignore = skeleton_->test_event.Send(std::move(sample));
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:114:63: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+  114 |                 std::ignore = skeleton_->test_event.Send(std::move(sample));
+      |                                                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:142:10: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   22 |     std::optional<TestDataSkeleton> skeleton_;
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:145:17: warning: no header providing "std::atomic" is directly included [misc-include-cleaner]
+   18 |     static std::atomic<bool> fixture_initialized_;
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:153:10: warning: no header providing "std::cout" is directly included [misc-include-cleaner]
+   22 |     std::cout << "GetNewSamples Run: " << gGetNewSamplesBenchmarkIndex++ << '\n';
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:154:17: warning: no header providing "score::cpp::stop_source" is directly included [misc-include-cleaner]
+  154 |     score::cpp::stop_source stopper{};
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:157:15: error: Value stored to '_' during its initialization is never read [clang-analyzer-deadcode.DeadStores,-warnings-as-errors]
   157 |     for (auto _ : state)
       |               ^ ~
-/home/runner/.bazel/sandbox/linux-sandbox/4858/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:157:15: note: Value stored to '_' during its initialization is never read
+/home/runner/.bazel/sandbox/linux-sandbox/4535/execroot/_main/score/mw/com/performance_benchmarks/api_microbenchmarks/lola_get_new_samples_benchmarks.cpp:157:15: note: Value stored to '_' during its initialization is never read
   157 |     for (auto _ : state)
       |               ^ ~
-Suppressed 9406 warnings (9203 in non-user code, 193 NOLINT, 10 with check filters).
+Suppressed 22010 warnings (21806 in non-user code, 194 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
 1 warning treated as error

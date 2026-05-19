@@ -1,3 +1,6 @@
-4804 warnings generated.
-Suppressed 4843 warnings (4798 in non-user code, 39 NOLINT, 6 with check filters).
+9483 warnings generated.
+./score/mw/com/impl/bindings/lola/messaging/node_identifier_copier.h:26:47: warning: 20 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   26 | using NodeIdTmpBufferType = std::array<pid_t, 20>;
+      |                                               ^
+Suppressed 9522 warnings (9476 in non-user code, 40 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

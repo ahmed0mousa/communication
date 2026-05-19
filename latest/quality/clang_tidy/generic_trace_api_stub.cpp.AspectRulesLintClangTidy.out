@@ -1,3 +1,101 @@
-5396 warnings generated.
-Suppressed 5463 warnings (5393 in non-user code, 67 NOLINT, 3 with check filters).
+10767 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:15:1: warning: nested namespaces can be concatenated [modernize-concat-nested-namespaces]
+   15 | namespace score
+      | ^~~~~~~~~~~~~~~
+   16 | {
+      | ~
+   17 | namespace analysis
+      | ~~~~~~~~~~~~~~~~~~
+   18 | {
+      | ~
+   19 | namespace tracing
+      | ~~~~~~~~~~~~~~~~~
+      | namespace score::analysis::tracing
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:22:1: warning: no header providing "score::analysis::tracing::ITraceLibrary" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score
+   16 | {
+   17 | namespace analysis
+   18 | {
+   19 | namespace tracing
+   20 | {
+   21 | 
+   22 | ITraceLibrary* GenericTraceAPI::gMock{nullptr};
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:24:1: warning: no header providing "score::analysis::tracing::RegisterClientResult" is directly included [misc-include-cleaner]
+   13 | #include "score/analysis/tracing/generic_trace_library/interface_types/generic_trace_api.h"
+   14 | 
+   15 | namespace score
+   16 | {
+   17 | namespace analysis
+   18 | {
+   19 | namespace tracing
+   20 | {
+   21 | 
+   22 | ITraceLibrary* GenericTraceAPI::gMock{nullptr};
+   23 | 
+   24 | RegisterClientResult GenericTraceAPI::RegisterClient(const BindingType type, const std::string& app_instance_identifier)
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:24:60: warning: no header providing "score::analysis::tracing::BindingType" is directly included [misc-include-cleaner]
+   24 | RegisterClientResult GenericTraceAPI::RegisterClient(const BindingType type, const std::string& app_instance_identifier)
+      |                                                            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:24:89: warning: no header providing "std::string" is directly included [misc-include-cleaner]
+   14 | 
+   15 | namespace score
+   16 | {
+   17 | namespace analysis
+   18 | {
+   19 | namespace tracing
+   20 | {
+   21 | 
+   22 | ITraceLibrary* GenericTraceAPI::gMock{nullptr};
+   23 | 
+   24 | RegisterClientResult GenericTraceAPI::RegisterClient(const BindingType type, const std::string& app_instance_identifier)
+      |                                                                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:30:24: warning: no header providing "score::analysis::tracing::TraceClientId" is directly included [misc-include-cleaner]
+   30 |     return static_cast<TraceClientId>(0);
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:33:1: warning: no header providing "score::analysis::tracing::RegisterSharedMemoryObjectResult" is directly included [misc-include-cleaner]
+   33 | RegisterSharedMemoryObjectResult GenericTraceAPI::RegisterShmObject(const TraceClientId client,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:40:12: warning: redundant explicit casting to the same type 'ShmObjectHandle' (aka 'int') as the sub-expression, remove this casting [readability-redundant-casting]
+   40 |     return static_cast<ShmObjectHandle>(0);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:40:24: warning: no header providing "score::analysis::tracing::ShmObjectHandle" is directly included [misc-include-cleaner]
+   40 |     return static_cast<ShmObjectHandle>(0);
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:44:80: warning: no header providing "std::int32_t" is directly included [misc-include-cleaner]
+   14 |                                                                     const std::int32_t shm_object_fd) noexcept
+      |                                                                                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:50:12: warning: redundant explicit casting to the same type 'ShmObjectHandle' (aka 'int') as the sub-expression, remove this casting [readability-redundant-casting]
+   50 |     return static_cast<ShmObjectHandle>(0);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:53:1: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   14 | Result<void> GenericTraceAPI::UnregisterShmObject(const TraceClientId client, const ShmObjectHandle handle)
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:62:1: warning: no header providing "score::analysis::tracing::RegisterTraceDoneCallBackResult" is directly included [misc-include-cleaner]
+   62 | RegisterTraceDoneCallBackResult GenericTraceAPI::RegisterTraceDoneCB(const TraceClientId client,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:63:70: warning: no header providing "score::analysis::tracing::TraceDoneCallBackType" is directly included [misc-include-cleaner]
+   63 |                                                                      TraceDoneCallBackType trace_done_callback)
+      |                                                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:67:56: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   14 |         return gMock->RegisterTraceDoneCB(client, std::move(trace_done_callback));
+      |                                                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:72:1: warning: no header providing "score::analysis::tracing::TraceResult" is directly included [misc-include-cleaner]
+   72 | TraceResult GenericTraceAPI::Trace(const TraceClientId client,
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:73:42: warning: no header providing "score::analysis::tracing::MetaInfoVariants" is directly included [misc-include-cleaner]
+   14 |                                    const MetaInfoVariants::Type& meta_info,
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:74:36: warning: no header providing "score::analysis::tracing::ShmDataChunkList" is directly included [misc-include-cleaner]
+   13 |                                    ShmDataChunkList& data,
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:75:36: warning: no header providing "score::analysis::tracing::TraceContextId" is directly included [misc-include-cleaner]
+   75 |                                    TraceContextId context_id)
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1291/execroot/_main/external/score_baselibs+/score/analysis/tracing/generic_trace_library/stub_implementation/generic_trace_api_stub.cpp:86:36: warning: no header providing "score::analysis::tracing::LocalDataChunkList" is directly included [misc-include-cleaner]
+   13 |                                    LocalDataChunkList& data) noexcept
+      |                                    ^
+Suppressed 10815 warnings (10744 in non-user code, 68 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

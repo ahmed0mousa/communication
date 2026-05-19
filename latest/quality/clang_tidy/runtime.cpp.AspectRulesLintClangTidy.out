@@ -1,3 +1,160 @@
-6678 warnings generated.
-Suppressed 6812 warnings (6672 in non-user code, 134 NOLINT, 6 with check filters).
+16137 warnings generated.
+./score/mw/com/impl/bindings/lola/element_fq_id.h:77:5: warning: function 'ToString' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   77 |     std::string ToString() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/element_fq_id.h:92:15: warning: use c++17 style variable templates [modernize-type-traits]
+   92 | static_assert(std::is_trivially_copyable<ElementFqId>::value,
+      |               ^                                      ~~~~~~~
+      |                                         _v
+./score/mw/com/impl/bindings/lola/element_fq_id.h:130:101: warning: 32U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  130 |         return std::hash<std::uint64_t>{}((static_cast<std::uint64_t>(element_fq_id.service_id_) << 32U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/element_fq_id.h:131:101: warning: 16U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  131 |                                           (static_cast<std::uint64_t>(element_fq_id.element_id_) << 16U) |
+      |                                                                                                     ^
+./score/mw/com/impl/bindings/lola/i_runtime.h:40:5: warning: function 'HasAsilBSupport' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   40 |     virtual bool HasAsilBSupport() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:43:5: warning: function 'GetShmSizeCalculationMode' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   43 |     virtual ShmSizeCalculationMode GetShmSizeCalculationMode() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:48:5: warning: function 'GetPid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   48 |     virtual pid_t GetPid() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_runtime.h:51:5: warning: function 'GetApplicationId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual GlobalConfiguration::ApplicationId GetApplicationId() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/service_discovery/known_instances_container.h:34:5: warning: function 'GetKnownHandles' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   34 |     auto GetKnownHandles(const EnrichedInstanceIdentifier& enriched_instance_identifier) const noexcept
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/service_discovery/known_instances_container.h:39:5: warning: function 'Empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   39 |     auto Empty() const noexcept -> bool;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/service_discovery/lola_service_instance_identifier.h:32:5: warning: function 'GetServiceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   32 |     LolaServiceId GetServiceId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/service_discovery/lola_service_instance_identifier.h:33:5: warning: function 'GetInstanceId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     std::optional<LolaServiceInstanceId::InstanceId> GetInstanceId() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:80:5: warning: function 'GetTraceClientId' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   80 |     analysis::tracing::TraceClientId GetTraceClientId() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:90:5: warning: function 'GetDataLossFlag' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   90 |     bool GetDataLossFlag() const noexcept override
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:103:5: warning: function 'GetShmObjectHandle' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  103 |     std::optional<analysis::tracing::ShmObjectHandle> GetShmObjectHandle(
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:107:5: warning: function 'GetShmRegionStartAddress' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  107 |     std::optional<void*> GetShmRegionStartAddress(const impl::tracing::ServiceElementInstanceIdentifierView&
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:115:5: warning: function 'GetCachedFileDescriptorForReregisteringShmObject' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  115 |     std::optional<std::pair<memory::shared::ISharedMemoryResource::FileDescriptor, void*>>
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/tracing/tracing_runtime.h:124:5: warning: function 'ConvertToTracingServiceInstanceElement' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  124 |     analysis::tracing::ServiceInstanceElement ConvertToTracingServiceInstanceElement(
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:39:6: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   19 | std::uint32_t Runtime::DetermineApplicationIdentifier(const Configuration& config) const noexcept
+      |      ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:39:61: warning: no header providing "score::mw::com::impl::Configuration" is directly included [misc-include-cleaner]
+   16 | std::uint32_t Runtime::DetermineApplicationIdentifier(const Configuration& config) const noexcept
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:47:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   47 |     else
+      |     ^~~~
+   48 |     {
+      |     ~
+   49 |         score::mw::log::LogInfo("lola") << "No explicit applicationID configured. Falling back to using process UID. "
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   50 |                                         << "Ensure unique UIDs for applications using mw::com.";
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   51 |         // The uid_t is only used internally (in the fallback case) and then casted to an std::uint32_t
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   52 |         static_assert(sizeof(uid_t) <= 4, "For more than 32 bits we cannot guarantee the key to be unique");
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   53 |         return static_cast<std::uint32_t>(os::Unistd::instance().getuid());
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   54 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:52:30: warning: no header providing "uid_t" is directly included [misc-include-cleaner]
+   24 |         static_assert(sizeof(uid_t) <= 4, "For more than 32 bits we cannot guarantee the key to be unique");
+      |                              ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:53:16: warning: redundant explicit casting to the same type 'std::uint32_t' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   53 |         return static_cast<std::uint32_t>(os::Unistd::instance().getuid());
+      |                ^
+external/score_baselibs+/score/os/unistd.h:93:19: note: source type originates from the invocation of this method
+   93 |     virtual uid_t getuid() const noexcept = 0;
+      |             ~~~~~ ^
+note: this fix will not be applied because it overlaps with another fix
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:58:31: warning: no header providing "score::concurrency::Executor" is directly included [misc-include-cleaner]
+   15 |                  concurrency::Executor& long_running_threads,
+      |                               ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:59:23: warning: no header providing "std::unique_ptr" is directly included [misc-include-cleaner]
+   19 |                  std::unique_ptr<lola::tracing::TracingRuntime> lola_tracing_runtime)
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:59:49: warning: no header providing "score::mw::com::impl::lola::tracing::TracingRuntime" is directly included [misc-include-cleaner]
+   16 |                  std::unique_ptr<lola::tracing::TracingRuntime> lola_tracing_runtime)
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:60:7: warning: no header providing "score::mw::com::impl::lola::IRuntime" is directly included [misc-include-cleaner]
+   16 |     : IRuntime{},
+      |       ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:65:61: warning: no header providing "score::mw::com::impl::QualityType" is directly included [misc-include-cleaner]
+   16 |                               Runtime::GetMessagePassingCfg(QualityType::kASIL_QM),
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:68:42: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   19 |                                   ? std::optional<AsilSpecificCfg>{Runtime::GetMessagePassingCfg(QualityType::kASIL_B)}
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:68:51: warning: no header providing "score::mw::com::impl::lola::AsilSpecificCfg" is directly included [misc-include-cleaner]
+   16 |                                   ? std::optional<AsilSpecificCfg>{Runtime::GetMessagePassingCfg(QualityType::kASIL_B)}
+      |                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:69:42: warning: no header providing "std::nullopt" is directly included [misc-include-cleaner]
+   69 |                                   : std::nullopt,
+      |                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:70:36: warning: no header providing "std::make_unique" is directly included [misc-include-cleaner]
+   70 |                               std::make_unique<MessagePassingServiceInstanceFactory>()},
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:72:29: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   25 |       tracing_runtime_{std::move(lola_tracing_runtime)},
+      |                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:82:1: warning: no header providing "score::mw::com::impl::BindingType" is directly included [misc-include-cleaner]
+   16 | BindingType Runtime::GetBindingType() const noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:87:1: warning: no header providing "score::mw::com::impl::lola::IMessagePassingService" is directly included [misc-include-cleaner]
+   16 | IMessagePassingService& Runtime::GetLolaMessaging() noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:104:16: warning: no header providing "score::mw::com::impl::tracing::IBindingTracingRuntime" is directly included [misc-include-cleaner]
+   16 | impl::tracing::IBindingTracingRuntime* Runtime::GetTracingRuntime() noexcept
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:126:18: warning: no header providing "std::get_if" is directly included [misc-include-cleaner]
+   25 |             std::get_if<LolaServiceInstanceDeployment>(&instanceDeplElement.second.bindingInfo_);
+      |                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:126:25: warning: no header providing "score::mw::com::impl::LolaServiceInstanceDeployment" is directly included [misc-include-cleaner]
+   16 |             std::get_if<LolaServiceInstanceDeployment>(&instanceDeplElement.second.bindingInfo_);
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:166:1: warning: no header providing "score::mw::com::impl::ShmSizeCalculationMode" is directly included [misc-include-cleaner]
+   16 | ShmSizeCalculationMode Runtime::GetShmSizeCalculationMode() const noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:171:1: warning: no header providing "score::mw::com::impl::IServiceDiscoveryClient" is directly included [misc-include-cleaner]
+   16 | IServiceDiscoveryClient& Runtime::GetServiceDiscoveryClient() noexcept
+      | ^
+/home/runner/.bazel/sandbox/linux-sandbox/3968/execroot/_main/score/mw/com/impl/bindings/lola/runtime.cpp:194:1: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+  194 | pid_t Runtime::GetPid() const noexcept
+      | ^
+Suppressed 16231 warnings (16090 in non-user code, 135 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

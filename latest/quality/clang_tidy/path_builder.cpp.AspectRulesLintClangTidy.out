@@ -1,3 +1,41 @@
-4995 warnings generated.
-Suppressed 5034 warnings (4989 in non-user code, 39 NOLINT, 6 with check filters).
+9732 warnings generated.
+./score/mw/com/impl/bindings/lola/path_builder.h:44:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+   44 |     else
+      |     ^~~~
+   45 |     {
+      |     ~
+   46 |         return std::nullopt;
+      |         ~~~~~~~~~~~~~~~~~~~~
+   47 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/870/execroot/_main/score/mw/com/impl/bindings/lola/path_builder.cpp:16:1: warning: included header string is not used directly [misc-include-cleaner]
+   16 | #include <string>
+      | ^~~~~~~~~~~~~~~~~
+   17 | 
+/home/runner/.bazel/sandbox/linux-sandbox/870/execroot/_main/score/mw/com/impl/bindings/lola/path_builder.cpp:24:20: warning: no header providing "score::mw::com::impl::LolaServiceInstanceId" is directly included [misc-include-cleaner]
+   14 | 
+   15 | #include <iomanip>
+   16 | #include <string>
+   17 | 
+   18 | namespace score::mw::com::impl::lola
+   19 | {
+   20 | 
+   21 | namespace
+   22 | {
+   23 | 
+   24 | using InstanceId = LolaServiceInstanceId::InstanceId;
+      |                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/870/execroot/_main/score/mw/com/impl/bindings/lola/path_builder.cpp:34:36: warning: no header providing "std::ostream" is directly included [misc-include-cleaner]
+   16 | void AppendServiceAndInstance(std::ostream& out, const std::uint16_t service_id, const InstanceId instance_id) noexcept
+      |                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/870/execroot/_main/score/mw/com/impl/bindings/lola/path_builder.cpp:34:61: warning: no header providing "std::uint16_t" is directly included [misc-include-cleaner]
+   15 | void AppendServiceAndInstance(std::ostream& out, const std::uint16_t service_id, const InstanceId instance_id) noexcept
+      |                                                             ^
+/home/runner/.bazel/sandbox/linux-sandbox/870/execroot/_main/score/mw/com/impl/bindings/lola/path_builder.cpp:42:43: warning: 16 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   42 |     out << std::setfill('0') << std::setw(16) << service_id << '-';
+      |                                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/870/execroot/_main/score/mw/com/impl/bindings/lola/path_builder.cpp:47:22: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   47 |     out << std::setw(5) << instance_id;
+      |                      ^
+Suppressed 9765 warnings (9719 in non-user code, 40 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

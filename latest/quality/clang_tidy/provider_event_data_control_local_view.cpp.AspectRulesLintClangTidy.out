@@ -1,7 +1,67 @@
-5063 warnings generated.
+9847 warnings generated.
+./score/mw/com/impl/bindings/lola/event_slot_status.h:61:5: warning: function 'IsInvalid' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   61 |     bool IsInvalid() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:62:5: warning: function 'IsInWriting' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   62 |     bool IsInWriting() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:67:5: warning: function 'GetReferenceCount' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     SubscriberCount GetReferenceCount() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:68:5: warning: function 'GetTimeStamp' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   68 |     EventTimeStamp GetTimeStamp() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:76:5: warning: function 'IsUsed' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   76 |     bool IsUsed() const noexcept;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/event_slot_status.h:83:5: warning: function 'IsTimeStampBetween' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   83 |     bool IsTimeStampBetween(const EventTimeStamp min_timestamp, const EventTimeStamp max_timestamp) const noexcept;
+      |     ^
+      |     [[nodiscard]] 
 ./score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.h:62:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
    62 |     ProviderEventDataControlLocalView(EventDataControl& event_data_control) noexcept;
       |     ^
       |     explicit 
-Suppressed 5118 warnings (5059 in non-user code, 56 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:35:5: warning: no header providing "score::mw::com::impl::lola::EventDataControl" is directly included [misc-include-cleaner]
+   16 |     EventDataControl& event_data_control) noexcept
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:47:13: warning: no header providing "std::optional" is directly included [misc-include-cleaner]
+   18 |     -> std::optional<SlotIndexType>
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:49:10: warning: no header providing "std::uint64_t" is directly included [misc-include-cleaner]
+   18 |     std::uint64_t retry_counter{0U};
+      |          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:96:43: warning: redundant explicit casting to the same type 'EventSlotStatus::SubscriberCount' (aka 'unsigned int') as the sub-expression, remove this casting [readability-redundant-casting]
+   96 |             status.GetReferenceCount() != static_cast<EventSlotStatus::SubscriberCount>(0U);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:112:58: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   18 |     SCORE_LANGUAGE_FUTURECPP_ASSERT_PRD(static_cast<std::size_t>(slot_info.slot_index) < state_slots_.size());
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:201:17: warning: redundant boolean literal supplied to boolean operator [readability-simplify-boolean-expr]
+  200 |             if (slot.compare_exchange_strong(status_value_type, status_new_value_type, std::memory_order_acq_rel) ==
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 !slot.compare_exchange_strong(status_value_type, status_new_value_type, std::memory_order_acq_rel)
+  201 |                 false)
+      |                 ^~~~~
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:205:22: warning: no header providing "std::terminate" is directly included [misc-include-cleaner]
+   18 |                 std::terminate();
+      |                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:229:17: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   22 |     score::cpp::ignore = num_alloc_retries.fetch_add(retry_counter);
+      |                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:231:27: warning: 100U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  231 |     if ((retry_counter >= 100U))
+      |                           ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:244:66: warning: no header providing "score::memory::shared::AtomicIndirectorReal" is directly included [misc-include-cleaner]
+   15 | template class ProviderEventDataControlLocalView<memory::shared::AtomicIndirectorReal>;
+      |                                                                  ^
+/home/runner/.bazel/sandbox/linux-sandbox/1324/execroot/_main/score/mw/com/impl/bindings/lola/provider_event_data_control_local_view.cpp:245:66: warning: no header providing "score::memory::shared::AtomicIndirectorMock" is directly included [misc-include-cleaner]
+  245 | template class ProviderEventDataControlLocalView<memory::shared::AtomicIndirectorMock>;
+      |                                                                  ^
+Suppressed 9884 warnings (9824 in non-user code, 57 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

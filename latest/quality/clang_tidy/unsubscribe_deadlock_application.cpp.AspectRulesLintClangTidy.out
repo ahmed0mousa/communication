@@ -1,6 +1,80 @@
-9213 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/4769/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:67:9: warning: std::move of the const variable 'instance_specifier' has no effect; remove std::move() or make the variable non-const [hicpp-move-const-arg]
+21790 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:27:1: warning: included header chrono is not used directly [misc-include-cleaner]
+   27 | #include <chrono>
+      | ^~~~~~~~~~~~~~~~~
+   28 | #include <future>
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:34:6: warning: function 'CreateAndOfferSkeleton' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   34 | void CreateAndOfferSkeleton(const score::mw::com::InstanceSpecifier& instance_specifier, std::atomic_bool& success_flag)
+      |      ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:36:15: warning: no header providing "std::size_t" is directly included [misc-include-cleaner]
+   23 | #include <score/jthread.hpp>
+   24 | #include <score/stop_token.hpp>
+   25 | 
+   26 | #include <atomic>
+   27 | #include <chrono>
+   28 | #include <future>
+   29 | #include <iostream>
+   30 | #include <thread>
+   31 | 
+   32 | const score::mw::com::test::MapApiLanesStamped kEvent_sample{};
+   33 | 
+   34 | void CreateAndOfferSkeleton(const score::mw::com::InstanceSpecifier& instance_specifier, std::atomic_bool& success_flag)
+   35 | {
+   36 |     for (std::size_t j = 0; j < 10; ++j)
+      |               ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:36:33: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   36 |     for (std::size_t j = 0; j < 10; ++j)
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:57:8: warning: no header providing "score::Result" is directly included [misc-include-cleaner]
+   22 | score::Result<score::mw::com::test::BigDataProxy> CreateProxy(
+      |        ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:57:51: warning: function 'CreateProxy' can be made static or moved into an anonymous namespace to enforce internal linkage [misc-use-internal-linkage]
+   57 | score::Result<score::mw::com::test::BigDataProxy> CreateProxy(
+      |                                                   ^
+      | static 
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:60:23: warning: no header providing "std::vector" is directly included [misc-include-cleaner]
+   31 |     std::promise<std::vector<score::mw::com::test::BigDataProxy::HandleType>> service_discovery_promise{};
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:63:49: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   31 |         [moved_service_discovery_promise = std::move(service_discovery_promise)](auto handles, auto handle) mutable {
+      |                                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:63:87: warning: the parameter 'handles' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]
+   63 |         [moved_service_discovery_promise = std::move(service_discovery_promise)](auto handles, auto handle) mutable {
+      |                                                                                       ^
+      |                                                                                  const  &
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:65:25: warning: no header providing "score::cpp::ignore" is directly included [misc-include-cleaner]
+   30 |             score::cpp::ignore = score::mw::com::test::BigDataProxy::StopFindService(handle);
+      |                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:67:9: warning: std::move of the const variable 'instance_specifier' has no effect; remove std::move() or make the variable non-const [hicpp-move-const-arg,performance-move-const-arg]
    67 |         std::move(instance_specifier));
       |         ^~~~~~~~~~                  ~
-Suppressed 9404 warnings (9201 in non-user code, 193 NOLINT, 10 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:67:14: warning: no header providing "std::move" is directly included [misc-include-cleaner]
+   67 |         std::move(instance_specifier));
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:72:23: warning: no header providing "score::MakeUnexpected" is directly included [misc-include-cleaner]
+   72 |         return score::MakeUnexpected<score::mw::com::test::BigDataProxy>(handles_result.error());
+      |                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:81:35: warning: no header providing "score::mw::com::impl::MakeError" is directly included [misc-include-cleaner]
+   17 |             score::mw::com::impl::MakeError(score::mw::com::impl::ComErrc::kServiceNotAvailable));
+      |                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:81:67: warning: no header providing "score::mw::com::impl::ComErrc" is directly included [misc-include-cleaner]
+   81 |             score::mw::com::impl::MakeError(score::mw::com::impl::ComErrc::kServiceNotAvailable));
+      |                                                                   ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:113:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   23 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:198:37: warning: 5000ms is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  198 |         std::this_thread::sleep_for(5000ms);
+      |                                     ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:198:41: warning: no header providing "std::operator""ms" is directly included [misc-include-cleaner]
+   23 |         std::this_thread::sleep_for(5000ms);
+      |                                         ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:208:33: warning: 2000ms is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  208 |     std::this_thread::sleep_for(2000ms);
+      |                                 ^
+/home/runner/.bazel/sandbox/linux-sandbox/4703/execroot/_main/score/mw/com/test/unsubscribe_deadlock/unsubscribe_deadlock_application.cpp:213:12: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+  213 |     return EXIT_SUCCESS;
+      |            ^
+Suppressed 21961 warnings (21757 in non-user code, 194 NOLINT, 10 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

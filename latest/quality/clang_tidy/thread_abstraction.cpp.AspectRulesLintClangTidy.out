@@ -1,3 +1,17 @@
-4444 warnings generated.
-Suppressed 4444 warnings (4441 in non-user code, 3 with check filters).
+7536 warnings generated.
+./score/mw/com/impl/bindings/lola/messaging/thread_abstraction.h:33:5: warning: function 'hardware_concurrency' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   33 |     virtual std::uint32_t hardware_concurrency() const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+/home/runner/.bazel/sandbox/linux-sandbox/923/execroot/_main/score/mw/com/impl/bindings/lola/messaging/thread_abstraction.cpp:22:6: warning: no header providing "std::uint32_t" is directly included [misc-include-cleaner]
+   15 | #include <thread>
+   16 | 
+   17 | namespace score::mw::com::impl::lola
+   18 | {
+   19 | 
+   20 | const ThreadHWConcurrencyIfc* ThreadHWConcurrency::mock_ = nullptr;
+   21 | 
+   22 | std::uint32_t ThreadHWConcurrency::hardware_concurrency() noexcept
+      |      ^
+Suppressed 7535 warnings (7531 in non-user code, 1 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

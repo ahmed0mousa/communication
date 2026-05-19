@@ -1,3 +1,15 @@
-4038 warnings generated.
-Suppressed 4050 warnings (4035 in non-user code, 12 NOLINT, 3 with check filters).
+7093 warnings generated.
+./score/message_passing/log/log.h:28:29: warning: use c++14 style type templates [modernize-type-traits]
+   28 | template <class T, typename std::enable_if<std::is_unsigned_v<T>, bool>::type = true>
+      |                    ~~~~~~~~ ^                                          ~~~~~~
+      |                                           _t
+./score/message_passing/log/log.h:34:29: warning: use c++14 style type templates [modernize-type-traits]
+   34 | template <class T, typename std::enable_if<std::is_signed_v<T>, bool>::type = true>
+      |                    ~~~~~~~~ ^                                        ~~~~~~
+      |                                           _t
+./score/message_passing/log/log.h:40:29: warning: use c++14 style type templates [modernize-type-traits]
+   40 | template <class T, typename std::enable_if<!std::is_same_v<T, const char>, bool>::type = true>
+      |                    ~~~~~~~~ ^                                                   ~~~~~~
+      |                                           _t
+Suppressed 7103 warnings (7087 in non-user code, 13 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

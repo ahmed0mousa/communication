@@ -1,46 +1,113 @@
-5343 warnings generated.
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:21:10: warning: inclusion of deprecated C++ header 'signal.h'; consider using 'csignal' instead [modernize-deprecated-headers]
+9796 warnings generated.
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:14:1: warning: included header filesystem.h is not used directly [misc-include-cleaner]
+   14 | #include "score/filesystem/filesystem.h"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   15 | #include "score/memory/shared/flock/exclusive_flock_mutex.h"
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:21:10: warning: inclusion of deprecated C++ header 'signal.h'; consider using 'csignal' instead [modernize-deprecated-headers]
    21 | #include <signal.h>
       |          ^~~~~~~~~~
       |          <csignal>
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:51:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:51:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
    51 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:53:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:53:5: warning: no header providing "FILE" is directly included [misc-include-cleaner]
+   19 |     FILE* stream;
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:53:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
    53 |     FILE* stream;
       |           ^     
       |                  = nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:121:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:54:14: warning: no header providing "fdopen" is directly included [misc-include-cleaner]
+   20 |     stream = fdopen(fd_to_write_to, "w");
+      |              ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:61:24: warning: no header providing "score::filesystem::StandardFilesystem" is directly included [misc-include-cleaner]
+   14 |     score::filesystem::StandardFilesystem fs;
+      |                        ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:95:9: warning: no header providing "fputc" is directly included [misc-include-cleaner]
+   95 |     if (fputc(kChildDone, stream) == EOF)
+      |         ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:95:38: warning: no header providing "EOF" is directly included [misc-include-cleaner]
+   95 |     if (fputc(kChildDone, stream) == EOF)
+      |                                      ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:100:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  100 |     else
+      |     ^~~~
+  101 |     {
+      |     ~
+  102 |         std::cout << "Child: Informed parent/controller, that I'm done!" << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  103 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:104:5: warning: no header providing "fflush" is directly included [misc-include-cleaner]
+  104 |     fflush(stream);
+      |     ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:110:58: warning: 5U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  110 |         std::this_thread::sleep_for(std::chrono::seconds{5U});
+      |                                                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:121:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   121 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:158:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:127:16: warning: no header providing "EXIT_FAILURE" is directly included [misc-include-cleaner]
+   19 |         return EXIT_FAILURE;
+      |                ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:145:5: warning: do not use 'else' after 'return' [readability-else-after-return]
+  145 |     else
+      |     ^~~~
+  146 |     {
+      |     ~
+  147 |         std::cout << "Controller: SUCCESS - could NOT exclusively lock an already shared-locked file!" << std::endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  148 |     }
+      |     ~
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:149:12: warning: no header providing "EXIT_SUCCESS" is directly included [misc-include-cleaner]
+  149 |     return EXIT_SUCCESS;
+      |            ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:158:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   158 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:194:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:194:5: warning: do not use namespace using-directives; use using-declarations instead [google-build-using-namespace]
   194 |     using namespace score::memory::shared;
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:25: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:25: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
   235 |     auto fcntl_result = fcntl(fd_to_read_from, F_SETFL, fcntl(fd_to_read_from, F_GETFL) | O_NONBLOCK);
       |                         ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
   235 |     auto fcntl_result = fcntl(fd_to_read_from, F_SETFL, fcntl(fd_to_read_from, F_GETFL) | O_NONBLOCK);
       |                                                         ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:235:57: warning: use of a signed integer operand with a binary bitwise operator [hicpp-signed-bitwise]
   235 |     auto fcntl_result = fcntl(fd_to_read_from, F_SETFL, fcntl(fd_to_read_from, F_GETFL) | O_NONBLOCK);
       |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:243:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:238:84: warning: no header providing "errno" is directly included [misc-include-cleaner]
+   19 |         std::cerr << "Controller: Error changing pipe to O_NONBLOCK: " << strerror(errno) << ", terminating."
+      |                                                                                    ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:243:11: warning: variable 'stream' is not initialized [cppcoreguidelines-init-variables]
   243 |     FILE* stream;
       |           ^     
       |                  = nullptr
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:244:9: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:244:9: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
   244 |     int c;
       |         ^
       |           = 0
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:292:5: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:252:26: warning: 10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  252 |     for (auto i = 0; i < 10; ++i)
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:254:13: warning: no header providing "fgetc" is directly included [misc-include-cleaner]
+  254 |         c = fgetc(stream);
+      |             ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:257:26: warning: no header providing "EAGAIN" is directly included [misc-include-cleaner]
+  257 |             if (errno == EAGAIN)
+      |                          ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:262:71: warning: 100U is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+  262 |                 std::this_thread::sleep_for(std::chrono::milliseconds{100U});
+      |                                                                       ^
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:292:5: warning: do not declare C-style arrays, use std::array<> instead [modernize-avoid-c-arrays]
   292 |     int client_pipe_fds[2];
       |     ^
-/home/runner/.bazel/sandbox/linux-sandbox/1333/execroot/_main/score/mw/com/test/flock/flock_test.cpp:293:14: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:293:14: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay,hicpp-no-array-decay]
   293 |     if (pipe(client_pipe_fds) != 0)
       |              ^
-Suppressed 5378 warnings (5326 in non-user code, 49 NOLINT, 3 with check filters).
+/home/runner/.bazel/sandbox/linux-sandbox/1226/execroot/_main/score/mw/com/test/flock/flock_test.cpp:300:11: warning: no header providing "pid_t" is directly included [misc-include-cleaner]
+   20 |     const pid_t fork_child_pid = fork();
+      |           ^
+Suppressed 9814 warnings (9761 in non-user code, 50 NOLINT, 3 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

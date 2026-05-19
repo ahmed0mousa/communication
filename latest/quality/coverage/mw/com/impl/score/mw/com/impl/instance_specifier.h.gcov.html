@@ -31,18 +31,18 @@
             <td class="headerValue">_coverage_report.dat</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-05-18 06:46:17</td>
+            <td class="headerValue">2026-05-19 03:03:17</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
-            <td class="headerCovTableEntry">7</td>
-            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">0</td>
           </tr>
           <tr>
             <td class="headerItem">Legend:</td>
@@ -140,12 +140,12 @@
 <span id="L62"><span class="lineNum">      62</span>                 :             :         &quot;Please use Create(std::string&amp;&amp;) instead for better performance&quot;</span>
 <span id="L63"><span class="lineNum">      63</span>                 :             :         &quot;The API will be removed from November 2025. A ticket is already created to track the removal: Ticket-214582&quot;)]]</span>
 <span id="L64"><span class="lineNum">      64</span>                 :             :     static score::Result&lt;InstanceSpecifier&gt; Create(T&amp;&amp; shortname_path) noexcept</span>
-<span id="L65"><span class="lineNum">      65</span>                 :<span class="tlaGNC tlaBgGNC">           6 :     {</span></span>
-<span id="L66"><span class="lineNum">      66</span>                 :<span class="tlaGNC">           6 :         static_assert(std::is_same_v&lt;std::decay_t&lt;T&gt;, std::string_view&gt; ||</span></span>
-<span id="L67"><span class="lineNum">      67</span>                 :<span class="tlaGNC">           6 :                           std::is_constructible_v&lt;std::string_view, std::decay_t&lt;T&gt;&gt;,</span></span>
-<span id="L68"><span class="lineNum">      68</span>                 :<span class="tlaGNC">           6 :                       &quot;Parameter must be convertible to std::string_view&quot;);</span></span>
-<span id="L69"><span class="lineNum">      69</span>                 :<span class="tlaGNC">           6 :         return Create(std::string{shortname_path});</span></span>
-<span id="L70"><span class="lineNum">      70</span>                 :<span class="tlaGNC">           6 :     }</span></span>
+<span id="L65"><span class="lineNum">      65</span>                 :             :     {</span>
+<span id="L66"><span class="lineNum">      66</span>                 :             :         static_assert(std::is_same_v&lt;std::decay_t&lt;T&gt;, std::string_view&gt; ||</span>
+<span id="L67"><span class="lineNum">      67</span>                 :             :                           std::is_constructible_v&lt;std::string_view, std::decay_t&lt;T&gt;&gt;,</span>
+<span id="L68"><span class="lineNum">      68</span>                 :             :                       &quot;Parameter must be convertible to std::string_view&quot;);</span>
+<span id="L69"><span class="lineNum">      69</span>                 :             :         return Create(std::string{shortname_path});</span>
+<span id="L70"><span class="lineNum">      70</span>                 :             :     }</span>
 <span id="L71"><span class="lineNum">      71</span>                 :             : </span>
 <span id="L72"><span class="lineNum">      72</span>                 :             :     /**</span>
 <span id="L73"><span class="lineNum">      73</span>                 :             :      * \api</span>
@@ -184,9 +184,9 @@
 <span id="L106"><span class="lineNum">     106</span>                 :             : {</span>
 <span id="L107"><span class="lineNum">     107</span>                 :             :   public:</span>
 <span id="L108"><span class="lineNum">     108</span>                 :             :     std::size_t operator()(const score::mw::com::impl::InstanceSpecifier&amp; instance_specifier) const noexcept</span>
-<span id="L109"><span class="lineNum">     109</span>                 :<span class="tlaGNC">         749 :     {</span></span>
-<span id="L110"><span class="lineNum">     110</span>                 :<span class="tlaGNC">         749 :         return std::hash&lt;std::string&gt;{}(instance_specifier.instance_specifier_string_);</span></span>
-<span id="L111"><span class="lineNum">     111</span>                 :<span class="tlaGNC">         749 :     }</span></span>
+<span id="L109"><span class="lineNum">     109</span>                 :<span class="tlaUNC tlaBgUNC">           0 :     {</span></span>
+<span id="L110"><span class="lineNum">     110</span>                 :<span class="tlaUNC">           0 :         return std::hash&lt;std::string&gt;{}(instance_specifier.instance_specifier_string_);</span></span>
+<span id="L111"><span class="lineNum">     111</span>                 :<span class="tlaUNC">           0 :     }</span></span>
 <span id="L112"><span class="lineNum">     112</span>                 :             : };</span>
 <span id="L113"><span class="lineNum">     113</span>                 :             : </span>
 <span id="L114"><span class="lineNum">     114</span>                 :             : }  // namespace std</span>

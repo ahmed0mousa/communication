@@ -1,3 +1,19 @@
-8536 warnings generated.
-Suppressed 8670 warnings (8528 in non-user code, 134 NOLINT, 8 with check filters).
+18226 warnings generated.
+./score/mw/com/impl/plumbing/proxy_method_binding_factory.h:49:34: warning: parameter 'parent_handle' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   25 |         return instance().Create(parent_handle, parent_binding, method_name, method_type);
+      |                                  ^            
+      |                                  std::move(   )
+./score/mw/com/impl/plumbing/proxy_method_binding_factory_impl.h:88:22: warning: parameter 'parent_handle' is passed by value and only copied once; consider moving it to avoid unnecessary copies [performance-unnecessary-value-param]
+   37 |         GetQueueSize(parent_handle, method_name_str, method_type);
+      |                      ^            
+      |                      std::move(   )
+./score/mw/com/impl/plumbing/sample_ptr.h:133:46: warning: use c++14 style type templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                     ~~~~~~~~ ^                                            ~~~~~~
+      |                                                            _t
+./score/mw/com/impl/plumbing/sample_ptr.h:133:62: warning: use c++17 style variable templates [modernize-type-traits]
+  133 |     template <class T = SampleType, typename std::enable_if<!std::is_same<T, void>::value>::type* = nullptr>
+      |                                                              ^                    ~~~~~~~
+      |                                                                          _v
+Suppressed 18357 warnings (18214 in non-user code, 135 NOLINT, 8 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

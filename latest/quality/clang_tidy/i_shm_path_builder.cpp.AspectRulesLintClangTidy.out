@@ -1,3 +1,15 @@
-4980 warnings generated.
-Suppressed 5029 warnings (4974 in non-user code, 49 NOLINT, 6 with check filters).
+9935 warnings generated.
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:51:5: warning: function 'GetDataChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   51 |     virtual std::string GetDataChannelShmName(const LolaServiceInstanceId::InstanceId instance_id) const noexcept = 0;
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:57:5: warning: function 'GetControlChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   57 |     virtual std::string GetControlChannelShmName(const LolaServiceInstanceId::InstanceId instance_id,
+      |     ^
+      |     [[nodiscard]] 
+./score/mw/com/impl/bindings/lola/i_shm_path_builder.h:67:5: warning: function 'GetMethodChannelShmName' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   67 |     virtual std::string GetMethodChannelShmName(
+      |     ^
+      |     [[nodiscard]] 
+Suppressed 9982 warnings (9926 in non-user code, 50 NOLINT, 6 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
