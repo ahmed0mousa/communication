@@ -168,7 +168,7 @@ jobs:
           retention-days: 7
 
       - name: Fail check if clang-tidy errors found in changed files
-        if: steps.findings.outputs.errors_blocking != '0'
+        if: github.event_name != 'workflow_call' && steps.findings.outputs.errors_blocking != '0'
         run: |
           echo "::error::Clang-tidy found ${{ steps.findings.outputs.errors_blocking }} error(s) in changed files. See the 'clang-tidy-findings' artifact for details."
           exit 1

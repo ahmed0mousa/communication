@@ -135,7 +135,7 @@ def load_clang_tidy(path: pathlib.Path) -> dict | None:
     return {"errors": errors, "warnings": warnings, "total": errors + warnings}
 
 
-
+def load_history(path: pathlib.Path) -> list[dict]:
     if not path or not path.exists():
         return []
     try:

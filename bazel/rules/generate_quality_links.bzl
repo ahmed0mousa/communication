@@ -60,7 +60,7 @@ def _generate_quality_links_impl(ctx):
             "*local build* — dashboard only available on GitHub Pages"
         )
         clang_tidy_ref = (
-            "*local build* — run "
+            "*local build* — run " +
             "``bazel test --config=clang-tidy //...``"
         )
 
