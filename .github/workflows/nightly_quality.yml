@@ -98,21 +98,27 @@ jobs:
               *)         echo "skipped" ;;
             esac
           }
-          echo "coverage=$(map_conclusion '${{ needs.run-coverage.result }}')" >> $GITHUB_OUTPUT
-          echo "clang_tidy=$(map_conclusion '${{ needs.run-clang-tidy.result }}')" >> $GITHUB_OUTPUT
+          # Use the explicit `conclusion` output rather than `result`.
+          # `result` is always `success` when a step uses `continue-on-error: true`
+          # even if the underlying work (e.g. bazel coverage) failed.
+          # `conclusion` is set explicitly by each reusable workflow to reflect
+          # whether the meaningful work actually succeeded.
+          echo "coverage=$(map_conclusion '${{ needs.run-coverage.outputs.conclusion }}')" >> $GITHUB_OUTPUT
+          echo "clang_tidy=$(map_conclusion '${{ needs.run-clang-tidy.outputs.conclusion }}')" >> $GITHUB_OUTPUT
 
       # ------------------------------------------------------------------
       # Download artifacts (only if the upstream job succeeded)
       # ------------------------------------------------------------------
       - name: Download coverage artifact
-        if: needs.run-coverage.result == 'success'
+        id: download-coverage
+        if: needs.run-coverage.outputs.conclusion == 'success'
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.run-coverage.outputs.artifact-name }}
           path: /tmp/coverage_zip
 
       - name: Extract coverage HTML report
-        if: needs.run-coverage.result == 'success'
+        if: needs.run-coverage.outputs.conclusion == 'success' && steps.download-coverage.outcome == 'success'
         run: |
           bash quality/scripts/extract_coverage_artifact.sh \
             /tmp/coverage_zip \
@@ -122,7 +128,7 @@ jobs:
       # Download clang-tidy findings artifact
       # ------------------------------------------------------------------
       - name: Download clang-tidy findings
-        if: needs.run-clang-tidy.result == 'success'
+        if: needs.run-clang-tidy.outputs.conclusion == 'success'
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.run-clang-tidy.outputs.artifact-name }}
