@@ -13,13 +13,15 @@
 # *******************************************************************************
 """Quality KPI dashboard.
 
-Reads LCOV coverage data and clang-tidy findings, then renders a dark-themed
-HTML summary page via the dashboard.html.j2 Jinja2 template.
+Reads LCOV coverage data, clang-tidy findings, and CodeQL findings, then
+renders a dark-themed HTML summary page via the dashboard.html.j2 Jinja2
+template.
 
 Usage (CI, called from nightly_quality.yml):
     bazel run //quality/dashboard:generate_dashboard -- \\
         --lcov           /tmp/coverage_zip/extracted/artifacts/coverage_report.dat \\
         --clang-tidy     /tmp/clang_tidy/clang_tidy_findings.txt \\
+        --codeql         /tmp/codeql/codeql_findings.csv \\
         --html           _quality/index.html \\
         --github-summary
 """

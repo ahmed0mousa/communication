@@ -11,6 +11,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
+
 # Collects CodeQL findings produced by codeql_lint.py, writes GitHub Actions
 # outputs (errors, warnings, total) and appends a step summary.
 #
