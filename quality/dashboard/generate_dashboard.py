@@ -135,6 +135,31 @@ def load_clang_tidy(path: pathlib.Path) -> dict | None:
     return {"errors": errors, "warnings": warnings, "total": errors + warnings}
 
 
+def load_codeql(path: pathlib.Path) -> dict | None:
+    """Return {errors, warnings, total} from a CodeQL CSV findings file.
+
+    The CSV produced by ``codeql database analyze --format=csv`` has the
+    column layout: name, description, severity, message, path, …
+    Severity values are "error", "warning", or "recommendation".
+    """
+    import csv as _csv
+    if not path or not path.is_file():
+        return None
+    errors = warnings = 0
+    try:
+        with path.open(encoding="utf-8", errors="replace") as fh:
+            for row in _csv.reader(fh):
+                if len(row) > 2:
+                    sev = row[2].strip().lower()
+                    if sev == "error":
+                        errors += 1
+                    elif sev == "warning":
+                        warnings += 1
+    except Exception:
+        return None
+    return {"errors": errors, "warnings": warnings, "total": errors + warnings}
+
+
 def load_history(path: pathlib.Path) -> list[dict]:
     if not path or not path.exists():
         return []
@@ -153,7 +178,7 @@ def save_history(path: pathlib.Path, history: list[dict]) -> None:
 
 # ── HTML rendering ────────────────────────────────────────────────────────────
 
-def render_dashboard(cov_summary, cov_files, clang_tidy, history, timestamp) -> str:
+def render_dashboard(cov_summary, cov_files, clang_tidy, codeql, history, timestamp) -> str:
     env = Environment(loader=FileSystemLoader(str(_TEMPLATE_DIR)), autoescape=True)
     env.globals["cov_colour"] = _cov_colour
     env.globals["delta"]      = _delta_badge
@@ -165,6 +190,7 @@ def render_dashboard(cov_summary, cov_files, clang_tidy, history, timestamp) -> 
         cov=cov_summary or None,
         cov_files=cov_files,
         clang_tidy=clang_tidy,
+        codeql=codeql,
         history=history,
         prev=history[-2] if len(history) >= 2 else None,
     )
@@ -172,7 +198,7 @@ def render_dashboard(cov_summary, cov_files, clang_tidy, history, timestamp) -> 
 
 # ── GitHub Actions step summary ───────────────────────────────────────────────
 
-def write_github_summary(cov_summary, clang_tidy, history, summary_path) -> None:
+def write_github_summary(cov_summary, clang_tidy, codeql, history, summary_path) -> None:
     lines = ["## Quality Dashboard\n"]
 
     lines.append("### Coverage\n")
@@ -200,6 +226,19 @@ def write_github_summary(cov_summary, clang_tidy, history, summary_path) -> None
     else:
         lines.append("Clang-tidy data not available.\n")
 
+    lines.append("\n### CodeQL\n")
+    if codeql:
+        err_icon = ":x:" if codeql["errors"] > 0 else ":white_check_mark:"
+        lines += [
+            "| Metric | Count |",
+            "|--------|------:|",
+            f"| {err_icon} Errors   | **{codeql['errors']}** |",
+            f"| :warning: Warnings | **{codeql['warnings']}** |",
+            f"| Total              | **{codeql['total']}** |",
+        ]
+    else:
+        lines.append("CodeQL data not available.\n")
+
     if len(history) >= 2:
         prev, curr = history[-2], history[-1]
         lines += [
@@ -213,6 +252,8 @@ def write_github_summary(cov_summary, clang_tidy, history, summary_path) -> None
             ("Branch coverage %",   "branch_cov", True),
             ("Clang-Tidy errors",   "ct_errors",  False),
             ("Clang-Tidy warnings", "ct_warnings", False),
+            ("CodeQL errors",       "cq_errors",  False),
+            ("CodeQL warnings",     "cq_warnings", False),
         ]:
             pv, cv = prev.get(key), curr.get(key)
             if pv is not None and cv is not None:
@@ -243,6 +284,11 @@ def main() -> int:
         help="Path to clang-tidy findings text file",
     )
     parser.add_argument(
+        "--codeql", default="",
+        dest="codeql",
+        help="Path to CodeQL findings CSV file",
+    )
+    parser.add_argument(
         "--html", default="dashboard.html",
         help="Output HTML dashboard path",
     )
@@ -258,6 +304,7 @@ def main() -> int:
 
     lcov_path      = pathlib.Path(args.lcov)       if args.lcov       else pathlib.Path("")
     ct_path        = pathlib.Path(args.clang_tidy) if args.clang_tidy else pathlib.Path("")
+    cq_path        = pathlib.Path(args.codeql)     if args.codeql     else pathlib.Path("")
     html_path      = pathlib.Path(args.html)
     hist_path      = pathlib.Path(args.history)    if args.history    else None
 
@@ -265,22 +312,25 @@ def main() -> int:
 
     cov_summary, cov_files = load_lcov(lcov_path)
     clang_tidy = load_clang_tidy(ct_path)
+    codeql     = load_codeql(cq_path)
     timestamp = datetime.now(tz=timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     history = load_history(hist_path) if hist_path else []
     history.append({
-        "date":       timestamp,
-        "line_cov":   cov_summary.get("line_pct")   if cov_summary else None,
-        "func_cov":   cov_summary.get("func_pct")   if cov_summary else None,
-        "branch_cov": cov_summary.get("branch_pct") if cov_summary else None,
-        "ct_errors":  clang_tidy["errors"]           if clang_tidy  else None,
-        "ct_warnings": clang_tidy["warnings"]        if clang_tidy  else None,
+        "date":        timestamp,
+        "line_cov":    cov_summary.get("line_pct")   if cov_summary else None,
+        "func_cov":    cov_summary.get("func_pct")   if cov_summary else None,
+        "branch_cov":  cov_summary.get("branch_pct") if cov_summary else None,
+        "ct_errors":   clang_tidy["errors"]           if clang_tidy  else None,
+        "ct_warnings": clang_tidy["warnings"]         if clang_tidy  else None,
+        "cq_errors":   codeql["errors"]               if codeql      else None,
+        "cq_warnings": codeql["warnings"]             if codeql      else None,
     })
     if hist_path:
         save_history(hist_path, history)
 
     html_path.write_text(
-        render_dashboard(cov_summary, cov_files, clang_tidy, history, timestamp),
+        render_dashboard(cov_summary, cov_files, clang_tidy, codeql, history, timestamp),
         encoding="utf-8",
     )
 
@@ -295,10 +345,14 @@ def main() -> int:
         print(f"  Clang-Tidy errors: {clang_tidy['errors']}  warnings: {clang_tidy['warnings']}")
     else:
         print("  Clang-Tidy: N/A")
+    if codeql:
+        print(f"  CodeQL errors: {codeql['errors']}  warnings: {codeql['warnings']}")
+    else:
+        print("  CodeQL: N/A")
 
     if args.github_summary:
         write_github_summary(
-            cov_summary, clang_tidy, history,
+            cov_summary, clang_tidy, codeql, history,
             os.environ.get("GITHUB_STEP_SUMMARY", "/dev/null"),
         )
 

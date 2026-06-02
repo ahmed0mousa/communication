@@ -58,10 +58,18 @@ jobs:
       contents: read
 
   # --------------------------------------------------------------------
+  # Quality job 3: CodeQL / MISRA C++ static analysis
+  # --------------------------------------------------------------------
+  run-codeql:
+    uses: ./.github/workflows/codeql.yml
+    permissions:
+      contents: read
+
+  # --------------------------------------------------------------------
   # Collect results, build the dashboard, upload artifact for docs.yml
   # --------------------------------------------------------------------
   deploy-quality-reports:
-    needs: [run-coverage, run-clang-tidy]
+    needs: [run-coverage, run-clang-tidy, run-codeql]
     # Always run even if individual quality jobs fail, so the dashboard
     # still reflects which jobs passed and which failed.
     if: always()
@@ -83,31 +91,11 @@ jobs:
           cache-save: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Allow linux-sandbox
+        id: setup
         uses: ./actions/unblock_user_namespace_for_linux_sandbox
 
       # ------------------------------------------------------------------
-      # Determine job conclusions (needs.*.result = success|failure|skipped|cancelled)
-      # ------------------------------------------------------------------
-      - name: Resolve job conclusions
-        id: conclusions
-        run: |
-          map_conclusion() {
-            case "$1" in
-              success)   echo "success" ;;
-              failure)   echo "failure" ;;
-              *)         echo "skipped" ;;
-            esac
-          }
-          # Use the explicit `conclusion` output rather than `result`.
-          # `result` is always `success` when a step uses `continue-on-error: true`
-          # even if the underlying work (e.g. bazel coverage) failed.
-          # `conclusion` is set explicitly by each reusable workflow to reflect
-          # whether the meaningful work actually succeeded.
-          echo "coverage=$(map_conclusion '${{ needs.run-coverage.outputs.conclusion }}')" >> $GITHUB_OUTPUT
-          echo "clang_tidy=$(map_conclusion '${{ needs.run-clang-tidy.outputs.conclusion }}')" >> $GITHUB_OUTPUT
-
-      # ------------------------------------------------------------------
-      # Download artifacts (only if the upstream job succeeded)
+      # Download Coverage artifacts (only if the upstream job succeeded)
       # ------------------------------------------------------------------
       - name: Download coverage artifact
         id: download-coverage
@@ -117,6 +105,9 @@ jobs:
           name: ${{ needs.run-coverage.outputs.artifact-name }}
           path: /tmp/coverage_zip
 
+      # ------------------------------------------------------------------
+      # Extract coverage artifact to a known location for the dashboard generator
+      # ------------------------------------------------------------------
       - name: Extract coverage HTML report
         if: needs.run-coverage.outputs.conclusion == 'success' && steps.download-coverage.outcome == 'success'
         run: |
@@ -135,35 +126,39 @@ jobs:
           path: /tmp/clang_tidy
 
       # ------------------------------------------------------------------
+      # Download CodeQL findings artifact
+      # ------------------------------------------------------------------
+      - name: Download CodeQL findings
+        if: needs.run-codeql.outputs.conclusion == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.run-codeql.outputs.artifact-name }}
+          path: /tmp/codeql
+
+      # ------------------------------------------------------------------
       # Generate coverage KPI dashboard via generate_dashboard py_binary
       # ------------------------------------------------------------------
-
       - name: Generate quality dashboard
-        if: always() && steps.conclusions.outcome == 'success'
+        if: always() && steps.setup.outcome == 'success'
         run: |
           # Pass LCOV data and clang-tidy findings; generate_dashboard handles
           # absent files gracefully (shows N/A for that metric).
           bazel run //quality/dashboard:generate_dashboard -- \
             --lcov              /tmp/coverage_zip/extracted/artifacts/coverage_report.dat \
             --clang-tidy        /tmp/clang_tidy/clang_tidy_findings.txt \
+            --codeql            /tmp/codeql/codeql_findings.csv \
             --html              "${GITHUB_WORKSPACE}/_quality/index.html" \
             --github-summary
 
           echo "Dashboard generated. Contents of _quality/:"
           find "${GITHUB_WORKSPACE}/_quality" -type f | sort
 
-      - name: Copy clang-tidy findings into quality output
-        if: needs.run-clang-tidy.result == 'success'
-        run: |
-          cp /tmp/clang_tidy/clang_tidy_findings.txt \
-            "${GITHUB_WORKSPACE}/_quality/clang_tidy_findings.txt"
-
       # ------------------------------------------------------------------
       # Upload all quality reports as a single artifact for docs.yml to
       # pick up and deploy as part of the unified Sphinx site.
       # ------------------------------------------------------------------
       - name: Upload quality reports artifact
-        if: always() && steps.conclusions.outcome == 'success'
+        if: always() && steps.setup.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: nightly-quality-reports

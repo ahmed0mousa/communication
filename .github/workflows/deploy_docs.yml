@@ -115,7 +115,7 @@ jobs:
           fi
           echo "Documentation built successfully"
           echo "Files generated:"
-          find docs_output -type f | head -20
+          find docs_output -type f | head -20 || true
 
       - name: Upload docs to release
         if: startsWith(github.ref, 'refs/tags/v')

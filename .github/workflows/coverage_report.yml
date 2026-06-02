@@ -78,6 +78,7 @@ jobs:
 
       - name: Set conclusion
         id: set-conclusion
+        if: always()
         run: |
           if [[ "${{ steps.run-coverage.outcome }}" == "success" ]]; then
             echo "conclusion=success" >> $GITHUB_OUTPUT
